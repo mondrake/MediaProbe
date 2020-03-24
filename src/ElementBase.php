@@ -251,13 +251,19 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      */
     public function debugInfo(?DataElement $data_element = null)
     {
-        $msg = '{node}:{name}';
+        $msg = '{node}';
+        $name = $this->getAttribute('name')
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} size {size}';
+        } else {
+            $msg .= ' size {size} byte(s)';
         }
         $this->debug($msg, [
             'node' => $this->DOMNode->nodeName,
-            'name' => $this->getAttribute('name'),
+            'name' => $name,
             'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);
