@@ -83,7 +83,7 @@ class Jpeg extends BlockBase
             }
 
             $x = new DataWindow($data_element, $offset, $segment_size, $this);
-            $this->debugInfo($x);
+            $this->debugInfo($segment_collection, $x);
             // Load the MediaProbe JPEG segment data.
             $segment->loadFromData($data_element, $offset, $segment_size);
 

@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe;
 
+use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\DOMElement;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
@@ -249,12 +250,16 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function debugInfo(?DataElement $data_element = null)
+    public function debugInfo(?Collection $collection = null, ?DataElement $data_element = null)
     {
         $msg = '{node}';
-        $name = $this->getAttribute('name');
+        $name = $collection ? $collection->getPropertyValue('name') : null;
         if ($name ==! null) {
             $msg .= ':{name}';
+        }
+        $title = $collection ? $collection->getPropertyValue('title') : null;
+        if ($title ==! null) {
+            $msg .= ' ({title})';
         }
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} size {size}';
@@ -264,6 +269,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $this->debug($msg, [
             'node' => $this->DOMNode->nodeName,
             'name' => $name,
+            'title' => $title,
             'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);
