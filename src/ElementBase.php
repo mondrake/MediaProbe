@@ -258,8 +258,8 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $this->debug($msg, [
             'node' => $this->DOMNode->nodeName,
             'name' => $this->getAttribute('name'),
-            'offset' => $data_element ? $data_element->getAbsoluteOffset() : null;
-            'size' => $data_element ? $data_element->getSize() : null;
+            'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
+            'size' => $data_element ? $data_element->getSize() : null,
         ]);
     }
 }
