@@ -252,7 +252,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     public function debugInfo(?DataElement $data_element = null)
     {
         $msg = '{node}';
-        $name = $this->getAttribute('name')
+        $name = $this->getAttribute('name');
         if ($name ==! null) {
             $msg .= ':{name}';
         }
