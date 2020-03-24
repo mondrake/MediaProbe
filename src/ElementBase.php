@@ -253,6 +253,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     public function debugInfo(?Collection $collection = null, ?DataElement $data_element = null)
     {
         $msg = '{node}';
+        $node = $collection ? $collection->getPropertyValue('DOMNode') : $this->DOMNode->nodeName;
         $name = $collection ? $collection->getPropertyValue('name') : null;
         if ($name ==! null) {
             $msg .= ':{name}';
@@ -267,7 +268,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             $msg .= ' size {size} byte(s)';
         }
         $this->debug($msg, [
-            'node' => $this->DOMNode->nodeName,
+            'node' => $node,
             'name' => $name,
             'title' => $title,
             'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
