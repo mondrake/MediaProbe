@@ -62,10 +62,6 @@ class Jpeg extends BlockBase
             $segment_collection = $this->getCollection()->getItemCollection($segment_id);
             $segment_class = $segment_collection->getPropertyValue('class');
             $segment = new $segment_class($segment_collection, $this);
-            $this->debug('{name} segment - {desc}', [
-                'name' => $segment_collection->getPropertyValue('name'),
-                'desc' => $segment_collection->getPropertyValue('title'),
-            ]);
 
             // Get the JPEG segment size.
             switch ($segment_collection->getPropertyValue('payload')) {
@@ -82,7 +78,7 @@ class Jpeg extends BlockBase
                     break;
             }
 
-            $x = new DataWindow($data_element, $offset, $segment_size, $this);
+            $x = new DataWindow($data_element, $offset, $segment_size);
             $this->debugInfo($segment_collection, $x);
             // Load the MediaProbe JPEG segment data.
             $segment->loadFromData($data_element, $offset, $segment_size);

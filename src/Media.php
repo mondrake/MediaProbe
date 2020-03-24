@@ -78,9 +78,9 @@ class Media extends BlockBase
      */
     public static function createFromFile(string $path, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
-        $magic_data_element = new DataString(file_get_contents($path, false, null, 0, 10), $external_logger);
+        $magic_data_element = new DataString(file_get_contents($path, false, null, 0, 10));
         $media_format_collection = static::getMatchingMediaCollection($magic_data_element, $external_logger);
-        $data_element = new DataString(file_get_contents($path), $external_logger);
+        $data_element = new DataString(file_get_contents($path));
         return static::doCreate($media_format_collection, $data_element, $external_logger, $fail_level);
     }
 
