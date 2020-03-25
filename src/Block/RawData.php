@@ -19,15 +19,6 @@ class RawData extends BlockBase
     protected $components;
 
     /**
-     * Construct a new RawData object.
-     */
-    public function __construct(Collection $collection, BlockBase $parent, BlockBase $reference = null)
-    {
-        parent::__construct($collection, $parent, $reference);
-        $this->debug('Raw data');
-    }
-
-    /**
      * Returns the data length.
      *
      * @return int
