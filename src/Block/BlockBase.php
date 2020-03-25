@@ -107,7 +107,7 @@ abstract class BlockBase extends ElementBase
         }
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} size {size}';
-            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper($data_element->getAbsoluteOffset());
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
             $msg .= ' size {size} byte(s)';
         }
