@@ -93,7 +93,7 @@ class Jpeg extends BlockBase
             $segment->loadFromData($data_window);
 
             // Position to end of the segment.
-            $offset += $segment_size;
+            $offset += $data_window->getSize();
         }
 
         $this->valid = $valid;

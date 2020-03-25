@@ -23,6 +23,8 @@ class JpegSegmentSos extends JpegSegmentBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->debugBlockInfo($data_element);
+
         // This segment is last before End Of Image, and its length needs to be
         // determined by finding the EOI marker backwards from the end of data.
         // Some images have some trailing (garbage?) following the EOI marker,
