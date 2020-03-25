@@ -16,6 +16,11 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class Jpeg extends BlockBase
 {
     /**
+     * JPEG delimiter.
+     */
+    const JPEG_DELIMITER = 0xFF;
+
+    /**
      * JPEG header.
      */
     const JPEG_HEADER = "\xFF\xD8\xFF";
@@ -91,6 +96,9 @@ class Jpeg extends BlockBase
             // Load the MediaProbe JPEG segment data.
             $data_window = new DataWindow($data_element, $offset, $segment_size);
             $segment->loadFromData($data_window);
+            if (!$segment->isValid()) {
+                $valid = false;
+            }
 
             // Position to end of the segment.
             $offset += $data_window->getSize();
@@ -119,11 +127,11 @@ class Jpeg extends BlockBase
     protected function getJpegSegmentIdOffset(DataElement $data_element, int $offset): int
     {
         for ($i = $offset; $i < $offset + 7; $i++) {
-            if ($data_element->getByte($i) === JpegSegment::JPEG_DELIMITER && $data_element->getByte($i + 1) !== JpegSegment::JPEG_DELIMITER) {
+            if ($data_element->getByte($i) === Jpeg::JPEG_DELIMITER && $data_element->getByte($i + 1) !== Jpeg::JPEG_DELIMITER) {
                 return $i;
             }
         }
-        throw new DataException('JPEG marker not found @%d', $data_element->getAbsoluteOffset($offset)); // @todo ingest in logging
+        throw new DataException('JPEG marker not found @%d', $data_element->getAbsoluteOffset($offset));
     }
 
     /**

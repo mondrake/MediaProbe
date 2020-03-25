@@ -31,7 +31,7 @@ class JpegSegmentSos extends JpegSegmentBase
         // which we store in a RawData object.
         $size = $data_element->getSize();
         $length = $size;
-        while ($data_element->getByte($length - 2) !== JpegSegment::JPEG_DELIMITER || $data_element->getByte($length - 1) != self::JPEG_EOI) {
+        while ($data_element->getByte($length - 2) !== Jpeg::JPEG_DELIMITER || $data_element->getByte($length - 1) != self::JPEG_EOI) {
             $length --;
         }
         $this->components = $length - $offset - 2;

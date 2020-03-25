@@ -134,7 +134,7 @@ class Media extends BlockBase
             $media_format = new $media_format_class($media_format_collection, $media);
             $media_format->loadFromData($data_element);
             $media->valid = $media_format->isValid();
-        } catch (\Throwable $e) {
+        } catch (\Throwable $e) { // @ todo xxx better
             $media->error(get_class($e) . ': ' . $e->getMessage());
             $media->valid = false;
         }

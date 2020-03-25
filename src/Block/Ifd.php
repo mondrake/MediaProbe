@@ -304,7 +304,7 @@ class Ifd extends ListBase
             $size = $dataxx->getSize();
 
             // Now move backwards until we find the EOI JPEG marker.
-            while ($dataxx->getByte($size - 2) !== JpegSegment::JPEG_DELIMITER || $dataxx->getByte($size - 1) != Collection::get('Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
+            while ($dataxx->getByte($size - 2) !== Jpeg::JPEG_DELIMITER || $dataxx->getByte($size - 1) != Collection::get('Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
                 $size --;
             }
             if ($size != $dataxx->getSize()) {

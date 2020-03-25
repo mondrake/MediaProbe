@@ -20,6 +20,7 @@ class JpegSegmentApp1 extends JpegSegmentBase
     {
         $this->debugBlockInfo($data_element);
 
+        // If we have an Exif table, load it.
         if (Exif::isExifSegment($data_element, 4)) {
             $exif_collection = $this->getCollection()->getItemCollection('Exif');
             $exif_class = $exif_collection->getPropertyValue('class');
@@ -41,21 +42,12 @@ class JpegSegmentApp1 extends JpegSegmentBase
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0)
     {
+        // If we have an Exif table, dump it.
         if ($exif = $this->getElement("exif")) {
-            $bytes = $this->getMarkerBytes();
-
-            // Get the payload.
-            $data = $exif->toBytes();
-
-            // Add the data lenght, include the two bytes of the length itself.
-            $bytes .= ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN);
-
-            // Add the data.
-            $bytes .= $data;
-
-            return $bytes;
+            return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . $exif->toBytes();
         }
 
+        // Fallback if no Exif data.
         return parent::toBytes();
     }
 }
