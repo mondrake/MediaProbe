@@ -2,10 +2,7 @@
 
 namespace FileEye\MediaProbe;
 
-use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\DOMElement;
-use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
 use Monolog\Logger;

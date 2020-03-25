@@ -18,6 +18,8 @@ class JpegSegment extends JpegSegmentBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->xxxdebugInfo($data_element);
+
         $data_window = $this->getDataWindow($data_element, $offset, $size);
 
         if ($data_window) {
