@@ -56,7 +56,6 @@ class JpegSegmentSos extends JpegSegmentBase
             // the data in a RawData object.
             $trail = new RawData(Collection::get('RawData'), $this->getParentElement());
             $trail_data_window = new DataWindow($data_element, $end_offset, $raw_size);
-            // xx todo $trail_data_window->logInfo($trail->getLogger());
             $trail->loadFromData($trail_data_window, 0, $raw_size);
         }
 
