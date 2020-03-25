@@ -44,7 +44,7 @@ class JpegSegmentSos extends JpegSegmentBase
         $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
         $eoi_data_window = new DataWindow($data_element, $end_offset - 5);// , 2);
-        $segment->loadFromData($eoi_data_window);
+        $eoi->loadFromData($eoi_data_window);
 
         // Now check to see if there are any trailing data.
         if ($end_offset < $data_element->getSize()) {
