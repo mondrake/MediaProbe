@@ -58,14 +58,14 @@ script:
   #- php examples/dump-media.php -d    test/image_files/broken_images/canon-eos-650d.jpg-rewrite.img
   - php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg
   #- php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg-rewrite.img
-  #- php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
+  - php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-powershot-s60.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-powershot-s60.jpg-rewrite.img
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-ixus-ii.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-ixus-ii.jpg-rewrite.img
   #- php examples/dump-media.php -d -w test/image_files/camera_samples/apple-iphone6s.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone6s.jpg-rewrite.img
-  #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
+  - php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg-rewrite.img
   #- php examples/dump-media.php -d test/image_files/broken_images/gh-10-a.jpg

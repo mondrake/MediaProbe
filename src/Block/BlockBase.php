@@ -40,6 +40,9 @@ abstract class BlockBase extends ElementBase
     {
         $this->collection = $collection;
         parent::__construct($collection->getPropertyValue('DOMNode'), $parent, $reference);
+        if ($collection->getPropertyValue('item') !== null) {
+            $this->setAttribute('id', $collection->getPropertyValue('item'));
+        }
         if ($collection->getPropertyValue('name') !== null) {
             $this->setAttribute('name', $collection->getPropertyValue('name'));
         }
@@ -88,5 +91,35 @@ abstract class BlockBase extends ElementBase
             $dump['elements'][] = $sub_element->toDumpArray();
         }
         return $dump;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null)
+    {
+        $msg = '{node}';
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($title ==! null) {
+            $msg .= ' ({title})';
+        }
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        } else {
+            $msg .= ' size {size} byte(s)';
+        }
+        $this->debug($msg, [
+            'node' => $node,
+            'name' => $name,
+            'title' => $title,
+            'offset' => $offset ?? null,
+            'size' => $data_element ? $data_element->getSize() : null,
+        ]);
     }
 }
