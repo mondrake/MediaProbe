@@ -46,6 +46,7 @@ dump(['a', $offset]);
                 $this->valid = false;
                 return;
             }*/
+dump(['b', $offset]);
 
             // Get the JPEG segment id.
             $segment_id = $data_element->getByte($offset + 1);
