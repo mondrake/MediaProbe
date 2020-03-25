@@ -26,6 +26,8 @@ class Ifd extends ListBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->xxxdebugInfo($data_element);
+
         $valid = true;
 
         if ($size === null) {
