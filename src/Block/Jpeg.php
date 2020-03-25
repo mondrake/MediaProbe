@@ -39,13 +39,13 @@ class Jpeg extends BlockBase
         while ($offset < $data_element->getSize()) {
 dump(['a', $offset]);
             // Get the next JPEG segment id offset.
-//            try {
+            try {
                 $offset = $this->getJpegSegmentIdOffset($data_element, $offset);
-  /*          }
+            }
             catch (DataException $e) {
                 $this->valid = false;
                 return;
-            }*/
+            }
 dump(['b', $offset]);
 
             // Get the JPEG segment id.
@@ -76,7 +76,7 @@ dump(['b', $offset]);
                     // Read the length of the segment. The data window size
                     // includes the JPEG delimiter byte, the segment identifier
                     // byte and two bytes used to store the segment length.
-                    $segment_size = $data_element->getShort($offset + 2) + 4;
+                    $segment_size = $data_element->getShort($offset + 2) + 2;
                     break;
                 case 'fixed':
                     // The data window size includes the JPEG delimiter byte
