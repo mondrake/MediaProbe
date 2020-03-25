@@ -246,33 +246,4 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             }
         }
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function debugInfo(?Collection $collection = null, ?DataElement $data_element = null)
-    {
-        $msg = '{node}';
-        $node = $collection ? $collection->getPropertyValue('DOMNode') : $this->DOMNode->nodeName;
-        $name = $collection ? $collection->getPropertyValue('name') : null;
-        if ($name ==! null) {
-            $msg .= ':{name}';
-        }
-        $title = $collection ? $collection->getPropertyValue('title') : null;
-        if ($title ==! null) {
-            $msg .= ' ({title})';
-        }
-        if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset} size {size}';
-        } else {
-            $msg .= ' size {size} byte(s)';
-        }
-        $this->debug($msg, [
-            'node' => $node,
-            'name' => $name,
-            'title' => $title,
-            'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
-            'size' => $data_element ? $data_element->getSize() : null,
-        ]);
-    }
 }
