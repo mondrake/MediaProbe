@@ -37,19 +37,18 @@ class Jpeg extends BlockBase
         // segment we will terminate.
         $offset = 0;
         while ($offset < $data_element->getSize()) {
-dump(['a']);
+dump(['a', $offset]);
             // Get the next JPEG segment id offset.
-            try {
+//            try {
                 $offset = $this->getJpegSegmentIdOffset($data_element, $offset);
-            }
+  /*          }
             catch (DataException $e) {
                 $this->valid = false;
                 return;
-            }
+            }*/
 
             // Get the JPEG segment id.
             $segment_id = $data_element->getByte($offset + 1);
-dump(['b', $segment_id]);
 
             // Warn if an unidentified segment is detected.
             if (!in_array($segment_id, $this->getCollection()->listItemIds())) {
@@ -85,7 +84,6 @@ dump(['b', $segment_id]);
                     break;
             }
 
-dump(['c', $segment_id]);
             // Load the MediaProbe JPEG segment data.
             $data_window = new DataWindow($data_element, $offset, $segment_size);
             $segment->loadFromData($data_window);
@@ -98,7 +96,6 @@ dump(['c', $segment_id]);
             // Position to end of the segment.
             $offset += $segment_size;
         }
-dump(['d', $segment_id]);
 
         $this->valid = $valid;
     }
