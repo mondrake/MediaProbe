@@ -52,8 +52,8 @@ class Jpeg extends BlockBase
             // Warn if an unidentified segment is detected.
             if (!in_array($segment_id, $this->getCollection()->listItemIds())) {
                 $this->warning('Invalid JPEG marker {id}/{hexid} found @ offset {offset}', [
-                    'id' => $id,
-                    'hexid' => '0x' . strtoupper(dechex($id)),
+                    'id' => $segment_id,
+                    'hexid' => '0x' . strtoupper(dechex($segment_id)),
                     'offset' => $data_element->getAbsoluteOffset($offset),
                 ]);
             }
