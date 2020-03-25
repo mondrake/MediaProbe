@@ -93,7 +93,9 @@ class Jpeg extends BlockBase
             }
 
             // Position to end of the segment.
+dump([$offset, $segment_size]);
             $offset += $segment_size;
+dump([$offset]);
         }
 
         $this->valid = $valid;

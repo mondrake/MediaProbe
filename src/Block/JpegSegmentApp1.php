@@ -24,7 +24,8 @@ class JpegSegmentApp1 extends JpegSegmentBase
             $exif_collection = $this->getCollection()->getItemCollection('Exif');
             $exif_class = $exif_collection->getPropertyValue('class');
             $exif = new $exif_class($exif_collection, $this);
-            $exif->loadFromData($data_element, 4, $data_element->getSize() - 4);
+            $data_window = new DataWindow($data_element, 4, $data_element->getSize() - 4);
+            $exif->loadFromData($data_window);
         } else {
             // We store the data as normal JPEG content if it could not be
             // parsed as Exif data.
