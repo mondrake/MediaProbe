@@ -95,7 +95,6 @@ dump([$offset, $data_element->getSize()]);
 
             // Position to end of the segment.
             $offset += $segment_size;
-dump([$offset]);
         }
 
         $this->valid = $valid;
