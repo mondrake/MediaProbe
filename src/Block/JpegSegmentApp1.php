@@ -44,7 +44,8 @@ class JpegSegmentApp1 extends JpegSegmentBase
     {
         // If we have an Exif table, dump it.
         if ($exif = $this->getElement("exif")) {
-            return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . $exif->toBytes();
+            $data = $exif->toBytes();
+            return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data;
         }
 
         // Fallback if no Exif data.

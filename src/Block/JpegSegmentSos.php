@@ -21,7 +21,7 @@ class JpegSegmentSos extends JpegSegmentBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element): void
     {
         $this->debugBlockInfo($data_element);
 
@@ -34,18 +34,20 @@ class JpegSegmentSos extends JpegSegmentBase
         while ($data_element->getByte($length - 2) !== Jpeg::JPEG_DELIMITER || $data_element->getByte($length - 1) != self::JPEG_EOI) {
             $length --;
         }
-        $this->components = $length - $offset - 2;
-        $end_offset = $offset + $this->components + 2;
+        $offset = 0;
+        $components = $length - $offset - 2;
+        $end_offset = $offset + $components + 2;
 
         // Load data in an Undefined entry.
-        $data_window = new DataWindow($data_element, $offset, $this->components);
-        // xx todo $data_window->logInfo($this->getLogger());
+        $data_window = new DataWindow($data_element, $offset, $components);
         new Undefined($this, [$data_window->getBytes()]);
 
         // Append the EOI.
         $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
-        $eoi = new JpegSegment($eoi_collection, $this->getParentElement());
-        $eoi->valid = true;
+        $eoi_class = $segment_collection->getPropertyValue('class');
+        $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
+        $eoi_data_window = new DataWindow($data_element, $end_offset, 2);
+        $segment->loadFromData($eoi_data_window);
 
         // Now check to see if there are any trailing data.
         if ($end_offset < $size) {
