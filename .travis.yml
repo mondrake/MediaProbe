@@ -48,24 +48,24 @@ script:
   # re-compile the specification PHP file from the YAML files, and refresh the
   # media file dumps.
   - php bin/fileeye-mediaprobe compile
-  - php bin/fileeye-mediaprobe dump test/image_files
+  #- php bin/fileeye-mediaprobe dump test/image_files
 
   - if [ "$TRAVIS_PHP_VERSION" == "7.1" ]; then ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit 1; fi
   #- ./vendor/bin/phpunit ./test/DataWindowTest.php
-  - ./vendor/bin/phpunit ./test
+  #- ./vendor/bin/phpunit ./test
 
   #- php examples/dump-media.php -d -w test/image_files/broken_images/canon-eos-650d.jpg
   #- php examples/dump-media.php -d    test/image_files/broken_images/canon-eos-650d.jpg-rewrite.img
-  - php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg
+  #- php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg
   #- php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg-rewrite.img
-  - php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
+  #- php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-powershot-s60.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-powershot-s60.jpg-rewrite.img
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-ixus-ii.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-ixus-ii.jpg-rewrite.img
   #- php examples/dump-media.php -d -w test/image_files/camera_samples/apple-iphone6s.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone6s.jpg-rewrite.img
-  - php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
+  #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg-rewrite.img
   #- php examples/dump-media.php -d test/image_files/broken_images/gh-10-a.jpg
