@@ -13,6 +13,11 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class JpegSegmentBase extends BlockBase
 {
     /**
+     * {@inheritdoc}
+     */
+    protected $contextPathSegmentPattern = '/{DOMNode}:{name}:{id}';
+
+    /**
      * Construct a new JPEG segment object.
      */
     public function __construct(Collection $collection, Jpeg $jpeg, JpegSegmentBase $reference_jpeg_segment = null)

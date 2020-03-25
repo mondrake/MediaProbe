@@ -186,13 +186,13 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $parent_path = $this->getParentElement() ? $this->getParentElement()->getContextPath() : '';
 
         // Build the path fragment related to this node.
-        $attributes = ['DOMNode' => $this->DOMNode->nodeName];
+        $attributes = ['{DOMNode}' => $this->DOMNode->nodeName];
         if ($this->DOMNode->attributes->length) {
             foreach ($this->DOMNode->attributes as $attribute) {
                 $attributes['{' . $attribute->name . '}'] = $attribute->value;
             }
         }
-dump(array_keys($attributes), array_values($attributes), $this->contextPathSegmentPattern);
+
         return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->contextPathSegmentPattern);
     }
 

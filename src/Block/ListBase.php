@@ -25,6 +25,11 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 abstract class ListBase extends BlockBase
 {
+    /**
+     * {@inheritdoc}
+     */
+    protected $contextPathSegmentPattern = '/{DOMNode}:{name}:{id}';
+
     // xx
     protected $definition;
 
