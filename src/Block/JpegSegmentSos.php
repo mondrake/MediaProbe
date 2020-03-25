@@ -44,7 +44,7 @@ class JpegSegmentSos extends JpegSegmentBase
 
         // Append the EOI.
         $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
-        $eoi_class = $segment_collection->getPropertyValue('class');
+        $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
         $eoi_data_window = new DataWindow($data_element, $end_offset, 2);
         $segment->loadFromData($eoi_data_window);
@@ -53,7 +53,7 @@ class JpegSegmentSos extends JpegSegmentBase
         if ($end_offset < $size) {
             $raw_size = $size - $end_offset;
             $this->warning('Found trailing content after EOI: {size} bytes', ['size' => $raw_size]);
-            // There is no JPEG marker for trailing garbage, so we just load
+            // There is no JPEG marker for trailing garbage, so we just collect
             // the data in a RawData object.
             $trail = new RawData(Collection::get('RawData'), $this->getParentElement());
             $trail_data_window = new DataWindow($data_element, $end_offset, $raw_size);
