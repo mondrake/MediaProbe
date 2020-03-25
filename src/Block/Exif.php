@@ -29,7 +29,7 @@ class Exif extends BlockBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-        $this->xxxdebugInfo($data_element);
+        $this->debugBlockInfo($data_element);
 
         $tiff_order = Tiff::getTiffSegmentByteOrder($data_element, strlen(self::EXIF_HEADER));
         if ($tiff_order !== null) {

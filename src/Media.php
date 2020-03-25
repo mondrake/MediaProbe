@@ -128,7 +128,7 @@ class Media extends BlockBase
         // Build the Media object and its immediate child, that represents the
         // media format. Then load the media according to the media format.
         $media = new static($external_logger, $fail_level);
-        $media->xxxdebugInfo($data_element);
+        $media->debugBlockInfo($data_element);
         try {
             $media_format_class = $media_format_collection->getPropertyValue('class');
             $media_format = new $media_format_class($media_format_collection, $media);

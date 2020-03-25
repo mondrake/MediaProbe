@@ -93,7 +93,7 @@ abstract class BlockBase extends ElementBase
     /**
      * {@inheritdoc}
      */
-    public function xxxdebugInfo(?DataElement $data_element = null)
+    public function debugBlockInfo(?DataElement $data_element = null)
     {
         $msg = '{node}';
         $node = $this->DOMNode->nodeName;

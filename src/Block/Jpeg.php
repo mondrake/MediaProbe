@@ -25,7 +25,7 @@ class Jpeg extends BlockBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-        $this->xxxdebugInfo($data_element);
+        $this->debugBlockInfo($data_element);
 
         $valid = true;
 
@@ -81,16 +81,16 @@ class Jpeg extends BlockBase
                     // and the segment identifier byte.
                     $segment_size = $segment_collection->getPropertyValue('components') + 2;
                     break;
+                case 'scan':
+                    // In case of image scan segment, the window is to the end
+                    // of the data.
+                    $segment_size = null;
+                    break;
             }
 
             // Load the MediaProbe JPEG segment data.
             $data_window = new DataWindow($data_element, $offset, $segment_size);
             $segment->loadFromData($data_window);
-
-            // In case of image scan segment, the load is now complete.
-            if ($segment->getPayload() === 'scan') {
-                break;
-            }
 
             // Position to end of the segment.
             $offset += $segment_size;

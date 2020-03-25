@@ -18,7 +18,7 @@ class JpegSegment extends JpegSegmentBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-        $this->xxxdebugInfo($data_element);
+        $this->debugBlockInfo($data_element);
         new Undefined($this, [$data_element->getBytes()]);
         $this->valid = true;
     }

@@ -55,7 +55,7 @@ class Tiff extends BlockBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-        $this->xxxdebugInfo($data_element);
+        $this->debugBlockInfo($data_element);
 
         $valid = true;
 
