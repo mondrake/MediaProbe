@@ -42,6 +42,8 @@ class RawData extends BlockBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->debugBlockInfo($data_element);
+
         if ($size === null) {
             $size = $data_element->getSize();
         }

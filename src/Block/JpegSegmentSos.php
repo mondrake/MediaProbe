@@ -33,17 +33,18 @@ class JpegSegmentSos extends JpegSegmentBase
         while ($data_element->getByte($scan_size - 2) !== Jpeg::JPEG_DELIMITER || $data_element->getByte($scan_size - 1) != self::JPEG_EOI) {
             $scan_size --;
         }
-        $end_offset = $scan_size;
+        $scan_size -= 2;
 
         // Load data in an Undefined entry.
-        $data_window = new DataWindow($data_element, 0, $scan_size - 2);
+        $data_window = new DataWindow($data_element, 0, $scan_size);
         new Undefined($this, [$data_window->getBytes()]);
 
         // Append the EOI.
+        $end_offset = $scan_size;
         $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
         $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
-        $eoi_data_window = new DataWindow($data_element, $end_offset - 5);// , 2);
+        $eoi_data_window = new DataWindow($data_element, $end_offset, 2);
         $eoi->loadFromData($eoi_data_window);
 
         // Now check to see if there are any trailing data.
