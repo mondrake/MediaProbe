@@ -66,17 +66,19 @@ class Jpeg extends BlockBase
             // Get the JPEG segment DataWindow.
             switch ($segment_collection->getPropertyValue('payload')) {
                 case 'none':
-                    // The data window size is the marker byte.
-                    $segment_size = 1;
+                    // The data window size is the JPEG delimiter byte and the
+                    // segment identifier byte.
+                    $segment_size = 2;
                     break;
                 case 'variable':
                     // Read the length of the segment. The data window size
-                    // includes the marker byte and two bytes used to store
-                    // the length.
-                    $segment_size = $data_element->getShort($offset + 1) + 3;
+                    // includes the JPEG delimiter byte, the segment identifier
+                    // byte and two bytes used to store the segment length.
+                    $segment_size = $data_element->getShort($offset + 3) + 5;
                     break;
                 case 'fixed':
-                    // The data window size includes the marker byte.
+                    // The data window size includes the JPEG delimiter byte
+                    // and the segment identifier byte.
                     $segment_size = $segment_collection->getPropertyValue('components') + 1;
                     break;
             }
@@ -90,9 +92,8 @@ class Jpeg extends BlockBase
                 break;
             }
 
-            // Position to end of the segment. It is defined by the current
-            // offset + the bytes of the payload.
-            $offset += $segment->getComponents() + 1;
+            // Position to end of the segment.
+            $offset += $segment_size;
         }
 
         $this->valid = $valid;
@@ -117,8 +118,8 @@ class Jpeg extends BlockBase
      */
     protected function getJpegSegmentIdOffset(DataElement $data_element, int $offset): int
     {
-        for ($i = $offset; $i < $offset + 7; $i ++) {
-            if ($data_element->getByte($i) !== JpegSegment::JPEG_DELIMITER) {
+        for ($i = $offset; $i < $offset + 7; $i++) {
+            if ($data_element->getByte($i) === JpegSegment::JPEG_DELIMITER && $data_element->getByte($i + 1) !== JpegSegment::JPEG_DELIMITER) {
                 return $i;
             }
         }
