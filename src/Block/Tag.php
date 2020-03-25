@@ -18,6 +18,11 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Tag extends BlockBase
 {
+    /**
+     * {@inheritdoc}
+     */
+    protected $contextPathSegmentPattern = '/{DOMNode}:{name}:{id}';
+
     // xx
     protected $definition;
 
