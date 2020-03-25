@@ -71,8 +71,9 @@ class Exif extends BlockBase
         }
 
         // Verify the Exif header.
-dump($data_element->getBytes($offset), strlen(self::EXIF_HEADER));
+dump($data_element->getBytes($offset, strlen(self::EXIF_HEADER)));
         if ($data_element->getBytes($offset, strlen(self::EXIF_HEADER)) === self::EXIF_HEADER) {
+dump(['true']);
             return true;
         }
 

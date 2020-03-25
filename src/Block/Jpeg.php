@@ -37,6 +37,7 @@ class Jpeg extends BlockBase
         // segment we will terminate.
         $offset = 0;
         while ($offset < $data_element->getSize()) {
+dump([$offset, $data_element->getSize()]);
             // Get the next JPEG segment id offset.
             try {
                 $offset = $this->getJpegSegmentIdOffset($data_element, $offset);
@@ -93,7 +94,6 @@ class Jpeg extends BlockBase
             }
 
             // Position to end of the segment.
-dump([$offset, $segment_size]);
             $offset += $segment_size;
 dump([$offset]);
         }
