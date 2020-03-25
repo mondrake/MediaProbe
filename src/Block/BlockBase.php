@@ -89,4 +89,33 @@ abstract class BlockBase extends ElementBase
         }
         return $dump;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function xxxdebugInfo(?DataElement $data_element = null)
+    {
+        $msg = '{node}';
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($title ==! null) {
+            $msg .= ' ({title})';
+        }
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}';
+        } else {
+            $msg .= ' size {size} byte(s)';
+        }
+        $this->debug($msg, [
+            'node' => $node,
+            'name' => $name,
+            'title' => $title,
+            'offset' => $data_element ? $data_element->getAbsoluteOffset() : null,
+            'size' => $data_element ? $data_element->getSize() : null,
+        ]);
+    }
 }

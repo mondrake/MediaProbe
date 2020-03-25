@@ -25,6 +25,8 @@ class Jpeg extends BlockBase
      */
     public function loadFromData(DataElement $data_element): void
     {
+        $this->xxxdebugInfo($data_element);
+
         $valid = true;
 
         // JPEG data is stored in big-endian format.
