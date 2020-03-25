@@ -193,7 +193,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             }
         }
 
-        return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->$contextPathSegmentPattern);
+        return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->contextPathSegmentPattern);
     }
 
     /**
