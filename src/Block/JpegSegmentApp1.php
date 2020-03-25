@@ -20,11 +20,11 @@ class JpegSegmentApp1 extends JpegSegmentBase
     {
         $this->xxxdebugInfo($data_element);
 
-        if (Exif::isExifSegment($data_element, 2)) {
+        if (Exif::isExifSegment($data_element, 4)) {
             $exif_collection = $this->getCollection()->getItemCollection('Exif');
             $exif_class = $exif_collection->getPropertyValue('class');
             $exif = new $exif_class($exif_collection, $this);
-            $exif->loadFromData($data_element, 2, $this->components - 2);
+            $exif->loadFromData($data_element, 4, $data_element->getSize() - 4);
         } else {
             // We store the data as normal JPEG content if it could not be
             // parsed as Exif data.
