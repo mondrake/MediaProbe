@@ -47,7 +47,7 @@ class Jpeg extends BlockBase
             }
 
             // Get the JPEG segment id.
-            $segment_id = $data_element->getByte($offset);
+            $segment_id = $data_element->getByte($offset + 1);
 
             // Warn if an unidentified segment is detected.
             if (!in_array($segment_id, $this->getCollection()->listItemIds())) {
@@ -74,12 +74,12 @@ class Jpeg extends BlockBase
                     // Read the length of the segment. The data window size
                     // includes the JPEG delimiter byte, the segment identifier
                     // byte and two bytes used to store the segment length.
-                    $segment_size = $data_element->getShort($offset + 3) + 5;
+                    $segment_size = $data_element->getShort($offset + 2) + 4;
                     break;
                 case 'fixed':
                     // The data window size includes the JPEG delimiter byte
                     // and the segment identifier byte.
-                    $segment_size = $segment_collection->getPropertyValue('components') + 1;
+                    $segment_size = $segment_collection->getPropertyValue('components') + 2;
                     break;
             }
 
