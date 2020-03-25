@@ -58,30 +58,32 @@ class Jpeg extends BlockBase
                 ]);
             }
 
-            $offset++;
-
             // Create the MediaProbe JPEG segment object.
             $segment_collection = $this->getCollection()->getItemCollection($segment_id);
             $segment_class = $segment_collection->getPropertyValue('class');
             $segment = new $segment_class($segment_collection, $this);
 
-            // Get the JPEG segment size.
+            // Get the JPEG segment DataWindow.
             switch ($segment_collection->getPropertyValue('payload')) {
                 case 'none':
-                    $segment_size = 0;
+                    // The data window size is the marker byte.
+                    $segment_size = 1;
                     break;
                 case 'variable':
-                    // Read the length of the segment. The length includes the
-                    // two bytes used to store the length.
-                    $segment_size = $data_element->getShort($offset);
+                    // Read the length of the segment. The data window size
+                    // includes the marker byte and two bytes used to store
+                    // the length.
+                    $segment_size = $data_element->getShort($offset + 1) + 3;
                     break;
                 case 'fixed':
-                    $segment_size = $segment_collection->getPropertyValue('components');
+                    // The data window size includes the marker byte.
+                    $segment_size = $segment_collection->getPropertyValue('components') + 1;
                     break;
             }
 
             // Load the MediaProbe JPEG segment data.
-            $segment->loadFromData($data_element, $offset, $segment_size);
+            $data_window = new DataWindow($data_element, $offset, $segment_size);
+            $segment->loadFromData($data_window);
 
             // In case of image scan segment, the load is now complete.
             if ($segment->getPayload() === 'scan') {
@@ -90,7 +92,7 @@ class Jpeg extends BlockBase
 
             // Position to end of the segment. It is defined by the current
             // offset + the bytes of the payload.
-            $offset += $segment->getComponents();
+            $offset += $segment->getComponents() + 1;
         }
 
         $this->valid = $valid;

@@ -115,7 +115,7 @@ abstract class BlockBase extends ElementBase
             'node' => $node,
             'name' => $name,
             'title' => $title,
-            'offset' => $offset,
+            'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);
     }
