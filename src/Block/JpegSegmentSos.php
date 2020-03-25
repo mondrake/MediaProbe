@@ -29,29 +29,26 @@ class JpegSegmentSos extends JpegSegmentBase
         // determined by finding the EOI marker backwards from the end of data.
         // Some images have some trailing (garbage?) following the EOI marker,
         // which we store in a RawData object.
-        $size = $data_element->getSize();
-        $length = $size;
-        while ($data_element->getByte($length - 2) !== Jpeg::JPEG_DELIMITER || $data_element->getByte($length - 1) != self::JPEG_EOI) {
-            $length --;
+        $scan_size = $data_element->getSize();
+        while ($data_element->getByte($scan_size - 2) !== Jpeg::JPEG_DELIMITER || $data_element->getByte($scan_size - 1) != self::JPEG_EOI) {
+            $scan_size --;
         }
-        $offset = 0;
-        $components = $length - $offset - 2;
-        $end_offset = $offset + $components + 2;
+        $end_offset = $scan_size;
 
         // Load data in an Undefined entry.
-        $data_window = new DataWindow($data_element, $offset, $components);
+        $data_window = new DataWindow($data_element, $offset, $scan_size - 2);
         new Undefined($this, [$data_window->getBytes()]);
 
         // Append the EOI.
         $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
         $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
-        $eoi_data_window = new DataWindow($data_element, $end_offset, 2);
+        $eoi_data_window = new DataWindow($data_element, $end_offset - 5);// , 2);
         $segment->loadFromData($eoi_data_window);
 
         // Now check to see if there are any trailing data.
-        if ($end_offset < $size) {
-            $raw_size = $size - $end_offset;
+        if ($end_offset < $data_element->getSize()) {
+            $raw_size = $data_element->getSize() - $end_offset;
             $this->warning('Found trailing content after EOI: {size} bytes', ['size' => $raw_size]);
             // There is no JPEG marker for trailing garbage, so we just collect
             // the data in a RawData object.
