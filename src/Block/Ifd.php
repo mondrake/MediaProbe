@@ -51,7 +51,7 @@ class Ifd extends ListBase
 
             $class = $item_definition->getCollection()->getPropertyValue('class');
             $ifd_item = new $class($item_definition, $this);
-            $ifd_item_data_window = new DataWindow($data_element, $item_definition->getDataOffset() - 8, $item_definition->getSize());
+            $ifd_item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
 
             try {
                 $ifd_item->loadFromData($ifd_item_data_window);
@@ -85,11 +85,6 @@ class Ifd extends ListBase
     {
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
-        $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
-            'ifdname' => $this->getAttribute('name'),
-            'tags' => $entries_count,
-            'offset' => $data_element->getStart() + $offset,
-        ]);
 
         // Check if we have enough data.
         if (2 + 12 * $entries_count > $data_element->getSize()) {
@@ -131,7 +126,7 @@ class Ifd extends ListBase
         // the TAG's data element, but at the the offset stored in the data
         // element.
         if ($size > 4) {
-            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift;
+            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift - 8;
         } else {
             $data_offset = $offset + 8;
         }
