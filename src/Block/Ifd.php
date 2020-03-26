@@ -26,8 +26,6 @@ class Ifd extends ListBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-        $this->debugBlockInfo($data_element);
-
         $valid = true;
 
         $offset = 0;
@@ -35,6 +33,7 @@ class Ifd extends ListBase
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
+        $this->debugBlockInfo($data_element, $n);
 
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
@@ -403,5 +402,30 @@ class Ifd extends ListBase
             }
         }
         return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    {
+        $msg = '{node}:{name} ({title})';
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}, {tags} entries';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        } else {
+            $msg .= ' size {size} byte(s), {tags} entries';
+        }
+        $this->debug($msg, [
+            'node' => $node,
+            'name' => $name,
+            'title' => $title,
+            'offset' => $offset ?? null,
+            'size' => $data_element ? $data_element->getSize() : null,
+            'tags' => $items_count,
+        ]);
     }
 }

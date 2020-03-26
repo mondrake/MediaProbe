@@ -48,10 +48,6 @@ class Tag extends BlockBase
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
         } else {
-            $this->debug("Item: {item}", [
-                'item' => $this->getCollection()->getPropertyValue('title'),
-            ]);
-
             // Warn if format is not as expected.
             $expected_format = $this->getCollection()->getPropertyValue('format');
             if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
