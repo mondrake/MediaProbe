@@ -52,20 +52,21 @@ script:
 
   - if [ "$TRAVIS_PHP_VERSION" == "7.1" ]; then ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit 1; fi
   #- ./vendor/bin/phpunit ./test/DataWindowTest.php
-  - ./vendor/bin/phpunit ./test
+  #- ./vendor/bin/phpunit ./test
 
   #- php examples/dump-media.php -d -w test/image_files/broken_images/canon-eos-650d.jpg
   #- php examples/dump-media.php -d    test/image_files/broken_images/canon-eos-650d.jpg-rewrite.img
   #- php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg
   #- php examples/dump-media.php -d test/image_files/exiftool/Canon1DmkIII.jpg-rewrite.img
-  - php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
+  #- php examples/dump-media.php -d test/image_files/exiftool/Canon.jpg
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-powershot-s60.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-powershot-s60.jpg-rewrite.img
   #- php examples/dump-media.php -d  test/image_files/camera_samples/canon-ixus-ii.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/canon-ixus-ii.jpg-rewrite.img
   #- php examples/dump-media.php -d -w test/image_files/camera_samples/apple-iphone6s.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone6s.jpg-rewrite.img
-  #- php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
+  - php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG
+  - php examples/dump-media.php -d test/image_files/camera_samples/apple-iphone7.JPG-rewrite.img
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg
   #- php examples/dump-media.php -d test/image_files/camera_samples/pentax-istDS.jpg-rewrite.img
   #- php examples/dump-media.php -d test/image_files/broken_images/gh-10-a.jpg
@@ -73,7 +74,7 @@ script:
   #- php examples/dump-media.php test/image_files/broken_images/gh-10-b.jpg
   #- php examples/dump-media.php -d test/image_files/broken_images/gh-10-b.jpg-rewrite.img
   #- php examples/dump-media.php test/image_files/broken_images/gh-11.jpg
-  - php examples/dump-media.php -d test/image_files/broken_images/misplaced-exif.jpg
+  #- php examples/dump-media.php -d test/image_files/broken_images/misplaced-exif.jpg
   #- php examples/dump-media.php -d test/image_files/gh-16.jpg
   #- php examples/dump-media.php -d -w test/image_files/gh-21.jpg
   #- php examples/dump-media.php -d test/image_files/gh-21.jpg-rewrite.img
