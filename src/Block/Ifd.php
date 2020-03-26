@@ -54,7 +54,6 @@ dump(['ifd,', MediaProbe::dumpHex($data_element->getBytes(), 50)]);
             $class = $item_definition->getCollection()->getPropertyValue('class');
             $ifd_entry = new $class($item_definition, $this);
 
-dump(['tag,', $data_element->getBytes($data_element->getLong($i_offset + 8) - 8, 50)]);
             try {
 //                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
                 $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8) - 8, $item_definition->getSize());
