@@ -20,7 +20,7 @@ class JpegSegmentCom extends JpegSegmentBase
         $this->debugBlockInfo($data_element);
 
         // Set the Comments's entry.
-        $entry = new Ascii($this, [$data_element->getBytes(2, $this->getCollection()->getPropertyValue('components') - 2)]);
+        $entry = new Ascii($this, [$data_element->getBytes(4, $this->getCollection()->getPropertyValue('components') - 2)]);
 
         $this->valid = true;
     }
