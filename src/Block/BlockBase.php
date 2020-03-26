@@ -88,10 +88,10 @@ abstract class BlockBase extends ElementBase
     {
         $attributes = [];
         if ($this->getAttribute('name') !== null) {
-            $attributes['name'] => $this->getAttribute('name');
+            $attributes['name'] = $this->getAttribute('name');
         }
         if ($this->getAttribute('id') !== null) {
-            $attributes['id'] => $this->getAttribute('id');
+            $attributes['id'] = $this->getAttribute('id');
         }
         $dump = array_merge(parent::toDumpArray(), $attributes, ['collection' => $this->getCollection()->getId()]);
         // xx todo restore $dump = array_merge(parent::toDumpArray(), $this->getAttributes(), ['collection' => $this->getCollection()->getId()]);
