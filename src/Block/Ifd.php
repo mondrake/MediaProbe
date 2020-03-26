@@ -52,11 +52,9 @@ class Ifd extends ListBase
 
             $class = $item_definition->getCollection()->getPropertyValue('class');
             $ifd_item = new $class($item_definition, $this);
-dump([$item_definition->getDataOffset(), $item_definition->getSize()]);
             $ifd_item_data_window = new DataWindow($data_element, $item_definition->getDataOffset() - 8, $item_definition->getSize());
 
             try {
-//                $ifd_item->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
                 $ifd_item->loadFromData($ifd_item_data_window);
             } catch (DataException $e) {
                 $ifd_item->error($e->getMessage());
