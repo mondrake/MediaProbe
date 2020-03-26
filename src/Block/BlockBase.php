@@ -87,7 +87,7 @@ abstract class BlockBase extends ElementBase
     public function toDumpArray()
     {
         $attributes = [];
-        if (!empty($this->getAttribute('name')) {
+        if (!empty($this->getAttribute('name'))) {
             $attributes['name'] = $this->getAttribute('name');
         }
         if (!empty($this->getAttribute('id'))) {
