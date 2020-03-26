@@ -79,7 +79,7 @@ abstract class BlockBase extends ElementBase
         foreach ($this->getMultipleElements("*") as $sub) {
             $bytes .= $sub->toBytes();
         }
-dump([MediaProbe::dumpHex($bytes, 50)]);
+//dump([MediaProbe::dumpHex($bytes, 50)]);
         return $bytes;
     }
 
