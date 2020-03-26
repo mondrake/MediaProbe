@@ -32,6 +32,7 @@ class Ifd extends ListBase
 
         $offset = 0;  
         $size = $data_element->getSize();
+dump([MediaProbe::dumpHex($data_element->getBytes(), 50)]);
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
