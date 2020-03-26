@@ -18,11 +18,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Tag extends BlockBase
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected $contextPathSegmentPattern = '/{DOMNode}:{name}:{id}';
-
     // xx
     protected $definition;
 
@@ -150,5 +145,16 @@ class Tag extends BlockBase
     public function getComponents()
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getComponents() : $this->getDefinition()->getValuesCount();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getContextPathSegmentPattern()
+    {
+        if ($this->getAttribute('name') !== null) {
+            return '/{DOMNode}:{name}:{id}';
+        }
+        return '/{DOMNode}:{id}';
     }
 }

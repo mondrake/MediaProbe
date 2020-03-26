@@ -25,11 +25,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 abstract class ListBase extends BlockBase
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected $contextPathSegmentPattern = '/{DOMNode}:{name}:{id}';
-
     // xx
     protected $definition;
 
@@ -83,5 +78,13 @@ abstract class ListBase extends BlockBase
     public function getComponents()
     {
         return count($this->getMultipleElements('*[not(self::rawData)]'));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getContextPathSegmentPattern()
+    {
+        return '/{DOMNode}:{name}:{id}';
     }
 }

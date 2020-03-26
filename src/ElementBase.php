@@ -44,13 +44,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected $valid = false;
 
     /**
-     * The format of the context path segment.
-     *
-     * @var string
-     */
-    protected $contextPathSegmentPattern = '/{DOMNode}';
-
-    /**
      * Constructs an Element object.
      *
      * @param string $dom_node_name
@@ -178,6 +171,17 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     }
 
     /**
+     * Returns the format of the context path segment.
+     *
+     * @returns string
+     *   The format of the context path segment.
+     */
+    protected function getContextPathSegmentPattern()
+    {
+        return '/{DOMNode}';
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getContextPath()
@@ -193,7 +197,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             }
         }
 
-        return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->contextPathSegmentPattern);
+        return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->getContextPathSegmentPattern());
     }
 
     /**
