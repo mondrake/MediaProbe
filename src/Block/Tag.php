@@ -81,6 +81,8 @@ class Tag extends BlockBase
      */
     public function loadFromData(DataElement $data_element): void
     {
+        $this->debugBlockInfo($data_element);
+
         $valid = true;
 
 dump([MediaProbe::dumpHex($data_element->getBytes()), $data_element->getBytes()]);

@@ -33,36 +33,7 @@ class Ascii extends EntryBase
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-dump(['entry', $data_element->getBytes($offset, $size), $item_definition]);
         $bytes = $data_element->getBytes();
-
-        // Check the last byte is NULL.
-        if (substr($bytes, -1) !== "\x0") {
-            $this->notice('Ascii entry missing final NUL character.');
-        }
-
-        $this->setValue([$bytes]);
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function xxxloadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-dump(['entry', $data_element->getBytes($offset, $size), $item_definition]);
-        // Cap bytes to get to remaining data window size.
-        $size = $data_element->getSize();
-        if ($item_definition->getDataOffset() + $item_definition->getValuesCount() > $size) {
-            $bytes_to_get = $size - $item_definition->getDataOffset();
-            $this->warning('Ascii entry reading {actual} bytes instead of {expected} to avoid data window overflow', [
-                'actual' => $bytes_to_get,
-                'expected' => $item_definition->getValuesCount(),
-            ]);
-        } else {
-            $bytes_to_get = $item_definition->getValuesCount();
-        }
-        $bytes = $data_element->getBytes($item_definition->getDataOffset(), $bytes_to_get);
 
         // Check the last byte is NULL.
         if (substr($bytes, -1) !== "\x0") {

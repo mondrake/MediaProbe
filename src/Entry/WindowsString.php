@@ -34,21 +34,8 @@ class WindowsString extends Byte
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        // Cap bytes to get to remaining data window size.
-        $size = $data_element->getSize();
-        if ($item_definition->getDataOffset() + $item_definition->getValuesCount() > $size) {
-            $bytes_to_get = $size - $item_definition->getDataOffset();
-/* todo renable            $parent_block->warning('WindowsString entry reading {actual} bytes instead of {expected} to avoid data window overflow', [
-                'actual' => $bytes_to_get,
-                'expected' => $item_definition->getValuesCount(),
-            ]);*/
-            $bytes = $data_element->getBytes($item_definition->getDataOffset(), $bytes_to_get);
-        } else {
-            $bytes = $data_element->getBytes($item_definition->getDataOffset(), $item_definition->getValuesCount());
-        }
-
+        $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         $this->setValue([mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE')]);
-
         return $this;
     }
 

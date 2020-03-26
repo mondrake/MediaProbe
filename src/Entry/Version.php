@@ -25,7 +25,7 @@ class Version extends Undefined
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        $version = $data_element->getBytes($item_definition->getDataOffset(), $item_definition->getValuesCount());
+        $version = $data_element->getBytes(0, $item_definition->getValuesCount());
         $value = is_numeric($version) ? [$version / 100] : [$version];
         $this->setValue($value);
         return $this;

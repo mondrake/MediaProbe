@@ -32,7 +32,7 @@ class ExifUserComment extends Undefined
         if ($item_definition->getValuesCount() < 8) {
             $this->setValue([]);
         } else {
-            $this->setValue([$data_element->getBytes($item_definition->getDataOffset() + 8, $item_definition->getValuesCount() - 8), rtrim($data_element->getBytes($item_definition->getDataOffset(), 8))]);
+            $this->setValue([$data_element->getBytes(8, $item_definition->getValuesCount() - 8), rtrim($data_element->getBytes(0, 8))]);
         }
 
         return $this;
