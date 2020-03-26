@@ -104,6 +104,12 @@ class Jpeg extends BlockBase
             $offset += $data_window->getSize();
         }
 
+        // Fail if EOI is missing.
+        if (!$this->getElement("jpegSegment[@name='EOI']")) {
+            $this->error('Missing EOI (End Of Image) JPEG marker');
+            $valid = false;
+        }
+
         $this->valid = $valid;
     }
 
