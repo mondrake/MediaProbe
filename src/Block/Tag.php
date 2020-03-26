@@ -152,7 +152,7 @@ class Tag extends BlockBase
      */
     protected function getContextPathSegmentPattern()
     {
-        if (!empty($this->getAttribute('name'))) {
+        if ($this->getAttribute('name') !== '') {
             return '/{DOMNode}:{name}:{id}';
         }
         return '/{DOMNode}:{id}';
