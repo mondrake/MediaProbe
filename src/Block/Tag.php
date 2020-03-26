@@ -83,7 +83,7 @@ class Tag extends BlockBase
     {
         $valid = true;
 
-dump([MediaProbe::dumpHex($data_element->getBytes)]);
+dump([MediaProbe::dumpHex($data_element->getBytes()), $data_element->getBytes()]);
         $class = $this->getDefinition()->getEntryClass();
         $entry = new $class($this);
         try {
