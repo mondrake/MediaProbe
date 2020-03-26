@@ -32,7 +32,7 @@ class JpegSegmentApp1 extends JpegSegmentBase
             // We store the data as normal JPEG content if it could not be
             // parsed as Exif data.
             $entry = new Undefined($this, [$data_element->getBytes()]);
-            $entry->debug("Exif header not found. Loaded {text}", ['text' => $entry->toString()]);
+            $entry->debug("Not an Exif segment. Loaded {text}", ['text' => $entry->toString()]);
         }
 
         $this->valid = true;

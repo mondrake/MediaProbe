@@ -45,9 +45,9 @@ class Jpeg extends BlockBase
             // Get the next JPEG segment id offset.
             try {
                 $offset = $this->getJpegSegmentIdOffset($data_element, $offset);
+                // xx todo --> fail if there's a gap in the offset
             }
             catch (DataException $e) {
-//dump([$offset, MediaProbe::dumpHex($data_element->getBytes($offset), 50)]);
                 $this->error($e->getMessage());
                 $this->valid = false;
                 return;
