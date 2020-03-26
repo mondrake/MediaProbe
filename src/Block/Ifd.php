@@ -24,24 +24,23 @@ class Ifd extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element): void
     {
         $this->debugBlockInfo($data_element);
 
         $valid = true;
 
-        if ($size === null) {
-            $size = $data_element->getSize();
-        }
+        $offset = 0;  
+        $size = $data_element->getSize();
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
 
-        // Load the blocks.
+        // Parse the items.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
-
+dump($item_definition);
             // If the entry is an IFD, checks the offset.
             if (is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), 'FileEye\MediaProbe\Block\ListBase') && $data_element->getLong($i_offset + 8) <= $offset) {
                 $this->error('Invalid offset pointer to IFD: {offset}.', [
