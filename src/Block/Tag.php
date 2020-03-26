@@ -81,7 +81,6 @@ class Tag extends BlockBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
-dump(['tag,', $data_element->getBytes($offset, $size)]);
         $valid = true;
 
         if ($size === null) {

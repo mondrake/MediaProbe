@@ -33,6 +33,7 @@ class Ascii extends EntryBase
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
+dump(['entry,', $data_element->getBytes($offset, $size), $item_definition]);
         // Cap bytes to get to remaining data window size.
         $size = $data_element->getSize();
         if ($item_definition->getDataOffset() + $item_definition->getValuesCount() > $size) {
