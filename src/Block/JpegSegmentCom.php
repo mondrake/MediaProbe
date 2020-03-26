@@ -20,7 +20,7 @@ class JpegSegmentCom extends JpegSegmentBase
         $this->debugBlockInfo($data_element);
 
         // Set the Comments's entry.
-        $entry = new Ascii($this, [$data_element->getBytes(2)]);
+        $entry = new Ascii($this, [$data_element->getBytes(2, $this->getCollection->getPropertyValue('components') - 2)]);
 
         $this->valid = true;
     }
@@ -34,6 +34,6 @@ class JpegSegmentCom extends JpegSegmentBase
         $comment = $this->getElement("entry");
         $data = rtrim($comment->toBytes(), "\0");
 
-        return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data;
+        return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data; // xx todo not this should be fixed size
     }
 }
