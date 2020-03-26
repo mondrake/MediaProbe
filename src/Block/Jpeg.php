@@ -47,7 +47,7 @@ class Jpeg extends BlockBase
                 $offset = $this->getJpegSegmentIdOffset($data_element, $offset);
             }
             catch (DataException $e) {
-dump([MediaProbe::dumpHex($data_element->getBytes(), 50)]);
+dump([$offset, MediaProbe::dumpHex($data_element->getBytes($offset), 50)]);
                 $this->error($e->getMessage());
                 $this->valid = false;
                 return;

@@ -6,6 +6,7 @@ use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
+use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -44,6 +45,7 @@ class JpegSegmentApp1 extends JpegSegmentBase
     {
         // If we have an Exif table, dump it.
         if ($exif = $this->getElement("exif")) {
+dump([MediaProbe::dumpHex($exif->toBytes(), 50)]);
             $data = $exif->toBytes();
             return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data;
         }
