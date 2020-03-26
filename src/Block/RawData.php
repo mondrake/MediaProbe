@@ -52,4 +52,15 @@ class RawData extends BlockBase
     {
         return $this->getElement("entry")->toBytes();
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getContextPathSegmentPattern()
+    {
+        if ($this->getAttribute('name') !== '') {
+            return '/{DOMNode}:{name}';
+        }
+        return '/{DOMNode}';
+    }
 }
