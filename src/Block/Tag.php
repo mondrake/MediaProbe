@@ -79,7 +79,27 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element): void
+    {
+        $valid = true;
+
+dump([MediaProbe::dumpHex($data_element->getBytes)]);
+        $class = $this->getDefinition()->getEntryClass();
+        $entry = new $class($this);
+        try {
+            $entry->loadFromData($data_element, 0, $data_element->getSize(), [], $this->getDefinition());
+        } catch (DataException $e) {
+            $this->error($e->getMessage());
+            $valid = false;
+        }
+
+        $this->valid = $valid;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function xxxloadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
         $valid = true;
 

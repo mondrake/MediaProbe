@@ -30,7 +30,7 @@ class Ifd extends ListBase
 
         $valid = true;
 
-        $offset = 0;  
+        $offset = 0;
         $size = $data_element->getSize();
 dump(['ifd,', MediaProbe::dumpHex($data_element->getBytes(), 50)]);
 
@@ -41,7 +41,7 @@ dump(['ifd,', MediaProbe::dumpHex($data_element->getBytes(), 50)]);
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
-//dump($item_definition);
+
             // If the entry is an IFD, checks the offset.
             if (is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), 'FileEye\MediaProbe\Block\ListBase') && $data_element->getLong($i_offset + 8) <= $offset) {
                 $this->error('Invalid offset pointer to IFD: {offset}.', [
@@ -52,13 +52,15 @@ dump(['ifd,', MediaProbe::dumpHex($data_element->getBytes(), 50)]);
             }
 
             $class = $item_definition->getCollection()->getPropertyValue('class');
-            $ifd_entry = new $class($item_definition, $this);
+            $ifd_item = new $class($item_definition, $this);
+dump([$item_definition->getDataOffset(), $item_definition->getSize()]);
+            $ifd_item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
 
             try {
-//                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
-                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8) - 8, $item_definition->getSize());
+//                $ifd_item->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
+                $ifd_item->loadFromData($ifd_item_data_window);
             } catch (DataException $e) {
-                $ifd_entry->error($e->getMessage());
+                $ifd_item->error($e->getMessage());
                 $valid = false;
             }
         }
