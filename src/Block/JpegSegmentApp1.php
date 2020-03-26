@@ -45,8 +45,9 @@ class JpegSegmentApp1 extends JpegSegmentBase
     {
         // If we have an Exif table, dump it.
         if ($exif = $this->getElement("exif")) {
-dump([MediaProbe::dumpHex($exif->toBytes(), 50)]);
             $data = $exif->toBytes();
+dump([MediaProbe::dumpHex($data, 50)]);
+dump([MediaProbe::dumpHex(Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data, 50)]);
             return Jpeg::JPEG_DELIMITER . $this->getAttribute('id') . ConvertBytes::fromShort(strlen($data) + 2, ConvertBytes::BIG_ENDIAN) . $data;
         }
 
