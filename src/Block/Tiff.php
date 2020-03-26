@@ -83,7 +83,6 @@ class Tiff extends BlockBase
                 $ifd = new $ifd_class($ifd_item, $this);
                 $ifd_data_window = new DataWindow($data_element, $ifd_offset);
 //                $ifd->loadFromData($data_element, $ifd_offset);
-dump([MediaProbe::dumpHex($ifd_data_window->getBytes(), 50)]);
                 $ifd->loadFromData($ifd_data_window);
 
                 // Offset to next IFD.

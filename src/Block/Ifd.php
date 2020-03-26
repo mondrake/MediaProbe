@@ -32,7 +32,7 @@ class Ifd extends ListBase
 
         $offset = 0;  
         $size = $data_element->getSize();
-dump([MediaProbe::dumpHex($data_element->getBytes(), 50)]);
+dump(['ifd,', MediaProbe::dumpHex($data_element->getBytes(), 50)]);
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
@@ -41,7 +41,7 @@ dump([MediaProbe::dumpHex($data_element->getBytes(), 50)]);
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
-dump($item_definition);
+//dump($item_definition);
             // If the entry is an IFD, checks the offset.
             if (is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), 'FileEye\MediaProbe\Block\ListBase') && $data_element->getLong($i_offset + 8) <= $offset) {
                 $this->error('Invalid offset pointer to IFD: {offset}.', [
@@ -54,8 +54,10 @@ dump($item_definition);
             $class = $item_definition->getCollection()->getPropertyValue('class');
             $ifd_entry = new $class($item_definition, $this);
 
+dump(['tag,', $data_element->getBytes($data_element->getLong($i_offset + 8) - 8, 50)]);
             try {
-                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
+//                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8), $item_definition->getSize());
+                $ifd_entry->loadFromData($data_element, (int) $data_element->getLong($i_offset + 8) - 8, $item_definition->getSize());
             } catch (DataException $e) {
                 $ifd_entry->error($e->getMessage());
                 $valid = false;
