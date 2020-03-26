@@ -39,6 +39,8 @@ class Map extends Index
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->debugBlockInfo($data_element);
+
         $this->validate($data_element, $offset, $size);
 
         $i = 0;

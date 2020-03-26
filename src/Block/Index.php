@@ -67,6 +67,8 @@ class Index extends ListBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+        $this->debugBlockInfo($data_element);
+
         $this->validate($data_element, $offset, $size);
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
