@@ -18,7 +18,7 @@ class JpegSegmentCom extends JpegSegmentBase
     public function loadFromData(DataElement $data_element): void
     {
         $this->debugBlockInfo($data_element);
-dump($data_element->getBytes());
+
         // Set the Comments's entry.
         $entry = new Ascii($this, [$data_element->getBytes(2, $this->getCollection()->getPropertyValue('components') - 2)]);
 
