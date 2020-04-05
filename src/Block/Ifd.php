@@ -172,7 +172,7 @@ dump($item_offset);
             continue;
           }*/
           $item_items_count = $data_element->getShort($item_offset);
-dump(MediaProbe::dumpHex($data_element->getBytes($item_offset, 50)));
+dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
 dump($item_items_count);
         }
 
