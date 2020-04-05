@@ -127,7 +127,7 @@ class Ifd extends ListBase
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
         $size = ItemFormat::getSize($format) * $components;
-dump([$id, $format, $components, $size]);
+dump([$id, $format, $components, $size, $data_element->getLong($offset + 8)]);
         // If the data size is bigger than 4 bytes, then actual data is not in
         // the TAG's data element, but at the the offset stored in the data
         // element.
