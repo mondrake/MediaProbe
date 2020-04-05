@@ -96,29 +96,6 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function xxxloadFromData(DataElement $data_element, int $offset = 0, $size = null): void
-    {
-        $valid = true;
-
-        if ($size === null) {
-            $size = $data_element->getSize();
-        }
-
-        $class = $this->getDefinition()->getEntryClass();
-        $entry = new $class($this);
-        try {
-            $entry->loadFromData($data_element, $offset, $size, [], $this->getDefinition());
-        } catch (DataException $e) {
-            $this->error($e->getMessage());
-            $valid = false;
-        }
-
-        $this->valid = $valid;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getValue(array $options = [])
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getValue($options) : null;
@@ -173,5 +150,38 @@ class Tag extends BlockBase
             return '/{DOMNode}:{name}:{id}';
         }
         return '/{DOMNode}:{id}';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null)
+    {
+        $msg = '#{seq} @{ifdoffset} {node}';
+        $item_definition_offset = $data_element->getStart() + $this->getDefinition()->getItemDefinitionOffset();
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($title ==! null) {
+            $msg .= ' ({title})';
+        }
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        } else {
+            $msg .= ' size {size} byte(s)';
+        }
+        $this->debug($msg, [
+            'seq' => $this->getDefinition()->getSequence() + 1,
+            'ifdoffset' => $item_definition_offset . '/0x' . strtoupper(dechex($item_definition_offset)),
+            'node' => $node,
+            'name' => $name,
+            'title' => $title,
+            'offset' => $offset ?? null,
+            'size' => $data_element ? $data_element->getSize() : null,
+        ]);
     }
 }
