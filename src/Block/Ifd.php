@@ -42,6 +42,7 @@ class Ifd extends ListBase
 
             // If the entry is an IFD, checks the offset.
             if (is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), 'FileEye\MediaProbe\Block\ListBase') && $data_element->getLong($i_offset + 8) <= $offset) {
+dump($item_definition);
                 $this->error('Invalid offset pointer to IFD: {offset}.', [
                     'offset' => $item_definition->getDataOffset(),
                 ]);
