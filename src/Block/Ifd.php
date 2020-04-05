@@ -162,7 +162,7 @@ class Ifd extends ListBase
         if ($item_collection->getPropertyValue('class') !== Tag::class) {
 //dump($item_definition);
           // Check the offset.
-          $item_offset = $data_element->getLong($i_offset + 8);
+          $item_offset = $data_element->getLong($offset + 8);
 dump($item_offset);
 /*          if ($item_offset <= $offset) {
             $this->error('Invalid offset pointer to IFD: {offset}.', [
