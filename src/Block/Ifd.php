@@ -42,7 +42,7 @@ class Ifd extends ListBase
                 $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
-                $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset()); //, $item_definition->getSize());
                 $item->loadFromData($item_data_window);
             } catch (DataException $e) {
                 $item->error($e->getMessage());
@@ -81,13 +81,13 @@ class Ifd extends ListBase
         ]);
 
         // Check if we have enough data.
-/*        if (2 + 12 * $entries_count > $data_element->getSize()) {
+        if (2 + 12 * $entries_count > $data_element->getSize()) {
             $entries_count = floor(($offset - $data_element->getSize()) / 12);
             $this->warning('Wrong number of IFD entries in ifd {ifdname}, adjusted to {tags}', [
                 'ifdname' => $this->getAttribute('name'),
                 'tags' => $entries_count,
             ]);
-        }*/
+        }
 
         return $entries_count;
     }
@@ -174,7 +174,7 @@ class Ifd extends ListBase
           $components = $data_element->getShort($item_offset - 8);
           $format = ItemFormat::LONG;
           $data_offset = $item_offset - 8;
-dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
+//dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
 //dump($item_items_count);
         }
 
