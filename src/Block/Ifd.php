@@ -171,7 +171,7 @@ dump($item_offset);
             $valid = false;
             continue;
           }*/
-          $item_items_count->getShort($item_offset);
+          $item_items_count = $data_element->getShort($item_offset);
 dump($item_items_count);
         }
 
