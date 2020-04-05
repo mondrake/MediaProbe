@@ -72,8 +72,6 @@ class Ifd extends ListBase
      */
     protected function getItemsCountFromData(DataElement $data_element, $offset): int
     {
-dump([$offset, MediaProbe::dumpHex($data_element->getBytes($offset, 50))]);
-
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
         $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
@@ -83,13 +81,13 @@ dump([$offset, MediaProbe::dumpHex($data_element->getBytes($offset, 50))]);
         ]);
 
         // Check if we have enough data.
-        if (2 + 12 * $entries_count > $data_element->getSize()) {
+/*        if (2 + 12 * $entries_count > $data_element->getSize()) {
             $entries_count = floor(($offset - $data_element->getSize()) / 12);
             $this->warning('Wrong number of IFD entries in ifd {ifdname}, adjusted to {tags}', [
                 'ifdname' => $this->getAttribute('name'),
                 'tags' => $entries_count,
             ]);
-        }
+        }*/
 
         return $entries_count;
     }
