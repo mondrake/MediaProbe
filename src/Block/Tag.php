@@ -158,7 +158,7 @@ class Tag extends BlockBase
     public function debugBlockInfo(?DataElement $data_element = null)
     {
         $msg = '#{seq} @{ifdoffset} {node}';
-        $item_definition_offset = $data_element->getStart() + $this->getDefinition()->getItemDefinitionOffset();
+        $item_definition_offset = $this->getDefinition()->getItemDefinitionOffset();
         $node = $this->DOMNode->nodeName;
         $name = $this->getAttribute('name');
         if ($name ==! null) {
