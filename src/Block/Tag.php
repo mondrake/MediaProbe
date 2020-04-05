@@ -174,9 +174,12 @@ class Tag extends BlockBase
         } else {
             $msg .= ' size {size} byte(s)';
         }
+        $msg .= ', f {format}, c {components}';
         $this->debug($msg, [
             'seq' => $this->getDefinition()->getSequence() + 1,
             'ifdoffset' => $item_definition_offset . '/0x' . strtoupper(dechex($item_definition_offset)),
+            'format' => ItemFormat::getName($this->getDefinition()->getFormat()),
+            'components' => $this->getDefinition()->getValuesCount(),
             'node' => $node,
             'name' => $name,
             'title' => $title,

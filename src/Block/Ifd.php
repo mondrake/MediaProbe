@@ -162,7 +162,7 @@ class Ifd extends ListBase
             }
         }
 
-        return new ItemDefinition($item_collection, $format, $components, $data_offset, $offset, $seq);
+        return new ItemDefinition($item_collection, $format, $components, $data_offset, $data_element->getStart() + $offset, $seq);
     }
 
     /**
