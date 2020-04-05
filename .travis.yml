@@ -3,9 +3,9 @@ os: linux
 language: php
 
 php:
-#  - 7.2
- # - 7.3
-  - 7.4
+  #- 7.2
+  - 7.3
+  #- 7.4
 
 branches:
   except:
@@ -88,10 +88,11 @@ script:
   #- php examples/dump-media.php -d    test/image_files/test-tags-1.jpg-rewrite.img
   #- php examples/dump-media.php -d -w test/image_files/no-exif.jpg
   #- php examples/dump-media.php -d    test/image_files/no-exif.jpg-rewrite.img
-  #- php examples/dump-media.php -d test/image_files/sample-1.tiff
   #- php examples/dump-media.php -d    test/image_files/sample-1.tiff
   #- php examples/dump-media.php -d test/image_files/broken_images/gh-11.jpg-rewrite.img
   #- php examples/dump-media.php -d test/image_files/camera_samples/olympus-c765uz.jpg
+  - php examples/dump-media.php -d -w test/image_files/camera_samples/fujifilm_x_a5.jpg
+  #- php examples/dump-media.php -d    test/image_files/camera_samples/fujifilm_x_a5.jpg-rewrite.img
 
 notifications:
   email:
