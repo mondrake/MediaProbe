@@ -131,17 +131,6 @@ class Ifd extends ListBase
             $data_offset = $offset + 8;
         }
 
-        $this->debug("#{seq} @{ifdoffset}, id {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
-            'seq' => $seq + 1,
-            'ifdoffset' => $data_element->getStart() + $offset,
-            'id' => $id,
-            'hexid' => '0x' . strtoupper(dechex($id)),
-            'format' => ItemFormat::getName($format),
-            'components' => $components,
-            'offset' => $data_element->getStart() + $data_offset,
-            'size' => $size,
-        ]);
-
         // Fall back to the generic IFD collection if the item is missing from
         // the appropriate one.
         try {

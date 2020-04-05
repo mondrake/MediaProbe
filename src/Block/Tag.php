@@ -169,7 +169,7 @@ class Tag extends BlockBase
             $msg .= ' ({title})';
         }
         if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset} size {size}';
+            $msg .= ' @{offset} s {size}';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
             $msg .= ' size {size} byte(s)';
