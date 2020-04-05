@@ -51,7 +51,7 @@ class Version extends Undefined
         $this->value = (string) ($version . ($minor === 0.0 ? '.0' : ''));
         $this->components = strlen($bytes);
 
-        $this->debug("Text: {text}", ['text' => $this->toString()]);
+        $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
 

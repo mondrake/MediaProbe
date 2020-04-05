@@ -60,7 +60,7 @@ class Ascii extends EntryBase
             $this->components = substr($this->value, -1) === "\x0" ? strlen($str) : strlen($str) + 1;
         }
 
-        $this->debug("Text: {text}", ['text' => $this->toString()]);
+        $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
 

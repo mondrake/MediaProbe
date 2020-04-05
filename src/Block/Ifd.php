@@ -85,11 +85,12 @@ class Ifd extends ListBase
     {
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
-
+dump($entries_count);
         // Check if we have enough data.
         if (2 + 12 * $entries_count > $data_element->getSize()) {
             $entries_count = floor(($offset - $data_element->getSize()) / 12);
             $this->warning('Wrong number of IFD entries in ifd {ifdname}, adjusted to {tags}', [
+                'ifdname' => $this->getAttribute('name'),
                 'tags' => $entries_count,
             ]);
         }

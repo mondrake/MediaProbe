@@ -47,9 +47,9 @@ class Undefined extends EntryBase
         $this->components = strlen($data[0]);
 
         if ($this->hasMappedText()) {
-          $this->debug("Text: {text}", ['text' => $this->toString()]);
+          $this->debug("text: {text}", ['text' => $this->toString()]);
         }
-        $this->debug("Data: {data}", ['data' => MediaProbe::dumpHex($this->toBytes(), 12)]);
+        $this->debug("data: {data}", ['data' => MediaProbe::dumpHex($this->toBytes(), 12)]);
         return $this;
     }
 

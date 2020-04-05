@@ -50,7 +50,7 @@ class IfdCopyright extends Ascii
             $this->components = strlen($this->value[0]) + 1 + strlen($this->value[1]) + 1;
         }
 
-        $this->debug("Text: {text}", ['text' => $this->toString()]);
+        $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
 

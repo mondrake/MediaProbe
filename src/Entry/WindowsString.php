@@ -51,7 +51,7 @@ class WindowsString extends Byte
         $this->components = strlen($windows_string) + 2;
         $this->value = [$php_string, $windows_string];
 
-        $this->debug("Text: {text}", ['text' => $this->toString()]);
+        $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
 
