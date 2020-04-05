@@ -72,6 +72,8 @@ class Ifd extends ListBase
      */
     protected function getItemsCountFromData(DataElement $data_element, $offset): int
     {
+dump([$offset, MediaProbe::dumpHex($data_element->getBytes($offset, 50))]);
+
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
         $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
@@ -174,7 +176,7 @@ class Ifd extends ListBase
           $components = $data_element->getShort($item_offset - 8);
           $format = ItemFormat::LONG;
           $data_offset = $item_offset - 8;
-//dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
+dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
 //dump($item_items_count);
         }
 
