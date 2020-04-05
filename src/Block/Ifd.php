@@ -38,33 +38,14 @@ class Ifd extends ListBase
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
-            $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
-
-            // If the item is not a Tag, recurse in loading the item at offset.
-//            if (!is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), Tag::class)) {
-dump($item_definition->getCollection()->getPropertyValue('class'));
-            if ($item_definition->getCollection()->getPropertyValue('class') !== Tag::class) {
-dump($item_definition);
-              // Check the offset.
-              $item_offset = $data_element->getLong($i_offset + 8);
-              if ($item_offset <= $offset) {
-                $this->error('Invalid offset pointer to IFD: {offset}.', [
-                    'offset' => $item_definition->getDataOffset(),
-                ]);
-                $valid = false;
-                continue;
-              }
-dump($item_offset);
-            }
-
-            $class = $item_definition->getCollection()->getPropertyValue('class');
-            $ifd_item = new $class($item_definition, $this);
-            $ifd_item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-
             try {
-                $ifd_item->loadFromData($ifd_item_data_window);
+                $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
+                $item_class = $item_definition->getCollection()->getPropertyValue('class');
+                $item = new $item_class($item_definition, $this);
+                $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                $item->loadFromData($item_data_window);
             } catch (DataException $e) {
-                $ifd_item->error($e->getMessage());
+                $item->error($e->getMessage());
                 $valid = false;
             }
         }
@@ -135,7 +116,7 @@ dump($item_offset);
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
         $size = ItemFormat::getSize($format) * $components;
-//dump([$id, $format, $components, $size, $data_element->getLong($offset + 8)]);
+
         // If the data size is bigger than 4 bytes, then actual data is not in
         // the TAG's data element, but at the the offset stored in the data
         // element.
@@ -174,6 +155,24 @@ dump($item_offset);
                     'DOMNode' => 'tag',
                 ]);
             }
+        }
+
+        // If the item is not a Tag, recurse in loading the item at offset.
+//            if (!is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), Tag::class)) {
+        if ($item_collection->getPropertyValue('class') !== Tag::class) {
+//dump($item_definition);
+          // Check the offset.
+          $item_offset = $data_element->getLong($i_offset + 8);
+dump($item_offset);
+/*          if ($item_offset <= $offset) {
+            $this->error('Invalid offset pointer to IFD: {offset}.', [
+                'offset' => $item_definition->getDataOffset(),
+            ]);
+            $valid = false;
+            continue;
+          }*/
+          $item_items_count->getShort($item_offset);
+dump($item_items_count);
         }
 
         return new ItemDefinition($item_collection, $format, $components, $data_offset, $data_element->getStart() + $offset, $seq);
