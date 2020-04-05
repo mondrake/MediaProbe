@@ -40,14 +40,19 @@ class Ifd extends ListBase
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
 
-            // If the entry is an IFD, checks the offset.
-            if (is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), 'FileEye\MediaProbe\Block\ListBase') && $data_element->getLong($i_offset + 8) <= $offset) {
+            // If the item is not a Tag, recurse in loading the item at offset.
+            if (!is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), Tag::class)) {
 dump($item_definition);
+              // Check the offset.
+              $item_offset = $data_element->getLong($i_offset + 8);
+              if ($item_offset <= $offset) {
                 $this->error('Invalid offset pointer to IFD: {offset}.', [
                     'offset' => $item_definition->getDataOffset(),
                 ]);
                 $valid = false;
                 continue;
+              }
+dump($item_offset);
             }
 
             $class = $item_definition->getCollection()->getPropertyValue('class');
@@ -128,7 +133,7 @@ dump($item_definition);
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
         $size = ItemFormat::getSize($format) * $components;
-dump([$id, $format, $components, $size, $data_element->getLong($offset + 8)]);
+//dump([$id, $format, $components, $size, $data_element->getLong($offset + 8)]);
         // If the data size is bigger than 4 bytes, then actual data is not in
         // the TAG's data element, but at the the offset stored in the data
         // element.
