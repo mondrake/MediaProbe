@@ -376,8 +376,8 @@ class Ifd extends ListBase
             'components' => $maker_note_tag->getComponents(),
             'collection' => $maker_note_collection,
         ]);*/
-        $data = new DataString($maker_note_tag->getElement("entry")->getBytes());
-dump(MediaProbe::dumpHex($data->getBytes()));
+        $data = new DataString($maker_note_tag->toBytes());
+dump(MediaProbe::dumpHex($data->toBytes()));
         $ifd->loadFromData($data);
 
         // Remove the MakerNote tag that has been converted to IFD.
