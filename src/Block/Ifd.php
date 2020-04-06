@@ -373,7 +373,7 @@ class Ifd extends ListBase
         ]);*/
         $data = new DataString($maker_note_tag->toBytes());
         $data->setByteOrder($d->getByteOrder());
-//dump(MediaProbe::dumpHex($data->getBytes(0, 50)));
+dump(MediaProbe::dumpHexFormatted($data->getBytes()));
 //dump($data->getBytes(0, 50));
         $ifd->loadFromData($data,0,12);
 
