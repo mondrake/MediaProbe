@@ -123,7 +123,7 @@ class Ifd extends ListBase
         // the TAG's data element, but at the the offset stored in the data
         // element.
         if ($size > 4) {
-            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift - 8;
+            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift;// - 8;
         } else {
             $data_offset = $offset + 8;
         }
