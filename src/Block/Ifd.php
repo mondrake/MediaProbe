@@ -76,11 +76,6 @@ class Ifd extends ListBase
     {
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
-/*        $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
-            'ifdname' => $this->getAttribute('name'),
-            'tags' => $entries_count,
-            'offset' => $data_element->getStart() + $offset,
-        ]);*/
 
         // Check if we have enough data.
         if (2 + 12 * $entries_count > $data_element->getSize()) {
@@ -127,17 +122,6 @@ class Ifd extends ListBase
         } else {
             $data_offset = $offset + 8;
         }
-
-/*        $this->debug("#{seq} @{ifdoffset}, id {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
-            'seq' => $seq + 1,
-            'ifdoffset' => $data_element->getStart() + $offset,
-            'id' => $id,
-            'hexid' => '0x' . strtoupper(dechex($id)),
-            'format' => ItemFormat::getName($format),
-            'components' => $components,
-            'offset' => $data_element->getStart() + $data_offset,
-            'size' => $size,
-        ]);*/
 
         // Fall back to the generic IFD collection if the item is missing from
         // the appropriate one.

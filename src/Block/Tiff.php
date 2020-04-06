@@ -76,15 +76,14 @@ class Tiff extends BlockBase
             }
 
             try {
-                // Create and load the IFDs.
+                // Create and load the IFDs. Note that the data element cannot
+                // be split in windows since any pointer will refer to the
+                // entire segment space.
                 $ifd_class = $this->getCollection()->getItemCollection($i)->getPropertyValue('class');
                 $ifd_tags_count = $data_element->getShort($ifd_offset);
                 $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), ItemFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
                 $ifd = new $ifd_class($ifd_item, $this);
-//                $ifd_data_window = new DataWindow($data_element, $ifd_offset);
-//dump(MediaProbe::dumpHex($data_element->getBytes($ifd_offset, 50)));
                 $ifd->loadFromData($data_element, $ifd_offset);
-//                $ifd->loadFromData($ifd_data_window);
 
                 // Offset to next IFD.
                 $ifd_offset = $data_element->getLong($ifd_offset + $ifd_tags_count * 12 + 2);
