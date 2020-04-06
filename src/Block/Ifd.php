@@ -37,11 +37,11 @@ class Ifd extends ListBase
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             try {
-                $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
+                $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
                 if ($item_class === Tag::class) {
-                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset() + $xxx, $item_definition->getSize());
+                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
                     $item->loadFromData($item_data_window);
                 }
                 else {
@@ -119,7 +119,7 @@ class Ifd extends ListBase
         // the TAG's data element, but at the the offset stored in the data
         // element.
         if ($size > 4) {
-            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift;// - 8;
+            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift;
         } else {
             $data_offset = $offset + 8;
         }
@@ -375,7 +375,7 @@ class Ifd extends ListBase
         $data->setByteOrder($d->getByteOrder());
 dump(MediaProbe::dumpHexFormatted($data->getBytes()));
 //dump($data->getBytes(0, 50));
-        $ifd->loadFromData($data,0,-664);
+        $ifd->loadFromData($data,0, -676 + 12);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
