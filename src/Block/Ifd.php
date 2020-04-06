@@ -165,10 +165,10 @@ class Ifd extends ListBase
         // If the item is not a Tag, recurse in loading the item at offset.
 //            if (!is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), Tag::class)) {
         if ($item_collection->getPropertyValue('class') !== Tag::class) {
-//dump($item_definition);
+dump($item_definition);
           // Check the offset.
           $item_offset = $data_element->getLong($offset + 8);
-//dump($item_offset);
+dump($item_offset);
 /*          if ($item_offset <= $offset) {
             $this->error('Invalid offset pointer to IFD: {offset}.', [
                 'offset' => $item_definition->getDataOffset(),
@@ -176,10 +176,10 @@ class Ifd extends ListBase
             $valid = false;
             continue;
           }*/
-          $components = $data_element->getShort($item_offset - 8);
-          $format = ItemFormat::LONG;
-          $data_offset = $item_offset - 8;
-//dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
+//          $components = $data_element->getShort($item_offset - 8);
+//          $format = ItemFormat::LONG;
+//          $data_offset = $item_offset - 8;
+dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
 //dump($item_items_count);
         }
 
@@ -430,17 +430,16 @@ class Ifd extends ListBase
         $name = $this->getAttribute('name');
         $title = $this->getCollection()->getPropertyValue('title');
         if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset} size {size}, {tags} entries';
+            $msg .= ' @{offset}, {tags} entries';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
-            $msg .= ' size {size} byte(s), {tags} entries';
+            $msg .= ' {tags} entries';
         }
         $this->debug($msg, [
             'node' => $node,
             'name' => $name,
             'title' => $title,
             'offset' => $offset ?? null,
-            'size' => $data_element ? $data_element->getSize() : null,
             'tags' => $items_count,
         ]);
     }
