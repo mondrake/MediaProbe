@@ -375,7 +375,7 @@ dump(MediaProbe::dumpHex($maker_note_tag->getElement("entry")->getValue()));
             'collection' => $maker_note_collection,
         ]);*/
         $data = new DataString($maker_note_tag->getElement("entry")->getBytes());
-dump(MediaProbe::dumpHex($data);
+dump(MediaProbe::dumpHex($data));
         $ifd->loadFromData($data);
 
         // Remove the MakerNote tag that has been converted to IFD.
