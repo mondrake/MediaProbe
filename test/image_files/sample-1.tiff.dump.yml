@@ -60,7 +60,7 @@ elements:
             elements:
                 -
                     node: rawData
-                    path: /media/tiff/rawData
+                    path: /media/tiff/rawData:scan
                     class: FileEye\MediaProbe\Block\RawData
                     valid: true
                     collection: RawData
