@@ -6,6 +6,7 @@ use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ElementInterface;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
@@ -369,14 +370,14 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
 //dump(MediaProbe::dumpHex($d->getBytes(null, 50)));
-dump($maker_note_tag->getElement("entry"));
-dump(MediaProbe::dumpHex($maker_note_tag->getElement("entry")->getValue()));
+//dump($maker_note_tag->getElement("entry"));
+//dump(MediaProbe::dumpHex($maker_note_tag->getElement("entry")->getValue()));
 /*        $ifd->loadFromData($d, $maker_note_tag->getElement("entry")->getValue()[1], null, [
             'components' => $maker_note_tag->getComponents(),
             'collection' => $maker_note_collection,
         ]);*/
         $data = new DataString($maker_note_tag->getElement("entry")->getBytes());
-dump(MediaProbe::dumpHex($data));
+dump(MediaProbe::dumpHex($data->getBytes()));
         $ifd->loadFromData($data);
 
         // Remove the MakerNote tag that has been converted to IFD.
