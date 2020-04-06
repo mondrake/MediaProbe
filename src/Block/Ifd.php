@@ -42,7 +42,12 @@ class Ifd extends ListBase
                 $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, 0, 'Ifd\\Any');
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
-                $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset()); //, $item_definition->getSize());
+                if ($item_class === Tag::class) {
+                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset()), $item_definition->getSize());
+                }
+                else {
+                    $item_data_window = $data_element;
+                }
                 $item->loadFromData($item_data_window);
             } catch (DataException $e) {
                 $item->error($e->getMessage());
