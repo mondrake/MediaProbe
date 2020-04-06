@@ -360,7 +360,7 @@ class Ifd extends ListBase
         // Load maker note into IFD.
         $ifd_class = $maker_note_collection->getPropertyValue('class');
         $maker_note_ifd_name = $maker_note_collection->getPropertyValue('item');  // xx why not name?? it used to work
-        $exif_ifd->debug("Parsing {makernote} maker notes", [
+        $exif_ifd->debug("**** Parsing {makernote} maker notes", [
             'makernote' => $maker_note_ifd_name,
         ]);
         $item_definition = new ItemDefinition($maker_note_collection, $maker_note_tag->getFormat(), $maker_note_tag->getComponents());
@@ -378,8 +378,8 @@ class Ifd extends ListBase
         ]);*/
         $data = new DataString($maker_note_tag->toBytes());
         $data->setByteOrder($d->getByteOrder());
-dump(MediaProbe::dumpHex($data->getBytes(0, 50)));
-dump($data->getBytes(0, 50));
+//dump(MediaProbe::dumpHex($data->getBytes(0, 50)));
+//dump($data->getBytes(0, 50));
         $ifd->loadFromData($data);
 
         // Remove the MakerNote tag that has been converted to IFD.
