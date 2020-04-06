@@ -76,11 +76,11 @@ class Ifd extends ListBase
     {
         // Get the number of tags.
         $entries_count = $data_element->getShort($offset);
-        $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
+/*        $this->debug("IFD {ifdname} @{offset} with {tags} entries", [
             'ifdname' => $this->getAttribute('name'),
             'tags' => $entries_count,
             'offset' => $data_element->getStart() + $offset,
-        ]);
+        ]);*/
 
         // Check if we have enough data.
         if (2 + 12 * $entries_count > $data_element->getSize()) {
@@ -128,7 +128,7 @@ class Ifd extends ListBase
             $data_offset = $offset + 8;
         }
 
-        $this->debug("#{seq} @{ifdoffset}, id {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
+/*        $this->debug("#{seq} @{ifdoffset}, id {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
             'seq' => $seq + 1,
             'ifdoffset' => $data_element->getStart() + $offset,
             'id' => $id,
@@ -137,7 +137,7 @@ class Ifd extends ListBase
             'components' => $components,
             'offset' => $data_element->getStart() + $data_offset,
             'size' => $size,
-        ]);
+        ]);*/
 
         // Fall back to the generic IFD collection if the item is missing from
         // the appropriate one.
@@ -422,7 +422,7 @@ class Ifd extends ListBase
      */
     public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
     {
-        $msg = '{node}:{name} ({title})';
+        $msg = '#{seq} {node}:{name} ({title})';
         $node = $this->DOMNode->nodeName;
         $name = $this->getAttribute('name');
         $title = $this->getCollection()->getPropertyValue('title');
@@ -433,6 +433,7 @@ class Ifd extends ListBase
             $msg .= ' {tags} entries';
         }
         $this->debug($msg, [
+            'seq' => $this->getDefinition()->getSequence() + 1,
             'node' => $node,
             'name' => $name,
             'title' => $title,
