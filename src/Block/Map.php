@@ -41,7 +41,7 @@ class Map extends Index
     {
         $this->debugBlockInfo($data_element);
 
-        $this->validate($data_element, $offset, $size);
+        $this->validate($data_element, $offset, $size ?? $data_element->getSize());
 
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
