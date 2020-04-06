@@ -67,7 +67,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: /media/tiff/rawData/entry
+                            path: /media/tiff/rawData:scan/entry
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
