@@ -82,7 +82,7 @@ class Tiff extends BlockBase
                 $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), ItemFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
                 $ifd = new $ifd_class($ifd_item, $this);
 //                $ifd_data_window = new DataWindow($data_element, $ifd_offset);
-                $ifd->loadFromData($data_element, $ifd_offset - 4);
+                $ifd->loadFromData($data_element, $ifd_offset + 4);
 //                $ifd->loadFromData($ifd_data_window);
 
                 // Offset to next IFD.
