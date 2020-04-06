@@ -43,7 +43,7 @@ class Ifd extends ListBase
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
                 if ($item_class === Tag::class) {
-                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset()), $item_definition->getSize());
+                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
                 }
                 else {
                     $item_data_window = $data_element;
