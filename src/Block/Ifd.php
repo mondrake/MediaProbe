@@ -368,7 +368,8 @@ class Ifd extends ListBase
         // xxx
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
-dump(MediaProbe::dumpHex($d->getBytes(null, 50)));
+//dump(MediaProbe::dumpHex($d->getBytes(null, 50)));
+dump($maker_note_tag->getElement("entry"));
 dump(MediaProbe::dumpHex($maker_note_tag->getElement("entry")->getValue()));
 /*        $ifd->loadFromData($d, $maker_note_tag->getElement("entry")->getValue()[1], null, [
             'components' => $maker_note_tag->getComponents(),
