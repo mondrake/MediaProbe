@@ -68,6 +68,8 @@ class Index extends ListBase
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
         $this->debugBlockInfo($data_element);
+dump([$data_element->getBytes(), MediaProbe::dumpHex($data_element->getBytes())]);
+//dump($data->getBytes(0, 50));
 
         $this->validate($data_element, $offset, $size ?? $data_element->getSize());
 
