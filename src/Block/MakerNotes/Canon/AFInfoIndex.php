@@ -19,7 +19,7 @@ class AFInfoIndex extends Index
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
-        $this->validate($data_element, $offset, $size);
+        $this->validate($data_element, $offset, $size ?? $data_element->getSize());
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
