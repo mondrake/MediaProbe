@@ -375,7 +375,7 @@ class Ifd extends ListBase
         $data->setByteOrder($d->getByteOrder());
 dump(MediaProbe::dumpHexFormatted($data->getBytes()));
 //dump($data->getBytes(0, 50));
-        $ifd->loadFromData($data,0,12);
+        $ifd->loadFromData($data,0,-664);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
