@@ -24,12 +24,9 @@ class Ifd extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element): void
+    public function loadFromData(DataElement $data_element, int $offset = 0): void
     {
         $valid = true;
-
-        $offset = 0;
-        $size = $data_element->getSize();
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
@@ -44,11 +41,11 @@ class Ifd extends ListBase
                 $item = new $item_class($item_definition, $this);
                 if ($item_class === Tag::class) {
                     $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                    $item->loadFromData($item_data_window);
                 }
                 else {
-                    $item_data_window = $data_element;
+                    $item->loadFromData($data_element, $item_definition->getDataOffset());
                 }
-                $item->loadFromData($item_data_window);
             } catch (DataException $e) {
                 $item->error($e->getMessage());
                 $valid = false;
@@ -165,10 +162,10 @@ class Ifd extends ListBase
         // If the item is not a Tag, recurse in loading the item at offset.
 //            if (!is_subclass_of($item_definition->getCollection()->getPropertyValue('class'), Tag::class)) {
         if ($item_collection->getPropertyValue('class') !== Tag::class) {
-dump($item_definition);
+//dump($item_definition);
           // Check the offset.
           $item_offset = $data_element->getLong($offset + 8);
-dump($item_offset);
+//dump($item_offset);
 /*          if ($item_offset <= $offset) {
             $this->error('Invalid offset pointer to IFD: {offset}.', [
                 'offset' => $item_definition->getDataOffset(),
@@ -176,10 +173,10 @@ dump($item_offset);
             $valid = false;
             continue;
           }*/
-//          $components = $data_element->getShort($item_offset - 8);
-//          $format = ItemFormat::LONG;
-//          $data_offset = $item_offset - 8;
-dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
+          $components = $data_element->getShort($item_offset - 8);
+          $format = ItemFormat::LONG;
+          $data_offset = $item_offset - 8;
+//dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
 //dump($item_items_count);
         }
 
