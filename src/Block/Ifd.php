@@ -164,7 +164,7 @@ class Ifd extends ListBase
         if ($item_collection->getPropertyValue('class') !== Tag::class) {
           // Check the offset.
           $item_offset = $data_element->getLong($offset + 8);
-dump($item_offset);
+//dump($item_offset);
 /*          if ($item_offset <= $offset) {
             $this->error('Invalid offset pointer to IFD: {offset}.', [
                 'offset' => $item_definition->getDataOffset(),
@@ -172,7 +172,7 @@ dump($item_offset);
             $valid = false;
             continue;
           }*/
-dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
+//dump(MediaProbe::dumpHex($data_element->getBytes($item_offset-8, 50)));
           $components = $data_element->getShort($item_offset - 8);
           $format = ItemFormat::LONG;
           $data_offset = $item_offset; // - 8;
