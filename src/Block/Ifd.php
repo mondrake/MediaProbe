@@ -42,7 +42,7 @@ class Ifd extends ListBase
                 $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
-dump([$item_class, is_a($item_class, Ifd::class)]);
+dump([$item_class, is_a($item_class, Ifd::class, TRUE), $item_class === Ifd::class]);
                 if ($item_class === Ifd::class) {
                     $item->loadFromData($data_element);
                 }
