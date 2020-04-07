@@ -116,7 +116,6 @@ class Ifd extends ListBase
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
         $size = ItemFormat::getSize($format) * $components;
-dump(['id'=>$id, 'format'=>$format, 'compo'=>$components, 'size'=>$size]);
 
         // If the data size is bigger than 4 bytes, then actual data is not in
         // the TAG's data element, but at the the offset stored in the data
@@ -147,7 +146,7 @@ dump(['id'=>$id, 'format'=>$format, 'compo'=>$components, 'size'=>$size]);
             }
         }
 
-        // If the item is an Tag, recurse in loading the item at offset.
+        // If the item is an Ifd, recurse in loading the item at offset.
         if (is_a($item_collection->getPropertyValue('class'), Ifd::class, TRUE)) {
           // Check the offset.
           $item_offset = $data_element->getLong($offset + 8);

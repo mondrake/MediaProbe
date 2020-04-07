@@ -65,9 +65,9 @@ class Index extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element): void
     {
-dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexFormatted($data_element->getBytes())]);
+//dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexFormatted($data_element->getBytes())]);
         $this->debugBlockInfo($data_element);
 
         $this->validate($data_element, $offset, $size ?? $data_element->getSize());
@@ -250,10 +250,10 @@ dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexForma
             $item = $item . '/0x' . strtoupper(dechex($item));
         }
         if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset}, {tags} entries';
-            $offset = $data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset()) . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset())));
+            $msg .= ' @{offset}, {tags} entries, size {size}';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
-            $msg .= ' {tags} entries';
+            $msg .= ' {tags} entries, size {size}';
         }
         $this->debug($msg, [
             'seq' => $this->getDefinition()->getSequence() + 1,
@@ -262,7 +262,8 @@ dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexForma
 //            'title' => $title,
             'item' => $item,
             'offset' => $offset ?? null,
-            'tags' => $items_count,
+            'tags' => $this->getDefinition()->getValuesCount(),
+            'size' => $this->getDefinition()->getSize(),
         ]);
     }
 
