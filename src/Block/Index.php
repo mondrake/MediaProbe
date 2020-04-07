@@ -72,6 +72,7 @@ class Index extends ListBase
 
             // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
+dump([$item_definition, $item_class]);
             $item = new $item_class($item_definition, $this);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
             $item->loadFromData($item_data_window);
