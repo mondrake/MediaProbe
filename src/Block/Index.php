@@ -121,7 +121,7 @@ class Index extends ListBase
         ]);
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
-        return new ItemDefinition($item_collection, $item_format, $item_components, $offset);
+        return new ItemDefinition($item_collection, $item_format, $item_components, $offset, 0, $seq);
     }
 
     protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): array
@@ -219,6 +219,9 @@ class Index extends ListBase
     public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
     {
         $msg = '#{seq} {node}:{name}';
+        if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
+            $seq = $parent_name . '.' . $seq;
+        }
         $node = $this->DOMNode->nodeName;
         $name = $this->getAttribute('name');
         $item = $this->getAttribute('id');
@@ -229,7 +232,7 @@ class Index extends ListBase
             $item = $item . '/0x' . strtoupper(dechex($item));
         }
         if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset}, {tags} entries, format ?xxx, size {size}';
+            $msg .= ' @{offset}, {tags} entries, f {format}, s {size}';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
             $msg .= ' {tags} entries, format ?xxx, size {size}';
@@ -241,6 +244,7 @@ class Index extends ListBase
             'item' => $item,
             'offset' => $offset ?? null,
             'tags' => $this->getDefinition()->getValuesCount(),
+            'format' => ItemFormat::getName($this->getDefinition()->getFormat()),
             'size' => $this->getDefinition()->getSize(),
         ]);
     }
