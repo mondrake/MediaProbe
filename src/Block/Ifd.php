@@ -419,7 +419,8 @@ class Ifd extends ListBase
         $title = $this->getCollection()->getPropertyValue('title');
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset}, {tags} entries';
-            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+//            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+            $offset = $this->getDefinition()->getDataOffset() . '/0x' . strtoupper(dechex($this->getDefinition()->getDataOffset()));
         } else {
             $msg .= ' {tags} entries';
         }
