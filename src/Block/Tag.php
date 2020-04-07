@@ -168,6 +168,13 @@ class Tag extends BlockBase
 //if ($title ==! null) {
 //    $msg .= ' ({title})';
 //}
+        $item = $this->getAttribute('item');
+        if ($item ==! null) {
+            $msg .= ' ({item})';
+        }
+        if (is_int($item)) {
+            $item = $item . '/0x' . strtoupper(dechex($item));
+        }
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} s {size}';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
@@ -182,6 +189,7 @@ class Tag extends BlockBase
             'components' => $this->getDefinition()->getValuesCount(),
             'node' => $node,
             'name' => $name,
+            'item' => $item,
 //            'title' => $title,
             'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
