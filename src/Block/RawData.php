@@ -17,6 +17,26 @@ class RawData extends BlockBase
      * The data length.
      */
     protected $components;
+    // xx
+    protected $definition;
+
+    /**
+     * Base constructor.
+     *
+     * @todo xx
+     */
+    public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)
+    {
+        $collection = $definition->getCollection();
+
+        parent::__construct($collection, $parent, $reference);
+
+        if ($collection->getPropertyValue('item') !== null) {
+            $this->setAttribute('id', $collection->getPropertyValue('item'));
+        }
+        $this->setAttribute('name', $collection->getPropertyValue('name'));
+        $this->definition = $definition;
+    }
 
     /**
      * Returns the data length.
@@ -25,23 +45,16 @@ class RawData extends BlockBase
      */
     public function getComponents()
     {
-        return $this->components;
+        return $this->components; // xxx ???
     }
 
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element): void
     {
         $this->debugBlockInfo($data_element);
-
-        if ($size === null) {
-            $size = $data_element->getSize();
-        }
-
-        $this->components = $size;
-        new Undefined($this, [$data_element->getBytes($offset, $this->components)]);
-
+        new Undefined($this, [$data_element->getBytes()]);
         $this->valid = true;
     }
 
@@ -50,7 +63,7 @@ class RawData extends BlockBase
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0)
     {
-        return $this->getElement("entry")->toBytes();
+        return $this->getElement("entry")->toBytes();  // xxx ????
     }
 
     /**
