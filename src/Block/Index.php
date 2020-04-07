@@ -84,15 +84,12 @@ class Index extends ListBase
             // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
-
-//dump($item_definition);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-//dump(MediaProbe::dumpHex($item_data_window->getBytes()));
             $item->loadFromData($item_data_window);
             //$tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
             //$entry_class = $item_definition->getEntryClass();
             //new $entry_class($tag, $this->getValueFromData($data_element, $o, $item_definition->getFormat(), $value_components));
-            $tag->valid = true;
+            //$item->valid = true;
         }
 
         $this->valid = true;
