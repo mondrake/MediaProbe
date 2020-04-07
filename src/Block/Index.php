@@ -70,7 +70,7 @@ class Index extends ListBase
 //dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexFormatted($data_element->getBytes())]);
         $this->debugBlockInfo($data_element);
 
-        $this->validate($data_element, $offset, $size ?? $data_element->getSize());
+        $this->validate($data_element, $this->getDefinition()->getDataOffset(), $this->getDefinition()->getSize());
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
