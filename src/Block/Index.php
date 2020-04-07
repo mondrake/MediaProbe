@@ -70,7 +70,7 @@ class Index extends ListBase
         $o = $this->getDefinition()->getDataOffset();
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $o);
+            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $i * 2); // xxx
 
             // Check if this tag should be skipped.
             if ($item_definition->getCollection()->getPropertyValue('skip')) {
@@ -130,15 +130,6 @@ dump(MediaProbe::dumpHex($item_data_window->getBytes()));
         ]);
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
-
-/*        $this->debug("#{seq} id {id}/{hexid}, f {format}, data @{offset}", [
-            'seq' => $seq + 1,
-            'id' => $id,
-            'hexid' => '0x' . strtoupper(dechex($id)),
-            'format' => ItemFormat::getName($item_format),
-            'offset' => $data_element->getStart() + $offset,
-        ]);*/
-
         return new ItemDefinition($item_collection, $item_format, $item_components, $offset);
     }
 
