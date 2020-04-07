@@ -70,17 +70,6 @@ class Index extends ListBase
         $o = $this->getDefinition()->getDataOffset();
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            /*    $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
-                $item_class = $item_definition->getCollection()->getPropertyValue('class');
-                $item = new $item_class($item_definition, $this);
-                if (is_a($item_class, Ifd::class, TRUE)) {
-                    $item->loadFromData($data_element);
-                }
-                else {
-                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-                    $item->loadFromData($item_data_window);
-                }*/
-
             $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $o);
 
             // Check if this tag should be skipped.
@@ -95,6 +84,8 @@ class Index extends ListBase
             // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
+
+dump($item_definition);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
 dump(MediaProbe::dumpHex($item_data_window->getBytes()));
             $item->loadFromData($item_data_window);
@@ -139,7 +130,6 @@ dump(MediaProbe::dumpHex($item_data_window->getBytes()));
         ]);
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
-        $item_definition = new ItemDefinition($item_collection, $item_format, $item_components, $offset);
 
 /*        $this->debug("#{seq} id {id}/{hexid}, f {format}, data @{offset}", [
             'seq' => $seq + 1,
@@ -149,7 +139,7 @@ dump(MediaProbe::dumpHex($item_data_window->getBytes()));
             'offset' => $data_element->getStart() + $offset,
         ]);*/
 
-        return $item_definition;
+        return new ItemDefinition($item_collection, $item_format, $item_components, $offset);
     }
 
     protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): array
