@@ -42,7 +42,6 @@ class Ifd extends ListBase
                 $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
-//dump([$item_class, is_a($item_class, Ifd::class, TRUE), $item_class === Ifd::class]);
                 if (is_a($item_class, Ifd::class, TRUE)) {
                     $item->loadFromData($data_element);
                 }
@@ -148,8 +147,8 @@ dump(['id'=>$id, 'format'=>$format, 'compo'=>$components, 'size'=>$size]);
             }
         }
 
-        // If the item is not a Tag, recurse in loading the item at offset.
-        if ($item_collection->getPropertyValue('class') !== Tag::class) {
+        // If the item is an Tag, recurse in loading the item at offset.
+        if (is_a($item_collection->getPropertyValue('class'), Ifd::class, TRUE)) {
           // Check the offset.
           $item_offset = $data_element->getLong($offset + 8);
 /*          if ($item_offset <= $offset) {
