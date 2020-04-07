@@ -22,13 +22,6 @@ class Index extends ListBase
     {
         $o = $offset;
 
-        $this->debug("{domnode}:{name} with {tags} entries, size {size}", [
-            'domnode' => $this->getCollection()->getPropertyValue('DOMNode'),
-            'name' => $this->getAttribute('name'),
-            'tags' => $this->getDefinition()->getValuesCount(),
-            'size' => $this->getDefinition()->getSize(),
-        ]);
-
         // Warn if format is not as expected.
         $expected_format = $this->getCollection()->getPropertyValue('format');
         if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
@@ -67,7 +60,6 @@ class Index extends ListBase
      */
     public function loadFromData(DataElement $data_element): void
     {
-//dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexFormatted($data_element->getBytes())]);
         $this->debugBlockInfo($data_element);
 
         $this->validate($data_element, $this->getDefinition()->getDataOffset(), $this->getDefinition()->getSize());
@@ -78,6 +70,17 @@ class Index extends ListBase
         $o = $this->getDefinition()->getDataOffset();
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
+            /*    $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
+                $item_class = $item_definition->getCollection()->getPropertyValue('class');
+                $item = new $item_class($item_definition, $this);
+                if (is_a($item_class, Ifd::class, TRUE)) {
+                    $item->loadFromData($data_element);
+                }
+                else {
+                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                    $item->loadFromData($item_data_window);
+                }*/
+
             $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $o);
 
             // Check if this tag should be skipped.
@@ -90,9 +93,14 @@ class Index extends ListBase
             $index_components -= ($value_components - 1);
 
             // Adds the 'tag'.
-            $tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
-            $entry_class = $item_definition->getEntryClass();
-            new $entry_class($tag, $this->getValueFromData($data_element, $o, $item_definition->getFormat(), $value_components));
+            $item_class = $item_definition->getCollection()->getPropertyValue('class');
+            $item = new $item_class($item_definition, $this);
+            $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+dump($item_data_window);
+            $item->loadFromData($item_data_window);
+            //$tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
+            //$entry_class = $item_definition->getEntryClass();
+            //new $entry_class($tag, $this->getValueFromData($data_element, $o, $item_definition->getFormat(), $value_components));
             $tag->valid = true;
         }
 
@@ -133,13 +141,13 @@ class Index extends ListBase
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
         $item_definition = new ItemDefinition($item_collection, $item_format, $item_components);
 
-        $this->debug("#{seq} id {id}/{hexid}, f {format}, data @{offset}", [
+/*        $this->debug("#{seq} id {id}/{hexid}, f {format}, data @{offset}", [
             'seq' => $seq + 1,
             'id' => $id,
             'hexid' => '0x' . strtoupper(dechex($id)),
             'format' => ItemFormat::getName($item_format),
             'offset' => $data_element->getStart() + $offset,
-        ]);
+        ]);*/
 
         return $item_definition;
     }
@@ -241,7 +249,6 @@ class Index extends ListBase
         $msg = '#{seq} {node}:{name}';
         $node = $this->DOMNode->nodeName;
         $name = $this->getAttribute('name');
-//$title = $this->getCollection()->getPropertyValue('title');
         $item = $this->getAttribute('id');
         if ($item ==! null) {
             $msg .= ' ({item})';
@@ -250,16 +257,15 @@ class Index extends ListBase
             $item = $item . '/0x' . strtoupper(dechex($item));
         }
         if ($data_element instanceof DataWindow) {
-            $msg .= ' @{offset}, {tags} entries, size {size}';
+            $msg .= ' @{offset}, {tags} entries, format ?xxx, size {size}';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         } else {
-            $msg .= ' {tags} entries, size {size}';
+            $msg .= ' {tags} entries, format ?xxx, size {size}';
         }
         $this->debug($msg, [
             'seq' => $this->getDefinition()->getSequence() + 1,
             'node' => $node,
             'name' => $name,
-//            'title' => $title,
             'item' => $item,
             'offset' => $offset ?? null,
             'tags' => $this->getDefinition()->getValuesCount(),
