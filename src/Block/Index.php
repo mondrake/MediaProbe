@@ -37,7 +37,8 @@ class Index extends ListBase
         // entry representing the entire size of the index (included the entry
         // itself). This should match the size determined in the parent IFD.
         if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
-            $index_size = $this->getValueFromData($data_element, 0, $this->getCollection()->getPropertyValue('format')[0])[0];
+            $offset = 0;
+            $index_size = $this->getValueFromData($data_element, $offset, $this->getCollection()->getPropertyValue('format')[0])[0];
             if ($index_size !== $this->getDefinition()->getSize()) {
                 $this->warning("Size mismatch between IFD and index header");
             }
