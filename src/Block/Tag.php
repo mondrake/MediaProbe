@@ -168,7 +168,7 @@ class Tag extends BlockBase
 //if ($title ==! null) {
 //    $msg .= ' ({title})';
 //}
-        $item = $this->getAttribute('item');
+        $item = $this->getAttribute('id');
         if ($item ==! null) {
             $msg .= ' ({item})';
         }
