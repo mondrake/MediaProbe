@@ -67,9 +67,8 @@ class Index extends ListBase
      */
     public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
     {
+dump([$this->getDefinition(), $data_element->getSize(), MediaProbe::dumpHexFormatted($data_element->getBytes())]);
         $this->debugBlockInfo($data_element);
-//dump([$data_element->getBytes(), MediaProbe::dumpHex($data_element->getBytes())]);
-//dump($data->getBytes(0, 50));
 
         $this->validate($data_element, $offset, $size ?? $data_element->getSize());
 
@@ -233,4 +232,38 @@ class Index extends ListBase
         }
         return $components;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    {
+        $msg = '#{seq} {node}:{name}';
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+//$title = $this->getCollection()->getPropertyValue('title');
+        $item = $this->getAttribute('id');
+        if ($item ==! null) {
+            $msg .= ' ({item})';
+        }
+        if (is_numeric($item)) {
+            $item = $item . '/0x' . strtoupper(dechex($item));
+        }
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset}, {tags} entries';
+            $offset = $data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset()) . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset())));
+        } else {
+            $msg .= ' {tags} entries';
+        }
+        $this->debug($msg, [
+            'seq' => $this->getDefinition()->getSequence() + 1,
+            'node' => $node,
+            'name' => $name,
+//            'title' => $title,
+            'item' => $item,
+            'offset' => $offset ?? null,
+            'tags' => $items_count,
+        ]);
+    }
+
 }
