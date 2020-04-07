@@ -70,7 +70,7 @@ class Index extends ListBase
         $o = $this->getDefinition()->getDataOffset();
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $i * 2); // xxx
+            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $i * 4); // xxx
 
             // Check if this tag should be skipped.
             if ($item_definition->getCollection()->getPropertyValue('skip')) {
@@ -85,9 +85,9 @@ class Index extends ListBase
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
 
-dump($item_definition);
+//dump($item_definition);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-dump(MediaProbe::dumpHex($item_data_window->getBytes()));
+//dump(MediaProbe::dumpHex($item_data_window->getBytes()));
             $item->loadFromData($item_data_window);
             //$tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
             //$entry_class = $item_definition->getEntryClass();
