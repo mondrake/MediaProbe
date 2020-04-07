@@ -67,10 +67,10 @@ class Index extends ListBase
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
-        $o = $this->getDefinition()->getDataOffset();
+        $offset = 0;
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $i * 4); // xxx
+            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $offset);
 
             // Check if this tag should be skipped.
             if ($item_definition->getCollection()->getPropertyValue('skip')) {
@@ -78,18 +78,15 @@ class Index extends ListBase
                 continue;
             };
 
-            $value_components = $item_definition->getValuesCount();
-            $index_components -= ($value_components - 1);
+            $index_components -= ($item_definition->getValuesCount() - 1);
 
             // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
             $item->loadFromData($item_data_window);
-            //$tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
-            //$entry_class = $item_definition->getEntryClass();
-            //new $entry_class($tag, $this->getValueFromData($data_element, $o, $item_definition->getFormat(), $value_components));
-            //$item->valid = true;
+            
+            $offset += $item_definition->getSize(); 
         }
 
         $this->valid = true;
@@ -110,14 +107,11 @@ class Index extends ListBase
      * @param int $offset
      *            the offset within the data element where the count can be
      *            found.
-     * @param int $data_offset_shift
-     *            (Optional) if specified, an additional shift to the offset
-     *            where data can be found.
      *
      * @return \FileEye\MediaProbe\ItemDefinition
      *            the ItemDefinition object of the IFD item.
      */
-    protected function getItemDefinitionFromData(int $seq, $id, DataElement $data_element, int $offset, int $data_offset_shift = 0): ItemDefinition
+    protected function getItemDefinitionFromData(int $seq, $id, DataElement $data_element, int $offset): ItemDefinition
     {
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
