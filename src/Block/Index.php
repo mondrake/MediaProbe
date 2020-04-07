@@ -96,7 +96,7 @@ class Index extends ListBase
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
             $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-dump($item_data_window);
+dump(MediaProbe::dumpHex($item_data_window->getBytes()));
             $item->loadFromData($item_data_window);
             //$tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
             //$entry_class = $item_definition->getEntryClass();
@@ -139,7 +139,7 @@ dump($item_data_window);
         ]);
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
-        $item_definition = new ItemDefinition($item_collection, $item_format, $item_components);
+        $item_definition = new ItemDefinition($item_collection, $item_format, $item_components, $offset);
 
 /*        $this->debug("#{seq} id {id}/{hexid}, f {format}, data @{offset}", [
             'seq' => $seq + 1,
