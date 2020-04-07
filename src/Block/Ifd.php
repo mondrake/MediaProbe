@@ -25,9 +25,11 @@ class Ifd extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $xxx=0): void
+    public function loadFromData(DataElement $data_element, $xxx=0): void
     {
         $valid = true;
+
+        $offset = $this->getDefinition()->getDataOffset();
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
@@ -45,7 +47,7 @@ class Ifd extends ListBase
                     $item->loadFromData($item_data_window);
                 }
                 else {
-                    $item->loadFromData($data_element, $item_definition->getDataOffset());
+                    $item->loadFromData($data_element);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
@@ -375,7 +377,7 @@ class Ifd extends ListBase
         $data->setByteOrder($d->getByteOrder());
 //dump(MediaProbe::dumpHexFormatted($data->getBytes()));
 //dump($maker_note_tag->getElement("entry")->getValue()[1]);
-        $ifd->loadFromData($data, 0, -$maker_note_tag->getElement("entry")->getValue()[1]);
+        $ifd->loadFromData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
