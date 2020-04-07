@@ -172,7 +172,7 @@ class Tag extends BlockBase
         if ($item ==! null) {
             $msg .= ' ({item})';
         }
-        if (is_int($item)) {
+        if (is_numeric($item)) {
             $item = $item . '/0x' . strtoupper(dechex($item));
         }
         if ($data_element instanceof DataWindow) {
