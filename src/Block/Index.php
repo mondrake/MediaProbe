@@ -75,7 +75,7 @@ class Index extends ListBase
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
-        $o = $offset;
+        $o = $this->getDefinition()->getDataOffset();
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
             $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $o);
