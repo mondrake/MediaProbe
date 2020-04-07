@@ -18,10 +18,8 @@ class Index extends ListBase
     /**
      * Validates the list against the specification.
      */
-    protected function validate(DataElement $data_element, int $offset, int $size): void
+    protected function validate(DataElement $data_element, int $size): void
     {
-        $o = $offset;
-
         // Warn if format is not as expected.
         $expected_format = $this->getCollection()->getPropertyValue('format');
         if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
@@ -39,7 +37,7 @@ class Index extends ListBase
         // entry representing the entire size of the index (included the entry
         // itself). This should match the size determined in the parent IFD.
         if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
-            $index_size = $this->getValueFromData($data_element, $o, $this->getCollection()->getPropertyValue('format')[0])[0];
+            $index_size = $this->getValueFromData($data_element, 0, $this->getCollection()->getPropertyValue('format')[0])[0];
             if ($index_size !== $size) {
                 $this->warning("{domnode}:{name} size mismatch between IFD and index header", [
                     'domnode' => $this->getCollection()->getPropertyValue('DOMNode'),
@@ -62,7 +60,7 @@ class Index extends ListBase
     {
         $this->debugBlockInfo($data_element);
 
-        $this->validate($data_element, $this->getDefinition()->getDataOffset(), $this->getDefinition()->getSize());
+        $this->validate($data_element, $this->getDefinition()->getSize());
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
