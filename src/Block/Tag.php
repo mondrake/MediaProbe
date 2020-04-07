@@ -158,6 +158,7 @@ class Tag extends BlockBase
     public function debugBlockInfo(?DataElement $data_element = null)
     {
         $msg = '#{seq} @{ifdoffset} {node}';
+        $seq = $this->getDefinition()->getSequence() + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $seq = $parent_name . '.' . $seq;
         }
@@ -186,7 +187,7 @@ class Tag extends BlockBase
         }
         $msg .= ', f {format}, c {components}';
         $this->debug($msg, [
-            'seq' => $this->getDefinition()->getSequence() + 1,
+            'seq' => $seq,
             'ifdoffset' => $item_definition_offset . '/0x' . strtoupper(dechex($item_definition_offset)),
             'format' => ItemFormat::getName($this->getDefinition()->getFormat()),
             'components' => $this->getDefinition()->getValuesCount(),

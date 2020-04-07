@@ -403,9 +403,12 @@ class Ifd extends ListBase
     public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
     {
         $msg = '#{seq} {node}:{name}';
+        $seq = $this->getDefinition()->getSequence() + 1;
+        if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
+            $seq = $parent_name . '.' . $seq;
+        }
         $node = $this->DOMNode->nodeName;
         $name = $this->getAttribute('name');
-//$title = $this->getCollection()->getPropertyValue('title');
         $item = $this->getAttribute('id');
         if ($item ==! null) {
             $msg .= ' ({item})';
@@ -420,10 +423,9 @@ class Ifd extends ListBase
             $msg .= ' {tags} entries';
         }
         $this->debug($msg, [
-            'seq' => $this->getDefinition()->getSequence() + 1,
+            'seq' => $seq,
             'node' => $node,
             'name' => $name,
-//            'title' => $title,
             'item' => $item,
             'offset' => $offset ?? null,
             'tags' => $items_count,

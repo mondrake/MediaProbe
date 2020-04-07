@@ -219,6 +219,7 @@ class Index extends ListBase
     public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
     {
         $msg = '#{seq} {node}:{name}';
+        $seq = $this->getDefinition()->getSequence() + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $seq = $parent_name . '.' . $seq;
         }
@@ -238,7 +239,7 @@ class Index extends ListBase
             $msg .= ' {tags} entries, format ?xxx, size {size}';
         }
         $this->debug($msg, [
-            'seq' => $this->getDefinition()->getSequence() + 1,
+            'seq' => $seq,
             'node' => $node,
             'name' => $name,
             'item' => $item,
