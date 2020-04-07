@@ -374,11 +374,14 @@ class Ifd extends ListBase
             'components' => $maker_note_tag->getComponents(),
             'collection' => $maker_note_collection,
         ]);*/
-        $data = new DataString($maker_note_tag->toBytes());
-        $data->setByteOrder($d->getByteOrder());
-//dump(MediaProbe::dumpHexFormatted($data->getBytes()));
-//dump($maker_note_tag->getElement("entry")->getValue()[1]);
-        $ifd->loadFromData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
+// ALT1
+//        $data = new DataString($maker_note_tag->toBytes());
+//        $data->setByteOrder($d->getByteOrder());
+//        $ifd->loadFromData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
+
+        $data = new DataWindow($d, $maker_note_tag->getElement("entry")->getValue()[1]);
+dump(MediaProbe::dumpHexFormatted($data->getBytes()));
+        $ifd->loadFromData($data);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
@@ -419,7 +422,6 @@ class Ifd extends ListBase
         $title = $this->getCollection()->getPropertyValue('title');
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset}, {tags} entries';
-//            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
             $offset = $data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset()) . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset($this->getDefinition()->getDataOffset())));
         } else {
             $msg .= ' {tags} entries';
