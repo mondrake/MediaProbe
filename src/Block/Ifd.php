@@ -380,8 +380,8 @@ class Ifd extends ListBase
 //        $ifd->loadFromData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
 
         $data = new DataWindow($d, $maker_note_tag->getElement("entry")->getValue()[1]);
-dump(MediaProbe::dumpHexFormatted($data->getBytes()));
-        $ifd->loadFromData($data, 12);
+//dump(MediaProbe::dumpHexFormatted($data->getBytes()));
+        $ifd->loadFromData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
