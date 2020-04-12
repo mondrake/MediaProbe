@@ -28,10 +28,9 @@ class AFInfoIndex extends Index
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
-        $o = $offset;
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $o);
+            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $offset);
 
             // Check if this tag should be skipped.
             if ($item_definition->getCollection()->getPropertyValue('skip')) {

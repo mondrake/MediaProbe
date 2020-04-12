@@ -29,9 +29,10 @@ class CustomFunctions2Header extends ListBase
     {
         $this->debugBlockInfo($data_element);
 
-        $this->validate($data_element);
-
         $valid = true;
+
+        $offset = 0;
+        $size = $this->getDefinition()->getSize();
 
         // Validate incoming size.
         if ($size !== $data_element->getLong($offset)) {
