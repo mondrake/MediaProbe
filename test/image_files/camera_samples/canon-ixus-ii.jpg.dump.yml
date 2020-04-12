@@ -755,7 +755,7 @@ elements:
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCameraSettings:1/rawData:indexSize/entry'
                                                                                     class: FileEye\MediaProbe\Entry\Core\Undefined
                                                                                     valid: true
-                                                                                    format: Byte
+                                                                                    format: Undefined
                                                                                     components: 2
                                                                                     bytesHash: 1472d0645f552820b5472b91341c2d9a118c8a96f4a72758d6aeeb14c10a1107
                                                                                     text: '2 byte(s) of data'

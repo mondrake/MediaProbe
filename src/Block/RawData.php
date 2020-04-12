@@ -7,6 +7,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
 use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -37,6 +38,14 @@ class RawData extends BlockBase
         }
         $this->setAttribute('name', $collection->getPropertyValue('name'));
         $this->definition = $definition;
+    }
+
+    /**
+     * xxx
+     */
+    public function getFormat()
+    {
+        return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : ItemFormat::UNDEFINED;
     }
 
     /**
