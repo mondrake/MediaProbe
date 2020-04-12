@@ -49,11 +49,15 @@ class Map extends Index
                 }
 
                 $item_definition = $this->getItemDefinitionFromData($i, $item, $data_element, $n);
+                $item_class = $item_definition->getCollection()->getPropertyValue('class');
+                $item = new $item_class($item_definition, $this);
+                $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                $item->loadFromData($item_data_window);
 
-                $value = $this->getValueFromData($data_element, $n, $item_definition->getFormat(), $item_definition->getValuesCount());
+/*                $value = $this->getValueFromData($data_element, $n, $item_definition->getFormat(), $item_definition->getValuesCount());
                 $tag = new Tag($item_definition, $this);
                 $entry_class = $item_definition->getEntryClass();
-                new $entry_class($tag, $value);
+                new $entry_class($tag, $value);*/
                 $tag->valid = true;
             }
             catch (DataException $e) {
