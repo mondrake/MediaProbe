@@ -23,25 +23,16 @@ class Map extends Index
     /**
      * {@inheritdoc}
      */
-    protected function validate(DataElement $data_element, int $offset, int $size): void
+    public function loadFromData(DataElement $data_element): void
     {
-        parent::validate($data_element, $offset, $size);
+        $this->debugBlockInfo($data_element);
+
+        $this->validate($data_element);
 
         // Load the map as a raw data block.
         $map = new RawData(Collection::get('RawData', ['name' => 'mapdata']), $this);
         $map_data_window = new DataWindow($data_element, $offset, $size);
-        // xx todo $map_data_window->logInfo($map->getLogger());
         $map->loadFromData($map_data_window, 0, $map_data_window->getSize());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
-    {
-        $this->debugBlockInfo($data_element);
-
-        $this->validate($data_element, $offset, $size ?? $data_element->getSize());
 
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
