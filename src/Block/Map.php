@@ -30,9 +30,9 @@ class Map extends Index
         $this->validate($data_element);
 
         // Load the map as a raw data block.
-        $map = new RawData(Collection::get('RawData', ['name' => 'mapdata']), $this);
-        $map_data_window = new DataWindow($data_element, $offset, $size);
-        $map->loadFromData($map_data_window, 0, $map_data_window->getSize());
+        $map_data_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']), ItemFormat::BYTE);
+        $map = new RawData($map_data_definition, $this);
+        $map->loadFromData($data_element);
 
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
