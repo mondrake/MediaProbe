@@ -858,7 +858,7 @@ elements:
                                                                         -
                                                                             node: rawData
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCameraSettings:1/rawData:indexSize:0'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\RawData
                                                                             valid: true
                                                                             name: indexSize
                                                                             id: '0'
@@ -867,12 +867,12 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCameraSettings:1/rawData:indexSize:0/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Short
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Undefined
                                                                                     valid: true
-                                                                                    format: Short
-                                                                                    components: 1
+                                                                                    format: Byte
+                                                                                    components: 2
                                                                                     bytesHash: 96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
-                                                                                    text: 0
+                                                                                    text: '2 byte(s) of data'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCameraSettings:1/tag:MacroMode:1'
