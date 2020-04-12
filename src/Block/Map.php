@@ -35,6 +35,8 @@ class Map extends Index
         $map->loadFromData($data_element);
 
         $i = 0;
+        $offset = 0;
+        $size = $this->getDefinition()->getSize();
         foreach ($this->getCollection()->listItemIds() as $item) {
 
             // Adds the 'tag'.
