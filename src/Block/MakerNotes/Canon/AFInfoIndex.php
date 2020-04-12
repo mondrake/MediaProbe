@@ -2,11 +2,12 @@
 
 namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
 
-use FileEye\MediaProbe\ItemFormat;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
