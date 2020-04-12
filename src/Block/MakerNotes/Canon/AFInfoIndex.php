@@ -19,6 +19,8 @@ class AFInfoIndex extends Index
      */
     public function loadFromData(DataElement $data_element): void
     {
+        $this->debugBlockInfo($data_element);
+
         $this->validate($data_element);
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
@@ -49,15 +51,53 @@ class AFInfoIndex extends Index
             }
 
             // Adds the 'tag'.
-            $tag = new Tag($item_definition, $this); // xx todo open a rawData object in case
-            $entry_class = $item_definition->getEntryClass();
-            new $entry_class($tag, $this->getValueFromData($data_element, $o, $item_definition->getFormat(), $value_components));
-            $tag->valid = true;
+            // Adds the 'tag'.
+            $item_class = $item_definition->getCollection()->getPropertyValue('class');
+            $item = new $item_class($item_definition, $this);
+            $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+            $item->loadFromData($item_data_window);
         }
 
         $this->valid = true;
 
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    {
+        $msg = '#{seq} {node}:{name}';
+        $seq = $this->getDefinition()->getSequence() + 1;
+        if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
+            $seq = $parent_name . '.' . $seq;
+        }
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        $item = $this->getAttribute('id');
+        if ($item ==! null) {
+            $msg .= ' ({item})';
+        }
+        if (is_numeric($item)) {
+            $item = $item . '/0x' . strtoupper(dechex($item));
+        }
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset}, {tags} entries, f {format}, s {size}';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        } else {
+            $msg .= ' {tags} entries, format ?xxx, size {size}';
+        }
+        $this->debug($msg, [
+            'seq' => $seq,
+            'node' => $node,
+            'name' => $name,
+            'item' => $item,
+            'offset' => $offset ?? null,
+            'tags' => $this->getDefinition()->getValuesCount(),
+            'format' => ItemFormat::getName($this->getDefinition()->getFormat()),
+            'size' => $this->getDefinition()->getSize(),
+        ]);
     }
 }
