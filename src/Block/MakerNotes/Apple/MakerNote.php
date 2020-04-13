@@ -44,6 +44,7 @@ class MakerNote extends Ifd
             $i_offset = $offset + 2 + 12 * $i;
             try {
                 $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx);
+dump($item_definition);
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
                 if (is_a($item_class, Ifd::class, TRUE)) {
