@@ -53,11 +53,17 @@ class AFInfoIndex extends Index
             // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
-//dump([$item_definition]);
-            $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
-            $item->loadFromData($item_data_window);
 
-            $offset += $item_definition->getSize();
+            $entry_class = $item_definition->getEntryClass();
+            new $entry_class($item, $this->getValueFromData($data_element, $offset, $item_definition->getFormat(), $value_components));
+            $item->valid = true;
+
+
+      //dump([$item_definition]);
+      //      $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+      //      $item->loadFromData($item_data_window);
+
+//            $offset += $item_definition->getSize();
         }
 
         $this->valid = true;
