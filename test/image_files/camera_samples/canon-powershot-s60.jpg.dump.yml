@@ -1685,9 +1685,9 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonShotInfo:4/rawData:indexSize/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Unsigned
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Undefined
                                                                                     valid: true
-                                                                                    format: Unsigned
+                                                                                    format: Undefined
                                                                                     components: 2
                                                                                     bytesHash: 8cd4ae7da223953050b55b0ee9e4d3830f3b35138a0e1b6cc5f6e6b1e52d1314
                                                                                     text: '2 byte(s) of data'
@@ -3323,4 +3323,4 @@ log:
             message: 'No specification for item UnknownTag in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13'
-            message: 'Offset 2492 out of bounds'
+            message: 'Offset 726 out of bounds'

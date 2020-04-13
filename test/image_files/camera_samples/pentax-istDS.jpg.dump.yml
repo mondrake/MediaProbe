@@ -153,6 +153,7 @@ elements:
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/rawData:scan'
                                             class: FileEye\MediaProbe\Block\RawData
                                             valid: true
+                                            name: scan
                                             collection: RawData
                                             elements:
                                                 -
