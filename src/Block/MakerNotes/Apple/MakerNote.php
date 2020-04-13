@@ -22,25 +22,43 @@ class MakerNote extends Ifd
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function loadFromData(DataElement $data_element, $xxx=0): void
     {
-        if ($size === null) {
-            $size = $data_element->getSize();
-        }
+        $size = $data_element->getSize();
+        $offset = $this->getDefinition()->getDataOffset();
 
         // Load Apple's header as a raw data block.
-        $header = new RawData(Collection::get('RawData'), $this);
+        $header_data_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'appleHeader']), ItemFormat::BYTE, 14);
         $header_data_window = new DataWindow($data_element, $offset, 14);
-        // xx todo $header_data_window->logInfo($header->getLogger());
-        $header->loadFromData($header_data_window, 0, $header_data_window->getSize());
+        $header = new RawData($header_data_definition, $this);
+        $header->loadFromData($header_data_window);
 
         $offset += 14;
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
+        $this->debugBlockInfo($data_element, $n);
 
         // Load the Blocks.
         for ($i = 0; $i < $n; $i++) {
+            $i_offset = $offset + 2 + 12 * $i;
+            try {
+                $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Ifd\\Any');
+                $item_class = $item_definition->getCollection()->getPropertyValue('class');
+                $item = new $item_class($item_definition, $this);
+                if (is_a($item_class, Ifd::class, TRUE)) {
+                    $item->loadFromData($data_element);
+                }
+                else {
+                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_definition->getSize());
+                    $item->loadFromData($item_data_window);
+                }
+            } catch (DataException $e) {
+                $item->error($e->getMessage());
+                $valid = false;
+            }
+        }
+/*        for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $offset - 14);
 
@@ -52,7 +70,7 @@ class MakerNote extends Ifd
             } catch (DataException $e) {
                 $this->error($e->getMessage());
             }
-        }
+        }*/
 
         $this->valid = true;
 
