@@ -79,7 +79,7 @@ class MakerNote extends Ifd
         $this->executePostLoadCallbacks($data_element);
     }
 
-    protected function getItemDefinitionFromData(int $seq, DataElement $data_element, int $offset, int $data_offset_shift = 0, string $fallback_collection_id = null): ItemDefinition
+/*    protected function getItemDefinitionFromData(int $seq, DataElement $data_element, int $offset, int $data_offset_shift = 0, string $fallback_collection_id = null): ItemDefinition
     {
         $id = $data_element->getShort($offset);
         $format = $data_element->getShort($offset + 2);
@@ -127,13 +127,13 @@ dump([$seq, $id, $format, $components, $size, $data_element->getLong($offset + 8
             $valid = false;
             continue;
           }*/
-          $components = $data_element->getShort($item_offset - 8);
+  /*        $components = $data_element->getShort($item_offset - 8);
           $format = ItemFormat::LONG;
           $data_offset = $item_offset;
         }
 
         return new ItemDefinition($item_collection, $format, $components, $data_offset, $data_element->getStart() + $offset, $seq);
-    }
+    }*/
 
     /**
      * {@inheritdoc}
