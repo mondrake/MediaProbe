@@ -2,18 +2,18 @@
 
 namespace FileEye\MediaProbe\Block\MakerNotes\Apple;
 
+use FileEye\MediaProbe\Block\Ifd;
 use FileEye\MediaProbe\Block\ListBase;
-use FileEye\MediaProbe\ItemFormat;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Block\Tag;
-use FileEye\MediaProbe\Block\Ifd;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ElementInterface;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -59,81 +59,12 @@ class MakerNote extends Ifd
                 $valid = false;
             }
         }
-/*        for ($i = 0; $i < $n; $i++) {
-            $i_offset = $offset + 2 + 12 * $i;
-            $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $offset - 14);
-
-            $class = $item_definition->getCollection()->getPropertyValue('class');
-            $ifd_entry = new $class($item_definition, $this);
-
-            try {
-                $ifd_entry->loadFromData($data_element, $item_definition->getDataOffset(), $size);
-            } catch (DataException $e) {
-                $this->error($e->getMessage());
-            }
-        }*/
 
         $this->valid = true;
 
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);
     }
-
-/*    protected function getItemDefinitionFromData(int $seq, DataElement $data_element, int $offset, int $data_offset_shift = 0, string $fallback_collection_id = null): ItemDefinition
-    {
-        $id = $data_element->getShort($offset);
-        $format = $data_element->getShort($offset + 2);
-        $components = $data_element->getLong($offset + 4);
-        $size = ItemFormat::getSize($format) * $components;
-
-        // If the data size is bigger than 4 bytes, then actual data is not in
-        // the TAG's data element, but at the the offset stored in the data
-        // element.
-        if ($size > 4) {
-            $data_offset = $data_element->getLong($offset + 8) + $data_offset_shift;
-        } else {
-            $data_offset = $offset + 8;
-        }
-dump([$seq, $id, $format, $components, $size, $data_element->getLong($offset + 8), $data_offset_shift, $data_offset]);
-
-        // Fall back to the generic IFD collection if the item is missing from
-        // the appropriate one.
-        try {
-            $item_collection = $this->getCollection()->getItemCollection($id);
-        }
-        catch (MediaProbeException $e) {
-            if ($fallback_collection_id !== null) {
-                $item_collection = Collection::get($fallback_collection_id)->getItemCollection($id, 'UnknownTag', [
-                    'item' => $id,
-                    'DOMNode' => 'tag',
-                ]);
-            }
-            else {
-                $item_collection = $this->getCollection()->getItemCollection($id, 'UnknownTag', [
-                    'item' => $id,
-                    'DOMNode' => 'tag',
-                ]);
-            }
-        }
-
-        // If the item is an Ifd, recurse in loading the item at offset.
-        if (is_a($item_collection->getPropertyValue('class'), Ifd::class, TRUE)) {
-          // Check the offset.
-          $item_offset = $data_element->getLong($offset + 8);
-/*          if ($item_offset <= $offset) {
-            $this->error('Invalid offset pointer to IFD: {offset}.', [
-                'offset' => $item_definition->getDataOffset(),
-            ]);
-            $valid = false;
-            continue;
-          }*/
-  /*        $components = $data_element->getShort($item_offset - 8);
-          $format = ItemFormat::LONG;
-          $data_offset = $item_offset;
-        }
-
-        return new ItemDefinition($item_collection, $format, $components, $data_offset, $data_element->getStart() + $offset, $seq);
-    }*/
 
     /**
      * {@inheritdoc}
