@@ -94,7 +94,7 @@ class MakerNote extends Ifd
         } else {
             $data_offset = $offset + 8;
         }
-dump([$seq, $id, $format, $components, $data_offset]);
+dump([$seq, $id, $format, $components, $size, $data_element->getLong($offset + 8), $data_offset_shift, $data_offset]);
 
         // Fall back to the generic IFD collection if the item is missing from
         // the appropriate one.
