@@ -173,7 +173,7 @@ class Index extends ListBase
 
         // Only get the tags to be written. The index size, if present, is
         // stored in a rawData node.
-        foreach ($this->getMultipleElements('tag') as $tag => $sub_block) {
+        foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
             $data_bytes .= $sub_block->toBytes($byte_order);
         }
 
