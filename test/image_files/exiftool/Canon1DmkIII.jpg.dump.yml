@@ -1846,7 +1846,7 @@ elements:
                                                             node: makerNote
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
                                                             class: FileEye\MediaProbe\Block\Ifd
-                                                            valid: false
+                                                            valid: true
                                                             name: Canon
                                                             id: '37500'
                                                             collection: MakerNotes\Canon\Main
@@ -6933,7 +6933,7 @@ elements:
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16404'
                                                                     class: FileEye\MediaProbe\Block\Tag
-                                                                    valid: false
+                                                                    valid: true
                                                                     id: '16404'
                                                                     collection: UnknownTag
                                                                     elements:
@@ -6941,11 +6941,11 @@ elements:
                                                                             node: entry
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16404/entry'
                                                                             class: FileEye\MediaProbe\Entry\Core\Undefined
-                                                                            valid: false
+                                                                            valid: true
                                                                             format: Undefined
-                                                                            components: null
-                                                                            bytesHash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-                                                                            text: ' byte(s) of data'
+                                                                            components: 4
+                                                                            bytesHash: df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119
+                                                                            text: '4 byte(s) of data'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510'
@@ -7461,9 +7461,6 @@ elements:
                             text: '2 byte(s) of data'
 log:
     ERROR:
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16404'
-            message: 'Offset out of bounds - rel 0 [0, -1], abs 1106 [1106, 1105]'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
             message: 'Offset out of bounds - rel -1 [0, 27], abs 8059 [8060, 8087]'
