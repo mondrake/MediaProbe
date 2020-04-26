@@ -49,7 +49,7 @@ class Ifd extends ListBase
                     // In case of an IFD terminator item entry, i.e. zero
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
-                    $item_data_window_size = $item_definition->getValuesCount() === 0 ? $item_definition->getSize() : 4;
+                    $item_data_window_size = $item_definition->getValuesCount() > 0 ? $item_definition->getSize() : 4;
                     $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_data_window_size);
                     $item->loadFromData($item_data_window);
                 }
