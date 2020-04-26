@@ -173,7 +173,7 @@ class Index extends ListBase
 
         // Get the tags to be written. The index size, if present, is stored in
         // a rawData node.
-        foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
+        foreach ($this->getMultipleElements('tags') as $tag => $sub_block) {
             $data_bytes .= $sub_block->toBytes($byte_order);
         }
 
@@ -195,10 +195,13 @@ class Index extends ListBase
     public function getComponents()
     {
         $components = 0;
-        foreach ($this->getMultipleElements('*') as $sub) {
+        foreach ($this->getMultipleElements('tags') as $sub) {
             $sub_size = ItemFormat::getSize($sub->getFormat()) * $sub->getComponents();
             // Components are in Shorts, $sub_size is in Bytes, so normalize.
             $components += $sub_size / 2;
+        }
+        if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
+            $components++;
         }
         return $components;
     }
