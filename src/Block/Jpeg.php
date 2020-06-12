@@ -48,13 +48,14 @@ class Jpeg extends BlockBase
                 $new_offset = $this->getJpegSegmentIdOffset($data_element, $offset);
                 $segment_id = $segment_id ?? 0;
                 if ($new_offset !== $offset) {
-                    $this->error('Unexpected data found at end of JPEG segment {id}/{hexid} found @ offset {offset}, size {size}', [
+                    $this->error('Unexpected data found at end of JPEG segment {id}/{hexid} @ offset {offset}, size {size}', [
                         'id' => $segment_id,
                         'hexid' => '0x' . strtoupper(dechex($segment_id)),
                         'offset' => $data_element->getAbsoluteOffset($offset),
                         'size' => $new_offset - $offset,
                     ]);
                 }
+                $offset = $new_offset;
                 // xx todo --> fail if there's a gap in the offset
             }
             catch (DataException $e) {
