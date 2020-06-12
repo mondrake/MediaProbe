@@ -143,7 +143,7 @@ class MediaProbe
 
         $offset = 0;
         foreach ($hex as $i => $line) {
-            $row = sprintf('%6X',$offset).' : '.implode(' ', str_split($line,2)) . ' [' . $chars[$i] . ']' . $newline;
+            $row = sprintf('%6X',$offset) . ' : ' . implode(' ', str_split($line, 2)) . ' [' . $chars[$i] . ']' . $newline;
             $ret .= $row;
             $offset += $width;
         }
