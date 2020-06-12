@@ -62,8 +62,7 @@ class Jpeg extends BlockBase
                         ->parseData(new DataWindow($data_element, $offset, $new_offset - $offset));
                 }
                 $offset = $new_offset;
-            }
-            catch (DataException $e) {
+            } catch (DataException $e) {
                 $this->error($e->getMessage());
                 $this->valid = false;
                 return;
