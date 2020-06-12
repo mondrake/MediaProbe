@@ -56,14 +56,14 @@ class Jpeg extends BlockBase
                         'offset' => $data_element->getAbsoluteOffset($offset),
                         'size' => $new_offset - $offset,
                     ]);
-                }
 //                $trail_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset);
 //                $trail_data_window = new DataWindow($data_element, $offset, $new_offset - $offset);
 //                $trail = new RawData($trail_definition, $this);
 //                $trail->parseData($trail_data_window);
-                $this
-                    ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
-                    ->parseData(new DataWindow($data_element, $offset, $new_offset - $offset));
+                    $this
+                        ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
+                        ->parseData(new DataWindow($data_element, $offset, $new_offset - $offset));
+                }
                 $offset = $new_offset;
             }
             catch (DataException $e) {
