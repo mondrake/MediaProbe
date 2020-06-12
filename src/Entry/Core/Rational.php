@@ -75,6 +75,7 @@ class Rational extends Long
                 } else {
                     return $number[0] / $number[1];
                 }
+                break;
             case 'phpExif':
                 return (string) $number[0] . '/' . (string) $number[1];
             default:
