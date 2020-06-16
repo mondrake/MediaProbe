@@ -21,6 +21,7 @@ items:
                 name: AFConfigTool
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFConfigTool'
                 desc: 'AF Config Tool'
     -
         exiftool:
@@ -28,6 +29,7 @@ items:
                 name: AFTrackingSensitivity
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFTrackingSensitivity'
                 desc: 'AF Tracking Sensitivity'
     -
         exiftool:
@@ -35,6 +37,7 @@ items:
                 name: AFAccelDecelTracking
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFAccelDecelTracking'
                 desc: 'AF Accel/Decel Tracking'
     -
         exiftool:
@@ -42,6 +45,7 @@ items:
                 name: AFPointSwitching
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFPointSwitching'
                 desc: 'AF Point Switching'
     -
         exiftool:
@@ -49,6 +53,7 @@ items:
                 name: AIServoFirstImage
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AIServoFirstImage'
                 desc: 'AI Servo First Image'
                 values:
                     - 'Equal Priority'
@@ -60,6 +65,7 @@ items:
                 name: AIServoSecondImage
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AIServoSecondImage'
                 desc: 'AI Servo Second Image'
                 values:
                     - 'Equal Priority'
@@ -73,6 +79,7 @@ items:
                 name: USMLensElectronicMF
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:USMLensElectronicMF'
                 desc: 'USM Lens Electronic MF'
                 values:
                     - 'Enable After AF'
@@ -84,6 +91,7 @@ items:
                 name: AFAssistBeam
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFAssistBeam'
                 desc: 'AF Assist Beam'
                 values:
                     - Enable
@@ -95,6 +103,7 @@ items:
                 name: OneShotAFRelease
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:OneShotAFRelease'
                 desc: 'One Shot AF Release'
                 values:
                     - 'Focus Priority'
@@ -105,6 +114,7 @@ items:
                 name: AutoAFPointSelEOSiTRAF
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AutoAFPointSelEOSiTRAF'
                 desc: 'Auto AF Point Sel EOS iTR AF'
                 values:
                     - Enable
@@ -115,6 +125,7 @@ items:
                 name: LensDriveWhenAFImpossible
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:LensDriveWhenAFImpossible'
                 desc: 'Lens Drive When AF Impossible'
                 values:
                     - 'Continue Focus Search'
@@ -125,6 +136,7 @@ items:
                 name: SelectAFAreaSelectionMode
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SelectAFAreaSelectionMode'
                 desc: 'Select AF Area Selection Mode'
                 values:
                     1: 'Single-point AF'
@@ -139,6 +151,7 @@ items:
                 name: AFAreaSelectionMethod
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFAreaSelectionMethod'
                 desc: 'AF Area Selection Method'
                 values:
                     - 'M-Fn Button'
@@ -149,6 +162,7 @@ items:
                 name: OrientationLinkedAF
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:OrientationLinkedAF'
                 desc: 'Orientation Linked AF'
                 values:
                     - 'Same for Vert/Horiz Points'
@@ -160,6 +174,7 @@ items:
                 name: ManualAFPointSelPattern
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ManualAFPointSelPattern'
                 desc: 'Manual AF Point Sel Pattern'
                 values:
                     - 'Stops at AF Area Edges'
@@ -170,6 +185,7 @@ items:
                 name: AFPointDisplayDuringFocus
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFPointDisplayDuringFocus'
                 desc: 'AF Point Display During Focus'
                 values:
                     - 'Selected (constant)'
@@ -183,6 +199,7 @@ items:
                 name: VFDisplayIllumination
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:VFDisplayIllumination'
                 desc: 'VF Display Illumination'
                 values:
                     - Auto
@@ -194,6 +211,7 @@ items:
                 name: AFStatusViewfinder
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFStatusViewfinder'
                 desc: 'AF Status Viewfinder'
                 values:
                     - 'Show in Field of View'
@@ -204,6 +222,7 @@ items:
                 name: InitialAFPointInServo
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:InitialAFPointInServo'
                 desc: 'Initial AF Point In Servo'
                 values:
                     - 'Initial AF Point Selected'

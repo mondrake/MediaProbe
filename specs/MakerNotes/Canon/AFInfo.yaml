@@ -16,6 +16,7 @@ items:
                 name: NumAFPoints
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:NumAFPoints'
                 desc: 'Num AF Points'
     -
         exiftool:
@@ -23,6 +24,7 @@ items:
                 name: ValidAFPoints
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:ValidAFPoints'
                 desc: 'Valid AF Points'
     -
         exiftool:
@@ -31,6 +33,7 @@ items:
                 type: int16u
                 writable: false
                 g2: Image
+                DOMNode: 'Canon:CanonImageWidth'
                 desc: 'Canon Image Width'
     -
         exiftool:
@@ -39,6 +42,7 @@ items:
                 type: int16u
                 writable: false
                 g2: Image
+                DOMNode: 'Canon:CanonImageHeight'
                 desc: 'Canon Image Height'
     -
         exiftool:
@@ -46,6 +50,7 @@ items:
                 name: AFImageWidth
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:AFImageWidth'
                 desc: 'AF Image Width'
     -
         exiftool:
@@ -53,6 +58,7 @@ items:
                 name: AFImageHeight
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:AFImageHeight'
                 desc: 'AF Image Height'
     -
         exiftool:
@@ -60,6 +66,7 @@ items:
                 name: AFAreaWidth
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:AFAreaWidth'
                 desc: 'AF Area Width'
     -
         exiftool:
@@ -67,6 +74,7 @@ items:
                 name: AFAreaHeight
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:AFAreaHeight'
                 desc: 'AF Area Height'
     -
         exiftool:
@@ -74,6 +82,7 @@ items:
                 name: AFAreaXPositions
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:AFAreaXPositions'
                 desc: 'AF Area X Positions'
     -
         exiftool:
@@ -81,6 +90,7 @@ items:
                 name: AFAreaYPositions
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:AFAreaYPositions'
                 desc: 'AF Area Y Positions'
     -
         __todo: 'add decoding'
@@ -89,6 +99,7 @@ items:
                 name: AFPointsInFocus
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:AFPointsInFocus'
                 desc: 'AF Points In Focus'
     -
         exiftool:
@@ -96,12 +107,14 @@ items:
                 name: PrimaryAFPoint
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:PrimaryAFPoint'
                 desc: 'Primary AF Point'
             -
                 name: Canon_AFInfo_0x000b
                 type: int16u
                 count: 8
                 writable: false
+                DOMNode: 'Canon:Canon_AFInfo_0x000b'
                 desc: 'Canon AF Info 0x000b'
     -
         exiftool:
@@ -109,4 +122,5 @@ items:
                 name: PrimaryAFPoint
                 type: int16u
                 writable: false
+                DOMNode: 'Canon:PrimaryAFPoint'
                 desc: 'Primary AF Point'
