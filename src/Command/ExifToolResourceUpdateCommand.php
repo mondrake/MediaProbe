@@ -56,21 +56,6 @@ class ExifToolResourceUpdateCommand extends Command
             $this->updateWithExifTool($input, $output, $file);
             $output->writeln("Processed $file.");
         }
-/*        $updates = [
-          'Ifd\\Any' => "//table[@name='Exif::Main']/tag",
-          'Ifd\\Ifd0' => "//table[@name='Exif::Main']/tag[not(@g1)]",
-          'Ifd\\Ifd1' => "//table[@name='Exif::Main']/tag[not(@g1) or @g1='IFD1']",
-          'Ifd\\Interoperability' => "//table[@name='Exif::Main']/tag[@g1='InteropIFD']",
-          'Ifd\\Exif' => "//table[@name='Exif::Main']/tag[@g1='ExifIFD']",
-          'Ifd\\Gps' => "//table[@name='GPS::Main']/tag",
-        ];
-
-        foreach ($updates as $collection => $exiftoolXPath) {
-            [$dir, $file] = explode('\\', $collection);
-            $collection = $dir . DIRECTORY_SEPARATOR . $file;
-            $this->updateWithExifTool($input, $output, $collection . '.yaml', $exiftoolXPath);
-            $output->writeln("Processed $collection.");
-        }
 
         // Build Canon maker notes specs.
 /*        foreach ($this->exiftoolXml->xpath("//table[@g0='MakerNotes' and @g1='Canon']") as $table) {

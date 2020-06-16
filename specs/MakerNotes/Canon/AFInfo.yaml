@@ -5,6 +5,10 @@ class: FileEye\MediaProbe\Block\MakerNotes\Canon\AFInfoIndex
 DOMNode: index
 format: Short
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Canon
+        xpath: '//table[@name=''Canon::AFInfo'']/tag'
 items:
     -
         exiftool:

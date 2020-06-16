@@ -6,6 +6,10 @@ DOMNode: index
 format: Short
 hasIndexSize: true
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Canon
+        xpath: '//table[@name=''Canon::AFInfo2'']/tag'
 items:
     -
         collection: RawData
