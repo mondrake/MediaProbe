@@ -785,6 +785,7 @@ items:
                 DOMNode: 'Canon:FocalUnits'
                 desc: 'Focal Units'
     26:
+        entryClass: FileEye\MediaProbe\Entry\ExifApertureValue
         exiftool:
             -
                 name: MaxAperture
@@ -793,6 +794,7 @@ items:
                 DOMNode: 'Canon:MaxAperture'
                 desc: 'Max Aperture'
     27:
+        entryClass: FileEye\MediaProbe\Entry\ExifApertureValue
         exiftool:
             -
                 name: MinAperture
