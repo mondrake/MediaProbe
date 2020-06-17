@@ -17,6 +17,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     10:
         exiftool:
@@ -24,6 +25,7 @@ items:
                 name: FocalLength
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'
     13:
         exiftool:
@@ -31,6 +33,7 @@ items:
                 name: LensType
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -436,6 +439,7 @@ items:
                 name: MinFocalLength
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     16:
         exiftool:
@@ -443,6 +447,7 @@ items:
                 name: MaxFocalLength
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     65:
         exiftool:
@@ -450,6 +455,7 @@ items:
                 name: SharpnessFrequency
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:SharpnessFrequency'
                 desc: 'Sharpness Frequency'
                 values:
                     - n/a
@@ -464,6 +470,7 @@ items:
                 name: Sharpness
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:Sharpness'
                 desc: Sharpness
     68:
         exiftool:
@@ -471,6 +478,7 @@ items:
                 name: WhiteBalance
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -501,6 +509,7 @@ items:
                 name: SharpnessFrequency
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:SharpnessFrequency'
                 desc: 'Sharpness Frequency'
                 values:
                     - n/a
@@ -515,11 +524,13 @@ items:
                 name: ColorTemperature
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
             -
                 name: Sharpness
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:Sharpness'
                 desc: Sharpness
     74:
         exiftool:
@@ -527,6 +538,7 @@ items:
                 name: WhiteBalance
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -557,6 +569,7 @@ items:
                 name: PictureStyle
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None
@@ -589,6 +602,7 @@ items:
                 name: ColorTemperature
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     81:
         exiftool:
@@ -596,6 +610,7 @@ items:
                 name: PictureStyle
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None

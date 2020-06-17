@@ -20,6 +20,7 @@ items:
                 name: MacroMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MacroMode'
                 desc: 'Macro Mode'
                 values:
                     1: Macro
@@ -30,6 +31,7 @@ items:
                 name: SelfTimer
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SelfTimer'
                 desc: 'Self Timer'
     3:
         exiftool:
@@ -37,6 +39,7 @@ items:
                 name: Quality
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Quality'
                 desc: Quality
                 values:
                     -1: n/a
@@ -54,6 +57,7 @@ items:
                 name: CanonFlashMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:CanonFlashMode'
                 desc: 'Canon Flash Mode'
                 values:
                     -1: n/a
@@ -71,6 +75,7 @@ items:
                 name: ContinuousDrive
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ContinuousDrive'
                 desc: 'Continuous Drive'
                 values:
                     0: Single
@@ -88,6 +93,7 @@ items:
                 name: FocusMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FocusMode'
                 desc: 'Focus Mode'
                 values:
                     0: 'One-shot AF'
@@ -107,6 +113,7 @@ items:
                 name: RecordMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:RecordMode'
                 desc: 'Record Mode'
                 values:
                     1: JPEG
@@ -127,6 +134,7 @@ items:
                 name: CanonImageSize
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:CanonImageSize'
                 desc: 'Canon Image Size'
                 values:
                     -1: n/a
@@ -154,6 +162,7 @@ items:
                 name: EasyMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:EasyMode'
                 desc: 'Easy Mode'
                 values:
                     0: 'Full auto'
@@ -233,6 +242,7 @@ items:
                 name: DigitalZoom
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:DigitalZoom'
                 desc: 'Digital Zoom'
                 values:
                     - None
@@ -245,6 +255,7 @@ items:
                 name: Contrast
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Contrast'
                 desc: Contrast
                 values:
                     - Normal
@@ -254,6 +265,7 @@ items:
                 name: Saturation
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Saturation'
                 desc: Saturation
                 values:
                     - Normal
@@ -263,6 +275,7 @@ items:
                 name: Sharpness
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Sharpness'
                 desc: Sharpness
     16:
         exiftool:
@@ -270,6 +283,7 @@ items:
                 name: CameraISO
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:CameraISO'
                 desc: 'Camera ISO'
     17:
         exiftool:
@@ -277,6 +291,7 @@ items:
                 name: MeteringMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MeteringMode'
                 desc: 'Metering Mode'
                 values:
                     - Default
@@ -291,6 +306,7 @@ items:
                 name: FocusRange
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FocusRange'
                 desc: 'Focus Range'
                 values:
                     - Manual
@@ -310,6 +326,7 @@ items:
                 name: AFPoint
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AFPoint'
                 desc: 'AF Point'
                 values:
                     8197: 'Manual AF point selection'
@@ -326,6 +343,7 @@ items:
                 name: CanonExposureMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:CanonExposureMode'
                 desc: 'Canon Exposure Mode'
                 values:
                     - Easy
@@ -342,6 +360,7 @@ items:
                 name: LensType
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -747,6 +766,7 @@ items:
                 name: MaxFocalLength
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     24:
         exiftool:
@@ -754,6 +774,7 @@ items:
                 name: MinFocalLength
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     25:
         exiftool:
@@ -761,6 +782,7 @@ items:
                 name: FocalUnits
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FocalUnits'
                 desc: 'Focal Units'
     26:
         exiftool:
@@ -768,6 +790,7 @@ items:
                 name: MaxAperture
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MaxAperture'
                 desc: 'Max Aperture'
     27:
         exiftool:
@@ -775,6 +798,7 @@ items:
                 name: MinAperture
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MinAperture'
                 desc: 'Min Aperture'
     28:
         exiftool:
@@ -782,6 +806,7 @@ items:
                 name: FlashActivity
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FlashActivity'
                 desc: 'Flash Activity'
     29:
         exiftool:
@@ -789,6 +814,7 @@ items:
                 name: FlashBits
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FlashBits'
                 desc: 'Flash Bits'
                 values:
                     0: (none)
@@ -807,6 +833,7 @@ items:
                 name: FocusContinuous
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FocusContinuous'
                 desc: 'Focus Continuous'
                 values:
                     0: Single
@@ -818,6 +845,7 @@ items:
                 name: AESetting
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AESetting'
                 desc: 'AE Setting'
                 values:
                     - 'Normal AE'
@@ -831,6 +859,7 @@ items:
                 name: ImageStabilization
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ImageStabilization'
                 desc: 'Image Stabilization'
                 values:
                     0: 'Off'
@@ -849,6 +878,7 @@ items:
                 name: DisplayAperture
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:DisplayAperture'
                 desc: 'Display Aperture'
     36:
         exiftool:
@@ -856,6 +886,7 @@ items:
                 name: ZoomSourceWidth
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ZoomSourceWidth'
                 desc: 'Zoom Source Width'
     37:
         exiftool:
@@ -863,6 +894,7 @@ items:
                 name: ZoomTargetWidth
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ZoomTargetWidth'
                 desc: 'Zoom Target Width'
     39:
         exiftool:
@@ -870,6 +902,7 @@ items:
                 name: SpotMeteringMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SpotMeteringMode'
                 desc: 'Spot Metering Mode'
                 values:
                     - Center
@@ -880,6 +913,7 @@ items:
                 name: PhotoEffect
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:PhotoEffect'
                 desc: 'Photo Effect'
                 values:
                     0: 'Off'
@@ -896,6 +930,7 @@ items:
                 name: ManualFlashOutput
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ManualFlashOutput'
                 desc: 'Manual Flash Output'
                 values:
                     0: n/a
@@ -909,6 +944,7 @@ items:
                 name: ColorTone
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorTone'
                 desc: 'Color Tone'
                 values:
                     - Normal
@@ -918,6 +954,7 @@ items:
                 name: SRAWQuality
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SRAWQuality'
                 desc: 'SRAW Quality'
                 values:
                     - n/a

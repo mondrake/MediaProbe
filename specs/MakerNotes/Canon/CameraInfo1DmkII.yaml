@@ -17,6 +17,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     9:
         exiftool:
@@ -24,6 +25,7 @@ items:
                 name: FocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'
     12:
         exiftool:
@@ -31,6 +33,7 @@ items:
                 name: LensType
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -436,6 +439,7 @@ items:
                 name: MinFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     19:
         exiftool:
@@ -443,6 +447,7 @@ items:
                 name: MaxFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     45:
         exiftool:
@@ -450,6 +455,7 @@ items:
                 name: FocalType
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:FocalType'
                 desc: 'Focal Type'
                 values:
                     0: Fixed
@@ -460,6 +466,7 @@ items:
                 name: WhiteBalance
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -490,6 +497,7 @@ items:
                 name: ColorTemperature
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     57:
         exiftool:
@@ -497,6 +505,7 @@ items:
                 name: CanonImageSize
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:CanonImageSize'
                 desc: 'Canon Image Size'
                 values:
                     -1: n/a
@@ -524,6 +533,7 @@ items:
                 name: JPEGQuality
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:JPEGQuality'
                 desc: 'JPEG Quality'
     108:
         exiftool:
@@ -531,6 +541,7 @@ items:
                 name: PictureStyle
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None
@@ -563,6 +574,7 @@ items:
                 name: Saturation
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:Saturation'
                 desc: Saturation
                 values:
                     - Normal
@@ -572,6 +584,7 @@ items:
                 name: ColorTone
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorTone'
                 desc: 'Color Tone'
                 values:
                     - Normal
@@ -581,6 +594,7 @@ items:
                 name: Sharpness
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:Sharpness'
                 desc: Sharpness
     115:
         exiftool:
@@ -588,6 +602,7 @@ items:
                 name: Contrast
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:Contrast'
                 desc: Contrast
                 values:
                     - Normal
@@ -598,4 +613,5 @@ items:
                 type: string
                 count: 5
                 writable: true
+                DOMNode: 'Canon:ISO'
                 desc: ISO

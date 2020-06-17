@@ -17,6 +17,7 @@ items:
                 type: int32s
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ISO'
                 desc: ISO
     5:
         exiftool:
@@ -25,6 +26,7 @@ items:
                 type: int32s
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     6:
         exiftool:
@@ -33,6 +35,7 @@ items:
                 type: int32s
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     23:
         exiftool:
@@ -40,6 +43,7 @@ items:
                 name: Rotation
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:Rotation'
                 desc: Rotation
     135:
         exiftool:
@@ -47,6 +51,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     145:
         exiftool:
@@ -54,4 +59,5 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'

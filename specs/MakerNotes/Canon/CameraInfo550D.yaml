@@ -17,6 +17,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     4:
         exiftool:
@@ -25,6 +26,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     6:
         exiftool:
@@ -33,6 +35,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ISO'
                 desc: ISO
     7:
         exiftool:
@@ -40,6 +43,7 @@ items:
                 name: HighlightTonePriority
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:HighlightTonePriority'
                 desc: 'Highlight Tone Priority'
                 values:
                     - 'Off'
@@ -50,6 +54,7 @@ items:
                 name: FlashMeteringMode
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:FlashMeteringMode'
                 desc: 'Flash Metering Mode'
                 values:
                     0: E-TTL
@@ -63,6 +68,7 @@ items:
                 name: CameraTemperature
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     30:
         exiftool:
@@ -70,6 +76,7 @@ items:
                 name: FocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'
     53:
         exiftool:
@@ -77,6 +84,7 @@ items:
                 name: CameraOrientation
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:CameraOrientation'
                 desc: 'Camera Orientation'
                 values:
                     - 'Horizontal (normal)'
@@ -88,6 +96,7 @@ items:
                 name: FocusDistanceUpper
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     86:
         exiftool:
@@ -95,6 +104,7 @@ items:
                 name: FocusDistanceLower
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:FocusDistanceLower'
                 desc: 'Focus Distance Lower'
     120:
         exiftool:
@@ -102,6 +112,7 @@ items:
                 name: WhiteBalance
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -132,6 +143,7 @@ items:
                 name: ColorTemperature
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     176:
         exiftool:
@@ -139,6 +151,7 @@ items:
                 name: PictureStyle
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None
@@ -171,6 +184,7 @@ items:
                 name: LensType
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -576,6 +590,7 @@ items:
                 name: MinFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     259:
         exiftool:
@@ -583,6 +598,7 @@ items:
                 name: MaxFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     420:
         exiftool:
@@ -591,6 +607,7 @@ items:
                 type: string
                 count: 6
                 writable: true
+                DOMNode: 'Canon:FirmwareVersion'
                 desc: 'Firmware Version'
     484:
         exiftool:
@@ -599,6 +616,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     496:
         exiftool:
@@ -607,4 +625,5 @@ items:
                 type: int32u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'

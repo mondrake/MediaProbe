@@ -16,6 +16,7 @@ items:
                 name: AspectRatio
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:AspectRatio'
                 desc: 'Aspect Ratio'
                 values:
                     0: '3:2'
@@ -29,6 +30,7 @@ items:
                 name: CroppedImageWidth
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:CroppedImageWidth'
                 desc: 'Cropped Image Width'
     -
         exiftool:
@@ -36,6 +38,7 @@ items:
                 name: CroppedImageHeight
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:CroppedImageHeight'
                 desc: 'Cropped Image Height'
     -
         exiftool:
@@ -43,6 +46,7 @@ items:
                 name: CroppedImageLeft
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:CroppedImageLeft'
                 desc: 'Cropped Image Left'
     -
         exiftool:
@@ -50,4 +54,5 @@ items:
                 name: CroppedImageTop
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:CroppedImageTop'
                 desc: 'Cropped Image Top'
