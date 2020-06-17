@@ -5,6 +5,10 @@ class: FileEye\MediaProbe\Block\MakerNotes\Canon\CameraInfoMap
 DOMNode: map
 format: Byte
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Canon
+        xpath: '//table[@name=''Canon::CameraInfo750D'']/tag'
 items:
     3:
         exiftool:
