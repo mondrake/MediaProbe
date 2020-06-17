@@ -24,6 +24,8 @@ skip:
         - 'THUMBNAIL::ResolutionUnit'
     exiftool:
         - 'Canon:Sharpness'
+        - 'Canon:CameraISO___may work with text'
+        - 'Canon:CameraISO'
         - 'CanonCustom:ExposureLevelIncrements'
         - 'CanonCustom:ISOSpeedRange'
         - 'CanonCustom:HighlightTonePriority'
