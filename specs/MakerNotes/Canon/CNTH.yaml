@@ -17,4 +17,5 @@ items:
                 type: undef
                 writable: false
                 g2: Preview
+                DOMNode: 'Canon:ThumbnailImage'
                 desc: 'Thumbnail Image'

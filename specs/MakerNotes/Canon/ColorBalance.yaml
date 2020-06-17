@@ -22,6 +22,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsAuto'
                 desc: 'WB RGGB Levels Auto'
     5:
         exiftool:
@@ -30,6 +31,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsDaylight'
                 desc: 'WB RGGB Levels Daylight'
     9:
         exiftool:
@@ -38,6 +40,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsShade'
                 desc: 'WB RGGB Levels Shade'
     13:
         exiftool:
@@ -46,6 +49,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsCloudy'
                 desc: 'WB RGGB Levels Cloudy'
     17:
         exiftool:
@@ -54,6 +58,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsTungsten'
                 desc: 'WB RGGB Levels Tungsten'
     21:
         exiftool:
@@ -62,6 +67,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsFluorescent'
                 desc: 'WB RGGB Levels Fluorescent'
     25:
         exiftool:
@@ -70,6 +76,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsFlash'
                 desc: 'WB RGGB Levels Flash'
     29:
         exiftool:
@@ -78,6 +85,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsCustom'
                 desc: 'WB RGGB Levels Custom'
     33:
         exiftool:
@@ -86,6 +94,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBLevelsKelvin'
                 desc: 'WB RGGB Levels Kelvin'
     37:
         exiftool:
@@ -94,4 +103,5 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:WB_RGGBBlackLevels'
                 desc: 'WB RGGB Black Levels'

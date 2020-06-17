@@ -16,6 +16,7 @@ items:
                 name: FNumber
                 type: rational32u
                 writable: false
+                DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     -
         exiftool:
@@ -23,6 +24,7 @@ items:
                 name: ExposureTime
                 type: rational32u
                 writable: false
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     -
         exiftool:
@@ -30,4 +32,5 @@ items:
                 name: ISO
                 type: int32u
                 writable: false
+                DOMNode: 'Canon:ISO'
                 desc: ISO

@@ -20,6 +20,7 @@ items:
                 count: 3
                 writable: true
                 g2: Camera
+                DOMNode: 'Apple:AccelerationVector'
                 desc: 'Acceleration Vector'
     10:
         exiftool:
@@ -27,6 +28,7 @@ items:
                 name: HDRImageType
                 type: int32s
                 writable: true
+                DOMNode: 'Apple:HDRImageType'
                 desc: 'HDR Image Type'
                 values:
                     3: 'HDR Image'
@@ -37,6 +39,7 @@ items:
                 name: BurstUUID
                 type: string
                 writable: true
+                DOMNode: 'Apple:BurstUUID'
                 desc: 'Burst UUID'
     17:
         exiftool:
@@ -44,6 +47,7 @@ items:
                 name: ContentIdentifier
                 type: string
                 writable: true
+                DOMNode: 'Apple:ContentIdentifier'
                 desc: 'Content Identifier'
     21:
         exiftool:
@@ -51,4 +55,5 @@ items:
                 name: ImageUniqueID
                 type: string
                 writable: true
+                DOMNode: 'Apple:ImageUniqueID'
                 desc: 'Image Unique ID'

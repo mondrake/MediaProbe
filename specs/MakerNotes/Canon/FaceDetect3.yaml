@@ -16,4 +16,5 @@ items:
                 name: FacesDetected
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FacesDetected'
                 desc: 'Faces Detected'

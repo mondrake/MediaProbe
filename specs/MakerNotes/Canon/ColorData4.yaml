@@ -16,6 +16,7 @@ items:
                 name: ColorDataVersion
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorDataVersion'
                 desc: 'Color Data Version'
                 values:
                     2: '2 (1DmkIII)'
@@ -32,6 +33,7 @@ items:
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:AverageBlackLevel'
                 desc: 'Average Black Level'
     640:
         exiftool:
@@ -40,6 +42,7 @@ items:
                 type: int32u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:RawMeasuredRGGB'
                 desc: 'Raw Measured RGGB'
     692:
         exiftool:
@@ -48,6 +51,7 @@ items:
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:PerChannelBlackLevel'
                 desc: 'Per Channel Black Level'
     696:
         exiftool:
@@ -55,6 +59,7 @@ items:
                 name: NormalWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:NormalWhiteLevel'
                 desc: 'Normal White Level'
     697:
         exiftool:
@@ -62,6 +67,7 @@ items:
                 name: SpecularWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:SpecularWhiteLevel'
                 desc: 'Specular White Level'
     698:
         exiftool:
@@ -69,6 +75,7 @@ items:
                 name: LinearityUpperMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:LinearityUpperMargin'
                 desc: 'Linearity Upper Margin'
     715:
         exiftool:
@@ -77,6 +84,7 @@ items:
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:PerChannelBlackLevel'
                 desc: 'Per Channel Black Level'
     719:
         exiftool:
@@ -84,12 +92,14 @@ items:
                 name: NormalWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:NormalWhiteLevel'
                 desc: 'Normal White Level'
             -
                 name: PerChannelBlackLevel
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:PerChannelBlackLevel'
                 desc: 'Per Channel Black Level'
     720:
         exiftool:
@@ -97,6 +107,7 @@ items:
                 name: SpecularWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:SpecularWhiteLevel'
                 desc: 'Specular White Level'
     721:
         exiftool:
@@ -104,6 +115,7 @@ items:
                 name: LinearityUpperMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:LinearityUpperMargin'
                 desc: 'Linearity Upper Margin'
     723:
         exiftool:
@@ -111,6 +123,7 @@ items:
                 name: NormalWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:NormalWhiteLevel'
                 desc: 'Normal White Level'
     724:
         exiftool:
@@ -118,6 +131,7 @@ items:
                 name: SpecularWhiteLevel
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:SpecularWhiteLevel'
                 desc: 'Specular White Level'
     725:
         exiftool:
@@ -125,4 +139,5 @@ items:
                 name: LinearityUpperMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:LinearityUpperMargin'
                 desc: 'Linearity Upper Margin'

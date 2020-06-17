@@ -16,6 +16,7 @@ items:
                 name: FacesDetected
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FacesDetected'
                 desc: 'Faces Detected'
     3:
         exiftool:
@@ -24,6 +25,7 @@ items:
                 type: int16u
                 count: 2
                 writable: true
+                DOMNode: 'Canon:FaceDetectFrameSize'
                 desc: 'Face Detect Frame Size'
     8:
         exiftool:
@@ -32,6 +34,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face1Position'
                 desc: 'Face 1 Position'
     10:
         exiftool:
@@ -40,6 +43,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face2Position'
                 desc: 'Face 2 Position'
     12:
         exiftool:
@@ -48,6 +52,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face3Position'
                 desc: 'Face 3 Position'
     14:
         exiftool:
@@ -56,6 +61,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face4Position'
                 desc: 'Face 4 Position'
     16:
         exiftool:
@@ -64,6 +70,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face5Position'
                 desc: 'Face 5 Position'
     18:
         exiftool:
@@ -72,6 +79,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face6Position'
                 desc: 'Face 6 Position'
     20:
         exiftool:
@@ -80,6 +88,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face7Position'
                 desc: 'Face 7 Position'
     22:
         exiftool:
@@ -88,6 +97,7 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face8Position'
                 desc: 'Face 8 Position'
     24:
         exiftool:
@@ -96,4 +106,5 @@ items:
                 type: int16s
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Face9Position'
                 desc: 'Face 9 Position'

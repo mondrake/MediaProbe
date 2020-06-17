@@ -16,6 +16,7 @@ items:
                 name: FaceWidth
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:FaceWidth'
                 desc: 'Face Width'
     2:
         exiftool:
@@ -23,4 +24,5 @@ items:
                 name: FacesDetected
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:FacesDetected'
                 desc: 'Faces Detected'

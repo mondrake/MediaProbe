@@ -16,6 +16,7 @@ items:
                 name: ColorDataVersion
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorDataVersion'
                 desc: 'Color Data Version'
                 values:
                     -4: '-4 (M100/M5/M6)'
@@ -27,6 +28,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:PerChannelBlackLevel'
                 desc: 'Per Channel Black Level'
     333:
         exiftool:
@@ -35,4 +37,5 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:PerChannelBlackLevel'
                 desc: 'Per Channel Black Level'

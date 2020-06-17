@@ -16,6 +16,7 @@ items:
                 name: HDR
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:HDR'
                 desc: HDR
                 values:
                     - 'Off'
@@ -27,6 +28,7 @@ items:
                 name: HDREffect
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:HDREffect'
                 desc: 'HDR Effect'
                 values:
                     - Natural

@@ -16,6 +16,7 @@ items:
                 name: CompressorVersion
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:CompressorVersion'
                 desc: 'Compressor Version'
     THMB:
         exiftool:
@@ -24,4 +25,5 @@ items:
                 type: '?'
                 writable: false
                 g2: Preview
+                DOMNode: 'Canon:ThumbnailImage'
                 desc: 'Thumbnail Image'

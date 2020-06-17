@@ -22,6 +22,7 @@ items:
                 name: CanonFlashInfo
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:CanonFlashInfo'
                 desc: 'Canon Flash Info'
     4:
         name: CanonShotInfo
@@ -36,6 +37,7 @@ items:
                 type: string
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:CanonImageType'
                 desc: 'Canon Image Type'
     7:
         exiftool:
@@ -43,6 +45,7 @@ items:
                 name: CanonFirmwareVersion
                 type: string
                 writable: true
+                DOMNode: 'Canon:CanonFirmwareVersion'
                 desc: 'Canon Firmware Version'
     8:
         exiftool:
@@ -51,6 +54,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FileNumber'
                 desc: 'File Number'
     9:
         exiftool:
@@ -58,6 +62,7 @@ items:
                 name: OwnerName
                 type: string
                 writable: true
+                DOMNode: 'Canon:OwnerName'
                 desc: 'Owner Name'
     10:
         name: UnknownD30
@@ -68,16 +73,19 @@ items:
                 name: SerialNumber
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:SerialNumber'
                 desc: 'Serial Number'
             -
                 name: SerialNumber
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:SerialNumber'
                 desc: 'Serial Number'
             -
                 name: SerialNumber
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:SerialNumber'
                 desc: 'Serial Number'
     13:
         name: CanonCameraInfo
@@ -89,6 +97,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:CanonFileLength'
                 desc: 'Canon File Length'
     15:
         __todo: fix
@@ -100,6 +109,7 @@ items:
                 name: CanonModelID
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:CanonModelID'
                 desc: 'Canon Model ID'
                 values:
                     1042: 'EOS M50 / Kiss M'
@@ -442,6 +452,7 @@ items:
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:ThumbnailImageValidArea'
                 desc: 'Thumbnail Image Valid Area'
     21:
         exiftool:
@@ -449,6 +460,7 @@ items:
                 name: SerialNumberFormat
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:SerialNumberFormat'
                 desc: 'Serial Number Format'
                 values:
                     '2415919104': 'Format 1'
@@ -459,6 +471,7 @@ items:
                 name: SuperMacro
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:SuperMacro'
                 desc: 'Super Macro'
                 values:
                     - 'Off'
@@ -470,6 +483,7 @@ items:
                 name: DateStampMode
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:DateStampMode'
                 desc: 'Date Stamp Mode'
                 values:
                     - 'Off'
@@ -484,6 +498,7 @@ items:
                 name: FirmwareRevision
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:FirmwareRevision'
                 desc: 'Firmware Revision'
     35:
         exiftool:
@@ -492,6 +507,7 @@ items:
                 type: int32u
                 count: 2
                 writable: true
+                DOMNode: 'Canon:Categories'
                 desc: Categories
                 values:
                     0: (none)
@@ -521,6 +537,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ImageUniqueID'
                 desc: 'Image Unique ID'
     41:
         __todo: 'assign collection'
@@ -537,6 +554,7 @@ items:
                 name: BatteryType
                 type: undef
                 writable: true
+                DOMNode: 'Canon:BatteryType'
                 desc: 'Battery Type'
     60:
         name: CanonAFInfo3
@@ -547,6 +565,7 @@ items:
                 name: RawDataOffset
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:RawDataOffset'
                 desc: 'Raw Data Offset'
     131:
         exiftool:
@@ -554,6 +573,7 @@ items:
                 name: OriginalDecisionDataOffset
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:OriginalDecisionDataOffset'
                 desc: 'Original Decision Data Offset'
     144:
         __todo: fix
@@ -576,6 +596,7 @@ items:
                 name: AFPointsInFocus1D
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:AFPointsInFocus1D'
                 desc: 'AF Points In Focus 1D'
     149:
         exiftool:
@@ -583,6 +604,7 @@ items:
                 name: LensModel
                 type: string
                 writable: true
+                DOMNode: 'Canon:LensModel'
                 desc: 'Lens Model'
     150:
         exiftool:
@@ -590,6 +612,7 @@ items:
                 name: InternalSerialNumber
                 type: string
                 writable: true
+                DOMNode: 'Canon:InternalSerialNumber'
                 desc: 'Internal Serial Number'
     151:
         exiftool:
@@ -597,6 +620,7 @@ items:
                 name: DustRemovalData
                 type: undef
                 writable: true
+                DOMNode: 'Canon:DustRemovalData'
                 desc: 'Dust Removal Data'
     152:
         name: CanonCropInfo
@@ -616,6 +640,7 @@ items:
                 name: ToneCurveTable
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:ToneCurveTable'
                 desc: 'Tone Curve Table'
     162:
         exiftool:
@@ -623,6 +648,7 @@ items:
                 name: SharpnessTable
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:SharpnessTable'
                 desc: 'Sharpness Table'
     163:
         exiftool:
@@ -630,6 +656,7 @@ items:
                 name: SharpnessFreqTable
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:SharpnessFreqTable'
                 desc: 'Sharpness Freq Table'
     164:
         exiftool:
@@ -637,6 +664,7 @@ items:
                 name: WhiteBalanceTable
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:WhiteBalanceTable'
                 desc: 'White Balance Table'
     169:
         name: CanonColorBalance
@@ -650,6 +678,7 @@ items:
                 name: ColorTemperature
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     176:
         name: CanonFlags
@@ -663,6 +692,7 @@ items:
                 name: ToneCurveMatching
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:ToneCurveMatching'
                 desc: 'Tone Curve Matching'
     179:
         exiftool:
@@ -670,6 +700,7 @@ items:
                 name: WhiteBalanceMatching
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:WhiteBalanceMatching'
                 desc: 'White Balance Matching'
     180:
         components: 1
@@ -678,6 +709,7 @@ items:
                 name: ColorSpace
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorSpace'
                 desc: 'Color Space'
                 values:
                     1: sRGB
@@ -691,6 +723,7 @@ items:
                 name: VRDOffset
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:VRDOffset'
                 desc: 'VRD Offset'
     224:
         name: CanonSensorInfo
@@ -704,6 +737,7 @@ items:
                 name: CRWParam
                 type: undef
                 writable: false
+                DOMNode: 'Canon:CRWParam'
                 desc: 'CRW Param'
     16387:
         name: CanonColorInfo
@@ -714,6 +748,7 @@ items:
                 name: Flavor
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:Flavor'
                 desc: Flavor
     16392:
         __todo: 'add decoding per 3'
@@ -723,6 +758,7 @@ items:
                 type: int16u
                 count: 3
                 writable: false
+                DOMNode: 'Canon:PictureStyleUserDef'
                 desc: 'Picture Style User Def'
                 values:
                     0: None
@@ -757,6 +793,7 @@ items:
                 type: int16u
                 count: 3
                 writable: false
+                DOMNode: 'Canon:PictureStylePC'
                 desc: 'Picture Style PC'
                 values:
                     0: None
@@ -789,6 +826,7 @@ items:
                 name: CustomPictureStyleFileName
                 type: string
                 writable: true
+                DOMNode: 'Canon:CustomPictureStyleFileName'
                 desc: 'Custom Picture Style File Name'
     16403:
         name: CanonAFMicroAdj
