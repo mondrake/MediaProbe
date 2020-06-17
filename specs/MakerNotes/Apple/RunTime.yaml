@@ -4,6 +4,10 @@ title: 'Apple Runtime'
 class: FileEye\MediaProbe\Block\MakerNotes\Apple\RunTime
 DOMNode: plist
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Apple
+        xpath: '//table[@name=''Apple::RunTime'']/tag'
 items:
     epoch:
         format: Ascii

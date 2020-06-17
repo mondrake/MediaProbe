@@ -4,6 +4,10 @@ title: 'Canon Maker Notes'
 class: FileEye\MediaProbe\Block\Ifd
 DOMNode: makerNote
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Canon
+        xpath: '//table[@name=''Canon::Main'']/tag'
 items:
     1:
         name: CanonCameraSettings

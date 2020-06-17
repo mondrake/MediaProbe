@@ -57,55 +57,6 @@ class ExifToolResourceUpdateCommand extends Command
             $output->writeln("Processed $file.");
         }
 
-        // Build Canon maker notes specs.
-/*        foreach ($this->exiftoolXml->xpath("//table[@g0='MakerNotes' and @g1='Canon']") as $table) {
-            $name = (string) $table->attributes()->name;
-            [$a, $b] = explode('::', $name);
-            $collection = 'MakerNotes' . DIRECTORY_SEPARATOR . $a . DIRECTORY_SEPARATOR . $b;
-            $x_path = "//table[@name='" . $name . "']/tag";
-            $this->updateWithExifTool($input, $output, $collection . '.yaml', $x_path);
-            $output->writeln("Processed $collection.");
-        }
-*/
-        // Build Canon maker notes specs.
-/*        foreach ($this->exiftoolXml->xpath("//table[@g0='MakerNotes' and @g1='CanonCustom']") as $table) {
-            $name = (string) $table->attributes()->name;
-            [$a, $b] = explode('::', $name);
-            $directory = 'MakerNotes' . DIRECTORY_SEPARATOR . $a;
-            $filesystem->mkdir($this->specDir . DIRECTORY_SEPARATOR . $directory);
-            $collection = $directory . DIRECTORY_SEPARATOR . $b;
-            $c = "MakerNotes\\$a\\$b";
-            $x_path = "//table[@name='" . $name . "']/tag";
-            $this->updateWithExifTool($input, $output, $collection . '.yaml', $x_path, $c, $table);
-            $output->writeln("Processed $collection.");
-        }
-
-        // Build Canon maker notes specs.
-        foreach ($this->exiftoolXml->xpath("//table[@g0='MakerNotes' and @g1='CanonRaw']") as $table) {
-            $name = (string) $table->attributes()->name;
-            [$a, $b] = explode('::', $name);
-            $directory = 'MakerNotes' . DIRECTORY_SEPARATOR . $a;
-            $filesystem->mkdir($this->specDir . DIRECTORY_SEPARATOR . $directory);
-            $collection = $directory . DIRECTORY_SEPARATOR . $b;
-            $c = "MakerNotes\\$a\\$b";
-            $x_path = "//table[@name='" . $name . "']/tag";
-            $this->updateWithExifTool($input, $output, $collection . '.yaml', $x_path, $c, $table);
-            $output->writeln("Processed $collection.");
-        }
-
-        // Build Canon maker notes specs.
-        foreach ($this->exiftoolXml->xpath("//table[@g0='CanonVRD' and @g1='CanonVRD']") as $table) {
-            $name = (string) $table->attributes()->name;
-            [$a, $b] = explode('::', $name);
-            $directory = 'MakerNotes' . DIRECTORY_SEPARATOR . $a;
-            $filesystem->mkdir($this->specDir . DIRECTORY_SEPARATOR . $directory);
-            $collection = $directory . DIRECTORY_SEPARATOR . $b;
-            $c = "MakerNotes\\$a\\$b";
-            $x_path = "//table[@name='" . $name . "']/tag";
-            $this->updateWithExifTool($input, $output, $collection . '.yaml', $x_path, $c, $table);
-            $output->writeln("Processed $collection.");
-        }
-
         // Build Apple maker notes specs.
 /*        foreach ($this->exiftoolXml->xpath("//table[@g0='MakerNotes' and @g1='Apple']") as $table) {
             $name = (string) $table->attributes()->name;

@@ -4,6 +4,10 @@ title: 'Canon FilterInfo'
 class: FileEye\MediaProbe\Block\Ifd
 DOMNode: ifd
 defaultItemCollection: Tag
+compiler:
+    exiftool:
+        g1: Canon
+        xpath: '//table[@name=''Canon::FilterInfo'']/tag'
 items:
     257:
         exiftool:
