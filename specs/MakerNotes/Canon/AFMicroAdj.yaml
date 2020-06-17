@@ -21,6 +21,7 @@ items:
                 name: AFMicroAdjMode
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:AFMicroAdjMode'
                 desc: 'AF Micro Adj Mode'
                 values:
                     - Disable
@@ -32,4 +33,5 @@ items:
                 name: AFMicroAdjValue
                 type: rational64s
                 writable: true
+                DOMNode: 'Canon:AFMicroAdjValue'
                 desc: 'AF Micro Adj Value'

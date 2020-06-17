@@ -17,4 +17,5 @@ items:
                 type: undef
                 count: 5
                 writable: true
+                DOMNode: 'Canon:LensSerialNumber'
                 desc: 'Lens Serial Number'

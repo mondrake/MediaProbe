@@ -16,6 +16,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     71:
         exiftool:
@@ -23,6 +24,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     83:
         exiftool:
@@ -30,6 +32,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     91:
         exiftool:
@@ -37,6 +40,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     92:
         exiftool:
@@ -44,6 +48,7 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     100:
         exiftool:
@@ -51,4 +56,5 @@ items:
                 name: CameraTemperature
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'

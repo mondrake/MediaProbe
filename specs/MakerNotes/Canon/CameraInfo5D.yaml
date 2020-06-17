@@ -17,6 +17,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     4:
         exiftool:
@@ -25,6 +26,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     6:
         exiftool:
@@ -33,6 +35,7 @@ items:
                 type: int8u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:ISO'
                 desc: ISO
     12:
         exiftool:
@@ -40,6 +43,7 @@ items:
                 name: LensType
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -445,6 +449,7 @@ items:
                 name: CameraTemperature
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     27:
         exiftool:
@@ -452,6 +457,7 @@ items:
                 name: MacroMagnification
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:MacroMagnification'
                 desc: 'Macro Magnification'
     39:
         exiftool:
@@ -459,6 +465,7 @@ items:
                 name: CameraOrientation
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:CameraOrientation'
                 desc: 'Camera Orientation'
                 values:
                     - 'Horizontal (normal)'
@@ -470,6 +477,7 @@ items:
                 name: FocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'
     56:
         exiftool:
@@ -477,6 +485,7 @@ items:
                 name: AFPointsInFocus5D
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:AFPointsInFocus5D'
                 desc: 'AF Points In Focus 5D'
                 values:
                     0: (none)
@@ -501,6 +510,7 @@ items:
                 name: WhiteBalance
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -531,6 +541,7 @@ items:
                 name: ColorTemperature
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     108:
         exiftool:
@@ -538,6 +549,7 @@ items:
                 name: PictureStyle
                 type: int8u
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None
@@ -570,6 +582,7 @@ items:
                 name: MinFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     149:
         exiftool:
@@ -577,6 +590,7 @@ items:
                 name: MaxFocalLength
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     151:
         exiftool:
@@ -584,6 +598,7 @@ items:
                 name: LensType
                 type: int16uRev
                 writable: true
+                DOMNode: 'Canon:LensType'
                 desc: 'Lens Type'
                 values:
                     -1: n/a
@@ -990,6 +1005,7 @@ items:
                 type: string
                 count: 8
                 writable: true
+                DOMNode: 'Canon:FirmwareRevision'
                 desc: 'Firmware Revision'
     172:
         exiftool:
@@ -998,6 +1014,7 @@ items:
                 type: string
                 count: 16
                 writable: true
+                DOMNode: 'Canon:ShortOwnerName'
                 desc: 'Short Owner Name'
     204:
         exiftool:
@@ -1006,6 +1023,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     208:
         exiftool:
@@ -1014,6 +1032,7 @@ items:
                 type: int16u
                 writable: true
                 g2: Image
+                DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     232:
         exiftool:
@@ -1021,6 +1040,7 @@ items:
                 name: ContrastStandard
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastStandard'
                 desc: 'Contrast Standard'
     233:
         exiftool:
@@ -1028,6 +1048,7 @@ items:
                 name: ContrastPortrait
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastPortrait'
                 desc: 'Contrast Portrait'
     234:
         exiftool:
@@ -1035,6 +1056,7 @@ items:
                 name: ContrastLandscape
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastLandscape'
                 desc: 'Contrast Landscape'
     235:
         exiftool:
@@ -1042,6 +1064,7 @@ items:
                 name: ContrastNeutral
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastNeutral'
                 desc: 'Contrast Neutral'
     236:
         exiftool:
@@ -1049,6 +1072,7 @@ items:
                 name: ContrastFaithful
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastFaithful'
                 desc: 'Contrast Faithful'
     237:
         exiftool:
@@ -1056,6 +1080,7 @@ items:
                 name: ContrastMonochrome
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastMonochrome'
                 desc: 'Contrast Monochrome'
     238:
         exiftool:
@@ -1063,6 +1088,7 @@ items:
                 name: ContrastUserDef1
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef1'
                 desc: 'Contrast User Def 1'
     239:
         exiftool:
@@ -1070,6 +1096,7 @@ items:
                 name: ContrastUserDef2
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef2'
                 desc: 'Contrast User Def 2'
     240:
         exiftool:
@@ -1077,6 +1104,7 @@ items:
                 name: ContrastUserDef3
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef3'
                 desc: 'Contrast User Def 3'
     241:
         exiftool:
@@ -1084,6 +1112,7 @@ items:
                 name: SharpnessStandard
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessStandard'
                 desc: 'Sharpness Standard'
     242:
         exiftool:
@@ -1091,6 +1120,7 @@ items:
                 name: SharpnessPortrait
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessPortrait'
                 desc: 'Sharpness Portrait'
     243:
         exiftool:
@@ -1098,6 +1128,7 @@ items:
                 name: SharpnessLandscape
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessLandscape'
                 desc: 'Sharpness Landscape'
     244:
         exiftool:
@@ -1105,6 +1136,7 @@ items:
                 name: SharpnessNeutral
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessNeutral'
                 desc: 'Sharpness Neutral'
     245:
         exiftool:
@@ -1112,6 +1144,7 @@ items:
                 name: SharpnessFaithful
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessFaithful'
                 desc: 'Sharpness Faithful'
     246:
         exiftool:
@@ -1119,6 +1152,7 @@ items:
                 name: SharpnessMonochrome
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessMonochrome'
                 desc: 'Sharpness Monochrome'
     247:
         exiftool:
@@ -1126,6 +1160,7 @@ items:
                 name: SharpnessUserDef1
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef1'
                 desc: 'Sharpness User Def 1'
     248:
         exiftool:
@@ -1133,6 +1168,7 @@ items:
                 name: SharpnessUserDef2
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef2'
                 desc: 'Sharpness User Def 2'
     249:
         exiftool:
@@ -1140,6 +1176,7 @@ items:
                 name: SharpnessUserDef3
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef3'
                 desc: 'Sharpness User Def 3'
     250:
         exiftool:
@@ -1147,6 +1184,7 @@ items:
                 name: SaturationStandard
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationStandard'
                 desc: 'Saturation Standard'
     251:
         exiftool:
@@ -1154,6 +1192,7 @@ items:
                 name: SaturationPortrait
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationPortrait'
                 desc: 'Saturation Portrait'
     252:
         exiftool:
@@ -1161,6 +1200,7 @@ items:
                 name: SaturationLandscape
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationLandscape'
                 desc: 'Saturation Landscape'
     253:
         exiftool:
@@ -1168,6 +1208,7 @@ items:
                 name: SaturationNeutral
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationNeutral'
                 desc: 'Saturation Neutral'
     254:
         exiftool:
@@ -1175,6 +1216,7 @@ items:
                 name: SaturationFaithful
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationFaithful'
                 desc: 'Saturation Faithful'
     255:
         exiftool:
@@ -1182,6 +1224,7 @@ items:
                 name: FilterEffectMonochrome
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:FilterEffectMonochrome'
                 desc: 'Filter Effect Monochrome'
                 values:
                     -559038737: n/a
@@ -1196,6 +1239,7 @@ items:
                 name: SaturationUserDef1
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef1'
                 desc: 'Saturation User Def 1'
     257:
         exiftool:
@@ -1203,6 +1247,7 @@ items:
                 name: SaturationUserDef2
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef2'
                 desc: 'Saturation User Def 2'
     258:
         exiftool:
@@ -1210,6 +1255,7 @@ items:
                 name: SaturationUserDef3
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef3'
                 desc: 'Saturation User Def 3'
     259:
         exiftool:
@@ -1217,6 +1263,7 @@ items:
                 name: ColorToneStandard
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneStandard'
                 desc: 'Color Tone Standard'
     260:
         exiftool:
@@ -1224,6 +1271,7 @@ items:
                 name: ColorTonePortrait
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorTonePortrait'
                 desc: 'Color Tone Portrait'
     261:
         exiftool:
@@ -1231,6 +1279,7 @@ items:
                 name: ColorToneLandscape
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneLandscape'
                 desc: 'Color Tone Landscape'
     262:
         exiftool:
@@ -1238,6 +1287,7 @@ items:
                 name: ColorToneNeutral
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneNeutral'
                 desc: 'Color Tone Neutral'
     263:
         exiftool:
@@ -1245,6 +1295,7 @@ items:
                 name: ColorToneFaithful
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneFaithful'
                 desc: 'Color Tone Faithful'
     264:
         exiftool:
@@ -1252,6 +1303,7 @@ items:
                 name: ToningEffectMonochrome
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ToningEffectMonochrome'
                 desc: 'Toning Effect Monochrome'
                 values:
                     -559038737: n/a
@@ -1266,6 +1318,7 @@ items:
                 name: ColorToneUserDef1
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef1'
                 desc: 'Color Tone User Def 1'
     266:
         exiftool:
@@ -1273,6 +1326,7 @@ items:
                 name: ColorToneUserDef2
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef2'
                 desc: 'Color Tone User Def 2'
     267:
         exiftool:
@@ -1280,6 +1334,7 @@ items:
                 name: ColorToneUserDef3
                 type: int8s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef3'
                 desc: 'Color Tone User Def 3'
     268:
         exiftool:
@@ -1287,6 +1342,7 @@ items:
                 name: UserDef1PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef1PictureStyle'
                 desc: 'User Def 1 Picture Style'
                 values:
                     65: 'PC 1'
@@ -1305,6 +1361,7 @@ items:
                 name: UserDef2PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef2PictureStyle'
                 desc: 'User Def 2 Picture Style'
                 values:
                     65: 'PC 1'
@@ -1323,6 +1380,7 @@ items:
                 name: UserDef3PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef3PictureStyle'
                 desc: 'User Def 3 Picture Style'
                 values:
                     65: 'PC 1'
@@ -1342,4 +1400,5 @@ items:
                 type: int32u
                 writable: true
                 g2: Time
+                DOMNode: 'Canon:TimeStamp'
                 desc: 'Time Stamp'
