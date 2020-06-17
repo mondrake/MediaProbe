@@ -26,6 +26,7 @@ skip:
         - 'Canon:Sharpness'
         - 'Canon:CameraISO___may work with text'
         - 'Canon:CameraISO'
+        - 'Canon:AFPoint'
         - 'CanonCustom:ExposureLevelIncrements'
         - 'CanonCustom:ISOSpeedRange'
         - 'CanonCustom:HighlightTonePriority'
