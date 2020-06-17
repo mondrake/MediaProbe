@@ -1,5 +1,6 @@
 skip:
     exiftool:
+        - 'Canon:Sharpness'
         - 'CanonCustom:Shutter-AELock'
 fileName: Canon1DmkIII.jpg
 mimeType: image/jpeg
