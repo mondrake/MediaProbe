@@ -21,6 +21,7 @@ items:
                 name: ToneCurve
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ToneCurve'
                 desc: 'Tone Curve'
                 values:
                     - Standard
@@ -32,6 +33,7 @@ items:
                 name: Sharpness
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Sharpness'
                 desc: Sharpness
     -
         exiftool:
@@ -39,6 +41,7 @@ items:
                 name: SharpnessFrequency
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SharpnessFrequency'
                 desc: 'Sharpness Frequency'
                 values:
                     - n/a
@@ -53,6 +56,7 @@ items:
                 name: SensorRedLevel
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SensorRedLevel'
                 desc: 'Sensor Red Level'
     -
         exiftool:
@@ -60,6 +64,7 @@ items:
                 name: SensorBlueLevel
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SensorBlueLevel'
                 desc: 'Sensor Blue Level'
     -
         exiftool:
@@ -67,6 +72,7 @@ items:
                 name: WhiteBalanceRed
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WhiteBalanceRed'
                 desc: 'White Balance Red'
     -
         exiftool:
@@ -74,6 +80,7 @@ items:
                 name: WhiteBalanceBlue
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WhiteBalanceBlue'
                 desc: 'White Balance Blue'
     -
         exiftool:
@@ -81,6 +88,7 @@ items:
                 name: WhiteBalance
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -111,6 +119,7 @@ items:
                 name: ColorTemperature
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     -
         exiftool:
@@ -118,6 +127,7 @@ items:
                 name: PictureStyle
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:PictureStyle'
                 desc: 'Picture Style'
                 values:
                     0: None
@@ -150,6 +160,7 @@ items:
                 name: DigitalGain
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:DigitalGain'
                 desc: 'Digital Gain'
     -
         exiftool:
@@ -157,6 +168,7 @@ items:
                 name: WBShiftAB
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WBShiftAB'
                 desc: 'WB Shift AB'
     -
         exiftool:
@@ -164,4 +176,5 @@ items:
                 name: WBShiftGM
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WBShiftGM'
                 desc: 'WB Shift GM'

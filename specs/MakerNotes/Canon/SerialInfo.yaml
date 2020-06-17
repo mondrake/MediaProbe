@@ -16,4 +16,5 @@ items:
                 name: InternalSerialNumber
                 type: string
                 writable: true
+                DOMNode: 'Canon:InternalSerialNumber'
                 desc: 'Internal Serial Number'

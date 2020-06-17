@@ -21,6 +21,7 @@ items:
                 name: FrameRate
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FrameRate'
                 desc: 'Frame Rate'
     2:
         exiftool:
@@ -28,6 +29,7 @@ items:
                 name: FrameCount
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FrameCount'
                 desc: 'Frame Count'
     4:
         exiftool:
@@ -35,6 +37,7 @@ items:
                 name: FrameCount
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:FrameCount'
                 desc: 'Frame Count'
     6:
         exiftool:
@@ -42,6 +45,7 @@ items:
                 name: FrameRate
                 type: rational32u
                 writable: true
+                DOMNode: 'Canon:FrameRate'
                 desc: 'Frame Rate'
     106:
         exiftool:
@@ -49,6 +53,7 @@ items:
                 name: Duration
                 type: int32u
                 writable: true
+                DOMNode: 'Canon:Duration'
                 desc: Duration
     108:
         exiftool:
@@ -57,6 +62,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Audio
+                DOMNode: 'Canon:AudioBitrate'
                 desc: 'Audio Bitrate'
     110:
         exiftool:
@@ -65,6 +71,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Audio
+                DOMNode: 'Canon:AudioSampleRate'
                 desc: 'Audio Sample Rate'
     112:
         exiftool:
@@ -73,6 +80,7 @@ items:
                 type: int32u
                 writable: true
                 g2: Audio
+                DOMNode: 'Canon:AudioChannels'
                 desc: 'Audio Channels'
     116:
         exiftool:
@@ -81,4 +89,5 @@ items:
                 type: undef
                 count: 4
                 writable: true
+                DOMNode: 'Canon:VideoCodec'
                 desc: 'Video Codec'

@@ -21,6 +21,7 @@ items:
                 name: SensorWidth
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorWidth'
                 desc: 'Sensor Width'
     2:
         exiftool:
@@ -28,6 +29,7 @@ items:
                 name: SensorHeight
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorHeight'
                 desc: 'Sensor Height'
     5:
         exiftool:
@@ -35,6 +37,7 @@ items:
                 name: SensorLeftBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorLeftBorder'
                 desc: 'Sensor Left Border'
     6:
         exiftool:
@@ -42,6 +45,7 @@ items:
                 name: SensorTopBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorTopBorder'
                 desc: 'Sensor Top Border'
     7:
         exiftool:
@@ -49,6 +53,7 @@ items:
                 name: SensorRightBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorRightBorder'
                 desc: 'Sensor Right Border'
     8:
         exiftool:
@@ -56,6 +61,7 @@ items:
                 name: SensorBottomBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:SensorBottomBorder'
                 desc: 'Sensor Bottom Border'
     9:
         exiftool:
@@ -63,6 +69,7 @@ items:
                 name: BlackMaskLeftBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:BlackMaskLeftBorder'
                 desc: 'Black Mask Left Border'
     10:
         exiftool:
@@ -70,6 +77,7 @@ items:
                 name: BlackMaskTopBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:BlackMaskTopBorder'
                 desc: 'Black Mask Top Border'
     11:
         exiftool:
@@ -77,6 +85,7 @@ items:
                 name: BlackMaskRightBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:BlackMaskRightBorder'
                 desc: 'Black Mask Right Border'
     12:
         exiftool:
@@ -84,4 +93,5 @@ items:
                 name: BlackMaskBottomBorder
                 type: int16s
                 writable: false
+                DOMNode: 'Canon:BlackMaskBottomBorder'
                 desc: 'Black Mask Bottom Border'

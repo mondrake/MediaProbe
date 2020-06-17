@@ -16,6 +16,7 @@ items:
                 name: ContrastStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastStandard'
                 desc: 'Contrast Standard'
                 values:
                     -559038737: n/a
@@ -25,6 +26,7 @@ items:
                 name: SharpnessStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessStandard'
                 desc: 'Sharpness Standard'
                 values:
                     -559038737: n/a
@@ -34,6 +36,7 @@ items:
                 name: SaturationStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationStandard'
                 desc: 'Saturation Standard'
                 values:
                     -559038737: n/a
@@ -43,6 +46,7 @@ items:
                 name: ColorToneStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneStandard'
                 desc: 'Color Tone Standard'
                 values:
                     -559038737: n/a
@@ -52,6 +56,7 @@ items:
                 name: FilterEffectStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectStandard'
                 desc: 'Filter Effect Standard'
                 values:
                     -559038737: n/a
@@ -61,6 +66,7 @@ items:
                 name: ToningEffectStandard
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectStandard'
                 desc: 'Toning Effect Standard'
                 values:
                     -559038737: n/a
@@ -70,6 +76,7 @@ items:
                 name: ContrastPortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastPortrait'
                 desc: 'Contrast Portrait'
                 values:
                     -559038737: n/a
@@ -79,6 +86,7 @@ items:
                 name: SharpnessPortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessPortrait'
                 desc: 'Sharpness Portrait'
                 values:
                     -559038737: n/a
@@ -88,6 +96,7 @@ items:
                 name: SaturationPortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationPortrait'
                 desc: 'Saturation Portrait'
                 values:
                     -559038737: n/a
@@ -97,6 +106,7 @@ items:
                 name: ColorTonePortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorTonePortrait'
                 desc: 'Color Tone Portrait'
                 values:
                     -559038737: n/a
@@ -106,6 +116,7 @@ items:
                 name: FilterEffectPortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectPortrait'
                 desc: 'Filter Effect Portrait'
                 values:
                     -559038737: n/a
@@ -115,6 +126,7 @@ items:
                 name: ToningEffectPortrait
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectPortrait'
                 desc: 'Toning Effect Portrait'
                 values:
                     -559038737: n/a
@@ -124,6 +136,7 @@ items:
                 name: ContrastLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastLandscape'
                 desc: 'Contrast Landscape'
                 values:
                     -559038737: n/a
@@ -133,6 +146,7 @@ items:
                 name: SharpnessLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessLandscape'
                 desc: 'Sharpness Landscape'
                 values:
                     -559038737: n/a
@@ -142,6 +156,7 @@ items:
                 name: SaturationLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationLandscape'
                 desc: 'Saturation Landscape'
                 values:
                     -559038737: n/a
@@ -151,6 +166,7 @@ items:
                 name: ColorToneLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneLandscape'
                 desc: 'Color Tone Landscape'
                 values:
                     -559038737: n/a
@@ -160,6 +176,7 @@ items:
                 name: FilterEffectLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectLandscape'
                 desc: 'Filter Effect Landscape'
                 values:
                     -559038737: n/a
@@ -169,6 +186,7 @@ items:
                 name: ToningEffectLandscape
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectLandscape'
                 desc: 'Toning Effect Landscape'
                 values:
                     -559038737: n/a
@@ -178,6 +196,7 @@ items:
                 name: ContrastNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastNeutral'
                 desc: 'Contrast Neutral'
                 values:
                     -559038737: n/a
@@ -187,6 +206,7 @@ items:
                 name: SharpnessNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessNeutral'
                 desc: 'Sharpness Neutral'
                 values:
                     -559038737: n/a
@@ -196,6 +216,7 @@ items:
                 name: SaturationNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationNeutral'
                 desc: 'Saturation Neutral'
                 values:
                     -559038737: n/a
@@ -205,6 +226,7 @@ items:
                 name: ColorToneNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneNeutral'
                 desc: 'Color Tone Neutral'
                 values:
                     -559038737: n/a
@@ -214,6 +236,7 @@ items:
                 name: FilterEffectNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectNeutral'
                 desc: 'Filter Effect Neutral'
                 values:
                     -559038737: n/a
@@ -223,6 +246,7 @@ items:
                 name: ToningEffectNeutral
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectNeutral'
                 desc: 'Toning Effect Neutral'
                 values:
                     -559038737: n/a
@@ -232,6 +256,7 @@ items:
                 name: ContrastFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastFaithful'
                 desc: 'Contrast Faithful'
                 values:
                     -559038737: n/a
@@ -241,6 +266,7 @@ items:
                 name: SharpnessFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessFaithful'
                 desc: 'Sharpness Faithful'
                 values:
                     -559038737: n/a
@@ -250,6 +276,7 @@ items:
                 name: SaturationFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationFaithful'
                 desc: 'Saturation Faithful'
                 values:
                     -559038737: n/a
@@ -259,6 +286,7 @@ items:
                 name: ColorToneFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneFaithful'
                 desc: 'Color Tone Faithful'
                 values:
                     -559038737: n/a
@@ -268,6 +296,7 @@ items:
                 name: FilterEffectFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectFaithful'
                 desc: 'Filter Effect Faithful'
                 values:
                     -559038737: n/a
@@ -277,6 +306,7 @@ items:
                 name: ToningEffectFaithful
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectFaithful'
                 desc: 'Toning Effect Faithful'
                 values:
                     -559038737: n/a
@@ -286,6 +316,7 @@ items:
                 name: ContrastMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastMonochrome'
                 desc: 'Contrast Monochrome'
                 values:
                     -559038737: n/a
@@ -295,6 +326,7 @@ items:
                 name: SharpnessMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessMonochrome'
                 desc: 'Sharpness Monochrome'
                 values:
                     -559038737: n/a
@@ -304,6 +336,7 @@ items:
                 name: SaturationMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationMonochrome'
                 desc: 'Saturation Monochrome'
                 values:
                     -559038737: n/a
@@ -313,6 +346,7 @@ items:
                 name: ColorToneMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneMonochrome'
                 desc: 'Color Tone Monochrome'
                 values:
                     -559038737: n/a
@@ -322,6 +356,7 @@ items:
                 name: FilterEffectMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectMonochrome'
                 desc: 'Filter Effect Monochrome'
                 values:
                     -559038737: n/a
@@ -336,6 +371,7 @@ items:
                 name: ToningEffectMonochrome
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectMonochrome'
                 desc: 'Toning Effect Monochrome'
                 values:
                     -559038737: n/a
@@ -350,6 +386,7 @@ items:
                 name: ContrastUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef1'
                 desc: 'Contrast User Def 1'
                 values:
                     -559038737: n/a
@@ -359,6 +396,7 @@ items:
                 name: SharpnessUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef1'
                 desc: 'Sharpness User Def 1'
                 values:
                     -559038737: n/a
@@ -368,6 +406,7 @@ items:
                 name: SaturationUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef1'
                 desc: 'Saturation User Def 1'
                 values:
                     -559038737: n/a
@@ -377,6 +416,7 @@ items:
                 name: ColorToneUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef1'
                 desc: 'Color Tone User Def 1'
                 values:
                     -559038737: n/a
@@ -386,6 +426,7 @@ items:
                 name: FilterEffectUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectUserDef1'
                 desc: 'Filter Effect User Def 1'
                 values:
                     -559038737: n/a
@@ -400,6 +441,7 @@ items:
                 name: ToningEffectUserDef1
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectUserDef1'
                 desc: 'Toning Effect User Def 1'
                 values:
                     -559038737: n/a
@@ -414,6 +456,7 @@ items:
                 name: ContrastUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef2'
                 desc: 'Contrast User Def 2'
                 values:
                     -559038737: n/a
@@ -423,6 +466,7 @@ items:
                 name: SharpnessUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef2'
                 desc: 'Sharpness User Def 2'
                 values:
                     -559038737: n/a
@@ -432,6 +476,7 @@ items:
                 name: SaturationUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef2'
                 desc: 'Saturation User Def 2'
                 values:
                     -559038737: n/a
@@ -441,6 +486,7 @@ items:
                 name: ColorToneUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef2'
                 desc: 'Color Tone User Def 2'
                 values:
                     -559038737: n/a
@@ -450,6 +496,7 @@ items:
                 name: FilterEffectUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectUserDef2'
                 desc: 'Filter Effect User Def 2'
                 values:
                     -559038737: n/a
@@ -464,6 +511,7 @@ items:
                 name: ToningEffectUserDef2
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectUserDef2'
                 desc: 'Toning Effect User Def 2'
                 values:
                     -559038737: n/a
@@ -478,6 +526,7 @@ items:
                 name: ContrastUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ContrastUserDef3'
                 desc: 'Contrast User Def 3'
                 values:
                     -559038737: n/a
@@ -487,6 +536,7 @@ items:
                 name: SharpnessUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SharpnessUserDef3'
                 desc: 'Sharpness User Def 3'
                 values:
                     -559038737: n/a
@@ -496,6 +546,7 @@ items:
                 name: SaturationUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:SaturationUserDef3'
                 desc: 'Saturation User Def 3'
                 values:
                     -559038737: n/a
@@ -505,6 +556,7 @@ items:
                 name: ColorToneUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ColorToneUserDef3'
                 desc: 'Color Tone User Def 3'
                 values:
                     -559038737: n/a
@@ -514,6 +566,7 @@ items:
                 name: FilterEffectUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:FilterEffectUserDef3'
                 desc: 'Filter Effect User Def 3'
                 values:
                     -559038737: n/a
@@ -528,6 +581,7 @@ items:
                 name: ToningEffectUserDef3
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ToningEffectUserDef3'
                 desc: 'Toning Effect User Def 3'
                 values:
                     -559038737: n/a
@@ -542,6 +596,7 @@ items:
                 name: UserDef1PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef1PictureStyle'
                 desc: 'User Def 1 Picture Style'
                 values:
                     65: 'PC 1'
@@ -560,6 +615,7 @@ items:
                 name: UserDef2PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef2PictureStyle'
                 desc: 'User Def 2 Picture Style'
                 values:
                     65: 'PC 1'
@@ -578,6 +634,7 @@ items:
                 name: UserDef3PictureStyle
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:UserDef3PictureStyle'
                 desc: 'User Def 3 Picture Style'
                 values:
                     65: 'PC 1'

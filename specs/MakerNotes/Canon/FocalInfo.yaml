@@ -16,4 +16,5 @@ items:
                 name: FocalLength
                 type: rational32u
                 writable: false
+                DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'

@@ -21,6 +21,7 @@ items:
                 name: PanoramaFrameNumber
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:PanoramaFrameNumber'
                 desc: 'Panorama Frame Number'
     5:
         exiftool:
@@ -28,6 +29,7 @@ items:
                 name: PanoramaDirection
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:PanoramaDirection'
                 desc: 'Panorama Direction'
                 values:
                     - 'Left to Right'

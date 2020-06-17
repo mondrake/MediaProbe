@@ -20,6 +20,7 @@ items:
                 name: TimeZone
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:TimeZone'
                 desc: 'Time Zone'
     -
         exiftool:
@@ -27,6 +28,7 @@ items:
                 name: TimeZoneCity
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:TimeZoneCity'
                 desc: 'Time Zone City'
                 values:
                     0: n/a
@@ -70,6 +72,7 @@ items:
                 name: DaylightSavings
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:DaylightSavings'
                 desc: 'Daylight Savings'
                 values:
                     0: 'Off'

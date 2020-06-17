@@ -16,4 +16,5 @@ items:
                 name: ModifiedParamFlag
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedParamFlag'
                 desc: 'Modified Param Flag'

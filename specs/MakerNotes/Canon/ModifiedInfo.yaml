@@ -16,6 +16,7 @@ items:
                 name: ModifiedToneCurve
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedToneCurve'
                 desc: 'Modified Tone Curve'
                 values:
                     - Standard
@@ -27,6 +28,7 @@ items:
                 name: ModifiedSharpness
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedSharpness'
                 desc: 'Modified Sharpness'
     3:
         exiftool:
@@ -34,6 +36,7 @@ items:
                 name: ModifiedSharpnessFreq
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedSharpnessFreq'
                 desc: 'Modified Sharpness Freq'
                 values:
                     - n/a
@@ -48,6 +51,7 @@ items:
                 name: ModifiedSensorRedLevel
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedSensorRedLevel'
                 desc: 'Modified Sensor Red Level'
     5:
         exiftool:
@@ -55,6 +59,7 @@ items:
                 name: ModifiedSensorBlueLevel
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedSensorBlueLevel'
                 desc: 'Modified Sensor Blue Level'
     6:
         exiftool:
@@ -62,6 +67,7 @@ items:
                 name: ModifiedWhiteBalanceRed
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedWhiteBalanceRed'
                 desc: 'Modified White Balance Red'
     7:
         exiftool:
@@ -69,6 +75,7 @@ items:
                 name: ModifiedWhiteBalanceBlue
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedWhiteBalanceBlue'
                 desc: 'Modified White Balance Blue'
     8:
         exiftool:
@@ -76,6 +83,7 @@ items:
                 name: ModifiedWhiteBalance
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedWhiteBalance'
                 desc: 'Modified White Balance'
                 values:
                     0: Auto
@@ -106,6 +114,7 @@ items:
                 name: ModifiedColorTemp
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedColorTemp'
                 desc: 'Modified Color Temp'
     10:
         exiftool:
@@ -113,6 +122,7 @@ items:
                 name: ModifiedPictureStyle
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedPictureStyle'
                 desc: 'Modified Picture Style'
                 values:
                     0: None
@@ -145,4 +155,5 @@ items:
                 name: ModifiedDigitalGain
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ModifiedDigitalGain'
                 desc: 'Modified Digital Gain'

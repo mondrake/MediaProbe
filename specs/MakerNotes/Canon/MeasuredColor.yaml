@@ -22,4 +22,5 @@ items:
                 type: int16u
                 count: 4
                 writable: true
+                DOMNode: 'Canon:MeasuredRGGB'
                 desc: 'Measured RGGB'

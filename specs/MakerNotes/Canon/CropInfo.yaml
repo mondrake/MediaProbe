@@ -16,6 +16,7 @@ items:
                 name: CropLeftMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:CropLeftMargin'
                 desc: 'Crop Left Margin'
     -
         exiftool:
@@ -23,6 +24,7 @@ items:
                 name: CropRightMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:CropRightMargin'
                 desc: 'Crop Right Margin'
     -
         exiftool:
@@ -30,6 +32,7 @@ items:
                 name: CropTopMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:CropTopMargin'
                 desc: 'Crop Top Margin'
     -
         exiftool:
@@ -37,4 +40,5 @@ items:
                 name: CropBottomMargin
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:CropBottomMargin'
                 desc: 'Crop Bottom Margin'

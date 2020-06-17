@@ -21,6 +21,7 @@ items:
                 name: AutoISO
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AutoISO'
                 desc: 'Auto ISO'
     2:
         exiftool:
@@ -28,6 +29,7 @@ items:
                 name: BaseISO
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:BaseISO'
                 desc: 'Base ISO'
     3:
         exiftool:
@@ -35,6 +37,7 @@ items:
                 name: MeasuredEV
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MeasuredEV'
                 desc: 'Measured EV'
     4:
         exiftool:
@@ -42,6 +45,7 @@ items:
                 name: TargetAperture
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:TargetAperture'
                 desc: 'Target Aperture'
     5:
         exiftool:
@@ -49,6 +53,7 @@ items:
                 name: TargetExposureTime
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:TargetExposureTime'
                 desc: 'Target Exposure Time'
     6:
         exiftool:
@@ -56,6 +61,7 @@ items:
                 name: ExposureCompensation
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ExposureCompensation'
                 desc: 'Exposure Compensation'
     7:
         exiftool:
@@ -63,6 +69,7 @@ items:
                 name: WhiteBalance
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:WhiteBalance'
                 desc: 'White Balance'
                 values:
                     0: Auto
@@ -93,6 +100,7 @@ items:
                 name: SlowShutter
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SlowShutter'
                 desc: 'Slow Shutter'
                 values:
                     -1: n/a
@@ -106,6 +114,7 @@ items:
                 name: SequenceNumber
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SequenceNumber'
                 desc: 'Shot Number In Continuous Burst'
     10:
         exiftool:
@@ -114,6 +123,7 @@ items:
                 type: int16s
                 writable: true
                 g2: Camera
+                DOMNode: 'Canon:OpticalZoomCode'
                 desc: 'Optical Zoom Code'
     12:
         exiftool:
@@ -122,6 +132,7 @@ items:
                 type: int16s
                 writable: true
                 g2: Camera
+                DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     13:
         exiftool:
@@ -129,6 +140,7 @@ items:
                 name: FlashGuideNumber
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FlashGuideNumber'
                 desc: 'Flash Guide Number'
     14:
         exiftool:
@@ -137,6 +149,7 @@ items:
                 type: int16s
                 writable: true
                 g2: Camera
+                DOMNode: 'Canon:AFPointsInFocus'
                 desc: 'AF Points In Focus'
                 values:
                     12288: 'None (MF)'
@@ -153,6 +166,7 @@ items:
                 name: FlashExposureComp
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FlashExposureComp'
                 desc: 'Flash Exposure Compensation'
     16:
         exiftool:
@@ -160,6 +174,7 @@ items:
                 name: AutoExposureBracketing
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AutoExposureBracketing'
                 desc: 'Auto Exposure Bracketing'
                 values:
                     -1: 'On'
@@ -173,6 +188,7 @@ items:
                 name: AEBBracketValue
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AEBBracketValue'
                 desc: 'AEB Bracket Value'
     18:
         exiftool:
@@ -180,6 +196,7 @@ items:
                 name: ControlMode
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ControlMode'
                 desc: 'Control Mode'
                 values:
                     0: n/a
@@ -191,6 +208,7 @@ items:
                 name: FocusDistanceUpper
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     20:
         exiftool:
@@ -198,6 +216,7 @@ items:
                 name: FocusDistanceLower
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:FocusDistanceLower'
                 desc: 'Focus Distance Lower'
     21:
         exiftool:
@@ -205,6 +224,7 @@ items:
                 name: FNumber
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     22:
         exiftool:
@@ -212,11 +232,13 @@ items:
                 name: ExposureTime
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
             -
                 name: ExposureTime
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     23:
         exiftool:
@@ -224,6 +246,7 @@ items:
                 name: MeasuredEV2
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:MeasuredEV2'
                 desc: 'Measured EV 2'
     24:
         exiftool:
@@ -231,6 +254,7 @@ items:
                 name: BulbDuration
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:BulbDuration'
                 desc: 'Bulb Duration'
     26:
         exiftool:
@@ -239,6 +263,7 @@ items:
                 type: int16s
                 writable: true
                 g2: Camera
+                DOMNode: 'Canon:CameraType'
                 desc: 'Camera Type'
                 values:
                     0: n/a
@@ -252,6 +277,7 @@ items:
                 name: AutoRotate
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:AutoRotate'
                 desc: 'Auto Rotate'
                 values:
                     -1: n/a
@@ -265,6 +291,7 @@ items:
                 name: NDFilter
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:NDFilter'
                 desc: 'ND Filter'
                 values:
                     -1: n/a
@@ -276,6 +303,7 @@ items:
                 name: SelfTimer2
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:SelfTimer2'
                 desc: 'Self Timer 2'
     33:
         exiftool:
@@ -283,4 +311,5 @@ items:
                 name: FlashOutput
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:FlashOutput'
                 desc: 'Flash Output'

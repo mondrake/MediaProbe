@@ -17,6 +17,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration01'
                 desc: 'Camera Color Calibration 01'
     4:
         exiftool:
@@ -25,6 +26,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration02'
                 desc: 'Camera Color Calibration 02'
     8:
         exiftool:
@@ -33,6 +35,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration03'
                 desc: 'Camera Color Calibration 03'
     12:
         exiftool:
@@ -41,6 +44,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration04'
                 desc: 'Camera Color Calibration 04'
     16:
         exiftool:
@@ -49,6 +53,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration05'
                 desc: 'Camera Color Calibration 05'
     20:
         exiftool:
@@ -57,6 +62,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration06'
                 desc: 'Camera Color Calibration 06'
     24:
         exiftool:
@@ -65,6 +71,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration07'
                 desc: 'Camera Color Calibration 07'
     28:
         exiftool:
@@ -73,6 +80,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration08'
                 desc: 'Camera Color Calibration 08'
     32:
         exiftool:
@@ -81,6 +89,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration09'
                 desc: 'Camera Color Calibration 09'
     36:
         exiftool:
@@ -89,6 +98,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration10'
                 desc: 'Camera Color Calibration 10'
     40:
         exiftool:
@@ -97,6 +107,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration11'
                 desc: 'Camera Color Calibration 11'
     44:
         exiftool:
@@ -105,6 +116,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration12'
                 desc: 'Camera Color Calibration 12'
     48:
         exiftool:
@@ -113,6 +125,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration13'
                 desc: 'Camera Color Calibration 13'
     52:
         exiftool:
@@ -121,6 +134,7 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration14'
                 desc: 'Camera Color Calibration 14'
     56:
         exiftool:
@@ -129,4 +143,5 @@ items:
                 type: int16s
                 count: 4
                 writable: true
+                DOMNode: 'Canon:CameraColorCalibration15'
                 desc: 'Camera Color Calibration 15'

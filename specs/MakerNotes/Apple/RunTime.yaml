@@ -16,6 +16,7 @@ items:
                 name: RunTimeEpoch
                 type: '?'
                 writable: false
+                DOMNode: 'Apple:RunTimeEpoch'
                 desc: 'Run Time Epoch'
     flags:
         format: Ascii
@@ -24,6 +25,7 @@ items:
                 name: RunTimeFlags
                 type: '?'
                 writable: false
+                DOMNode: 'Apple:RunTimeFlags'
                 desc: 'Run Time Flags'
                 values:
                     1: Valid
@@ -38,6 +40,7 @@ items:
                 name: RunTimeScale
                 type: '?'
                 writable: false
+                DOMNode: 'Apple:RunTimeScale'
                 desc: 'Run Time Scale'
     value:
         format: Ascii
@@ -46,4 +49,5 @@ items:
                 name: RunTimeValue
                 type: '?'
                 writable: false
+                DOMNode: 'Apple:RunTimeValue'
                 desc: 'Run Time Value'

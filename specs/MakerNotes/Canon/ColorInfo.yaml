@@ -16,6 +16,7 @@ items:
                 name: Saturation
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:Saturation'
                 desc: Saturation
                 values:
                     - Normal
@@ -25,6 +26,7 @@ items:
                 name: ColorTone
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorTone'
                 desc: 'Color Tone'
                 values:
                     - Normal
@@ -34,6 +36,7 @@ items:
                 name: ColorSpace
                 type: int16s
                 writable: true
+                DOMNode: 'Canon:ColorSpace'
                 desc: 'Color Space'
                 values:
                     1: sRGB

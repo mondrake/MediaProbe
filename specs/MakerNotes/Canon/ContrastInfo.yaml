@@ -16,6 +16,7 @@ items:
                 name: IntelligentContrast
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:IntelligentContrast'
                 desc: 'Intelligent Contrast'
                 values:
                     0: 'Off'

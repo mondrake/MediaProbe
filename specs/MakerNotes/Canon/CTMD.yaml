@@ -17,4 +17,5 @@ items:
                 type: '?'
                 writable: false
                 g2: Time
+                DOMNode: 'Canon:TimeStamp'
                 desc: 'Time Stamp'

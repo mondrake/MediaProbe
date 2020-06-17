@@ -16,6 +16,7 @@ items:
                 name: MultiExposure
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:MultiExposure'
                 desc: 'Multi Exposure'
                 values:
                     - 'Off'
@@ -27,6 +28,7 @@ items:
                 name: MultiExposureControl
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:MultiExposureControl'
                 desc: 'Multi Exposure Control'
                 values:
                     - Additive
@@ -39,4 +41,5 @@ items:
                 name: MultiExposureShots
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:MultiExposureShots'
                 desc: 'Multi Exposure Shots'

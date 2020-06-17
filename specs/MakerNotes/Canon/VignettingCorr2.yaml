@@ -20,6 +20,7 @@ items:
                 name: PeripheralLightingSetting
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:PeripheralLightingSetting'
                 desc: 'Peripheral Lighting Setting'
                 values:
                     - 'Off'
@@ -30,6 +31,7 @@ items:
                 name: ChromaticAberrationSetting
                 type: int32s
                 writable: true
+                DOMNode: 'Canon:ChromaticAberrationSetting'
                 desc: 'Chromatic Aberration Setting'
                 values:
                     - 'Off'

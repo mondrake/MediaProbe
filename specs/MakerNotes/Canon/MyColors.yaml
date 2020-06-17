@@ -16,6 +16,7 @@ items:
                 name: MyColorMode
                 type: int16u
                 writable: true
+                DOMNode: 'Canon:MyColorMode'
                 desc: 'My Color Mode'
                 values:
                     0: 'Off'

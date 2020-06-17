@@ -16,4 +16,5 @@ items:
                 name: Unknown_CNDB
                 type: '?'
                 writable: false
+                DOMNode: 'Canon:Unknown_CNDB'
                 desc: 'Unknown CNDB'
