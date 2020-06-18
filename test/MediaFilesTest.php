@@ -174,6 +174,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     foreach ($xml_nodes as $node) {
                         if ($node->nodeName === $exiftool_node) {
                             $n = $node;
+                            break;
                         }
                     }
                     $this->assertNotNull($n, 'Exiftool raw missing: ' . $exiftool_node);

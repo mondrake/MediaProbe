@@ -23,20 +23,33 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Handler\TestHandler;
 use Monolog\Processor\PsrLogMessageProcessor;
 
-function dump_element(ElementInterface $element)
+function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_dump)
 {
     if ($element instanceof EntryInterface) {
-        $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('id') ?: $element->getParentElement()->getAttribute('id');
+        $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
         //$tag_title = $element->getParentElement()->getAttribute('name') ?: '*na*';
-        $tag_title = $element->getParentElement()->getAttribute('id') ?? '*na*';
+        $tag_title = $element->getParentElement()->getAttribute('name') ?? '*na*';
         print $ifd_name . '/' . $tag_title . "\n";
         print $element->toString() . "\n";
-        print $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode') . "\n";
+        $exiftool_DOM_Node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode');
+        print $exiftool_DOM_Node . "\n";
+        $xml_nodes =$exiftool_raw_dump->getElementsByTagName('*');
+        $n = null;
+//dump($xml_nodes);
+        foreach ($xml_nodes as $node) {
+            if ($node->nodeName === $exiftool_DOM_Node) {
+                print $node->textContent . "\n";
+                break;
+            }
+        }
+        if ($n === null) {
+            print "Exiftool ***MISSING***\n";
+        }
         print "------------------------------------------------\n";
     }
 
     foreach ($element->getMultipleElements('*') as $sub_element) {
-        dump_element($sub_element);
+        dump_element($sub_element, $exiftool_dump, $exiftool_raw_dump);
     }
 }
 
@@ -101,12 +114,23 @@ try {
     if ($write_back) {
         $media->saveToFile($file . '-rewrite.img');
     }
+
+    /* Exiftool dump */
+    $test_dump = @Yaml::parse($file . '.test-dump.yml');
+    if (isset($test_dump['exiftool'])) {
+        $exiftool_dump = new \DOMDocument();
+        $exiftool_dump->loadXML($this->testDump['exiftool']);
+    }
+    if (isset($test_dump['exiftool_raw'])) {
+        $exiftool_raw_dump = new \DOMDocument();
+        $exiftool_raw_dump->loadXML($this->testDump['exiftool_raw']);
+    }
 } catch (InvalidFileException $e) {
     $err = $e->getMessage();
 }
 
 if (!isset($err)) {
-    dump_element($media);
+    dump_element($media, $exiftool_dump, $exiftool_raw_dump);
 } else {
     print("dump-media: Error while reading media file: " . $err . "\n");
 }
