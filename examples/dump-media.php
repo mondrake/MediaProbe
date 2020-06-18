@@ -119,7 +119,8 @@ try {
     }
 
     /* Exiftool dump */
-    $test_dump = @Yaml::parse($file . '.test-dump.yml');
+    $test_dump = Yaml::parse(file_get_contents($file . '.test-dump.yml'));
+//    dump($exiftool_raw_dump);
     $exiftool_dump = null;
     if (isset($test_dump['exiftool'])) {
         $exiftool_dump = new \DOMDocument();
@@ -129,7 +130,6 @@ try {
     if (isset($test_dump['exiftool_raw'])) {
         $exiftool_raw_dump = new \DOMDocument();
         $exiftool_raw_dump->loadXML($this->testDump['exiftool_raw']);
-dump($exiftool_raw_dump);
     }
 } catch (InvalidFileException $e) {
     $err = $e->getMessage();
