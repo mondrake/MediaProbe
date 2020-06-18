@@ -44,8 +44,10 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                         break;
                     }
                 }
-                print "raw: " . $n ?? "*** MISSING ***";
-                print "\n";
+                if (!$n) {
+                    $exiftool_raw_a[] = $exiftool_DOM_Node;
+                }
+                print "raw: " . ($n ?? "*** MISSING ***") . "\n";
             }
             if ($exiftool_dump) {
                 $xml_nodes = $exiftool_dump->getElementsByTagName('*');
@@ -56,8 +58,10 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                         break;
                     }
                 }
-                print "txt: " . $n ?? "*** MISSING ***";
-                print "\n";
+                if (!$n) {
+                    $exiftool_a[] = $exiftool_DOM_Node;
+                }
+                print "txt: " . ($n ?? "*** MISSING ***") . "\n";
             }
         }
         print "------------------------------------------------\n";
@@ -78,6 +82,9 @@ $file = '';
 $logger = null;
 $fail_on_error = false;
 $write_back = false;
+
+global $exiftool_raw_a = [];
+global $exiftool_a = [];
 
 while (! empty($argv)) {
     switch ($argv[0]) {
