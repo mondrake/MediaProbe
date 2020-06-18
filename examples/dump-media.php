@@ -33,19 +33,32 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
         print $ifd_name . '/' . $tag_title . "\n";
         print $element->toString() . "\n";
         $exiftool_DOM_Node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode');
-        print $exiftool_DOM_Node . "\n";
-        if ($exiftool_raw_dump) {
-            $xml_nodes = $exiftool_raw_dump->getElementsByTagName('*');
-            $n = null;
-    //dump($xml_nodes);
-            foreach ($xml_nodes as $node) {
-                if ($node->nodeName === $exiftool_DOM_Node) {
-                    $n = $node->textContent;
-                    break;
+        if ($exiftool_DOM_Node) {
+            print "Exiftool: " . $exiftool_DOM_Node . "\n";
+            if ($exiftool_raw_dump) {
+                $xml_nodes = $exiftool_raw_dump->getElementsByTagName('*');
+                $n = null;
+                foreach ($xml_nodes as $node) {
+                    if ($node->nodeName === $exiftool_DOM_Node) {
+                        $n = $node->textContent;
+                        break;
+                    }
                 }
+                print "raw: " . $n ?? "*** MISSING ***";
+                print "\n";
             }
-            print $n ?? "Exiftool *** MISSING ***";
-            print "\n";
+            if ($exiftool_dump) {
+                $xml_nodes = $exiftool_dump->getElementsByTagName('*');
+                $n = null;
+                foreach ($xml_nodes as $node) {
+                    if ($node->nodeName === $exiftool_DOM_Node) {
+                        $n = $node->textContent;
+                        break;
+                    }
+                }
+                print "txt: " . $n ?? "*** MISSING ***";
+                print "\n";
+            }
         }
         print "------------------------------------------------\n";
     }
