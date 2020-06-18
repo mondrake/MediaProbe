@@ -26,6 +26,9 @@ use Symfony\Component\Yaml\Yaml;
 
 function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_dump)
 {
+    global $exiftool_raw_a;
+    global $exiftool_a;
+
     if ($element instanceof EntryInterface) {
         $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
         //$tag_title = $element->getParentElement()->getAttribute('name') ?: '*na*';
@@ -83,8 +86,10 @@ $logger = null;
 $fail_on_error = false;
 $write_back = false;
 
-global $exiftool_raw_a = [];
-global $exiftool_a = [];
+global $exiftool_raw_a;
+global $exiftool_a;
+$exiftool_raw_a = [];
+$exiftool_a = [];
 
 while (! empty($argv)) {
     switch ($argv[0]) {
@@ -156,6 +161,8 @@ try {
 
 if (!isset($err)) {
     dump_element($media, $exiftool_dump, $exiftool_raw_dump);
+    dump($exiftool_raw_a);
+    dump($exiftool_a);
 } else {
     print("dump-media: Error while reading media file: " . $err . "\n");
 }
