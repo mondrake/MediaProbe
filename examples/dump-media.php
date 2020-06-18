@@ -129,6 +129,7 @@ try {
     if (isset($test_dump['exiftool_raw'])) {
         $exiftool_raw_dump = new \DOMDocument();
         $exiftool_raw_dump->loadXML($this->testDump['exiftool_raw']);
+dump($exiftool_raw_dump);
     }
 } catch (InvalidFileException $e) {
     $err = $e->getMessage();
