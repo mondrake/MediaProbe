@@ -34,17 +34,19 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
         print $element->toString() . "\n";
         $exiftool_DOM_Node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode');
         print $exiftool_DOM_Node . "\n";
-        $xml_nodes =$exiftool_raw_dump->getElementsByTagName('*');
-        $n = null;
-//dump($xml_nodes);
-        foreach ($xml_nodes as $node) {
-            if ($node->nodeName === $exiftool_DOM_Node) {
-                print $node->textContent . "\n";
-                break;
+        if ($exiftool_raw_dump) {
+            $xml_nodes = $exiftool_raw_dump->getElementsByTagName('*');
+            $n = null;
+    //dump($xml_nodes);
+            foreach ($xml_nodes as $node) {
+                if ($node->nodeName === $exiftool_DOM_Node) {
+                    print $node->textContent . "\n";
+                    break;
+                }
             }
-        }
-        if ($n === null) {
-            print "Exiftool ***MISSING***\n";
+            if ($n === null) {
+                print "Exiftool ***MISSING***\n";
+            }
         }
         print "------------------------------------------------\n";
     }
