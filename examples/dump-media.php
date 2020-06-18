@@ -31,7 +31,7 @@ function dump_element(ElementInterface $element)
         $tag_title = $element->getParentElement()->getAttribute('id') ?? '*na*';
         print $ifd_name . '/' . $tag_title . "\n";
         print $element->toString() . "\n";
-        print $element->getParentElement()->getPropertyValue('exiftoolDOMNode') . "\n";
+        print $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode') . "\n";
         print "------------------------------------------------\n";
     }
 
