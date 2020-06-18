@@ -118,10 +118,12 @@ try {
 
     /* Exiftool dump */
     $test_dump = @Yaml::parse($file . '.test-dump.yml');
+    $exiftool_dump = null;
     if (isset($test_dump['exiftool'])) {
         $exiftool_dump = new \DOMDocument();
         $exiftool_dump->loadXML($this->testDump['exiftool']);
     }
+    $exiftool_raw_dump = null;
     if (isset($test_dump['exiftool_raw'])) {
         $exiftool_raw_dump = new \DOMDocument();
         $exiftool_raw_dump->loadXML($this->testDump['exiftool_raw']);
