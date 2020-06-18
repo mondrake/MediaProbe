@@ -40,13 +40,12 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
     //dump($xml_nodes);
             foreach ($xml_nodes as $node) {
                 if ($node->nodeName === $exiftool_DOM_Node) {
-                    print $node->textContent . "\n";
+                    $n = $node->textContent;
                     break;
                 }
             }
-            if ($n === null) {
-                print "Exiftool ***MISSING***\n";
-            }
+            print $n ?? "Exiftool *** MISSING ***";
+            print "\n";
         }
         print "------------------------------------------------\n";
     }
