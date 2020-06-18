@@ -26,10 +26,13 @@ use Monolog\Processor\PsrLogMessageProcessor;
 function dump_element(ElementInterface $element)
 {
     if ($element instanceof EntryInterface) {
-        $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
+        $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('id') ?: $element->getParentElement()->getAttribute('id');
         //$tag_title = $element->getParentElement()->getAttribute('name') ?: '*na*';
-        $tag_title = $element->getParentElement()->getCollection()->getPropertyValue('title') ?? '*na*';
-        print substr(str_pad($ifd_name . '/' . $tag_title, 50, ' '), 0, 50) . ' = ' . $element->toString(['format' => 'exiftool']) . "\n";
+        $tag_title = $element->getParentElement()->getAttribute('id') ?? '*na*';
+        print $ifd_name . '/' . $tag_title . "\n";
+        print $element->toString() . "\n";
+        print $element->getParentElement()->getPropertValue('exiftoolDOMNode') . "\n";
+        print "------------------------------------------------\n";
     }
 
     foreach ($element->getMultipleElements('*') as $sub_element) {
