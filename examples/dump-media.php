@@ -43,28 +43,28 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                 $n = null;
                 foreach ($xml_nodes as $node) {
                     if ($node->nodeName === $exiftool_DOM_Node) {
-                        $n = $node->textContent;
+                        $n = $node;
                         break;
                     }
                 }
                 if (!$n) {
                     $exiftool_raw_a[] = $exiftool_DOM_Node;
                 }
-                print "raw: " . ($n ?? "*** MISSING ***") . "\n";
+                print "raw: " . ($n->textContent ?? "*** MISSING ***") . "\n";
             }
             if ($exiftool_dump) {
                 $xml_nodes = $exiftool_dump->getElementsByTagName('*');
                 $n = null;
                 foreach ($xml_nodes as $node) {
                     if ($node->nodeName === $exiftool_DOM_Node) {
-                        $n = $node->textContent;
+                        $n = $node;
                         break;
                     }
                 }
                 if (!$n) {
                     $exiftool_a[] = $exiftool_DOM_Node;
                 }
-                print "txt: " . ($n ?? "*** MISSING ***") . "\n";
+                print "txt: " . ($n->textContent ?? "*** MISSING ***") . "\n";
             }
         }
         print "------------------------------------------------\n";
