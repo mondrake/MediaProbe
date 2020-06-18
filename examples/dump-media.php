@@ -22,6 +22,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\TestHandler;
 use Monolog\Processor\PsrLogMessageProcessor;
+use Symfony\Component\Yaml\Yaml;
 
 function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_dump)
 {
