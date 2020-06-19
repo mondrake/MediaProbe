@@ -26,8 +26,9 @@ use Symfony\Component\Yaml\Yaml;
 
 function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_dump)
 {
-    global $exiftool_raw_a;
-    global $exiftool_a;
+    global $exiftool_raw_miss_a;
+    global $exiftool_raw_force_a;
+    global $exiftool_miss_a;
 
     if ($element instanceof EntryInterface) {
         $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
@@ -48,9 +49,14 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                     }
                 }
                 if (!$n) {
-                    $exiftool_raw_a[] = $exiftool_DOM_Node;
+                    $exiftool_raw_miss_a[] = $exiftool_DOM_Node;
                 }
                 print "raw: " . ($n->textContent ?? "*** MISSING ***") . "\n";
+                $valx = rtrim($n->textContent, " ");
+                $vala = $element->getValue(['format' => 'exiftool']);
+                if ($valx != $vala) {
+                    $exiftool_raw_force_a[$exiftool_DOM_Node] = $vala;
+                }
             }
             if ($exiftool_dump) {
                 $xml_nodes = $exiftool_dump->getElementsByTagName('*');
@@ -62,7 +68,7 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                     }
                 }
                 if (!$n) {
-                    $exiftool_a[] = $exiftool_DOM_Node;
+                    $exiftool_miss_a[] = $exiftool_DOM_Node;
                 }
                 print "txt: " . ($n->textContent ?? "*** MISSING ***") . "\n";
             }
@@ -86,10 +92,12 @@ $logger = null;
 $fail_on_error = false;
 $write_back = false;
 
-global $exiftool_raw_a;
-global $exiftool_a;
-$exiftool_raw_a = [];
-$exiftool_a = [];
+global $exiftool_raw_miss_a;
+global $exiftool_raw_force_a;
+global $exiftool_miss_a;
+$exiftool_raw_miss_a = [];
+$exiftool_raw_force_a = [];
+$exiftool_miss_a = [];
 
 while (! empty($argv)) {
     switch ($argv[0]) {
@@ -161,8 +169,19 @@ try {
 
 if (!isset($err)) {
     dump_element($media, $exiftool_dump, $exiftool_raw_dump);
-    dump($exiftool_raw_a);
-    dump($exiftool_a);
+    print "--- raw miss:\n    ";
+    print implode("\n    ", $exiftool_raw_miss_a);
+    print implode("\n");
+    print "--- raw force:\n    ";
+    $t = [];
+    foreach ($exiftool_raw_force_a as $k => $v) {
+        $t[] = $k . ': ' . $v;
+    }
+    print implode("\n    ", $t);
+    print implode("\n");
+    print "--- miss:\    n";
+    print implode("\n    ", $exiftool_miss_a);
+    print implode("\n");
 } else {
     print("dump-media: Error while reading media file: " . $err . "\n");
 }
