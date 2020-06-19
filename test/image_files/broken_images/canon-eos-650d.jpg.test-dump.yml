@@ -1,3 +1,163 @@
+skip:
+    phpExif:
+        - UserComment
+        - SubSecTime
+        - SubSecTimeOriginal
+        - SubSecTimeDigitized
+        - FlashPixVersion
+        - ColorSpace
+        - ExifImageWidth
+        - ExifImageLength
+        - InterOperabilityIndex
+        - InterOperabilityVersion
+        - FocalPlaneXResolution
+        - FocalPlaneYResolution
+        - FocalPlaneResolutionUnit
+        - CustomRendered
+        - ExposureMode
+        - WhiteBalance
+        - SceneCaptureType
+        - GPSVersion
+        - 'THUMBNAIL::Compression'
+        - 'THUMBNAIL::XResolution'
+        - 'THUMBNAIL::YResolution'
+        - 'THUMBNAIL::ResolutionUnit'
+allowedGaps:
+    exiftool:
+        skip: { }
+        miss:
+#        - 'Canon:Sharpness'
+#        - 'Canon:CameraISO___may work with text'
+#        - 'Canon:CameraISO'
+#        - 'Canon:AFPoint'
+#        - 'CanonCustom:ExposureLevelIncrements'
+#        - 'CanonCustom:ISOSpeedRange'
+#        - 'CanonCustom:HighlightTonePriority'
+#        - 'CanonCustom:AFAssistBeam'
+#        - 'CanonCustom:MirrorLockup'
+#        - 'CanonCustom:Shutter-AELock'
+#        - 'CanonCustom:SetButtonWhenShooting'
+#        - 'CanonCustom:LCDDisplayAtPowerOn'
+#
+            - "Canon:AFPoint"
+            - "Canon:FocusContinuous"
+            - "Canon:AESetting"
+            - "Canon:ImageStabilization"
+            - "Canon:DisplayAperture"
+            - "Canon:SpotMeteringMode"
+            - "Canon:PhotoEffect"
+            - "Canon:FocalType"
+            - "Canon:FocalPlaneXSize"
+            - "Canon:FocalPlaneYSize"
+            - "Canon:CanonFlashInfo"
+            - "Canon:AutoRotate"
+            - "Canon:SelfTimer2"
+            - "Canon:FlashOutput"
+            - "Canon:AFInfoSize"
+            - "Canon:PrimaryAFPoint"
+            - "Canon:TimeZone"
+            - "Canon:TimeZoneCity"
+            - "Canon:DaylightSavings"
+            - "Canon:FileNumber"
+            - "Canon:RawJpgQuality"
+            - "Canon:LongExposureNoiseReduction2"
+            - "Canon:FilterEffect"
+            - "Canon:ToningEffect"
+            - "Canon:MacroMagnification"
+            - "CanonCustom:ExposureLevelIncrements"
+            - "CanonCustom:ISOSpeedRange"
+            - "CanonCustom:HighlightTonePriority"
+            - "CanonCustom:AFAssistBeam"
+            - "CanonCustom:MirrorLockup"
+            - "CanonCustom:Shutter-AELock"
+            - "CanonCustom:SetButtonWhenShooting"
+            - "CanonCustom:LCDDisplayAtPowerOn"
+            - "Canon:WB_RGGBLevelsUnknown"
+            - "Canon:ColorTempUnknown"
+            - "Canon:WB_RGGBLevelsUnknown2"
+            - "Canon:ColorTempUnknown2"
+            - "Canon:WB_RGGBLevelsUnknown3"
+            - "Canon:ColorTempUnknown3"
+            - "Canon:WB_RGGBLevelsUnknown4"
+            - "Canon:ColorTempUnknown4"
+            - "Canon:WB_RGGBLevelsUnknown5"
+            - "Canon:ColorTempUnknown5"
+            - "Canon:WB_RGGBLevelsUnknown6"
+            - "Canon:ColorTempUnknown6"
+            - "Canon:WB_RGGBLevelsUnknown7"
+            - "Canon:ColorTempUnknown7"
+            - "Canon:WB_RGGBLevelsUnknown8"
+            - "Canon:ColorTempUnknown8"
+            - "Canon:WB_RGGBLevelsUnknown9"
+            - "Canon:ColorTempUnknown9"
+            - "Canon:WB_RGGBLevelsUnknown10"
+            - "Canon:ColorTempUnknown10"
+            - "Canon:WB_RGGBLevelsUnknown11"
+            - "Canon:ColorTempUnknown11"
+            - "Canon:WB_RGGBLevelsUnknown12"
+            - "Canon:ColorTempUnknown12"
+            - "Canon:WB_RGGBLevelsUnknown13"
+            - "Canon:ColorTempUnknown13"
+            - "Canon:WB_RGGBLevelsUnknown14"
+            - "Canon:ColorTempUnknown14"
+            - "Canon:WB_RGGBLevelsUnknown15"
+            - "Canon:ColorTempUnknown15"
+            - "Canon:WB_RGGBLevelsUnknown16"
+            - "Canon:ColorTempUnknown16"
+            - "Canon:WB_RGGBLevelsUnknown17"
+            - "Canon:ColorTempUnknown17"
+            - "Canon:WB_RGGBLevelsUnknown18"
+            - "Canon:ColorTempUnknown18"
+            - "Canon:WB_RGGBLevelsUnknown19"
+            - "Canon:ColorTempUnknown19"
+            - "Canon:WB_RGGBLevelsUnknown20"
+            - "Canon:ColorTempUnknown20"
+            - "Canon:AFMicroAdjMode"
+            - "Canon:AFMicroAdjValue"
+            - "Canon:PeripheralLightingSetting"
+            - "Canon:ChromaticAberrationSetting"
+            - "Canon:PeripheralIlluminationCorr"
+            - "Canon:AutoLightingOptimizer"
+            - "Canon:HighlightTonePriority"
+            - "Canon:LongExposureNoiseReduction"
+            - "Canon:HighISONoiseReductionm"
+            - "Canon:AmbienceSelection"
+        forceRaw:
+            'Canon:Sharpness': '32767'
+            'Canon:CameraISO': '15'
+            'Canon:MaxAperture': '168'
+            'Canon:MinAperture': '340'
+            'Canon:AutoISO': '0'
+            'Canon:BaseISO': '276'
+            'Canon:MeasuredEV': '204'
+            'Canon:TargetAperture': '172'
+            'Canon:TargetExposureTime': '308'
+            'Canon:CameraTemperature': '147'
+            'Canon:AFPointsInFocus': '0'
+            'Canon:FocusDistanceUpper': '5622'
+            'Canon:FocusDistanceLower': '4137'
+            'Canon:FNumber': '51'
+            'Canon:ExposureTime': '133'
+            'Canon:MeasuredEV2': '137'
+            'Canon:ISO': '101'
+            'Canon:FocalLength': '22530'
+            'Canon:LensType': '60162'
+            'Canon:MinFocalLength': '38400'
+            'Canon:MaxFocalLength': '22530'
+            'Canon:FirmwareVersion': '87(28'
+            'Canon:FileIndex': '0'
+            'Canon:DirectoryIndex': '1677721600'
+            'Canon:LensModel': 'TAMRON SP 150-600mm F/5-6.3 Di VC USD G2 A022����'
+            'Canon:DustRemovalData': '0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'
+            'Canon:WhiteBalance': '-1'
+            'Canon:ColorTemperature': '3900'
+            'Canon:RawMeasuredRGGB': '0 0 0 0'
+            'Canon:PerChannelBlackLevel': '0 0 0 0'
+            'Canon:NormalWhiteLevel': '0'
+            'Canon:SpecularWhiteLevel': '0'
+            'Canon:LinearityUpperMargin': '0'
+#    ExifIFD:FocalPlaneXResolution: '5798.6577181208'
+#    ExifIFD:FocalPlaneYResolution: '5788.9447236181'
 fileName: canon-eos-650d.jpg
 mimeType: image/jpeg
 fileContentHash: dfa943d103fe7afa192e8526a96fb80789981bf9248c234126210c65dfb1feb8
