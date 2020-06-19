@@ -163,7 +163,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             // Check Exiftool tag equivalence.
             if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_gaps = $this->testDump['allowedGaps']['exiftool'] ?? [];
-                if (!in_array($exiftool_node, $exiftool_node_gaps['miss']) && !in_array($exiftool_node, $exiftool_node_gaps['skip'])) {
+                if (!in_array($exiftool_node, $exiftool_node_gaps['miss'] ?? []) && !in_array($exiftool_node, $exiftool_node_gaps['skip'] ?? [])) {
                     [$g1, $tag] = explode(':', $exiftool_node);
                     if ($g1 === '*') {
                         $ifd = $element->getParentElement()->getParentElement()->getAttribute('name');

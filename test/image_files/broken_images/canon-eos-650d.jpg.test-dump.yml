@@ -24,21 +24,11 @@ skip:
         - 'THUMBNAIL::ResolutionUnit'
 allowedGaps:
     exiftool:
-        skip: { }
+        skip:
+            - 'Canon:Sharpness'
         miss:
-#        - 'Canon:Sharpness'
 #        - 'Canon:CameraISO___may work with text'
 #        - 'Canon:CameraISO'
-#        - 'Canon:AFPoint'
-#        - 'CanonCustom:ExposureLevelIncrements'
-#        - 'CanonCustom:ISOSpeedRange'
-#        - 'CanonCustom:HighlightTonePriority'
-#        - 'CanonCustom:AFAssistBeam'
-#        - 'CanonCustom:MirrorLockup'
-#        - 'CanonCustom:Shutter-AELock'
-#        - 'CanonCustom:SetButtonWhenShooting'
-#        - 'CanonCustom:LCDDisplayAtPowerOn'
-#
             - "Canon:AFPoint"
             - "Canon:FocusContinuous"
             - "Canon:AESetting"
