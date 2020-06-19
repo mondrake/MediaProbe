@@ -50,13 +50,14 @@ function dump_element(ElementInterface $element, $exiftool_dump, $exiftool_raw_d
                 }
                 if (!$n) {
                     $exiftool_raw_miss_a[] = $exiftool_DOM_Node;
+                } else {
+                    $valx = rtrim($n->textContent, " ");
+                    $vala = $element->getValue(['format' => 'exiftool']);
+                    if ($valx != $vala) {
+                        $exiftool_raw_force_a[$exiftool_DOM_Node] = $vala;
+                    }
                 }
                 print "raw: " . ($n->textContent ?? "*** MISSING ***") . "\n";
-                $valx = rtrim($n->textContent, " ");
-                $vala = $element->getValue(['format' => 'exiftool']);
-                if ($valx != $vala) {
-                    $exiftool_raw_force_a[$exiftool_DOM_Node] = $vala;
-                }
             }
             if ($exiftool_dump) {
                 $xml_nodes = $exiftool_dump->getElementsByTagName('*');
