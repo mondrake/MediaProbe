@@ -162,8 +162,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 
             // Check Exiftool tag equivalence.
             if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
-                $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
-                if (!in_array($exiftool_node, $exiftool_node_skip)) {
+                $exiftool_node_gaps = $this->testDump['allowedGaps']['exiftool'] ?? [];
+                if (!in_array($exiftool_node, $exiftool_node_gaps['miss']) && !in_array($exiftool_node, $exiftool_node_gaps['skip']))) {
                     [$g1, $tag] = explode(':', $exiftool_node);
                     if ($g1 === '*') {
                         $ifd = $element->getParentElement()->getParentElement()->getAttribute('name');
@@ -179,7 +179,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     }
                     $this->assertNotNull($n, 'Exiftool raw missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
-                    $vala = $element->getValue(['format' => 'exiftool']);
+                    $vala = $exiftool_node_gaps['force'][$exiftool_node] ?? $element->getValue(['format' => 'exiftool']);
 //if (($expected['class'] ?? null) === 'FileEye\MediaProbe\Entry\Time') {
 /*if ($element->getParentElement() && in_array($element->getParentElement()->getAttribute('name'), ['Copyright'])) {
   dump([
