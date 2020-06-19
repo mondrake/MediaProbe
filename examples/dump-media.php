@@ -171,18 +171,22 @@ try {
 if (!isset($err)) {
     dump_element($media, $exiftool_dump, $exiftool_raw_dump);
     print "--- raw miss:\n    ";
+    $t = [];
+    foreach ($exiftool_raw_force_a as $k => $v) {
+        $t[] = "'" . $v . "'";
+    }
     print implode("\n    ", $exiftool_raw_miss_a);
-    print implode("\n");
+    print "\n";
     print "--- raw force:\n    ";
     $t = [];
     foreach ($exiftool_raw_force_a as $k => $v) {
-        $t[] = $k . ': ' . $v;
+        $t[] = $k . ": '" . $v . "'";
     }
     print implode("\n    ", $t);
-    print implode("\n");
+    print "\n";
     print "--- miss:\    n";
     print implode("\n    ", $exiftool_miss_a);
-    print implode("\n");
+    print "\n";
 } else {
     print("dump-media: Error while reading media file: " . $err . "\n");
 }
