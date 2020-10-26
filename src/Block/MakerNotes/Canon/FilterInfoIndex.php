@@ -27,39 +27,35 @@ class FilterInfoIndex extends Index
 
 //        $this->validate($data_element);
 
-        // Loops through the index and loads the tags. If the 'hasIndexSize'
-        // property is true, the first entry is a special case that is handled
-        // by opening a 'rawData' node instead of a 'tag'.
-/*        $offset = 0;
-        $index_components = $this->getDefinition()->getValuesCount();
+        $offset = 0;
+        $index_components = $data_element->getLong($offset + 4);
+        $this->debug("Components: $index_components");
+        $offset += 8;
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data_element, $offset);
-
-            // Check if this tag should be skipped.
-            if ($item_definition->getCollection()->getPropertyValue('skip')) {
-                $this->debug("Skipped");
-                continue;
-            };
-
-            if (in_array($item_definition->getCollection()->getPropertyValue('name'), ['AFAreaWidths', 'AFAreaHeights', 'AFAreaXPositions', 'AFAreaYPositions'])) {
-                $value_components = $this->getElement("tag[@name='NumAFPoints']")->getElement("entry")->getValue();
-                $index_components -= ($value_components - 1);
-            } elseif (in_array($item_definition->getCollection()->getPropertyValue('name'), ['AFPointsInFocus', 'AFPointsSelected'])) {
-                $value_components = (int) (($this->getElement("tag[@name='NumAFPoints']")->getElement("entry")->getValue() + 15) / 16);
-                $index_components -= ($value_components - 1);
-            } else {
-                $value_components = 1;
+            $filter_number = $data_element->getLong($offset);
+            $filter_size = $data_element->getLong($offset + 4);
+            $filter_param_count = $data_element->getLong($offset + 8);
+            $this->debug("Filter: $filter_number $filter_size $filter_param_count");
+            $next = $offset + 4 + $filter_size;
+            $offset += 12;
+            for ($p = 0; $p < $filter_param_count; $p++) {
+                $id = $data_element->getLong($offset);
+                $count = $data_element->getLong($offset + 4);
+                $offset += 8;
+                $val = $data_element->getLong($offset);
+                $this->debug("Tag: $id $count $val");
+                $offset += 4 * $count;
             }
-
-            // Adds the 'tag'.
+/*            // Adds the 'tag'.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
 
             $entry_class = $item_definition->getEntryClass();
             new $entry_class($item, $this->getValueFromData($data_element, $offset, $item_definition->getFormat(), $value_components));
-            $item->valid = true;
+            $item->valid = true;*/
+            $offset = $next;
         }
-*/
+
         $this->valid = true;
 
         // Invoke post-load callbacks.
