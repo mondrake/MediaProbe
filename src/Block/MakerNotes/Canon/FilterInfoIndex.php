@@ -42,7 +42,7 @@ class FilterInfoIndex extends Index
                 $id = $data_element->getLong($offset);
                 $count = $data_element->getLong($offset + 4);
                 $offset += 8;
-                $val = $data_element->getLong($offset);
+                $val = $data_element->getSignedLong($offset);
                 $this->debug("Tag: $id $count $val");
                 $offset += 4 * $count;
             }
