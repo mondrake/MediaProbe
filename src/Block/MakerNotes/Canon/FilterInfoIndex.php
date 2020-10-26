@@ -8,6 +8,7 @@ use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
