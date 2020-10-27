@@ -2,6 +2,8 @@
 
 namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
 
+use FileEye\MediaProbe\Block\Exif\Vendor\Canon\Filter;
+
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\RawData;
@@ -45,10 +47,9 @@ class FilterInfoIndex extends Index
         $offset = 0;
 
         // The first 4 bytes is a marker (?), store as RawData.
-        $header_data_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4);
-        $header_data_window = new DataWindow($data_element, $offset, 4);
-        $header = new RawData($header_data_definition, $this);
-        $header->parseData($header_data_window);
+        $this
+            ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4))
+            ->parseData(new DataWindow($data_element, $offset, 4));
 
         // The next 4 bytes define the count of filters.
         $offset += 4;
@@ -60,15 +61,21 @@ class FilterInfoIndex extends Index
         // Loop through the filters.
         $offset += 4;
         for ($i = 0; $i < $index_components; $i++) {
-            $filter_number = $data_element->getLong($offset);
+//            $filter_number = $data_element->getLong($offset);
             $filter_size = $data_element->getLong($offset + 4);
-            $filter_param_count = $data_element->getLong($offset + 8);
-            $this->debug("Filter {filter}, {params} parameter(s), size {size} bytes", [
+//            $filter_param_count = $data_element->getLong($offset + 8);
+            $next = $offset + 4 + $filter_size;
+//            $filter_data_window = new DataWindow($data_element, );
+//            $filter = new Filter($data_element, $offset, $filter_size);
+//            $filter->parseData($filter_data_window);
+            $this
+                ->addItem('MakerNotes\Canon\Filter')
+                ->parseData(new DataWindow($data_element, $offset, $filter_size));
+/*            $this->debug("Filter {filter}, {params} parameter(s), size {size} bytes", [
                 'filter' => $filter_number,
                 'params' => $filter_param_count,
                 'size' => $filter_size,
             ]);
-            $next = $offset + 4 + $filter_size;
             $offset += 12;
             for ($p = 0; $p < $filter_param_count; $p++) {
                 $id = $data_element->getLong($offset);
@@ -88,7 +95,7 @@ class FilterInfoIndex extends Index
                     throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
                 }
                 $offset += 4 * $count;
-            }
+            }*/
             $offset = $next;
         }
 
