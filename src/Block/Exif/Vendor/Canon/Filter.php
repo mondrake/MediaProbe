@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
-use FileEye\MediaProbe\Block\BlockBase;
+use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\RawData;
@@ -23,7 +23,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * Id       Lenght   P count  P#1 Idx  P#1 cnt  P#1 val  P#2 Idx  P#2 cnt  P#2 val  ...
  * 04000000 38000000 04000000 01040000 01000000 FFFFFFFF 02040000 01000000 00000000 03040000 01000000 00000000 04040000 01000000 00000000
  */
-class Filter extends BlockBase
+class Filter extends ListBase
 {
     /**
      * {@inheritdoc}
