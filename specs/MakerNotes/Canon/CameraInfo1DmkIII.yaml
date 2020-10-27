@@ -50,6 +50,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     27:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIMacroMagnification
         exiftool:
             -
                 name: MacroMagnification
@@ -610,6 +611,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     374:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIShutterCount
         exiftool:
             -
                 name: ShutterCount
@@ -628,6 +630,7 @@ items:
                 DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     1114:
+        entryClass: FileEye\MediaProbe\Entry\CanonCITimestamp
         exiftool:
             -
                 name: TimeStamp1
@@ -637,6 +640,7 @@ items:
                 DOMNode: 'Canon:TimeStamp1'
                 desc: 'Time Stamp 1'
     1118:
+        entryClass: FileEye\MediaProbe\Entry\CanonCITimestamp
         exiftool:
             -
                 name: TimeStamp

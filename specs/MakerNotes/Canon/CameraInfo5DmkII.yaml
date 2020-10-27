@@ -84,6 +84,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     27:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIMacroMagnification
         exiftool:
             -
                 name: MacroMagnification

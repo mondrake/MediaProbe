@@ -591,6 +591,7 @@ items:
                 DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     356:
+        entryClass: FileEye\MediaProbe\Entry\CanonCILensSerialNumber
         exiftool:
             -
                 name: LensSerialNumber
