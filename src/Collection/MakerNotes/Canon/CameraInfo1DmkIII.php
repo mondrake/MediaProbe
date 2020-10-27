@@ -122,6 +122,7 @@ class CameraInfo1DmkIII extends Collection {
     ),
     27 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIMacroMagnification',
       'collection' => 'Tag',
       'name' => 'MacroMagnification',
       'title' => 'Macro Magnification',
@@ -740,6 +741,7 @@ class CameraInfo1DmkIII extends Collection {
     ),
     374 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIShutterCount',
       'collection' => 'Tag',
       'name' => 'ShutterCount',
       'title' => 'Shutter Count',
@@ -763,6 +765,7 @@ class CameraInfo1DmkIII extends Collection {
     ),
     1114 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCITimestamp',
       'collection' => 'Tag',
       'name' => 'TimeStamp1',
       'title' => 'Time Stamp 1',
@@ -774,6 +777,7 @@ class CameraInfo1DmkIII extends Collection {
     ),
     1118 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCITimestamp',
       'collection' => 'Tag',
       'name' => 'TimeStamp',
       'title' => 'Time Stamp',

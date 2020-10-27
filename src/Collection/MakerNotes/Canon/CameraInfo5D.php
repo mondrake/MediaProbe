@@ -611,6 +611,7 @@ class CameraInfo5D extends Collection {
     ),
     27 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIMacroMagnification',
       'collection' => 'Tag',
       'name' => 'MacroMagnification',
       'title' => 'Macro Magnification',
@@ -1763,6 +1764,7 @@ class CameraInfo5D extends Collection {
     ),
     284 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCITimestamp',
       'collection' => 'Tag',
       'name' => 'TimeStamp',
       'title' => 'Time Stamp',

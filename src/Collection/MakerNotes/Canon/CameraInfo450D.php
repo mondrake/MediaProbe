@@ -138,6 +138,7 @@ class CameraInfo450D extends Collection {
     ),
     27 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIMacroMagnification',
       'collection' => 'Tag',
       'name' => 'MacroMagnification',
       'title' => 'Macro Magnification',
