@@ -39,11 +39,13 @@ class Filter extends ListBase
     {
         $offset = 0;
 
+        // The count of filter paramters is at offset 8.
         $this->paramsCount = $data_element->getLong($offset + 8);
         $offset += 12;
 
         $this->debugBlockInfo($data_element);
 
+        // Loop and parse through the parameters.
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = $data_element->getLong($offset);
             $val_count = $data_element->getLong($offset + 4);
@@ -51,11 +53,10 @@ class Filter extends ListBase
             $val = $data_element->getSignedLong($offset);
             $this->debug("Tag: $id $val_count $val");
 
-            $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
-            $class = $item_definition->getCollection()->getPropertyValue('class');
-            $param = new $class($item_definition, $this);
-            $param_data_window = new DataWindow($data_element, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
-            $param->parseData($param_data_window);
+            $item_definition = new ItemDefinition($this->getParent()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
+            $this
+                ->addItemWithDefinition($item_definition)
+                ->parseData(new DataWindow($data_element, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG)));
 
             $offset += 4 * $val_count;
         }
