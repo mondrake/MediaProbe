@@ -26,17 +26,42 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class Filter extends ListBase
 {
     /**
+     * The number of parameters for this filter.
+     *
+     * @var int
+     */
+    protected $paramsCount;
+
+    /**
      * {@inheritdoc}
      */
     public function parseData(DataElement $data_element): void
     {
-        $this->debugBlockInfo($data_element);
-
-//        $this->validate($data_element);
-
         $offset = 0;
 
-        $this->valid = true;
+        $this->paramsCount = $data_element->getLong($offset + 8);
+        $this->debugBlockInfo($data_element);
+
+        $offset += 12;
+        for ($p = 0; $p < $this->paramsCount; $p++) {
+            $id = $data_element->getLong($offset);
+            $count = $data_element->getLong($offset + 4);
+            $offset += 8;
+            $val = $data_element->getSignedLong($offset);
+            $this->debug("Tag: $id $count $val");
+            try {
+                $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $count);
+                $class = $item_definition->getCollection()->getPropertyValue('class');
+                $param = new $class($item_definition, $this);
+                $param_data_window = new DataWindow($data_element, $offset, $count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
+                $param->parseData($param_data_window);
+            } catch (\Exception $e) {
+                $this->valid = false;
+                $this->error($e->getMessage());
+                throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
+            }
+            $offset += 4 * $count;
+        }
     }
 
     /**
@@ -46,12 +71,12 @@ class Filter extends ListBase
     {
         $msg = 'filter#{seq} ';
         $seq = $this->getDefinition()->getSequence() + 1;
-        $msg .= ' @{offset}, {parms} parameter(s), s {size}';
+        $msg .= ' @{offset}, {parms} parameter(s), size {size} bytes';
         $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
         $this->debug($msg, [
             'seq' => $seq,
             'offset' => $offset,
-            'parms' => $this->getDefinition()->getValuesCount(),
+            'parms' => $this->paramsCount,
             'size' => $this->getDefinition()->getSize(),
         ]);
     }

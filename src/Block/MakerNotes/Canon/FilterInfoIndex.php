@@ -42,8 +42,6 @@ class FilterInfoIndex extends Index
     {
         $this->debugBlockInfo($data_element);
 
-//        $this->validate($data_element);
-
         $offset = 0;
 
         // The first 4 bytes is a marker (?), store as RawData.
@@ -58,50 +56,14 @@ class FilterInfoIndex extends Index
             'filters' => $index_components,
         ]);
 
-        // Loop through the filters.
+        // Loop and parse through the filters.
         $offset += 4;
         for ($i = 0; $i < $index_components; $i++) {
-//            $filter_number = $data_element->getLong($offset);
             $filter_size = $data_element->getLong($offset + 4);
-//            $filter_param_count = $data_element->getLong($offset + 8);
-            $next = $offset + 4 + $filter_size;
-//            $filter_data_window = new DataWindow($data_element, );
-//            $filter = new Filter($data_element, $offset, $filter_size);
-//            $filter->parseData($filter_data_window);
             $this
                 ->addItemWithDefinition(new ItemDefinition(Collection::get('MakerNotes\Canon\Filter'), ItemFormat::BYTE, $filter_size, $offset, 0, $i))
                 ->parseData(new DataWindow($data_element, $offset, $filter_size));
-/*            $this->debug("Filter {filter}, {params} parameter(s), size {size} bytes", [
-                'filter' => $filter_number,
-                'params' => $filter_param_count,
-                'size' => $filter_size,
-            ]);
-            $offset += 12;
-            for ($p = 0; $p < $filter_param_count; $p++) {
-                $id = $data_element->getLong($offset);
-                $count = $data_element->getLong($offset + 4);
-                $offset += 8;
-                $val = $data_element->getSignedLong($offset);
-                $this->debug("Tag: $id $count $val");
-                try {
-                    $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $count);
-                    $class = $item_definition->getCollection()->getPropertyValue('class');
-                    $param = new $class($item_definition, $this);
-                    $param_data_window = new DataWindow($data_element, $offset, $count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
-                    $param->parseData($param_data_window);
-                } catch (\Exception $e) {
-                    $this->valid = false;
-                    $this->error($e->getMessage());
-                    throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
-                }
-                $offset += 4 * $count;
-            }*/
-            $offset = $next;
+            $offset += 4 + $filter_size;
         }
-
-        $this->valid = true;
-
-        // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($data_element);
     }
 }
