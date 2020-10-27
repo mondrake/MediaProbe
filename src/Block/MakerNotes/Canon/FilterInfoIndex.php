@@ -11,6 +11,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\ItemFormat;
+use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -79,7 +80,8 @@ class FilterInfoIndex extends Index
                     $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $count);
                     $class = $item_definition->getCollection()->getPropertyValue('class');
                     $param = new $class($item_definition, $this);
-                    $param->parseData($data_element, $offset, $count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
+                    $param_data_window = new DataWindow($data_element, $offset, $count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
+                    $param->parseData($param_data_window);
                 } catch (\Exception $e) {
                     $this->valid = false;
                     $this->error($e->getMessage());
