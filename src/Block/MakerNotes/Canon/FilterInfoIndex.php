@@ -69,7 +69,7 @@ class FilterInfoIndex extends Index
 //            $filter = new Filter($data_element, $offset, $filter_size);
 //            $filter->parseData($filter_data_window);
             $this
-                ->addItem('MakerNotes\Canon\Filter')
+                ->addItemWithDefinition(new ItemDefinition(Collection::get('MakerNotes\Canon\Filter'), ItemFormat::BYTE, 1, $offset, 0, $i + 1))
                 ->parseData(new DataWindow($data_element, $offset, $filter_size));
 /*            $this->debug("Filter {filter}, {params} parameter(s), size {size} bytes", [
                 'filter' => $filter_number,
