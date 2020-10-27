@@ -53,7 +53,8 @@ class Filter extends ListBase
             $val = $data_element->getSignedLong($offset);
             $this->debug("Tag: $id $val_count $val");
 
-            $item_definition = new ItemDefinition($this->getParent()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
+            // The items are defined in the collection of the parent element.
+            $item_definition = new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
             $this
                 ->addItemWithDefinition($item_definition)
                 ->parseData(new DataWindow($data_element, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG)));
