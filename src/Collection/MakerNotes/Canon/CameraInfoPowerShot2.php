@@ -42,6 +42,7 @@ class CameraInfoPowerShot2 extends Collection {
   array (
     1 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIISO',
       'collection' => 'Tag',
       'name' => 'ISO',
       'title' => 'ISO',
@@ -53,6 +54,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     6 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFNumber',
       'collection' => 'Tag',
       'name' => 'FNumber',
       'title' => 'F Number',
@@ -64,6 +66,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     7 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIExposureTime',
       'collection' => 'Tag',
       'name' => 'ExposureTime',
       'title' => 'Exposure Time',
