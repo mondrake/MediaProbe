@@ -148,6 +148,7 @@ items:
                     255: n/a
                     65535: n/a
     388:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType

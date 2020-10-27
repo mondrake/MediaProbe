@@ -149,6 +149,7 @@ items:
                 DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     222:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -573,6 +574,7 @@ items:
                 DOMNode: 'Canon:OwnerName'
                 desc: 'Owner Name'
     307:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
@@ -582,6 +584,7 @@ items:
                 DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     319:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex

@@ -41,6 +41,7 @@ items:
                 DOMNode: 'Canon:ISO'
                 desc: ISO
     12:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -597,6 +598,7 @@ items:
                 DOMNode: 'Canon:MaxFocalLength'
                 desc: 'Max Focal Length'
     151:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -1021,6 +1023,7 @@ items:
                 DOMNode: 'Canon:ShortOwnerName'
                 desc: 'Short Owner Name'
     204:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
@@ -1030,6 +1033,7 @@ items:
                 DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     208:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex

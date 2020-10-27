@@ -161,6 +161,7 @@ items:
                 writable: true
                 desc: 'Color Temperature'
     335:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -588,6 +589,7 @@ items:
                 writable: true
                 desc: 'Firmware Version'
     556:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -596,6 +598,7 @@ items:
                 g2: Image
                 desc: 'File Index'
     568:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex

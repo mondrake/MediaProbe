@@ -21,8 +21,8 @@ items:
                 DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     4:
-       entryClass: FileEye\MediaProbe\Entry\CanonCIExposureTime
-       exiftool:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIExposureTime
+        exiftool:
             -
                 name: ExposureTime
                 type: int8u
@@ -185,6 +185,7 @@ items:
                     255: n/a
                     65535: n/a
     234:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -616,6 +617,7 @@ items:
                 DOMNode: 'Canon:FirmwareVersion'
                 desc: 'Firmware Version'
     475:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -625,6 +627,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     487:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex

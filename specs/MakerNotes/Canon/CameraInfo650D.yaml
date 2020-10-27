@@ -160,6 +160,7 @@ items:
                     255: n/a
                     65535: n/a
     295:
+        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -600,6 +601,7 @@ items:
                 DOMNode: 'Canon:FirmwareVersion'
                 desc: 'Firmware Version'
     624:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -609,6 +611,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     628:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -618,6 +621,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     636:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
@@ -627,6 +631,7 @@ items:
                 DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     640:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
