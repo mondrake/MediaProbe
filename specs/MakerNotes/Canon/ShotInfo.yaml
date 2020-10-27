@@ -12,7 +12,7 @@ compiler:
         xpath: '//table[@name=''Canon::ShotInfo'']/tag'
 items:
     1:
-        entryClass: FileEye\MediaProbe\Entry\CanonAutoISO
+        entryClass: FileEye\MediaProbe\Entry\CanonAutoIso
         exiftool:
             -
                 name: AutoISO
@@ -21,7 +21,7 @@ items:
                 DOMNode: 'Canon:AutoISO'
                 desc: 'Auto ISO'
     2:
-        entryClass: FileEye\MediaProbe\Entry\CanonBaseISO
+        entryClass: FileEye\MediaProbe\Entry\CanonBaseIso
         exiftool:
             -
                 name: BaseISO
