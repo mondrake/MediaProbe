@@ -89,6 +89,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     153 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -100,6 +101,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     159 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -111,6 +113,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     164 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -122,6 +125,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     168 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -133,6 +137,7 @@ class CameraInfoPowerShot2 extends Collection {
     ),
     261 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',

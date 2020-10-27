@@ -189,6 +189,7 @@ class CameraInfo7D extends Collection {
     ),
     25 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -231,6 +232,7 @@ class CameraInfo7D extends Collection {
     ),
     84 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -242,6 +244,7 @@ class CameraInfo7D extends Collection {
     ),
     86 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',

@@ -126,6 +126,7 @@ class CameraInfo450D extends Collection {
     ),
     24 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -179,6 +180,7 @@ class CameraInfo450D extends Collection {
     ),
     67 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -190,6 +192,7 @@ class CameraInfo450D extends Collection {
     ),
     69 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',

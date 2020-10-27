@@ -165,6 +165,7 @@ class CameraInfo50D extends Collection {
     ),
     25 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -207,6 +208,7 @@ class CameraInfo50D extends Collection {
     ),
     80 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -218,6 +220,7 @@ class CameraInfo50D extends Collection {
     ),
     82 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',

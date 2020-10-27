@@ -121,6 +121,7 @@ class CameraInfo5DmkIII extends Collection {
     ),
     27 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -163,6 +164,7 @@ class CameraInfo5DmkIII extends Collection {
     ),
     140 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -174,6 +176,7 @@ class CameraInfo5DmkIII extends Collection {
     ),
     142 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',
