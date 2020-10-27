@@ -70,6 +70,7 @@ class CameraInfo550D extends Collection {
   array (
     3 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFNumber',
       'collection' => 'Tag',
       'name' => 'FNumber',
       'title' => 'F Number',
@@ -81,6 +82,7 @@ class CameraInfo550D extends Collection {
     ),
     4 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIExposureTime',
       'collection' => 'Tag',
       'name' => 'ExposureTime',
       'title' => 'Exposure Time',
@@ -92,6 +94,7 @@ class CameraInfo550D extends Collection {
     ),
     6 =>
     array (
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIISO',
       'collection' => 'Tag',
       'name' => 'ISO',
       'title' => 'ISO',
