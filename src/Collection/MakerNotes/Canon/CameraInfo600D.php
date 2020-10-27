@@ -144,7 +144,6 @@ class CameraInfo600D extends Collection {
     ),
     25 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -187,7 +186,6 @@ class CameraInfo600D extends Collection {
     ),
     87 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -199,7 +197,6 @@ class CameraInfo600D extends Collection {
     ),
     89 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',
@@ -302,7 +299,6 @@ class CameraInfo600D extends Collection {
     ),
     234 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraInfoLensType',
       'collection' => 'Tag',
       'name' => 'LensType',
       'title' => 'Lens Type',

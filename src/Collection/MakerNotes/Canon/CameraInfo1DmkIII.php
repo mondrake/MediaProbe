@@ -74,7 +74,6 @@ class CameraInfo1DmkIII extends Collection {
   array (
     3 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFNumber',
       'collection' => 'Tag',
       'name' => 'FNumber',
       'title' => 'F Number',
@@ -86,7 +85,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     4 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIExposureTime',
       'collection' => 'Tag',
       'name' => 'ExposureTime',
       'title' => 'Exposure Time',
@@ -98,7 +96,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     6 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIISO',
       'collection' => 'Tag',
       'name' => 'ISO',
       'title' => 'ISO',
@@ -110,7 +107,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     24 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCICameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -122,7 +118,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     27 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIMacroMagnification',
       'collection' => 'Tag',
       'name' => 'MacroMagnification',
       'title' => 'Macro Magnification',
@@ -165,7 +160,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     67 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -177,7 +171,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     69 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',
@@ -280,7 +273,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     273 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraInfoLensType',
       'collection' => 'Tag',
       'name' => 'LensType',
       'title' => 'Lens Type',
@@ -729,7 +721,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     370 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIFileIndex',
       'collection' => 'Tag',
       'name' => 'FileIndex',
       'title' => 'File Index',
@@ -741,7 +732,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     374 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIShutterCount',
       'collection' => 'Tag',
       'name' => 'ShutterCount',
       'title' => 'Shutter Count',
@@ -753,7 +743,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     382 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCIDirectoryIndex',
       'collection' => 'Tag',
       'name' => 'DirectoryIndex',
       'title' => 'Directory Index',
@@ -765,7 +754,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     1114 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCITimestamp',
       'collection' => 'Tag',
       'name' => 'TimeStamp1',
       'title' => 'Time Stamp 1',
@@ -777,7 +765,6 @@ class CameraInfo1DmkIII extends Collection {
     ),
     1118 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCITimestamp',
       'collection' => 'Tag',
       'name' => 'TimeStamp',
       'title' => 'Time Stamp',

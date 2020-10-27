@@ -93,7 +93,6 @@ class CameraInfo750D extends Collection {
     ),
     27 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -116,7 +115,6 @@ class CameraInfo750D extends Collection {
     ),
     165 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -128,7 +126,6 @@ class CameraInfo750D extends Collection {
     ),
     167 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',
@@ -231,7 +228,6 @@ class CameraInfo750D extends Collection {
     ),
     388 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraInfoLensType',
       'collection' => 'Tag',
       'name' => 'LensType',
       'title' => 'Lens Type',

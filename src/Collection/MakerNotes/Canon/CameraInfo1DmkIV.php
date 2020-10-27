@@ -149,7 +149,6 @@ class CameraInfo1DmkIV extends Collection {
     ),
     25 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -189,7 +188,6 @@ class CameraInfo1DmkIV extends Collection {
     ),
     84 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceUpper',
       'title' => 'Focus Distance Upper',
@@ -200,7 +198,6 @@ class CameraInfo1DmkIV extends Collection {
     ),
     86 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonFocusDistance',
       'collection' => 'Tag',
       'name' => 'FocusDistanceLower',
       'title' => 'Focus Distance Lower',
@@ -259,7 +256,6 @@ class CameraInfo1DmkIV extends Collection {
     ),
     335 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraInfoLensType',
       'collection' => 'Tag',
       'name' => 'LensType',
       'title' => 'Lens Type',

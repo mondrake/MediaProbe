@@ -86,7 +86,6 @@ class CameraInfoPowerShot extends Collection {
     ),
     135 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
@@ -98,7 +97,6 @@ class CameraInfoPowerShot extends Collection {
     ),
     145 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCameraTemperature',
       'collection' => 'Tag',
       'name' => 'CameraTemperature',
       'title' => 'Camera Temperature',
