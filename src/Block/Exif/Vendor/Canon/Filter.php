@@ -38,4 +38,21 @@ class Filter extends ListBase
 
         $this->valid = true;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    {
+        $msg = 'filter#{seq} ';
+        $seq = $this->getDefinition()->getSequence() + 1;
+        $msg .= ' @{offset}, {parms} parameter(s), s {size}';
+        $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        $this->debug($msg, [
+            'seq' => $seq,
+            'offset' => $offset,
+            'parms' => $this->getDefinition()->getValuesCount(),
+            'size' => $this->getDefinition()->getSize(),
+        ]);
+    }
 }
