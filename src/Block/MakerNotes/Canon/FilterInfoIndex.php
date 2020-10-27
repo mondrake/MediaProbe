@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
 
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
@@ -94,5 +95,4 @@ class FilterInfoIndex extends Index
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);
     }
-
 }
