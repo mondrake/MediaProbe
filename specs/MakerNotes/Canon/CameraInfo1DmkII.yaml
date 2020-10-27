@@ -11,6 +11,7 @@ compiler:
         xpath: '//table[@name=''Canon::CameraInfo1DmkII'']/tag'
 items:
     4:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIExposureTime
         exiftool:
             -
                 name: ExposureTime
@@ -607,6 +608,7 @@ items:
                 values:
                     - Normal
     117:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIISO
         exiftool:
             -
                 name: ISO
