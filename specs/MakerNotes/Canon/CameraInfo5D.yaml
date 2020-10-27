@@ -447,6 +447,7 @@ items:
                     61496: 'Canon CN-E 35mm T1.5 L F'
                     65535: n/a
     23:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature

@@ -66,6 +66,7 @@ items:
                     5: 'External Manual'
                     6: 'Off'
     25:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -94,6 +95,7 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     87:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -102,6 +104,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     89:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceLower

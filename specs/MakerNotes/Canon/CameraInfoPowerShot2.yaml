@@ -49,6 +49,7 @@ items:
                 DOMNode: 'Canon:Rotation'
                 desc: Rotation
     153:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -57,6 +58,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     159:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -65,6 +67,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     164:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -73,6 +76,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     168:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -81,6 +85,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     261:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature

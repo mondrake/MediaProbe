@@ -41,6 +41,7 @@ items:
                 DOMNode: 'Canon:ISO'
                 desc: ISO
     27:
+        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -69,6 +70,7 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     140:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -77,6 +79,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     142:
+        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceLower
