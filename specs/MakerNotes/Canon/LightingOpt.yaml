@@ -11,7 +11,7 @@ compiler:
         g1: Canon
         xpath: '//table[@name=''Canon::LightingOpt'']/tag'
 items:
-    -
+    1:
         exiftool:
             -
                 name: PeripheralIlluminationCorr
@@ -22,7 +22,7 @@ items:
                 values:
                     - 'Off'
                     - 'On'
-    -
+    2:
         exiftool:
             -
                 name: AutoLightingOptimizer
@@ -35,7 +35,7 @@ items:
                     - Low
                     - Strong
                     - 'Off'
-    -
+    3:
         exiftool:
             -
                 name: HighlightTonePriority
@@ -46,7 +46,7 @@ items:
                 values:
                     - 'Off'
                     - 'On'
-    -
+    4:
         exiftool:
             -
                 name: LongExposureNoiseReduction
@@ -58,7 +58,7 @@ items:
                     - 'Off'
                     - Auto
                     - 'On'
-    -
+    5:
         exiftool:
             -
                 name: HighISONoiseReduction
