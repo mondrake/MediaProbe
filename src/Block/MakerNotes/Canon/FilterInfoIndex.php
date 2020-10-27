@@ -2,13 +2,14 @@
 
 namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
 
-use FileEye\MediaProbe\ItemFormat;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Tag;
+use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -41,7 +42,7 @@ class FilterInfoIndex extends Index
 
         $offset = 0;
 
-        // The first 4 bytes are markers, store in a RawData.
+        // The first 4 bytes is a marker (?), store as RawData.
         $header_data_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4);
         $header_data_window = new DataWindow($data_element, $offset, 4);
         $header = new RawData($header_data_definition, $this);
