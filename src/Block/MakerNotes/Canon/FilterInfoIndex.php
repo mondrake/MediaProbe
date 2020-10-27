@@ -48,21 +48,21 @@ class FilterInfoIndex extends Index
         $this
             ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4))
             ->parseData(new DataWindow($data_element, $offset, 4));
+        $offset += 4;
 
         // The next 4 bytes define the count of filters.
-        $offset += 4;
         $index_components = $data_element->getLong($offset);
         $this->debug("{filters} filters", [
             'filters' => $index_components,
         ]);
+        $offset += 4;
 
         // Loop and parse through the filters.
-        $offset += 4;
         for ($i = 0; $i < $index_components; $i++) {
             $filter_size = $data_element->getLong($offset + 4);
             $this
                 ->addItemWithDefinition(new ItemDefinition(Collection::get('MakerNotes\Canon\Filter'), ItemFormat::BYTE, $filter_size, $offset, 0, $i))
-                ->parseData(new DataWindow($data_element, $offset, $filter_size));
+                ->parseData(new DataWindow($data_element, $offset, $filter_size + 4));
             $offset += 4 + $filter_size;
         }
     }

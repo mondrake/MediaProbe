@@ -40,27 +40,24 @@ class Filter extends ListBase
         $offset = 0;
 
         $this->paramsCount = $data_element->getLong($offset + 8);
+        $offset += 12;
+
         $this->debugBlockInfo($data_element);
 
-        $offset += 12;
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = $data_element->getLong($offset);
-            $count = $data_element->getLong($offset + 4);
+            $val_count = $data_element->getLong($offset + 4);
             $offset += 8;
             $val = $data_element->getSignedLong($offset);
-            $this->debug("Tag: $id $count $val");
-            try {
-                $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $count);
-                $class = $item_definition->getCollection()->getPropertyValue('class');
-                $param = new $class($item_definition, $this);
-                $param_data_window = new DataWindow($data_element, $offset, $count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
-                $param->parseData($param_data_window);
-            } catch (\Exception $e) {
-                $this->valid = false;
-                $this->error($e->getMessage());
-                throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
-            }
-            $offset += 4 * $count;
+            $this->debug("Tag: $id $val_count $val");
+
+            $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
+            $class = $item_definition->getCollection()->getPropertyValue('class');
+            $param = new $class($item_definition, $this);
+            $param_data_window = new DataWindow($data_element, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG));
+            $param->parseData($param_data_window);
+
+            $offset += 4 * $val_count;
         }
     }
 
