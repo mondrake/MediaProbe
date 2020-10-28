@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 /**
  * Handler for Canon ShotInfo FocusDistanceLower tags.
  */
-class ShotInfoFocusDistanceLower extends CanonFocusDistance
+class ShotInfoFocusDistanceLower extends FocusDistance
 {
     /**
      * {@inheritdoc}
