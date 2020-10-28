@@ -30,7 +30,7 @@ class Jpeg extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element): void
+    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
         $this->debugBlockInfo($data_element);
 
@@ -59,7 +59,7 @@ class Jpeg extends BlockBase
                     ]);
                     $this
                         ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
-                        ->parseData(new DataWindow($data_element, $offset, $new_offset - $offset));
+                        ->parseData($data_element, $offset, $new_offset - $offset);
                 }
                 $offset = $new_offset;
             } catch (DataException $e) {
@@ -108,8 +108,7 @@ class Jpeg extends BlockBase
 
             // Load the MediaProbe JPEG segment data.
             $segment = $this->addItem($segment_id);
-            $segment_data_window = new DataWindow($data_element, $offset, $segment_size);
-            $segment->parseData($segment_data_window);
+            $segment->parseData($data_element, $offset, $segment_size);
 
             // Fail JPEG validity if the segment is invalid.
             if (!$segment->isValid()) {
@@ -117,7 +116,7 @@ class Jpeg extends BlockBase
             }
 
             // Position to end of the segment.
-            $offset += $segment_data_window->getSize();
+            $offset += $segment_size;
         }
 
         // Fail if EOI is missing.

@@ -77,7 +77,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @todo xxx
      */
     public function getOutputFormat()
     {
