@@ -34,7 +34,7 @@ class CameraInfoUnknown extends Collection {
   array (
     363 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\CanonCILensSerialNumber',
+      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\LensSerialNumber',
       'collection' => 'Tag',
       'name' => 'LensSerialNumber',
       'title' => 'Lens Serial Number',
