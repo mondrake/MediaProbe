@@ -11,7 +11,7 @@ compiler:
         xpath: '//table[@name=''Canon::CameraInfo1DmkIII'']/tag'
 items:
     3:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFNumber
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFNumber
         exiftool:
             -
                 name: FNumber
@@ -21,7 +21,7 @@ items:
                 DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     4:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIExposureTime
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIExposureTime
         exiftool:
             -
                 name: ExposureTime
@@ -31,7 +31,7 @@ items:
                 DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     6:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIISO
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIISO
         exiftool:
             -
                 name: ISO
@@ -41,7 +41,7 @@ items:
                 DOMNode: 'Canon:ISO'
                 desc: ISO
     24:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCICameraTemperature
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -50,7 +50,7 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     27:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIMacroMagnification
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIMacroMagnification
         exiftool:
             -
                 name: MacroMagnification
@@ -79,7 +79,7 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     67:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFocusDistance
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -88,7 +88,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     69:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFocusDistance
         exiftool:
             -
                 name: FocusDistanceLower
@@ -169,7 +169,7 @@ items:
                     255: n/a
                     65535: n/a
     273:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCameraInfoLensType
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -601,7 +601,7 @@ items:
                 DOMNode: 'Canon:FirmwareVersion'
                 desc: 'Firmware Version'
     370:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFileIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -611,7 +611,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     374:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIShutterCount
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIShutterCount
         exiftool:
             -
                 name: ShutterCount
@@ -620,7 +620,7 @@ items:
                 DOMNode: 'Canon:ShutterCount'
                 desc: 'Shutter Count'
     382:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIDirectoryIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
@@ -630,7 +630,7 @@ items:
                 DOMNode: 'Canon:DirectoryIndex'
                 desc: 'Directory Index'
     1114:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCITimestamp
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CITimestamp
         exiftool:
             -
                 name: TimeStamp1
@@ -640,7 +640,7 @@ items:
                 DOMNode: 'Canon:TimeStamp1'
                 desc: 'Time Stamp 1'
     1118:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCITimestamp
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CITimestamp
         exiftool:
             -
                 name: TimeStamp

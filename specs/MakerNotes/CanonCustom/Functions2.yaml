@@ -42,7 +42,7 @@ items:
                     - '1/3 Stop'
                     - '1 Stop'
     259:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCustomIsoSpeedRange
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomIsoSpeedRange
         exiftool:
             -
                 name: ISOSpeedRange
@@ -173,7 +173,7 @@ items:
                     - 'Spot metering'
                     - 'Center-weighted average'
     268:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCustomShutterSpeedRange
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomShutterSpeedRange
         exiftool:
             -
                 name: ShutterSpeedRange
@@ -193,7 +193,7 @@ items:
                 DOMNode: 'CanonCustom:ShutterSpeedRange'
                 desc: 'Shutter Speed Range'
     269:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCustomApertureRange
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomApertureRange
         exiftool:
             -
                 name: ApertureRange

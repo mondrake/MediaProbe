@@ -18,7 +18,7 @@ items:
                 writable: true
                 desc: 'Firmware Version Look Ahead'
     3:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFNumber
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFNumber
         exiftool:
             -
                 name: FNumber
@@ -27,7 +27,7 @@ items:
                 g2: Image
                 desc: 'F Number'
     4:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIExposureTime
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIExposureTime
         exiftool:
             -
                 name: ExposureTime
@@ -36,7 +36,7 @@ items:
                 g2: Image
                 desc: 'Exposure Time'
     6:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIISO
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIISO
         exiftool:
             -
                 name: ISO
@@ -82,7 +82,7 @@ items:
                     5: 'External Manual'
                     6: 'Off'
     25:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCICameraTemperature
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -108,7 +108,7 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     84:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFocusDistance
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -116,7 +116,7 @@ items:
                 writable: true
                 desc: 'Focus Distance Upper'
     86:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFocusDistance
         exiftool:
             -
                 name: FocusDistanceLower
@@ -161,7 +161,7 @@ items:
                 writable: true
                 desc: 'Color Temperature'
     335:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCameraInfoLensType
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -589,7 +589,7 @@ items:
                 writable: true
                 desc: 'Firmware Version'
     556:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFileIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -598,7 +598,7 @@ items:
                 g2: Image
                 desc: 'File Index'
     568:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIDirectoryIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
