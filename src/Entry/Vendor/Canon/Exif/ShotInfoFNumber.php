@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 /**
  * Handler for Canon ShotInfo FNumber tags.
  */
-class ShotInfoFNumber extends CanonApertureValue
+class ShotInfoFNumber extends ApertureValue
 {
     /**
      * {@inheritdoc}
