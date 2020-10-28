@@ -28,8 +28,9 @@ class Ifd extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, $xxx = 0): void
+    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null, $xxx = 0): void
     {
+        //$ifd_data = new DataWindow($data_element, $start, $size);
         $offset = $this->getDefinition()->getDataOffset();
 //if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
 
@@ -51,8 +52,7 @@ class Ifd extends ListBase
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
                     $item_data_window_size = $item_definition->getValuesCount() > 0 ? $item_definition->getSize() : 4;
-                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_data_window_size);
-                    $item->parseData($item_data_window);
+                    $item->parseData($data_element, $item_definition->getDataOffset(), $item_data_window_size);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());

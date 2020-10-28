@@ -74,7 +74,7 @@ class Index extends ListBase
             // Adds the 'tag'.
             $this
                 ->addItemWithDefinition($item_definition)
-                ->parseData($index_data, $item_definition->getDataOffset(), $item_definition->getSize()));
+                ->parseData($index_data, $item_definition->getDataOffset(), $item_definition->getSize());
 
             $offset += $item_definition->getSize();
         }
