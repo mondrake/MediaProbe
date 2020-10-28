@@ -70,18 +70,18 @@ class FilterInfoIndex extends Index
     /**
      * {@inheritdoc}
      */
-    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN)
+    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false)
     {
         // Marker header.
-        $bytes = $this->getElement("rawData[@name = 'filterHeader']")->toBytes($order);
+        $bytes = $this->getElement("rawData[@name = 'filterHeader']")->toBytes($byte_order);
 
         // Number of filters.
         $filters = $this->getMultipleElements('filter');
-        $bytes .= ConvertBytes::fromLong(count($filters), $order);
+        $bytes .= ConvertBytes::fromLong(count($filters), $byte_order);
 
         // The filters.
         foreach ($filters as $filter) {
-            $bytes .= $filter->toByte($order);
+            $bytes .= $filter->toByte($byte_order);
         }
 
         return $bytes;

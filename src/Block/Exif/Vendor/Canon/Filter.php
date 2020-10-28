@@ -66,24 +66,24 @@ class Filter extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN)
+    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false)
     {
         $bytes = '';
 
         // The id of the filter.
-        $bytes .= ConvertBytes::fromLong($this->getAttribute('id'), $order);
+        $bytes .= ConvertBytes::fromLong($this->getAttribute('id'), $byte_order);
 
         $params = $this->getMultipleElements('*');
         $data_area_bytes = '';
         foreach ($params as $param) {
-            $data_area_bytes .= $param->toBytes($order);
+            $data_area_bytes .= $param->toBytes($byte_order);
         }
 
         // The length of the filter.
-        $bytes .= ConvertBytes::fromLong(strlen($data_area_bytes), $order);
+        $bytes .= ConvertBytes::fromLong(strlen($data_area_bytes), $byte_order);
 
         // The number of filter parameters.
-        $bytes .= ConvertBytes::fromLong(count($params), $order);
+        $bytes .= ConvertBytes::fromLong(count($params), $byte_order);
 
         // Append data area.
         $bytes .= $data_area_bytes;
