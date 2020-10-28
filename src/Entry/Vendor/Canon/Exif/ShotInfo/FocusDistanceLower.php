@@ -1,6 +1,8 @@
 <?php
 
-namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
+namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo;
+
+use FileEye\MediaProbe\Entry\Vendor\Canon\Exif\FocusDistance;
 
 /**
  * Handler for Canon ShotInfo FocusDistanceLower tags.

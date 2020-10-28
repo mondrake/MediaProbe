@@ -211,7 +211,7 @@ items:
                     - Strong
                     - 'Off'
     246:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfoLensType
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo\LensType
         exiftool:
             -
                 name: LensType

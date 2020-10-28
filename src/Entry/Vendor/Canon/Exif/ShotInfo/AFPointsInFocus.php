@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
+namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo;
 
 use FileEye\MediaProbe\Entry\Core\SignedShort;
 use FileEye\MediaProbe\MediaProbe;

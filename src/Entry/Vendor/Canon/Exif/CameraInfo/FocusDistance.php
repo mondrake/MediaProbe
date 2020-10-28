@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
+namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo;
 
 use FileEye\MediaProbe\Entry\Core\ShortRev;
 use FileEye\MediaProbe\MediaProbe;

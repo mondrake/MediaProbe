@@ -29,7 +29,7 @@ items:
                 DOMNode: 'Canon:FocalLength'
                 desc: 'Focal Length'
     13:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfoLensType
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo\LensType
         exiftool:
             -
                 name: LensType

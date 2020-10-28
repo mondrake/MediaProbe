@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
+namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo;
 
 use FileEye\MediaProbe\Entry\Core\ShortRev;
 use FileEye\MediaProbe\MediaProbe;
@@ -8,7 +8,7 @@ use FileEye\MediaProbe\MediaProbe;
 /**
  * Handler for Canon CameraInfo Lens Type tags.
  */
-class CameraInfoLensType extends ShortRev
+class LensType extends ShortRev
 {
     /**
      * {@inheritdoc}
