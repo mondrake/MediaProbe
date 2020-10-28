@@ -15,7 +15,7 @@ class Main extends Collection {
   protected static $map = array (
   'name' => 'Canon',
   'title' => 'Canon Maker Notes',
-  'class' => 'FileEye\\MediaProbe\\Block\\Ifd',
+  'class' => 'FileEye\\MediaProbe\\Block\\Exif\\Ifd',
   'DOMNode' => 'makerNote',
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>

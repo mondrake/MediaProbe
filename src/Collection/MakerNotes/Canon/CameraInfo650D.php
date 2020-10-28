@@ -15,7 +15,7 @@ class CameraInfo650D extends Collection {
   protected static $map = array (
   'name' => 'CanonCameraInfo650D',
   'title' => 'Canon CameraInfo650D',
-  'class' => 'FileEye\\MediaProbe\\Block\\MakerNotes\\Canon\\CameraInfoMap',
+  'class' => 'FileEye\\MediaProbe\\Block\\Exif\\Vendor\\Canon\\CameraInfoMap',
   'DOMNode' => 'map',
   'format' =>
   array (
