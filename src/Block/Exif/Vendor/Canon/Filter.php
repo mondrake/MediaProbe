@@ -39,7 +39,10 @@ class Filter extends ListBase
     {
         $offset = 0;
 
-        // The count of filter paramters is at offset 8.
+        // The id of the filter is at offset 0.
+        $this->setAttribute('id', $data_element->getLong($offset));
+
+        // The count of filter parameters is at offset 8.
         $this->paramsCount = $data_element->getLong($offset + 8);
         $offset += 12;
 
@@ -50,8 +53,6 @@ class Filter extends ListBase
             $id = $data_element->getLong($offset);
             $val_count = $data_element->getLong($offset + 4);
             $offset += 8;
-            $val = $data_element->getSignedLong($offset);
-            $this->debug("Tag: $id $val_count $val");
 
             // The items are defined in the collection of the parent element.
             $item_definition = new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
@@ -78,5 +79,13 @@ class Filter extends ListBase
             'parms' => $this->paramsCount,
             'size' => $this->getDefinition()->getSize(),
         ]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getContextPathSegmentPattern()
+    {
+        return '/{DOMNode}:{id}';
     }
 }
