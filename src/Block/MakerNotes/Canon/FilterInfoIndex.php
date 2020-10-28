@@ -66,4 +66,24 @@ class FilterInfoIndex extends Index
             $offset += 4 + $filter_size;
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN)
+    {
+        // Marker header.
+        $bytes = $this->getElement("rawData[@name = 'filterHeader']")->toBytes($order);
+
+        // Number of filters.
+        $filters = $this->getMultipleElements('filter');
+        $bytes .= ConvertBytes::fromLong(count($filters), $order);
+
+        // The filters.
+        foreach ($filters as $filter) {
+            $bytes .= $filter->toByte($order);
+        }
+
+        return $bytes;
+    }
 }

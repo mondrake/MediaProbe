@@ -55,13 +55,41 @@ class Filter extends ListBase
             $offset += 8;
 
             // The items are defined in the collection of the parent element.
-            $item_definition = new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count);
             $this
-                ->addItemWithDefinition($item_definition)
+                ->addItemWithDefinition(new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count))
                 ->parseData(new DataWindow($data_element, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG)));
 
             $offset += 4 * $val_count;
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN)
+    {
+        $bytes = '';
+
+        // The id of the filter.
+        $bytes .= ConvertBytes::fromLong($this->getAttribute('id'), $order);
+
+        $params = $this->getMultipleElements('*');
+        $data_area_bytes = '';
+        foreach ($params as $param) {
+            $data_area_bytes .= $param->toBytes($order);
+        }
+
+        // The length of the filter.
+        $bytes .= ConvertBytes::fromLong(strlen($data_area_bytes), $order);
+
+        // The number of filter parameters.
+        $bytes .= ConvertBytes::fromLong(count($params), $order);
+
+        // Append data area.
+        $bytes .= $data_area_bytes;
+
+dump(MediaProbe::dumpHexFormatted($bytes));
+        return $bytes;
     }
 
     /**
