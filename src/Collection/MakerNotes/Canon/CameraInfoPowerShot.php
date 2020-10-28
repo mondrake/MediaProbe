@@ -15,7 +15,7 @@ class CameraInfoPowerShot extends Collection {
   protected static $map = array (
   'name' => 'CanonCameraInfoPowerShot',
   'title' => 'Canon CameraInfoPowerShot',
-  'class' => 'FileEye\\MediaProbe\\Block\\MakerNotes\\Canon\\CameraInfoMap',
+  'class' => 'FileEye\\MediaProbe\\Block\\Exif\\Vendor\\Canon\\CameraInfoMap',
   'DOMNode' => 'map',
   'format' =>
   array (
