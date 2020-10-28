@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Exif;
 
+use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Collection;
