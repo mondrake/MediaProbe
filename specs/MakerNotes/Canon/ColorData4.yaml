@@ -36,7 +36,7 @@ items:
                 DOMNode: 'Canon:AverageBlackLevel'
                 desc: 'Average Black Level'
     640:
-        entryClass: FileEye\MediaProbe\Entry\CanonRawMeasuredRGGB
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonRawMeasuredRGGB
         exiftool:
             -
                 name: RawMeasuredRGGB

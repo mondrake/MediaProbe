@@ -11,7 +11,7 @@ compiler:
         xpath: '//table[@name=''Canon::CameraInfo70D'']/tag'
 items:
     3:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIFNumber
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFNumber
         exiftool:
             -
                 name: FNumber
@@ -21,7 +21,7 @@ items:
                 DOMNode: 'Canon:FNumber'
                 desc: 'F Number'
     4:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIExposureTime
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIExposureTime
         exiftool:
             -
                 name: ExposureTime
@@ -31,7 +31,7 @@ items:
                 DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     6:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIISO
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIISO
         exiftool:
             -
                 name: ISO
@@ -41,7 +41,7 @@ items:
                 DOMNode: 'Canon:ISO'
                 desc: ISO
     27:
-        entryClass: FileEye\MediaProbe\Entry\CanonCICameraTemperature
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCICameraTemperature
         exiftool:
             -
                 name: CameraTemperature
@@ -70,7 +70,7 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     147:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -79,7 +79,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     149:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIFocusDistance
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFocusDistance
         exiftool:
             -
                 name: FocusDistanceLower
@@ -96,7 +96,7 @@ items:
                 DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     358:
-        entryClass: FileEye\MediaProbe\Entry\CanonCameraInfoLensType
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCameraInfoLensType
         exiftool:
             -
                 name: LensType
@@ -528,7 +528,7 @@ items:
                 DOMNode: 'Canon:FirmwareVersion'
                 desc: 'Firmware Version'
     691:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIFileIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIFileIndex
         exiftool:
             -
                 name: FileIndex
@@ -538,7 +538,7 @@ items:
                 DOMNode: 'Canon:FileIndex'
                 desc: 'File Index'
     703:
-        entryClass: FileEye\MediaProbe\Entry\CanonCIDirectoryIndex
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CanonCIDirectoryIndex
         exiftool:
             -
                 name: DirectoryIndex
