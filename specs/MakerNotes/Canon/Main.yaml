@@ -1,7 +1,7 @@
 collection: MakerNotes\Canon\Main
 name: Canon
 title: 'Canon Maker Notes'
-class: FileEye\MediaProbe\Block\Ifd
+class: FileEye\MediaProbe\Block\Exif\Ifd
 DOMNode: makerNote
 defaultItemCollection: Tag
 compiler:

@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block;
+namespace FileEye\MediaProbe\Block\Exif;
 
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;

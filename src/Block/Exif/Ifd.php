@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block;
+namespace FileEye\MediaProbe\Block\Exif;
 
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Collection;
