@@ -1830,7 +1830,7 @@ elements:
                                                                 -
                                                                     node: index
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\AFInfoIndex
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\AFInfoIndex
                                                                     valid: true
                                                                     name: CanonAFInfo
                                                                     id: '18'
@@ -2214,7 +2214,7 @@ elements:
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\CameraInfoMap
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CameraInfoMap
                                                                     valid: true
                                                                     name: CanonCameraInfo
                                                                     id: '13'

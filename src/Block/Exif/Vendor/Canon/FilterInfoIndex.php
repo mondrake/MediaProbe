@@ -1,8 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
-
-use FileEye\MediaProbe\Block\Exif\Vendor\Canon\Filter;
+namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;

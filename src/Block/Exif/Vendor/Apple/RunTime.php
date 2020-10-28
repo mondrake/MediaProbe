@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\MakerNotes\Apple;
+namespace FileEye\MediaProbe\Block\Exif\Vendor\Apple;
 
 use CFPropertyList\CFDictionary;
 use CFPropertyList\CFNumber;

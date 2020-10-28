@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\MakerNotes\Canon;
+namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
 use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\ItemDefinition;

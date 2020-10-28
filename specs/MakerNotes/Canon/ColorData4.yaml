@@ -1,7 +1,7 @@
 collection: MakerNotes\Canon\ColorData4
 name: CanonColorData4
 title: 'Canon Color Data4'
-class: FileEye\MediaProbe\Block\MakerNotes\Canon\ColorDataMap
+class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorDataMap
 DOMNode: map
 format: Short
 defaultItemCollection: Tag

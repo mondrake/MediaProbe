@@ -2027,7 +2027,7 @@ elements:
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\CameraInfoMap
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CameraInfoMap
                                                                     valid: true
                                                                     name: CanonCameraInfo
                                                                     id: '13'
@@ -2466,7 +2466,7 @@ elements:
                                                                 -
                                                                     node: index
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\AFInfoIndex
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\AFInfoIndex
                                                                     valid: true
                                                                     name: CanonAFInfo2
                                                                     id: '38'
@@ -3326,7 +3326,7 @@ elements:
                                                                 -
                                                                     node: index
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\CustomFunctions2Header
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2Header
                                                                     valid: true
                                                                     name: CanonCustomFunctions2Header
                                                                     id: '153'
@@ -3335,7 +3335,7 @@ elements:
                                                                         -
                                                                             node: index
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:Exposure:1'
-                                                                            class: FileEye\MediaProbe\Block\MakerNotes\Canon\CustomFunctions2
+                                                                            class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2
                                                                             valid: true
                                                                             name: Exposure
                                                                             id: '1'
@@ -3380,7 +3380,7 @@ elements:
                                                                         -
                                                                             node: index
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:ImageFlashExposureDisplay:2'
-                                                                            class: FileEye\MediaProbe\Block\MakerNotes\Canon\CustomFunctions2
+                                                                            class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2
                                                                             valid: true
                                                                             name: ImageFlashExposureDisplay
                                                                             id: '2'
@@ -3407,7 +3407,7 @@ elements:
                                                                         -
                                                                             node: index
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:AutoFocusDrive:3'
-                                                                            class: FileEye\MediaProbe\Block\MakerNotes\Canon\CustomFunctions2
+                                                                            class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2
                                                                             valid: true
                                                                             name: AutoFocusDrive
                                                                             id: '3'
@@ -3452,7 +3452,7 @@ elements:
                                                                         -
                                                                             node: index
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:OperationOthers:4'
-                                                                            class: FileEye\MediaProbe\Block\MakerNotes\Canon\CustomFunctions2
+                                                                            class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2
                                                                             valid: true
                                                                             name: OperationOthers
                                                                             id: '4'
@@ -4282,7 +4282,7 @@ elements:
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-                                                                    class: FileEye\MediaProbe\Block\MakerNotes\Canon\ColorDataMap
+                                                                    class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorDataMap
                                                                     valid: true
                                                                     name: CanonColorData
                                                                     id: '16385'
