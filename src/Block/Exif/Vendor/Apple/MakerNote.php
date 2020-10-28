@@ -55,7 +55,6 @@ class MakerNote extends Ifd
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
-                $valid = false;
             }
         }
 

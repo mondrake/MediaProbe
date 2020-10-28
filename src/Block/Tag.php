@@ -79,18 +79,15 @@ class Tag extends BlockBase
     {
         $this->debugBlockInfo($data_element);
 
-        $valid = true;
-
         $class = $this->getDefinition()->getEntryClass();
         $entry = new $class($this);
         try {
             $entry->loadFromData($data_element, 0, $data_element->getSize(), [], $this->getDefinition());
         } catch (DataException $e) {
             $this->error($e->getMessage());
-            $valid = false;
         }
 
-        $this->valid = $valid;
+        $this->valid = true;
     }
 
     /**

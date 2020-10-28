@@ -29,17 +29,13 @@ class CustomFunctions2Header extends ListBase
     {
         $this->debugBlockInfo($data_element);
 
-        $valid = true;
-
         $offset = 0;
         $size = $this->getDefinition()->getSize();
 
         // Validate incoming size.
         if ($size !== $data_element->getLong($offset)) {
-            $this->valid = false;
             throw new DataException("index:%s mismatching data size", $this->getAttribute('name')); // @todo ingest in logging
         } elseif ($size < 8) {
-            $this->valid = false;
             throw new DataException("index:%s invalid data size", $this->getAttribute('name')); // @todo ingest in logging
         }
 
@@ -73,14 +69,13 @@ class CustomFunctions2Header extends ListBase
                 $group = new $class($item_definition, $this);
                 $group->parseData($data_element, $pos, $rec_len);
             } catch (\Exception $e) {
-                $this->valid = false;
                 $this->error($e->getMessage());
                 throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
             }
             $pos += ($rec_len - 8);
         }
 
-        $this->valid = $valid;
+        $this->valid = true;
 
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);

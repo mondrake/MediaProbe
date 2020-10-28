@@ -26,8 +26,6 @@ class CustomFunctions2 extends ListBase
      */
     public function parseData(DataElement $data_element, int $offset = 0): void
     {
-        $valid = true;
-
         $rec_pos = $offset;
         for ($n = 0; $n < $this->getDefinition()->getValuesCount(); $n++) {
             $id = $data_element->getLong($rec_pos);
@@ -54,12 +52,11 @@ class CustomFunctions2 extends ListBase
                 $tag->parseData($tag_data_window);
             } catch (DataException $e) {
                 $tag->error($e->getMessage());
-                $valid = false;
             }
             $rec_pos += ($num * 4);
         }
 
-        $this->valid = $valid;
+        $this->valid = true;
 
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);

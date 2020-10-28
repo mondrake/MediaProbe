@@ -30,8 +30,6 @@ class Ifd extends ListBase
      */
     public function parseData(DataElement $data_element, $xxx = 0): void
     {
-        $valid = true;
-
         $offset = $this->getDefinition()->getDataOffset();
 //if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
 
@@ -58,11 +56,10 @@ class Ifd extends ListBase
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
-                $valid = false;
             }
         }
 
-        $this->valid = $valid;
+        $this->valid = true;
 
         // Invoke post-load callbacks.
         $this->executePostLoadCallbacks($data_element);
@@ -159,7 +156,6 @@ class Ifd extends ListBase
             $this->error('Invalid offset pointer to IFD: {offset}.', [
                 'offset' => $item_definition->getDataOffset(),
             ]);
-            $valid = false;
             continue;
           }*/
             $components = $data_element->getShort($item_offset - 8);

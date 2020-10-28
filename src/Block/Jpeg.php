@@ -34,8 +34,6 @@ class Jpeg extends BlockBase
     {
         $this->debugBlockInfo($data_element);
 
-        $this->valid = true;
-
         // JPEG data is stored in big-endian format.
         $data_element->setByteOrder(ConvertBytes::BIG_ENDIAN);
 
@@ -64,7 +62,6 @@ class Jpeg extends BlockBase
                 $offset = $new_offset;
             } catch (DataException $e) {
                 $this->error($e->getMessage());
-                $this->valid = false;
                 return;
             }
 
@@ -107,13 +104,9 @@ class Jpeg extends BlockBase
             }
 
             // Load the MediaProbe JPEG segment data.
-            $segment = $this->addItem($segment_id);
-            $segment->parseData($data_element, $offset, $segment_size);
-
-            // Fail JPEG validity if the segment is invalid.
-            if (!$segment->isValid()) {
-                $this->valid = false;
-            }
+            $this
+              ->addItem($segment_id)
+              ->parseData($data_element, $offset, $segment_size);
 
             // Position to end of the segment.
             $offset += $segment_size;
@@ -122,8 +115,9 @@ class Jpeg extends BlockBase
         // Fail if EOI is missing.
         if (!$this->getElement("jpegSegment[@name='EOI']")) {
             $this->error('Missing EOI (End Of Image) JPEG marker');
-            $this->valid = false;
         }
+
+        $this->valid = true;
     }
 
     /**

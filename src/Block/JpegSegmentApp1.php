@@ -21,7 +21,6 @@ class JpegSegmentApp1 extends JpegSegmentBase
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
         $segment_data = new DataWindow($data_element, $start, $size);
-
         $this->debugBlockInfo($segment_data);
 
         // If we have an Exif table, parse it.

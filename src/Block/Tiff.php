@@ -44,25 +44,24 @@ class Tiff extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element): void
+    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $this->debugBlockInfo($data_element);
-
-        $valid = true;
+        $tiff_data = new DataWindow($data_element, $start, $size);
+        $this->debugBlockInfo($tiff_data);
 
         // Determine the byte order of the TIFF data.
-        $this->byteOrder = self::getTiffSegmentByteOrder($data_element);
-        $data_element->setByteOrder($this->byteOrder);
+        $this->byteOrder = self::getTiffSegmentByteOrder($tiff_data);
+        $tiff_data->setByteOrder($this->byteOrder);
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for
         // header).
-        $ifd_offset = $data_element->getLong(4);
+        $ifd_offset = $tiff_data->getLong(4);
 
         // If the offset to first IFD is higher than 8, then there may be an
         // image scan (TIFF) in between. Store that in a RawData block.
         if ($ifd_offset > 8) {
             $scan_definition = new ItemDefinition(Collection::get('RawData', ['name' => 'scan']), ItemFormat::BYTE, $ifd_offset - 8);
-            $scan_data_window = new DataWindow($data_element, 8, $ifd_offset - 8);
+            $scan_data_window = new DataWindow($tiff_data, 8, $ifd_offset - 8);
             $scan = new RawData($scan_definition, $this);
             $scan->parseData($scan_data_window);
         }
@@ -72,7 +71,6 @@ class Tiff extends BlockBase
             // IFD1 shouldn't link further.
             if ($ifd_offset === 2) {
                 $this->error('IFD1 should not link to another IFD');
-                $valid = false;
                 break;
             }
 
@@ -81,19 +79,18 @@ class Tiff extends BlockBase
                 // be split in windows since any pointer will refer to the
                 // entire segment space.
                 $ifd_class = $this->getCollection()->getItemCollection($i)->getPropertyValue('class');
-                $ifd_tags_count = $data_element->getShort($ifd_offset);
+                $ifd_tags_count = $tiff_data->getShort($ifd_offset);
                 $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), ItemFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
                 $ifd = new $ifd_class($ifd_item, $this);
-                $ifd->parseData($data_element);
+                $ifd->parseData($tiff_data);
 
                 // Offset to next IFD.
-                $ifd_offset = $data_element->getLong($ifd_offset + $ifd_tags_count * 12 + 2);
+                $ifd_offset = $tiff_data->getLong($ifd_offset + $ifd_tags_count * 12 + 2);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
                     'msg' => $e->getMessage(),
                 ]);
-                $valid = false;
                 break;
             }
 
@@ -103,7 +100,7 @@ class Tiff extends BlockBase
             }
         }
 
-        $this->valid = $valid;
+        $this->valid = true;
     }
 
     /**
