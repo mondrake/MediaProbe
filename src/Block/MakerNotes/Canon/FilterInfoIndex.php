@@ -73,6 +73,9 @@ class FilterInfoIndex extends Index
      */
     public function getComponents()
     {
+        // Components to be passed to the parent IFD are the number of
+        // signed longs in the segment, so determine it from the actual
+        // bytes.
         $size = 2;
         foreach ($this->getMultipleElements('filter') as $filter) {
             $size += strlen($filter->toBytes()) / 4;
@@ -96,7 +99,6 @@ class FilterInfoIndex extends Index
         foreach ($filters as $filter) {
             $bytes .= $filter->toBytes($byte_order);
         }
-//dump(MediaProbe::dumpHexFormatted($bytes));
 
         return $bytes;
     }
