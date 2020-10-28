@@ -71,6 +71,18 @@ class FilterInfoIndex extends Index
     /**
      * {@inheritdoc}
      */
+    public function getComponents()
+    {
+        $size = 2;
+        foreach ($this->getMultipleElements('filter') as $filter) {
+            $size += strlen($filter->toBytes()) / 4;
+        }
+        return $size;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false)
     {
         // Marker header.
@@ -84,7 +96,7 @@ class FilterInfoIndex extends Index
         foreach ($filters as $filter) {
             $bytes .= $filter->toBytes($byte_order);
         }
-dump(MediaProbe::dumpHexFormatted($bytes));
+//dump(MediaProbe::dumpHexFormatted($bytes));
 
         return $bytes;
     }
