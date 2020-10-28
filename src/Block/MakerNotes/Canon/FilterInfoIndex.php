@@ -81,7 +81,7 @@ class FilterInfoIndex extends Index
 
         // The filters.
         foreach ($filters as $filter) {
-            $bytes .= $filter->toByte($byte_order);
+            $bytes .= $filter->toBytes($byte_order);
         }
 
         return $bytes;

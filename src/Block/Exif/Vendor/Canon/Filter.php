@@ -73,6 +73,7 @@ class Filter extends ListBase
         // The id of the filter.
         $bytes .= ConvertBytes::fromLong($this->getAttribute('id'), $byte_order);
 
+        // Build the parameters.
         $params = $this->getMultipleElements('*');
         $data_area_bytes = '';
         foreach ($params as $param) {
