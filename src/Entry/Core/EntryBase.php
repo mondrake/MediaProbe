@@ -84,7 +84,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$this->getParentElement()) {
             return $this->format;
         }
-        if (!$output_format = $this->getParentElement()->getCollection()->getPropertyValue('outputFormat')) {
+        if ($output_format = $this->getParentElement()->getCollection()->getPropertyValue('outputFormat')) {
             return $output_format;
         }
         return $this->format;
