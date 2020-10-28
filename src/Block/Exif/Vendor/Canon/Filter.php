@@ -84,7 +84,7 @@ class Filter extends ListBase
         }
 
         // The length of the filter.
-        $bytes .= ConvertBytes::fromLong(strlen($data_area_bytes), $byte_order);
+        $bytes .= ConvertBytes::fromLong(strlen($data_area_bytes) + 8, $byte_order);
 
         // The number of filter parameters.
         $bytes .= ConvertBytes::fromLong(count($params), $byte_order);
@@ -92,7 +92,6 @@ class Filter extends ListBase
         // Append data area.
         $bytes .= $data_area_bytes;
 
-dump(MediaProbe::dumpHexFormatted($bytes));
         return $bytes;
     }
 

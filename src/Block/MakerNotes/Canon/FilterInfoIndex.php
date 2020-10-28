@@ -83,6 +83,7 @@ class FilterInfoIndex extends Index
         foreach ($filters as $filter) {
             $bytes .= $filter->toBytes($byte_order);
         }
+dump(MediaProbe::dumpHexFormatted($bytes));
 
         return $bytes;
     }
