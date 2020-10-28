@@ -5,16 +5,16 @@ namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 use FileEye\MediaProbe\Entry\Core\Byte;
 
 /**
- * Common handler for Canon FNumber tags.
+ * Common handler for Canon ISO tags.
  */
-class CIFNumber extends Byte
+class ISO extends Byte
 {
     /**
      * {@inheritdoc}
      */
     public function getValue(array $options = [])
     {
-        return exp(($this->value[0] - 8) / 16 * log(2));
+        return 100 * exp(($this->value[0] / 8 - 9) * log(2));
     }
 
     /**
@@ -22,6 +22,6 @@ class CIFNumber extends Byte
      */
     public function toString(array $options = [])
     {
-        return round($this->getValue(), 1);
+        return round($this->getValue());
     }
 }

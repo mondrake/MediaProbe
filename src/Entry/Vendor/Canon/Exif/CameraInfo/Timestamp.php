@@ -2,20 +2,23 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
-use FileEye\MediaProbe\Entry\Core\ShortRev;
+use FileEye\MediaProbe\Entry\Core\Long;
 use FileEye\MediaProbe\MediaProbe;
 
 /**
- * Handler for Canon Focus Distance tags.
+ * Handler for Canon Directory Index tags.
  */
-class CIFocusDistance extends ShortRev
+class Timestamp extends Long
 {
     /**
      * {@inheritdoc}
      */
     public function getValue(array $options = [])
     {
-        return $this->value[0] / 100;
+        if ($this->value[0] === 0) {
+            return '0000:00:00 00:00:00';
+        }
+        return gmdate('Y:m:d H:i:s', $this->value[0]);
     }
 
     /**
@@ -23,6 +26,6 @@ class CIFocusDistance extends ShortRev
      */
     public function toString(array $options = [])
     {
-        return $this->getValue() > 655.345 ? "inf" : round($this->getValue(), 2) . ' m';
+        return $this->getValue();
     }
 }

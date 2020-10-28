@@ -146,7 +146,7 @@ items:
                 DOMNode: 'Canon:FlashGuideNumber'
                 desc: 'Flash Guide Number'
     14:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfoAFPointsInFocus
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo\AFPointsInFocus
         exiftool:
             -
                 name: AFPointsInFocus
@@ -207,7 +207,7 @@ items:
                     1: 'Camera Local Control'
                     3: 'Computer Remote Control'
     19:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfoFocusDistanceUpper
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo\FocusDistanceUpper
         exiftool:
             -
                 name: FocusDistanceUpper
@@ -216,7 +216,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceUpper'
                 desc: 'Focus Distance Upper'
     20:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfoFocusDistanceLower
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo\FocusDistanceLower
         exiftool:
             -
                 name: FocusDistanceLower
@@ -225,7 +225,7 @@ items:
                 DOMNode: 'Canon:FocusDistanceLower'
                 desc: 'Focus Distance Lower'
     21:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfoFNumber
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ShotInfo\FNumber
         exiftool:
             -
                 name: FNumber

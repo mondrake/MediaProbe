@@ -8,7 +8,7 @@ use FileEye\MediaProbe\MediaProbe;
 /**
  * Handler for Canon ShotInfo AFPointsInFocus tags.
  */
-class ShotInfoAFPointsInFocus extends SignedShort
+class AFPointsInFocus extends SignedShort
 {
     /**
      * {@inheritdoc}

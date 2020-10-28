@@ -8,7 +8,7 @@ use FileEye\MediaProbe\MediaProbe;
 /**
  * Handler for Canon Directory Index tags.
  */
-class CIDirectoryIndex extends Long
+class DirectoryIndex extends Long
 {
     /**
      * {@inheritdoc}

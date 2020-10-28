@@ -8,7 +8,7 @@ use FileEye\MediaProbe\MediaProbe;
 /**
  * Common handler for Canon ExposureTime tags.
  */
-class CIExposureTime extends Byte
+class ExposureTime extends Byte
 {
     /**
      * {@inheritdoc}

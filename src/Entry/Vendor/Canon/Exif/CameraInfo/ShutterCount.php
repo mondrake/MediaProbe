@@ -2,19 +2,20 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
-use FileEye\MediaProbe\Entry\Core\Byte;
+use FileEye\MediaProbe\Entry\Core\Long;
+use FileEye\MediaProbe\MediaProbe;
 
 /**
- * Common handler for Canon Camera Temperature tags.
+ * Handler for Canon File Index tags.
  */
-class CICameraTemperature extends Byte
+class ShutterCount extends Long
 {
     /**
      * {@inheritdoc}
      */
     public function getValue(array $options = [])
     {
-        return $this->value[0] - 128;
+        return $this->value[0] + 1;
     }
 
     /**
@@ -22,6 +23,6 @@ class CICameraTemperature extends Byte
      */
     public function toString(array $options = [])
     {
-        return round($this->getValue());
+        return $this->getValue();
     }
 }

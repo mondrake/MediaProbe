@@ -8,7 +8,7 @@ use FileEye\MediaProbe\MediaProbe;
 /**
  * Handler for Canon Lens Serial Number tags.
  */
-class CILensSerialNumber extends Undefined
+class LensSerialNumber extends Undefined
 {
     /**
      * {@inheritdoc}

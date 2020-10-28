@@ -3,16 +3,16 @@
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
 /**
- * Handler for Canon ShotInfo FocusDistanceUpper tags.
+ * Handler for Canon ShotInfo FocusDistanceLower tags.
  */
-class ShotInfoFocusDistanceUpper extends FocusDistance
+class FocusDistanceLower extends FocusDistance
 {
     /**
      * {@inheritdoc}
      */
     public function getValue(array $options = [])
     {
-        if ($alternative = $this->getRootElement()->getElement("//makerNote[@name='Canon']/*[@name='CanonFileInfo']/tag[@name='FocusDistanceUpper']/entry")) {
+        if ($alternative = $this->getRootElement()->getElement("//makerNote[@name='Canon']/*[@name='CanonFileInfo']/tag[@name='FocusDistanceLower']/entry")) {
             return $alternative->getValue($options);
         } else {
             return $this->value[0] / 100;

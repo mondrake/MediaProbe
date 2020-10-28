@@ -2,19 +2,20 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
-use FileEye\MediaProbe\Entry\Core\Byte;
+use FileEye\MediaProbe\Entry\Core\Long;
+use FileEye\MediaProbe\MediaProbe;
 
 /**
- * Common handler for Canon Macro Magnification tags.
+ * Handler for Canon File Index tags.
  */
-class CIMacroMagnification extends Byte
+class FileIndex extends Long
 {
     /**
      * {@inheritdoc}
      */
     public function getValue(array $options = [])
     {
-        return exp((75 - $this->value[0]) * log(2) * 3 / 40);
+        return $this->value[0] + 1;
     }
 
     /**
@@ -22,6 +23,6 @@ class CIMacroMagnification extends Byte
      */
     public function toString(array $options = [])
     {
-        return round($this->getValue());
+        return $this->getValue();
     }
 }
