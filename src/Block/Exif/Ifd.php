@@ -52,8 +52,7 @@ class Ifd extends ListBase
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
                     $item_data_window_size = $item_definition->getValuesCount() > 0 ? $item_definition->getSize() : 4;
-                    $item_data_window = new DataWindow($data_element, $item_definition->getDataOffset(), $item_data_window_size);
-                    $item->parseData($item_data_window);
+                    $item->parseData($data_element, $item_definition->getDataOffset(), $item_data_window_size);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
@@ -371,7 +370,7 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = new DataWindow($d, $maker_note_tag->getElement("entry")->getValue()[1]);
-        $ifd->parseData($data, -$maker_note_tag->getElement("entry")->getValue()[1]);
+        $ifd->parseData($data, $maker_note_tag->getElement("entry")->getValue()[1], null, -$maker_note_tag->getElement("entry")->getValue()[1]);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
