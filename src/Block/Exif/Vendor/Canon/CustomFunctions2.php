@@ -28,7 +28,7 @@ class CustomFunctions2 extends ListBase
     {
         $functions_data = new DataWindow($data_element, $start, $size);
 
-        $rec_pos = $offset;
+        $rec_pos = 0;
         for ($n = 0; $n < $this->getDefinition()->getValuesCount(); $n++) {
             $id = $functions_data->getLong($rec_pos);
             $num = $functions_data->getLong($rec_pos + 4);
