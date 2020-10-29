@@ -33,7 +33,7 @@ class Map extends Index
         // Preserve the entire map as a raw data block.
         $this
             ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']), ItemFormat::BYTE))
-            ->parseData($map_data);
+            ->parseData($map_data, 0, $size);
 
         $i = 0;
         $offset = 0;
