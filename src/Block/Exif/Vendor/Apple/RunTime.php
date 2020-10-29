@@ -21,16 +21,15 @@ class RunTime extends ListBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        if ($size === null) {
-            $size = $data_element->getSize();
-        }
+        $runtime_data = new DataWindow($data_element, $start, $size);
+        $size = $runtime_data->getSize();
 
         $this->debug("plist:{ifdname}", [
             'ifdname' => $this->getAttribute('name'),
         ]);
 
         $plist = new CFPropertyList();
-        $plist->parse($data_element->getBytes($offset, $this->getDefinition()->getValuesCount()));
+        $plist->parse($runtime_data->getBytes(0, $this->getDefinition()->getValuesCount()));
 
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {
@@ -46,7 +45,7 @@ class RunTime extends ListBase
         $this->valid = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($data_element);
+        $this->executePostLoadCallbacks($runtime_data);
     }
 
     /**
