@@ -25,7 +25,9 @@ class Map extends Index
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
+dump('data element', MediaProbe::dumpHexFormatted($data_element->getBytes()));
         $map_data = new DataWindow($data_element, $start, $size);
+dump('map data', MediaProbe::dumpHexFormatted($map_data->getBytes()));
         $this->debugBlockInfo($map_data);
 
         $this->validate($map_data);
