@@ -53,7 +53,7 @@ class CustomFunctions2Header extends ListBase
         $pos = $offset + 8;
         for ($i = 0; $i < $groups_count; $i++) {
             $rec_num = $functions_header_data->getLong($pos);
-            $rec_len = $functions_header_data->getLong($pos + 4);
+            $rec_len = min($functions_header_data->getLong($pos + 4), $functions_header_data->getSize() - $pos);
             $rec_count = $functions_header_data->getLong($pos + 8);
             $this->debug("index:{name} group {num} with {tags} tags, size {size} @{offset}", [
                 'name' => $this->getAttribute('name'),
@@ -68,8 +68,7 @@ class CustomFunctions2Header extends ListBase
                 $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($rec_num), ItemFormat::SIGNED_LONG, $rec_count);
                 $class = $item_definition->getCollection()->getPropertyValue('class');
                 $group = new $class($item_definition, $this);
-//                $group->parseData($functions_header_data, $pos, $rec_len);
-                $group->parseData($functions_header_data, $pos);
+                $group->parseData($functions_header_data, $pos, $rec_len);
             } catch (\Exception $e) {
                 $this->error($e->getMessage());
                 throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
