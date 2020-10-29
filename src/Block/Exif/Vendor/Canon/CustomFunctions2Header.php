@@ -68,7 +68,8 @@ class CustomFunctions2Header extends ListBase
                 $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($rec_num), ItemFormat::SIGNED_LONG, $rec_count);
                 $class = $item_definition->getCollection()->getPropertyValue('class');
                 $group = new $class($item_definition, $this);
-                $group->parseData($functions_header_data, $pos, $rec_len);
+//                $group->parseData($functions_header_data, $pos, $rec_len);
+                $group->parseData($functions_header_data, $pos);
             } catch (\Exception $e) {
                 $this->error($e->getMessage());
                 throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
