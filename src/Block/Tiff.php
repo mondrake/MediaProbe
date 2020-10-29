@@ -46,6 +46,7 @@ class Tiff extends BlockBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
+dump('TIFF', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 50)));
         // Determine the byte order of the TIFF data.
         $this->byteOrder = self::getTiffSegmentByteOrder($data_element);
         $data_element->setByteOrder($this->byteOrder);
