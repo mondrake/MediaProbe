@@ -176,6 +176,7 @@ dump('TIFF', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 50)));
      */
     public static function getTiffSegmentByteOrder(DataElement $data_element, int $offset = 0)
     {
+dump('TIFF check', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 50)));
         // There must be at least 8 bytes available: 2 bytes for the byte
         // order, 2 bytes for the TIFF header, and 4 bytes for the offset to
         // the first IFD.
