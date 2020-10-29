@@ -51,7 +51,7 @@ class Tiff extends BlockBase
 dump('TIFF', MediaProbe::dumpHexFormatted($tiff_data->getBytes(0, 10)));
         // Determine the byte order of the TIFF data.
         $this->byteOrder = self::getTiffSegmentByteOrder($tiff_data);
-        $data_element->setByteOrder($this->byteOrder);
+        $tiff_data->setByteOrder($this->byteOrder);
 
         $this->debugBlockInfo($tiff_data);
 
@@ -231,7 +231,7 @@ dump('TIFF check', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 10)))
             'name' => $name,
             'title' => $title,
             'byte_order' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
-            'byte_order_description' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
+            'byte_order_description' => $data_element->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
             'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);

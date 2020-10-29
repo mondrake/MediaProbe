@@ -24,6 +24,7 @@ class Exif extends BlockBase
      *
      * The Exif data must start with these six bytes to be considered valid.
      */
+    // @todo xxx the trailing bytes may not be zeros
     const EXIF_HEADER = "Exif\0\0";
 
     /**
@@ -36,10 +37,9 @@ class Exif extends BlockBase
         $this->debugBlockInfo($exif_data);
 
         if (Tiff::getTiffSegmentByteOrder($exif_data, strlen(self::EXIF_HEADER)) !== null) {
-//dump('EXIF data', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 50)), 'EXIF exif', MediaProbe::dumpHexFormatted($exif_data->getBytes(0, 50)));
             $this
                 ->addItem('Tiff')
-                ->parseData($exif_data, strlen(self::EXIF_HEADER));
+                ->parseData($exif_data, strlen(self::EXIF_HEADER), $exif_data->getSize() - strlen(self::EXIF_HEADER));
         } else {
             // We store the data as normal JPEG content if it could not be
             // parsed as Tiff data.
