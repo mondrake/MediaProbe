@@ -27,7 +27,7 @@ class CustomFunctions2Header extends ListBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $functions_header_data = new DataWindow($data_element, $offset, $size);
+        $functions_header_data = new DataWindow($data_element, $start, $size);
         $this->debugBlockInfo($functions_header_data);
 
         $offset = 0;

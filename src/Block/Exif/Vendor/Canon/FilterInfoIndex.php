@@ -39,7 +39,7 @@ class FilterInfoIndex extends Index
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $filter_info_data = new DataWindow($data_element, $offset, $size);
+        $filter_info_data = new DataWindow($data_element, $start, $size);
         $this->debugBlockInfo($filter_info_data);
 
         $offset = 0;

@@ -38,7 +38,7 @@ class Filter extends ListBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $filter_data = new DataWindow($data_element, $offset, $size);
+        $filter_data = new DataWindow($data_element, $start, $size);
         $offset = 0;
 
         // The id of the filter is at offset 0.

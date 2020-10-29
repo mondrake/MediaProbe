@@ -63,7 +63,7 @@ class RawData extends BlockBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $raw_data = new DataWindow($data_element, $offset, $size);
+        $raw_data = new DataWindow($data_element, $start, $size);
         $this->debugBlockInfo($raw_data);
         new Undefined($this, [$raw_data->getBytes()]);
         $this->valid = true;

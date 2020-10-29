@@ -14,6 +14,6 @@ class Thumbnail extends BlockBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $thumbnail_data = new DataWindow($data_element, $offset, $size);
+        $thumbnail_data = new DataWindow($data_element, $start, $size);
     }
 }
