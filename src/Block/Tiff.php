@@ -48,7 +48,6 @@ class Tiff extends BlockBase
     {
         $tiff_data = new DataWindow($data_element, $start, $size);
 
-dump('TIFF', MediaProbe::dumpHexFormatted($tiff_data->getBytes(0, 10)));
         // Determine the byte order of the TIFF data.
         $this->byteOrder = self::getTiffSegmentByteOrder($tiff_data);
         $tiff_data->setByteOrder($this->byteOrder);
@@ -177,7 +176,6 @@ dump('TIFF', MediaProbe::dumpHexFormatted($tiff_data->getBytes(0, 10)));
      */
     public static function getTiffSegmentByteOrder(DataElement $data_element, int $offset = 0)
     {
-dump('TIFF check', MediaProbe::dumpHexFormatted($data_element->getBytes(0, 10)));
         // There must be at least 8 bytes available: 2 bytes for the byte
         // order, 2 bytes for the TIFF header, and 4 bytes for the offset to
         // the first IFD.
