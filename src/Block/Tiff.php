@@ -46,12 +46,12 @@ class Tiff extends BlockBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
+        // Determine the byte order of the TIFF data.
+        $this->byteOrder = self::getTiffSegmentByteOrder($data_element);
+        $data_element->setByteOrder($this->byteOrder);
+
         $tiff_data = new DataWindow($data_element, $start, $size);
         $this->debugBlockInfo($tiff_data);
-
-        // Determine the byte order of the TIFF data.
-        $this->byteOrder = self::getTiffSegmentByteOrder($tiff_data);
-        $tiff_data->setByteOrder($this->byteOrder);
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for
         // header).
@@ -199,5 +199,38 @@ class Tiff extends BlockBase
         }
 
         return $order;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function debugBlockInfo(?DataElement $data_element = null)
+    {
+        $msg = '{node}';
+        $node = $this->DOMNode->nodeName;
+        $name = $this->getAttribute('name');
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($title ==! null) {
+            $msg .= ' ({title})';
+        }
+        $msg .= ' byte order {byte_order} ({byte_order_description})';
+        if ($data_element instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}';
+            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+        } else {
+            $msg .= ' size {size} byte(s)';
+        }
+        $this->debug($msg, [
+            'node' => $node,
+            'name' => $name,
+            'title' => $title,
+            'byte_order' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM';
+            'byte_order_description}' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian';
+            'offset' => $offset ?? null,
+            'size' => $data_element ? $data_element->getSize() : null,
+        ]);
     }
 }
