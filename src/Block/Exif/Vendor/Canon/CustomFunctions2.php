@@ -26,7 +26,7 @@ class CustomFunctions2 extends ListBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
-        $functions_data = new DataWindow($data_element, $offset, $size);
+        $functions_data = new DataWindow($data_element, $start, $size);
 
         $rec_pos = $offset;
         for ($n = 0; $n < $this->getDefinition()->getValuesCount(); $n++) {
