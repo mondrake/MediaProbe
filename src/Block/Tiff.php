@@ -227,8 +227,8 @@ class Tiff extends BlockBase
             'node' => $node,
             'name' => $name,
             'title' => $title,
-            'byte_order' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM';
-            'byte_order_description}' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian';
+            'byte_order' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
+            'byte_order_description}' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
             'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);
