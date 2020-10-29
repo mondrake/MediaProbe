@@ -19,7 +19,7 @@ class RunTime extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, int $offset = 0, $size = null): void
+    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
         if ($size === null) {
             $size = $data_element->getSize();
