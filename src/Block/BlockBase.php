@@ -133,6 +133,16 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
+     * Gets the size of this Block in bytes.
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0)
