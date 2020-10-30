@@ -79,7 +79,7 @@ class CustomFunctions2Header extends ListBase
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($functions_header_data);
+        $this->executePostParseCallbacks($functions_header_data);
     }
 
     /**

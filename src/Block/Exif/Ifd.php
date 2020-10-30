@@ -62,7 +62,7 @@ class Ifd extends ListBase
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($data_element);
+        $this->executePostParseCallbacks($data_element);
     }
 
     /**

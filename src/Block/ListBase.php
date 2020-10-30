@@ -52,7 +52,7 @@ abstract class ListBase extends BlockBase
      * @param \FileEye\MediaProbe\Data\DataElement $data_element
      *   @todo
      */
-    protected function executePostLoadCallbacks(DataElement $data_element)
+    protected function executePostParseCallbacks(DataElement $data_element)
     {
         $post_load_callbacks = $this->getCollection()->getPropertyValue('postLoad');
         if (!empty($post_load_callbacks)) {

@@ -45,7 +45,7 @@ class RunTime extends ListBase
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($runtime_data);
+        $this->executePostParseCallbacks($runtime_data);
     }
 
     /**

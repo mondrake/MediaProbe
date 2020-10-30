@@ -64,7 +64,7 @@ class Map extends Index
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($map_data);
+        $this->executePostParseCallbacks($map_data);
     }
 
     /**

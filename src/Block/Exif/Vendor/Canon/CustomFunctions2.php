@@ -61,7 +61,7 @@ class CustomFunctions2 extends ListBase
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($functions_data);
+        $this->executePostParseCallbacks($functions_data);
     }
 
     /**

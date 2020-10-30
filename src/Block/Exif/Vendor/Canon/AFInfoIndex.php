@@ -61,7 +61,7 @@ class AFInfoIndex extends Index
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($index_data);
+        $this->executePostParseCallbacks($index_data);
     }
 
     /**
