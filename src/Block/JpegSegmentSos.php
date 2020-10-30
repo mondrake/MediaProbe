@@ -40,15 +40,15 @@ class JpegSegmentSos extends JpegSegmentBase
 
         // Append the EOI.
         $end_offset = $scan_size;
-        $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
+/*        $eoi_collection = ;
         $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
         $eoi_data_window = new DataWindow($data, $end_offset, 2);
-        $eoi->parseData($eoi_data_window);
-/*        $this
-            ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
-            ->parseData($data_element, $offset, $new_offset - $offset);*/
-        $end_offset += $eoi_data_window->getSize();
+        $eoi->parseData($eoi_data_window);*/
+        $this
+            ->addItemWithDefinition(new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI), ItemFormat::BYTE, $end_offset))
+            ->parseData($data, $end_offset, 2);
+        $end_offset += 2;
 
         // Now check to see if there are any trailing data.
         if ($end_offset < $data->getSize()) {

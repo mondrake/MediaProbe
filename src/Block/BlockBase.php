@@ -85,10 +85,13 @@ abstract class BlockBase extends ElementBase
         return new $class($collection, $this);
     }
 
-    public function addItemWithDefinition(ItemDefinition $item_definition): BlockBase
+    /**
+     * @todo
+     */
+    public function addItemWithDefinition(ItemDefinition $item_definition, BlockBase $parent = null): BlockBase
     {
         $class = $item_definition->getCollection()->getPropertyValue('class');
-        return new $class($item_definition, $this);
+        return new $class($item_definition, $parent);
     }
 
     /**
