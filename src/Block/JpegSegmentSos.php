@@ -45,6 +45,9 @@ class JpegSegmentSos extends JpegSegmentBase
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
         $eoi_data_window = new DataWindow($data, $end_offset, 2);
         $eoi->parseData($eoi_data_window);
+/*        $this
+            ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
+            ->parseData($data_element, $offset, $new_offset - $offset);*/
         $end_offset += $eoi_data_window->getSize();
 
         // Now check to see if there are any trailing data.
