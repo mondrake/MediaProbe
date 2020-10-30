@@ -19,7 +19,7 @@ abstract class JpegSegmentBase extends BlockBase
     /**
      * Construct a new JPEG segment object.
      */
-    public function __construct(ItemDefinition $definition, Jpeg $jpeg, JpegSegmentBase $reference_jpeg_segment = null)
+    public function __construct(ItemDefinition $definition, Jpeg $jpeg = null, JpegSegmentBase $reference_jpeg_segment = null)
     {
         $collection = $definition->getCollection();
         parent::__construct($collection, $jpeg, $reference_jpeg_segment);
