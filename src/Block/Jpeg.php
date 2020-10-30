@@ -54,7 +54,7 @@ class Jpeg extends BlockBase
                         'size' => $new_offset - $offset,
                     ]);
                     $this
-                        ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
+                        ->addItem(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
                         ->parseData($data, $offset, $new_offset - $offset);
                 }
                 $offset = $new_offset;
@@ -102,7 +102,7 @@ class Jpeg extends BlockBase
             }
 
             // Load the MediaProbe JPEG segment data.
-            $segment = $this->addItem($segment_id);
+            $segment = $this->addItemFromCollection($segment_id);
             $segment_data_window = new DataWindow($data, $offset, $segment_size);
             $segment->parseData($segment_data_window);
 

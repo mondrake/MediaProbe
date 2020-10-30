@@ -34,7 +34,7 @@ class Exif extends BlockBase
     {
         if (Tiff::getTiffSegmentByteOrder($data, strlen(self::EXIF_HEADER)) !== null) {
             $this
-                ->addItem('Tiff')
+                ->addItemFromCollection('Tiff')
                 ->parseData($data, strlen(self::EXIF_HEADER), $data->getSize() - strlen(self::EXIF_HEADER));
         } else {
             // We store the data as normal JPEG content if it could not be

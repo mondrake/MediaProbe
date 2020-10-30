@@ -43,7 +43,7 @@ class FilterInfoIndex extends Index
 
         // The first 4 bytes is a marker (?), store as RawData.
         $this
-            ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4))
+            ->addItem(new ItemDefinition(Collection::get('RawData', ['name' => 'filterHeader']), ItemFormat::BYTE, 4))
             ->parseData(new DataWindow($data, $offset, 4));
         $offset += 4;
 
@@ -58,7 +58,7 @@ class FilterInfoIndex extends Index
         for ($i = 0; $i < $index_components; $i++) {
             $filter_size = $data->getLong($offset + 4);
             $this
-                ->addItemWithDefinition(new ItemDefinition(Collection::get('MakerNotes\Canon\Filter'), ItemFormat::BYTE, $filter_size, $offset, 0, $i))
+                ->addItem(new ItemDefinition(Collection::get('MakerNotes\Canon\Filter'), ItemFormat::BYTE, $filter_size, $offset, 0, $i))
                 ->parseData(new DataWindow($data, $offset, $filter_size + 4));
             $offset += 4 + $filter_size;
         }
