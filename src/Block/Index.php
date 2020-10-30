@@ -48,12 +48,9 @@ class Index extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
+    protected function doParseData(DataElement $data): void
     {
-        $index_data = new DataWindow($data_element, $start, $size);
-        $this->debugBlockInfo($index_data);
-
-        $this->validate($index_data);
+        $this->validate($data);
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
@@ -61,7 +58,7 @@ class Index extends ListBase
         $offset = 0;
         $index_components = $this->getDefinition()->getValuesCount();
         for ($i = 0; $i < $index_components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $index_data, $offset);
+            $item_definition = $this->getItemDefinitionFromData($i, $i, $data, $offset);
 
             // Check if this tag should be skipped.
             if ($item_definition->getCollection()->getPropertyValue('skip')) {
@@ -74,15 +71,10 @@ class Index extends ListBase
             // Adds the 'tag'.
             $this
                 ->addItemWithDefinition($item_definition)
-                ->parseData($index_data, $item_definition->getDataOffset(), $item_definition->getSize());
+                ->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
 
             $offset += $item_definition->getSize();
         }
-
-        $this->parsed = true;
-
-        // Invoke post-load callbacks.
-        $this->executePostParseCallbacks($index_data);
     }
 
     /**

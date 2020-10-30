@@ -23,19 +23,14 @@ class Map extends Index
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
+    protected function doParseData(DataElement $data): void
     {
-//dump('data element', $data_element->getAbsoluteOffset(), $start, $size, MediaProbe::dumpHexFormatted($data_element->getBytes(0, min(100, $size))));
-        $map_data = new DataWindow($data_element, $start, $size);
-//dump('map data', $map_data->getAbsoluteOffset(), MediaProbe::dumpHexFormatted($map_data->getBytes()));
-        $this->debugBlockInfo($map_data);
-
-        $this->validate($map_data);
+        $this->validate($data);
 
         // Preserve the entire map as a raw data block.
         $this
             ->addItemWithDefinition(new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']), ItemFormat::BYTE))
-            ->parseData($map_data, 0, $size);
+            ->parseData($data, 0, $size);
 
         $i = 0;
         $offset = 0;
@@ -50,21 +45,16 @@ class Map extends Index
                     throw new DataException("Offset $n out of bounds");
                 }
 
-                $item_definition = $this->getItemDefinitionFromData($i, $item, $map_data, $n);
+                $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
                 $item_class = $item_definition->getCollection()->getPropertyValue('class');
                 $item = new $item_class($item_definition, $this);
-                $item->parseData($map_data, $item_definition->getDataOffset(), $item_definition->getSize());
+                $item->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
                 $this->notice($e->getMessage());
             }
 
             $i++;
         }
-
-        $this->parsed = true;
-
-        // Invoke post-load callbacks.
-        $this->executePostParseCallbacks($map_data);
     }
 
     /**

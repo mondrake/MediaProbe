@@ -19,6 +19,7 @@ class RawData extends BlockBase
      * The data length.
      */
     protected $components;
+
     // xx
     protected $definition;
 
@@ -61,12 +62,9 @@ class RawData extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
+    protected function doParseData(DataElement $data): void
     {
-        $raw_data = new DataWindow($data_element, $start, $size);
-        $this->debugBlockInfo($raw_data);
-        new Undefined($this, [$raw_data->getBytes()]);
-        $this->parsed = true;
+        new Undefined($this, [$data->getBytes()]);
     }
 
     /**
@@ -74,7 +72,7 @@ class RawData extends BlockBase
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0)
     {
-        return $this->getElement("entry")->toBytes();  // xxx ????
+        return $this->getElement('entry')->toBytes();
     }
 
     /**
