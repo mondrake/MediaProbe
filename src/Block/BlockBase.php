@@ -28,6 +28,13 @@ abstract class BlockBase extends ElementBase
     protected $collection;
 
     /**
+     * The size of this Block in bytes.
+     *
+     * @var \FileEye\MediaProbe\Collection
+     */
+    protected $size;
+
+    /**
      * Constructs a Block object.
      *
      * @param \FileEye\MediaProbe\Collection $collection
@@ -58,6 +65,21 @@ abstract class BlockBase extends ElementBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
     {
+        $data = new DataWindow($data_element, $start, $size);
+        $this->size = $data->getSize();
+        $this->debugBlockInfo($data);
+        $this->doParseData($data);
+        $this->parsed = true;
+    }
+
+    /**
+     * Parse data into a MediaProbe block.
+     *
+     * @param DataElement $data_element
+     *   The data element that will provide the data.
+     */
+    protected function doParseData(DataElement $data): void
+    {
         throw new MediaProbeException("%s does not implement the %s method.", get_called_class(), __FUNCTION__);
     }
 
@@ -71,10 +93,13 @@ abstract class BlockBase extends ElementBase
         return new $class($collection, $this);
     }
 
-    public function addItemWithDefinition(ItemDefinition $item_definition): BlockBase
+    /**
+     * @todo
+     */
+    public function addItemWithDefinition(ItemDefinition $item_definition, BlockBase $parent = null, BlockBase $reference = null): BlockBase
     {
         $class = $item_definition->getCollection()->getPropertyValue('class');
-        return new $class($item_definition, $this);
+        return new $class($item_definition, $parent, $reference);
     }
 
     /**
