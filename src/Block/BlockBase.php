@@ -71,7 +71,7 @@ abstract class BlockBase extends ElementBase
         $this->doParseData($data);
         $this->parsed = true;
 
-        // Invoke post-load callbacks.
+        // Invoke post-parse callbacks.
         $this->executePostParseCallbacks($data);
     }
 

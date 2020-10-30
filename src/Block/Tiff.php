@@ -50,7 +50,10 @@ class Tiff extends BlockBase
         $this->byteOrder = self::getTiffSegmentByteOrder($data);
         $data->setByteOrder($this->byteOrder);
 
-        $this->debugBlockInfo($data);
+        $this->debug('Byte order {byte_order} ({byte_order_description})', [
+            'byte_order' => $this->byteOrder === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
+            'byte_order_description' => $this->byteOrder === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
+        ]);
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for
         // header).
@@ -213,7 +216,6 @@ class Tiff extends BlockBase
         if ($title ==! null) {
             $msg .= ' ({title})';
         }
-        $msg .= ' byte order {byte_order} ({byte_order_description})';
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} size {size}';
             $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
@@ -224,8 +226,6 @@ class Tiff extends BlockBase
             'node' => $node,
             'name' => $name,
             'title' => $title,
-            'byte_order' => $data_element->getDataElement()->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
-            'byte_order_description' => $data_element->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
             'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
         ]);

@@ -47,8 +47,6 @@ class Filter extends ListBase
         $this->paramsCount = $data->getLong($offset + 8);
         $offset += 12;
 
-        $this->debugBlockInfo($data);
-
         // Loop and parse through the parameters.
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = $data->getLong($offset);
