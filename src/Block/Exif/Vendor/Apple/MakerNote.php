@@ -60,7 +60,7 @@ class MakerNote extends Ifd
         $this->parsed = true;
 
         // Invoke post-load callbacks.
-        $this->executePostLoadCallbacks($data_element);
+        $this->executePostParseCallbacks($data_element);
     }
 
     /**

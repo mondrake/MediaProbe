@@ -50,7 +50,7 @@ class Tiff extends BlockBase
         $this->byteOrder = self::getTiffSegmentByteOrder($data);
         $data->setByteOrder($this->byteOrder);
 
-        $this->debug('Byte order {byte_order} ({byte_order_description})', [
+        $this->debug('byte order: {byte_order} ({byte_order_description})', [
             'byte_order' => $this->byteOrder === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
             'byte_order_description' => $this->byteOrder === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
         ]);
