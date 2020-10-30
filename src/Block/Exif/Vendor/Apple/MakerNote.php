@@ -23,9 +23,8 @@ class MakerNote extends Ifd
     /**
      * {@inheritdoc}
      */
-    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null, $xxx = 0): void
+    protected function doParseData(DataElement $data): void
     {
-        $size = $data_element->getSize();
         $offset = $this->getDefinition()->getDataOffset();
 
         // Load Apple's header as a raw data block.
@@ -57,11 +56,6 @@ class MakerNote extends Ifd
                 $item->error($e->getMessage());
             }
         }
-
-        $this->parsed = true;
-
-        // Invoke post-load callbacks.
-        $this->executePostParseCallbacks($data_element);
     }
 
     /**
