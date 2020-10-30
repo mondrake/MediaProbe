@@ -101,13 +101,13 @@ class Jpeg extends BlockBase
                     break;
             }
 
-            // Load the MediaProbe JPEG segment data.
-            $segment = $this->addItemFromCollection($segment_id);
-            $segment_data_window = new DataWindow($data, $offset, $segment_size);
-            $segment->parseData($segment_data_window);
+            // Parse the MediaProbe JPEG segment data.
+            $segment = $this
+                ->addItemFromCollection($segment_id)
+                ->parseData($data, $offset, $segment_size);
 
             // Position to end of the segment.
-            $offset += $segment_data_window->getSize();
+            $offset += $segment->getSize();
         }
 
         // Fail if EOI is missing.
