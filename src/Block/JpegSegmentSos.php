@@ -40,14 +40,14 @@ class JpegSegmentSos extends JpegSegmentBase
 
         // Append the EOI.
         $end_offset = $scan_size;
-/*        $eoi_collection = ;
+        $eoi_collection = $this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI);
         $eoi_class = $eoi_collection->getPropertyValue('class');
         $eoi = new $eoi_class($eoi_collection, $this->getParentElement());
         $eoi_data_window = new DataWindow($data, $end_offset, 2);
-        $eoi->parseData($eoi_data_window);*/
-        $this
+        $eoi->parseData($eoi_data_window);
+/*        $this
             ->addItemWithDefinition(new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection(self::JPEG_EOI), ItemFormat::BYTE, $end_offset))
-            ->parseData($data, $end_offset, 2);
+            ->parseData($data, $end_offset, 2);*/
         $end_offset += 2;
 
         // Now check to see if there are any trailing data.
