@@ -35,9 +35,9 @@ class Jpeg extends BlockBase
         // JPEG data is stored in big-endian format.
         $data->setByteOrder(ConvertBytes::BIG_ENDIAN);
 
-        // Run through the data to read the segments in the image. After each
-        // segment is read, the offset will be moved forward, and after the last
-        // segment we will terminate.
+        // Run through the data to parse the segments in the image. After each
+        // segment is parsed, the offset will be moved forward, and after the
+        // last segment we will terminate.
         $offset = 0;
         while ($offset < $data->getSize()) {
             // Get the next JPEG segment id offset.
@@ -102,9 +102,8 @@ class Jpeg extends BlockBase
             }
 
             // Parse the MediaProbe JPEG segment data.
-            $segment = $this
-                ->addItemFromCollection($segment_id)
-                ->parseData($data, $offset, $segment_size);
+            $segment = $this->addItemFromCollection($segment_id);
+            $segment->parseData($data, $offset, $segment_size);
 
             // Position to end of the segment.
             $offset += $segment->getSize();
