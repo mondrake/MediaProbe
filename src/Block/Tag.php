@@ -33,7 +33,7 @@ class Tag extends BlockBase
     public function validate()
     {
         // Check if MediaProbe has a definition for this TAG.
-        if (in_array($this->collection->getId(), ['VoidCollection', 'UnknownTag'])) {
+        if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
             $this->notice("No specification for item {item} in '{ifd}'", [
                 'item' => $this->getCollection()->getId(),
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
@@ -53,7 +53,7 @@ class Tag extends BlockBase
             }
 
             // Warn if components are not as expected.
-            $expected_components = $this->collection->getPropertyValue('components');
+            $expected_components = $this->getCollection()->getPropertyValue('components');
             if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
                 $this->warning("Found {components} data components, expected {expected_components}", [
                     'components' => $this->getComponents(),

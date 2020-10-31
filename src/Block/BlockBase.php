@@ -52,20 +52,30 @@ abstract class BlockBase extends ElementBase
     {
         $this->definition = $definition;
 
-        parent::__construct($definition->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
+        parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
 
-        if ($definition->getCollection()->hasProperty('item')) {
-            $this->setAttribute('id', $definition->getCollection()->getPropertyValue('item'));
+        if ($this->getCollection()->hasProperty('item')) {
+            $this->setAttribute('id', $this->getCollection()->getPropertyValue('item'));
         }
-        if ($definition->getCollection()->hasProperty('name')) {
-            $this->setAttribute('name', $definition->getCollection()->getPropertyValue('name'));
+        if ($this->getCollection()->hasProperty('name')) {
+            $this->setAttribute('name', $this->getCollection()->getPropertyValue('name'));
         }
     }
 
-
-    public function getDefinition()
+    // xx
+    public function getDefinition(): ItemDefinition
     {
         return $this->definition;
+    }
+
+    /**
+     * Gets the Collection of this Block.
+     *
+     * @return \FileEye\MediaProbe\Collection
+     */
+    public function getCollection(): Collection
+    {
+        return $this->getDefinition()->getCollection();
     }
 
     // xx
@@ -137,16 +147,6 @@ abstract class BlockBase extends ElementBase
     {
         $class = $item_definition->getCollection()->getPropertyValue('class');
         return new $class($item_definition, $parent ?? $this, $reference);
-    }
-
-    /**
-     * Gets the Collection of this Block.
-     *
-     * @return \FileEye\MediaProbe\Collection
-     */
-    public function getCollection()
-    {
-        return $this->collection;
     }
 
     /**
