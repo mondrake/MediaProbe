@@ -131,7 +131,7 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
-     * @todo
+     * @todo xxx
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockBase $parent = null, ?BlockBase $reference = null): BlockBase
     {
