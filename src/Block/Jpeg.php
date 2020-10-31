@@ -53,9 +53,12 @@ class Jpeg extends BlockBase
                         'offset' => $data->getAbsoluteOffset($offset),
                         'size' => $new_offset - $offset,
                     ]);
-                    $this
-                        ->addItem(new ItemDefinition(Collection::get('RawData', ['name' => 'trail']), ItemFormat::BYTE, $offset))
-                        ->parseData($data, $offset, $new_offset - $offset);
+                    $trail = new ItemDefinition(
+                        Collection::get('RawData', ['name' => 'trail']),
+                        ItemFormat::BYTE,
+                        $offset
+                    );
+                    $this->addBlock($trail)->parseData($data, $offset, $new_offset - $offset);
                 }
                 $offset = $new_offset;
             } catch (DataException $e) {

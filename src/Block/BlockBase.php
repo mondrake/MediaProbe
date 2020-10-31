@@ -116,7 +116,7 @@ abstract class BlockBase extends ElementBase
     /**
      * @todo
      */
-    public function addItem(ItemDefinition $item_definition, ?BlockBase $parent = null, ?BlockBase $reference = null): BlockBase
+    public function addBlock(ItemDefinition $item_definition, ?BlockBase $parent = null, ?BlockBase $reference = null): BlockBase
     {
         $class = $item_definition->getCollection()->getPropertyValue('class');
         return new $class($item_definition, $parent ?? $this, $reference);

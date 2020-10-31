@@ -52,7 +52,7 @@ class Index extends ListBase
     {
         $this->validate($data);
 
-        // Loops through the index and loads the tags. If the 'hasIndexSize'
+        // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
@@ -69,9 +69,7 @@ class Index extends ListBase
             $index_components -= ($item_definition->getValuesCount() - 1);
 
             // Adds the 'tag'.
-            $this
-                ->addItem($item_definition)
-                ->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
+            $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
 
             $offset += $item_definition->getSize();
         }

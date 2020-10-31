@@ -55,7 +55,7 @@ class Filter extends ListBase
 
             // The items are defined in the collection of the parent element.
             $this
-                ->addItem(new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count))
+                ->addBlock(new ItemDefinition($this->getParentElement()->getCollection()->getItemCollection($id), ItemFormat::SIGNED_LONG, $val_count))
                 ->parseData(new DataWindow($data, $offset, $val_count * ItemFormat::getSize(ItemFormat::SIGNED_LONG)));
 
             $offset += 4 * $val_count;
