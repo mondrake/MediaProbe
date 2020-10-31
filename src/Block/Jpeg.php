@@ -105,7 +105,7 @@ class Jpeg extends BlockBase
             }
 
             // Parse the MediaProbe JPEG segment data.
-            $segment_definition = new ItemDefinition($segment_collection)
+            $segment_definition = new ItemDefinition($segment_collection);
             $segment = $this->addBlock($segment_definition)->parseData($data, $offset, $segment_size);
 
             // Position to end of the segment.
