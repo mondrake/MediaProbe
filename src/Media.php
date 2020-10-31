@@ -130,10 +130,8 @@ class Media extends BlockBase
         $media = new static($external_logger, $fail_level);
         $media->debugBlockInfo($data_element);
         try {
-            $media_format_class = $media_format_collection->getPropertyValue('class');
-            $media_format = new $media_format_class($media_format_collection, $media);
-            $media_format->parseData($data_element);
-            $media->parsed = true;
+            $media_format = new ItemDefinition($media_format_collection);
+            $media->addBlock($media_format)->parseData($data_element);
         } catch (\Throwable $e) { // @ todo xxx better
             $media->error(get_class($e) . ': ' . $e->getMessage());
         }
