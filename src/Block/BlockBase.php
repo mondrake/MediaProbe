@@ -25,7 +25,7 @@ abstract class BlockBase extends ElementBase
      *
      * @var \FileEye\MediaProbe\Collection
      */
-    protected $collection;
+//    protected $collection;
 
     /**
      * The size of this Block in bytes.
@@ -33,6 +33,9 @@ abstract class BlockBase extends ElementBase
      * @var \FileEye\MediaProbe\Collection
      */
     protected $size;
+
+    // xx
+    protected $definition;
 
     /**
      * Constructs a Block object.
@@ -45,7 +48,7 @@ abstract class BlockBase extends ElementBase
      *            (Optional) if specified, the new Block will be inserted
      *            before the reference Block.
      */
-    public function __construct(Collection $collection, BlockBase $parent = null, BlockBase $reference = null)
+/*    public function __construct(Collection $collection, BlockBase $parent = null, BlockBase $reference = null)
     {
         $this->collection = $collection;
         parent::__construct($collection->getPropertyValue('DOMNode'), $parent, $reference);
@@ -55,6 +58,36 @@ abstract class BlockBase extends ElementBase
         if ($collection->getPropertyValue('name') !== null) {
             $this->setAttribute('name', $collection->getPropertyValue('name'));
         }
+    }*/
+    /**
+     * Base constructor.
+     *
+     * @todo xx
+     */
+    public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)
+    {
+        $this->definition = $definition;
+
+        parent::__construct($definition->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
+
+        if ($definition->getCollection()->hasProperty('item')) {
+            $this->setAttribute('id', $definition->getCollection()->getPropertyValue('item'));
+        }
+        if ($definition->getCollection()->hasProperty('name')) {
+            $this->setAttribute('name', $definition->getCollection()->getPropertyValue('name'));
+        }
+    }
+
+
+    public function getDefinition()
+    {
+        return $this->definition;
+    }
+
+    // xx
+    public function getFormat()
+    {
+        return $this->getDefinition()->getFormat();
     }
 
     /**

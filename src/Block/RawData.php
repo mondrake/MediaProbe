@@ -20,27 +20,6 @@ class RawData extends BlockBase
      */
     protected $components;
 
-    // xx
-    protected $definition;
-
-    /**
-     * Base constructor.
-     *
-     * @todo xx
-     */
-    public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)
-    {
-        $collection = $definition->getCollection();
-
-        parent::__construct($collection, $parent, $reference);
-
-        if ($collection->getPropertyValue('item') !== null) {
-            $this->setAttribute('id', $collection->getPropertyValue('item'));
-        }
-        $this->setAttribute('name', $collection->getPropertyValue('name'));
-        $this->definition = $definition;
-    }
-
     /**
      * xxx
      */

@@ -18,21 +18,12 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Tag extends BlockBase
 {
-    // xx
-    protected $definition;
-
     /**
      * Constructs a Tag block object.
      */
-    public function __construct(ItemDefinition $definition, BlockBase $parent, ElementInterface $reference = null)
+    public function __construct(ItemDefinition $definition, BlockBase $parent = null, ElementInterface $reference = null)
     {
-        $collection = $definition->getCollection();
-
-        parent::__construct($collection, $parent, $reference);
-
-        $this->setAttribute('id', $collection->getPropertyValue('item'));
-
-        $this->definition = $definition;
+        parent::__construct($definition, $parent, $reference);
         $this->validate();
     }
 
