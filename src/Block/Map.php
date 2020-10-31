@@ -28,10 +28,7 @@ class Map extends Index
         $this->validate($data);
 
         // Preserve the entire map as a raw data block.
-        $mapdata = new ItemDefinition(
-            Collection::get('RawData', ['name' => 'mapdata']),
-            ItemFormat::BYTE
-        );
+        $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
         $this->addBlock($mapdata)->parseData($data);
 
         $i = 0;

@@ -180,7 +180,8 @@ class Media extends BlockBase
      */
     public function __construct(?LoggerInterface $external_logger, ?string $fail_level)
     {
-        parent::__construct(Collection::get('Media'));
+        $media = new ItemDefinition(Collection::get('Media'));
+        parent::__construct($media);
         $this->logger = (new Logger('mediaprobe'))
           ->pushHandler(new TestHandler(Logger::INFO))
           ->pushProcessor(new PsrLogMessageProcessor());
