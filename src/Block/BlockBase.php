@@ -133,16 +133,6 @@ abstract class BlockBase extends ElementBase
     /**
      * @todo
      */
-    public function addItemFromCollection(string $collection_id, ?BlockBase $parent = null, ?BlockBase $reference = null): BlockBase
-    {
-        $collection = $this->getCollection()->getItemCollection($collection_id);
-        $class = $collection->getPropertyValue('class');
-        return new $class($collection, $parent ?? $this, $reference);
-    }
-
-    /**
-     * @todo
-     */
     public function addBlock(ItemDefinition $item_definition, ?BlockBase $parent = null, ?BlockBase $reference = null): BlockBase
     {
         $class = $item_definition->getCollection()->getPropertyValue('class');
