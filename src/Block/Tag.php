@@ -102,14 +102,6 @@ class Tag extends BlockBase
     }
 
     /**
-     * {@todo}
-     */
-    public function getDefinition()
-    {
-        return $this->definition;
-    }
-
-    /**
      * {@inheritdoc}
      */
     public function getFormat()
