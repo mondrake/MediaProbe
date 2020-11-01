@@ -13,10 +13,10 @@ use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
- * Class representing a map of values, for Canon Camera information.
+ * Class representing a map of values.
  *
- * In this case, instead of accessing the data sequentially, we determine the
- * CameraInfo map to use and access it directly.
+ * This class is usefule when you have a sparse table of data and want to access
+ * it directly by offset.
  */
 class Map extends Index
 {
@@ -32,25 +32,16 @@ class Map extends Index
         $this->addBlock($mapdata)->parseData($data);
 
         $i = 0;
-//        $offset = 0;
-//        $size = $this->getDefinition()->getSize();
         foreach ($this->getCollection()->listItemIds() as $item) {
             // Adds a 'tag'.
             try {
-//                $n = $offset + ($item * ItemFormat::getSize($this->getFormat()));
                 $n = $item * ItemFormat::getSize($this->getFormat());
-
-                // todo xx manage better the out-of-bounds
-/*                if ($n > $offset + $size - 1) {
-                    throw new DataException("Offset $n out of bounds");
-                }*/
-
                 $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
+dump([$item, $this->getFormat(), $n, $item_definition]);
                 $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
                 $this->notice($e->getMessage());
             }
-
             $i++;
         }
     }
