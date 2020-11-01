@@ -30,12 +30,10 @@ class CameraInfoMap extends Map
 
         // Find the appropriate map collection.
         $mapped = false;
-dump($model, $this->getCollection()->listItemIds());
         foreach ($this->getCollection()->listItemIds() as $map_id) {
             $map_t = $this->getCollection()->getItemCollection($map_id);
-dump($model, $map_t);
             if (preg_match($map_t->getPropertyValue('condition')[0], $model)) {
-                $this->collection = $map_t;
+                $this->definition = new ItemDefinition($map_t);
                 $mapped = true;
                 break;
             }
@@ -43,18 +41,18 @@ dump($model, $map_t);
         if (!$mapped) {
             if ($this->getFormat() === ItemFormat::LONG) {
                 if (in_array($this->getDefinition()->getValuesCount(), [138, 148])) {
-                    $this->collection = $this->getCollection()->getItemCollection('CanonCameraInfoPowerShot');
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot'));
                 } elseif (in_array($this->getDefinition()->getValuesCount(), [156, 162, 167, 171, 264])) {
-                    $this->collection = $this->getCollection()->getItemCollection('CanonCameraInfoPowerShot2');
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot2'));
                 } else {
-                    $this->collection = $this->getCollection()->getItemCollection('CanonCameraInfoUnknown32');
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown32'));
                 }
 // xx todo add when newer exiftoolxml is available
 //            elseif ($this->getFormat() === ItemFormat::SHORT) {
-//                $this->collection = $this->getCollection()->getItemCollection('CanonCameraInfoUnknown16');
+//                $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown16'));
 //            }
             } else {
-                $this->collection = $this->getCollection()->getItemCollection('CanonCameraInfoUnknown');
+                $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown'));
             }
         }
 
