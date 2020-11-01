@@ -311,15 +311,10 @@ class Ifd extends ListBase
             }
             $thumbnail_data = $dataxx->getBytes(0, $size);
 
-            $thumbnail_block = new ItemDefinition(
+            $thumbnail = new ItemDefinition(
                 Collection::get('Thumbnail')
             );
-            $thumbnail = $ifd->addBlock($thumbnail_block);
-            $thumbnail->debug('JPEG thumbnail found at offset {offset} of length {length}', [
-                'offset' => $offset,
-                'length' => $length,
-            ]);
-            $thumbnail->parseData($dataxx);
+            $ifd->addBlock($thumbnail)->parseData($dataxx);
         } catch (DataException $e) {
             $ifd->error($e->getMessage());
         }
