@@ -29,9 +29,9 @@ dump(['a', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
         // Find the appropriate map collection.
         foreach ($this->getCollection()->listItemIds() as $color_data_map) {
             $map_t = $this->getCollection()->getItemCollection($color_data_map);
+dump(['m', $color_data_map, $map_t]);
             if (in_array($this->getDefinition()->getValuesCount(), $map_t->getPropertyValue('condition') ?? [])) {
                 $this->definition = new ItemDefinition($map_t);
-dump(['m', $color_data_map, $this->getCollection()->getItemCollection($color_data_map)]);
 dump(['x', $this->definition]);
                 break;
             }
