@@ -104,6 +104,9 @@ class Index extends ListBase
         return new ItemDefinition($item_collection, $item_format, $item_components, $offset, 0, $seq);
     }
 
+    /**
+     * @todo xxx
+     */
     protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): array
     {
         if ($format === ItemFormat::ASCII) {

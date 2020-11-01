@@ -31,13 +31,13 @@ class Map extends Index
         $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
         $this->addBlock($mapdata)->parseData($data);
 
+dump(['xxx', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
             // Adds a 'tag'.
             try {
                 $n = $item * ItemFormat::getSize($this->getFormat());
                 $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
-dump([$item, $this->getFormat(), $n, $item_definition]);
                 $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
                 $this->notice($e->getMessage());

@@ -23,6 +23,7 @@ class ColorDataMap extends Map
     protected function validate(DataElement $data_element): void
     {
         parent::validate($data_element);
+dump(['a', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
 
         // Find the appropriate map collection.
         foreach ($this->getCollection()->listItemIds() as $color_data_map) {
@@ -32,6 +33,7 @@ class ColorDataMap extends Map
                 break;
             }
         }
+dump(['b', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
         // todo xx unknown
 
         $this->debug("Resolved map to {domnode}:{name}", [
