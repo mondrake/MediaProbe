@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Entry\Core\Undefined;
 
 /**
  * Class used to hold data for a JPEG Thumbnail.
