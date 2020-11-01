@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Tag;
+use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\ItemFormat;
@@ -30,11 +31,11 @@ dump(['a', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
             $map_t = $this->getCollection()->getItemCollection($color_data_map);
             if (in_array($this->getDefinition()->getValuesCount(), $map_t->getPropertyValue('condition') ?? [])) {
                 $this->definition = new ItemDefinition($map_t);
+dump(['m', $color_data_map, Collection::get($color_data_map)]);
 dump(['x', $this->definition]);
                 break;
             }
         }
-dump(['b', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
         // todo xx unknown
 
         $this->debug("Resolved map to {domnode}:{name}", [
