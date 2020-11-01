@@ -45,9 +45,7 @@ class Map extends Index
                 }
 
                 $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
-                $item_class = $item_definition->getCollection()->getPropertyValue('class');
-                $item = new $item_class($item_definition, $this);
-                $item->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
+                $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
                 $this->notice($e->getMessage());
             }
