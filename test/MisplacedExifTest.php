@@ -2,11 +2,12 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Block\Exif\Exif;
-use FileEye\MediaProbe\Block\JpegSegmentApp1;
 use FileEye\MediaProbe\Block\Jpeg;
+use FileEye\MediaProbe\Block\JpegSegmentApp1;
 use FileEye\MediaProbe\Collection;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Media;
 
 class MisplacedExifTest extends MediaProbeTestCaseBase
 {
