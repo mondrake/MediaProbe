@@ -33,7 +33,7 @@ class CameraInfoMap extends Map
         foreach ($this->getCollection()->listItemIds() as $map_id) {
             $map_t = $this->getCollection()->getItemCollection($map_id);
             if (preg_match($map_t->getPropertyValue('condition')[0], $model)) {
-                $this->definition = new ItemDefinition($map_t);
+                $this->definition = new ItemDefinition($map_t, $map_t->getPropertyValue('format')[0]);
                 $mapped = true;
                 break;
             }

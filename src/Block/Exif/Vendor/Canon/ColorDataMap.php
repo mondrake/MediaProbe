@@ -31,7 +31,7 @@ dump(['a', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
             $map_t = $this->getCollection()->getItemCollection($color_data_map);
 dump(['m', $color_data_map, $map_t]);
             if (in_array($this->getDefinition()->getValuesCount(), $map_t->getPropertyValue('condition') ?? [])) {
-                $this->definition = new ItemDefinition($map_t);
+                $this->definition = new ItemDefinition($map_t, $map_t->getPropertyValue('format')[0]);
 dump(['x', $this->definition]);
                 break;
             }
