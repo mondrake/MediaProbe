@@ -132,6 +132,7 @@ class Media extends BlockBase
 //        try {
             $media_format = new ItemDefinition($media_format_collection);
             $media->addBlock($media_format)->parseData($data_element);
+            $media->parsed = true;
 //        } catch (\Throwable $e) { // @ todo xxx better
 //            $media->error(get_class($e) . ': ' . $e->getMessage());
 //        }

@@ -21,11 +21,11 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class BlockBase extends ElementBase
 {
     /**
-     * The Collection of this Block.
+     * The Definition of this Block.
      *
-     * @var \FileEye\MediaProbe\Collection
+     * @var \FileEye\MediaProbe\ItemDefinition
      */
-//    protected $collection;
+    protected $definition;
 
     /**
      * The size of this Block in bytes.
@@ -33,9 +33,6 @@ abstract class BlockBase extends ElementBase
      * @var \FileEye\MediaProbe\Collection
      */
     protected $size;
-
-    // xx
-    protected $definition;
 
     /**
      * Constructs a Block object.
@@ -62,7 +59,11 @@ abstract class BlockBase extends ElementBase
         }
     }
 
-    // xx
+    /**
+     * Gets the Definition of this Block.
+     *
+     * @return \FileEye\MediaProbe\ItemDefinition
+     */
     public function getDefinition(): ItemDefinition
     {
         return $this->definition;
@@ -114,7 +115,7 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
-     * Invoke post-load callbacks.
+     * Invoke post-parse callbacks.
      *
      * @param \FileEye\MediaProbe\Data\DataElement $data_element
      *   @todo
