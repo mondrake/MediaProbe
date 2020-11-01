@@ -309,12 +309,11 @@ class Ifd extends ListBase
                     'size' => $size,
                 ]);
             }
-            $thumbnail_data = $dataxx->getBytes(0, $size);
 
             $thumbnail = new ItemDefinition(
                 Collection::get('Thumbnail')
             );
-            $ifd->addBlock($thumbnail)->parseData($dataxx);
+            $ifd->addBlock($thumbnail)->parseData($dataxx, 0, $size);
         } catch (DataException $e) {
             $ifd->error($e->getMessage());
         }
