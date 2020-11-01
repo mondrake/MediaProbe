@@ -31,7 +31,6 @@ class Map extends Index
         $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
         $this->addBlock($mapdata)->parseData($data);
 
-dump(['xxx', $this->getFormat(), ItemFormat::getSize($this->getFormat())]);
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
             // Adds a 'tag'.
