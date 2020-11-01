@@ -30,8 +30,10 @@ class CameraInfoMap extends Map
 
         // Find the appropriate map collection.
         $mapped = false;
+dump($model, $this->getCollection()->listItemIds());
         foreach ($this->getCollection()->listItemIds() as $map_id) {
             $map_t = $this->getCollection()->getItemCollection($map_id);
+dump($model, $map_t);
             if (preg_match($map_t->getPropertyValue('condition')[0], $model)) {
                 $this->collection = $map_t;
                 $mapped = true;
