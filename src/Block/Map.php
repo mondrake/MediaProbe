@@ -21,6 +21,25 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class Map extends Index
 {
     /**
+     * The data length.
+     */
+    protected $components;
+
+    /**
+     * The format of data.
+     */
+    protected $format;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)
+    {
+        parent::__construct($definition, $parent, $reference);
+dump($definition);
+    }
+
+    /**
      * {@inheritdoc}
      */
     protected function doParseData(DataElement $data): void
@@ -71,10 +90,10 @@ class Map extends Index
     }
 
     /**
-     * @todo not quite right??
+     * {@inheritdoc}
      */
     public function getComponents()
     {
-        return $this->getDefinition()->getValuesCount();
+        return $this->components;
     }
 }
