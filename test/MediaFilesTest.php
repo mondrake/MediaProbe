@@ -155,16 +155,11 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     } else {
                         $expected_tag_value = $this->testDump['exifReadData'][$tag[0]][$tag[1]];
                     }
-//if (($expected['class'] ?? null) === 'FileEye\MediaProbe\Entry\Time') {
-/*if ($element->getParentElement() && $element->getParentElement()->getAttribute('name') === 'UserComment') {
-  dump(MediaProbe::dumpHexFormatted($expected_tag_value));
-  dump(MediaProbe::dumpHexFormatted($element->getValue(['format' => 'phpExif'])));
-}*/
                     $this->assertSame($expected_tag_value, $element->getValue(['format' => 'phpExif']), $element->getContextPath());
                 }
             }
 
-            // Check Exiftool tag equivalence.
+            // Check Exiftool RAW tag equivalence.
             if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {
@@ -213,6 +208,29 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 }*/
                         $this->assertEqualsWithDelta($valx_aa, $vala_aa, 0.001, 'Exiftool raw: ' . $element->getContextPath());
                     }
+                }
+            }
+
+            // Check Exiftool TEXT tag equivalence.
+            if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
+                $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
+                if (!in_array($exiftool_node, $exiftool_node_skip)) {
+                    [$g1, $tag] = explode(':', $exiftool_node);
+                    if ($g1 === '*') {
+                        $ifd = $element->getParentElement()->getParentElement()->getAttribute('name');
+                        $exiftool_node = implode(':', [$ifd, $tag]);
+                    }
+                    $xml_nodes = $this->exiftoolDump->getElementsByTagName('*');
+                    $n = null;
+                    foreach ($xml_nodes as $node) {
+                        if ($node->nodeName === $exiftool_node) {
+                            $n = $node;
+                        }
+                    }
+                    $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
+                    $valx = rtrim($n->textContent, " ");
+                    $vala = $element->getText(['format' => 'exiftool']);
+                    $this->assertSame($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
 
