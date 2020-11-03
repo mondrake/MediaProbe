@@ -32,7 +32,6 @@ class Ifd extends ListBase
     {
         //$ifd_data = new DataWindow($data_element, $start, $size);
         $offset = $this->getDefinition()->getDataOffset();
-//if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);

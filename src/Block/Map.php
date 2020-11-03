@@ -15,7 +15,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 /**
  * Class representing a map of values.
  *
- * This class is usefule when you have a sparse table of data and want to access
+ * This class is useful when you have a sparse table of data and want to access
  * it directly by offset.
  */
 class Map extends Index
@@ -51,6 +51,8 @@ class Map extends Index
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false)
     {
         $data_bytes = $this->getElement("rawData[@name='mapdata']/entry")->getValue();
+//if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
+dump($this->getAttribute('name'), MediaProbe::dumpHexFormatted($data_bytes));
 
         // Dump each tag at the position in the map specified by the item id.
         foreach ($this->getMultipleElements('*[not(self::rawData)]') as $sub_id => $sub) {
