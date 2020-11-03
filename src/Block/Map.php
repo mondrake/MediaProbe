@@ -21,14 +21,14 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class Map extends Index
 {
     /**
-     * The data length.
-     */
-    protected $components;
-
-    /**
-     * The format of data.
+     * The format of map data.
      */
     protected $format;
+
+    /**
+     * The amount of components in the map.
+     */
+    protected $components;
 
     /**
      * {@inheritdoc}
@@ -36,6 +36,8 @@ class Map extends Index
     public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)
     {
         parent::__construct($definition, $parent, $reference);
+        $this->components = $definition->getValuesCount();
+        $this->format = $definition->getFormat();
 dump($definition);
     }
 
@@ -67,6 +69,22 @@ dump($definition);
     /**
      * {@inheritdoc}
      */
+    public function getFormat()
+    {
+        return $this->format;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getComponents()
+    {
+        return $this->components;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false)
     {
         $data_bytes = $this->getElement("rawData[@name='mapdata']/entry")->getValue();
@@ -87,13 +105,5 @@ dump($definition);
         }
 
         return $data_bytes;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getComponents()
-    {
-        return $this->components;
     }
 }
