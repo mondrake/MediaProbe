@@ -28,12 +28,14 @@ class CameraInfoMap extends Map
         $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
         $model = $model_entry ? $model_entry->getValue() : 'n/a';
 
+        $values_count = $this->getDefinition()->getValuesCount();
+
         // Find the appropriate map collection.
         $mapped = false;
         foreach ($this->getCollection()->listItemIds() as $map_id) {
             $map_t = $this->getCollection()->getItemCollection($map_id);
             if (preg_match($map_t->getPropertyValue('condition')[0], $model)) {
-                $this->definition = new ItemDefinition($map_t, $map_t->getPropertyValue('format')[0]);
+                $this->definition = new ItemDefinition($map_t, $map_t->getPropertyValue('format')[0], $values_count);
                 $mapped = true;
                 break;
             }
@@ -41,18 +43,18 @@ class CameraInfoMap extends Map
         if (!$mapped) {
             if ($this->getFormat() === ItemFormat::LONG) {
                 if (in_array($this->getDefinition()->getValuesCount(), [138, 148])) {
-                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot'));
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot'), $map_t->getPropertyValue('format')[0], $values_count);
                 } elseif (in_array($this->getDefinition()->getValuesCount(), [156, 162, 167, 171, 264])) {
-                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot2'));
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoPowerShot2'), $map_t->getPropertyValue('format')[0], $values_count);
                 } else {
-                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown32'));
+                    $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown32'), $map_t->getPropertyValue('format')[0], $values_count);
                 }
 // xx todo add when newer exiftoolxml is available
 //            elseif ($this->getFormat() === ItemFormat::SHORT) {
 //                $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown16'));
 //            }
             } else {
-                $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown'));
+                $this->definition = new ItemDefinition($this->getCollection()->getItemCollection('CanonCameraInfoUnknown'), $map_t->getPropertyValue('format')[0], $values_count);
             }
         }
 

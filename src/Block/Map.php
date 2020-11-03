@@ -52,7 +52,7 @@ class Map extends Index
     {
         $data_bytes = $this->getElement("rawData[@name='mapdata']/entry")->getValue();
 //if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
-dump($this->getAttribute('name'), MediaProbe::dumpHexFormatted($data_bytes));
+//dump($this->getAttribute('name'), MediaProbe::dumpHexFormatted($data_bytes));
 
         // Dump each tag at the position in the map specified by the item id.
         foreach ($this->getMultipleElements('*[not(self::rawData)]') as $sub_id => $sub) {
