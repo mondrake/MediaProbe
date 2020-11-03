@@ -229,8 +229,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     }
                     $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
-                    $vala = $element->toString(['format' => 'exiftool']);
-                    $this->assertSame($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
+                    $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
+                    $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
 
