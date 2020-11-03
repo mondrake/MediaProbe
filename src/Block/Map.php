@@ -38,7 +38,7 @@ class Map extends Index
         parent::__construct($definition, $parent, $reference);
         $this->components = $definition->getValuesCount();
         $this->format = $definition->getFormat();
-dump($definition);
+//dump($definition);
     }
 
     /**
