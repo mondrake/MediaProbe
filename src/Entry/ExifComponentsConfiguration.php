@@ -33,14 +33,13 @@ class ExifComponentsConfiguration extends Undefined
      */
     public function toString(array $options = [])
     {
-        $format = $options['format'] ?? null;
         $value = $this->getValue();
         $v = '';
         for ($i = 0; $i < 4; $i ++) {
             $z = ord($value[$i]);
             $v .= $this->getMappedText($z, $z) ?? MediaProbe::tra('reserved');
             if ($i < 3) {
-                $v .= ', ';
+                $v .= ' ';
             }
         }
         return $v;
