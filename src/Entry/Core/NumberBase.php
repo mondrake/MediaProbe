@@ -198,7 +198,7 @@ abstract class NumberBase extends EntryBase
             return $str;
         }
 
-        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool');
+        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
 
         if ($this->components == 0) {
             return '';

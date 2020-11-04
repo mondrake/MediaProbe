@@ -15,7 +15,7 @@ class ExifExposureTime extends Rational
      */
     public function toString(array $options = [])
     {
-        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool');
+        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
 
         $sec = $short ? ' sec.' : '';
 
