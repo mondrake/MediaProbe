@@ -206,6 +206,7 @@ abstract class NumberBase extends EntryBase
 
         $str = $this->formatNumber($this->value[0], $options);
         for ($i = 1; $i < $this->components; $i ++) {
+if (is_array($str)) dump($str, $short, $this);
             $str .= ($short ? ' ' : ', ');
             $str .= $this->formatNumber($this->value[$i], $options);
         }
