@@ -184,7 +184,7 @@ abstract class NumberBase extends EntryBase
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            return (string) $number;
+            return $number == 0.0 ? '0' : (string) $number;
         }
         return $number;
     }
@@ -204,10 +204,10 @@ abstract class NumberBase extends EntryBase
             return '';
         }
 
-        $str = $this->formatNumber($this->value[0], ['format' => 'core']);
+        $str = $this->formatNumber($this->value[0], $options);
         for ($i = 1; $i < $this->components; $i ++) {
             $str .= ($short ? ' ' : ', ');
-            $str .= $this->formatNumber($this->value[$i], ['format' => 'core']);
+            $str .= $this->formatNumber($this->value[$i], $options);
         }
 
         return $str;
