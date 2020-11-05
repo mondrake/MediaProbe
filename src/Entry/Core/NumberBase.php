@@ -204,11 +204,12 @@ abstract class NumberBase extends EntryBase
             return '';
         }
 
-        $str = $this->formatNumber($this->value[0], ['format' => 'core']);
+        $val = $this->formatNumber($this->value[0], ['format' => 'core']);
+        $str = $val = 0.0 ? '0' : (string) $val;
         for ($i = 1; $i < $this->components; $i ++) {
-//if (is_array($str)) dump($str, $short, $this);
             $str .= ($short ? ' ' : ', ');
-            $str .= $this->formatNumber($this->value[$i], ['format' => 'core']);
+            $val = $this->formatNumber($this->value[0], ['format' => 'core']);
+            $str .= $val = 0.0 ? '0' : (string) $val;
         }
 
         return $str;
