@@ -454,7 +454,7 @@ elements:
                                                                     format: SignedRational
                                                                     components: 1
                                                                     bytesHash: f2f3d219dfaef4ad7dcdeac16fa8e277071029026b1cdd5c694e0e577d20bdbd
-                                                                    text: '0.0'
+                                                                    text: 0
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381'

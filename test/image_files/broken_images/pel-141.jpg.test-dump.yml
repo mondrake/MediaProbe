@@ -162,7 +162,7 @@ elements:
                                                             format: Undefined
                                                             components: 4
                                                             bytesHash: c9ef9bd66be720a334bfda5cb425f28b35f20c5c82cf95c86a41995bdaab34c9
-                                                            text: '0.0'
+                                                            text: 0
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283'
@@ -441,7 +441,7 @@ elements:
                                                             format: SignedRational
                                                             components: 1
                                                             bytesHash: 2fcd151b8295e8b3bf8ec64ede173523417960a8db6cbc569de9a25a458f9135
-                                                            text: '0.0'
+                                                            text: 0
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:MaxApertureValue:37381'
