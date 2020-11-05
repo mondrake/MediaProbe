@@ -150,7 +150,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$text_config = $this->getParentElement()->getCollection()->getPropertyValue('text')) {
             return false;
         }
-dump($text_config);
         return isset($text_config['default']);
     }
 
@@ -161,6 +160,7 @@ dump($text_config);
     {
         if ($this->hasDefaultText()) {
             $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
+dump($text_config);
             return str_replace('{value}', $value, $text_config['default']);
         }
         return null;
