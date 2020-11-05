@@ -1018,7 +1018,7 @@ elements:
                                             format: Short
                                             components: 1
                                             bytesHash: 8e2ada6ef626983be1fe9a365ceeb424ee59b884e144f7541cf191116876de04
-                                            text: 28
+                                            text: 28 mm
                                 -
                                     node: tag
                                     path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:Padding:59932'
@@ -1585,7 +1585,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: b01099398ce27bbcb7ed256854acc338ba75af739e9d73d741dcb13dc4cbfb56
-                                    text: 28
+                                    text: 28 mm
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:SceneCaptureType:41990'

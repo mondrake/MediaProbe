@@ -872,7 +872,7 @@ elements:
                                                                     format: Short
                                                                     components: 1
                                                                     bytesHash: 7c186033295a11388eb388a21e6e25ad05e9b6c45cd3c403dc3fae8a2d19516e
-                                                                    text: 41
+                                                                    text: 41 mm
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SceneCaptureType:41990'
