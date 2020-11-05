@@ -109,6 +109,8 @@ items:
                 DOMNode: '*:BitsPerSample'
                 desc: 'Bits Per Sample'
     259:
+        text:
+            default: 'Unknown ({value})'
         exifReadData:
             key: Compression
         exiftool:

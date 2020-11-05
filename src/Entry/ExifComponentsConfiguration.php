@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Entry;
 
 use FileEye\MediaProbe\Entry\Core\Undefined;
+use FileEye\MediaProbe\MediaProbe;
 
 /**
  * Decode text for an Exif/ComponentsConfiguration tag.
@@ -20,7 +21,7 @@ class ExifComponentsConfiguration extends Undefined
             for ($i = 0; $i < 4; $i ++) {
                 $v .= ord($this->value[$i]);
                 if ($i < 3) {
-                    $v .= ' ';
+                    $v .= ', ';
                 }
             }
             return $v;
@@ -33,14 +34,13 @@ class ExifComponentsConfiguration extends Undefined
      */
     public function toString(array $options = [])
     {
-        $format = $options['format'] ?? null;
         $value = $this->getValue();
         $v = '';
         for ($i = 0; $i < 4; $i ++) {
             $z = ord($value[$i]);
             $v .= $this->getMappedText($z, $z) ?? MediaProbe::tra('reserved');
             if ($i < 3) {
-                $v .= ' ';
+                $v .= ', ';
             }
         }
         return $v;

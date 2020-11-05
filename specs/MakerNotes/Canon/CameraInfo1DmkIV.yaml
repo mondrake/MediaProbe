@@ -161,7 +161,8 @@ items:
                 writable: true
                 desc: 'Color Temperature'
     335:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo\LensType
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: LensType

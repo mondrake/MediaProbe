@@ -3126,6 +3126,8 @@ items:
         alias:
             - FocalLengthIn35mmFilm
         components: 1
+        text:
+            default: '{value} mm'
         exifReadData:
             key: FocalLengthIn35mmFilm
         exiftool:

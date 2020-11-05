@@ -184,7 +184,7 @@ abstract class NumberBase extends EntryBase
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            return (string) $number;
+            return $number == 0.0 ? '0' : (string) $number;
         }
         return $number;
     }
@@ -198,16 +198,18 @@ abstract class NumberBase extends EntryBase
             return $str;
         }
 
-        $short = isset($options['short']) ? $options['short'] : false;
+        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
 
         if ($this->components == 0) {
             return '';
         }
 
-        $str = $this->formatNumber($this->value[0], ['format' => 'core']);
+        $val = $this->formatNumber($this->value[0], ['format' => 'core']);
+        $str = $val = 0.0 ? '0' : (string) $val;
         for ($i = 1; $i < $this->components; $i ++) {
             $str .= ($short ? ' ' : ', ');
-            $str .= $this->formatNumber($this->value[$i], ['format' => 'core']);
+            $val = $this->formatNumber($this->value[$i], ['format' => 'core']);
+            $str .= $val = 0.0 ? '0' : (string) $val;
         }
 
         return $str;

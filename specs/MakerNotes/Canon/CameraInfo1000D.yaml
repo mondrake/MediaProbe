@@ -150,7 +150,8 @@ items:
                 DOMNode: 'Canon:ColorTemperature'
                 desc: 'Color Temperature'
     226:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo\LensType
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: LensType

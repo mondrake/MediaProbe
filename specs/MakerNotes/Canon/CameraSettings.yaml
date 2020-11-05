@@ -12,6 +12,8 @@ compiler:
         xpath: '//table[@name=''Canon::CameraSettings'']/tag'
 items:
     1:
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: MacroMode
@@ -355,6 +357,8 @@ items:
                     - Bulb
     22:
         entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraSettingsLensType
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: LensType
