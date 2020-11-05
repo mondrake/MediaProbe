@@ -12,6 +12,8 @@ compiler:
         xpath: '//table[@name=''Canon::CameraSettings'']/tag'
 items:
     1:
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: MacroMode

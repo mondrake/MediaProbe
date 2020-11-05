@@ -115,6 +115,9 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         return $this->value;
     }
 
+    /**
+     * @todo xxx
+     */
     public function hasMappedText(): bool
     {
         if (!$this->getParentElement()) {
@@ -126,11 +129,40 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         return isset($text_config['mapping']);
     }
 
+    /**
+     * @todo xxx
+     */
     public function getMappedText($value, $default = null, $variant = 0, $key = 0)
     {
         $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
         return $text_config['mapping'][$id] ?? $default;
+    }
+
+    /**
+     * @todo xxx
+     */
+    public function hasDefaultText(): bool
+    {
+        if (!$this->getParentElement()) {
+            return false;
+        }
+        if (!$text_config = $this->getParentElement()->getCollection()->getPropertyValue('text')) {
+            return false;
+        }
+        return isset($text_config['default']);
+    }
+
+    /**
+     * @todo xxx
+     */
+    public function getDefaultText($value): string
+    {
+        if ($this->hasDefaultText()) {
+            $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
+            return str_replace('{value}', $value, $text_config['default']);
+        }
+        return null;
     }
 
     /**
@@ -145,7 +177,10 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!is_scalar($value)) {
             return null;
         }
-        return $this->hasMappedText() ? $this->getMappedText($value, $value) : null;
+        if ($this->hasMappedText()) {
+            return $this->getMappedText($value, $value);
+        }
+        return $this->getDefaultText($value);
     }
 
     /**
