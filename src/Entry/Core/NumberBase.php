@@ -208,7 +208,7 @@ abstract class NumberBase extends EntryBase
         $str = $val = 0.0 ? '0' : (string) $val;
         for ($i = 1; $i < $this->components; $i ++) {
             $str .= ($short ? ' ' : ', ');
-            $val = $this->formatNumber($this->value[0], ['format' => 'core']);
+            $val = $this->formatNumber($this->value[$i], ['format' => 'core']);
             $str .= $val = 0.0 ? '0' : (string) $val;
         }
 
