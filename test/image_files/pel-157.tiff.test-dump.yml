@@ -83,7 +83,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 38fe56907394e1c9b2195701b905ac7b0d54d857cf796d9e7a13cafcd7cdbc27
-                                    text: 3264
+                                    text: '3264'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ImageHeight:257'
@@ -101,7 +101,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 55d17d3d0e4c2da7516d59d4b9d9325b614a4133f8ed81805df1dba7aa7b41aa
-                                    text: 1836
+                                    text: '1836'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:BitsPerSample:258'
@@ -245,7 +245,7 @@ elements:
                                     format: Short
                                     components: 1
                                     bytesHash: c0ba8a33ac67f44abff5984dfbb6f56c46b880ac2b86e1f23e7fa9c402c53ae7
-                                    text: 4
+                                    text: '4'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:RowsPerStrip:278'
@@ -263,7 +263,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450
-                                    text: 1
+                                    text: '1'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageLength:279'
@@ -299,7 +299,7 @@ elements:
                                     format: Rational
                                     components: 1
                                     bytesHash: 278acdbf3a0ae909a9307a167d9e0578e110935c575cd6bf23dbe0fac7f2829f
-                                    text: 72.009
+                                    text: '72.009'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:YResolution:283'
@@ -317,7 +317,7 @@ elements:
                                     format: Rational
                                     components: 1
                                     bytesHash: 278acdbf3a0ae909a9307a167d9e0578e110935c575cd6bf23dbe0fac7f2829f
-                                    text: 72.009
+                                    text: '72.009'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PlanarConfiguration:284'
@@ -495,7 +495,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 961ae28829f0b1cfbd073eff070ac5ea8994618c0e84fab4764367464a14b854
-                                    text: 480
+                                    text: '480'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20513'
@@ -512,7 +512,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: f07ceeff8b659c36d11b8dfaad70c4b861d10b6ada4be2958ce0e3562ee9b999
-                                    text: 272
+                                    text: '272'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20515'
@@ -529,7 +529,7 @@ elements:
                                     format: Short
                                     components: 1
                                     bytesHash: ceb827ad3d3884fd4d50ae6099d6d50c09a21e72ebd309708e8b69d93df19e55
-                                    text: 6
+                                    text: '6'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20521'
@@ -546,7 +546,7 @@ elements:
                                     format: Short
                                     components: 1
                                     bytesHash: 47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254
-                                    text: 1
+                                    text: '1'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20525'
@@ -563,7 +563,7 @@ elements:
                                     format: Rational
                                     components: 1
                                     bytesHash: 2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1
-                                    text: 72
+                                    text: '72'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20526'
@@ -580,7 +580,7 @@ elements:
                                     format: Rational
                                     components: 1
                                     bytesHash: 2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1
-                                    text: 72
+                                    text: '72'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20528'
@@ -597,7 +597,7 @@ elements:
                                     format: Short
                                     components: 1
                                     bytesHash: 99be5efb88ca2013bd8e4eb035fd42d5245468fe9afa70d8ba9c1c419a48c4e8
-                                    text: 2
+                                    text: '2'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:20624'
@@ -748,7 +748,7 @@ elements:
                                             format: Short
                                             components: 1
                                             bytesHash: e4ab5012eff32a5171b3672b59d29950fe8b3dcb4d2dadf971ebbcbc2fbb0d41
-                                            text: 40
+                                            text: '40'
                                 -
                                     node: tag
                                     path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
@@ -874,7 +874,7 @@ elements:
                                             format: SignedRational
                                             components: 1
                                             bytesHash: dd73a46975594b97bfef18db6ea376dafa119d27bfa7b0e2f94e0e3e67420f42
-                                            text: 0
+                                            text: '0'
                                 -
                                     node: tag
                                     path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381'
@@ -1018,7 +1018,7 @@ elements:
                                             format: Short
                                             components: 1
                                             bytesHash: 8e2ada6ef626983be1fe9a365ceeb424ee59b884e144f7541cf191116876de04
-                                            text: 28 mm
+                                            text: '28 mm'
                                 -
                                     node: tag
                                     path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:Padding:59932'
@@ -1189,7 +1189,7 @@ elements:
                                             format: Rational
                                             components: 1
                                             bytesHash: 124035bb2287f592d964eb80afa84b020b7f27380b4f61afb01f11df59338967
-                                            text: 576
+                                            text: '576'
                                 -
                                     node: tag
                                     path: '/media/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSDateStamp:29'
@@ -1225,7 +1225,7 @@ elements:
                                     format: Short
                                     components: 1
                                     bytesHash: e4ab5012eff32a5171b3672b59d29950fe8b3dcb4d2dadf971ebbcbc2fbb0d41
-                                    text: 40
+                                    text: '40'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ExifVersion:36864'
@@ -1351,7 +1351,7 @@ elements:
                                     format: SignedRational
                                     components: 1
                                     bytesHash: dd73a46975594b97bfef18db6ea376dafa119d27bfa7b0e2f94e0e3e67420f42
-                                    text: 0
+                                    text: '0'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:MaxApertureValue:37381'
@@ -1513,7 +1513,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 38fe56907394e1c9b2195701b905ac7b0d54d857cf796d9e7a13cafcd7cdbc27
-                                    text: 3264
+                                    text: '3264'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ExifImageHeight:40963'
@@ -1531,7 +1531,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: 55d17d3d0e4c2da7516d59d4b9d9325b614a4133f8ed81805df1dba7aa7b41aa
-                                    text: 1836
+                                    text: '1836'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ExposureMode:41986'
@@ -1585,7 +1585,7 @@ elements:
                                     format: Long
                                     components: 1
                                     bytesHash: b01099398ce27bbcb7ed256854acc338ba75af739e9d73d741dcb13dc4cbfb56
-                                    text: 28 mm
+                                    text: '28'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:SceneCaptureType:41990'
@@ -1639,7 +1639,7 @@ elements:
                                     format: SignedLong
                                     components: 1
                                     bytesHash: 9149ca79094884dea230de77772c08f5a86b85d0cd4794b1290dcfa6f88f0b23
-                                    text: 447954
+                                    text: '447954'
 log:
     WARNING:
         -

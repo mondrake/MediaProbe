@@ -89,7 +89,6 @@ elements:
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
                             class: FileEye\MediaProbe\Block\Exif\Exif
                             parsed: true
-                            id: Exif
                             collection: Exif
                             elements:
                                 -
@@ -97,7 +96,6 @@ elements:
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
                                     class: FileEye\MediaProbe\Block\Tiff
                                     parsed: true
-                                    id: Tiff
                                     collection: Tiff
                                     elements:
                                         -
@@ -216,7 +214,7 @@ elements:
                                                                     format: Undefined
                                                                     components: 4
                                                                     bytesHash: 6142c2545fc60da377b0bb1b1ac7bfedb5c5f741fd21fc924dfaac20c48cf0b2
-                                                                    text: 0
+                                                                    text: '0.0'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTime:37520'
