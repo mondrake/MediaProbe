@@ -156,7 +156,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function getDefaultText($value): string
+    public function getDefaultText($value): ?string
     {
         if ($this->hasDefaultText()) {
             $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
