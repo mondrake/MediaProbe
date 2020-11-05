@@ -229,7 +229,8 @@ items:
                     - Strong
                     - 'Off'
     230:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraInfo\LensType
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: LensType

@@ -357,6 +357,8 @@ items:
                     - Bulb
     22:
         entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CameraSettingsLensType
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: LensType
