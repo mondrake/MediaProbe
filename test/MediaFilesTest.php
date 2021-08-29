@@ -46,7 +46,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
      */
     public function testParse($mediaDumpFile)
     {
-        $this->testDump = Yaml::parse($mediaDumpFile->getContents());
+        // $this->testDump = Yaml::parse($mediaDumpFile->getContents());
+        $this->testDump = yaml_parse_file($mediaDumpFile);
         if (isset($this->testDump['exiftool'])) {
             $this->exiftoolDump =new \DOMDocument();
             $this->exiftoolDump->loadXML($this->testDump['exiftool']);
