@@ -16,6 +16,14 @@ jobs:
         php-version:
           - "7.4"
     steps:
+    - name: Install PHP
+      uses: "shivammathur/setup-php@v2"
+      with:
+        php-version: "${{ matrix.php-version }}"
+        coverage: "none"
+        extensions: "yaml"
+        ini-values: "zend.assertions=1"
+
     - uses: actions/checkout@v2
 
     - name: Validate composer.json and composer.lock
