@@ -1124,7 +1124,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 810ec9dd94477aeb42f7efff2ce01c4e5f1c091b09fb1b7e5534fa9b58a4109d
-                                                                                    text: '8302'
+                                                                                    text: '8302/mm'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MaxAperture:26'
