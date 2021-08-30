@@ -89,6 +89,7 @@ items:
                     - 'Above Sea Level'
                     - 'Below Sea Level'
     -
+        entryClass: FileEye\MediaProbe\Entry\GPSAltitude
         components: 1
         exifReadData:
             key: GPSAltitude
