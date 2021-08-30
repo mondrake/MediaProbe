@@ -156,7 +156,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText($value): string
+    public function resolveText($value, bool $null_on_missing = FALSE): string
     {
         if (!$this->getParentElement()) {
             return is_scalar($value) ? $value : implode(' ', $value);
@@ -171,6 +171,9 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         }
         if (!is_null($raw_text)) {
             return str_replace('{value}', $value, $raw_text);
+        }
+        if ($null_on_missing) {
+            return null;
         }
         return is_scalar($value) ? $value : implode(' ', $value);
     }
