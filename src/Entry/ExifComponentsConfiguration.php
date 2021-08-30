@@ -38,7 +38,7 @@ class ExifComponentsConfiguration extends Undefined
         $v = '';
         for ($i = 0; $i < 4; $i ++) {
             $z = ord($value[$i]);
-            $v .= $this->getMappedText($z, $z) ?? MediaProbe::tra('reserved');
+            $v .= $this->getMappedText($z) ?? MediaProbe::tra('reserved');
             if ($i < 3) {
                 $v .= ', ';
             }

@@ -239,6 +239,8 @@ items:
                     264: Surface
                     265: 'Low Light 2'
     12:
+        text:
+            default: 'Unknown ({value})'
         exiftool:
             -
                 name: DigitalZoom
@@ -786,6 +788,8 @@ items:
                 DOMNode: 'Canon:MinFocalLength'
                 desc: 'Min Focal Length'
     25:
+        text:
+            default: '{value}/mm'
         exiftool:
             -
                 name: FocalUnits

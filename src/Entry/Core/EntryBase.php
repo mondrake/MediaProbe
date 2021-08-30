@@ -118,7 +118,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function hasMappedText(): bool
+    protected function hasMappedText(): bool
     {
         if (!$this->getParentElement()) {
             return false;
@@ -132,7 +132,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function getMappedText($value, $default = null, $variant = 0, $key = 0)
+    protected function getMappedText($value)
     {
         $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
@@ -142,7 +142,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function hasDefaultText(): bool
+    protected function hasDefaultText(): bool
     {
         if (!$this->getParentElement()) {
             return false;
@@ -151,18 +151,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             return false;
         }
         return isset($text_config['default']);
-    }
-
-    /**
-     * @todo xxx
-     */
-    public function getDefaultText($value): ?string
-    {
-        if ($this->hasDefaultText()) {
-            $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
-            return str_replace('{value}', $value, $text_config['default']);
-        }
-        return null;
     }
 
     /**
