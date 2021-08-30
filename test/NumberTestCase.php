@@ -45,14 +45,14 @@ abstract class NumberTestCase extends EntryTestBase
 
         $this->num->setValue([1]);
         $this->assertSame(1, $this->num->getValue());
-        $this->assertSame(1, $this->num->toString());
+        $this->assertSame('1', $this->num->toString());
 
         $this->num->setValue([$this->max]);
         $this->assertSame($this->max, $this->num->getValue());
-        $this->assertSame($this->max, $this->num->toString());
+        $this->assertSame((string) $this->max, $this->num->toString());
 
         $this->num->setValue([$this->min]);
         $this->assertSame($this->min, $this->num->getValue());
-        $this->assertSame($this->min, $this->num->toString());
+        $this->assertSame((string) $this->min, $this->num->toString());
     }
 }
