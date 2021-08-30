@@ -194,29 +194,20 @@ abstract class NumberBase extends EntryBase
      */
     public function toString(array $options = [])
     {
-        if ($str = parent::toString($options)) {
-            return $str;
-        }
-
         $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
 
         if ($this->components == 0) {
-            return '';
+            $str = '';
+        } else {
+            $val = $this->formatNumber($this->value[0], ['format' => 'core']);
+            $str = $val = 0.0 ? '0' : (string) $val;
+            for ($i = 1; $i < $this->components; $i ++) {
+                $str .= ($short ? ' ' : ', ');
+                $val = $this->formatNumber($this->value[$i], ['format' => 'core']);
+                $str .= $val = 0.0 ? '0' : (string) $val;
+            }
         }
 
-        $val = $this->formatNumber($this->value[0], ['format' => 'core']);
-        $str = $val = 0.0 ? '0' : (string) $val;
-        for ($i = 1; $i < $this->components; $i ++) {
-            $str .= ($short ? ' ' : ', ');
-            $val = $this->formatNumber($this->value[$i], ['format' => 'core']);
-            $str .= $val = 0.0 ? '0' : (string) $val;
-        }
-
-//        if ($this->hasMappedText()) {
-//            $ret = $this->getMappedText($str, $str);
-//        }
-//        return $ret ?? $this->getDefaultText($str);
-        return $this->hasDefaultText() ? $this->getDefaultText($str) : $str;
-//        return $str;
+        return $this->resolveText($str);
     }
 }

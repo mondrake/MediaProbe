@@ -166,21 +166,33 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
+     * @todo xxx
+     */
+    public function resolveText($value): string
+    {
+        if (!$this->getParentElement()) {
+            return is_scalar($value) ? $value : implode(' ', $value);
+        }
+        $raw_text = null;
+        if ($this->hasMappedText()) {
+            $id = is_int($value) ? $value : (string) $value;
+            $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
+        }
+        if (is_null($raw_text) && $this->hasDefaultText()) {
+            $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['default'];
+        }
+        if (!is_null($raw_text)) {
+            return str_replace('{value}', $value, $raw_text);
+        }
+        return is_scalar($value) ? $value : implode(' ', $value);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function toString(array $options = [])
     {
-        if (!$this->getParentElement()) {
-            return null;
-        }
-        $value = $options['value'] ?? $this->getValue();
-        if (!is_scalar($value)) {
-            return null;
-        }
-        if ($this->hasMappedText()) {
-            $ret = $this->getMappedText($value, $value);
-        }
-        return $ret ?? $this->getDefaultText($value);
+        return $this->resolveText($this->getValue($options));
     }
 
     /**
