@@ -25,6 +25,9 @@ items:
                     1: Macro
                     2: Normal
     2:
+        text:
+            mapping:
+                0: Off
         exiftool:
             -
                 name: SelfTimer
