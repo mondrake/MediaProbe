@@ -212,6 +212,10 @@ abstract class NumberBase extends EntryBase
             $str .= $val = 0.0 ? '0' : (string) $val;
         }
 
-        return $str;
+        if ($this->hasMappedText()) {
+            $ret = $this->getMappedText($str, $str);
+        }
+        return $ret ?? $this->getDefaultText($str);
+//        return $str;
     }
 }
