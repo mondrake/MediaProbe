@@ -300,7 +300,7 @@ elements:
                                     format: Short
                                     components: 4
                                     bytesHash: efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70
-                                    text: '1, 1, 1, 1'
+                                    text: 'Unsigned, Unsigned, Unsigned, Unsigned'
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700'
