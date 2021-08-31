@@ -231,6 +231,10 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
+                    if (is_float($vala)) {
+                        $valx = round($valx, 3);
+                        $vala = round($vala, 3);
+                    }
                     $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
