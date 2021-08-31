@@ -207,7 +207,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
                 }
                 return implode(' ', $text);
             }
-            return implode(', ', $text);
+            return implode(' ', $text);
         }
         return $text;
     }
