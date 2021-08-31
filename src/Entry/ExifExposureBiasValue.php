@@ -14,7 +14,7 @@ class ExifExposureBiasValue extends SignedRational
      */
     public function toString(array $options = [])
     {
-        $val = $this->getValue();
+        $val = $this->getValue($options);
         if (($options['format'] ?? null) === 'exiftool') {
             return $val[0] == 0 ? '0' : sprintf('%s%s/%s', $val[0] * $val[1] > 0 ? '+' : '', $val[0], $val[1]);
         } else {
