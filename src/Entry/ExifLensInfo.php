@@ -7,7 +7,7 @@ use FileEye\MediaProbe\Entry\Core\Rational;
 /**
  * Decode text for an Exif/LensInfo tag.
  */
-class ExifApertureValue extends Rational
+class ExifLensInfo extends Rational
 {
     /**
      * {@inheritdoc}
