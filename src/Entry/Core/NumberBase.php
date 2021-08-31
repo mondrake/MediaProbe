@@ -60,19 +60,16 @@ abstract class NumberBase extends EntryBase
      */
     public function getValue(array $options = [])
     {
-//        $format = $options['format'] ?? null;
         if ($this->components == 1) {
             return $this->formatNumber($this->value[0], $options);
-        } else {
-            $ret = [];
-            if ($this->value) {
-                foreach ($this->value as $value) {
-                    $ret[] = $this->formatNumber($value, $options);
-                }
-            }
-            return $ret;
-//            return $format === 'exiftool' ? implode(' ', $ret) : $ret;
         }
+        $ret = [];
+        if ($this->value) {
+            foreach ($this->value as $value) {
+                $ret[] = $this->formatNumber($value, $options);
+            }
+        }
+        return $ret;
     }
 
     /**
@@ -208,7 +205,7 @@ abstract class NumberBase extends EntryBase
                 $str .= $val = 0.0 ? '0' : (string) $val;
             }
         }
-
+dump([$this->value, $this->getValue(), $str, $this->resolveText($str)]);
         return $this->resolveText($str);
     }
 }
