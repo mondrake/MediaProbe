@@ -199,7 +199,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                         foreach ($valx_a as $v) {
                             $valx_aa[] = (float) $v;
                         }
-                        $vala_a = explode(' ', $vala);
+//                        $vala_a = explode(' ', $vala);
                         $vala_aa = [];
                         foreach ($vala_a as $v) {
                             $vala_aa[] = (float) $v;
