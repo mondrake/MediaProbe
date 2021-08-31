@@ -16,15 +16,15 @@ class ExifLensInfo extends Rational
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $val = $this->getValue($options);
-            if (val[0] == $val[1]) {
+            if ($val[0] == $val[1]) {
               $str = $val[0];
             } else {
               $str = $val[0] . '-'. $val[1];
             }
             $str .= ' f/';
-            if (val[2] == 0) {
+            if ($val[2] == 0) {
               $str .= '?';
-            } elseif (val[2] == $val[3]) {
+            } elseif ($val[2] == $val[3]) {
               $str .= $val[2];
             } else {
               $str .= $val[2] . '-'. $val[3];

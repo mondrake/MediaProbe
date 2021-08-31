@@ -240,7 +240,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             }
 
             if (!$rewritten) {
-//                $this->assertEquals($expected['text'], $element->toString(), $element->getContextPath());
+                $this->assertEquals($expected['text'], $element->toString(), $element->getContextPath());
                 $this->assertSame($expected['bytesHash'], hash('sha256', $element->toBytes()), $element->getContextPath());
             }
         }

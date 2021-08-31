@@ -969,7 +969,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: e9619023f7ad0507ccc2f44d1ff58550018171c87f6d6f95c393cb2ca9eab3ba
-                                                                                    text: !!float 23
+                                                                                    text: '22.6'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashActivity:28'
