@@ -23,7 +23,11 @@ class ApertureValue extends SignedShort
      */
     public function toString(array $options = [])
     {
-        return $this->getValue($options);
+        $val = $this->getValue($options);
+        if (($options['format'] ?? null) === 'exiftool') {
+            return round($val, 1);
+        }
+        return $val;
     }
 
     private function canonEv($val)
