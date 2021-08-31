@@ -177,7 +177,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
                     $tmp[] = $v;
                 }
             }
-            return implode('; ', $tmp);
+            return implode(' ', $tmp);
         }
 
         if ($this->hasMappedText()) {

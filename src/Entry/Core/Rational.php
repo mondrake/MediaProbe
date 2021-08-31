@@ -88,7 +88,13 @@ class Rational extends Long
             case 'phpExif':
                 return (string) $number[0] . '/' . (string) $number[1];
             default:
-                return $number;
+                if ($number[1] === 0) {
+                    return 0; // xxx throw exception
+                } else {
+                    $ret = $number[0] / $number[1];
+                    return $ret == 0.0 ? 0 : $ret;
+                }
+//                return $number;
         }
     }
 }

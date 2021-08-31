@@ -95,7 +95,13 @@ class SignedRational extends SignedLong
                 }
                 break;
             default:
-                return $number;
+                if ($number[1] === 0) {
+                    return 0; // xxx throw exception
+                } else {
+                    $ret = $number[0] / $number[1];
+                    return $ret == 0.0 ? 0 : $ret;
+                }
+//                return $number;
         }
     }
 }
