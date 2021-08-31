@@ -174,6 +174,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if ($null_on_missing) {
             return null;
         }
+if (!is_scalar($value)) dump($value);
         return is_scalar($value) ? $value : implode(' ', $value);
     }
 
