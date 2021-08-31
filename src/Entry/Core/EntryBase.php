@@ -204,7 +204,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             if ($format === 'exiftool' && ($this->hasMappedText() || $this->hasDefaultText())) {
                 return implode('; ', $text);
             }
-            return implode(' ', $text);
+            return implode(', ', $text);
         }
         return $text;
     }
