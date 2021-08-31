@@ -33,4 +33,22 @@ class ExifCFAPattern extends Undefined
         }
         return parent::getValue($options);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toString(array $options = [])
+    {
+        $format = $options['format'] ?? null;
+/*        if ($format === 'exiftool') {
+            // @todo xxx improve, two shorts initially
+            $ret = [ord($this->value[1]), ord($this->value[3])];
+            for ($i = 4; $i < $this->getComponents(); $i++) {
+                $ret[] = ord($this->value[$i]);
+            }
+            return implode(' ', $ret);
+        }
+        return parent::getValue($options);*/
+        return $this->getValue($options);
+    }
 }
