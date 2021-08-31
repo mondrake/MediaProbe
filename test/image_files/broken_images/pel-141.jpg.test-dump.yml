@@ -313,7 +313,7 @@ elements:
                                                             format: Undefined
                                                             components: 4
                                                             bytesHash: 8417eb4e5447e04d669bfed0cc1a3a7b26ad04a5ae839b4669a26983f95fe8fb
-                                                            text: 'reserved, R, -, -'
+                                                            text: 'Err (206), R, -, -'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FNumber:33437'
