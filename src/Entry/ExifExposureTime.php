@@ -19,7 +19,7 @@ class ExifExposureTime extends Rational
 
         $sec = $short ? '' : ' sec.';
 
-        if ($this->getValue < 1) {
+        if ($this->getValue() < 1) {
             return MediaProbe::fmt('1/%d%s', $this->getValue(), $sec);
         } else {
             return MediaProbe::fmt('%d%s', $this->getValue(), $sec);
