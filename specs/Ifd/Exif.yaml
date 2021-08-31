@@ -3288,6 +3288,7 @@ items:
                 DOMNode: 'ExifIFD:SerialNumber'
                 desc: 'Serial Number'
     42034:
+        entryClass: FileEye\MediaProbe\Entry\ExifLensInfo
         exiftool:
             -
                 name: LensInfo
