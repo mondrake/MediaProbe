@@ -158,7 +158,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function resolveText($value, bool $null_on_missing = FALSE): ?string
     {
-dump([$value, 'mapped' => $this->hasMappedText(), 'default' => $this->hasDefaultText());
+dump([$value, 'mapped' => $this->hasMappedText(), 'default' => $this->hasDefaultText()]);
         if (!$this->getParentElement()) {
             return is_scalar($value) ? $value : implode(' ', $value);
         }
