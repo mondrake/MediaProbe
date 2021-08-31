@@ -40,7 +40,7 @@ class ExifCFAPattern extends Undefined
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
-            $val = explode(' ', $this->getValue(options));
+            $val = explode(' ', $this->getValue($options));
             // @todo xxx improve, two shorts initially
             array_shift($val);
             array_shift($val);
