@@ -16,6 +16,7 @@ class ExifLensInfo extends Rational
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $val = $this->getValue();
+dump($val);
             if ($val[0] == $val[1]) {
               $str = $val[0];
             } else {
