@@ -156,7 +156,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText($value, bool $null_on_missing = FALSE): ?string
+    public function resolveText($value, bool $null_on_missing = FALSE)
     {
 //dump([$value, 'mapped' => $this->hasMappedText(), 'default' => $this->hasDefaultText()]);
         if (!$this->getParentElement()) {
