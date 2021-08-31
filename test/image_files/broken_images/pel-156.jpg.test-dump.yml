@@ -364,7 +364,7 @@ elements:
                                                             format: Rational
                                                             components: 2
                                                             bytesHash: 475c15a0d8be871f0d07f883f090e9a809782f38dc36d6b8f51ee6b64c584d75
-                                                            text: '0.313, 0.329'
+                                                            text: '0.313 0.329'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:PrimaryChromaticities:319'
@@ -382,7 +382,7 @@ elements:
                                                             format: Rational
                                                             components: 6
                                                             bytesHash: 137e6f3ab579782fb681bebc3f4338a85691949d5e5a905d60ebb472f5202a5d
-                                                            text: '0.64, 0.33, 0.21, 0.71, 0.15, 0.06'
+                                                            text: '0.64 0.33 0.21 0.71 0.15 0.06'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrCoefficients:529'
@@ -400,7 +400,7 @@ elements:
                                                             format: Rational
                                                             components: 3
                                                             bytesHash: 161417c3883cc3341fb3b4ace6efc6c2c68d80330dc59a836a5ad419fd6a6301
-                                                            text: '0.299, 0.587, 0.114'
+                                                            text: '0.299 0.587 0.114'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrPositioning:531'

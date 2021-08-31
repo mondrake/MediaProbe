@@ -206,8 +206,12 @@ abstract class EntryBase extends ElementBase implements EntryInterface
                   return implode('; ', $text);
                 }
                 return implode(' ', $text);
+            } else {
+                if ($this->hasMappedText() || $this->hasDefaultText()) {
+                  return implode(', ', $text);
+                }
+                return implode(' ', $text);
             }
-            return implode(' ', $text);
         }
         return $text;
     }
