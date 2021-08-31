@@ -163,7 +163,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             return is_scalar($value) ? $value : implode(' ', $value);
         }
         if ($this->hasMappedText()) {
-            if (is_scalar($value)) {
+            if (!is_array($value)) {
                 $id = is_int($value) ? $value : (string) $value;
                 $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
                 return str_replace('{value}', $value, $raw_text);

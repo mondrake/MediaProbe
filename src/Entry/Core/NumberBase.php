@@ -51,7 +51,7 @@ abstract class NumberBase extends EntryBase
         $this->components = count($data);
         $this->value = $data;
 
-        $this->debug("text: {text}", ['text' => $this->toString()]);
+//        $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
 
@@ -188,25 +188,4 @@ abstract class NumberBase extends EntryBase
         return $number;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-/*    public function toString(array $options = [])
-    {
-        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
-
-        if ($this->components == 0) {
-            $str = '';
-        } else {
-            $val = $this->formatNumber($this->value[0], ['format' => 'core']);
-            $str = $val = 0.0 ? '0' : (string) $val;
-            for ($i = 1; $i < $this->components; $i ++) {
-                $str .= ($short ? ' ' : ', ');
-                $val = $this->formatNumber($this->value[$i], ['format' => 'core']);
-                $str .= $val = 0.0 ? '0' : (string) $val;
-            }
-        }
-dump([$this->value, $this->getValue(), $str, $this->resolveText($str)]);
-        return $this->resolveText($str);
-    }*/
 }
