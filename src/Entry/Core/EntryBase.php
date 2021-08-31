@@ -160,22 +160,30 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     {
 //dump([$value, 'mapped' => $this->hasMappedText(), 'default' => $this->hasDefaultText()]);
         if (!$this->getParentElement()) {
-            return is_scalar($value) ? $value : implode(' ', $value);
+            return is_array($value) ? implode(' ', $value) : $value;
         }
-        if ($this->hasMappedText()) {
-            if (!is_array($value)) {
-                $id = is_int($value) ? $value : (string) $value;
-                $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
-                return str_replace('{value}', $value, $raw_text);
-            } else {
-                $tmp = [];
-                foreach ($value as $v) {
-                    $id = is_int($v) ? $v : (string) $v;
+
+        if (is_array($value)) {
+            $tmp = [];
+            foreach ($value as $v) {
+                $id = is_int($v) ? $v : (string) $v;
+                if ($this->hasMappedText()) {
                     $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
                     $tmp[] = str_replace('{value}', $v, $raw_text);
+                } elseif ($this->hasDefaultText()) {
+                    $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['default'];
+                    $tmp[] = str_replace('{value}', $v, $raw_text);
+                } else {
+                    $tmp[] = $v;
                 }
-                return implode('; ', $tmp);
             }
+            return implode('; ', $tmp);
+        }
+
+        if ($this->hasMappedText()) {
+            $id = is_int($value) ? $value : (string) $value;
+            $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
+            return str_replace('{value}', $value, $raw_text);
         }
         if ($this->hasDefaultText()) {
             $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['default'];
