@@ -60,14 +60,15 @@ abstract class NumberBase extends EntryBase
      */
     public function getValue(array $options = [])
     {
+        if (is_null($this->value)) {
+            return null;
+        }
         if ($this->components == 1) {
             return $this->formatNumber($this->value[0], $options);
         }
         $ret = [];
-        if ($this->value) {
-            foreach ($this->value as $value) {
-                $ret[] = $this->formatNumber($value, $options);
-            }
+        foreach ($this->value as $value) {
+            $ret[] = $this->formatNumber($value, $options);
         }
         return $ret;
     }
@@ -190,7 +191,7 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function toString(array $options = [])
+/*    public function toString(array $options = [])
     {
         $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
 
@@ -207,5 +208,5 @@ abstract class NumberBase extends EntryBase
         }
 dump([$this->value, $this->getValue(), $str, $this->resolveText($str)]);
         return $this->resolveText($str);
-    }
+    }*/
 }
