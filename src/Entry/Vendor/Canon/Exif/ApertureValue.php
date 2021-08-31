@@ -23,7 +23,7 @@ class ApertureValue extends SignedShort
      */
     public function toString(array $options = [])
     {
-        return round($this->getValue($options), 1);
+        return round($this->getValue($options));
     }
 
     private function canonEv($val)
