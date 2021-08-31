@@ -4179,6 +4179,8 @@ items:
                 DOMNode: '*:DigitalZoomRatio'
                 desc: 'Digital Zoom Ratio'
     41989:
+        text:
+            default: '{value} mm'
         exifReadData:
             key: FocalLengthIn35mmFilm
         exiftool:
