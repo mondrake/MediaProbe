@@ -23,6 +23,7 @@ class FileNumber extends Long
      */
     public function toString(array $options = [])
     {
+  dump($this->value, $this->getValue());
         return round($this->getValue());
     }
 }

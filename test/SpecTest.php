@@ -211,7 +211,7 @@ class SpecTest extends MediaProbeTestCaseBase
                 '1.0', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Ifd\\Interoperability', 'InteropVersion', ['0100'], true,
             ],
             'Exif/ComponentsConfiguration' => [
-                'Y Cb Cr -', 'FileEye\MediaProbe\Entry\ExifComponentsConfiguration', 'Ifd\\Exif', 'ComponentsConfiguration', ["\x01\x02\x03\0"],
+                'Y, Cb, Cr, -', 'FileEye\MediaProbe\Entry\ExifComponentsConfiguration', 'Ifd\\Exif', 'ComponentsConfiguration', ["\x01\x02\x03\0"],
             ],
             'Exif/FileSource' => [
                 'Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Ifd\\Exif', 'FileSource', ["\x03"],
