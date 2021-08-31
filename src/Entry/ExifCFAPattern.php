@@ -39,16 +39,13 @@ class ExifCFAPattern extends Undefined
      */
     public function toString(array $options = [])
     {
-        $format = $options['format'] ?? null;
-/*        if ($format === 'exiftool') {
+        if (($options['format'] ?? null) === 'exiftool') {
+            $val = explode(' ', $this->getValue(options));
             // @todo xxx improve, two shorts initially
-            $ret = [ord($this->value[1]), ord($this->value[3])];
-            for ($i = 4; $i < $this->getComponents(); $i++) {
-                $ret[] = ord($this->value[$i]);
-            }
-            return implode(' ', $ret);
+            array_shift($val);
+            array_shift($val);
+            return $this->resolveText(implode(' ', $val));
         }
-        return parent::getValue($options);*/
-        return $this->getValue($options);
+        return parent::toString($options);
     }
 }
