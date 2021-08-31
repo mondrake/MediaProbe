@@ -41,7 +41,7 @@ abstract class NumberTestCase extends EntryTestBase
     {
         $this->num->setValue([1, 2, 3]);
         $this->assertSame([1, 2, 3], $this->num->getValue());
-        $this->assertSame('1, 2, 3', $this->num->toString());
+        $this->assertSame('1 2 3', $this->num->toString());
 
         $this->num->setValue([1]);
         $this->assertSame(1, $this->num->getValue());

@@ -148,7 +148,7 @@ elements:
                                                             format: Short
                                                             components: 3
                                                             bytesHash: 5e51f9dfbced42f1dc714ebf654e6b73d3e4b99c77ade9ea26cbea17bb51382d
-                                                            text: '8, 8, 8'
+                                                            text: '8 8 8'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262'

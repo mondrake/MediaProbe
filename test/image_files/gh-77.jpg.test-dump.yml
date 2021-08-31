@@ -398,7 +398,7 @@ elements:
                                                                     format: Short
                                                                     components: 2
                                                                     bytesHash: 85dd751867e3155c7f2e23e8446546906f5bf617d4d985ed474822613764d69e
-                                                                    text: '50, 0'
+                                                                    text: '50 0'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
