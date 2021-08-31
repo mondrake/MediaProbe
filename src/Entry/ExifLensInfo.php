@@ -15,7 +15,7 @@ class ExifLensInfo extends Rational
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
-            $val = $this->getValue();
+            $val = explode(' ', $this->getValue($options['format']));
 dump($val);
             if ($val[0] == $val[1]) {
               $str = $val[0];
@@ -23,7 +23,7 @@ dump($val);
               $str = $val[0] . '-'. $val[1];
             }
             $str .= ' f/';
-            if ($val[2] == 0) {
+            if ($val[3] == 0) {
               $str .= '?';
             } elseif ($val[2] == $val[3]) {
               $str .= $val[2];
