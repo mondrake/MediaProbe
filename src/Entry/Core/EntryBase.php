@@ -168,30 +168,27 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             foreach ($value as $v) {
                 $id = is_int($v) ? $v : (string) $v;
                 if ($this->hasMappedText()) {
-                    $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
-                    $tmp[] = str_replace('{value}', $v, $raw_text);
+                    $tmp[] = str_replace('{value}', $v, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null);
                 } elseif ($this->hasDefaultText()) {
-                    $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['default'];
-                    $tmp[] = str_replace('{value}', $v, $raw_text);
+                    $tmp[] = str_replace('{value}', $v, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
                 } else {
                     $tmp[] = $v;
                 }
             }
-            return implode(' ', $tmp);
+            return $tmp;
         }
 
         if ($this->hasMappedText()) {
             $id = is_int($value) ? $value : (string) $value;
-            $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
-            return str_replace('{value}', $value, $raw_text);
+            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null);
         }
         if ($this->hasDefaultText()) {
-            $raw_text = $this->getParentElement()->getCollection()->getPropertyValue('text')['default'];
-            return str_replace('{value}', $value, $raw_text);
+            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
         }
         if ($null_on_missing) {
             return null;
         }
+
 //if (!is_scalar($value)) dump($value);
         return is_scalar($value) ? $value : serialize($value);
     }
@@ -201,7 +198,15 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function toString(array $options = [])
     {
-        return $this->resolveText($this->getValue($options));
+        $text = $this->resolveText($this->getValue($options));
+        $format = $options['format'] ?? null;
+        if (is_array($text)) {
+            if ($format === 'exiftool' && ($this->hasMappedText() || $this->hasDefaultText())) {
+                return implode('; ', $text);
+            }
+            return implode(' ', $text);
+        }
+        return $text;
     }
 
     /**
