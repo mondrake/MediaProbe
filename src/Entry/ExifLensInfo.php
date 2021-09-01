@@ -16,19 +16,18 @@ class ExifLensInfo extends Rational
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $val = $this->getValue();
-dump($val);
-            if ($this->value[0][0] == $this->value[0][1]) {
-              $str = $this->value[0][0];
+            if ($val[0] == $val[1]) {
+              $str = $val[0];
             } else {
-              $str = $this->value[0][0] . '-'. $this->value[0][1];
+              $str = $val[0] . '-'. $val[1];
             }
             $str .= 'mm f/';
-            if ($this->value[1][1] == 0) {
+            if ($val[3] == 0) {
               $str .= '?';
-            } elseif ($this->value[1][0] == $this->value[1][1]) {
-              $str .= $this->value[1][0];
+            } elseif ($val[2] == $val[3]) {
+              $str .= $val[2];
             } else {
-              $str .= $this->value[1][0] . '-'. $this->value[1][1];
+              $str .= $val[2] . '-'. $val[3];
             }
             return $str;
         }
