@@ -70,14 +70,8 @@ class SignedRational extends SignedLong
     {
         $format = $options['format'] ?? null;
         switch ($format) {
-            case 'core':
-                if ($number[1] === 0) {
-                    return 0; // xxx throw exception
-                } else {
-                    $ret = $number[0] / $number[1];
-                    return $ret == 0.0 ? 0 : $ret;
-                }
-                break;
+            case 'parsed':
+                return $number;
             case 'exiftool':
                 if ($number[1] === 0) {
                     return '0'; // xxx throw exception
@@ -85,7 +79,6 @@ class SignedRational extends SignedLong
                     $ret = $number[0] / $number[1];
                     return $ret == 0.0 ? '0' : (string) $ret;
                 }
-                break;
             case 'phpExif':
                 if ($number[1] < 0) {
                     // Turn output like 1/-2 into -1/2.
@@ -93,7 +86,7 @@ class SignedRational extends SignedLong
                 } else {
                     return $number[0] . '/' . $number[1];
                 }
-                break;
+            case 'core':
             default:
                 if ($number[1] === 0) {
                     return 0; // xxx throw exception
@@ -101,7 +94,6 @@ class SignedRational extends SignedLong
                     $ret = $number[0] / $number[1];
                     return $ret == 0.0 ? 0 : $ret;
                 }
-//                return $number;
         }
     }
 }

@@ -69,14 +69,8 @@ class Rational extends Long
     {
         $format = $options['format'] ?? null;
         switch ($format) {
-            case 'core':
-                if ($number[1] === 0) {
-                    return 0; // xxx throw exception
-                } else {
-                    $ret = $number[0] / $number[1];
-                    return $ret == 0.0 ? 0 : $ret;
-                }
-                break;
+            case 'parsed':
+                return $number;
             case 'exiftool':
                 if ($number[1] === 0) {
                     return '0'; // xxx throw exception
@@ -84,9 +78,9 @@ class Rational extends Long
                     $ret = $number[0] / $number[1];
                     return $ret == 0.0 ? '0' : (string) $ret;
                 }
-                break;
             case 'phpExif':
                 return (string) $number[0] . '/' . (string) $number[1];
+            case 'core':
             default:
                 if ($number[1] === 0) {
                     return 0; // xxx throw exception
@@ -94,7 +88,6 @@ class Rational extends Long
                     $ret = $number[0] / $number[1];
                     return $ret == 0.0 ? 0 : $ret;
                 }
-//                return $number;
         }
     }
 }
