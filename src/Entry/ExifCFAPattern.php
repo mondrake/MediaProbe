@@ -24,12 +24,12 @@ class ExifCFAPattern extends Undefined
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            // @todo xxx improve, two shorts initially
+            // Two shorts initially, then 4 bytes.
             $ret = [ord($this->value[1]), ord($this->value[3])];
             for ($i = 4; $i < $this->getComponents(); $i++) {
                 $ret[] = ord($this->value[$i]);
             }
-            return implode(' ', $ret);
+            return $ret;
         }
         return parent::getValue($options);
     }
@@ -40,7 +40,7 @@ class ExifCFAPattern extends Undefined
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
-            $val = explode(' ', $this->getValue($options));
+            $val = $this->getValue($options);
             // @todo xxx improve, two shorts initially
             array_shift($val);
             array_shift($val);
