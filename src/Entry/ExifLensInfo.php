@@ -15,19 +15,18 @@ class ExifLensInfo extends Rational
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
-            $val = explode(' ', $this->getValue($options));
-            if ($val[0] == $val[1]) {
-              $str = $val[0];
+            if ($this->value[0][0] == $this->value[0][1]) {
+              $str = $this->value[0][0];
             } else {
-              $str = $val[0] . '-'. $val[1];
+              $str = $this->value[0][0] . '-'. $this->value[0][1];
             }
             $str .= 'mm f/';
-            if ($val[3] == 0) {
+            if ($this->value[0][3] == 0) {
               $str .= '?';
-            } elseif ($val[2] == $val[3]) {
-              $str .= $val[2];
+            } elseif ($this->value[0][2] == $this->value[0][3]) {
+              $str .= $this->value[0][2];
             } else {
-              $str .= $val[2] . '-'. $val[3];
+              $str .= $this->value[0][2] . '-'. $this->value[0][3];
             }
             return $str;
         }
