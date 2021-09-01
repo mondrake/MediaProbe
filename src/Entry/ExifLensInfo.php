@@ -21,12 +21,12 @@ class ExifLensInfo extends Rational
               $str = $this->value[0][0] . '-'. $this->value[0][1];
             }
             $str .= 'mm f/';
-            if ($this->value[0][3] == 0) {
+            if ($this->value[1][1] == 0) {
               $str .= '?';
-            } elseif ($this->value[0][2] == $this->value[0][3]) {
-              $str .= $this->value[0][2];
+            } elseif ($this->value[1][0] == $this->value[1][1]) {
+              $str .= $this->value[1][0];
             } else {
-              $str .= $this->value[0][2] . '-'. $this->value[0][3];
+              $str .= $this->value[1][0] . '-'. $this->value[1][1];
             }
             return $str;
         }
