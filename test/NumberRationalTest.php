@@ -22,7 +22,7 @@ class NumberRationalTest extends NumberTestCase
         $entry->setValue([[3, 4], [1, 4294967296]]);
         $this->assertFalse($entry->isParsed());
         $this->assertSame([[3, 4], [1, 0]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.75, 0, 1], $entry->getValue());
+        $this->assertSame([0.75, 0], $entry->getValue());
 
         $entry->setValue([[3, 4], [4294967296, 1]]);
         $this->assertFalse($entry->isParsed());
@@ -41,7 +41,7 @@ class NumberRationalTest extends NumberTestCase
 
         $entry->setValue([]);
         $this->assertSame([], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame(0, $entry->getValue());
+        $this->assertSame([], $entry->getValue());
         $this->assertSame('', $entry->toString());
 
         $entry->setValue([[1, 2], [3, 4], [5, 6]]);
