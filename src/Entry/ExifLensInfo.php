@@ -15,6 +15,8 @@ class ExifLensInfo extends Rational
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
+            $val = $this->getValue();
+dump($val);
             if ($this->value[0][0] == $this->value[0][1]) {
               $str = $this->value[0][0];
             } else {

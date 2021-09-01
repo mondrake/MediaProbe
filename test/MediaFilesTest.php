@@ -190,7 +190,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     if ($element->getOutputFormat() === ItemFormat::ASCII) {
                         $this->assertSame($valx, $vala, 'Exiftool raw: ' . $element->getContextPath());
                     } else {
-if (stripos($element->getContextPath(), 'tag:LensInfo') !== false) {
+if (stripos($element->getContextPath(), 'tag:CFAPattern') !== false) {
     dump([$valx, $vala, $element->getValue()])  ;
 }
                         $sep = strpos($valx, ':') !== false ? ':' : ' ';
