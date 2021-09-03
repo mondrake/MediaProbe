@@ -178,15 +178,19 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             return $tmp;
         }
 
+        $text = null;
         if ($this->hasMappedText()) {
             $id = is_int($value) ? $value : (string) $value;
-            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? (string) $value);
+            $text = str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null);
         }
-        if ($this->hasDefaultText()) {
-            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
+        if (is_null($text) && $this->hasDefaultText()) {
+            $text = str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
         }
-        if ($null_on_missing) {
+        if (is_null($text) && $null_on_missing) {
             return null;
+        }
+        if (!is_null($text)) {
+            return $text;
         }
 
 //if (!is_scalar($value)) dump($value);
