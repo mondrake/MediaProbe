@@ -52,7 +52,7 @@ class NumberRationalTest extends NumberTestCase
         $entry->setValue([[7, 8]]);
         $this->assertSame([7, 8], $entry->getValue(['format' => 'parsed']));
         $this->assertSame(7 / 8, $entry->getValue());
-        $this->assertSame('0.83333333333333', $entry->toString());
+        $this->assertSame((string) 7 / 8, $entry->toString());
 
         $entry->setValue([[0, 4294967295]]);
         $this->assertSame([0, 4294967295], $entry->getValue(['format' => 'parsed']));

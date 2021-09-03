@@ -190,9 +190,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     if ($element->getOutputFormat() === ItemFormat::ASCII) {
                         $this->assertSame($valx, $vala, 'Exiftool raw: ' . $element->getContextPath());
                     } else {
-if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
+/*if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
     dump([$valx, $vala, $element->getValue()])  ;
-}
+}*/
                         $sep = strpos($valx, ':') !== false ? ':' : ' ';
                         $valx_a = explode($sep, $valx);
                         $valx_aa = [];
@@ -234,6 +234,9 @@ if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
                     $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
+if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
+    dump([$valx, $vala, $element->getValue()])  ;
+}
                     if (is_numeric($vala)/* && ((float) $vala - (int) $vala) != 0*/) {
                         $valx = round($valx, 1);
                         $vala = round($vala, 1);
