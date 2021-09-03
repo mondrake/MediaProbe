@@ -768,7 +768,7 @@ elements:
                                                                             format: SignedRational
                                                                             components: 2
                                                                             bytesHash: 5fb2dfd309acc3d98c022edb67657df1da8b8ae73eef3a724cfac68c47cb0067
-                                                                            text: '0.53515625, 1.90625'
+                                                                            text: '0.53515625 1.90625'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:13'
@@ -1173,7 +1173,7 @@ elements:
                                                                     format: Rational
                                                                     components: 4
                                                                     bytesHash: 9ede23a983fb6c7ae901f4f5142ff7d4c39e2d717c7d30b6a390edc1a0e29485
-                                                                    text: '3.99, 3.99, 1.8, 1.8'
+                                                                    text: '3.99 3.99 1.8 1.8'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensMake:42035'

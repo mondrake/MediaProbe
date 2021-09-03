@@ -822,7 +822,7 @@ elements:
                                                                             format: SignedRational
                                                                             components: 2
                                                                             bytesHash: 9ab1426c153e32e985ab0c0b9f77563bb4692a0d90b2f10a22c5591a5fd0f151
-                                                                            text: '50.05859375, 47.22265625'
+                                                                            text: '50.05859375 47.22265625'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:13'
@@ -1026,7 +1026,7 @@ elements:
                                                                             format: SignedLong
                                                                             components: 2
                                                                             bytesHash: a08446714b99b6d4054c0606a056f6439e7b91cdc2e82c779cb430ffa90a6ea3
-                                                                            text: '171, 268435521'
+                                                                            text: '171 268435521'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:37'
@@ -1345,7 +1345,7 @@ elements:
                                                                     format: Rational
                                                                     components: 4
                                                                     bytesHash: 300484f974e1bf8268e179d78383bbbd10421e155cb1af74e57e86bb4b231b75
-                                                                    text: '1.5399999618512, 4.25, 1.8, 2.4'
+                                                                    text: '1.5399999618512 4.25 1.8 2.4'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensMake:42035'

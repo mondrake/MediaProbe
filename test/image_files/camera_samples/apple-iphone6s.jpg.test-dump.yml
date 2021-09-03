@@ -1105,7 +1105,7 @@ elements:
                                                                     format: Rational
                                                                     components: 4
                                                                     bytesHash: af83b20501dab953b15760a55b1990e1a50b5798985df11bb29d74e93fa0de9c
-                                                                    text: '4.15, 4.15, 2.2, 2.2'
+                                                                    text: '4.15 4.15 2.2 2.2'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensMake:42035'
@@ -1276,7 +1276,7 @@ elements:
                                                                     format: Rational
                                                                     components: 3
                                                                     bytesHash: 939af4846d1171ae44b201b232bd01347d4de0759f03e3220b1f74802ae224b9
-                                                                    text: '11, 2, 37.77'
+                                                                    text: '11 2 37.77'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSSpeedRef:12'
