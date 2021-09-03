@@ -255,9 +255,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                         $valx_aa = $valx;
                         $vala_aa = $vala;
                     }
-if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
+/*if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
     dump([$valx, $vala, $valz, $valx_aa, $vala_aa])  ;
-}
+}*/
                     $this->assertEquals($valx_aa, $vala_aa, 'Exiftool text: ' . $element->getContextPath());
                 }
             }

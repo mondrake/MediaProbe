@@ -751,7 +751,7 @@ elements:
                                                                             format: SignedRational
                                                                             components: 3
                                                                             bytesHash: 2e4c8098d865757c0c49b0df11f941e412084f6bd94bb2c4da08f41f6c042e50
-                                                                            text: '-0.9991062118278, 0.077602872134769, 0.11136580706781'
+                                                                            text: '-0.9991062118278 0.077602872134769 0.11136580706781'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:12'

@@ -121,7 +121,7 @@ class SpecTest extends MediaProbeTestCaseBase
                 'Chunky', 'FileEye\MediaProbe\Entry\Core\Short', 'Ifd\\Ifd0', 'PlanarConfiguration', [1],
             ],
             'IFD0/PlanarConfiguration - missing mapping' => [
-                6.1, 'FileEye\MediaProbe\Entry\Core\Short', 'Ifd\\Ifd0', 'PlanarConfiguration', [6.1],
+                '6', 'FileEye\MediaProbe\Entry\Core\Short', 'Ifd\\Ifd0', 'PlanarConfiguration', [6],
             ],
             'CanonPanoramaInformation/PanoramaDirection - value 4' => [
                 '2x2 Matrix (Clockwise)', 'FileEye\MediaProbe\Entry\Core\SignedShort', 'MakerNotes\\Canon\\Panorama', 'PanoramaDirection', [4],

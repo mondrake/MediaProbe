@@ -168,7 +168,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             foreach ($value as $v) {
                 $id = is_int($v) ? $v : (string) $v;
                 if ($this->hasMappedText()) {
-                    $tmp[] = str_replace('{value}', $v, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null);
+                    $tmp[] = str_replace('{value}', $v, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? (string) $v);
                 } elseif ($this->hasDefaultText()) {
                     $tmp[] = str_replace('{value}', $v, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
                 } else {
@@ -180,7 +180,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
 
         if ($this->hasMappedText()) {
             $id = is_int($value) ? $value : (string) $value;
-            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null);
+            return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? (string) $value);
         }
         if ($this->hasDefaultText()) {
             return str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
