@@ -189,7 +189,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (is_null($text) && $this->hasDefaultText()) {
             $text = str_replace('{value}', $value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
         }
-dump([$value, $text, $null_on_missing]);
         if (is_null($text) && $null_on_missing) {
             return null;
         }
