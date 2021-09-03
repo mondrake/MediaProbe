@@ -197,13 +197,15 @@ if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
                         $valx_a = explode($sep, $valx);
                         $valx_aa = [];
                         foreach ($valx_a as $v) {
-                            $valx_aa[] = (float) $v;
+                            $x = is_numeric($v) ? round($v, 2) : $v;
+                            $valx_aa[] = $x;
                         }
 //                        $vala_a = explode(', ', $vala);
                         $vala_a = is_array($vala) ? $vala : explode(', ', $vala);
                         $vala_aa = [];
                         foreach ($vala_a as $v) {
-                            $vala_aa[] = (float) $v;
+                            $x = is_numeric($v) ? round($v, 2) : $v;
+                            $vala_aa[] = $x;
                         }
 /*if (stripos($element->getContextPath(), 'tag:RawMeasuredRGGB') !== false) {
     dump([$valx_aa, $vala_aa]);
