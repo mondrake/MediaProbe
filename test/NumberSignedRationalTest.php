@@ -12,22 +12,27 @@ class NumberSignedRationalTest extends NumberTestCase
         $entry = new SignedRational($this->mockParentElement, [[-1, 2]]);
         $this->assertTrue($entry->isParsed());
         $this->assertSame([-1, 2], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame(-0.5, $entry->getValue());
 
         $entry->setValue([[-10, -20], [-1, -2147483649]]);
         $this->assertFalse($entry->isParsed());
         $this->assertSame([[-10, -20], [-1, 0]], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame([0.5, 0], $entry->getValue());
 
         $entry->setValue([[3, 4], [1, 2147483648]]);
         $this->assertFalse($entry->isParsed());
         $this->assertSame([[3, 4], [1, 0]], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame([0.75, 0], $entry->getValue());
 
         $entry->setValue([[3, 4], [4294967296, 1]]);
         $this->assertFalse($entry->isParsed());
         $this->assertSame([[3, 4], [0, 1]], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame([0.75, 0], $entry->getValue());
 
         $entry->setValue([[3, 4], [0, 2147483647]]);
         $this->assertTrue($entry->isParsed());
         $this->assertSame([[3, 4], [0, 2147483647]], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame([0.75, 0], $entry->getValue());
     }
 
     public function testReturnValues()
@@ -35,19 +40,19 @@ class NumberSignedRationalTest extends NumberTestCase
         $entry = new SignedRational($this->mockParentElement);
 
         $entry->setValue([]);
-        $this->assertSame($entry->getValue(['format' => 'parsed']), []);
-        $this->assertSame($entry->getValue(), []);
-        $this->assertSame($entry->toString(), '');
+        $this->assertSame([], $entry->getValue(['format' => 'parsed']));
+        $this->assertSame([], $entry->getValue());
+        $this->assertSame('', $entry->toString());
 
         $entry->setValue([[-1, 2], [3, 4], [5, -6]]);
         $this->assertSame([[-1, 2], [3, 4], [5, -6]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([-0.5, 0.75, 5 / 6], $entry->getValue());
-        $this->assertSame('-0.5 0.75 ' . (string) (5 / 6), $entry->toString());
+        $this->assertSame([-0.5, 0.75, 5 / -6], $entry->getValue());
+        $this->assertSame('-0.5 0.75 ' . (string) (5 / -6), $entry->toString());
 
         $entry->setValue([[-7, -8]]);
         $this->assertSame([-7, -8], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame(7 / 8, $entry->getValue());
-        $this->assertSame((string) (7 / 8), $entry->toString());
+        $this->assertSame(-7 / -8, $entry->getValue());
+        $this->assertSame((string) (-7 / -8), $entry->toString());
 
         $entry->setValue([[0, 2147483647]]);
         $this->assertSame([0, 2147483647], $entry->getValue(['format' => 'parsed']));

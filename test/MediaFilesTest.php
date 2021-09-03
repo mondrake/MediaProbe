@@ -234,14 +234,31 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
-if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
-    dump([$valx, $vala, $element->getValue()])  ;
-}
-                    if (is_numeric($vala)/* && ((float) $vala - (int) $vala) != 0*/) {
-                        $valx = round($valx, 1);
-                        $vala = round($vala, 1);
+                    $valz = $element->getValue(['format' => 'exiftool']);
+                    if (is_array($valz)) {
+                        $valx_a = explode(' ', $valx);
+                        $vala_a = explode(' ', $vala);
+                        $valx_aa = [];
+                        foreach ($valx_a as $v) {
+                            $x = is_numeric($v) ? round($v, 2) : $v;
+                            $valx_aa[] = $x;
+                        }
+                        $vala_aa = [];
+                        foreach ($vala_a as $v) {
+                            $x = is_numeric($v) ? round($v, 2) : $v;
+                            $vala_aa[] = $x;
+                        }
+                    } elseif (is_numeric($vala)/* && ((float) $vala - (int) $vala) != 0*/) {
+                        $valx_aa = round($valx, 1);
+                        $vala_aa = round($vala, 1);
+                    } else {
+                        $valx_aa = $valx;
+                        $vala_aa = $vala;
                     }
-                    $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
+if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
+    dump([$valx, $vala, $valz, $valx_aa, $vala_aa])  ;
+}
+                    $this->assertEquals($valx_aa, $vala_aa, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
 
