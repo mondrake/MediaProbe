@@ -183,7 +183,7 @@ abstract class NumberBase extends EntryBase
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            return $number == 0.0 ? 0 : round($number, 7);
+            return $number == 0.0 ? 0 : round($number, 8);
         }
         return $number;
     }
