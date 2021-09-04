@@ -15,9 +15,11 @@ class ExifExposureTime extends Rational
      */
     public function toString(array $options = [])
     {
-        $short = $options['short'] ?? false || ($options['format'] ?? null) === 'exiftool';
+        if (($options['format'] ?? null) === 'exiftool') {
+            return MediaProbe::fmt("%.1f", $this->getValue());
+        }
 
-        $sec = $short ? '' : ' sec.';
+        $sec = ($options['short'] ?? false) ? '' : ' sec.';
 
         if ($this->getValue() < 1) {
             return MediaProbe::fmt('1/%d%s', $this->value[0][1] / $this->value[0][0], $sec);
