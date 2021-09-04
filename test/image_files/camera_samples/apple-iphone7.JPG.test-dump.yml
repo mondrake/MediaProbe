@@ -1452,7 +1452,7 @@ elements:
                                                                     format: Rational
                                                                     components: 1
                                                                     bytesHash: 9a35e995276f5220ce7388b89cdb71db5c864e8019b90f980c12617d83870371
-                                                                    text: '24'
+                                                                    text: '24 m'
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP1:225'

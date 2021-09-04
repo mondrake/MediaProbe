@@ -16,8 +16,8 @@ class GPSTimeStamp extends Rational
     {
         switch ($options['format'] ?? null) {
             case 'exiftool':
-              dump($this->getValue());
-                return sprintf('%s m', $this->getValue($options));
+                $val = $this->getValue();
+                return sprintf('%s:%02d:%s', $val[0], $val[1], $val[2]);
             default:
                 return parent::toString($options);
         }

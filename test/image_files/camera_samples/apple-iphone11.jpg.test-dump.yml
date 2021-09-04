@@ -1641,7 +1641,7 @@ elements:
                                                                     format: Rational
                                                                     components: 1
                                                                     bytesHash: 1f5fc4d4da41de197a3542759f313663f40e7e7df2cf8f4172d09e4773784b2a
-                                                                    text: '60.2935875943'
+                                                                    text: '60.2935875943 m'
                                         -
                                             node: ifd
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
