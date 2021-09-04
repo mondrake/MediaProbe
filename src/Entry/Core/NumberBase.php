@@ -49,7 +49,7 @@ abstract class NumberBase extends EntryBase
         }
 
         $this->components = count($data);
-        $this->value = $data;
+        $this->value = empty($data) ? null : $data;
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
