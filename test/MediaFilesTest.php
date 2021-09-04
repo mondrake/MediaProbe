@@ -235,7 +235,6 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
                     $valz = $element->getValue(['format' => 'exiftool']);
-                    $re = ;
                     preg_match_all('/(\d+\.\d)|(\d+)/m', $valx, $matches, PREG_SET_ORDER, 0);
 dump(['in'=>$valx, 'out'=>$matches]);
                     $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
