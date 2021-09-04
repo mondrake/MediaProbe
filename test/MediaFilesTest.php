@@ -234,10 +234,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $this->assertNotNull($n, 'Exiftool text missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
-                    $valz = $element->getValue(['format' => 'exiftool']);
-                    preg_match_all('/(\d+\.\d+)|(\d+)/m', $valx, $matches, PREG_OFFSET_CAPTURE);
-dump(['in'=>$valx, 'out'=>$matches]);
-                    $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
+                    $valx_a = $this->tokenizeExiftoolString($valx);
+                    $vala_a = $this->tokenizeExiftoolString($vala);
+                    $this->assertEquals($valx_a, $vala_a, "Exiftool TEXT (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
 /*                    if (is_array($valz)) {
                         $valx_a = explode(' ', $valx);
                         $vala_a = explode(' ', $vala);
@@ -279,5 +278,18 @@ dump(['in'=>$valx, 'out'=>$matches]);
                 $this->assertElement($expected_element, $sub[$i], $rewritten);
             }
         }
+    }
+
+    protected function tokenizeExiftoolString(string $input): array
+    {
+        preg_match_all('/(\d+\.\d+)|(\d+)/m', $input, $matches, PREG_OFFSET_CAPTURE);
+        if (empty($matches[0])) {
+            return [$input];
+        }
+        $ret = [];
+        foreach ($matches[0] as $i => $m) {
+            $ret = $m[0];
+        }
+        return $ret;
     }
 }
