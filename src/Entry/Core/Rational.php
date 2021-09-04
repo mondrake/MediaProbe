@@ -73,10 +73,10 @@ class Rational extends Long
                 return $number;
             case 'exiftool':
                 if ($number[1] === 0) {
-                    return '0'; // xxx throw exception
+                    return 0; // xxx throw exception
                 } else {
                     $ret = $number[0] / $number[1];
-                    return $ret == 0.0 ? '0' : (string) $ret;
+                    return $ret == 0.0 ? 0 : round($ret, 9);
                 }
             case 'phpExif':
                 return (string) $number[0] . '/' . (string) $number[1];
