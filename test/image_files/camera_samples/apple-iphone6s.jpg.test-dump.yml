@@ -1420,7 +1420,7 @@ elements:
                                                                     format: Rational
                                                                     components: 1
                                                                     bytesHash: 72e87990cf92f7cf1bd244206632728725809a86f36fe4b1a59699b9fff98571
-                                                                    text: '1414'
+                                                                    text: '1414 m'
                                         -
                                             node: ifd
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
