@@ -288,11 +288,18 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         }
         $ret = [];
         foreach ($matches[0] as $i => $m) {
+            if ($i === 0 && $m[1] !== 0) {
+                $ret[] = substr($input, 0, $m[1]);
+            }
             $ret[] = $m[0];
             if (isset($matches[0][$i + 1])) {
-                $ret[] = substr($input, $m[1] + strlen($m[0]));
+                $endpos = $m[1] + strlen($m[0]);
+                $ret[] = substr($input, $endpos, $matches[0][$i + 1][1] - $endpos);
             } else {
-                $ret[] = substr($input, $m[1] + strlen($m[0]));
+                $trail = substr($input, $m[1] + strlen($m[0]));
+                if ($trail !== '') {
+                    $ret[] = $trail;
+                }
             }
 
         }
