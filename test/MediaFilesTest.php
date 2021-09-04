@@ -289,6 +289,12 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $ret = [];
         foreach ($matches[0] as $i => $m) {
             $ret[] = $m[0];
+            if (isset($matches[0][$i + 1])) {
+                $ret[] = substr($input, $m[1] + strlen($m[0]));
+            } else {
+                $ret[] = substr($input, $m[1] + strlen($m[0]));
+            }
+
         }
         return $ret;
     }
