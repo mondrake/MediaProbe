@@ -190,9 +190,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     if ($element->getOutputFormat() === ItemFormat::ASCII) {
                         $this->assertSame($valx, $vala, 'Exiftool raw: ' . $element->getContextPath());
                     } else {
-/*if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
-    dump([$valx, $vala, $element->getValue()])  ;
-}*/
+if (stripos($element->getContextPath(), 'tag:XPSubject') !== false) {
+    dump([$valx, $vala, $this->tokenizeExiftoolString($vala), $element->getValue()])  ;
+}
                         $sep = strpos($valx, ':') !== false ? ':' : ' ';
                         $valx_a = explode($sep, $valx);
                         $valx_aa = [];
