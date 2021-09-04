@@ -235,7 +235,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $valx = rtrim($n->textContent, " ");
                     $vala = rtrim($element->toString(['format' => 'exiftool']), " ");
                     $valz = $element->getValue(['format' => 'exiftool']);
-                    if (is_array($valz)) {
+                    $this->assertEquals($valx, $vala, 'Exiftool text: ' . $element->getContextPath());
+/*                    if (is_array($valz)) {
                         $valx_a = explode(' ', $valx);
                         $vala_a = explode(' ', $vala);
                         $valx_aa = [];
@@ -248,7 +249,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                             $x = is_numeric($v) ? round($v, 2) : $v;
                             $vala_aa[] = $x;
                         }
-                    } elseif (is_numeric($vala)/* && ((float) $vala - (int) $vala) != 0*/) {
+                    } elseif (is_numeric($vala)) {
                         $valx_aa = round($valx, 1);
                         $vala_aa = round($vala, 1);
                     } else {
@@ -258,7 +259,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 /*if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
     dump([$valx, $vala, $valz, $valx_aa, $vala_aa])  ;
 }*/
-                    $this->assertEquals($valx_aa, $vala_aa, 'Exiftool text: ' . $element->getContextPath());
+  //                  $this->assertEquals($valx_aa, $vala_aa, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
 
