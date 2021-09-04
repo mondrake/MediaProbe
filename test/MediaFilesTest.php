@@ -291,7 +291,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             if ($i === 0 && $m[1] !== 0) {
                 $ret[] = substr($input, 0, $m[1]);
             }
-            $ret[] = $m[0];
+            $ret[] = is_numeric($m[0]) ? round($m[0], 2) : $m[0];
             if (isset($matches[0][$i + 1])) {
                 $endpos = $m[1] + strlen($m[0]);
                 $ret[] = substr($input, $endpos, $matches[0][$i + 1][1] - $endpos);
