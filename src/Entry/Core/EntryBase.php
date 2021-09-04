@@ -206,21 +206,16 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     public function toString(array $options = [])
     {
         $text = $this->resolveText($this->getValue($options));
-        $format = $options['format'] ?? null;
         if (is_array($text)) {
-            if ($format === 'exiftool') {
-                if ($this->hasMappedText() || $this->hasDefaultText()) {
-                  return implode('; ', $text);
-                }
-                return implode(' ', $text);
-            } else {
-                if ($this->hasMappedText() || $this->hasDefaultText()) {
-                  return implode(', ', $text);
-                }
+            if (!$this->hasMappedText() && !$this->hasDefaultText()) {
                 return implode(' ', $text);
             }
+            if (($options['format'] ?? null) === 'exiftool') {
+                return implode('; ', $text);
+            }
+            return implode(', ', $text);
         }
-        return (string) $text;
+        return $text;
     }
 
     /**
