@@ -21,7 +21,7 @@ class ExifComponentsConfiguration extends Undefined
             for ($i = 0; $i < 4; $i ++) {
                 $v .= ord($this->value[$i]);
                 if ($i < 3) {
-                    $v .= ', ';
+                    $v .= ' ';
                 }
             }
             return $v;
