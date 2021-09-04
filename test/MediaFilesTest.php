@@ -195,7 +195,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 }*/
                         $tokenized_expected = $this->tokenizeExiftoolString($valx);
                         if (count($tokenized_expected) === 1) {
-                            $this->assertEquals($valx, $vala, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
+                            $this->assertEqualsWithDelta($valx, $vala, 0.01, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
                         } else {
                             $sep = strpos($valx, ':') !== false ? ':' : ' ';
                             $valx_a = explode($sep, $valx);
