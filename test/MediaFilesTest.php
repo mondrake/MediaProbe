@@ -190,9 +190,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     if ($element->getOutputFormat() === ItemFormat::ASCII) {
                         $this->assertSame($valx, $vala, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
                     } else {
-/*if (stripos($element->getContextPath(), 'tag:XPSubject') !== false) {
+if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
     dump([$valx, $vala, $this->tokenizeExiftoolString($valx), $element->getValue()])  ;
-}*/
+}
                         $tokenized_expected = $this->tokenizeExiftoolString($valx);
                         if (count($tokenized_expected) === 1) {
                             $this->assertEqualsWithDelta($valx, $vala, 0.01, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
