@@ -14,6 +14,7 @@ class GPSAltitude extends Rational
      */
     public function toString(array $options = [])
     {
+dump($options, $this->value, $this->getValue($options));
         $format = $options['format'] ?? null;
         switch ($format) {
             case 'exiftool':
