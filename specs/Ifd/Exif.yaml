@@ -1628,10 +1628,10 @@ items:
                 DOMNode: 'ExifIFD:BrightnessValue'
                 desc: 'Brightness Value'
     37380:
+        entryClass: FileEye\MediaProbe\Entry\ExifExposureBiasValue
         alias:
             - ExposureBiasValue
         components: 1
-        entryClass: FileEye\MediaProbe\Entry\ExifExposureBiasValue
         exifReadData:
             key: ExposureBiasValue
         exiftool:
@@ -1643,8 +1643,8 @@ items:
                 DOMNode: 'ExifIFD:ExposureCompensation'
                 desc: 'Exposure Compensation'
     37381:
-        components: 1
         entryClass: FileEye\MediaProbe\Entry\ExifApertureValue
+        components: 1
         exifReadData:
             key: MaxApertureValue
         exiftool:
