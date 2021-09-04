@@ -22,7 +22,7 @@ class ExifExposureBiasValue extends SignedRational
                     return '0';
                 } elseif ((((int) $val) / $val) > 0.999) {
                     return sprintf("%+d", (int) $val);
-                } elseif (((int) ($val * 2))/ ($val * 2) > 0.999) {
+                } elseif (((int) ($val * 2)) / ($val * 2) > 0.999) {
                     return sprintf("%+d/2", (int) ($val * 2));
                 } elseif (((int) ($val * 3)) / ($val * 3) > 0.999) {
                     return sprintf("%+d/3", (int) ($val * 3));
