@@ -190,9 +190,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     if ($element->getOutputFormat() === ItemFormat::ASCII) {
                         $this->assertSame($valx, $vala, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
                     } else {
-if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
+/*if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
     dump([$valx, $vala, $this->tokenizeExiftoolString($valx), $element->getValue()])  ;
-}
+}*/
                         $tokenized_expected = $this->tokenizeExiftoolString($valx);
                         if (count($tokenized_expected) === 1) {
                             $this->assertEqualsWithDelta($valx, $vala, 0.01, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
@@ -205,15 +205,15 @@ if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
                                 $valx_aa[] = $x;
                             }
     //                        $vala_a = explode(', ', $vala);
-                            $vala_a = is_array($vala) ? $vala : explode(', ', $vala);
+                            $vala_a = is_array($vala) ? $vala : explode(' ', $vala);
                             $vala_aa = [];
                             foreach ($vala_a as $v) {
                                 $x = is_numeric($v) ? round($v, 2) : $v;
                                 $vala_aa[] = $x;
                             }
-    /*if (stripos($element->getContextPath(), 'tag:RawMeasuredRGGB') !== false) {
-        dump([$valx_aa, $vala_aa]);
-    }*/
+if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
+    dump([$valx, $vala, $valx_aa, $vala_aa])  ;
+}
                             $this->assertEqualsWithDelta($valx_aa, $vala_aa, 0.001, 'Exiftool raw: ' . $element->getContextPath());
                         }
                     }
