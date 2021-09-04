@@ -167,7 +167,7 @@ abstract class NumberBase extends EntryBase
     /**
      * Formats a number.
      *
-     * This method is called by ::getText to format numbers. Subclasses should
+     * Xxx update : This method is called by ::getText to format numbers. Subclasses should
      * override this method if they need more sophisticated behavior than the
      * default, which is to just return the number as is.
      *
@@ -183,7 +183,7 @@ abstract class NumberBase extends EntryBase
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            return $number == 0.0 ? '0' : (string) $number;
+            return $number == 0.0 ? 0 : round($number, 9);
         }
         return $number;
     }
