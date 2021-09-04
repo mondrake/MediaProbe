@@ -12,6 +12,20 @@ class ExifLensInfo extends Rational
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if (($options['format'] ?? null) === 'exiftool') {
+            $val = $this->getValue();
+            $val[2] = $val[2] === 0 ? 'undef' : $val[2];
+            $val[3] = $val[3] === 0 ? 'undef' : $val[3];
+            return $val;
+        }
+        return parent::getValue($options);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
