@@ -14,6 +14,7 @@ class OpticalZoomCode extends SignedShort
      */
     public function toString(array $options = [])
     {
+dump($this->value, $options);
         $val = $this->getValue($options);
         return $val === 8 ? 'n/a' : $val;
     }
