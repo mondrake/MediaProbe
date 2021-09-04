@@ -237,30 +237,6 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $valx_a = $this->tokenizeExiftoolString($valx);
                     $vala_a = $this->tokenizeExiftoolString($vala);
                     $this->assertEquals($valx_a, $vala_a, "Exiftool TEXT (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
-/*                    if (is_array($valz)) {
-                        $valx_a = explode(' ', $valx);
-                        $vala_a = explode(' ', $vala);
-                        $valx_aa = [];
-                        foreach ($valx_a as $v) {
-                            $x = is_numeric($v) ? round($v, 2) : $v;
-                            $valx_aa[] = $x;
-                        }
-                        $vala_aa = [];
-                        foreach ($vala_a as $v) {
-                            $x = is_numeric($v) ? round($v, 2) : $v;
-                            $vala_aa[] = $x;
-                        }
-                    } elseif (is_numeric($vala)) {
-                        $valx_aa = round($valx, 1);
-                        $vala_aa = round($vala, 1);
-                    } else {
-                        $valx_aa = $valx;
-                        $vala_aa = $vala;
-                    }
-/*if (stripos($element->getContextPath(), 'tag:AccelerationVector') !== false) {
-    dump([$valx, $vala, $valz, $valx_aa, $vala_aa])  ;
-}*/
-  //                  $this->assertEquals($valx_aa, $vala_aa, 'Exiftool text: ' . $element->getContextPath());
                 }
             }
 
