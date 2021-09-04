@@ -1149,7 +1149,7 @@ elements:
                                                                     format: Rational
                                                                     components: 3
                                                                     bytesHash: f925b2d35befd264e7a113f768aec4d0ea5c64919a78a68d94d2a036ec3c83c6
-                                                                    text: '17, 30, 52'
+                                                                    text: '17 30 52'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSSpeedRef:12'
