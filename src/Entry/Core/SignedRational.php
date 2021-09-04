@@ -77,7 +77,7 @@ class SignedRational extends SignedLong
                     return 0; // xxx throw exception
                 } else {
                     $ret = $number[0] / $number[1];
-                    return $ret == 0.0 ? 0 : round($ret, 6);
+                    return $ret == 0.0 ? 0 : round($ret, 7);
                 }
             case 'phpExif':
                 if ($number[1] < 0) {
