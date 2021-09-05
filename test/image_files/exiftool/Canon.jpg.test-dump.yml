@@ -20,6 +20,8 @@ skip:
         - 'Canon:PrimaryAFPoint'
         - +++++++++++++++
         - 'Canon:FileNumber'
+        - '########### 201103'
+        - 'Canon:AFPointsInFocus'
 fileName: Canon.jpg
 mimeType: image/jpeg
 fileContentHash: 98c290283dbff10950bd0eac63bf95804fd09661de727df4f2946d203ca9e7a2
