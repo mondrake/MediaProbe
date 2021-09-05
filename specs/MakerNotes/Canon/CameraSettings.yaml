@@ -254,6 +254,7 @@ items:
                     - 4x
                     - Other
     13:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Contrast
         exiftool:
             -
                 name: Contrast

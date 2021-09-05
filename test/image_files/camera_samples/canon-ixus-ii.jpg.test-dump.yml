@@ -945,7 +945,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 2980b96166234d9747e952fc0902911bf8739860d8afcc804258dde3b7d7437d
-                                                                                    text: !!float 8
+                                                                                    text: '7.8'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashActivity:28'
