@@ -15,6 +15,16 @@ class Contrast extends SignedShort
     public function toString(array $options = [])
     {
         $val = $this->getValue();
-        return $val > 0 ? "+$val" : "$val";
+        if ($val === 0) {
+            return 'Normal';
+        }
+        if ($val > 0) {
+            if ($val > 0xfff0) {    # a negative value in disguise?
+                return $val - 0x10000;
+            } else {
+                return "+$val";
+            }
+        }
+        return $val;
     }
 }
