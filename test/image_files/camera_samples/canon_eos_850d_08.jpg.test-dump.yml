@@ -1484,7 +1484,7 @@ elements:
                                                                             format: Short
                                                                             components: 4
                                                                             bytesHash: af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc
-                                                                            text: '0, 0, 0, 0'
+                                                                            text: '0 0 0 0'
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4'
@@ -2148,7 +2148,7 @@ elements:
                                                                             format: Short
                                                                             components: 4
                                                                             bytesHash: 965db6c9485646b2faa3532c2f679cc4ffa11c422a2c60f1a9743995c08d1429
-                                                                            text: '0, 159, 6, 113'
+                                                                            text: '0 159 6 113'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
@@ -2336,7 +2336,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 143
                                                                                     bytesHash: efce0068572c316d8b40c4286c4375739dbc742fbc7338599b79d0f085c74591
-                                                                                    text: '600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:AFAreaHeights:9'
@@ -2354,7 +2354,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 143
                                                                                     bytesHash: cb22545111ada37131a79318df19901c0259cb55293f911a16c35a0a670f7eaa
-                                                                                    text: '891, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '891 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:AFAreaXPositions:10'
@@ -2372,7 +2372,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 143
                                                                                     bytesHash: 14dcb9b8ce03f79f849b0449d584b501576533a076248de25aebab67dc34583f
-                                                                                    text: '-600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '-600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:AFAreaYPositions:11'
@@ -2390,7 +2390,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 143
                                                                                     bytesHash: 410e53f07a0fb85827bdd0e411a5c7ac219cb6c52f4a18933f7ce359d7a8acf9
-                                                                                    text: '-438, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '-438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:AFPointsInFocus:12'
@@ -2408,7 +2408,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 9
                                                                                     bytesHash: aa25e1d595a77c375b40b4796ea4ff044890efeebd4bd15d16d54387a5a8fc37
-                                                                                    text: '1, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '1 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:AFPointsSelected:13'
@@ -2426,7 +2426,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 9
                                                                                     bytesHash: aa25e1d595a77c375b40b4796ea4ff044890efeebd4bd15d16d54387a5a8fc37
-                                                                                    text: '1, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                                    text: '1 0 0 0 0 0 0 0 0'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo2:38/tag:PrimaryAFPoint:14'
@@ -2632,7 +2632,7 @@ elements:
                                                                             format: Long
                                                                             components: 11
                                                                             bytesHash: 85759b3811ff7dc47b03792ac85317be51431a3f9e01dcafce317ed736a391b0
-                                                                            text: '0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                            text: '0 0 0 0 0 0 0 0 0 0 0'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:51'
@@ -2649,7 +2649,7 @@ elements:
                                                                             format: Long
                                                                             components: 4
                                                                             bytesHash: 1f1a2dbbc4f2ad6e2bc1ca7d6dfb3852604a45bec1acdb7c2408f3fb83ddfc8c
-                                                                            text: '39422842, 3057910990, 2027523218, 1021399208'
+                                                                            text: '39422842 3057910990 2027523218 1021399208'
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonTimeInfo:53'
@@ -2764,7 +2764,7 @@ elements:
                                                                             format: Long
                                                                             components: 12
                                                                             bytesHash: ee6447b4ff0fe21accb9dead8c571949be22cf2ef07938e927b6ad32556a8edf
-                                                                            text: '48, 1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 1'
+                                                                            text: '48 1 4 2 0 0 0 0 0 0 0 1'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:63'
@@ -3500,7 +3500,7 @@ elements:
                                                                                             format: SignedLong
                                                                                             components: 103
                                                                                             bytesHash: 69c9ae9b4903479ce61fc2d1628077cf8bd9e5350eb82aa10cf55f4e0322f236
-                                                                                            text: '19, 0, 19, 0, 0, 65535, 65535, 65535, 3, 0, 0, 65535, 65535, 65535, 18, 0, 4, 0, 53, 0, 25, 0, 29, 0, 13, 0, 14, 2, 14, 2, 29, 0, 29, 0, 5, 0, 5, 0, 5, 0, 5, 0, 23, 0, 0, 0, 0, 0, 90, 0, 29, 0, 54, 0, 78, 0, 87, 0, 103, 0, 39, 0, 105, 0, 53, 0, 65535, 0, 3, 5376, 3840, 0, 0, 0, 0, 0, 0, 0, 65535, 0, 0, 0, 5200, 0, 0, 0, 0, 0, 0, 0, 0, 65535, 0, 7, 3, 4, 31, 1, 2, 3, 4, 5, 1'
+                                                                                            text: '19 0 19 0 0 65535 65535 65535 3 0 0 65535 65535 65535 18 0 4 0 53 0 25 0 29 0 13 0 14 2 14 2 29 0 29 0 5 0 5 0 5 0 5 0 23 0 0 0 0 0 90 0 29 0 54 0 78 0 87 0 103 0 39 0 105 0 53 0 65535 0 3 5376 3840 0 0 0 0 0 0 0 65535 0 0 0 5200 0 0 0 0 0 0 0 0 65535 0 7 3 4 31 1 2 3 4 5 1'
                                                                                 -
                                                                                     node: tag
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:OperationOthers:4/tag:LCDDisplayAtPowerOn:2065'
@@ -4009,7 +4009,7 @@ elements:
                                                                                     format: Short
                                                                                     components: 4
                                                                                     bytesHash: 5463d24d71af1665cb66a2b7703ff0765342f36201c5a3d5b737aeea8be04cf7
-                                                                                    text: '531, 1024, 1024, 659'
+                                                                                    text: '531 1024 1024 659'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonMeasuredColor:170/tag:2'
@@ -4433,7 +4433,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempAsShot:75'
@@ -4469,7 +4469,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempAuto:80'
@@ -4505,7 +4505,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempMeasured:85'
@@ -4541,7 +4541,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown:90'
@@ -4577,7 +4577,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 3950598bdd25dc63e7e5373304ac0d3532c2ed849774744f8ff9e221f8536004
-                                                                                    text: '2009, 1024, 1024, 1544'
+                                                                                    text: '2009 1024 1024 1544'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown2:95'
@@ -4613,7 +4613,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 06701ef0467297f8a82870a535490d31f7d4c3f252b10596570055acd0b6eb1f
-                                                                                    text: '1993, 1024, 1024, 1558'
+                                                                                    text: '1993 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown3:100'
@@ -4649,7 +4649,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown4:105'
@@ -4685,7 +4685,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown5:110'
@@ -4721,7 +4721,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown6:115'
@@ -4757,7 +4757,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown7:120'
@@ -4793,7 +4793,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown8:125'
@@ -4829,7 +4829,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 16013b6b05b3036961ec99894c7338765f48f8deb63f0bea121bfd9039ccf789
-                                                                                    text: '1984, 1024, 1023, 1557'
+                                                                                    text: '1984 1024 1023 1557'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown9:130'
@@ -4865,7 +4865,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 16013b6b05b3036961ec99894c7338765f48f8deb63f0bea121bfd9039ccf789
-                                                                                    text: '1984, 1024, 1023, 1557'
+                                                                                    text: '1984 1024 1023 1557'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown10:135'
@@ -4901,7 +4901,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempDaylight:140'
@@ -4937,7 +4937,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: cebccb16d12b88060f16caf65ac3fde9f12dbdadd41ffa5071555b5875578de7
-                                                                                    text: '2162, 1024, 1024, 1442'
+                                                                                    text: '2162 1024 1024 1442'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempShade:145'
@@ -4973,7 +4973,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 21691a2dde5d34e9d67c9d5b126163021e1ccc5c0f2184f2ad302a6a859f8517
-                                                                                    text: '2016, 1024, 1024, 1544'
+                                                                                    text: '2016 1024 1024 1544'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempCloudy:150'
@@ -5009,7 +5009,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: b063bc10c3deb14712598cfc702b72786e577717fbdb2396d8e689d02ddb782b
-                                                                                    text: '1346, 1024, 1024, 2356'
+                                                                                    text: '1346 1024 1024 2356'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempTungsten:155'
@@ -5045,7 +5045,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 7daaf9a59c51a1224b4b5844c7a85f4fe4ca373dc0bb5817f0a4b43c15bf87f4
-                                                                                    text: '1584, 1024, 1024, 2203'
+                                                                                    text: '1584 1024 1024 2203'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempFluorescent:160'
@@ -5081,7 +5081,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempKelvin:165'
@@ -5117,7 +5117,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 9d4becc3a48f8031069f2bb4125012ffaafe274b426b855b5f25da6de37d3e1c
-                                                                                    text: '2072, 1024, 1024, 1524'
+                                                                                    text: '2072 1024 1024 1524'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempFlash:170'
@@ -5153,7 +5153,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown11:175'
@@ -5189,7 +5189,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown12:180'
@@ -5225,7 +5225,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown13:185'
@@ -5261,7 +5261,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown14:190'
@@ -5297,7 +5297,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown15:195'
@@ -5333,7 +5333,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown16:200'
@@ -5369,7 +5369,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown17:205'
@@ -5405,7 +5405,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown18:210'
@@ -5441,7 +5441,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown19:215'
@@ -5477,7 +5477,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: e63a0be39f684d9967778932f112901f7a4b03db893337a0883a90f5ebf89451
-                                                                                    text: '1889, 1024, 1024, 1654'
+                                                                                    text: '1889 1024 1024 1654'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown20:220'
@@ -5513,7 +5513,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown21:225'
@@ -5549,7 +5549,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown22:230'
@@ -5585,7 +5585,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown23:235'
@@ -5621,7 +5621,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 3950598bdd25dc63e7e5373304ac0d3532c2ed849774744f8ff9e221f8536004
-                                                                                    text: '2009, 1024, 1024, 1544'
+                                                                                    text: '2009 1024 1024 1544'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown24:240'
@@ -5657,7 +5657,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 06701ef0467297f8a82870a535490d31f7d4c3f252b10596570055acd0b6eb1f
-                                                                                    text: '1993, 1024, 1024, 1558'
+                                                                                    text: '1993 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown25:245'
@@ -5693,7 +5693,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown26:250'
@@ -5729,7 +5729,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 24890fd60bffeecc4f9f0698cc6d76bd6323e4fd88007238b5abaf7160a47607
-                                                                                    text: '1986, 1024, 1024, 1558'
+                                                                                    text: '1986 1024 1024 1558'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown27:255'
@@ -5765,7 +5765,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: bd1810d77e6a8442ac11593a6c8abde98c81dff9938003dcd205d70e195848e5
-                                                                                    text: '1986, 1024, 1024, 1563'
+                                                                                    text: '1986 1024 1024 1563'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown28:260'
@@ -5801,7 +5801,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 4
                                                                                     bytesHash: 2df07d52827c41a8522ac6ee754030d2c6172c0acacc7fc8385d00cf5ad9d177
-                                                                                    text: '1980, 1022, 1025, 1561'
+                                                                                    text: '1980 1022 1025 1561'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:ColorTempUnknown29:265'
@@ -5837,7 +5837,7 @@ elements:
                                                                                     format: Short
                                                                                     components: 4
                                                                                     bytesHash: 7971bdefa5d350222fbe3aa926ee2bdbd685341db331bea9e81324b49dc78544
-                                                                                    text: '2048, 2048, 2048, 2048'
+                                                                                    text: '2048 2048 2048 2048'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:NormalWhiteLevel:796'
@@ -5909,7 +5909,7 @@ elements:
                                                                             format: Short
                                                                             components: 3
                                                                             bytesHash: 75800624fbd086e81d92e42b6933f86c685a1e9840a69313e934563c3e8592a1
-                                                                            text: '135, 135, 135'
+                                                                            text: '135 135 135'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:PictureStylePC:16393'
@@ -5927,7 +5927,7 @@ elements:
                                                                             format: Short
                                                                             components: 3
                                                                             bytesHash: b0f66adc83641586656866813fd9dd0b8ebb63796075661ba45d1aa8089e1d44
-                                                                            text: '0, 0, 0'
+                                                                            text: '0 0 0'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CustomPictureStyleFileName:16400'
@@ -6633,7 +6633,7 @@ elements:
                                                                             format: Long
                                                                             components: 9
                                                                             bytesHash: a0afd5084025afafa665fbd79576b64ac1880229369fb1428f5618e234c5ddbe
-                                                                            text: '36, 0, 0, 0, 0, 0, 0, 0, 0'
+                                                                            text: '36 0 0 0 0 0 0 0 0'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16423'
@@ -6650,7 +6650,7 @@ elements:
                                                                             format: Long
                                                                             components: 6
                                                                             bytesHash: 50fc0b3122b45aafce7b35bb8f2a0e909d23b84456ed04aad2ae572890a62117
-                                                                            text: '24, 198144, 1023410185, 0, 13684944, 66816'
+                                                                            text: '24 198144 1023410185 0 13684944 66816'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16428'
@@ -6667,7 +6667,7 @@ elements:
                                                                             format: Long
                                                                             components: 2
                                                                             bytesHash: 6cc16abd70eefb90dc0ba0d14fb088630873b2c6ad943f7442356735984c35a3
-                                                                            text: '8, 0'
+                                                                            text: '8 0'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16435'
@@ -6701,7 +6701,7 @@ elements:
                                                                             format: Byte
                                                                             components: 16
                                                                             bytesHash: 85836a9e3319818081688d05ce6540da8925bcb9cdb5f1f348674a1b22da06ae
-                                                                            text: '223, 138, 93, 236, 242, 184, 68, 182, 146, 140, 217, 120, 168, 80, 225, 60'
+                                                                            text: '223 138 93 236 242 184 68 182 146 140 217 120 168 80 225 60'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16444'
@@ -6718,7 +6718,7 @@ elements:
                                                                             format: Long
                                                                             components: 3
                                                                             bytesHash: 0251e32d9cd50c5e1ec5b79f773b498dbc69257548f773f8d7f97897cfeabcdd
-                                                                            text: '12, 1, 0'
+                                                                            text: '12 1 0'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16445'
@@ -6752,7 +6752,7 @@ elements:
                                                                             format: Short
                                                                             components: 4
                                                                             bytesHash: 6cc16abd70eefb90dc0ba0d14fb088630873b2c6ad943f7442356735984c35a3
-                                                                            text: '8, 0, 0, 0'
+                                                                            text: '8 0 0 0'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTime:37520'
@@ -7103,7 +7103,7 @@ elements:
                                                                     format: Rational
                                                                     components: 4
                                                                     bytesHash: 5e47fd08565e06efdb23dd6064e4b72859a334bfe5d7cd5663352c824644f35a
-                                                                    text: '18, 55, 0, 0'
+                                                                    text: '18 55 0 0'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensModel:42036'
@@ -7412,7 +7412,7 @@ log:
     WARNING:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:Exposure:1/tag:ISOSpeedRange:259'
-            message: 'Found 1 data components, expected 3'
+            message: 'Found 1 data components expected 3'
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
