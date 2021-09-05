@@ -1618,7 +1618,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 5aeca385d8b781825b07bbec7c858b7170426c88088935850bc13dd6402368a5
-                                                                                    text: !!float 1
+                                                                                    text: '+2/3'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:WhiteBalance:7'
