@@ -21,4 +21,13 @@ class AFPointsInFocus extends SignedShort
             return $this->value[0];
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toString(array $options = [])
+    {
+dump(['AFPointsInFocus', $this->value, $this->getValue()]);
+        return parent::toString($options);
+    }
 }
