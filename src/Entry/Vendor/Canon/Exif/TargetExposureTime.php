@@ -7,4 +7,12 @@ namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
  */
 class TargetExposureTime extends ExposureTime
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function toString(array $options = [])
+    {
+dump(['targetexposure', $this->getValue(), $this->value]);
+        return $this->exposureTimeToString($this->getValue());
+    }
 }
