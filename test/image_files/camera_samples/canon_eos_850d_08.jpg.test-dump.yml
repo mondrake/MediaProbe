@@ -1133,7 +1133,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 14f825b2bbc32dd8d196367fa8776873069c12a8954d8da7513aa7704ddd09eb
-                                                                                    text: !!float 4
+                                                                                    text: '3.7'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MinAperture:27'
