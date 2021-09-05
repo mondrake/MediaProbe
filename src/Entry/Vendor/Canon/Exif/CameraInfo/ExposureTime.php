@@ -26,7 +26,7 @@ class ExposureTime extends Byte
      */
     public function toString(array $options = [])
     {
-dump(['exposure', $this->getValue(), $this->value()]);
+dump(['exposure', $this->getValue(), $this->value]);
         return $this->exposureTimeToString($this->getValue());
     }
 
