@@ -10,6 +10,8 @@ use FileEye\MediaProbe\Entry\ExifTrait;
  */
 class TargetExposureTime extends SignedShort
 {
+    use ExifTrait;
+
     /**
      * {@inheritdoc}
      */
