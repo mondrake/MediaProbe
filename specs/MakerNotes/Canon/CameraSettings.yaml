@@ -265,6 +265,7 @@ items:
                 values:
                     - Normal
     14:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Saturation
         exiftool:
             -
                 name: Saturation

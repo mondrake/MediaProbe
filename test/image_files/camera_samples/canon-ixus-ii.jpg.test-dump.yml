@@ -1366,7 +1366,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 3038a3216fba1e955d90addce0a77d46bdef7b51cfeb73a273989a68e093f225
-                                                                                    text: !!float 3
+                                                                                    text: '3.2'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:TargetExposureTime:5'

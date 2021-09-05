@@ -6,9 +6,9 @@ use FileEye\MediaProbe\Entry\Core\SignedShort;
 use FileEye\MediaProbe\Entry\ExifTrait;
 
 /**
- * Handler for Canon Contrast tags.
+ * Handler for Canon Saturation tags.
  */
-class Contrast extends SignedShort
+class Saturation extends SignedShort
 {
     use ExifTrait;
 
