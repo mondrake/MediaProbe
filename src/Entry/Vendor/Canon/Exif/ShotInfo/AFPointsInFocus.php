@@ -15,11 +15,11 @@ class AFPointsInFocus extends SignedShort
      */
     public function getValue(array $options = [])
     {
-        if ($alternative_af_points_in_focus = $this->getRootElement()->getElement("//makerNote[@name='Canon']/*[@name!='CanonShotInfo']/tag[@name='AFPointsInFocus']/entry")) {
-            return $alternative_af_points_in_focus->getValue($options);
-        } else {
+//        if ($alternative_af_points_in_focus = $this->getRootElement()->getElement("//makerNote[@name='Canon']/*[@name!='CanonShotInfo']/tag[@name='AFPointsInFocus']/entry")) {
+//            return $alternative_af_points_in_focus->getValue($options);
+//        } else {
             return $this->value[0];
-        }
+//        }
     }
 
     /**
