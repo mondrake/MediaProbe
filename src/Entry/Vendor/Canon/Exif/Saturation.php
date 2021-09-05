@@ -17,6 +17,6 @@ class Saturation extends SignedShort
      */
     public function toString(array $options = [])
     {
-        return $this->decodeParameter($this->getValue());
+        return $this->parameterToString($this->getValue());
     }
 }

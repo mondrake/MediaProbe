@@ -26,7 +26,7 @@ class ExposureCompensation extends SignedShort
      */
     public function toString(array $options = [])
     {
-        return $this->printFraction($this->getValue());
+        return $this->fractionToString($this->getValue());
     }
 
     private function canonEv($val)

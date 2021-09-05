@@ -2,6 +2,8 @@
 
 namespace FileEye\MediaProbe\Entry;
 
+use FileEye\MediaProbe\MediaProbe;
+
 /**
  * Common functions for Exif decoding.
  */
@@ -10,7 +12,7 @@ trait ExifTrait
     /**
      * xxx @todo
      */
-    protected function decodeParameter($val)
+    protected function parameterToString($val)
     {
         if ($val === 0) {
             return 'Normal';
@@ -28,7 +30,7 @@ trait ExifTrait
     /**
      * xxx @todo
      */
-    protected function printFraction($val)
+    protected function fractionToString($val)
     {
         if (isset($val)) {
             $val *= 1.00001;    # avoid round-off errors
@@ -45,5 +47,16 @@ trait ExifTrait
             }
         }
         return null;
+    }
+
+    /**
+     * xxx @todo
+     */
+    protected function exposureTimeToString($val)
+    {
+        if ($val < 0.25001 and $val > 0) {
+            return MediaProbe::fmt("1/%d", (int) (0.5 + 1 / $val));
+        }
+        return MediaProbe::fmt("%.1f", $val);
     }
 }

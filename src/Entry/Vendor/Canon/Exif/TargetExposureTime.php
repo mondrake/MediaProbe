@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
+use FileEye\MediaProbe\Entry\ExifTrait;
 use FileEye\MediaProbe\MediaProbe;
 
 /**
@@ -9,16 +10,13 @@ use FileEye\MediaProbe\MediaProbe;
  */
 class TargetExposureTime extends ExposureTime
 {
+    use ExifTrait;
+
     /**
      * {@inheritdoc}
      */
     public function toString(array $options = [])
     {
-        $value = $this->getValue();
-        if ($value < 0.25001 && $value > 0) {
-            return sprintf("1/%d", floor(0.5 + 1 / $value));
-        }
-        $ret = sprintf("%.1f", $value);
-        return $ret;
+        return $this->exposureTimeToString($this->getValue());
     }
 }
