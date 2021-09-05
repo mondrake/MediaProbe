@@ -48,7 +48,7 @@ items:
                 DOMNode: 'Canon:TargetAperture'
                 desc: 'Target Aperture'
     5:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ExposureTime
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\TargetExposureTime
         exiftool:
             -
                 name: TargetExposureTime

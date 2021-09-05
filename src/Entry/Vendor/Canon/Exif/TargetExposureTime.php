@@ -2,21 +2,9 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
-use FileEye\MediaProbe\Entry\ExifTrait;
-use FileEye\MediaProbe\MediaProbe;
-
 /**
  * Handler for Canon Target Exposure Time tags.
  */
 class TargetExposureTime extends ExposureTime
 {
-    use ExifTrait;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function toString(array $options = [])
-    {
-        return $this->exposureTimeToString($this->getValue());
-    }
 }
