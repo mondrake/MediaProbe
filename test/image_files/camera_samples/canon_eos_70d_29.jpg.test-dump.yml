@@ -2228,7 +2228,7 @@ elements:
                                                                                     format: ShortRev
                                                                                     components: 1
                                                                                     bytesHash: c493f6f146685f76b44f0c77ca88120cb8bc89f534fe69b6828827b974e68849
-                                                                                    text: '18'
+                                                                                    text: '18 mm'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13/tag:MaxFocalLength:362'
@@ -2246,7 +2246,7 @@ elements:
                                                                                     format: ShortRev
                                                                                     components: 1
                                                                                     bytesHash: c233262dd1d49aadacbfa8fee4bd9444d21a81695d2444dfa404f9f64c877a9f
-                                                                                    text: '135'
+                                                                                    text: '135 mm'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13/tag:FirmwareVersion:606'
