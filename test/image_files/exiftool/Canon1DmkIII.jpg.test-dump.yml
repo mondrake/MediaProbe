@@ -22,7 +22,6 @@ skip:
         - 'Canon:AFInfoSize'
         - 'Canon:PrimaryAFPoint'
         - 'Canon:ImageUniqueID'
-        - 'Canon:FileNumber'
         - 'Canon:RawJpgQuality'
         - 'Canon:FilterEffect'
         - 'Canon:ToningEffect'
@@ -2791,7 +2790,7 @@ elements:
                                                                                     format: Long
                                                                                     components: 1
                                                                                     bytesHash: 10af25d84b2a7d49af5e8c9077e173638c68d6dbb8013841545b1e44f6a8a78c
-                                                                                    text: !!float 32112640
+                                                                                    text: 321-12640
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonFileInfo:147/tag:BracketMode:3'

@@ -63,10 +63,10 @@ trait ExifTrait
     /**
      * xxx @todo
      */
-    protected function timeZoneToString($offset)
+    protected function timeZoneToString($min)
     {
-dump($offset);
-        $sign = '+';
+dump($min);
+        $sign = $min < 0 ? '-' : '+';
         $min = $min < 0 ? -$min : $min;
         $min = int($min + 0.5); # round off to nearest minute
         $h = int($min / 60);
