@@ -22,6 +22,7 @@ skip:
         - 'Canon:AFInfoSize'
         - 'Canon:PrimaryAFPoint'
         - 'Canon:ImageUniqueID'
+        - 'Canon:FileNumber'
         - 'Canon:RawJpgQuality'
         - 'Canon:FilterEffect'
         - 'Canon:ToningEffect'
