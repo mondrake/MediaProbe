@@ -135,6 +135,7 @@ items:
                     - 'Enable (Tv/Av)'
                     - 'Enable (ISO speed)'
     265:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\UsableShootingModes
         exiftool:
             -
                 name: UsableShootingModes
