@@ -1890,7 +1890,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 8411fbeb6f7a0d0cba9595af2c6d9d915879d86e5e1e2d5d3a0afaf062edb1a6
-                                                                                    text: !!float 0
+                                                                                    text: '1/470'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV2:23'

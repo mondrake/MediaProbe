@@ -1672,7 +1672,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 4ba6fbf83ee13f77b7e61de31948933953afd6bb0be6d484855083d7483d462e
-                                                                                    text: !!float 0
+                                                                                    text: '1/33'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV2:23'
