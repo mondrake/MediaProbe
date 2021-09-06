@@ -18,7 +18,7 @@ class UsableShootingModes extends SignedLong
         if ($format === 'exiftool') {
             $val = $this->getValue($options);
             $str = $val[0] === 0 ? 'Disable; Flags 0x' : 'Enable; Flags 0x';
-            $str .= dec2hex($val[1]);
+            $str .= dechex($val[1]);
             return $str;
         }
         return parent::toString($options);
