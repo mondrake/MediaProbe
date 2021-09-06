@@ -480,6 +480,8 @@ items:
                     - 'Rotate 90 CW'
                     - 'Rotate 270 CW'
     40:
+        text:
+            default: '{value} mm'
         exiftool:
             -
                 name: FocalLength

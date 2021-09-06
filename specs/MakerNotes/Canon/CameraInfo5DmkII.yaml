@@ -93,6 +93,8 @@ items:
                 DOMNode: 'Canon:MacroMagnification'
                 desc: 'Macro Magnification'
     30:
+        text:
+            default: '{value} mm'
         exiftool:
             -
                 name: FocalLength

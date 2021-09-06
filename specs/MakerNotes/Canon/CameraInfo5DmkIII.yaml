@@ -58,6 +58,8 @@ items:
                 DOMNode: 'Canon:CameraTemperature'
                 desc: 'Camera Temperature'
     35:
+        text:
+            default: '{value} mm'
         exiftool:
             -
                 name: FocalLength

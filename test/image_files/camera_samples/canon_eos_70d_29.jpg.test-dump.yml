@@ -2120,7 +2120,7 @@ elements:
                                                                                     format: ShortRev
                                                                                     components: 1
                                                                                     bytesHash: c233262dd1d49aadacbfa8fee4bd9444d21a81695d2444dfa404f9f64c877a9f
-                                                                                    text: '135'
+                                                                                    text: '135 mm'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13/tag:CameraOrientation:132'

@@ -21,6 +21,8 @@ items:
                 DOMNode: 'Canon:ExposureTime'
                 desc: 'Exposure Time'
     10:
+        text:
+            default: '{value} mm'
         exiftool:
             -
                 name: FocalLength

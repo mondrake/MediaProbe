@@ -90,6 +90,8 @@ items:
                 writable: true
                 desc: 'Camera Temperature'
     30:
+        text:
+            default: '{value} mm'
         exiftool:
             -
                 name: FocalLength
