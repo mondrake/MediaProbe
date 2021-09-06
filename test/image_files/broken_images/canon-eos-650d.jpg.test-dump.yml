@@ -131,6 +131,8 @@ skip:
         - 'Canon:LinearityUpperMargin'
         - '########### 201103'
         - 'Canon:Sharpness'
+        - 'Canon:AFPointsInFocus'
+        - 'Canon:AFPointsSelected'
 fileName: canon-eos-650d.jpg
 mimeType: image/jpeg
 fileContentHash: dfa943d103fe7afa192e8526a96fb80789981bf9248c234126210c65dfb1feb8
