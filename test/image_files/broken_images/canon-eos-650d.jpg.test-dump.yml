@@ -1555,7 +1555,7 @@ elements:
                                                                                     format: SignedShort
                                                                                     components: 1
                                                                                     bytesHash: 15a0a278f5e015f33f6b783f0016306533752fed06044467cd02a0f947bec46c
-                                                                                    text: 1/790
+                                                                                    text: '1/813'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ExposureCompensation:6'
@@ -2121,7 +2121,7 @@ elements:
                                                                                     format: Byte
                                                                                     components: 1
                                                                                     bytesHash: d16bd22f7196c0a70f4b12aa0b290c4c4acecd5d6ba350ecc8447fbdf4c3819b
-                                                                                    text: !!float 19
+                                                                                    text: '19 C'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13/tag:FocalLength:35'
