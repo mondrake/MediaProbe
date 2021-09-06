@@ -48,6 +48,7 @@ items:
                 DOMNode: 'Canon:CanonFirmwareVersion'
                 desc: 'Canon Firmware Version'
     8:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\FileNumber
         exiftool:
             -
                 name: FileNumber

@@ -2131,7 +2131,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 8c67daee92e6a5603939a98c0b26d2f436cb2dc5afcf4e5f6fe9212b35022a63
-                                                                            text: '1000041'
+                                                                            text: '100-0041'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:OwnerName:9'
