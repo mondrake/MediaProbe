@@ -16,6 +16,6 @@ class FileNumber extends Long
     public function toString(array $options = [])
     {
         $val = (string) $this->getValue();
-        return substr($val, 0, 3) . '-' . substr($val, 3);
+        return empty($val) ? '0' : substr($val, 0, 3) . '-' . substr($val, 3);
     }
 }

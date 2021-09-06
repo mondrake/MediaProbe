@@ -251,6 +251,7 @@ items:
                 DOMNode: 'CanonRaw:MeasuredEV'
                 desc: 'Measured EV'
     6167:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\FileNumber
         exiftool:
             -
                 name: FileNumber

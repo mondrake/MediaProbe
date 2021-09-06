@@ -59,4 +59,17 @@ trait ExifTrait
         }
         return MediaProbe::fmt("%.1f", $val);
     }
+
+    /**
+     * xxx @todo
+     */
+    protected function timeZoneToString($offset)
+    {
+dump($offset);
+        $sign = '+';
+        $min = $min < 0 ? -$min : $min;
+        $min = int($min + 0.5); # round off to nearest minute
+        $h = int($min / 60);
+        return sprintf('%s%.2d:%.2d', $sign, $h, $min - $h * 60);
+    }
 }
