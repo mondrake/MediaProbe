@@ -148,6 +148,7 @@ items:
                     - Disable
                     - Enable
     266:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\UsableShootingModes
         exiftool:
             -
                 name: UsableMeteringModes
