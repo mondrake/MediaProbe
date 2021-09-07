@@ -175,7 +175,7 @@ items:
                     - 'Spot metering'
                     - 'Center-weighted average'
     268:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomShutterSpeedRange
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ShutterSpeedRange
         exiftool:
             -
                 name: ShutterSpeedRange
