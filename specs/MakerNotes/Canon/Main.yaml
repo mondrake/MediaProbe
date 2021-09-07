@@ -105,6 +105,8 @@ items:
         name: CanonCustomFunctions
         collection: MakerNotes\CanonCustom\FunctionsResolver
     16:
+        text:
+            default: 'Unknown (0x{valuehex})'
         exiftool:
             -
                 name: CanonModelID

@@ -2132,7 +2132,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: fe49f43f6bd4194fa91297a42ea62a8ee4967aa90635a6e1bfde266dd52a1ddb
-                                                                            text: '2147484725'
+                                                                            text: 'Unknown (0x80000435)'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'
