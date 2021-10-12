@@ -293,39 +293,37 @@ DATA;
 
     private function processExiftoolEntry(array $input, array $item, $file): array
     {
-        $output = $input;
+        $output = [];
+//        unset($output['g1'], $output['g2'], $output['type'], $writable['writable'], $output['DOMNode'], $output['desc'], $output['count']);
 
-        if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
-            unset($output['DOMNode']);
-        }
+//        if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
+//            unset($output['DOMNode']);
+//        }
 
         // Add the name.
-        if (isset($item['name'])) {
-            unset($output['name']);
+        if (!isset($item['name']) && isset($input['name'])) {
+            $output['name'] = $input['name'];
         }
 
         // Add a title if available.
-        if (!isset($item['title']) && isset($output['desc'])) {
-            $output['title'] = $output['desc'];
+        if (!isset($item['title']) && isset($input['desc'])) {
+            $output['title'] = $input['desc'];
         }
-        unset($output['desc']);
 
         // Add components if available.
-        if (!isset($item['components']) && isset($output['count'])) {
-            $output['components'] = $output['count'];
+        if (!isset($item['components']) && isset($input['count'])) {
+            $output['components'] = $input['count'];
         }
-        unset($output['count']);
 
         // Convert format string to its ID.
-        if (!isset($item['format']) && ($output['type'] ?? false)) {
-            $output['format'] = $this->format2Id($output['type'], 'exiftool', $item['name'] ?? $item['collection'], $file);
+        if (!isset($item['format']) && ($input['type'] ?? false)) {
+            $output['format'] = $this->format2Id($input['type'], 'exiftool', $item['name'] ?? $item['collection'], $file);
         }
 
         // Add text mapping if available.
-        if (!isset($item['text']['mapping']) && isset($output['values'])) {
-            $item['text']['mapping'] = $output['values'];
+        if (!isset($item['text']['mapping']) && isset($input['values'])) {
+            $item['text']['mapping'] = $input['values'];
         }
-        unset($output['values']);
 
         return $output;
     }
