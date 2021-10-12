@@ -203,6 +203,11 @@ DATA;
             if ($count_exiftool > 0) {
                 // Fetch the first available Exiftool definition if available.
                 $exiftool = reset($item['exiftool']);
+
+                if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
+                    unset($exiftool['DOMNode']);
+                }
+
                 $process_exiftool = $this->processExiftoolEntry($exiftool, $item, $file);
                 $item = array_merge($item, $process_exiftool);
             }
@@ -215,9 +220,10 @@ DATA;
 
             // Add item to map by collection/name.
             if (isset($item['name'])) {
-                if (!in_array($id, array_values($map['itemsByName'][$item['name']] ?? []))) {
-                    $map['itemsByName'][$item['name']][] = $id;
-                }
+//                if (!in_array($id, array_values($map['itemsByName'][$item['name']] ?? []))) {
+//                    $map['itemsByName'][$item['name']][] = $id;
+//                }
+                  $map['itemsByName'][$item['name']] = $id;
             }
 
             // Add item to map by exif_read_data key.
@@ -294,11 +300,6 @@ DATA;
     private function processExiftoolEntry(array $input, array $item, $file): array
     {
         $output = [];
-//        unset($output['g1'], $output['g2'], $output['type'], $writable['writable'], $output['DOMNode'], $output['desc'], $output['count']);
-
-//        if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
-//            unset($output['DOMNode']);
-//        }
 
         // Add the name.
         if (!isset($item['name']) && isset($input['name'])) {
