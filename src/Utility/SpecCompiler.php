@@ -189,70 +189,73 @@ DATA;
             // Item must have a collection.
             $item['collection'] = $item['collection'] ?? $input['defaultItemCollection'] ?? static::VOID_COLLECTION;
 
-            // Fetch the first available Exiftool definition if available.
-            $exiftool = isset($item['exiftool']) ? reset($item['exiftool']) : null;
+            $count_exiftool = count($item['exiftool'] ?? []);
+            if ($count_exiftool <= 1) {
+                // Fetch the first available Exiftool definition if available.
+                $exiftool = $count_exiftool === 1 : $item['exiftool'][0] ? null;
 
-            if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
-                unset($exiftool['DOMNode']);
+                if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
+                    unset($exiftool['DOMNode']);
+                }
+
+                // Add the name.
+                if (!isset($item['name']) && isset($exiftool['name'])) {
+                    $item['name'] = $exiftool['name'];
+                }
+
+                // Add a title if available.
+                if (!isset($item['title']) && isset($exiftool['desc'])) {
+                    $item['title'] = $exiftool['desc'];
+                }
+
+                // Add components if available.
+                if (!isset($item['components']) && isset($exiftool['count'])) {
+                    $item['components'] = $exiftool['count'];
+                }
+
+                // Convert format string to its ID.
+                if (isset($item['format'])) {
+                    $item['format'] = $this->format2Id($item['format'], 'base', $item['name'] ?? $item['collection'], $file);
+                } elseif ($exiftool['type'] ?? false) {
+                    $item['format'] = $this->format2Id($exiftool['type'], 'exiftool', $item['name'] ?? $item['collection'], $file);
+                }
+
+                // Add output format if available.
+                if (isset($item['outputFormat'])) {
+                    $item['outputFormat'] = $this->format2Id($item['outputFormat'], 'base', $item['name'] ?? $item['collection'], $file)[0];
+                }
+
+                // Add text mapping if available.
+                if (!isset($item['text']['mapping']) && isset($exiftool['values'])) {
+                    $item['text']['mapping'] = $exiftool['values'];
+                }
+
+                $item_exif_tag = $item['exifReadData']['key'] ?? null;
+
+                unset($item['compiler']);
+                unset($item['exifReadData']);
+                unset($item['exiftool']);
+
+                // Add item to map by collection/name.
+                if (isset($item['name'])) { // xx
+                    $map['itemsByName'][$item['name']] = $id;
+                }
+
+                // Add item to map by exif_read_data key.
+                if (isset($item_exif_tag)) { // xx
+                    $item['phpExifTag'] = $item_exif_tag;
+                    $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
+                }
+
+                // Add item to map by exiftool DOMNode.
+                if (isset($exiftool['DOMNode'])) { // xx
+                    $item['exiftoolDOMNode'] = $exiftool['DOMNode'];
+                    $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                }
+
+                // Add item to map by collection/id.
+                $map['items'][$id] = $item;
             }
-
-            // Add the name.
-            if (!isset($item['name']) && isset($exiftool['name'])) {
-                $item['name'] = $exiftool['name'];
-            }
-
-            // Add a title if available.
-            if (!isset($item['title']) && isset($exiftool['desc'])) {
-                $item['title'] = $exiftool['desc'];
-            }
-
-            // Add components if available.
-            if (!isset($item['components']) && isset($exiftool['count'])) {
-                $item['components'] = $exiftool['count'];
-            }
-
-            // Convert format string to its ID.
-            if (isset($item['format'])) {
-                $item['format'] = $this->format2Id($item['format'], 'base', $item['name'] ?? $item['collection'], $file);
-            } elseif ($exiftool['type'] ?? false) {
-                $item['format'] = $this->format2Id($exiftool['type'], 'exiftool', $item['name'] ?? $item['collection'], $file);
-            }
-
-            // Add output format if available.
-            if (isset($item['outputFormat'])) {
-                $item['outputFormat'] = $this->format2Id($item['outputFormat'], 'base', $item['name'] ?? $item['collection'], $file)[0];
-            }
-
-            // Add text mapping if available.
-            if (!isset($item['text']['mapping']) && isset($exiftool['values'])) {
-                $item['text']['mapping'] = $exiftool['values'];
-            }
-
-            $item_exif_tag = $item['exifReadData']['key'] ?? null;
-
-            unset($item['compiler']);
-            unset($item['exifReadData']);
-            unset($item['exiftool']);
-
-            // Add item to map by collection/name.
-            if (isset($item['name'])) { // xx
-                $map['itemsByName'][$item['name']] = $id;
-            }
-
-            // Add item to map by exif_read_data key.
-            if (isset($item_exif_tag)) { // xx
-                $item['phpExifTag'] = $item_exif_tag;
-                $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
-            }
-
-            // Add item to map by exiftool DOMNode.
-            if (isset($exiftool['DOMNode'])) { // xx
-                $item['exiftoolDOMNode'] = $exiftool['DOMNode'];
-                $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
-            }
-
-            // Add item to map by collection/id.
-            $map['items'][$id] = $item;
         }
 
         if (isset($map['items'])) {
