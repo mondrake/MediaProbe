@@ -204,7 +204,7 @@ DATA;
                 // Fetch the first available Exiftool definition if available.
                 $exiftool = reset($item['exiftool']);
                 $process_exiftool = $this->processExiftoolEntry($exiftool, $item, $file);
-                array_merge($item, $process_exiftool);
+                $item = array_merge($item, $process_exiftool);
             }
 
             $item_exif_tag = $item['exifReadData']['key'] ?? null;
