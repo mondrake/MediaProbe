@@ -322,7 +322,7 @@ DATA;
 
         // Add text mapping if available.
         if (!isset($item['text']['mapping']) && isset($input['values'])) {
-            $item['text']['mapping'] = $input['values'];
+            $output['text']['mapping'] = $input['values'];
         }
 
         return $output;
