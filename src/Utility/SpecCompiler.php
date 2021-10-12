@@ -192,7 +192,7 @@ DATA;
             $count_exiftool = count($item['exiftool'] ?? []);
             if ($count_exiftool <= 1) {
                 // Fetch the first available Exiftool definition if available.
-                $exiftool = $count_exiftool === 1 : $item['exiftool'][0] ? null;
+                $exiftool = $count_exiftool === 1 ? $item['exiftool'][0] : null;
 
                 if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
                     unset($exiftool['DOMNode']);
