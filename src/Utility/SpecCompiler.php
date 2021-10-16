@@ -299,7 +299,7 @@ DATA;
 
     private function processExiftoolEntry(array $input, array $item, $file): array
     {
-        $output = [];
+        $output = $item;
 
         // Add the name.
         if (!isset($item['name']) && isset($input['name'])) {
