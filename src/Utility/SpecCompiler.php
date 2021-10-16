@@ -220,10 +220,9 @@ DATA;
 
             // Add item to map by collection/name.
             if (isset($item['name'])) {
-//                if (!in_array($id, array_values($map['itemsByName'][$item['name']] ?? []))) {
-//                    $map['itemsByName'][$item['name']][] = $id;
-//                }
-                  $map['itemsByName'][$item['name']] = $id;
+                if (!in_array($id, array_values($map['itemsByName'][$item['name']] ?? []))) {
+                    $map['itemsByName'][$item['name']][] = $id;
+                }
             }
 
             // Add item to map by exif_read_data key.
