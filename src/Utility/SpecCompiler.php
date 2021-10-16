@@ -240,6 +240,7 @@ DATA;
 
             // Add item to map by collection/id.
             $map['items'][$id] = $item;
+            $exiftool = null;
         }
 
         if (isset($map['items'])) {
