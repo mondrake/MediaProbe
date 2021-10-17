@@ -227,9 +227,11 @@ DATA;
                 if (!isset($map['items'][$id])) {
                     $map['items'][$id] = $xxx;
                 } else {
-                    $yyy = $map['items'][$id];
-                    unset($map['items'][$id]);
-                    $map['items'][$id][] = $yyy;
+                    if (isset($map['items'][$id]['collection'])) {
+                        $yyy = $map['items'][$id];
+                        unset($map['items'][$id]);
+                        $map['items'][$id][] = $yyy;
+                    }
                     $map['items'][$id][] = $xxx;
                 }
             } else {
@@ -262,9 +264,11 @@ DATA;
                     if (!isset($map['items'][$id])) {
                         $map['items'][$id] = $xxx;
                     } else {
-                        $yyy = $map['items'][$id];
-                        unset($map['items'][$id]);
-                        $map['items'][$id][] = $yyy;
+                        if (isset($map['items'][$id]['collection'])) {
+                            $yyy = $map['items'][$id];
+                            unset($map['items'][$id]);
+                            $map['items'][$id][] = $yyy;
+                        }
                         $map['items'][$id][] = $xxx;
                     }
                 }
