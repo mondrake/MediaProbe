@@ -220,7 +220,9 @@ DATA;
                 // Add item to map by exiftool DOMNode.
                 if (isset($exiftool['DOMNode'])) { // xx
                     $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
-                    $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                    if (!in_array($id, array_values($map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] ?? []))) {
+                        $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                    }
                 }
 
                 // Add item to map by collection/id.
@@ -257,7 +259,9 @@ DATA;
                     // Add item to map by exiftool DOMNode.
                     if (isset($exiftool['DOMNode'])) { // xx
                         $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
-                        $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                        if (!in_array($id, array_values($map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] ?? []))) {
+                            $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                        }
                     }
 
                     // Add item to map by collection/id.
