@@ -210,6 +210,15 @@ DATA;
                         $map['itemsByName'][$xxx['name']][] = $id;
                     }
                 }
+                // Add item to map by collection/id.
+                if (!isset($map['items'][$id])) {
+                    $map['items'][$id] = $xxx;
+                } else {
+                    if (!is_array($map['items'][$id])) {
+                       $map['items'][$id] = [$map['items'][$id]]:
+                    }
+                    $map['items'][$id][] = $xxx;
+                }
             } else {
                 foreach ($item['exiftool'] as $i => $exiftool) {
                     if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
@@ -222,6 +231,15 @@ DATA;
                     if (!in_array($id, array_values($map['itemsByName'][$xxx['name']] ?? []))) {
                         $map['itemsByName'][$xxx['name']][] = $id;
                     }
+                }
+                // Add item to map by collection/id.
+                if (!isset($map['items'][$id])) {
+                    $map['items'][$id] = $xxx;
+                } else {
+                    if (!is_array($map['items'][$id])) {
+                       $map['items'][$id] = [$map['items'][$id]]:
+                    }
+                    $map['items'][$id][] = $xxx;
                 }
             }
 
@@ -237,8 +255,6 @@ DATA;
                 $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
             }
 
-            // Add item to map by collection/id.
-            $map['items'][$id] = $xxx;
             $exiftool = null;
         }
 
