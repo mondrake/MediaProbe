@@ -218,15 +218,19 @@ abstract class Collection
      *
      * @param string $item_name
      *   The item name.
+     * @param mixed $index
+     *   The item name index.
      *
      * @return Collection|null
      *   The item collection object, or null if missing.
+     *
+     * @todo throw Exception if missing, do not return null
      */
-    public function getItemCollectionByName($item_name)
+    public function getItemCollectionByName(string $item_name, $index = 0): ?Collection
     {
-        if (!isset(static::$map['itemsByName'][$item_name])) {
+        if (!isset(static::$map['itemsByName'][$item_name][$index])) {
             return null;
         }
-        return $this->getItemCollection(static::$map['itemsByName'][$item_name]);
+        return $this->getItemCollection(static::$map['itemsByName'][$item_name][$index]);
     }
 }
