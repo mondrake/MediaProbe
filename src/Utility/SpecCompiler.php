@@ -214,7 +214,9 @@ DATA;
                 // Add item to map by exif_read_data key.
                 if (isset($item_exif_tag)) { // xx
                     $xxx['phpExifTag'] = $item_exif_tag;
-                    $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
+                    if (!in_array($id, array_values($map['itemsByPhpExifTag'][$item_exif_tag] ?? []))) {
+                        $map['itemsByPhpExifTag'][$item_exif_tag][] = $id;
+                    }
                 }
 
                 // Add item to map by exiftool DOMNode.
@@ -253,7 +255,9 @@ DATA;
                     // Add item to map by exif_read_data key.
                     if (isset($item_exif_tag)) { // xx
                         $xxx['phpExifTag'] = $item_exif_tag;
-                        $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
+                        if (!in_array($id, array_values($map['itemsByPhpExifTag'][$item_exif_tag] ?? []))) {
+                            $map['itemsByPhpExifTag'][$item_exif_tag][] = $id;
+                        }
                     }
 
                     // Add item to map by exiftool DOMNode.
