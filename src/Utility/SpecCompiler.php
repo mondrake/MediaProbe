@@ -210,6 +210,19 @@ DATA;
                         $map['itemsByName'][$xxx['name']][] = $id;
                     }
                 }
+
+                // Add item to map by exif_read_data key.
+                if (isset($item_exif_tag)) { // xx
+                    $xxx['phpExifTag'] = $item_exif_tag;
+                    $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
+                }
+
+                // Add item to map by exiftool DOMNode.
+                if (isset($exiftool['DOMNode'])) { // xx
+                    $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
+                    $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                }
+
                 // Add item to map by collection/id.
                 if (!isset($map['items'][$id])) {
                     $map['items'][$id] = $xxx;
@@ -232,6 +245,19 @@ DATA;
                         $map['itemsByName'][$xxx['name']][] = $id;
                     }
                 }
+
+                // Add item to map by exif_read_data key.
+                if (isset($item_exif_tag)) { // xx
+                    $xxx['phpExifTag'] = $item_exif_tag;
+                    $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
+                }
+
+                // Add item to map by exiftool DOMNode.
+                if (isset($exiftool['DOMNode'])) { // xx
+                    $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
+                    $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                }
+
                 // Add item to map by collection/id.
                 if (!isset($map['items'][$id])) {
                     $map['items'][$id] = $xxx;
@@ -241,18 +267,6 @@ DATA;
                     }
                     $map['items'][$id][] = $xxx;
                 }
-            }
-
-            // Add item to map by exif_read_data key.
-            if (isset($item_exif_tag)) { // xx
-                $xxx['phpExifTag'] = $item_exif_tag;
-                $map['itemsByPhpExifTag'][$item_exif_tag] = $id;
-            }
-
-            // Add item to map by exiftool DOMNode.
-            if (isset($exiftool['DOMNode'])) { // xx
-                $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
-                $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
             }
 
             $exiftool = null;
