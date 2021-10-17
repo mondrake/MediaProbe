@@ -227,11 +227,9 @@ DATA;
                 if (!isset($map['items'][$id])) {
                     $map['items'][$id] = $xxx;
                 } else {
-                    if (!is_array($map['items'][$id])) {
-                       $yyy = $map['items'][$id];
-                       unset($map['items'][$id]);
-                       $map['items'][$id][] = $yyy;
-                    }
+                    $yyy = $map['items'][$id];
+                    unset($map['items'][$id]);
+                    $map['items'][$id][] = $yyy;
                     $map['items'][$id][] = $xxx;
                 }
             } else {
@@ -264,11 +262,9 @@ DATA;
                     if (!isset($map['items'][$id])) {
                         $map['items'][$id] = $xxx;
                     } else {
-                        if (!is_array($map['items'][$id])) {
-                            $yyy = $map['items'][$id];
-                            unset($map['items'][$id]);
-                            $map['items'][$id][] = $yyy;
-                        }
+                        $yyy = $map['items'][$id];
+                        unset($map['items'][$id]);
+                        $map['items'][$id][] = $yyy;
                         $map['items'][$id][] = $xxx;
                     }
                 }
