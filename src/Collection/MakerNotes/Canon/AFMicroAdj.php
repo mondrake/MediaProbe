@@ -42,43 +42,52 @@ class AFMicroAdj extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'RawData',
-      'name' => 'indexSize',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'RawData',
+        'name' => 'indexSize',
+        'format' =>
+        array (
+          0 => 4,
+        ),
       ),
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFMicroAdjMode',
-      'title' => 'AF Micro Adj Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFMicroAdjMode',
+        'title' => 'AF Micro Adj Mode',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Adjust all by the same amount',
-          2 => 'Adjust by lens',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Adjust all by the same amount',
+            2 => 'Adjust by lens',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:AFMicroAdjMode',
       ),
-      'exiftoolDOMNode' => 'Canon:AFMicroAdjMode',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFMicroAdjValue',
-      'title' => 'AF Micro Adj Value',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'collection' => 'Tag',
+        'name' => 'AFMicroAdjValue',
+        'title' => 'AF Micro Adj Value',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'exiftoolDOMNode' => 'Canon:AFMicroAdjValue',
       ),
-      'exiftoolDOMNode' => 'Canon:AFMicroAdjValue',
     ),
   ),
   'itemsByExiftoolDOMNode' =>

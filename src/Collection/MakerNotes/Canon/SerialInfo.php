@@ -40,14 +40,17 @@ class SerialInfo extends Collection {
   array (
     9 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'InternalSerialNumber',
-      'title' => 'Internal Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'InternalSerialNumber',
+        'title' => 'Internal Serial Number',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'Canon:InternalSerialNumber',
       ),
-      'exiftoolDOMNode' => 'Canon:InternalSerialNumber',
     ),
   ),
 );

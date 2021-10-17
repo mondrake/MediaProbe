@@ -488,1096 +488,1267 @@ class PSInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastStandard',
-      'title' => 'Contrast Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastStandard',
+        'title' => 'Contrast Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastStandard',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessStandard',
-      'title' => 'Sharpness Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessStandard',
+        'title' => 'Sharpness Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessStandard',
     ),
     8 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationStandard',
-      'title' => 'Saturation Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationStandard',
+        'title' => 'Saturation Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationStandard',
     ),
     12 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneStandard',
-      'title' => 'Color Tone Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneStandard',
+        'title' => 'Color Tone Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneStandard',
     ),
     16 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectStandard',
-      'title' => 'Filter Effect Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectStandard',
+        'title' => 'Filter Effect Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectStandard',
     ),
     20 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectStandard',
-      'title' => 'Toning Effect Standard',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectStandard',
+        'title' => 'Toning Effect Standard',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectStandard',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectStandard',
     ),
     24 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastPortrait',
-      'title' => 'Contrast Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastPortrait',
+        'title' => 'Contrast Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastPortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastPortrait',
     ),
     28 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessPortrait',
-      'title' => 'Sharpness Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessPortrait',
+        'title' => 'Sharpness Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessPortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessPortrait',
     ),
     32 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationPortrait',
-      'title' => 'Saturation Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationPortrait',
+        'title' => 'Saturation Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationPortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationPortrait',
     ),
     36 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTonePortrait',
-      'title' => 'Color Tone Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorTonePortrait',
+        'title' => 'Color Tone Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTonePortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTonePortrait',
     ),
     40 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectPortrait',
-      'title' => 'Filter Effect Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectPortrait',
+        'title' => 'Filter Effect Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectPortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectPortrait',
     ),
     44 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectPortrait',
-      'title' => 'Toning Effect Portrait',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectPortrait',
+        'title' => 'Toning Effect Portrait',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectPortrait',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectPortrait',
     ),
     48 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastLandscape',
-      'title' => 'Contrast Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastLandscape',
+        'title' => 'Contrast Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastLandscape',
     ),
     52 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessLandscape',
-      'title' => 'Sharpness Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessLandscape',
+        'title' => 'Sharpness Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessLandscape',
     ),
     56 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationLandscape',
-      'title' => 'Saturation Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationLandscape',
+        'title' => 'Saturation Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationLandscape',
     ),
     60 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneLandscape',
-      'title' => 'Color Tone Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneLandscape',
+        'title' => 'Color Tone Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneLandscape',
     ),
     64 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectLandscape',
-      'title' => 'Filter Effect Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectLandscape',
+        'title' => 'Filter Effect Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectLandscape',
     ),
     68 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectLandscape',
-      'title' => 'Toning Effect Landscape',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectLandscape',
+        'title' => 'Toning Effect Landscape',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectLandscape',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectLandscape',
     ),
     72 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastNeutral',
-      'title' => 'Contrast Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastNeutral',
+        'title' => 'Contrast Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastNeutral',
     ),
     76 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessNeutral',
-      'title' => 'Sharpness Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessNeutral',
+        'title' => 'Sharpness Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessNeutral',
     ),
     80 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationNeutral',
-      'title' => 'Saturation Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationNeutral',
+        'title' => 'Saturation Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationNeutral',
     ),
     84 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneNeutral',
-      'title' => 'Color Tone Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneNeutral',
+        'title' => 'Color Tone Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneNeutral',
     ),
     88 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectNeutral',
-      'title' => 'Filter Effect Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectNeutral',
+        'title' => 'Filter Effect Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectNeutral',
     ),
     92 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectNeutral',
-      'title' => 'Toning Effect Neutral',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectNeutral',
+        'title' => 'Toning Effect Neutral',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectNeutral',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectNeutral',
     ),
     96 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastFaithful',
-      'title' => 'Contrast Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastFaithful',
+        'title' => 'Contrast Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastFaithful',
     ),
     100 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessFaithful',
-      'title' => 'Sharpness Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessFaithful',
+        'title' => 'Sharpness Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessFaithful',
     ),
     104 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationFaithful',
-      'title' => 'Saturation Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationFaithful',
+        'title' => 'Saturation Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationFaithful',
     ),
     108 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneFaithful',
-      'title' => 'Color Tone Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneFaithful',
+        'title' => 'Color Tone Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneFaithful',
     ),
     112 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectFaithful',
-      'title' => 'Filter Effect Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectFaithful',
+        'title' => 'Filter Effect Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectFaithful',
     ),
     116 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectFaithful',
-      'title' => 'Toning Effect Faithful',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectFaithful',
+        'title' => 'Toning Effect Faithful',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectFaithful',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectFaithful',
     ),
     120 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastMonochrome',
-      'title' => 'Contrast Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastMonochrome',
+        'title' => 'Contrast Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastMonochrome',
     ),
     124 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessMonochrome',
-      'title' => 'Sharpness Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessMonochrome',
+        'title' => 'Sharpness Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessMonochrome',
     ),
     128 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationMonochrome',
-      'title' => 'Saturation Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationMonochrome',
+        'title' => 'Saturation Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationMonochrome',
     ),
     132 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneMonochrome',
-      'title' => 'Color Tone Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneMonochrome',
+        'title' => 'Color Tone Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneMonochrome',
     ),
     136 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectMonochrome',
-      'title' => 'Filter Effect Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectMonochrome',
+        'title' => 'Filter Effect Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Yellow',
-          2 => 'Orange',
-          3 => 'Red',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Yellow',
+            2 => 'Orange',
+            3 => 'Red',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectMonochrome',
     ),
     140 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectMonochrome',
-      'title' => 'Toning Effect Monochrome',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectMonochrome',
+        'title' => 'Toning Effect Monochrome',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Sepia',
-          2 => 'Blue',
-          3 => 'Purple',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Sepia',
+            2 => 'Blue',
+            3 => 'Purple',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectMonochrome',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectMonochrome',
     ),
     144 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastUserDef1',
-      'title' => 'Contrast User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastUserDef1',
+        'title' => 'Contrast User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastUserDef1',
     ),
     148 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessUserDef1',
-      'title' => 'Sharpness User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessUserDef1',
+        'title' => 'Sharpness User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessUserDef1',
     ),
     152 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationUserDef1',
-      'title' => 'Saturation User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationUserDef1',
+        'title' => 'Saturation User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationUserDef1',
     ),
     156 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneUserDef1',
-      'title' => 'Color Tone User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneUserDef1',
+        'title' => 'Color Tone User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneUserDef1',
     ),
     160 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectUserDef1',
-      'title' => 'Filter Effect User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectUserDef1',
+        'title' => 'Filter Effect User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Yellow',
-          2 => 'Orange',
-          3 => 'Red',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Yellow',
+            2 => 'Orange',
+            3 => 'Red',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectUserDef1',
     ),
     164 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectUserDef1',
-      'title' => 'Toning Effect User Def 1',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectUserDef1',
+        'title' => 'Toning Effect User Def 1',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Sepia',
-          2 => 'Blue',
-          3 => 'Purple',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Sepia',
+            2 => 'Blue',
+            3 => 'Purple',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectUserDef1',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectUserDef1',
     ),
     168 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastUserDef2',
-      'title' => 'Contrast User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastUserDef2',
+        'title' => 'Contrast User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastUserDef2',
     ),
     172 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessUserDef2',
-      'title' => 'Sharpness User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessUserDef2',
+        'title' => 'Sharpness User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessUserDef2',
     ),
     176 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationUserDef2',
-      'title' => 'Saturation User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationUserDef2',
+        'title' => 'Saturation User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationUserDef2',
     ),
     180 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneUserDef2',
-      'title' => 'Color Tone User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneUserDef2',
+        'title' => 'Color Tone User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneUserDef2',
     ),
     184 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectUserDef2',
-      'title' => 'Filter Effect User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectUserDef2',
+        'title' => 'Filter Effect User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Yellow',
-          2 => 'Orange',
-          3 => 'Red',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Yellow',
+            2 => 'Orange',
+            3 => 'Red',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectUserDef2',
     ),
     188 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectUserDef2',
-      'title' => 'Toning Effect User Def 2',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectUserDef2',
+        'title' => 'Toning Effect User Def 2',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Sepia',
-          2 => 'Blue',
-          3 => 'Purple',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Sepia',
+            2 => 'Blue',
+            3 => 'Purple',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectUserDef2',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectUserDef2',
     ),
     192 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastUserDef3',
-      'title' => 'Contrast User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContrastUserDef3',
+        'title' => 'Contrast User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ContrastUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:ContrastUserDef3',
     ),
     196 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessUserDef3',
-      'title' => 'Sharpness User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessUserDef3',
+        'title' => 'Sharpness User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SharpnessUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:SharpnessUserDef3',
     ),
     200 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationUserDef3',
-      'title' => 'Saturation User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SaturationUserDef3',
+        'title' => 'Saturation User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SaturationUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:SaturationUserDef3',
     ),
     204 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneUserDef3',
-      'title' => 'Color Tone User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorToneUserDef3',
+        'title' => 'Color Tone User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorToneUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorToneUserDef3',
     ),
     208 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FilterEffectUserDef3',
-      'title' => 'Filter Effect User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FilterEffectUserDef3',
+        'title' => 'Filter Effect User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Yellow',
-          2 => 'Orange',
-          3 => 'Red',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Yellow',
+            2 => 'Orange',
+            3 => 'Red',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FilterEffectUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:FilterEffectUserDef3',
     ),
     212 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToningEffectUserDef3',
-      'title' => 'Toning Effect User Def 3',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToningEffectUserDef3',
+        'title' => 'Toning Effect User Def 3',
+        'format' =>
         array (
-          -559038737 => 'n/a',
-          0 => 'None',
-          1 => 'Sepia',
-          2 => 'Blue',
-          3 => 'Purple',
-          4 => 'Green',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -559038737 => 'n/a',
+            0 => 'None',
+            1 => 'Sepia',
+            2 => 'Blue',
+            3 => 'Purple',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToningEffectUserDef3',
       ),
-      'exiftoolDOMNode' => 'Canon:ToningEffectUserDef3',
     ),
     216 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UserDef1PictureStyle',
-      'title' => 'User Def 1 Picture Style',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'UserDef1PictureStyle',
+        'title' => 'User Def 1 Picture Style',
+        'format' =>
         array (
-          65 => 'PC 1',
-          66 => 'PC 2',
-          67 => 'PC 3',
-          129 => 'Standard',
-          130 => 'Portrait',
-          131 => 'Landscape',
-          132 => 'Neutral',
-          133 => 'Faithful',
-          134 => 'Monochrome',
-          135 => 'Auto',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            65 => 'PC 1',
+            66 => 'PC 2',
+            67 => 'PC 3',
+            129 => 'Standard',
+            130 => 'Portrait',
+            131 => 'Landscape',
+            132 => 'Neutral',
+            133 => 'Faithful',
+            134 => 'Monochrome',
+            135 => 'Auto',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:UserDef1PictureStyle',
       ),
-      'exiftoolDOMNode' => 'Canon:UserDef1PictureStyle',
     ),
     218 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UserDef2PictureStyle',
-      'title' => 'User Def 2 Picture Style',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'UserDef2PictureStyle',
+        'title' => 'User Def 2 Picture Style',
+        'format' =>
         array (
-          65 => 'PC 1',
-          66 => 'PC 2',
-          67 => 'PC 3',
-          129 => 'Standard',
-          130 => 'Portrait',
-          131 => 'Landscape',
-          132 => 'Neutral',
-          133 => 'Faithful',
-          134 => 'Monochrome',
-          135 => 'Auto',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            65 => 'PC 1',
+            66 => 'PC 2',
+            67 => 'PC 3',
+            129 => 'Standard',
+            130 => 'Portrait',
+            131 => 'Landscape',
+            132 => 'Neutral',
+            133 => 'Faithful',
+            134 => 'Monochrome',
+            135 => 'Auto',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:UserDef2PictureStyle',
       ),
-      'exiftoolDOMNode' => 'Canon:UserDef2PictureStyle',
     ),
     220 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UserDef3PictureStyle',
-      'title' => 'User Def 3 Picture Style',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'UserDef3PictureStyle',
+        'title' => 'User Def 3 Picture Style',
+        'format' =>
         array (
-          65 => 'PC 1',
-          66 => 'PC 2',
-          67 => 'PC 3',
-          129 => 'Standard',
-          130 => 'Portrait',
-          131 => 'Landscape',
-          132 => 'Neutral',
-          133 => 'Faithful',
-          134 => 'Monochrome',
-          135 => 'Auto',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            65 => 'PC 1',
+            66 => 'PC 2',
+            67 => 'PC 3',
+            129 => 'Standard',
+            130 => 'Portrait',
+            131 => 'Landscape',
+            132 => 'Neutral',
+            133 => 'Faithful',
+            134 => 'Monochrome',
+            135 => 'Auto',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:UserDef3PictureStyle',
       ),
-      'exiftoolDOMNode' => 'Canon:UserDef3PictureStyle',
     ),
   ),
 );

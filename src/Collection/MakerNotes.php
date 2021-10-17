@@ -29,17 +29,23 @@ class MakerNotes extends Collection {
   array (
     'Apple' =>
     array (
-      'collection' => 'MakerNotes\\Apple\\Main',
-      'name' => 'Apple',
-      'make' => 'Apple',
-      'model' => '.*',
+      0 =>
+      array (
+        'collection' => 'MakerNotes\\Apple\\Main',
+        'name' => 'Apple',
+        'make' => 'Apple',
+        'model' => '.*',
+      ),
     ),
     'Canon' =>
     array (
-      'collection' => 'MakerNotes\\Canon\\Main',
-      'name' => 'Canon',
-      'make' => 'Canon',
-      'model' => '.*',
+      0 =>
+      array (
+        'collection' => 'MakerNotes\\Canon\\Main',
+        'name' => 'Canon',
+        'make' => 'Canon',
+        'model' => '.*',
+      ),
     ),
   ),
 );

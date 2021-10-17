@@ -411,528 +411,624 @@ class Gps extends Collection {
   array (
     0 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSVersionId',
-      'collection' => 'Tag',
-      'name' => 'GPSVersionID',
-      'title' => 'GPS Version ID',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSVersionId',
+        'collection' => 'Tag',
+        'name' => 'GPSVersionID',
+        'title' => 'GPS Version ID',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 1,
+        ),
+        'phpExifTag' => 'GPSVersion',
+        'exiftoolDOMNode' => 'GPS:GPSVersionID',
       ),
-      'phpExifTag' => 'GPSVersion',
-      'exiftoolDOMNode' => 'GPS:GPSVersionID',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSLatitudeRef',
-      'title' => 'GPS Latitude Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSLatitudeRef',
+        'title' => 'GPS Latitude Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'N' => 'North',
-          'S' => 'South',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'N' => 'North',
+            'S' => 'South',
+          ),
+        ),
+        'phpExifTag' => 'GPSLatitudeRef',
+        'exiftoolDOMNode' => 'GPS:GPSLatitudeRef',
       ),
-      'phpExifTag' => 'GPSLatitudeRef',
-      'exiftoolDOMNode' => 'GPS:GPSLatitudeRef',
     ),
     2 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSDegrees',
-      'collection' => 'Tag',
-      'name' => 'GPSLatitude',
-      'title' => 'GPS Latitude',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSDegrees',
+        'collection' => 'Tag',
+        'name' => 'GPSLatitude',
+        'title' => 'GPS Latitude',
+        'components' => 3,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSLatitude',
+        'exiftoolDOMNode' => 'GPS:GPSLatitude',
       ),
-      'phpExifTag' => 'GPSLatitude',
-      'exiftoolDOMNode' => 'GPS:GPSLatitude',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSLongitudeRef',
-      'title' => 'GPS Longitude Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSLongitudeRef',
+        'title' => 'GPS Longitude Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'E' => 'East',
-          'W' => 'West',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'E' => 'East',
+            'W' => 'West',
+          ),
+        ),
+        'phpExifTag' => 'GPSLongitudeRef',
+        'exiftoolDOMNode' => 'GPS:GPSLongitudeRef',
       ),
-      'phpExifTag' => 'GPSLongitudeRef',
-      'exiftoolDOMNode' => 'GPS:GPSLongitudeRef',
     ),
     4 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSDegrees',
-      'collection' => 'Tag',
-      'name' => 'GPSLongitude',
-      'title' => 'GPS Longitude',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSDegrees',
+        'collection' => 'Tag',
+        'name' => 'GPSLongitude',
+        'title' => 'GPS Longitude',
+        'components' => 3,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSLongitude',
+        'exiftoolDOMNode' => 'GPS:GPSLongitude',
       ),
-      'phpExifTag' => 'GPSLongitude',
-      'exiftoolDOMNode' => 'GPS:GPSLongitude',
     ),
     5 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSAltitudeRef',
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSAltitudeRef',
-      'title' => 'GPS Altitude Ref',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSAltitudeRef',
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSAltitudeRef',
+        'title' => 'GPS Altitude Ref',
+        'format' =>
         array (
-          0 => 'Above Sea Level',
-          1 => 'Below Sea Level',
+          0 => 1,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Above Sea Level',
+            1 => 'Below Sea Level',
+          ),
+        ),
+        'phpExifTag' => 'GPSAltitudeRef',
+        'exiftoolDOMNode' => 'GPS:GPSAltitudeRef',
       ),
-      'phpExifTag' => 'GPSAltitudeRef',
-      'exiftoolDOMNode' => 'GPS:GPSAltitudeRef',
     ),
     6 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSAltitude',
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSAltitude',
-      'title' => 'GPS Altitude',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSAltitude',
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSAltitude',
+        'title' => 'GPS Altitude',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSAltitude',
+        'exiftoolDOMNode' => 'GPS:GPSAltitude',
       ),
-      'phpExifTag' => 'GPSAltitude',
-      'exiftoolDOMNode' => 'GPS:GPSAltitude',
     ),
     7 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSTimeStamp',
-      'collection' => 'Tag',
-      'name' => 'GPSTimeStamp',
-      'title' => 'GPS Time Stamp',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\GPSTimeStamp',
+        'collection' => 'Tag',
+        'name' => 'GPSTimeStamp',
+        'title' => 'GPS Time Stamp',
+        'components' => 3,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSTimeStamp',
+        'exiftoolDOMNode' => 'GPS:GPSTimeStamp',
       ),
-      'phpExifTag' => 'GPSTimeStamp',
-      'exiftoolDOMNode' => 'GPS:GPSTimeStamp',
     ),
     8 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSSatellites',
-      'title' => 'GPS Satellites',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'GPSSatellites',
+        'title' => 'GPS Satellites',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'GPSSatellites',
+        'exiftoolDOMNode' => 'GPS:GPSSatellites',
       ),
-      'phpExifTag' => 'GPSSatellites',
-      'exiftoolDOMNode' => 'GPS:GPSSatellites',
     ),
     9 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSStatus',
-      'title' => 'GPS Status',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSStatus',
+        'title' => 'GPS Status',
+        'components' => 2,
+        'format' =>
         array (
-          'A' => 'Measurement Active',
-          'V' => 'Measurement Void',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'A' => 'Measurement Active',
+            'V' => 'Measurement Void',
+          ),
+        ),
+        'phpExifTag' => 'GPSStatus',
+        'exiftoolDOMNode' => 'GPS:GPSStatus',
       ),
-      'phpExifTag' => 'GPSStatus',
-      'exiftoolDOMNode' => 'GPS:GPSStatus',
     ),
     10 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSMeasureMode',
-      'title' => 'GPS Measure Mode',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSMeasureMode',
+        'title' => 'GPS Measure Mode',
+        'components' => 2,
+        'format' =>
         array (
-          2 => '2-Dimensional Measurement',
-          3 => '3-Dimensional Measurement',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            2 => '2-Dimensional Measurement',
+            3 => '3-Dimensional Measurement',
+          ),
+        ),
+        'phpExifTag' => 'GPSMeasureMode',
+        'exiftoolDOMNode' => 'GPS:GPSMeasureMode',
       ),
-      'phpExifTag' => 'GPSMeasureMode',
-      'exiftoolDOMNode' => 'GPS:GPSMeasureMode',
     ),
     11 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSDOP',
-      'title' => 'GPS Dilution Of Precision',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSDOP',
+        'title' => 'GPS Dilution Of Precision',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSDOP',
+        'exiftoolDOMNode' => 'GPS:GPSDOP',
       ),
-      'phpExifTag' => 'GPSDOP',
-      'exiftoolDOMNode' => 'GPS:GPSDOP',
     ),
     12 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSSpeedRef',
-      'title' => 'GPS Speed Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSSpeedRef',
+        'title' => 'GPS Speed Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'K' => 'km/h',
-          'M' => 'mph',
-          'N' => 'knots',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'K' => 'km/h',
+            'M' => 'mph',
+            'N' => 'knots',
+          ),
+        ),
+        'phpExifTag' => 'GPSSpeedRef',
+        'exiftoolDOMNode' => 'GPS:GPSSpeedRef',
       ),
-      'phpExifTag' => 'GPSSpeedRef',
-      'exiftoolDOMNode' => 'GPS:GPSSpeedRef',
     ),
     13 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSSpeed',
-      'title' => 'GPS Speed',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'GPSSpeed',
+        'title' => 'GPS Speed',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSSpeed',
+        'exiftoolDOMNode' => 'GPS:GPSSpeed',
       ),
-      'phpExifTag' => 'GPSSpeed',
-      'exiftoolDOMNode' => 'GPS:GPSSpeed',
     ),
     14 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSTrackRef',
-      'title' => 'GPS Track Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSTrackRef',
+        'title' => 'GPS Track Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'M' => 'Magnetic North',
-          'T' => 'True North',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'M' => 'Magnetic North',
+            'T' => 'True North',
+          ),
+        ),
+        'phpExifTag' => 'GPSTrackRef',
+        'exiftoolDOMNode' => 'GPS:GPSTrackRef',
       ),
-      'phpExifTag' => 'GPSTrackRef',
-      'exiftoolDOMNode' => 'GPS:GPSTrackRef',
     ),
     15 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSTrack',
-      'title' => 'GPS Track',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSTrack',
+        'title' => 'GPS Track',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSTrack',
+        'exiftoolDOMNode' => 'GPS:GPSTrack',
       ),
-      'phpExifTag' => 'GPSTrack',
-      'exiftoolDOMNode' => 'GPS:GPSTrack',
     ),
     16 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSImgDirectionRef',
-      'title' => 'GPS Img Direction Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSImgDirectionRef',
+        'title' => 'GPS Img Direction Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'M' => 'Magnetic North',
-          'T' => 'True North',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'M' => 'Magnetic North',
+            'T' => 'True North',
+          ),
+        ),
+        'phpExifTag' => 'GPSImgDirectionRef',
+        'exiftoolDOMNode' => 'GPS:GPSImgDirectionRef',
       ),
-      'phpExifTag' => 'GPSImgDirectionRef',
-      'exiftoolDOMNode' => 'GPS:GPSImgDirectionRef',
     ),
     17 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSImgDirection',
-      'title' => 'GPS Img Direction',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSImgDirection',
+        'title' => 'GPS Img Direction',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSImgDirection',
+        'exiftoolDOMNode' => 'GPS:GPSImgDirection',
       ),
-      'phpExifTag' => 'GPSImgDirection',
-      'exiftoolDOMNode' => 'GPS:GPSImgDirection',
     ),
     18 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSMapDatum',
-      'title' => 'GPS Map Datum',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'GPSMapDatum',
+        'title' => 'GPS Map Datum',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'GPSMapDatum',
+        'exiftoolDOMNode' => 'GPS:GPSMapDatum',
       ),
-      'phpExifTag' => 'GPSMapDatum',
-      'exiftoolDOMNode' => 'GPS:GPSMapDatum',
     ),
     19 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestLatitudeRef',
-      'title' => 'GPS Dest Latitude Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSDestLatitudeRef',
+        'title' => 'GPS Dest Latitude Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'N' => 'North',
-          'S' => 'South',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'N' => 'North',
+            'S' => 'South',
+          ),
+        ),
+        'phpExifTag' => 'GPSDestLatitudeRef',
+        'exiftoolDOMNode' => 'GPS:GPSDestLatitudeRef',
       ),
-      'phpExifTag' => 'GPSDestLatitudeRef',
-      'exiftoolDOMNode' => 'GPS:GPSDestLatitudeRef',
     ),
     20 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestLatitude',
-      'title' => 'GPS Dest Latitude',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'GPSDestLatitude',
+        'title' => 'GPS Dest Latitude',
+        'components' => 3,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSDestLatitude',
+        'exiftoolDOMNode' => 'GPS:GPSDestLatitude',
       ),
-      'phpExifTag' => 'GPSDestLatitude',
-      'exiftoolDOMNode' => 'GPS:GPSDestLatitude',
     ),
     21 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestLongitudeRef',
-      'title' => 'GPS Dest Longitude Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSDestLongitudeRef',
+        'title' => 'GPS Dest Longitude Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'E' => 'East',
-          'W' => 'West',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'E' => 'East',
+            'W' => 'West',
+          ),
+        ),
+        'phpExifTag' => 'GPSDestLongitudeRef',
+        'exiftoolDOMNode' => 'GPS:GPSDestLongitudeRef',
       ),
-      'phpExifTag' => 'GPSDestLongitudeRef',
-      'exiftoolDOMNode' => 'GPS:GPSDestLongitudeRef',
     ),
     22 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestLongitude',
-      'title' => 'GPS Dest Longitude',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'GPSDestLongitude',
+        'title' => 'GPS Dest Longitude',
+        'components' => 3,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSDestLongitude',
+        'exiftoolDOMNode' => 'GPS:GPSDestLongitude',
       ),
-      'phpExifTag' => 'GPSDestLongitude',
-      'exiftoolDOMNode' => 'GPS:GPSDestLongitude',
     ),
     23 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestBearingRef',
-      'title' => 'GPS Dest Bearing Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSDestBearingRef',
+        'title' => 'GPS Dest Bearing Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'M' => 'Magnetic North',
-          'T' => 'True North',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'M' => 'Magnetic North',
+            'T' => 'True North',
+          ),
+        ),
+        'phpExifTag' => 'GPSDestBearingRef',
+        'exiftoolDOMNode' => 'GPS:GPSDestBearingRef',
       ),
-      'phpExifTag' => 'GPSDestBearingRef',
-      'exiftoolDOMNode' => 'GPS:GPSDestBearingRef',
     ),
     24 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSDestBearing',
-      'title' => 'GPS Dest Bearing',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSDestBearing',
+        'title' => 'GPS Dest Bearing',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSDestBearing',
+        'exiftoolDOMNode' => 'GPS:GPSDestBearing',
       ),
-      'phpExifTag' => 'GPSDestBearing',
-      'exiftoolDOMNode' => 'GPS:GPSDestBearing',
     ),
     25 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDestDistanceRef',
-      'title' => 'GPS Dest Distance Ref',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GPSDestDistanceRef',
+        'title' => 'GPS Dest Distance Ref',
+        'components' => 2,
+        'format' =>
         array (
-          'K' => 'Kilometers',
-          'M' => 'Miles',
-          'N' => 'Nautical Miles',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'K' => 'Kilometers',
+            'M' => 'Miles',
+            'N' => 'Nautical Miles',
+          ),
+        ),
+        'phpExifTag' => 'GPSDestDistanceRef',
+        'exiftoolDOMNode' => 'GPS:GPSDestDistanceRef',
       ),
-      'phpExifTag' => 'GPSDestDistanceRef',
-      'exiftoolDOMNode' => 'GPS:GPSDestDistanceRef',
     ),
     26 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSDestDistance',
-      'title' => 'GPS Dest Distance',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSDestDistance',
+        'title' => 'GPS Dest Distance',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'GPSDestDistance',
+        'exiftoolDOMNode' => 'GPS:GPSDestDistance',
       ),
-      'phpExifTag' => 'GPSDestDistance',
-      'exiftoolDOMNode' => 'GPS:GPSDestDistance',
     ),
     27 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSProcessingMethod',
-      'title' => 'GPS Processing Method',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GPSProcessingMethod',
+        'title' => 'GPS Processing Method',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'GPSProcessingMode',
+        'exiftoolDOMNode' => 'GPS:GPSProcessingMethod',
       ),
-      'phpExifTag' => 'GPSProcessingMode',
-      'exiftoolDOMNode' => 'GPS:GPSProcessingMethod',
     ),
     28 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSAreaInformation',
-      'title' => 'GPS Area Information',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GPSAreaInformation',
+        'title' => 'GPS Area Information',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'GPSAreaInformation',
+        'exiftoolDOMNode' => 'GPS:GPSAreaInformation',
       ),
-      'phpExifTag' => 'GPSAreaInformation',
-      'exiftoolDOMNode' => 'GPS:GPSAreaInformation',
     ),
     29 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GPSDateStamp',
-      'title' => 'GPS Date Stamp',
-      'components' => 11,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'GPSDateStamp',
+        'title' => 'GPS Date Stamp',
+        'components' => 11,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'GPSDateStamp',
+        'exiftoolDOMNode' => 'GPS:GPSDateStamp',
       ),
-      'phpExifTag' => 'GPSDateStamp',
-      'exiftoolDOMNode' => 'GPS:GPSDateStamp',
     ),
     30 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GPSDifferential',
-      'title' => 'GPS Differential',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GPSDifferential',
+        'title' => 'GPS Differential',
+        'format' =>
         array (
-          0 => 'No Correction',
-          1 => 'Differential Corrected',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No Correction',
+            1 => 'Differential Corrected',
+          ),
+        ),
+        'phpExifTag' => 'GPSDifferential',
+        'exiftoolDOMNode' => 'GPS:GPSDifferential',
       ),
-      'phpExifTag' => 'GPSDifferential',
-      'exiftoolDOMNode' => 'GPS:GPSDifferential',
     ),
     31 =>
     array (
-      'text' =>
+      0 =>
       array (
-        'default' => '{value} m',
+        'text' =>
+        array (
+          'default' => '{value} m',
+        ),
+        'collection' => 'Tag',
+        'name' => 'GPSHPositioningError',
+        'title' => 'GPS Horizontal Positioning Error',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'GPS:GPSHPositioningError',
       ),
-      'collection' => 'Tag',
-      'name' => 'GPSHPositioningError',
-      'title' => 'GPS Horizontal Positioning Error',
-      'format' =>
-      array (
-        0 => 5,
-      ),
-      'exiftoolDOMNode' => 'GPS:GPSHPositioningError',
     ),
   ),
 );

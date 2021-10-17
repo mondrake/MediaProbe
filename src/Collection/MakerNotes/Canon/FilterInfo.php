@@ -108,170 +108,200 @@ class FilterInfo extends Collection {
   array (
     257 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'GrainyBWFilter',
-      'title' => 'Grainy B/W Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'GrainyBWFilter',
+        'title' => 'Grainy B/W Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:GrainyBWFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:GrainyBWFilter',
     ),
     513 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'SoftFocusFilter',
-      'title' => 'Soft Focus Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'SoftFocusFilter',
+        'title' => 'Soft Focus Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:SoftFocusFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:SoftFocusFilter',
     ),
     769 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'ToyCameraFilter',
-      'title' => 'Toy Camera Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'ToyCameraFilter',
+        'title' => 'Toy Camera Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ToyCameraFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:ToyCameraFilter',
     ),
     1025 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'MiniatureFilter',
-      'title' => 'Miniature Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'MiniatureFilter',
+        'title' => 'Miniature Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:MiniatureFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:MiniatureFilter',
     ),
     1026 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'MiniatureFilterOrientation',
-      'title' => 'Miniature Filter Orientation',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          0 => 'Horizontal',
-          1 => 'Vertical',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'MiniatureFilterOrientation',
+        'title' => 'Miniature Filter Orientation',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Horizontal',
+            1 => 'Vertical',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:MiniatureFilterOrientation',
       ),
-      'exiftoolDOMNode' => 'Canon:MiniatureFilterOrientation',
     ),
     1027 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'collection' => 'Tag',
+        'name' => 'MiniatureFilterPosition',
+        'title' => 'Miniature Filter Position',
+        'exiftoolDOMNode' => 'Canon:MiniatureFilterPosition',
       ),
-      'collection' => 'Tag',
-      'name' => 'MiniatureFilterPosition',
-      'title' => 'Miniature Filter Position',
-      'exiftoolDOMNode' => 'Canon:MiniatureFilterPosition',
     ),
     1028 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'collection' => 'Tag',
+        'name' => 'MiniatureFilterParameter',
+        'title' => 'Miniature Filter Parameter',
+        'exiftoolDOMNode' => 'Canon:MiniatureFilterParameter',
       ),
-      'collection' => 'Tag',
-      'name' => 'MiniatureFilterParameter',
-      'title' => 'Miniature Filter Parameter',
-      'exiftoolDOMNode' => 'Canon:MiniatureFilterParameter',
     ),
     1281 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'FisheyeFilter',
-      'title' => 'Fisheye Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'FisheyeFilter',
+        'title' => 'Fisheye Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:FisheyeFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:FisheyeFilter',
     ),
     1537 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'PaintingFilter',
-      'title' => 'Painting Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'PaintingFilter',
+        'title' => 'Painting Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:PaintingFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:PaintingFilter',
     ),
     1793 =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'collection' => 'Tag',
-      'name' => 'WatercolorFilter',
-      'title' => 'Watercolor Filter',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          -1 => 'Off',
+          0 => 9,
         ),
+        'collection' => 'Tag',
+        'name' => 'WatercolorFilter',
+        'title' => 'Watercolor Filter',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:WatercolorFilter',
       ),
-      'exiftoolDOMNode' => 'Canon:WatercolorFilter',
     ),
   ),
 );

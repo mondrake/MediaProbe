@@ -48,26 +48,32 @@ class MakeModel extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Make',
-      'title' => 'Make',
-      'components' => 6,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Make',
+        'title' => 'Make',
+        'components' => 6,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:Make',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:Make',
     ),
     6 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Model',
-      'title' => 'Camera Model Name',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Model',
+        'title' => 'Camera Model Name',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:Model',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:Model',
     ),
   ),
 );

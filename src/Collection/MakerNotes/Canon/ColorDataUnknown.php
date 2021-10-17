@@ -33,12 +33,15 @@ class ColorDataUnknown extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorDataVersion',
-      'title' => 'Color Data Version',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorDataVersion',
+        'title' => 'Color Data Version',
+        'format' =>
+        array (
+          0 => 8,
+        ),
       ),
     ),
   ),

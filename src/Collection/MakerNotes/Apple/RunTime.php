@@ -60,58 +60,70 @@ class RunTime extends Collection {
   array (
     'epoch' =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'collection' => 'Tag',
+        'name' => 'RunTimeEpoch',
+        'title' => 'Run Time Epoch',
+        'exiftoolDOMNode' => 'Apple:RunTimeEpoch',
       ),
-      'collection' => 'Tag',
-      'name' => 'RunTimeEpoch',
-      'title' => 'Run Time Epoch',
-      'exiftoolDOMNode' => 'Apple:RunTimeEpoch',
     ),
     'flags' =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'collection' => 'Tag',
-      'name' => 'RunTimeFlags',
-      'title' => 'Run Time Flags',
-      'text' =>
-      array (
-        'mapping' =>
+        'format' =>
         array (
-          1 => 'Valid',
-          2 => 'Has been rounded',
-          4 => 'Positive infinity',
-          8 => 'Negative infinity',
-          16 => 'Indefinite',
+          0 => 2,
         ),
+        'collection' => 'Tag',
+        'name' => 'RunTimeFlags',
+        'title' => 'Run Time Flags',
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Valid',
+            2 => 'Has been rounded',
+            4 => 'Positive infinity',
+            8 => 'Negative infinity',
+            16 => 'Indefinite',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Apple:RunTimeFlags',
       ),
-      'exiftoolDOMNode' => 'Apple:RunTimeFlags',
     ),
     'timescale' =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'collection' => 'Tag',
+        'name' => 'RunTimeScale',
+        'title' => 'Run Time Scale',
+        'exiftoolDOMNode' => 'Apple:RunTimeScale',
       ),
-      'collection' => 'Tag',
-      'name' => 'RunTimeScale',
-      'title' => 'Run Time Scale',
-      'exiftoolDOMNode' => 'Apple:RunTimeScale',
     ),
     'value' =>
     array (
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'collection' => 'Tag',
+        'name' => 'RunTimeValue',
+        'title' => 'Run Time Value',
+        'exiftoolDOMNode' => 'Apple:RunTimeValue',
       ),
-      'collection' => 'Tag',
-      'name' => 'RunTimeValue',
-      'title' => 'Run Time Value',
-      'exiftoolDOMNode' => 'Apple:RunTimeValue',
     ),
   ),
 );

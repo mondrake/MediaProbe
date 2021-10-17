@@ -56,37 +56,46 @@ class DLOInfo extends Collection {
   array (
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DLOSettingApplied',
-      'title' => 'DLO Setting Applied',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'DLOSettingApplied',
+        'title' => 'DLO Setting Applied',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DLOSettingApplied',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DLOSettingApplied',
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DLOVersion',
-      'title' => 'DLO Version',
-      'components' => 10,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'DLOVersion',
+        'title' => 'DLO Version',
+        'components' => 10,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DLOVersion',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DLOVersion',
     ),
     10 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DLOData',
-      'title' => 'DLO Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DLOData',
+        'title' => 'DLO Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DLOData',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DLOData',
     ),
   ),
 );

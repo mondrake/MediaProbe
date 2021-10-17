@@ -56,36 +56,45 @@ class ExposureInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExposureCompensation',
-      'title' => 'Exposure Compensation',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'ExposureCompensation',
+        'title' => 'Exposure Compensation',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:ExposureCompensation',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:ExposureCompensation',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShutterSpeedValue',
-      'title' => 'Shutter Speed Value',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'ShutterSpeedValue',
+        'title' => 'Shutter Speed Value',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:ShutterSpeedValue',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:ShutterSpeedValue',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ApertureValue',
-      'title' => 'Aperture Value',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'ApertureValue',
+        'title' => 'Aperture Value',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:ApertureValue',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:ApertureValue',
     ),
   ),
 );

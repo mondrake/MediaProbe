@@ -2640,2333 +2640,2849 @@ class Exif extends Collection {
     ),
     288 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FreeOffsets',
-      'title' => 'Free Offsets',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FreeOffsets',
+        'title' => 'Free Offsets',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FreeOffsets',
+        'exiftoolDOMNode' => 'ExifIFD:FreeOffsets',
       ),
-      'phpExifTag' => 'FreeOffsets',
-      'exiftoolDOMNode' => 'ExifIFD:FreeOffsets',
     ),
     289 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FreeByteCounts',
-      'title' => 'Free Byte Counts',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FreeByteCounts',
+        'title' => 'Free Byte Counts',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FreeByteCounts',
+        'exiftoolDOMNode' => 'ExifIFD:FreeByteCounts',
       ),
-      'phpExifTag' => 'FreeByteCounts',
-      'exiftoolDOMNode' => 'ExifIFD:FreeByteCounts',
     ),
     291 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GrayResponseCurve',
-      'title' => 'Gray Response Curve',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GrayResponseCurve',
+        'title' => 'Gray Response Curve',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'GrayResponseCurve',
+        'exiftoolDOMNode' => 'ExifIFD:GrayResponseCurve',
       ),
-      'phpExifTag' => 'GrayResponseCurve',
-      'exiftoolDOMNode' => 'ExifIFD:GrayResponseCurve',
     ),
     292 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'T4Options',
-      'title' => 'T4 Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'T4Options',
+        'title' => 'T4 Options',
+        'format' =>
         array (
-          1 => '2-Dimensional encoding',
-          2 => 'Uncompressed',
-          4 => 'Fill bits added',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => '2-Dimensional encoding',
+            2 => 'Uncompressed',
+            4 => 'Fill bits added',
+          ),
+        ),
+        'phpExifTag' => 'T4Options',
+        'exiftoolDOMNode' => 'ExifIFD:T4Options',
       ),
-      'phpExifTag' => 'T4Options',
-      'exiftoolDOMNode' => 'ExifIFD:T4Options',
     ),
     293 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'T6Options',
-      'title' => 'T6 Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'T6Options',
+        'title' => 'T6 Options',
+        'format' =>
         array (
-          2 => 'Uncompressed',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            2 => 'Uncompressed',
+          ),
+        ),
+        'phpExifTag' => 'T6Options',
+        'exiftoolDOMNode' => 'ExifIFD:T6Options',
       ),
-      'phpExifTag' => 'T6Options',
-      'exiftoolDOMNode' => 'ExifIFD:T6Options',
     ),
     300 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorResponseUnit',
-      'title' => 'Color Response Unit',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorResponseUnit',
+        'title' => 'Color Response Unit',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ColorResponseUnit',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ColorResponseUnit',
     ),
     320 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorMap',
-      'title' => 'Color Map',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorMap',
+        'title' => 'Color Map',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ColorMap',
+        'exiftoolDOMNode' => 'ExifIFD:ColorMap',
       ),
-      'phpExifTag' => 'ColorMap',
-      'exiftoolDOMNode' => 'ExifIFD:ColorMap',
     ),
     324 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TileOffsets',
-      'title' => 'Tile Offsets',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TileOffsets',
+        'title' => 'Tile Offsets',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TileOffsets',
+        'exiftoolDOMNode' => 'ExifIFD:TileOffsets',
       ),
-      'phpExifTag' => 'TileOffsets',
-      'exiftoolDOMNode' => 'ExifIFD:TileOffsets',
     ),
     325 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TileByteCounts',
-      'title' => 'Tile Byte Counts',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TileByteCounts',
+        'title' => 'Tile Byte Counts',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TileByteCounts',
+        'exiftoolDOMNode' => 'ExifIFD:TileByteCounts',
       ),
-      'phpExifTag' => 'TileByteCounts',
-      'exiftoolDOMNode' => 'ExifIFD:TileByteCounts',
     ),
     326 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BadFaxLines',
-      'title' => 'Bad Fax Lines',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BadFaxLines',
+        'title' => 'Bad Fax Lines',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:BadFaxLines',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:BadFaxLines',
     ),
     327 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CleanFaxData',
-      'title' => 'Clean Fax Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CleanFaxData',
+        'title' => 'Clean Fax Data',
+        'format' =>
         array (
-          0 => 'Clean',
-          1 => 'Regenerated',
-          2 => 'Unclean',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Clean',
+            1 => 'Regenerated',
+            2 => 'Unclean',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CleanFaxData',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CleanFaxData',
     ),
     328 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ConsecutiveBadFaxLines',
-      'title' => 'Consecutive Bad Fax Lines',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ConsecutiveBadFaxLines',
+        'title' => 'Consecutive Bad Fax Lines',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ConsecutiveBadFaxLines',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ConsecutiveBadFaxLines',
     ),
     333 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'InkNames',
-      'title' => 'Ink Names',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'InkNames',
+        'title' => 'Ink Names',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'InkNames',
+        'exiftoolDOMNode' => 'ExifIFD:InkNames',
       ),
-      'phpExifTag' => 'InkNames',
-      'exiftoolDOMNode' => 'ExifIFD:InkNames',
     ),
     334 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'NumberofInks',
-      'title' => 'Numberof Inks',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'NumberofInks',
+        'title' => 'Numberof Inks',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'NumberOfInks',
+        'exiftoolDOMNode' => 'ExifIFD:NumberofInks',
       ),
-      'phpExifTag' => 'NumberOfInks',
-      'exiftoolDOMNode' => 'ExifIFD:NumberofInks',
     ),
     336 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DotRange',
-      'title' => 'Dot Range',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DotRange',
+        'title' => 'Dot Range',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'DotRange',
+        'exiftoolDOMNode' => 'ExifIFD:DotRange',
       ),
-      'phpExifTag' => 'DotRange',
-      'exiftoolDOMNode' => 'ExifIFD:DotRange',
     ),
     338 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExtraSamples',
-      'title' => 'Extra Samples',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ExtraSamples',
+        'title' => 'Extra Samples',
+        'format' =>
         array (
-          0 => 'Unspecified',
-          1 => 'Associated Alpha',
-          2 => 'Unassociated Alpha',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unspecified',
+            1 => 'Associated Alpha',
+            2 => 'Unassociated Alpha',
+          ),
+        ),
+        'phpExifTag' => 'ExtraSample',
+        'exiftoolDOMNode' => 'ExifIFD:ExtraSamples',
       ),
-      'phpExifTag' => 'ExtraSample',
-      'exiftoolDOMNode' => 'ExifIFD:ExtraSamples',
     ),
     340 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SMinSampleValue',
-      'title' => 'S Min Sample Value',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SMinSampleValue',
+        'title' => 'S Min Sample Value',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'SMinSampleValue',
+        'exiftoolDOMNode' => 'ExifIFD:SMinSampleValue',
       ),
-      'phpExifTag' => 'SMinSampleValue',
-      'exiftoolDOMNode' => 'ExifIFD:SMinSampleValue',
     ),
     341 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SMaxSampleValue',
-      'title' => 'S Max Sample Value',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SMaxSampleValue',
+        'title' => 'S Max Sample Value',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'SMaxSampleValue',
+        'exiftoolDOMNode' => 'ExifIFD:SMaxSampleValue',
       ),
-      'phpExifTag' => 'SMaxSampleValue',
-      'exiftoolDOMNode' => 'ExifIFD:SMaxSampleValue',
     ),
     342 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TransferRange',
-      'title' => 'Transfer Range',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TransferRange',
+        'title' => 'Transfer Range',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TransferRange',
+        'exiftoolDOMNode' => 'ExifIFD:TransferRange',
       ),
-      'phpExifTag' => 'TransferRange',
-      'exiftoolDOMNode' => 'ExifIFD:TransferRange',
     ),
     343 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ClipPath',
-      'title' => 'Clip Path',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ClipPath',
+        'title' => 'Clip Path',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ClipPath',
+        'exiftoolDOMNode' => 'ExifIFD:ClipPath',
       ),
-      'phpExifTag' => 'ClipPath',
-      'exiftoolDOMNode' => 'ExifIFD:ClipPath',
     ),
     344 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'XClipPathUnits',
-      'title' => 'X Clip Path Units',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'XClipPathUnits',
+        'title' => 'X Clip Path Units',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'XClipPathUnits',
+        'exiftoolDOMNode' => 'ExifIFD:XClipPathUnits',
       ),
-      'phpExifTag' => 'XClipPathUnits',
-      'exiftoolDOMNode' => 'ExifIFD:XClipPathUnits',
     ),
     345 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'YClipPathUnits',
-      'title' => 'Y Clip Path Units',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'YClipPathUnits',
+        'title' => 'Y Clip Path Units',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'YClipPathUnits',
+        'exiftoolDOMNode' => 'ExifIFD:YClipPathUnits',
       ),
-      'phpExifTag' => 'YClipPathUnits',
-      'exiftoolDOMNode' => 'ExifIFD:YClipPathUnits',
     ),
     346 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Indexed',
-      'title' => 'Indexed',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'Indexed',
+        'title' => 'Indexed',
+        'format' =>
         array (
-          0 => 'Not indexed',
-          1 => 'Indexed',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Not indexed',
+            1 => 'Indexed',
+          ),
+        ),
+        'phpExifTag' => 'Indexed',
+        'exiftoolDOMNode' => 'ExifIFD:Indexed',
       ),
-      'phpExifTag' => 'Indexed',
-      'exiftoolDOMNode' => 'ExifIFD:Indexed',
     ),
     347 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGTables',
-      'title' => 'JPEG Tables',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGTables',
+        'title' => 'JPEG Tables',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGTables',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGTables',
       ),
-      'phpExifTag' => 'JPEGTables',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGTables',
     ),
     351 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OPIProxy',
-      'title' => 'OPI Proxy',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'OPIProxy',
+        'title' => 'OPI Proxy',
+        'format' =>
         array (
-          0 => 'Higher resolution image does not exist',
-          1 => 'Higher resolution image exists',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Higher resolution image does not exist',
+            1 => 'Higher resolution image exists',
+          ),
+        ),
+        'phpExifTag' => 'OPIProxy',
+        'exiftoolDOMNode' => 'ExifIFD:OPIProxy',
       ),
-      'phpExifTag' => 'OPIProxy',
-      'exiftoolDOMNode' => 'ExifIFD:OPIProxy',
     ),
     401 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ProfileType',
-      'title' => 'Profile Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ProfileType',
+        'title' => 'Profile Type',
+        'format' =>
         array (
-          0 => 'Unspecified',
-          1 => 'Group 3 FAX',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unspecified',
+            1 => 'Group 3 FAX',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ProfileType',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ProfileType',
     ),
     402 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FaxProfile',
-      'title' => 'Fax Profile',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FaxProfile',
+        'title' => 'Fax Profile',
+        'format' =>
         array (
-          0 => 'Unknown',
-          1 => 'Minimal B&W lossless, S',
-          2 => 'Extended B&W lossless, F',
-          3 => 'Lossless JBIG B&W, J',
-          4 => 'Lossy color and grayscale, C',
-          5 => 'Lossless color and grayscale, L',
-          6 => 'Mixed raster content, M',
-          7 => 'Profile T',
-          255 => 'Multi Profiles',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unknown',
+            1 => 'Minimal B&W lossless, S',
+            2 => 'Extended B&W lossless, F',
+            3 => 'Lossless JBIG B&W, J',
+            4 => 'Lossy color and grayscale, C',
+            5 => 'Lossless color and grayscale, L',
+            6 => 'Mixed raster content, M',
+            7 => 'Profile T',
+            255 => 'Multi Profiles',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FaxProfile',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FaxProfile',
     ),
     403 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CodingMethods',
-      'title' => 'Coding Methods',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CodingMethods',
+        'title' => 'Coding Methods',
+        'format' =>
         array (
-          1 => 'Unspecified compression',
-          2 => 'Modified Huffman',
-          4 => 'Modified Read',
-          8 => 'Modified MR',
-          16 => 'JBIG',
-          32 => 'Baseline JPEG',
-          64 => 'JBIG color',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Unspecified compression',
+            2 => 'Modified Huffman',
+            4 => 'Modified Read',
+            8 => 'Modified MR',
+            16 => 'JBIG',
+            32 => 'Baseline JPEG',
+            64 => 'JBIG color',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CodingMethods',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CodingMethods',
     ),
     404 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'VersionYear',
-      'title' => 'Version Year',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'VersionYear',
+        'title' => 'Version Year',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:VersionYear',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:VersionYear',
     ),
     405 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ModeNumber',
-      'title' => 'Mode Number',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ModeNumber',
+        'title' => 'Mode Number',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ModeNumber',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ModeNumber',
     ),
     433 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Decode',
-      'title' => 'Decode',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Decode',
+        'title' => 'Decode',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Decode',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Decode',
     ),
     434 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DefaultImageColor',
-      'title' => 'Default Image Color',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DefaultImageColor',
+        'title' => 'Default Image Color',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:DefaultImageColor',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:DefaultImageColor',
     ),
     435 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'T82Options',
-      'title' => 'T82 Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'T82Options',
+        'title' => 'T82 Options',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:T82Options',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:T82Options',
     ),
     437 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGTables',
-      'title' => 'JPEG Tables',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGTables',
+        'title' => 'JPEG Tables',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:JPEGTables',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:JPEGTables',
     ),
     512 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGProc',
-      'title' => 'JPEG Proc',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'JPEGProc',
+        'title' => 'JPEG Proc',
+        'format' =>
         array (
-          1 => 'Baseline',
-          14 => 'Lossless',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Baseline',
+            14 => 'Lossless',
+          ),
+        ),
+        'phpExifTag' => 'JPEGProc',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGProc',
       ),
-      'phpExifTag' => 'JPEGProc',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGProc',
     ),
     513 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OtherImageStart',
-      'title' => 'Other Image Start',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OtherImageStart',
+        'title' => 'Other Image Start',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGInterchangeFormat',
+        'exiftoolDOMNode' => 'ExifIFD:OtherImageStart',
       ),
-      'phpExifTag' => 'JPEGInterchangeFormat',
-      'exiftoolDOMNode' => 'ExifIFD:OtherImageStart',
     ),
     514 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OtherImageLength',
-      'title' => 'Other Image Length',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OtherImageLength',
+        'title' => 'Other Image Length',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGInterchangeFormatLength',
+        'exiftoolDOMNode' => 'ExifIFD:OtherImageLength',
       ),
-      'phpExifTag' => 'JPEGInterchangeFormatLength',
-      'exiftoolDOMNode' => 'ExifIFD:OtherImageLength',
     ),
     515 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGRestartInterval',
-      'title' => 'JPEG Restart Interval',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGRestartInterval',
+        'title' => 'JPEG Restart Interval',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGRestartInterval',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGRestartInterval',
       ),
-      'phpExifTag' => 'JPEGRestartInterval',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGRestartInterval',
     ),
     517 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGLosslessPredictors',
-      'title' => 'JPEG Lossless Predictors',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGLosslessPredictors',
+        'title' => 'JPEG Lossless Predictors',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGLosslessPredictors',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGLosslessPredictors',
       ),
-      'phpExifTag' => 'JPEGLosslessPredictors',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGLosslessPredictors',
     ),
     518 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGPointTransforms',
-      'title' => 'JPEG Point Transforms',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGPointTransforms',
+        'title' => 'JPEG Point Transforms',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGPointTransforms',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGPointTransforms',
       ),
-      'phpExifTag' => 'JPEGPointTransforms',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGPointTransforms',
     ),
     519 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGQTables',
-      'title' => 'JPEGQ Tables',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGQTables',
+        'title' => 'JPEGQ Tables',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGQTables',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGQTables',
       ),
-      'phpExifTag' => 'JPEGQTables',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGQTables',
     ),
     520 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGDCTables',
-      'title' => 'JPEGDC Tables',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGDCTables',
+        'title' => 'JPEGDC Tables',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGDCTables',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGDCTables',
       ),
-      'phpExifTag' => 'JPEGDCTables',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGDCTables',
     ),
     521 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPEGACTables',
-      'title' => 'JPEGAC Tables',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPEGACTables',
+        'title' => 'JPEGAC Tables',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'JPEGACTables',
+        'exiftoolDOMNode' => 'ExifIFD:JPEGACTables',
       ),
-      'phpExifTag' => 'JPEGACTables',
-      'exiftoolDOMNode' => 'ExifIFD:JPEGACTables',
     ),
     559 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StripRowCounts',
-      'title' => 'Strip Row Counts',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'StripRowCounts',
+        'title' => 'Strip Row Counts',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:StripRowCounts',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:StripRowCounts',
     ),
     999 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'USPTOMiscellaneous',
-      'title' => 'USPTO Miscellaneous',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'USPTOMiscellaneous',
+        'title' => 'USPTO Miscellaneous',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:USPTOMiscellaneous',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:USPTOMiscellaneous',
     ),
     18247 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'XP_DIP_XML',
-      'title' => 'XP DIP XML',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'XP_DIP_XML',
+        'title' => 'XP DIP XML',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:XP_DIP_XML',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:XP_DIP_XML',
     ),
     28672 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SonyRawFileType',
-      'title' => 'Sony Raw File Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SonyRawFileType',
+        'title' => 'Sony Raw File Type',
+        'format' =>
         array (
-          0 => 'Sony Uncompressed 14-bit RAW',
-          1 => 'Sony Uncompressed 12-bit RAW',
-          2 => 'Sony Compressed RAW',
-          3 => 'Sony Lossless Compressed RAW',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Sony Uncompressed 14-bit RAW',
+            1 => 'Sony Uncompressed 12-bit RAW',
+            2 => 'Sony Compressed RAW',
+            3 => 'Sony Lossless Compressed RAW',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SonyRawFileType',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SonyRawFileType',
     ),
     28688 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SonyToneCurve',
-      'title' => 'Sony Tone Curve',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SonyToneCurve',
+        'title' => 'Sony Tone Curve',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SonyToneCurve',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SonyToneCurve',
     ),
     32781 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageID',
-      'title' => 'Image ID',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageID',
+        'title' => 'Image ID',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ImageID',
+        'exiftoolDOMNode' => 'ExifIFD:ImageID',
       ),
-      'phpExifTag' => 'ImageID',
-      'exiftoolDOMNode' => 'ExifIFD:ImageID',
     ),
     32931 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WangTag1',
-      'title' => 'Wang Tag 1',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WangTag1',
+        'title' => 'Wang Tag 1',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WangTag1',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WangTag1',
     ),
     32932 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WangAnnotation',
-      'title' => 'Wang Annotation',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WangAnnotation',
+        'title' => 'Wang Annotation',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WangAnnotation',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WangAnnotation',
     ),
     32933 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WangTag3',
-      'title' => 'Wang Tag 3',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WangTag3',
+        'title' => 'Wang Tag 3',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WangTag3',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WangTag3',
     ),
     32934 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WangTag4',
-      'title' => 'Wang Tag 4',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WangTag4',
+        'title' => 'Wang Tag 4',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WangTag4',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WangTag4',
     ),
     32953 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageReferencePoints',
-      'title' => 'Image Reference Points',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageReferencePoints',
+        'title' => 'Image Reference Points',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageReferencePoints',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageReferencePoints',
     ),
     32954 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RegionXformTackPoint',
-      'title' => 'Region Xform Tack Point',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'RegionXformTackPoint',
+        'title' => 'Region Xform Tack Point',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:RegionXformTackPoint',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:RegionXformTackPoint',
     ),
     32955 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WarpQuadrilateral',
-      'title' => 'Warp Quadrilateral',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WarpQuadrilateral',
+        'title' => 'Warp Quadrilateral',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WarpQuadrilateral',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WarpQuadrilateral',
     ),
     32956 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AffineTransformMat',
-      'title' => 'Affine Transform Mat',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AffineTransformMat',
+        'title' => 'Affine Transform Mat',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AffineTransformMat',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AffineTransformMat',
     ),
     32995 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Matteing',
-      'title' => 'Matteing',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Matteing',
+        'title' => 'Matteing',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'Matteing',
+        'exiftoolDOMNode' => 'ExifIFD:Matteing',
       ),
-      'phpExifTag' => 'Matteing',
-      'exiftoolDOMNode' => 'ExifIFD:Matteing',
     ),
     32996 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DataType',
-      'title' => 'Data Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DataType',
+        'title' => 'Data Type',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'DataType',
+        'exiftoolDOMNode' => 'ExifIFD:DataType',
       ),
-      'phpExifTag' => 'DataType',
-      'exiftoolDOMNode' => 'ExifIFD:DataType',
     ),
     32997 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageDepth',
-      'title' => 'Image Depth',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageDepth',
+        'title' => 'Image Depth',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ImageDepth',
+        'exiftoolDOMNode' => 'ExifIFD:ImageDepth',
       ),
-      'phpExifTag' => 'ImageDepth',
-      'exiftoolDOMNode' => 'ExifIFD:ImageDepth',
     ),
     32998 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TileDepth',
-      'title' => 'Tile Depth',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TileDepth',
+        'title' => 'Tile Depth',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TileDepth',
+        'exiftoolDOMNode' => 'ExifIFD:TileDepth',
       ),
-      'phpExifTag' => 'TileDepth',
-      'exiftoolDOMNode' => 'ExifIFD:TileDepth',
     ),
     33300 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageFullWidth',
-      'title' => 'Image Full Width',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageFullWidth',
+        'title' => 'Image Full Width',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageFullWidth',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageFullWidth',
     ),
     33301 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageFullHeight',
-      'title' => 'Image Full Height',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageFullHeight',
+        'title' => 'Image Full Height',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageFullHeight',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageFullHeight',
     ),
     33302 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TextureFormat',
-      'title' => 'Texture Format',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TextureFormat',
+        'title' => 'Texture Format',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:TextureFormat',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:TextureFormat',
     ),
     33303 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WrapModes',
-      'title' => 'Wrap Modes',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WrapModes',
+        'title' => 'Wrap Modes',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WrapModes',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WrapModes',
     ),
     33304 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FovCot',
-      'title' => 'Fov Cot',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FovCot',
+        'title' => 'Fov Cot',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FovCot',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FovCot',
     ),
     33305 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MatrixWorldToScreen',
-      'title' => 'Matrix World To Screen',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MatrixWorldToScreen',
+        'title' => 'Matrix World To Screen',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MatrixWorldToScreen',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MatrixWorldToScreen',
     ),
     33306 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MatrixWorldToCamera',
-      'title' => 'Matrix World To Camera',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MatrixWorldToCamera',
+        'title' => 'Matrix World To Camera',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MatrixWorldToCamera',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MatrixWorldToCamera',
     ),
     33405 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Model2',
-      'title' => 'Model 2',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Model2',
+        'title' => 'Model 2',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Model2',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Model2',
     ),
     33423 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BatteryLevel',
-      'title' => 'Battery Level',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BatteryLevel',
+        'title' => 'Battery Level',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'BatteryLevel',
+        'exiftoolDOMNode' => 'ExifIFD:BatteryLevel',
       ),
-      'phpExifTag' => 'BatteryLevel',
-      'exiftoolDOMNode' => 'ExifIFD:BatteryLevel',
     ),
     33434 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifExposureTime',
-      'collection' => 'Tag',
-      'name' => 'ExposureTime',
-      'title' => 'Exposure Time',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifExposureTime',
+        'collection' => 'Tag',
+        'name' => 'ExposureTime',
+        'title' => 'Exposure Time',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'ExposureTime',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureTime',
       ),
-      'phpExifTag' => 'ExposureTime',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureTime',
     ),
     33437 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifFNumber',
-      'collection' => 'Tag',
-      'name' => 'FNumber',
-      'title' => 'F Number',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifFNumber',
+        'collection' => 'Tag',
+        'name' => 'FNumber',
+        'title' => 'F Number',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'FNumber',
+        'exiftoolDOMNode' => 'ExifIFD:FNumber',
       ),
-      'phpExifTag' => 'FNumber',
-      'exiftoolDOMNode' => 'ExifIFD:FNumber',
     ),
     33445 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDFileTag',
-      'title' => 'MD File Tag',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDFileTag',
+        'title' => 'MD File Tag',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDFileTag',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDFileTag',
     ),
     33446 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDScalePixel',
-      'title' => 'MD Scale Pixel',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDScalePixel',
+        'title' => 'MD Scale Pixel',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDScalePixel',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDScalePixel',
     ),
     33447 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDColorTable',
-      'title' => 'MD Color Table',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDColorTable',
+        'title' => 'MD Color Table',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDColorTable',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDColorTable',
     ),
     33448 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDLabName',
-      'title' => 'MD Lab Name',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDLabName',
+        'title' => 'MD Lab Name',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDLabName',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDLabName',
     ),
     33449 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDSampleInfo',
-      'title' => 'MD Sample Info',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDSampleInfo',
+        'title' => 'MD Sample Info',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDSampleInfo',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDSampleInfo',
     ),
     33450 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDPrepDate',
-      'title' => 'MD Prep Date',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDPrepDate',
+        'title' => 'MD Prep Date',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDPrepDate',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDPrepDate',
     ),
     33451 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDPrepTime',
-      'title' => 'MD Prep Time',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDPrepTime',
+        'title' => 'MD Prep Time',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDPrepTime',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDPrepTime',
     ),
     33452 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MDFileUnits',
-      'title' => 'MD File Units',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MDFileUnits',
+        'title' => 'MD File Units',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MDFileUnits',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MDFileUnits',
     ),
     33550 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PixelScale',
-      'title' => 'Pixel Scale',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'PixelScale',
+        'title' => 'Pixel Scale',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:PixelScale',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:PixelScale',
     ),
     33589 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AdventScale',
-      'title' => 'Advent Scale',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AdventScale',
+        'title' => 'Advent Scale',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AdventScale',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AdventScale',
     ),
     33590 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AdventRevision',
-      'title' => 'Advent Revision',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AdventRevision',
+        'title' => 'Advent Revision',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AdventRevision',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AdventRevision',
     ),
     33628 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UIC1Tag',
-      'title' => 'UIC1 Tag',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UIC1Tag',
+        'title' => 'UIC1 Tag',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:UIC1Tag',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:UIC1Tag',
     ),
     33629 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UIC2Tag',
-      'title' => 'UIC2 Tag',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UIC2Tag',
+        'title' => 'UIC2 Tag',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:UIC2Tag',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:UIC2Tag',
     ),
     33630 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UIC3Tag',
-      'title' => 'UIC3 Tag',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UIC3Tag',
+        'title' => 'UIC3 Tag',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:UIC3Tag',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:UIC3Tag',
     ),
     33631 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UIC4Tag',
-      'title' => 'UIC4 Tag',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UIC4Tag',
+        'title' => 'UIC4 Tag',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:UIC4Tag',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:UIC4Tag',
     ),
     33918 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'IntergraphPacketData',
-      'title' => 'Intergraph Packet Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'IntergraphPacketData',
+        'title' => 'Intergraph Packet Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:IntergraphPacketData',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:IntergraphPacketData',
     ),
     33919 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'IntergraphFlagRegisters',
-      'title' => 'Intergraph Flag Registers',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'IntergraphFlagRegisters',
+        'title' => 'Intergraph Flag Registers',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:IntergraphFlagRegisters',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:IntergraphFlagRegisters',
     ),
     33920 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'IntergraphMatrix',
-      'title' => 'Intergraph Matrix',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'IntergraphMatrix',
+        'title' => 'Intergraph Matrix',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:IntergraphMatrix',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:IntergraphMatrix',
     ),
     33921 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'INGRReserved',
-      'title' => 'INGR Reserved',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'INGRReserved',
+        'title' => 'INGR Reserved',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:INGRReserved',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:INGRReserved',
     ),
     33922 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ModelTiePoint',
-      'title' => 'Model Tie Point',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ModelTiePoint',
+        'title' => 'Model Tie Point',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ModelTiePoint',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ModelTiePoint',
     ),
     34016 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Site',
-      'title' => 'Site',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Site',
+        'title' => 'Site',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Site',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Site',
     ),
     34017 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorSequence',
-      'title' => 'Color Sequence',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorSequence',
+        'title' => 'Color Sequence',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ColorSequence',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ColorSequence',
     ),
     34018 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'IT8Header',
-      'title' => 'IT8 Header',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'IT8Header',
+        'title' => 'IT8 Header',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:IT8Header',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:IT8Header',
     ),
     34019 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RasterPadding',
-      'title' => 'Raster Padding',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RasterPadding',
+        'title' => 'Raster Padding',
+        'format' =>
         array (
-          0 => 'Byte',
-          1 => 'Word',
-          2 => 'Long Word',
-          9 => 'Sector',
-          10 => 'Long Sector',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Byte',
+            1 => 'Word',
+            2 => 'Long Word',
+            9 => 'Sector',
+            10 => 'Long Sector',
+          ),
+        ),
+        'phpExifTag' => 'IT8RasterPadding',
+        'exiftoolDOMNode' => 'ExifIFD:RasterPadding',
       ),
-      'phpExifTag' => 'IT8RasterPadding',
-      'exiftoolDOMNode' => 'ExifIFD:RasterPadding',
     ),
     34020 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BitsPerRunLength',
-      'title' => 'Bits Per Run Length',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BitsPerRunLength',
+        'title' => 'Bits Per Run Length',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:BitsPerRunLength',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:BitsPerRunLength',
     ),
     34021 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BitsPerExtendedRunLength',
-      'title' => 'Bits Per Extended Run Length',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BitsPerExtendedRunLength',
+        'title' => 'Bits Per Extended Run Length',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'IT8ColorTable',
+        'exiftoolDOMNode' => 'ExifIFD:BitsPerExtendedRunLength',
       ),
-      'phpExifTag' => 'IT8ColorTable',
-      'exiftoolDOMNode' => 'ExifIFD:BitsPerExtendedRunLength',
     ),
     34022 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTable',
-      'title' => 'Color Table',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorTable',
+        'title' => 'Color Table',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ColorTable',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ColorTable',
     ),
     34023 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageColorIndicator',
-      'title' => 'Image Color Indicator',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ImageColorIndicator',
+        'title' => 'Image Color Indicator',
+        'format' =>
         array (
-          0 => 'Unspecified Image Color',
-          1 => 'Specified Image Color',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unspecified Image Color',
+            1 => 'Specified Image Color',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageColorIndicator',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageColorIndicator',
     ),
     34024 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BackgroundColorIndicator',
-      'title' => 'Background Color Indicator',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'BackgroundColorIndicator',
+        'title' => 'Background Color Indicator',
+        'format' =>
         array (
-          0 => 'Unspecified Background Color',
-          1 => 'Specified Background Color',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unspecified Background Color',
+            1 => 'Specified Background Color',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:BackgroundColorIndicator',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:BackgroundColorIndicator',
     ),
     34025 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageColorValue',
-      'title' => 'Image Color Value',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageColorValue',
+        'title' => 'Image Color Value',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageColorValue',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageColorValue',
     ),
     34026 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BackgroundColorValue',
-      'title' => 'Background Color Value',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BackgroundColorValue',
+        'title' => 'Background Color Value',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:BackgroundColorValue',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:BackgroundColorValue',
     ),
     34027 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PixelIntensityRange',
-      'title' => 'Pixel Intensity Range',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'PixelIntensityRange',
+        'title' => 'Pixel Intensity Range',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:PixelIntensityRange',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:PixelIntensityRange',
     ),
     34028 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TransparencyIndicator',
-      'title' => 'Transparency Indicator',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TransparencyIndicator',
+        'title' => 'Transparency Indicator',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:TransparencyIndicator',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:TransparencyIndicator',
     ),
     34029 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorCharacterization',
-      'title' => 'Color Characterization',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorCharacterization',
+        'title' => 'Color Characterization',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ColorCharacterization',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ColorCharacterization',
     ),
     34030 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HCUsage',
-      'title' => 'HC Usage',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HCUsage',
+        'title' => 'HC Usage',
+        'format' =>
         array (
-          0 => 'CT',
-          1 => 'Line Art',
-          2 => 'Trap',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'CT',
+            1 => 'Line Art',
+            2 => 'Trap',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:HCUsage',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:HCUsage',
     ),
     34031 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TrapIndicator',
-      'title' => 'Trap Indicator',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TrapIndicator',
+        'title' => 'Trap Indicator',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:TrapIndicator',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:TrapIndicator',
     ),
     34032 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CMYKEquivalent',
-      'title' => 'CMYK Equivalent',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CMYKEquivalent',
+        'title' => 'CMYK Equivalent',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CMYKEquivalent',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CMYKEquivalent',
     ),
     34232 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PixelMagicJBIGOptions',
-      'title' => 'Pixel Magic JBIG Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'PixelMagicJBIGOptions',
+        'title' => 'Pixel Magic JBIG Options',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:PixelMagicJBIGOptions',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:PixelMagicJBIGOptions',
     ),
     34263 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JPLCartoIFD',
-      'title' => 'JPL Carto IFD',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JPLCartoIFD',
+        'title' => 'JPL Carto IFD',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:JPLCartoIFD',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:JPLCartoIFD',
     ),
     34264 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ModelTransform',
-      'title' => 'Model Transform',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ModelTransform',
+        'title' => 'Model Transform',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ModelTransform',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ModelTransform',
     ),
     34306 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_GRGBLevels',
-      'title' => 'WB GRGB Levels',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WB_GRGBLevels',
+        'title' => 'WB GRGB Levels',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WB_GRGBLevels',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WB_GRGBLevels',
     ),
     34687 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TIFF_FXExtensions',
-      'title' => 'TIFF FX Extensions',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'TIFF_FXExtensions',
+        'title' => 'TIFF FX Extensions',
+        'format' =>
         array (
-          1 => 'Resolution/Image Width',
-          2 => 'N Layer Profile M',
-          4 => 'Shared Data',
-          8 => 'B&W JBIG2',
-          16 => 'JBIG2 Profile M',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Resolution/Image Width',
+            2 => 'N Layer Profile M',
+            4 => 'Shared Data',
+            8 => 'B&W JBIG2',
+            16 => 'JBIG2 Profile M',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:TIFF_FXExtensions',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:TIFF_FXExtensions',
     ),
     34688 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiProfiles',
-      'title' => 'Multi Profiles',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MultiProfiles',
+        'title' => 'Multi Profiles',
+        'format' =>
         array (
-          1 => 'Profile S',
-          2 => 'Profile F',
-          4 => 'Profile J',
-          8 => 'Profile C',
-          16 => 'Profile L',
-          32 => 'Profile M',
-          64 => 'Profile T',
-          128 => 'Resolution/Image Width',
-          256 => 'N Layer Profile M',
-          512 => 'Shared Data',
-          1024 => 'JBIG2 Profile M',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Profile S',
+            2 => 'Profile F',
+            4 => 'Profile J',
+            8 => 'Profile C',
+            16 => 'Profile L',
+            32 => 'Profile M',
+            64 => 'Profile T',
+            128 => 'Resolution/Image Width',
+            256 => 'N Layer Profile M',
+            512 => 'Shared Data',
+            1024 => 'JBIG2 Profile M',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MultiProfiles',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MultiProfiles',
     ),
     34689 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharedData',
-      'title' => 'Shared Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SharedData',
+        'title' => 'Shared Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SharedData',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SharedData',
     ),
     34690 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'T88Options',
-      'title' => 'T88 Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'T88Options',
+        'title' => 'T88 Options',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:T88Options',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:T88Options',
     ),
     34732 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageLayer',
-      'title' => 'Image Layer',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageLayer',
+        'title' => 'Image Layer',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageLayer',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageLayer',
     ),
     34750 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'JBIGOptions',
-      'title' => 'JBIG Options',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'JBIGOptions',
+        'title' => 'JBIG Options',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:JBIGOptions',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:JBIGOptions',
     ),
     34850 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ExposureProgram',
-      'title' => 'Exposure Program',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ExposureProgram',
+        'title' => 'Exposure Program',
+        'format' =>
         array (
-          0 => 'Not Defined',
-          1 => 'Manual',
-          2 => 'Program AE',
-          3 => 'Aperture-priority AE',
-          4 => 'Shutter speed priority AE',
-          5 => 'Creative (Slow speed)',
-          6 => 'Action (High speed)',
-          7 => 'Portrait',
-          8 => 'Landscape',
-          9 => 'Bulb',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Not Defined',
+            1 => 'Manual',
+            2 => 'Program AE',
+            3 => 'Aperture-priority AE',
+            4 => 'Shutter speed priority AE',
+            5 => 'Creative (Slow speed)',
+            6 => 'Action (High speed)',
+            7 => 'Portrait',
+            8 => 'Landscape',
+            9 => 'Bulb',
+          ),
+        ),
+        'phpExifTag' => 'ExposureProgram',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureProgram',
       ),
-      'phpExifTag' => 'ExposureProgram',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureProgram',
     ),
     34852 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SpectralSensitivity',
-      'title' => 'Spectral Sensitivity',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SpectralSensitivity',
+        'title' => 'Spectral Sensitivity',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'SpectralSensity',
+        'exiftoolDOMNode' => 'ExifIFD:SpectralSensitivity',
       ),
-      'phpExifTag' => 'SpectralSensity',
-      'exiftoolDOMNode' => 'ExifIFD:SpectralSensitivity',
     ),
     34855 =>
     array (
-      'alias' =>
+      0 =>
       array (
-        0 => 'ISOSpeedRatings',
+        'alias' =>
+        array (
+          0 => 'ISOSpeedRatings',
+        ),
+        'collection' => 'Tag',
+        'name' => 'ISO',
+        'title' => 'ISO',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'phpExifTag' => 'ISOSpeedRatings',
+        'exiftoolDOMNode' => 'ExifIFD:ISO',
       ),
-      'collection' => 'Tag',
-      'name' => 'ISO',
-      'title' => 'ISO',
-      'format' =>
-      array (
-        0 => 3,
-      ),
-      'phpExifTag' => 'ISOSpeedRatings',
-      'exiftoolDOMNode' => 'ExifIFD:ISO',
     ),
     34856 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Opto-ElectricConvFactor',
-      'title' => 'Opto-Electric Conv Factor',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Opto-ElectricConvFactor',
+        'title' => 'Opto-Electric Conv Factor',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'OECF',
+        'exiftoolDOMNode' => 'ExifIFD:Opto-ElectricConvFactor',
       ),
-      'phpExifTag' => 'OECF',
-      'exiftoolDOMNode' => 'ExifIFD:Opto-ElectricConvFactor',
     ),
     34857 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Interlace',
-      'title' => 'Interlace',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Interlace',
+        'title' => 'Interlace',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Interlace',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Interlace',
     ),
     34858 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TimeZoneOffset',
-      'title' => 'Time Zone Offset',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'TimeZoneOffset',
+        'title' => 'Time Zone Offset',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:TimeZoneOffset',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:TimeZoneOffset',
     ),
     34859 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SelfTimerMode',
-      'title' => 'Self Timer Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'SelfTimerMode',
+        'title' => 'Self Timer Mode',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SelfTimerMode',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SelfTimerMode',
     ),
     34864 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensitivityType',
-      'title' => 'Sensitivity Type',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SensitivityType',
+        'title' => 'Sensitivity Type',
+        'format' =>
         array (
-          0 => 'Unknown',
-          1 => 'Standard Output Sensitivity',
-          2 => 'Recommended Exposure Index',
-          3 => 'ISO Speed',
-          4 => 'Standard Output Sensitivity and Recommended Exposure Index',
-          5 => 'Standard Output Sensitivity and ISO Speed',
-          6 => 'Recommended Exposure Index and ISO Speed',
-          7 => 'Standard Output Sensitivity, Recommended Exposure Index and ISO Speed',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unknown',
+            1 => 'Standard Output Sensitivity',
+            2 => 'Recommended Exposure Index',
+            3 => 'ISO Speed',
+            4 => 'Standard Output Sensitivity and Recommended Exposure Index',
+            5 => 'Standard Output Sensitivity and ISO Speed',
+            6 => 'Recommended Exposure Index and ISO Speed',
+            7 => 'Standard Output Sensitivity, Recommended Exposure Index and ISO Speed',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SensitivityType',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SensitivityType',
     ),
     34865 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StandardOutputSensitivity',
-      'title' => 'Standard Output Sensitivity',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'StandardOutputSensitivity',
+        'title' => 'Standard Output Sensitivity',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:StandardOutputSensitivity',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:StandardOutputSensitivity',
     ),
     34866 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RecommendedExposureIndex',
-      'title' => 'Recommended Exposure Index',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'RecommendedExposureIndex',
+        'title' => 'Recommended Exposure Index',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:RecommendedExposureIndex',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:RecommendedExposureIndex',
     ),
     34867 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ISOSpeed',
-      'title' => 'ISO Speed',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'ISOSpeed',
+        'title' => 'ISO Speed',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ISOSpeed',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ISOSpeed',
     ),
     34868 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ISOSpeedLatitudeyyy',
-      'title' => 'ISO Speed Latitude yyy',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'ISOSpeedLatitudeyyy',
+        'title' => 'ISO Speed Latitude yyy',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ISOSpeedLatitudeyyy',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ISOSpeedLatitudeyyy',
     ),
     34869 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ISOSpeedLatitudezzz',
-      'title' => 'ISO Speed Latitude zzz',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'ISOSpeedLatitudezzz',
+        'title' => 'ISO Speed Latitude zzz',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ISOSpeedLatitudezzz',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ISOSpeedLatitudezzz',
     ),
     34908 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FaxRecvParams',
-      'title' => 'Fax Recv Params',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FaxRecvParams',
+        'title' => 'Fax Recv Params',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FaxRecvParams',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FaxRecvParams',
     ),
     34909 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FaxSubAddress',
-      'title' => 'Fax Sub Address',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FaxSubAddress',
+        'title' => 'Fax Sub Address',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FaxSubAddress',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FaxSubAddress',
     ),
     34910 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FaxRecvTime',
-      'title' => 'Fax Recv Time',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FaxRecvTime',
+        'title' => 'Fax Recv Time',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FaxRecvTime',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FaxRecvTime',
     ),
     34929 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FedexEDR',
-      'title' => 'Fedex EDR',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FedexEDR',
+        'title' => 'Fedex EDR',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:FedexEDR',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:FedexEDR',
     ),
     36864 =>
     array (
-      'components' => 4,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Version',
-      'collection' => 'Tag',
-      'name' => 'ExifVersion',
-      'title' => 'Exif Version',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'components' => 4,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Version',
+        'collection' => 'Tag',
+        'name' => 'ExifVersion',
+        'title' => 'Exif Version',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ExifVersion',
+        'exiftoolDOMNode' => 'ExifIFD:ExifVersion',
       ),
-      'phpExifTag' => 'ExifVersion',
-      'exiftoolDOMNode' => 'ExifIFD:ExifVersion',
     ),
     36867 =>
     array (
-      'components' => 20,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Time',
-      'collection' => 'Tag',
-      'name' => 'DateTimeOriginal',
-      'title' => 'Date/Time Original',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 20,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Time',
+        'collection' => 'Tag',
+        'name' => 'DateTimeOriginal',
+        'title' => 'Date/Time Original',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'DateTimeOriginal',
+        'exiftoolDOMNode' => 'ExifIFD:DateTimeOriginal',
       ),
-      'phpExifTag' => 'DateTimeOriginal',
-      'exiftoolDOMNode' => 'ExifIFD:DateTimeOriginal',
     ),
     36868 =>
     array (
-      'components' => 20,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Time',
-      'collection' => 'Tag',
-      'name' => 'CreateDate',
-      'title' => 'Create Date',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 20,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Time',
+        'collection' => 'Tag',
+        'name' => 'CreateDate',
+        'title' => 'Create Date',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'DateTimeDigitized',
+        'exiftoolDOMNode' => 'ExifIFD:CreateDate',
       ),
-      'phpExifTag' => 'DateTimeDigitized',
-      'exiftoolDOMNode' => 'ExifIFD:CreateDate',
     ),
     36873 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GooglePlusUploadCode',
-      'title' => 'Google Plus Upload Code',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GooglePlusUploadCode',
+        'title' => 'Google Plus Upload Code',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:GooglePlusUploadCode',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:GooglePlusUploadCode',
     ),
     36880 =>
     array (
-      'components' => 7,
-      'collection' => 'Tag',
-      'name' => 'OffsetTime',
-      'title' => 'Offset Time',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 7,
+        'collection' => 'Tag',
+        'name' => 'OffsetTime',
+        'title' => 'Offset Time',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OffsetTime',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OffsetTime',
     ),
     36881 =>
     array (
-      'components' => 7,
-      'collection' => 'Tag',
-      'name' => 'OffsetTimeOriginal',
-      'title' => 'Offset Time Original',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 7,
+        'collection' => 'Tag',
+        'name' => 'OffsetTimeOriginal',
+        'title' => 'Offset Time Original',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OffsetTimeOriginal',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OffsetTimeOriginal',
     ),
     36882 =>
     array (
-      'components' => 7,
-      'collection' => 'Tag',
-      'name' => 'OffsetTimeDigitized',
-      'title' => 'Offset Time Digitized',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 7,
+        'collection' => 'Tag',
+        'name' => 'OffsetTimeDigitized',
+        'title' => 'Offset Time Digitized',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OffsetTimeDigitized',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OffsetTimeDigitized',
     ),
     37121 =>
     array (
-      'components' => 4,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifComponentsConfiguration',
-      'collection' => 'Tag',
-      'name' => 'ComponentsConfiguration',
-      'title' => 'Components Configuration',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 4,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifComponentsConfiguration',
+        'collection' => 'Tag',
+        'name' => 'ComponentsConfiguration',
+        'title' => 'Components Configuration',
+        'format' =>
         array (
-          0 => '-',
-          1 => 'Y',
-          2 => 'Cb',
-          3 => 'Cr',
-          4 => 'R',
-          5 => 'G',
-          6 => 'B',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '-',
+            1 => 'Y',
+            2 => 'Cb',
+            3 => 'Cr',
+            4 => 'R',
+            5 => 'G',
+            6 => 'B',
+          ),
+        ),
+        'phpExifTag' => 'ComponentsConfiguration',
+        'exiftoolDOMNode' => 'ExifIFD:ComponentsConfiguration',
       ),
-      'phpExifTag' => 'ComponentsConfiguration',
-      'exiftoolDOMNode' => 'ExifIFD:ComponentsConfiguration',
     ),
     37122 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'CompressedBitsPerPixel',
-      'title' => 'Compressed Bits Per Pixel',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'CompressedBitsPerPixel',
+        'title' => 'Compressed Bits Per Pixel',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'CompressedBitsPerPixel',
+        'exiftoolDOMNode' => 'ExifIFD:CompressedBitsPerPixel',
       ),
-      'phpExifTag' => 'CompressedBitsPerPixel',
-      'exiftoolDOMNode' => 'ExifIFD:CompressedBitsPerPixel',
     ),
     37377 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifShutterSpeedValue',
-      'collection' => 'Tag',
-      'name' => 'ShutterSpeedValue',
-      'title' => 'Shutter Speed Value',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifShutterSpeedValue',
+        'collection' => 'Tag',
+        'name' => 'ShutterSpeedValue',
+        'title' => 'Shutter Speed Value',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'phpExifTag' => 'ShutterSpeedValue',
+        'exiftoolDOMNode' => 'ExifIFD:ShutterSpeedValue',
       ),
-      'phpExifTag' => 'ShutterSpeedValue',
-      'exiftoolDOMNode' => 'ExifIFD:ShutterSpeedValue',
     ),
     37378 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifApertureValue',
-      'collection' => 'Tag',
-      'name' => 'ApertureValue',
-      'title' => 'Aperture Value',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifApertureValue',
+        'collection' => 'Tag',
+        'name' => 'ApertureValue',
+        'title' => 'Aperture Value',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'ApertureValue',
+        'exiftoolDOMNode' => 'ExifIFD:ApertureValue',
       ),
-      'phpExifTag' => 'ApertureValue',
-      'exiftoolDOMNode' => 'ExifIFD:ApertureValue',
     ),
     37379 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifBrightnessValue',
-      'collection' => 'Tag',
-      'name' => 'BrightnessValue',
-      'title' => 'Brightness Value',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifBrightnessValue',
+        'collection' => 'Tag',
+        'name' => 'BrightnessValue',
+        'title' => 'Brightness Value',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'phpExifTag' => 'BrightnessValue',
+        'exiftoolDOMNode' => 'ExifIFD:BrightnessValue',
       ),
-      'phpExifTag' => 'BrightnessValue',
-      'exiftoolDOMNode' => 'ExifIFD:BrightnessValue',
     ),
     37380 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifExposureBiasValue',
-      'alias' =>
+      0 =>
       array (
-        0 => 'ExposureBiasValue',
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifExposureBiasValue',
+        'alias' =>
+        array (
+          0 => 'ExposureBiasValue',
+        ),
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ExposureCompensation',
+        'title' => 'Exposure Compensation',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'phpExifTag' => 'ExposureBiasValue',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureCompensation',
       ),
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ExposureCompensation',
-      'title' => 'Exposure Compensation',
-      'format' =>
-      array (
-        0 => 10,
-      ),
-      'phpExifTag' => 'ExposureBiasValue',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureCompensation',
     ),
     37381 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifApertureValue',
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'MaxApertureValue',
-      'title' => 'Max Aperture Value',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifApertureValue',
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'MaxApertureValue',
+        'title' => 'Max Aperture Value',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'MaxApertureValue',
+        'exiftoolDOMNode' => 'ExifIFD:MaxApertureValue',
       ),
-      'phpExifTag' => 'MaxApertureValue',
-      'exiftoolDOMNode' => 'ExifIFD:MaxApertureValue',
     ),
     37382 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifSubjectDistance',
-      'collection' => 'Tag',
-      'name' => 'SubjectDistance',
-      'title' => 'Subject Distance',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifSubjectDistance',
+        'collection' => 'Tag',
+        'name' => 'SubjectDistance',
+        'title' => 'Subject Distance',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'SubjectDistance',
+        'exiftoolDOMNode' => 'ExifIFD:SubjectDistance',
       ),
-      'phpExifTag' => 'SubjectDistance',
-      'exiftoolDOMNode' => 'ExifIFD:SubjectDistance',
     ),
     37383 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'MeteringMode',
-      'title' => 'Metering Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'MeteringMode',
+        'title' => 'Metering Mode',
+        'format' =>
         array (
-          0 => 'Unknown',
-          1 => 'Average',
-          2 => 'Center-weighted average',
-          3 => 'Spot',
-          4 => 'Multi-spot',
-          5 => 'Multi-segment',
-          6 => 'Partial',
-          255 => 'Other',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unknown',
+            1 => 'Average',
+            2 => 'Center-weighted average',
+            3 => 'Spot',
+            4 => 'Multi-spot',
+            5 => 'Multi-segment',
+            6 => 'Partial',
+            255 => 'Other',
+          ),
+        ),
+        'phpExifTag' => 'MeteringMode',
+        'exiftoolDOMNode' => 'ExifIFD:MeteringMode',
       ),
-      'phpExifTag' => 'MeteringMode',
-      'exiftoolDOMNode' => 'ExifIFD:MeteringMode',
     ),
     37384 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'LightSource',
-      'title' => 'Light Source',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'LightSource',
+        'title' => 'Light Source',
+        'format' =>
         array (
-          0 => 'Unknown',
-          1 => 'Daylight',
-          2 => 'Fluorescent',
-          3 => 'Tungsten (Incandescent)',
-          4 => 'Flash',
-          9 => 'Fine Weather',
-          10 => 'Cloudy',
-          11 => 'Shade',
-          12 => 'Daylight Fluorescent',
-          13 => 'Day White Fluorescent',
-          14 => 'Cool White Fluorescent',
-          15 => 'White Fluorescent',
-          16 => 'Warm White Fluorescent',
-          17 => 'Standard Light A',
-          18 => 'Standard Light B',
-          19 => 'Standard Light C',
-          20 => 'D55',
-          21 => 'D65',
-          22 => 'D75',
-          23 => 'D50',
-          24 => 'ISO Studio Tungsten',
-          255 => 'Other',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unknown',
+            1 => 'Daylight',
+            2 => 'Fluorescent',
+            3 => 'Tungsten (Incandescent)',
+            4 => 'Flash',
+            9 => 'Fine Weather',
+            10 => 'Cloudy',
+            11 => 'Shade',
+            12 => 'Daylight Fluorescent',
+            13 => 'Day White Fluorescent',
+            14 => 'Cool White Fluorescent',
+            15 => 'White Fluorescent',
+            16 => 'Warm White Fluorescent',
+            17 => 'Standard Light A',
+            18 => 'Standard Light B',
+            19 => 'Standard Light C',
+            20 => 'D55',
+            21 => 'D65',
+            22 => 'D75',
+            23 => 'D50',
+            24 => 'ISO Studio Tungsten',
+            255 => 'Other',
+          ),
+        ),
+        'phpExifTag' => 'LightSource',
+        'exiftoolDOMNode' => 'ExifIFD:LightSource',
       ),
-      'phpExifTag' => 'LightSource',
-      'exiftoolDOMNode' => 'ExifIFD:LightSource',
     ),
     37385 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'Flash',
-      'title' => 'Flash',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'Flash',
+        'title' => 'Flash',
+        'format' =>
         array (
-          0 => 'No Flash',
-          1 => 'Fired',
-          5 => 'Fired, Return not detected',
-          7 => 'Fired, Return detected',
-          8 => 'On, Did not fire',
-          9 => 'On, Fired',
-          13 => 'On, Return not detected',
-          15 => 'On, Return detected',
-          16 => 'Off, Did not fire',
-          20 => 'Off, Did not fire, Return not detected',
-          24 => 'Auto, Did not fire',
-          25 => 'Auto, Fired',
-          29 => 'Auto, Fired, Return not detected',
-          31 => 'Auto, Fired, Return detected',
-          32 => 'No flash function',
-          48 => 'Off, No flash function',
-          65 => 'Fired, Red-eye reduction',
-          69 => 'Fired, Red-eye reduction, Return not detected',
-          71 => 'Fired, Red-eye reduction, Return detected',
-          73 => 'On, Red-eye reduction',
-          77 => 'On, Red-eye reduction, Return not detected',
-          79 => 'On, Red-eye reduction, Return detected',
-          80 => 'Off, Red-eye reduction',
-          88 => 'Auto, Did not fire, Red-eye reduction',
-          89 => 'Auto, Fired, Red-eye reduction',
-          93 => 'Auto, Fired, Red-eye reduction, Return not detected',
-          95 => 'Auto, Fired, Red-eye reduction, Return detected',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No Flash',
+            1 => 'Fired',
+            5 => 'Fired, Return not detected',
+            7 => 'Fired, Return detected',
+            8 => 'On, Did not fire',
+            9 => 'On, Fired',
+            13 => 'On, Return not detected',
+            15 => 'On, Return detected',
+            16 => 'Off, Did not fire',
+            20 => 'Off, Did not fire, Return not detected',
+            24 => 'Auto, Did not fire',
+            25 => 'Auto, Fired',
+            29 => 'Auto, Fired, Return not detected',
+            31 => 'Auto, Fired, Return detected',
+            32 => 'No flash function',
+            48 => 'Off, No flash function',
+            65 => 'Fired, Red-eye reduction',
+            69 => 'Fired, Red-eye reduction, Return not detected',
+            71 => 'Fired, Red-eye reduction, Return detected',
+            73 => 'On, Red-eye reduction',
+            77 => 'On, Red-eye reduction, Return not detected',
+            79 => 'On, Red-eye reduction, Return detected',
+            80 => 'Off, Red-eye reduction',
+            88 => 'Auto, Did not fire, Red-eye reduction',
+            89 => 'Auto, Fired, Red-eye reduction',
+            93 => 'Auto, Fired, Red-eye reduction, Return not detected',
+            95 => 'Auto, Fired, Red-eye reduction, Return detected',
+          ),
+        ),
+        'phpExifTag' => 'Flash',
+        'exiftoolDOMNode' => 'ExifIFD:Flash',
       ),
-      'phpExifTag' => 'Flash',
-      'exiftoolDOMNode' => 'ExifIFD:Flash',
     ),
     37386 =>
     array (
-      'components' => 1,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifFocalLength',
-      'collection' => 'Tag',
-      'name' => 'FocalLength',
-      'title' => 'Focal Length',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifFocalLength',
+        'collection' => 'Tag',
+        'name' => 'FocalLength',
+        'title' => 'Focal Length',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'FocalLength',
+        'exiftoolDOMNode' => 'ExifIFD:FocalLength',
       ),
-      'phpExifTag' => 'FocalLength',
-      'exiftoolDOMNode' => 'ExifIFD:FocalLength',
     ),
     37387 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashEnergy',
-      'title' => 'Flash Energy',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FlashEnergy',
+        'title' => 'Flash Energy',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FlashEnergy',
+        'exiftoolDOMNode' => 'ExifIFD:FlashEnergy',
       ),
-      'phpExifTag' => 'FlashEnergy',
-      'exiftoolDOMNode' => 'ExifIFD:FlashEnergy',
     ),
     37388 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SpatialFrequencyResponse',
-      'title' => 'Spatial Frequency Response',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SpatialFrequencyResponse',
+        'title' => 'Spatial Frequency Response',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'SpatialFrequencyResponse',
+        'exiftoolDOMNode' => 'ExifIFD:SpatialFrequencyResponse',
       ),
-      'phpExifTag' => 'SpatialFrequencyResponse',
-      'exiftoolDOMNode' => 'ExifIFD:SpatialFrequencyResponse',
     ),
     37389 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Noise',
-      'title' => 'Noise',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Noise',
+        'title' => 'Noise',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'Noise',
+        'exiftoolDOMNode' => 'ExifIFD:Noise',
       ),
-      'phpExifTag' => 'Noise',
-      'exiftoolDOMNode' => 'ExifIFD:Noise',
     ),
     37390 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneXResolution',
-      'title' => 'Focal Plane X Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneXResolution',
+        'title' => 'Focal Plane X Resolution',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FocalPlaneXResolution',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneXResolution',
       ),
-      'phpExifTag' => 'FocalPlaneXResolution',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneXResolution',
     ),
     37391 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneYResolution',
-      'title' => 'Focal Plane Y Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneYResolution',
+        'title' => 'Focal Plane Y Resolution',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FocalPlaneYResolution',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneYResolution',
       ),
-      'phpExifTag' => 'FocalPlaneYResolution',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneYResolution',
     ),
     37392 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneResolutionUnit',
-      'title' => 'Focal Plane Resolution Unit',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneResolutionUnit',
+        'title' => 'Focal Plane Resolution Unit',
+        'format' =>
         array (
-          1 => 'None',
-          2 => 'inches',
-          3 => 'cm',
-          4 => 'mm',
-          5 => 'um',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'None',
+            2 => 'inches',
+            3 => 'cm',
+            4 => 'mm',
+            5 => 'um',
+          ),
+        ),
+        'phpExifTag' => 'FocalPlaneResolutionUnit',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneResolutionUnit',
       ),
-      'phpExifTag' => 'FocalPlaneResolutionUnit',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneResolutionUnit',
     ),
     37393 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageNumber',
-      'title' => 'Image Number',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'ImageNumber',
+        'title' => 'Image Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'ImageNumber',
+        'exiftoolDOMNode' => 'ExifIFD:ImageNumber',
       ),
-      'phpExifTag' => 'ImageNumber',
-      'exiftoolDOMNode' => 'ExifIFD:ImageNumber',
     ),
     37394 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SecurityClassification',
-      'title' => 'Security Classification',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SecurityClassification',
+        'title' => 'Security Classification',
+        'format' =>
         array (
-          'C' => 'Confidential',
-          'R' => 'Restricted',
-          'S' => 'Secret',
-          'T' => 'Top Secret',
-          'U' => 'Unclassified',
+          0 => 2,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            'C' => 'Confidential',
+            'R' => 'Restricted',
+            'S' => 'Secret',
+            'T' => 'Top Secret',
+            'U' => 'Unclassified',
+          ),
+        ),
+        'phpExifTag' => 'SecurityClassification',
+        'exiftoolDOMNode' => 'ExifIFD:SecurityClassification',
       ),
-      'phpExifTag' => 'SecurityClassification',
-      'exiftoolDOMNode' => 'ExifIFD:SecurityClassification',
     ),
     37395 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageHistory',
-      'title' => 'Image History',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'ImageHistory',
+        'title' => 'Image History',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'ImageHistory',
+        'exiftoolDOMNode' => 'ExifIFD:ImageHistory',
       ),
-      'phpExifTag' => 'ImageHistory',
-      'exiftoolDOMNode' => 'ExifIFD:ImageHistory',
     ),
     37396 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifSubjectArea',
-      'collection' => 'Tag',
-      'name' => 'SubjectArea',
-      'title' => 'Subject Area',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifSubjectArea',
+        'collection' => 'Tag',
+        'name' => 'SubjectArea',
+        'title' => 'Subject Area',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'phpExifTag' => 'SubjectLocation',
+        'exiftoolDOMNode' => 'ExifIFD:SubjectArea',
       ),
-      'phpExifTag' => 'SubjectLocation',
-      'exiftoolDOMNode' => 'ExifIFD:SubjectArea',
     ),
     37397 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExposureIndex',
-      'title' => 'Exposure Index',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExposureIndex',
+        'title' => 'Exposure Index',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ExposureIndex',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureIndex',
       ),
-      'phpExifTag' => 'ExposureIndex',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureIndex',
     ),
     37398 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TIFF-EPStandardID',
-      'title' => 'TIFF-EP Standard ID',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TIFF-EPStandardID',
+        'title' => 'TIFF-EP Standard ID',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TIFF/EPStandardID',
+        'exiftoolDOMNode' => 'ExifIFD:TIFF-EPStandardID',
       ),
-      'phpExifTag' => 'TIFF/EPStandardID',
-      'exiftoolDOMNode' => 'ExifIFD:TIFF-EPStandardID',
     ),
     37399 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensingMethod',
-      'title' => 'Sensing Method',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SensingMethod',
+        'title' => 'Sensing Method',
+        'format' =>
         array (
-          1 => 'Monochrome area',
-          2 => 'One-chip color area',
-          3 => 'Two-chip color area',
-          4 => 'Three-chip color area',
-          5 => 'Color sequential area',
-          6 => 'Monochrome linear',
-          7 => 'Trilinear',
-          8 => 'Color sequential linear',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Monochrome area',
+            2 => 'One-chip color area',
+            3 => 'Two-chip color area',
+            4 => 'Three-chip color area',
+            5 => 'Color sequential area',
+            6 => 'Monochrome linear',
+            7 => 'Trilinear',
+            8 => 'Color sequential linear',
+          ),
+        ),
+        'phpExifTag' => 'SensingMethod',
+        'exiftoolDOMNode' => 'ExifIFD:SensingMethod',
       ),
-      'phpExifTag' => 'SensingMethod',
-      'exiftoolDOMNode' => 'ExifIFD:SensingMethod',
     ),
     37434 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CIP3DataFile',
-      'title' => 'CIP3 Data File',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CIP3DataFile',
+        'title' => 'CIP3 Data File',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CIP3DataFile',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CIP3DataFile',
     ),
     37435 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CIP3Sheet',
-      'title' => 'CIP3 Sheet',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CIP3Sheet',
+        'title' => 'CIP3 Sheet',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CIP3Sheet',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CIP3Sheet',
     ),
     37436 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CIP3Side',
-      'title' => 'CIP3 Side',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CIP3Side',
+        'title' => 'CIP3 Side',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CIP3Side',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CIP3Side',
     ),
     37439 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StoNits',
-      'title' => 'Sto Nits',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'StoNits',
+        'title' => 'Sto Nits',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'StoNits',
+        'exiftoolDOMNode' => 'ExifIFD:StoNits',
       ),
-      'phpExifTag' => 'StoNits',
-      'exiftoolDOMNode' => 'ExifIFD:StoNits',
     ),
     37500 =>
     array (
@@ -5919,1559 +6435,1886 @@ class Exif extends Collection {
     ),
     37510 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifUserComment',
-      'collection' => 'Tag',
-      'name' => 'UserComment',
-      'title' => 'User Comment',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifUserComment',
+        'collection' => 'Tag',
+        'name' => 'UserComment',
+        'title' => 'User Comment',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'UserComment',
+        'exiftoolDOMNode' => 'ExifIFD:UserComment',
       ),
-      'phpExifTag' => 'UserComment',
-      'exiftoolDOMNode' => 'ExifIFD:UserComment',
     ),
     37520 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SubSecTime',
-      'title' => 'Sub Sec Time',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SubSecTime',
+        'title' => 'Sub Sec Time',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'SubSecTime',
+        'exiftoolDOMNode' => 'ExifIFD:SubSecTime',
       ),
-      'phpExifTag' => 'SubSecTime',
-      'exiftoolDOMNode' => 'ExifIFD:SubSecTime',
     ),
     37521 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SubSecTimeOriginal',
-      'title' => 'Sub Sec Time Original',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SubSecTimeOriginal',
+        'title' => 'Sub Sec Time Original',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'SubSecTimeOriginal',
+        'exiftoolDOMNode' => 'ExifIFD:SubSecTimeOriginal',
       ),
-      'phpExifTag' => 'SubSecTimeOriginal',
-      'exiftoolDOMNode' => 'ExifIFD:SubSecTimeOriginal',
     ),
     37522 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SubSecTimeDigitized',
-      'title' => 'Sub Sec Time Digitized',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SubSecTimeDigitized',
+        'title' => 'Sub Sec Time Digitized',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'SubSecTimeDigitized',
+        'exiftoolDOMNode' => 'ExifIFD:SubSecTimeDigitized',
       ),
-      'phpExifTag' => 'SubSecTimeDigitized',
-      'exiftoolDOMNode' => 'ExifIFD:SubSecTimeDigitized',
     ),
     37679 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MSDocumentText',
-      'title' => 'MS Document Text',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MSDocumentText',
+        'title' => 'MS Document Text',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MSDocumentText',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MSDocumentText',
     ),
     37680 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MSPropertySetStorage',
-      'title' => 'MS Property Set Storage',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MSPropertySetStorage',
+        'title' => 'MS Property Set Storage',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MSPropertySetStorage',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MSPropertySetStorage',
     ),
     37681 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MSDocumentTextPosition',
-      'title' => 'MS Document Text Position',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MSDocumentTextPosition',
+        'title' => 'MS Document Text Position',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MSDocumentTextPosition',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MSDocumentTextPosition',
     ),
     37888 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AmbientTemperature',
-      'title' => 'Ambient Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'collection' => 'Tag',
+        'name' => 'AmbientTemperature',
+        'title' => 'Ambient Temperature',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AmbientTemperature',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AmbientTemperature',
     ),
     37889 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Humidity',
-      'title' => 'Humidity',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'Humidity',
+        'title' => 'Humidity',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Humidity',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Humidity',
     ),
     37890 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Pressure',
-      'title' => 'Pressure',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'Pressure',
+        'title' => 'Pressure',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Pressure',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Pressure',
     ),
     37891 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WaterDepth',
-      'title' => 'Water Depth',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'collection' => 'Tag',
+        'name' => 'WaterDepth',
+        'title' => 'Water Depth',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WaterDepth',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WaterDepth',
     ),
     37892 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Acceleration',
-      'title' => 'Acceleration',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'collection' => 'Tag',
+        'name' => 'Acceleration',
+        'title' => 'Acceleration',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Acceleration',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Acceleration',
     ),
     37893 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraElevationAngle',
-      'title' => 'Camera Elevation Angle',
-      'format' =>
+      0 =>
       array (
-        0 => 10,
+        'collection' => 'Tag',
+        'name' => 'CameraElevationAngle',
+        'title' => 'Camera Elevation Angle',
+        'format' =>
+        array (
+          0 => 10,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CameraElevationAngle',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CameraElevationAngle',
     ),
     40960 =>
     array (
-      'components' => 4,
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Version',
-      'collection' => 'Tag',
-      'name' => 'FlashpixVersion',
-      'title' => 'Flashpix Version',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'components' => 4,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Version',
+        'collection' => 'Tag',
+        'name' => 'FlashpixVersion',
+        'title' => 'Flashpix Version',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'FlashPixVersion',
+        'exiftoolDOMNode' => 'ExifIFD:FlashpixVersion',
       ),
-      'phpExifTag' => 'FlashPixVersion',
-      'exiftoolDOMNode' => 'ExifIFD:FlashpixVersion',
     ),
     40961 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ColorSpace',
-      'title' => 'Color Space',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ColorSpace',
+        'title' => 'Color Space',
+        'format' =>
         array (
-          1 => 'sRGB',
-          2 => 'Adobe RGB',
-          65533 => 'Wide Gamut RGB',
-          65534 => 'ICC Profile',
-          65535 => 'Uncalibrated',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'sRGB',
+            2 => 'Adobe RGB',
+            65533 => 'Wide Gamut RGB',
+            65534 => 'ICC Profile',
+            65535 => 'Uncalibrated',
+          ),
+        ),
+        'phpExifTag' => 'ColorSpace',
+        'exiftoolDOMNode' => 'ExifIFD:ColorSpace',
       ),
-      'phpExifTag' => 'ColorSpace',
-      'exiftoolDOMNode' => 'ExifIFD:ColorSpace',
     ),
     40962 =>
     array (
-      'alias' =>
+      0 =>
       array (
-        0 => 'PixelXDimension',
+        'alias' =>
+        array (
+          0 => 'PixelXDimension',
+        ),
+        'components' => 1,
+        'format' =>
+        array (
+          0 => 3,
+          1 => 4,
+        ),
+        'collection' => 'Tag',
+        'name' => 'ExifImageWidth',
+        'title' => 'Exif Image Width',
+        'phpExifTag' => 'ExifImageWidth',
+        'exiftoolDOMNode' => 'ExifIFD:ExifImageWidth',
       ),
-      'components' => 1,
-      'format' =>
-      array (
-        0 => 3,
-        1 => 4,
-      ),
-      'collection' => 'Tag',
-      'name' => 'ExifImageWidth',
-      'title' => 'Exif Image Width',
-      'phpExifTag' => 'ExifImageWidth',
-      'exiftoolDOMNode' => 'ExifIFD:ExifImageWidth',
     ),
     40963 =>
     array (
-      'alias' =>
+      0 =>
       array (
-        0 => 'PixelYDimension',
+        'alias' =>
+        array (
+          0 => 'PixelYDimension',
+        ),
+        'components' => 1,
+        'format' =>
+        array (
+          0 => 3,
+          1 => 4,
+        ),
+        'collection' => 'Tag',
+        'name' => 'ExifImageHeight',
+        'title' => 'Exif Image Height',
+        'phpExifTag' => 'ExifImageLength',
+        'exiftoolDOMNode' => 'ExifIFD:ExifImageHeight',
       ),
-      'components' => 1,
-      'format' =>
-      array (
-        0 => 3,
-        1 => 4,
-      ),
-      'collection' => 'Tag',
-      'name' => 'ExifImageHeight',
-      'title' => 'Exif Image Height',
-      'phpExifTag' => 'ExifImageLength',
-      'exiftoolDOMNode' => 'ExifIFD:ExifImageHeight',
     ),
     40964 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RelatedSoundFile',
-      'title' => 'Related Sound File',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'RelatedSoundFile',
+        'title' => 'Related Sound File',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'RelatedSoundFile',
+        'exiftoolDOMNode' => 'ExifIFD:RelatedSoundFile',
       ),
-      'phpExifTag' => 'RelatedSoundFile',
-      'exiftoolDOMNode' => 'ExifIFD:RelatedSoundFile',
     ),
     40965 =>
     array (
-      'collection' => 'Ifd\\Interoperability',
+      0 =>
+      array (
+        'collection' => 'Ifd\\Interoperability',
+      ),
     ),
     40976 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SamsungRawPointersOffset',
-      'title' => 'Samsung Raw Pointers Offset',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SamsungRawPointersOffset',
+        'title' => 'Samsung Raw Pointers Offset',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SamsungRawPointersOffset',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SamsungRawPointersOffset',
     ),
     40977 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SamsungRawPointersLength',
-      'title' => 'Samsung Raw Pointers Length',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SamsungRawPointersLength',
+        'title' => 'Samsung Raw Pointers Length',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SamsungRawPointersLength',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SamsungRawPointersLength',
     ),
     41217 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SamsungRawByteOrder',
-      'title' => 'Samsung Raw Byte Order',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SamsungRawByteOrder',
+        'title' => 'Samsung Raw Byte Order',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SamsungRawByteOrder',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SamsungRawByteOrder',
     ),
     41218 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SamsungRawUnknown',
-      'title' => 'Samsung Raw Unknown',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SamsungRawUnknown',
+        'title' => 'Samsung Raw Unknown',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SamsungRawUnknown',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SamsungRawUnknown',
     ),
     41483 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'FlashEnergy',
-      'title' => 'Flash Energy',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'FlashEnergy',
+        'title' => 'Flash Energy',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'FlashEnergy',
+        'exiftoolDOMNode' => 'ExifIFD:FlashEnergy',
       ),
-      'phpExifTag' => 'FlashEnergy',
-      'exiftoolDOMNode' => 'ExifIFD:FlashEnergy',
     ),
     41484 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SpatialFrequencyResponse',
-      'title' => 'Spatial Frequency Response',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SpatialFrequencyResponse',
+        'title' => 'Spatial Frequency Response',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'SpatialFrequencyResponse',
+        'exiftoolDOMNode' => 'ExifIFD:SpatialFrequencyResponse',
       ),
-      'phpExifTag' => 'SpatialFrequencyResponse',
-      'exiftoolDOMNode' => 'ExifIFD:SpatialFrequencyResponse',
     ),
     41485 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Noise',
-      'title' => 'Noise',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Noise',
+        'title' => 'Noise',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'Noise',
+        'exiftoolDOMNode' => 'ExifIFD:Noise',
       ),
-      'phpExifTag' => 'Noise',
-      'exiftoolDOMNode' => 'ExifIFD:Noise',
     ),
     41486 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneXResolution',
-      'title' => 'Focal Plane X Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneXResolution',
+        'title' => 'Focal Plane X Resolution',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'FocalPlaneXResolution',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneXResolution',
       ),
-      'phpExifTag' => 'FocalPlaneXResolution',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneXResolution',
     ),
     41487 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneYResolution',
-      'title' => 'Focal Plane Y Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneYResolution',
+        'title' => 'Focal Plane Y Resolution',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'FocalPlaneYResolution',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneYResolution',
       ),
-      'phpExifTag' => 'FocalPlaneYResolution',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneYResolution',
     ),
     41488 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'FocalPlaneResolutionUnit',
-      'title' => 'Focal Plane Resolution Unit',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'FocalPlaneResolutionUnit',
+        'title' => 'Focal Plane Resolution Unit',
+        'format' =>
         array (
-          1 => 'None',
-          2 => 'inches',
-          3 => 'cm',
-          4 => 'mm',
-          5 => 'um',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'None',
+            2 => 'inches',
+            3 => 'cm',
+            4 => 'mm',
+            5 => 'um',
+          ),
+        ),
+        'phpExifTag' => 'FocalPlaneResolutionUnit',
+        'exiftoolDOMNode' => 'ExifIFD:FocalPlaneResolutionUnit',
       ),
-      'phpExifTag' => 'FocalPlaneResolutionUnit',
-      'exiftoolDOMNode' => 'ExifIFD:FocalPlaneResolutionUnit',
     ),
     41489 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageNumber',
-      'title' => 'Image Number',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageNumber',
+        'title' => 'Image Number',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ImageNumber',
+        'exiftoolDOMNode' => 'ExifIFD:ImageNumber',
       ),
-      'phpExifTag' => 'ImageNumber',
-      'exiftoolDOMNode' => 'ExifIFD:ImageNumber',
     ),
     41490 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SecurityClassification',
-      'title' => 'Security Classification',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SecurityClassification',
+        'title' => 'Security Classification',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'SecurityClassification',
+        'exiftoolDOMNode' => 'ExifIFD:SecurityClassification',
       ),
-      'phpExifTag' => 'SecurityClassification',
-      'exiftoolDOMNode' => 'ExifIFD:SecurityClassification',
     ),
     41491 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageHistory',
-      'title' => 'Image History',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageHistory',
+        'title' => 'Image History',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'ImageHistory',
+        'exiftoolDOMNode' => 'ExifIFD:ImageHistory',
       ),
-      'phpExifTag' => 'ImageHistory',
-      'exiftoolDOMNode' => 'ExifIFD:ImageHistory',
     ),
     41492 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'SubjectLocation',
-      'title' => 'Subject Location',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'SubjectLocation',
+        'title' => 'Subject Location',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'phpExifTag' => 'SubjectLocation',
+        'exiftoolDOMNode' => 'ExifIFD:SubjectLocation',
       ),
-      'phpExifTag' => 'SubjectLocation',
-      'exiftoolDOMNode' => 'ExifIFD:SubjectLocation',
     ),
     41493 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ExposureIndex',
-      'title' => 'Exposure Index',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ExposureIndex',
+        'title' => 'Exposure Index',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'ExposureIndex',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureIndex',
       ),
-      'phpExifTag' => 'ExposureIndex',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureIndex',
     ),
     41494 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TIFF-EPStandardID',
-      'title' => 'TIFF-EP Standard ID',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'TIFF-EPStandardID',
+        'title' => 'TIFF-EP Standard ID',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'TIFF/EPStandardID',
+        'exiftoolDOMNode' => 'ExifIFD:TIFF-EPStandardID',
       ),
-      'phpExifTag' => 'TIFF/EPStandardID',
-      'exiftoolDOMNode' => 'ExifIFD:TIFF-EPStandardID',
     ),
     41495 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'SensingMethod',
-      'title' => 'Sensing Method',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'SensingMethod',
+        'title' => 'Sensing Method',
+        'format' =>
         array (
-          1 => 'Not defined',
-          2 => 'One-chip color area',
-          3 => 'Two-chip color area',
-          4 => 'Three-chip color area',
-          5 => 'Color sequential area',
-          7 => 'Trilinear',
-          8 => 'Color sequential linear',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Not defined',
+            2 => 'One-chip color area',
+            3 => 'Two-chip color area',
+            4 => 'Three-chip color area',
+            5 => 'Color sequential area',
+            7 => 'Trilinear',
+            8 => 'Color sequential linear',
+          ),
+        ),
+        'phpExifTag' => 'SensingMethod',
+        'exiftoolDOMNode' => 'ExifIFD:SensingMethod',
       ),
-      'phpExifTag' => 'SensingMethod',
-      'exiftoolDOMNode' => 'ExifIFD:SensingMethod',
     ),
     41728 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'FileSource',
-      'title' => 'File Source',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'FileSource',
+        'title' => 'File Source',
+        'format' =>
         array (
-          1 => 'Film Scanner',
-          2 => 'Reflection Print Scanner',
-          3 => 'Digital Camera',
-          '\\x03\\x00\\x00\\x00' => 'Sigma Digital Camera',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Film Scanner',
+            2 => 'Reflection Print Scanner',
+            3 => 'Digital Camera',
+            '\\x03\\x00\\x00\\x00' => 'Sigma Digital Camera',
+          ),
+        ),
+        'phpExifTag' => 'FileSource',
+        'exiftoolDOMNode' => 'ExifIFD:FileSource',
       ),
-      'phpExifTag' => 'FileSource',
-      'exiftoolDOMNode' => 'ExifIFD:FileSource',
     ),
     41729 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'SceneType',
-      'title' => 'Scene Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'SceneType',
+        'title' => 'Scene Type',
+        'format' =>
         array (
-          1 => 'Directly photographed',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Directly photographed',
+          ),
+        ),
+        'phpExifTag' => 'SceneType',
+        'exiftoolDOMNode' => 'ExifIFD:SceneType',
       ),
-      'phpExifTag' => 'SceneType',
-      'exiftoolDOMNode' => 'ExifIFD:SceneType',
     ),
     41730 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifCFAPattern',
-      'text' =>
+      0 =>
       array (
-        'mapping' =>
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifCFAPattern',
+        'text' =>
         array (
-          '0 1 1 2' => '[Red,Green][Green,Blue]',
-          '1 0 2 1' => '[Green,Red][Blue,Green]',
-          '1 2 0 1' => '[Green,Blue][Red,Green]',
-          '2 1 1 0' => '[Blue,Green][Green,Red]',
+          'mapping' =>
+          array (
+            '0 1 1 2' => '[Red,Green][Green,Blue]',
+            '1 0 2 1' => '[Green,Red][Blue,Green]',
+            '1 2 0 1' => '[Green,Blue][Red,Green]',
+            '2 1 1 0' => '[Blue,Green][Green,Red]',
+          ),
         ),
+        'collection' => 'Tag',
+        'name' => 'CFAPattern',
+        'title' => 'CFA Pattern',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'CFAPattern',
+        'exiftoolDOMNode' => 'ExifIFD:CFAPattern',
       ),
-      'collection' => 'Tag',
-      'name' => 'CFAPattern',
-      'title' => 'CFA Pattern',
-      'format' =>
-      array (
-        0 => 7,
-      ),
-      'phpExifTag' => 'CFAPattern',
-      'exiftoolDOMNode' => 'ExifIFD:CFAPattern',
     ),
     41985 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'CustomRendered',
-      'title' => 'Custom Rendered',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'CustomRendered',
+        'title' => 'Custom Rendered',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Custom',
-          3 => 'HDR',
-          6 => 'Panorama',
-          8 => 'Portrait',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Custom',
+            3 => 'HDR',
+            6 => 'Panorama',
+            8 => 'Portrait',
+          ),
+        ),
+        'phpExifTag' => 'CustomRendered',
+        'exiftoolDOMNode' => 'ExifIFD:CustomRendered',
       ),
-      'phpExifTag' => 'CustomRendered',
-      'exiftoolDOMNode' => 'ExifIFD:CustomRendered',
     ),
     41986 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ExposureMode',
-      'title' => 'Exposure Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ExposureMode',
+        'title' => 'Exposure Mode',
+        'format' =>
         array (
-          0 => 'Auto',
-          1 => 'Manual',
-          2 => 'Auto bracket',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Auto',
+            1 => 'Manual',
+            2 => 'Auto bracket',
+          ),
+        ),
+        'phpExifTag' => 'ExposureMode',
+        'exiftoolDOMNode' => 'ExifIFD:ExposureMode',
       ),
-      'phpExifTag' => 'ExposureMode',
-      'exiftoolDOMNode' => 'ExifIFD:ExposureMode',
     ),
     41987 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'WhiteBalance',
-      'title' => 'White Balance',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'WhiteBalance',
+        'title' => 'White Balance',
+        'format' =>
         array (
-          0 => 'Auto',
-          1 => 'Manual',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Auto',
+            1 => 'Manual',
+          ),
+        ),
+        'phpExifTag' => 'WhiteBalance',
+        'exiftoolDOMNode' => 'ExifIFD:WhiteBalance',
       ),
-      'phpExifTag' => 'WhiteBalance',
-      'exiftoolDOMNode' => 'ExifIFD:WhiteBalance',
     ),
     41988 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'DigitalZoomRatio',
-      'title' => 'Digital Zoom Ratio',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'DigitalZoomRatio',
+        'title' => 'Digital Zoom Ratio',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'phpExifTag' => 'DigitalZoomRatio',
+        'exiftoolDOMNode' => 'ExifIFD:DigitalZoomRatio',
       ),
-      'phpExifTag' => 'DigitalZoomRatio',
-      'exiftoolDOMNode' => 'ExifIFD:DigitalZoomRatio',
     ),
     41989 =>
     array (
-      'alias' =>
+      0 =>
       array (
-        0 => 'FocalLengthIn35mmFilm',
+        'alias' =>
+        array (
+          0 => 'FocalLengthIn35mmFilm',
+        ),
+        'components' => 1,
+        'text' =>
+        array (
+          'default' => '{value} mm',
+        ),
+        'collection' => 'Tag',
+        'name' => 'FocalLengthIn35mmFormat',
+        'title' => 'Focal Length In 35mm Format',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'phpExifTag' => 'FocalLengthIn35mmFilm',
+        'exiftoolDOMNode' => 'ExifIFD:FocalLengthIn35mmFormat',
       ),
-      'components' => 1,
-      'text' =>
-      array (
-        'default' => '{value} mm',
-      ),
-      'collection' => 'Tag',
-      'name' => 'FocalLengthIn35mmFormat',
-      'title' => 'Focal Length In 35mm Format',
-      'format' =>
-      array (
-        0 => 3,
-      ),
-      'phpExifTag' => 'FocalLengthIn35mmFilm',
-      'exiftoolDOMNode' => 'ExifIFD:FocalLengthIn35mmFormat',
     ),
     41990 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'SceneCaptureType',
-      'title' => 'Scene Capture Type',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'SceneCaptureType',
+        'title' => 'Scene Capture Type',
+        'format' =>
         array (
-          0 => 'Standard',
-          1 => 'Landscape',
-          2 => 'Portrait',
-          3 => 'Night',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Standard',
+            1 => 'Landscape',
+            2 => 'Portrait',
+            3 => 'Night',
+          ),
+        ),
+        'phpExifTag' => 'SceneCaptureType',
+        'exiftoolDOMNode' => 'ExifIFD:SceneCaptureType',
       ),
-      'phpExifTag' => 'SceneCaptureType',
-      'exiftoolDOMNode' => 'ExifIFD:SceneCaptureType',
     ),
     41991 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'GainControl',
-      'title' => 'Gain Control',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'GainControl',
+        'title' => 'Gain Control',
+        'format' =>
         array (
-          0 => 'None',
-          1 => 'Low gain up',
-          2 => 'High gain up',
-          3 => 'Low gain down',
-          4 => 'High gain down',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'None',
+            1 => 'Low gain up',
+            2 => 'High gain up',
+            3 => 'Low gain down',
+            4 => 'High gain down',
+          ),
+        ),
+        'phpExifTag' => 'GainControl',
+        'exiftoolDOMNode' => 'ExifIFD:GainControl',
       ),
-      'phpExifTag' => 'GainControl',
-      'exiftoolDOMNode' => 'ExifIFD:GainControl',
     ),
     41992 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'Contrast',
-      'title' => 'Contrast',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'Contrast',
+        'title' => 'Contrast',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Low',
-          2 => 'High',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Low',
+            2 => 'High',
+          ),
+        ),
+        'phpExifTag' => 'Contrast',
+        'exiftoolDOMNode' => 'ExifIFD:Contrast',
       ),
-      'phpExifTag' => 'Contrast',
-      'exiftoolDOMNode' => 'ExifIFD:Contrast',
     ),
     41993 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'Saturation',
-      'title' => 'Saturation',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'Saturation',
+        'title' => 'Saturation',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Low',
-          2 => 'High',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Low',
+            2 => 'High',
+          ),
+        ),
+        'phpExifTag' => 'Saturation',
+        'exiftoolDOMNode' => 'ExifIFD:Saturation',
       ),
-      'phpExifTag' => 'Saturation',
-      'exiftoolDOMNode' => 'ExifIFD:Saturation',
     ),
     41994 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'Sharpness',
-      'title' => 'Sharpness',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'Sharpness',
+        'title' => 'Sharpness',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Soft',
-          2 => 'Hard',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Soft',
+            2 => 'Hard',
+          ),
+        ),
+        'phpExifTag' => 'Sharpness',
+        'exiftoolDOMNode' => 'ExifIFD:Sharpness',
       ),
-      'phpExifTag' => 'Sharpness',
-      'exiftoolDOMNode' => 'ExifIFD:Sharpness',
     ),
     41995 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DeviceSettingDescription',
-      'title' => 'Device Setting Description',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DeviceSettingDescription',
+        'title' => 'Device Setting Description',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'DeviceSettingDescription',
+        'exiftoolDOMNode' => 'ExifIFD:DeviceSettingDescription',
       ),
-      'phpExifTag' => 'DeviceSettingDescription',
-      'exiftoolDOMNode' => 'ExifIFD:DeviceSettingDescription',
     ),
     41996 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'SubjectDistanceRange',
-      'title' => 'Subject Distance Range',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'SubjectDistanceRange',
+        'title' => 'Subject Distance Range',
+        'format' =>
         array (
-          0 => 'Unknown',
-          1 => 'Macro',
-          2 => 'Close',
-          3 => 'Distant',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Unknown',
+            1 => 'Macro',
+            2 => 'Close',
+            3 => 'Distant',
+          ),
+        ),
+        'phpExifTag' => 'SubjectDistanceRange',
+        'exiftoolDOMNode' => 'ExifIFD:SubjectDistanceRange',
       ),
-      'phpExifTag' => 'SubjectDistanceRange',
-      'exiftoolDOMNode' => 'ExifIFD:SubjectDistanceRange',
     ),
     42016 =>
     array (
-      'components' => 32,
-      'collection' => 'Tag',
-      'name' => 'ImageUniqueID',
-      'title' => 'Image Unique ID',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'components' => 32,
+        'collection' => 'Tag',
+        'name' => 'ImageUniqueID',
+        'title' => 'Image Unique ID',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'phpExifTag' => 'ImageUniqueID',
+        'exiftoolDOMNode' => 'ExifIFD:ImageUniqueID',
       ),
-      'phpExifTag' => 'ImageUniqueID',
-      'exiftoolDOMNode' => 'ExifIFD:ImageUniqueID',
     ),
     42032 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OwnerName',
-      'title' => 'Owner Name',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'OwnerName',
+        'title' => 'Owner Name',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OwnerName',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OwnerName',
     ),
     42033 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SerialNumber',
-      'title' => 'Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SerialNumber',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SerialNumber',
     ),
     42034 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifLensInfo',
-      'collection' => 'Tag',
-      'name' => 'LensInfo',
-      'title' => 'Lens Info',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifLensInfo',
+        'collection' => 'Tag',
+        'name' => 'LensInfo',
+        'title' => 'Lens Info',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:LensInfo',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:LensInfo',
     ),
     42035 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensMake',
-      'title' => 'Lens Make',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'LensMake',
+        'title' => 'Lens Make',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:LensMake',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:LensMake',
     ),
     42036 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensModel',
-      'title' => 'Lens Model',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'LensModel',
+        'title' => 'Lens Model',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:LensModel',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:LensModel',
     ),
     42037 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensSerialNumber',
-      'title' => 'Lens Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'LensSerialNumber',
+        'title' => 'Lens Serial Number',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:LensSerialNumber',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:LensSerialNumber',
     ),
     42112 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GDALMetadata',
-      'title' => 'GDAL Metadata',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GDALMetadata',
+        'title' => 'GDAL Metadata',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:GDALMetadata',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:GDALMetadata',
     ),
     42113 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GDALNoData',
-      'title' => 'GDAL No Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GDALNoData',
+        'title' => 'GDAL No Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:GDALNoData',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:GDALNoData',
     ),
     42240 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'Gamma',
-      'title' => 'Gamma',
-      'format' =>
+      0 =>
       array (
-        0 => 5,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'Gamma',
+        'title' => 'Gamma',
+        'format' =>
+        array (
+          0 => 5,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Gamma',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Gamma',
     ),
     44992 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandSoftware',
-      'title' => 'Expand Software',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandSoftware',
+        'title' => 'Expand Software',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandSoftware',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandSoftware',
     ),
     44993 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandLens',
-      'title' => 'Expand Lens',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandLens',
+        'title' => 'Expand Lens',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandLens',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandLens',
     ),
     44994 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandFilm',
-      'title' => 'Expand Film',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandFilm',
+        'title' => 'Expand Film',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandFilm',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandFilm',
     ),
     44995 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandFilterLens',
-      'title' => 'Expand Filter Lens',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandFilterLens',
+        'title' => 'Expand Filter Lens',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandFilterLens',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandFilterLens',
     ),
     44996 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandScanner',
-      'title' => 'Expand Scanner',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandScanner',
+        'title' => 'Expand Scanner',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandScanner',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandScanner',
     ),
     44997 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExpandFlashLamp',
-      'title' => 'Expand Flash Lamp',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ExpandFlashLamp',
+        'title' => 'Expand Flash Lamp',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ExpandFlashLamp',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ExpandFlashLamp',
     ),
     48129 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PixelFormat',
-      'title' => 'Pixel Format',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PixelFormat',
+        'title' => 'Pixel Format',
+        'format' =>
         array (
-          5 => 'Black & White',
-          8 => '8-bit Gray',
-          9 => '16-bit BGR555',
-          10 => '16-bit BGR565',
-          11 => '16-bit Gray',
-          12 => '24-bit BGR',
-          13 => '24-bit RGB',
-          14 => '32-bit BGR',
-          15 => '32-bit BGRA',
-          16 => '32-bit PBGRA',
-          17 => '32-bit Gray Float',
-          18 => '48-bit RGB Fixed Point',
-          19 => '32-bit BGR101010',
-          21 => '48-bit RGB',
-          22 => '64-bit RGBA',
-          23 => '64-bit PRGBA',
-          24 => '96-bit RGB Fixed Point',
-          25 => '128-bit RGBA Float',
-          26 => '128-bit PRGBA Float',
-          27 => '128-bit RGB Float',
-          28 => '32-bit CMYK',
-          29 => '64-bit RGBA Fixed Point',
-          30 => '128-bit RGBA Fixed Point',
-          31 => '64-bit CMYK',
-          32 => '24-bit 3 Channels',
-          33 => '32-bit 4 Channels',
-          34 => '40-bit 5 Channels',
-          35 => '48-bit 6 Channels',
-          36 => '56-bit 7 Channels',
-          37 => '64-bit 8 Channels',
-          38 => '48-bit 3 Channels',
-          39 => '64-bit 4 Channels',
-          40 => '80-bit 5 Channels',
-          41 => '96-bit 6 Channels',
-          42 => '112-bit 7 Channels',
-          43 => '128-bit 8 Channels',
-          44 => '40-bit CMYK Alpha',
-          45 => '80-bit CMYK Alpha',
-          46 => '32-bit 3 Channels Alpha',
-          47 => '40-bit 4 Channels Alpha',
-          48 => '48-bit 5 Channels Alpha',
-          49 => '56-bit 6 Channels Alpha',
-          50 => '64-bit 7 Channels Alpha',
-          51 => '72-bit 8 Channels Alpha',
-          52 => '64-bit 3 Channels Alpha',
-          53 => '80-bit 4 Channels Alpha',
-          54 => '96-bit 5 Channels Alpha',
-          55 => '112-bit 6 Channels Alpha',
-          56 => '128-bit 7 Channels Alpha',
-          57 => '144-bit 8 Channels Alpha',
-          58 => '64-bit RGBA Half',
-          59 => '48-bit RGB Half',
-          61 => '32-bit RGBE',
-          62 => '16-bit Gray Half',
-          63 => '32-bit Gray Fixed Point',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            5 => 'Black & White',
+            8 => '8-bit Gray',
+            9 => '16-bit BGR555',
+            10 => '16-bit BGR565',
+            11 => '16-bit Gray',
+            12 => '24-bit BGR',
+            13 => '24-bit RGB',
+            14 => '32-bit BGR',
+            15 => '32-bit BGRA',
+            16 => '32-bit PBGRA',
+            17 => '32-bit Gray Float',
+            18 => '48-bit RGB Fixed Point',
+            19 => '32-bit BGR101010',
+            21 => '48-bit RGB',
+            22 => '64-bit RGBA',
+            23 => '64-bit PRGBA',
+            24 => '96-bit RGB Fixed Point',
+            25 => '128-bit RGBA Float',
+            26 => '128-bit PRGBA Float',
+            27 => '128-bit RGB Float',
+            28 => '32-bit CMYK',
+            29 => '64-bit RGBA Fixed Point',
+            30 => '128-bit RGBA Fixed Point',
+            31 => '64-bit CMYK',
+            32 => '24-bit 3 Channels',
+            33 => '32-bit 4 Channels',
+            34 => '40-bit 5 Channels',
+            35 => '48-bit 6 Channels',
+            36 => '56-bit 7 Channels',
+            37 => '64-bit 8 Channels',
+            38 => '48-bit 3 Channels',
+            39 => '64-bit 4 Channels',
+            40 => '80-bit 5 Channels',
+            41 => '96-bit 6 Channels',
+            42 => '112-bit 7 Channels',
+            43 => '128-bit 8 Channels',
+            44 => '40-bit CMYK Alpha',
+            45 => '80-bit CMYK Alpha',
+            46 => '32-bit 3 Channels Alpha',
+            47 => '40-bit 4 Channels Alpha',
+            48 => '48-bit 5 Channels Alpha',
+            49 => '56-bit 6 Channels Alpha',
+            50 => '64-bit 7 Channels Alpha',
+            51 => '72-bit 8 Channels Alpha',
+            52 => '64-bit 3 Channels Alpha',
+            53 => '80-bit 4 Channels Alpha',
+            54 => '96-bit 5 Channels Alpha',
+            55 => '112-bit 6 Channels Alpha',
+            56 => '128-bit 7 Channels Alpha',
+            57 => '144-bit 8 Channels Alpha',
+            58 => '64-bit RGBA Half',
+            59 => '48-bit RGB Half',
+            61 => '32-bit RGBE',
+            62 => '16-bit Gray Half',
+            63 => '32-bit Gray Fixed Point',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:PixelFormat',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:PixelFormat',
     ),
     48130 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Transformation',
-      'title' => 'Transformation',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'Transformation',
+        'title' => 'Transformation',
+        'format' =>
         array (
-          0 => 'Horizontal (normal)',
-          1 => 'Mirror vertical',
-          2 => 'Mirror horizontal',
-          3 => 'Rotate 180',
-          4 => 'Rotate 90 CW',
-          5 => 'Mirror horizontal and rotate 90 CW',
-          6 => 'Mirror horizontal and rotate 270 CW',
-          7 => 'Rotate 270 CW',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Horizontal (normal)',
+            1 => 'Mirror vertical',
+            2 => 'Mirror horizontal',
+            3 => 'Rotate 180',
+            4 => 'Rotate 90 CW',
+            5 => 'Mirror horizontal and rotate 90 CW',
+            6 => 'Mirror horizontal and rotate 270 CW',
+            7 => 'Rotate 270 CW',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Transformation',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Transformation',
     ),
     48131 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Uncompressed',
-      'title' => 'Uncompressed',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'Uncompressed',
+        'title' => 'Uncompressed',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Uncompressed',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Uncompressed',
     ),
     48132 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageType',
-      'title' => 'Image Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ImageType',
+        'title' => 'Image Type',
+        'format' =>
         array (
-          1 => 'Preview',
-          2 => 'Page',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Preview',
+            2 => 'Page',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageType',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageType',
     ),
     48256 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageWidth',
-      'title' => 'Image Width',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageWidth',
+        'title' => 'Image Width',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageWidth',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageWidth',
     ),
     48257 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageHeight',
-      'title' => 'Image Height',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageHeight',
+        'title' => 'Image Height',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageHeight',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageHeight',
     ),
     48258 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WidthResolution',
-      'title' => 'Width Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WidthResolution',
+        'title' => 'Width Resolution',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WidthResolution',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WidthResolution',
     ),
     48259 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HeightResolution',
-      'title' => 'Height Resolution',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'HeightResolution',
+        'title' => 'Height Resolution',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:HeightResolution',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:HeightResolution',
     ),
     48320 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageOffset',
-      'title' => 'Image Offset',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageOffset',
+        'title' => 'Image Offset',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageOffset',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageOffset',
     ),
     48321 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageByteCount',
-      'title' => 'Image Byte Count',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ImageByteCount',
+        'title' => 'Image Byte Count',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageByteCount',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageByteCount',
     ),
     48322 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AlphaOffset',
-      'title' => 'Alpha Offset',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AlphaOffset',
+        'title' => 'Alpha Offset',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AlphaOffset',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AlphaOffset',
     ),
     48323 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AlphaByteCount',
-      'title' => 'Alpha Byte Count',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AlphaByteCount',
+        'title' => 'Alpha Byte Count',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AlphaByteCount',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AlphaByteCount',
     ),
     48324 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ImageDataDiscard',
-      'title' => 'Image Data Discard',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ImageDataDiscard',
+        'title' => 'Image Data Discard',
+        'format' =>
         array (
-          0 => 'Full Resolution',
-          1 => 'Flexbits Discarded',
-          2 => 'HighPass Frequency Data Discarded',
-          3 => 'Highpass and LowPass Frequency Data Discarded',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Full Resolution',
+            1 => 'Flexbits Discarded',
+            2 => 'HighPass Frequency Data Discarded',
+            3 => 'Highpass and LowPass Frequency Data Discarded',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:ImageDataDiscard',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:ImageDataDiscard',
     ),
     48325 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AlphaDataDiscard',
-      'title' => 'Alpha Data Discard',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AlphaDataDiscard',
+        'title' => 'Alpha Data Discard',
+        'format' =>
         array (
-          0 => 'Full Resolution',
-          1 => 'Flexbits Discarded',
-          2 => 'HighPass Frequency Data Discarded',
-          3 => 'Highpass and LowPass Frequency Data Discarded',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Full Resolution',
+            1 => 'Flexbits Discarded',
+            2 => 'HighPass Frequency Data Discarded',
+            3 => 'Highpass and LowPass Frequency Data Discarded',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AlphaDataDiscard',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AlphaDataDiscard',
     ),
     50215 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OceScanjobDesc',
-      'title' => 'Oce Scanjob Desc',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OceScanjobDesc',
+        'title' => 'Oce Scanjob Desc',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OceScanjobDesc',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OceScanjobDesc',
     ),
     50216 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OceApplicationSelector',
-      'title' => 'Oce Application Selector',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OceApplicationSelector',
+        'title' => 'Oce Application Selector',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OceApplicationSelector',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OceApplicationSelector',
     ),
     50217 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OceIDNumber',
-      'title' => 'Oce ID Number',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OceIDNumber',
+        'title' => 'Oce ID Number',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OceIDNumber',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OceIDNumber',
     ),
     50218 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OceImageLogic',
-      'title' => 'Oce Image Logic',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OceImageLogic',
+        'title' => 'Oce Image Logic',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OceImageLogic',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OceImageLogic',
     ),
     50255 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Annotations',
-      'title' => 'Annotations',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Annotations',
+        'title' => 'Annotations',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Annotations',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Annotations',
     ),
     50547 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OriginalFileName',
-      'title' => 'Original File Name',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OriginalFileName',
+        'title' => 'Original File Name',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OriginalFileName',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OriginalFileName',
     ),
     50560 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'USPTOOriginalContentType',
-      'title' => 'USPTO Original Content Type',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'USPTOOriginalContentType',
+        'title' => 'USPTO Original Content Type',
+        'format' =>
         array (
-          0 => 'Text or Drawing',
-          1 => 'Grayscale',
-          2 => 'Color',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Text or Drawing',
+            1 => 'Grayscale',
+            2 => 'Color',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:USPTOOriginalContentType',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:USPTOOriginalContentType',
     ),
     50656 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CR2CFAPattern',
-      'title' => 'CR2 CFA Pattern',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CR2CFAPattern',
+        'title' => 'CR2 CFA Pattern',
+        'format' =>
         array (
-          '0 1 1 2' => '[Red,Green][Green,Blue]',
-          '1 0 2 1' => '[Green,Red][Blue,Green]',
-          '1 2 0 1' => '[Green,Blue][Red,Green]',
-          '2 1 1 0' => '[Blue,Green][Green,Red]',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            '0 1 1 2' => '[Red,Green][Green,Blue]',
+            '1 0 2 1' => '[Green,Red][Blue,Green]',
+            '1 2 0 1' => '[Green,Blue][Red,Green]',
+            '2 1 1 0' => '[Blue,Green][Green,Red]',
+          ),
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:CR2CFAPattern',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:CR2CFAPattern',
     ),
     50752 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawImageSegmentation',
-      'title' => 'Raw Image Segmentation',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'RawImageSegmentation',
+        'title' => 'Raw Image Segmentation',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:RawImageSegmentation',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:RawImageSegmentation',
     ),
     50784 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AliasLayerMetadata',
-      'title' => 'Alias Layer Metadata',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AliasLayerMetadata',
+        'title' => 'Alias Layer Metadata',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:AliasLayerMetadata',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:AliasLayerMetadata',
     ),
     50974 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SubTileBlockSize',
-      'title' => 'Sub Tile Block Size',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SubTileBlockSize',
+        'title' => 'Sub Tile Block Size',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SubTileBlockSize',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SubTileBlockSize',
     ),
     50975 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RowInterleaveFactor',
-      'title' => 'Row Interleave Factor',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'RowInterleaveFactor',
+        'title' => 'Row Interleave Factor',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:RowInterleaveFactor',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:RowInterleaveFactor',
     ),
     59932 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Padding',
-      'title' => 'Padding',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Padding',
+        'title' => 'Padding',
+        'format' =>
+        array (
+          0 => 7,
+        ),
       ),
     ),
     59933 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OffsetSchema',
-      'title' => 'Offset Schema',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'OffsetSchema',
+        'title' => 'Offset Schema',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OffsetSchema',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OffsetSchema',
     ),
     65000 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OwnerName',
-      'title' => 'Owner Name',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'OwnerName',
+        'title' => 'Owner Name',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:OwnerName',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:OwnerName',
     ),
     65001 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SerialNumber',
-      'title' => 'Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:SerialNumber',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:SerialNumber',
     ),
     65002 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Lens',
-      'title' => 'Lens',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Lens',
+        'title' => 'Lens',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Lens',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Lens',
     ),
     65100 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawFile',
-      'title' => 'Raw File',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'RawFile',
+        'title' => 'Raw File',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:RawFile',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:RawFile',
     ),
     65101 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Converter',
-      'title' => 'Converter',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Converter',
+        'title' => 'Converter',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Converter',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Converter',
     ),
     65102 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteBalance',
-      'title' => 'White Balance',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'WhiteBalance',
+        'title' => 'White Balance',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:WhiteBalance',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:WhiteBalance',
     ),
     65105 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Exposure',
-      'title' => 'Exposure',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Exposure',
+        'title' => 'Exposure',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Exposure',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Exposure',
     ),
     65106 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Shadows',
-      'title' => 'Shadows',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Shadows',
+        'title' => 'Shadows',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Shadows',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Shadows',
     ),
     65107 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Brightness',
-      'title' => 'Brightness',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Brightness',
+        'title' => 'Brightness',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Brightness',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Brightness',
     ),
     65108 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Contrast',
-      'title' => 'Contrast',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Contrast',
+        'title' => 'Contrast',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Contrast',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Contrast',
     ),
     65109 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Saturation',
-      'title' => 'Saturation',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Saturation',
+        'title' => 'Saturation',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Saturation',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Saturation',
     ),
     65110 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Sharpness',
-      'title' => 'Sharpness',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Sharpness',
+        'title' => 'Sharpness',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Sharpness',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Sharpness',
     ),
     65111 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Smoothness',
-      'title' => 'Smoothness',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'Smoothness',
+        'title' => 'Smoothness',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:Smoothness',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:Smoothness',
     ),
     65112 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MoireFilter',
-      'title' => 'Moire Filter',
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'MoireFilter',
+        'title' => 'Moire Filter',
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'ExifIFD:MoireFilter',
       ),
-      'exiftoolDOMNode' => 'ExifIFD:MoireFilter',
     ),
   ),
 );

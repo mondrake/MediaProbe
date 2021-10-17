@@ -72,58 +72,73 @@ class WhiteSample extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteSampleWidth',
-      'title' => 'White Sample Width',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WhiteSampleWidth',
+        'title' => 'White Sample Width',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:WhiteSampleWidth',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:WhiteSampleWidth',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteSampleHeight',
-      'title' => 'White Sample Height',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WhiteSampleHeight',
+        'title' => 'White Sample Height',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:WhiteSampleHeight',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:WhiteSampleHeight',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteSampleLeftBorder',
-      'title' => 'White Sample Left Border',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WhiteSampleLeftBorder',
+        'title' => 'White Sample Left Border',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:WhiteSampleLeftBorder',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:WhiteSampleLeftBorder',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteSampleTopBorder',
-      'title' => 'White Sample Top Border',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WhiteSampleTopBorder',
+        'title' => 'White Sample Top Border',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:WhiteSampleTopBorder',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:WhiteSampleTopBorder',
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteSampleBits',
-      'title' => 'White Sample Bits',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WhiteSampleBits',
+        'title' => 'White Sample Bits',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:WhiteSampleBits',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:WhiteSampleBits',
     ),
   ),
 );

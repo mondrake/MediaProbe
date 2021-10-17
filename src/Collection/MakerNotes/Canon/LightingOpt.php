@@ -73,103 +73,118 @@ class LightingOpt extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PeripheralIlluminationCorr',
-      'title' => 'Peripheral Illumination Corr',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PeripheralIlluminationCorr',
+        'title' => 'Peripheral Illumination Corr',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:PeripheralIlluminationCorr',
       ),
-      'exiftoolDOMNode' => 'Canon:PeripheralIlluminationCorr',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AutoLightingOptimizer',
-      'title' => 'Auto Lighting Optimizer',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AutoLightingOptimizer',
+        'title' => 'Auto Lighting Optimizer',
+        'format' =>
         array (
-          0 => 'Standard',
-          1 => 'Low',
-          2 => 'Strong',
-          3 => 'Off',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Standard',
+            1 => 'Low',
+            2 => 'Strong',
+            3 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:AutoLightingOptimizer',
       ),
-      'exiftoolDOMNode' => 'Canon:AutoLightingOptimizer',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HighlightTonePriority',
-      'title' => 'Highlight Tone Priority',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HighlightTonePriority',
+        'title' => 'Highlight Tone Priority',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:HighlightTonePriority',
       ),
-      'exiftoolDOMNode' => 'Canon:HighlightTonePriority',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LongExposureNoiseReduction',
-      'title' => 'Long Exposure Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LongExposureNoiseReduction',
+        'title' => 'Long Exposure Noise Reduction',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'Auto',
-          2 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'Auto',
+            2 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:LongExposureNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'Canon:LongExposureNoiseReduction',
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HighISONoiseReduction',
-      'title' => 'High ISO Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HighISONoiseReduction',
+        'title' => 'High ISO Noise Reduction',
+        'format' =>
         array (
-          0 => 'Standard',
-          1 => 'Low',
-          2 => 'Strong',
-          3 => 'Off',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Standard',
+            1 => 'Low',
+            2 => 'Strong',
+            3 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:HighISONoiseReduction',
       ),
-      'exiftoolDOMNode' => 'Canon:HighISONoiseReduction',
     ),
   ),
 );

@@ -152,183 +152,228 @@ class ColorCalib extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration01',
-      'title' => 'Camera Color Calibration 01',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration01',
+        'title' => 'Camera Color Calibration 01',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration01',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration01',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration02',
-      'title' => 'Camera Color Calibration 02',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration02',
+        'title' => 'Camera Color Calibration 02',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration02',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration02',
     ),
     8 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration03',
-      'title' => 'Camera Color Calibration 03',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration03',
+        'title' => 'Camera Color Calibration 03',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration03',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration03',
     ),
     12 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration04',
-      'title' => 'Camera Color Calibration 04',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration04',
+        'title' => 'Camera Color Calibration 04',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration04',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration04',
     ),
     16 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration05',
-      'title' => 'Camera Color Calibration 05',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration05',
+        'title' => 'Camera Color Calibration 05',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration05',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration05',
     ),
     20 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration06',
-      'title' => 'Camera Color Calibration 06',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration06',
+        'title' => 'Camera Color Calibration 06',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration06',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration06',
     ),
     24 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration07',
-      'title' => 'Camera Color Calibration 07',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration07',
+        'title' => 'Camera Color Calibration 07',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration07',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration07',
     ),
     28 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration08',
-      'title' => 'Camera Color Calibration 08',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration08',
+        'title' => 'Camera Color Calibration 08',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration08',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration08',
     ),
     32 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration09',
-      'title' => 'Camera Color Calibration 09',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration09',
+        'title' => 'Camera Color Calibration 09',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration09',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration09',
     ),
     36 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration10',
-      'title' => 'Camera Color Calibration 10',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration10',
+        'title' => 'Camera Color Calibration 10',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration10',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration10',
     ),
     40 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration11',
-      'title' => 'Camera Color Calibration 11',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration11',
+        'title' => 'Camera Color Calibration 11',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration11',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration11',
     ),
     44 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration12',
-      'title' => 'Camera Color Calibration 12',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration12',
+        'title' => 'Camera Color Calibration 12',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration12',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration12',
     ),
     48 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration13',
-      'title' => 'Camera Color Calibration 13',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration13',
+        'title' => 'Camera Color Calibration 13',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration13',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration13',
     ),
     52 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration14',
-      'title' => 'Camera Color Calibration 14',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration14',
+        'title' => 'Camera Color Calibration 14',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration14',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration14',
     ),
     56 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CameraColorCalibration15',
-      'title' => 'Camera Color Calibration 15',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'CameraColorCalibration15',
+        'title' => 'Camera Color Calibration 15',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraColorCalibration15',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraColorCalibration15',
     ),
   ),
 );

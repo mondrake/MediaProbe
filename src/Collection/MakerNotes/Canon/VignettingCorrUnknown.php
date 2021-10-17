@@ -33,12 +33,15 @@ class VignettingCorrUnknown extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'VignettingCorrVersion',
-      'title' => 'Vignetting Corr Version',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
+        'collection' => 'Tag',
+        'name' => 'VignettingCorrVersion',
+        'title' => 'Vignetting Corr Version',
+        'format' =>
+        array (
+          0 => 1,
+        ),
       ),
     ),
   ),

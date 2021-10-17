@@ -56,36 +56,45 @@ class ExposureInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FNumber',
-      'title' => 'F Number',
-      'format' =>
+      0 =>
       array (
-        0 => 1001,
+        'collection' => 'Tag',
+        'name' => 'FNumber',
+        'title' => 'F Number',
+        'format' =>
+        array (
+          0 => 1001,
+        ),
+        'exiftoolDOMNode' => 'Canon:FNumber',
       ),
-      'exiftoolDOMNode' => 'Canon:FNumber',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExposureTime',
-      'title' => 'Exposure Time',
-      'format' =>
+      0 =>
       array (
-        0 => 1001,
+        'collection' => 'Tag',
+        'name' => 'ExposureTime',
+        'title' => 'Exposure Time',
+        'format' =>
+        array (
+          0 => 1001,
+        ),
+        'exiftoolDOMNode' => 'Canon:ExposureTime',
       ),
-      'exiftoolDOMNode' => 'Canon:ExposureTime',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ISO',
-      'title' => 'ISO',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'ISO',
+        'title' => 'ISO',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:ISO',
       ),
-      'exiftoolDOMNode' => 'Canon:ISO',
     ),
   ),
 );

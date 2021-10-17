@@ -42,46 +42,55 @@ class VignettingCorr2 extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'RawData',
-      'name' => 'indexSize',
+      0 =>
+      array (
+        'collection' => 'RawData',
+        'name' => 'indexSize',
+      ),
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PeripheralLightingSetting',
-      'title' => 'Peripheral Lighting Setting',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PeripheralLightingSetting',
+        'title' => 'Peripheral Lighting Setting',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:PeripheralLightingSetting',
       ),
-      'exiftoolDOMNode' => 'Canon:PeripheralLightingSetting',
     ),
     6 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChromaticAberrationSetting',
-      'title' => 'Chromatic Aberration Setting',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ChromaticAberrationSetting',
+        'title' => 'Chromatic Aberration Setting',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ChromaticAberrationSetting',
       ),
-      'exiftoolDOMNode' => 'Canon:ChromaticAberrationSetting',
     ),
   ),
   'itemsByExiftoolDOMNode' =>

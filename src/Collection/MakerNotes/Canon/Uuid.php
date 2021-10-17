@@ -45,25 +45,31 @@ class Uuid extends Collection {
   array (
     'CNCV' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CompressorVersion',
-      'title' => 'Compressor Version',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CompressorVersion',
+        'title' => 'Compressor Version',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'Canon:CompressorVersion',
       ),
-      'exiftoolDOMNode' => 'Canon:CompressorVersion',
     ),
     'THMB' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ThumbnailImage',
-      'title' => 'Thumbnail Image',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailImage',
+        'title' => 'Thumbnail Image',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'Canon:ThumbnailImage',
       ),
-      'exiftoolDOMNode' => 'Canon:ThumbnailImage',
     ),
   ),
 );

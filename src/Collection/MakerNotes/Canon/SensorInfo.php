@@ -74,122 +74,155 @@ class SensorInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'RawData',
-      'name' => 'indexSize',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'RawData',
+        'name' => 'indexSize',
+        'format' =>
+        array (
+          0 => 8,
+        ),
       ),
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorWidth',
-      'title' => 'Sensor Width',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorWidth',
+        'title' => 'Sensor Width',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorWidth',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorWidth',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorHeight',
-      'title' => 'Sensor Height',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorHeight',
+        'title' => 'Sensor Height',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorHeight',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorHeight',
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorLeftBorder',
-      'title' => 'Sensor Left Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorLeftBorder',
+        'title' => 'Sensor Left Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorLeftBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorLeftBorder',
     ),
     6 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorTopBorder',
-      'title' => 'Sensor Top Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorTopBorder',
+        'title' => 'Sensor Top Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorTopBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorTopBorder',
     ),
     7 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorRightBorder',
-      'title' => 'Sensor Right Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorRightBorder',
+        'title' => 'Sensor Right Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorRightBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorRightBorder',
     ),
     8 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SensorBottomBorder',
-      'title' => 'Sensor Bottom Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SensorBottomBorder',
+        'title' => 'Sensor Bottom Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:SensorBottomBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:SensorBottomBorder',
     ),
     9 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlackMaskLeftBorder',
-      'title' => 'Black Mask Left Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'BlackMaskLeftBorder',
+        'title' => 'Black Mask Left Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:BlackMaskLeftBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:BlackMaskLeftBorder',
     ),
     10 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlackMaskTopBorder',
-      'title' => 'Black Mask Top Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'BlackMaskTopBorder',
+        'title' => 'Black Mask Top Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:BlackMaskTopBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:BlackMaskTopBorder',
     ),
     11 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlackMaskRightBorder',
-      'title' => 'Black Mask Right Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'BlackMaskRightBorder',
+        'title' => 'Black Mask Right Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:BlackMaskRightBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:BlackMaskRightBorder',
     ),
     12 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlackMaskBottomBorder',
-      'title' => 'Black Mask Bottom Border',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'BlackMaskBottomBorder',
+        'title' => 'Black Mask Bottom Border',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:BlackMaskBottomBorder',
       ),
-      'exiftoolDOMNode' => 'Canon:BlackMaskBottomBorder',
     ),
   ),
   'itemsByExiftoolDOMNode' =>

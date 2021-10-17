@@ -50,75 +50,93 @@ class CameraInfoUnknown32 extends Collection {
   array (
     -3 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
     71 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
     83 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
     91 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
     92 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
     100 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
-      'collection' => 'Tag',
-      'name' => 'CameraTemperature',
-      'title' => 'Camera Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\CameraInfo\\CameraTemperature',
+        'collection' => 'Tag',
+        'name' => 'CameraTemperature',
+        'title' => 'Camera Temperature',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:CameraTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:CameraTemperature',
     ),
   ),
 );

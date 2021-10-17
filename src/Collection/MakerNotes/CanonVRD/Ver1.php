@@ -376,616 +376,745 @@ class Ver1 extends Collection {
   array (
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'VRDVersion',
-      'title' => 'VRD Version',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'VRDVersion',
+        'title' => 'VRD Version',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:VRDVersion',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:VRDVersion',
     ),
     6 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjRGGBLevels',
-      'title' => 'WB Adj RGGB Levels',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WBAdjRGGBLevels',
+        'title' => 'WB Adj RGGB Levels',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjRGGBLevels',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjRGGBLevels',
     ),
     24 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteBalanceAdj',
-      'title' => 'White Balance Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WhiteBalanceAdj',
+        'title' => 'White Balance Adj',
+        'format' =>
         array (
-          0 => 'Auto',
-          1 => 'Daylight',
-          2 => 'Cloudy',
-          3 => 'Tungsten',
-          4 => 'Fluorescent',
-          5 => 'Flash',
-          8 => 'Shade',
-          9 => 'Kelvin',
-          30 => 'Manual (Click)',
-          31 => 'Shot Settings',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Auto',
+            1 => 'Daylight',
+            2 => 'Cloudy',
+            3 => 'Tungsten',
+            4 => 'Fluorescent',
+            5 => 'Flash',
+            8 => 'Shade',
+            9 => 'Kelvin',
+            30 => 'Manual (Click)',
+            31 => 'Shot Settings',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WhiteBalanceAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WhiteBalanceAdj',
     ),
     26 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjColorTemp',
-      'title' => 'WB Adj Color Temp',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WBAdjColorTemp',
+        'title' => 'WB Adj Color Temp',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjColorTemp',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjColorTemp',
     ),
     36 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBFineTuneActive',
-      'title' => 'WB Fine Tune Active',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WBFineTuneActive',
+        'title' => 'WB Fine Tune Active',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBFineTuneActive',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBFineTuneActive',
     ),
     40 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBFineTuneSaturation',
-      'title' => 'WB Fine Tune Saturation',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WBFineTuneSaturation',
+        'title' => 'WB Fine Tune Saturation',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBFineTuneSaturation',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBFineTuneSaturation',
     ),
     44 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBFineTuneTone',
-      'title' => 'WB Fine Tune Tone',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'WBFineTuneTone',
+        'title' => 'WB Fine Tune Tone',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBFineTuneTone',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBFineTuneTone',
     ),
     46 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawColorAdj',
-      'title' => 'Raw Color Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RawColorAdj',
+        'title' => 'Raw Color Adj',
+        'format' =>
         array (
-          0 => 'Shot Settings',
-          1 => 'Faithful',
-          2 => 'Custom',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Shot Settings',
+            1 => 'Faithful',
+            2 => 'Custom',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RawColorAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RawColorAdj',
     ),
     48 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawCustomSaturation',
-      'title' => 'Raw Custom Saturation',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'RawCustomSaturation',
+        'title' => 'Raw Custom Saturation',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RawCustomSaturation',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RawCustomSaturation',
     ),
     52 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawCustomTone',
-      'title' => 'Raw Custom Tone',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'RawCustomTone',
+        'title' => 'Raw Custom Tone',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RawCustomTone',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RawCustomTone',
     ),
     56 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawBrightnessAdj',
-      'title' => 'Raw Brightness Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'RawBrightnessAdj',
+        'title' => 'Raw Brightness Adj',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RawBrightnessAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RawBrightnessAdj',
     ),
     60 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveProperty',
-      'title' => 'Tone Curve Property',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToneCurveProperty',
+        'title' => 'Tone Curve Property',
+        'format' =>
         array (
-          0 => 'Shot Settings',
-          1 => 'Linear',
-          2 => 'Custom 1',
-          3 => 'Custom 2',
-          4 => 'Custom 3',
-          5 => 'Custom 4',
-          6 => 'Custom 5',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Shot Settings',
+            1 => 'Linear',
+            2 => 'Custom 1',
+            3 => 'Custom 2',
+            4 => 'Custom 3',
+            5 => 'Custom 4',
+            6 => 'Custom 5',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveProperty',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveProperty',
     ),
     122 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DynamicRangeMin',
-      'title' => 'Dynamic Range Min',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'DynamicRangeMin',
+        'title' => 'Dynamic Range Min',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DynamicRangeMin',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DynamicRangeMin',
     ),
     124 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DynamicRangeMax',
-      'title' => 'Dynamic Range Max',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'DynamicRangeMax',
+        'title' => 'Dynamic Range Max',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DynamicRangeMax',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DynamicRangeMax',
     ),
     272 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveActive',
-      'title' => 'Tone Curve Active',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToneCurveActive',
+        'title' => 'Tone Curve Active',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveActive',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveActive',
     ),
     275 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveMode',
-      'title' => 'Tone Curve Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToneCurveMode',
+        'title' => 'Tone Curve Mode',
+        'format' =>
         array (
-          0 => 'RGB',
-          1 => 'Luminance',
+          0 => 1,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'RGB',
+            1 => 'Luminance',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveMode',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveMode',
     ),
     276 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BrightnessAdj',
-      'title' => 'Brightness Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 6,
+        'collection' => 'Tag',
+        'name' => 'BrightnessAdj',
+        'title' => 'Brightness Adj',
+        'format' =>
+        array (
+          0 => 6,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:BrightnessAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:BrightnessAdj',
     ),
     277 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastAdj',
-      'title' => 'Contrast Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 6,
+        'collection' => 'Tag',
+        'name' => 'ContrastAdj',
+        'title' => 'Contrast Adj',
+        'format' =>
+        array (
+          0 => 6,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ContrastAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ContrastAdj',
     ),
     278 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationAdj',
-      'title' => 'Saturation Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'SaturationAdj',
+        'title' => 'Saturation Adj',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SaturationAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SaturationAdj',
     ),
     286 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneAdj',
-      'title' => 'Color Tone Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'ColorToneAdj',
+        'title' => 'Color Tone Adj',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorToneAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorToneAdj',
     ),
     294 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LuminanceCurvePoints',
-      'title' => 'Luminance Curve Points',
-      'components' => 21,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'LuminanceCurvePoints',
+        'title' => 'Luminance Curve Points',
+        'components' => 21,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LuminanceCurvePoints',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:LuminanceCurvePoints',
     ),
     336 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LuminanceCurveLimits',
-      'title' => 'Luminance Curve Limits',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'LuminanceCurveLimits',
+        'title' => 'Luminance Curve Limits',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LuminanceCurveLimits',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:LuminanceCurveLimits',
     ),
     345 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveInterpolation',
-      'title' => 'Tone Curve Interpolation',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToneCurveInterpolation',
+        'title' => 'Tone Curve Interpolation',
+        'format' =>
         array (
-          0 => 'Curve',
-          1 => 'Straight',
+          0 => 1,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Curve',
+            1 => 'Straight',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveInterpolation',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveInterpolation',
     ),
     352 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RedCurvePoints',
-      'title' => 'Red Curve Points',
-      'components' => 21,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RedCurvePoints',
+        'title' => 'Red Curve Points',
+        'components' => 21,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RedCurvePoints',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RedCurvePoints',
     ),
     394 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RedCurveLimits',
-      'title' => 'Red Curve Limits',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RedCurveLimits',
+        'title' => 'Red Curve Limits',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RedCurveLimits',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RedCurveLimits',
     ),
     410 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GreenCurvePoints',
-      'title' => 'Green Curve Points',
-      'components' => 21,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'GreenCurvePoints',
+        'title' => 'Green Curve Points',
+        'components' => 21,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:GreenCurvePoints',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:GreenCurvePoints',
     ),
     452 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GreenCurveLimits',
-      'title' => 'Green Curve Limits',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'GreenCurveLimits',
+        'title' => 'Green Curve Limits',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:GreenCurveLimits',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:GreenCurveLimits',
     ),
     468 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlueCurvePoints',
-      'title' => 'Blue Curve Points',
-      'components' => 21,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'BlueCurvePoints',
+        'title' => 'Blue Curve Points',
+        'components' => 21,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:BlueCurvePoints',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:BlueCurvePoints',
     ),
     510 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlueCurveLimits',
-      'title' => 'Blue Curve Limits',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'BlueCurveLimits',
+        'title' => 'Blue Curve Limits',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:BlueCurveLimits',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:BlueCurveLimits',
     ),
     526 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RGBCurvePoints',
-      'title' => 'RGB Curve Points',
-      'components' => 21,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RGBCurvePoints',
+        'title' => 'RGB Curve Points',
+        'components' => 21,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RGBCurvePoints',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RGBCurvePoints',
     ),
     568 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RGBCurveLimits',
-      'title' => 'RGB Curve Limits',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RGBCurveLimits',
+        'title' => 'RGB Curve Limits',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RGBCurveLimits',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RGBCurveLimits',
     ),
     580 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropActive',
-      'title' => 'Crop Active',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CropActive',
+        'title' => 'Crop Active',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropActive',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropActive',
     ),
     582 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropLeft',
-      'title' => 'Crop Left',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'CropLeft',
+        'title' => 'Crop Left',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropLeft',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropLeft',
     ),
     584 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropTop',
-      'title' => 'Crop Top',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'CropTop',
+        'title' => 'Crop Top',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropTop',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropTop',
     ),
     586 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropWidth',
-      'title' => 'Crop Width',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'CropWidth',
+        'title' => 'Crop Width',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropWidth',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropWidth',
     ),
     588 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropHeight',
-      'title' => 'Crop Height',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'CropHeight',
+        'title' => 'Crop Height',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropHeight',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropHeight',
     ),
     602 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessAdj',
-      'title' => 'Sharpness Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'SharpnessAdj',
+        'title' => 'Sharpness Adj',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SharpnessAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SharpnessAdj',
     ),
     608 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropAspectRatio',
-      'title' => 'Crop Aspect Ratio',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CropAspectRatio',
+        'title' => 'Crop Aspect Ratio',
+        'format' =>
         array (
-          0 => 'Free',
-          1 => '3:2',
-          2 => '2:3',
-          3 => '4:3',
-          4 => '3:4',
-          5 => 'A-size Landscape',
-          6 => 'A-size Portrait',
-          7 => 'Letter-size Landscape',
-          8 => 'Letter-size Portrait',
-          9 => '4:5',
-          10 => '5:4',
-          11 => '1:1',
-          12 => 'Circle',
-          65535 => 'Custom',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Free',
+            1 => '3:2',
+            2 => '2:3',
+            3 => '4:3',
+            4 => '3:4',
+            5 => 'A-size Landscape',
+            6 => 'A-size Portrait',
+            7 => 'Letter-size Landscape',
+            8 => 'Letter-size Portrait',
+            9 => '4:5',
+            10 => '5:4',
+            11 => '1:1',
+            12 => 'Circle',
+            65535 => 'Custom',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropAspectRatio',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropAspectRatio',
     ),
     610 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ConstrainedCropWidth',
-      'title' => 'Constrained Crop Width',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'ConstrainedCropWidth',
+        'title' => 'Constrained Crop Width',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ConstrainedCropWidth',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ConstrainedCropWidth',
     ),
     614 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ConstrainedCropHeight',
-      'title' => 'Constrained Crop Height',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'ConstrainedCropHeight',
+        'title' => 'Constrained Crop Height',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ConstrainedCropHeight',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ConstrainedCropHeight',
     ),
     618 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CheckMark',
-      'title' => 'Check Mark',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CheckMark',
+        'title' => 'Check Mark',
+        'format' =>
         array (
-          0 => 'Clear',
-          1 => '1',
-          2 => '2',
-          3 => '3',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Clear',
+            1 => '1',
+            2 => '2',
+            3 => '3',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CheckMark',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CheckMark',
     ),
     622 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Rotation',
-      'title' => 'Rotation',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'Rotation',
+        'title' => 'Rotation',
+        'format' =>
         array (
-          0 => '0',
-          1 => '90',
-          2 => '180',
-          3 => '270',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '0',
+            1 => '90',
+            2 => '180',
+            3 => '270',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:Rotation',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:Rotation',
     ),
     624 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WorkColorSpace',
-      'title' => 'Work Color Space',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WorkColorSpace',
+        'title' => 'Work Color Space',
+        'format' =>
         array (
-          0 => 'sRGB',
-          1 => 'Adobe RGB',
-          2 => 'Wide Gamut RGB',
-          3 => 'Apple RGB',
-          4 => 'ColorMatch RGB',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'sRGB',
+            1 => 'Adobe RGB',
+            2 => 'Wide Gamut RGB',
+            3 => 'Apple RGB',
+            4 => 'ColorMatch RGB',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WorkColorSpace',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WorkColorSpace',
     ),
   ),
 );

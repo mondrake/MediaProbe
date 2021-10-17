@@ -40,14 +40,17 @@ class FaceDetect3 extends Collection {
   array (
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FacesDetected',
-      'title' => 'Faces Detected',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'FacesDetected',
+        'title' => 'Faces Detected',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:FacesDetected',
       ),
-      'exiftoolDOMNode' => 'Canon:FacesDetected',
     ),
   ),
 );

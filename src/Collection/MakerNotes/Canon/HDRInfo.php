@@ -48,45 +48,51 @@ class HDRInfo extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HDR',
-      'title' => 'HDR',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HDR',
+        'title' => 'HDR',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'Auto',
-          2 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'Auto',
+            2 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:HDR',
       ),
-      'exiftoolDOMNode' => 'Canon:HDR',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HDREffect',
-      'title' => 'HDR Effect',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HDREffect',
+        'title' => 'HDR Effect',
+        'format' =>
         array (
-          0 => 'Natural',
-          1 => 'Art (standard)',
-          2 => 'Art (vivid)',
-          3 => 'Art (bold)',
-          4 => 'Art (embossed)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Natural',
+            1 => 'Art (standard)',
+            2 => 'Art (vivid)',
+            3 => 'Art (bold)',
+            4 => 'Art (embossed)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:HDREffect',
       ),
-      'exiftoolDOMNode' => 'Canon:HDREffect',
     ),
   ),
 );

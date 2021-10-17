@@ -48,25 +48,31 @@ class FlashInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashGuideNumber',
-      'title' => 'Flash Guide Number',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'FlashGuideNumber',
+        'title' => 'Flash Guide Number',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:FlashGuideNumber',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:FlashGuideNumber',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashThreshold',
-      'title' => 'Flash Threshold',
-      'format' =>
+      0 =>
       array (
-        0 => 11,
+        'collection' => 'Tag',
+        'name' => 'FlashThreshold',
+        'title' => 'Flash Threshold',
+        'format' =>
+        array (
+          0 => 11,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:FlashThreshold',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:FlashThreshold',
     ),
   ),
 );

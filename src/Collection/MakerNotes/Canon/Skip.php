@@ -37,14 +37,17 @@ class Skip extends Collection {
   array (
     'CNDB' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Unknown_CNDB',
-      'title' => 'Unknown CNDB',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Unknown_CNDB',
+        'title' => 'Unknown CNDB',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'Canon:Unknown_CNDB',
       ),
-      'exiftoolDOMNode' => 'Canon:Unknown_CNDB',
     ),
   ),
 );

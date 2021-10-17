@@ -64,66 +64,78 @@ class RawJpgInfo extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawJpgQuality',
-      'title' => 'Raw Jpg Quality',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RawJpgQuality',
+        'title' => 'Raw Jpg Quality',
+        'format' =>
         array (
-          1 => 'Economy',
-          2 => 'Normal',
-          3 => 'Fine',
-          5 => 'Superfine',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Economy',
+            2 => 'Normal',
+            3 => 'Fine',
+            5 => 'Superfine',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:RawJpgQuality',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:RawJpgQuality',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawJpgSize',
-      'title' => 'Raw Jpg Size',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RawJpgSize',
+        'title' => 'Raw Jpg Size',
+        'format' =>
         array (
-          0 => 'Large',
-          1 => 'Medium',
-          2 => 'Small',
+          0 => 3,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Large',
+            1 => 'Medium',
+            2 => 'Small',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:RawJpgSize',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:RawJpgSize',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawJpgWidth',
-      'title' => 'Raw Jpg Width',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RawJpgWidth',
+        'title' => 'Raw Jpg Width',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:RawJpgWidth',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:RawJpgWidth',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawJpgHeight',
-      'title' => 'Raw Jpg Height',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'RawJpgHeight',
+        'title' => 'Raw Jpg Height',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:RawJpgHeight',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:RawJpgHeight',
     ),
   ),
 );

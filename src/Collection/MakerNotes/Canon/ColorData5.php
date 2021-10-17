@@ -50,46 +50,55 @@ class ColorData5 extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorDataVersion',
-      'title' => 'Color Data Version',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorDataVersion',
+        'title' => 'Color Data Version',
+        'format' =>
         array (
-          -4 => '-4 (M100/M5/M6)',
-          -3 => '-3 (M10/M3)',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -4 => '-4 (M100/M5/M6)',
+            -3 => '-3 (M10/M3)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorDataVersion',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorDataVersion',
     ),
     264 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PerChannelBlackLevel',
-      'title' => 'Per Channel Black Level',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'PerChannelBlackLevel',
+        'title' => 'Per Channel Black Level',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
       ),
-      'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
     ),
     333 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PerChannelBlackLevel',
-      'title' => 'Per Channel Black Level',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'PerChannelBlackLevel',
+        'title' => 'Per Channel Black Level',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
       ),
-      'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
     ),
   ),
 );

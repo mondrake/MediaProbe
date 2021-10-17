@@ -40,14 +40,17 @@ class Main extends Collection {
   array (
     '4294902006' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'XMP',
-      'title' => 'XMP',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'XMP',
+        'title' => 'XMP',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:XMP',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:XMP',
     ),
   ),
 );

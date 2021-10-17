@@ -48,25 +48,31 @@ class FaceDetect2 extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FaceWidth',
-      'title' => 'Face Width',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
+        'collection' => 'Tag',
+        'name' => 'FaceWidth',
+        'title' => 'Face Width',
+        'format' =>
+        array (
+          0 => 1,
+        ),
+        'exiftoolDOMNode' => 'Canon:FaceWidth',
       ),
-      'exiftoolDOMNode' => 'Canon:FaceWidth',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FacesDetected',
-      'title' => 'Faces Detected',
-      'format' =>
+      0 =>
       array (
-        0 => 1,
+        'collection' => 'Tag',
+        'name' => 'FacesDetected',
+        'title' => 'Faces Detected',
+        'format' =>
+        array (
+          0 => 1,
+        ),
+        'exiftoolDOMNode' => 'Canon:FacesDetected',
       ),
-      'exiftoolDOMNode' => 'Canon:FacesDetected',
     ),
   ),
 );

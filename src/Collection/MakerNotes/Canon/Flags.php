@@ -40,14 +40,17 @@ class Flags extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ModifiedParamFlag',
-      'title' => 'Modified Param Flag',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ModifiedParamFlag',
+        'title' => 'Modified Param Flag',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ModifiedParamFlag',
       ),
-      'exiftoolDOMNode' => 'Canon:ModifiedParamFlag',
     ),
   ),
 );

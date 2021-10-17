@@ -42,45 +42,54 @@ class Panorama extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'RawData',
-      'name' => 'indexSize',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'RawData',
+        'name' => 'indexSize',
+        'format' =>
+        array (
+          0 => 8,
+        ),
       ),
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PanoramaFrameNumber',
-      'title' => 'Panorama Frame Number',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'PanoramaFrameNumber',
+        'title' => 'Panorama Frame Number',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:PanoramaFrameNumber',
       ),
-      'exiftoolDOMNode' => 'Canon:PanoramaFrameNumber',
     ),
     5 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PanoramaDirection',
-      'title' => 'Panorama Direction',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PanoramaDirection',
+        'title' => 'Panorama Direction',
+        'format' =>
         array (
-          0 => 'Left to Right',
-          1 => 'Right to Left',
-          2 => 'Bottom to Top',
-          3 => 'Top to Bottom',
-          4 => '2x2 Matrix (Clockwise)',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Left to Right',
+            1 => 'Right to Left',
+            2 => 'Bottom to Top',
+            3 => 'Top to Bottom',
+            4 => '2x2 Matrix (Clockwise)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:PanoramaDirection',
       ),
-      'exiftoolDOMNode' => 'Canon:PanoramaDirection',
     ),
   ),
   'itemsByExiftoolDOMNode' =>

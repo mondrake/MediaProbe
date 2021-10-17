@@ -37,14 +37,17 @@ class CNTH extends Collection {
   array (
     'CNDA' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ThumbnailImage',
-      'title' => 'Thumbnail Image',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailImage',
+        'title' => 'Thumbnail Image',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'Canon:ThumbnailImage',
       ),
-      'exiftoolDOMNode' => 'Canon:ThumbnailImage',
     ),
   ),
 );

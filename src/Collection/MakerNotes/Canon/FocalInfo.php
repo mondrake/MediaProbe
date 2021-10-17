@@ -40,14 +40,17 @@ class FocalInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocalLength',
-      'title' => 'Focal Length',
-      'format' =>
+      0 =>
       array (
-        0 => 1001,
+        'collection' => 'Tag',
+        'name' => 'FocalLength',
+        'title' => 'Focal Length',
+        'format' =>
+        array (
+          0 => 1001,
+        ),
+        'exiftoolDOMNode' => 'Canon:FocalLength',
       ),
-      'exiftoolDOMNode' => 'Canon:FocalLength',
     ),
   ),
 );

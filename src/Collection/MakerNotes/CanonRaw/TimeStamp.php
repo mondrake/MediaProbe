@@ -56,36 +56,45 @@ class TimeStamp extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DateTimeOriginal',
-      'title' => 'Date/Time Original',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'DateTimeOriginal',
+        'title' => 'Date/Time Original',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:DateTimeOriginal',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:DateTimeOriginal',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TimeZoneCode',
-      'title' => 'Time Zone Code',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'TimeZoneCode',
+        'title' => 'Time Zone Code',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:TimeZoneCode',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:TimeZoneCode',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TimeZoneInfo',
-      'title' => 'Time Zone Info',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'TimeZoneInfo',
+        'title' => 'Time Zone Info',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:TimeZoneInfo',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:TimeZoneInfo',
     ),
   ),
 );

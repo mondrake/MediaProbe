@@ -56,55 +56,64 @@ class MultiExp extends Collection {
   array (
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiExposure',
-      'title' => 'Multi Exposure',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MultiExposure',
+        'title' => 'Multi Exposure',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
-          2 => 'On (RAW)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+            2 => 'On (RAW)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:MultiExposure',
       ),
-      'exiftoolDOMNode' => 'Canon:MultiExposure',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiExposureControl',
-      'title' => 'Multi Exposure Control',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MultiExposureControl',
+        'title' => 'Multi Exposure Control',
+        'format' =>
         array (
-          0 => 'Additive',
-          1 => 'Average',
-          2 => 'Bright (comparative)',
-          3 => 'Dark (comparative)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Additive',
+            1 => 'Average',
+            2 => 'Bright (comparative)',
+            3 => 'Dark (comparative)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:MultiExposureControl',
       ),
-      'exiftoolDOMNode' => 'Canon:MultiExposureControl',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiExposureShots',
-      'title' => 'Multi Exposure Shots',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'MultiExposureShots',
+        'title' => 'Multi Exposure Shots',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'Canon:MultiExposureShots',
       ),
-      'exiftoolDOMNode' => 'Canon:MultiExposureShots',
     ),
   ),
 );

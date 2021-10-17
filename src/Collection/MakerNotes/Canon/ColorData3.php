@@ -304,400 +304,502 @@ class ColorData3 extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorDataVersion',
-      'title' => 'Color Data Version',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorDataVersion',
+        'title' => 'Color Data Version',
+        'format' =>
         array (
-          1 => '1 (1DmkIIN/5D/30D/400D)',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => '1 (1DmkIIN/5D/30D/400D)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorDataVersion',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorDataVersion',
     ),
     63 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsAsShot',
-      'title' => 'WB RGGB Levels As Shot',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsAsShot',
+        'title' => 'WB RGGB Levels As Shot',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsAsShot',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsAsShot',
     ),
     67 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempAsShot',
-      'title' => 'Color Temp As Shot',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempAsShot',
+        'title' => 'Color Temp As Shot',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempAsShot',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempAsShot',
     ),
     68 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsAuto',
-      'title' => 'WB RGGB Levels Auto',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsAuto',
+        'title' => 'WB RGGB Levels Auto',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsAuto',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsAuto',
     ),
     72 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempAuto',
-      'title' => 'Color Temp Auto',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempAuto',
+        'title' => 'Color Temp Auto',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempAuto',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempAuto',
     ),
     73 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsMeasured',
-      'title' => 'WB RGGB Levels Measured',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsMeasured',
+        'title' => 'WB RGGB Levels Measured',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsMeasured',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsMeasured',
     ),
     77 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempMeasured',
-      'title' => 'Color Temp Measured',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempMeasured',
+        'title' => 'Color Temp Measured',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempMeasured',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempMeasured',
     ),
     78 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsDaylight',
-      'title' => 'WB RGGB Levels Daylight',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsDaylight',
+        'title' => 'WB RGGB Levels Daylight',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsDaylight',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsDaylight',
     ),
     82 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempDaylight',
-      'title' => 'Color Temp Daylight',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempDaylight',
+        'title' => 'Color Temp Daylight',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempDaylight',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempDaylight',
     ),
     83 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsShade',
-      'title' => 'WB RGGB Levels Shade',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsShade',
+        'title' => 'WB RGGB Levels Shade',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsShade',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsShade',
     ),
     87 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempShade',
-      'title' => 'Color Temp Shade',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempShade',
+        'title' => 'Color Temp Shade',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempShade',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempShade',
     ),
     88 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsCloudy',
-      'title' => 'WB RGGB Levels Cloudy',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsCloudy',
+        'title' => 'WB RGGB Levels Cloudy',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsCloudy',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsCloudy',
     ),
     92 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempCloudy',
-      'title' => 'Color Temp Cloudy',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempCloudy',
+        'title' => 'Color Temp Cloudy',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempCloudy',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempCloudy',
     ),
     93 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsTungsten',
-      'title' => 'WB RGGB Levels Tungsten',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsTungsten',
+        'title' => 'WB RGGB Levels Tungsten',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsTungsten',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsTungsten',
     ),
     97 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempTungsten',
-      'title' => 'Color Temp Tungsten',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempTungsten',
+        'title' => 'Color Temp Tungsten',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempTungsten',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempTungsten',
     ),
     98 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsFluorescent',
-      'title' => 'WB RGGB Levels Fluorescent',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsFluorescent',
+        'title' => 'WB RGGB Levels Fluorescent',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsFluorescent',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsFluorescent',
     ),
     102 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempFluorescent',
-      'title' => 'Color Temp Fluorescent',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempFluorescent',
+        'title' => 'Color Temp Fluorescent',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempFluorescent',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempFluorescent',
     ),
     103 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsKelvin',
-      'title' => 'WB RGGB Levels Kelvin',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsKelvin',
+        'title' => 'WB RGGB Levels Kelvin',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsKelvin',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsKelvin',
     ),
     107 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempKelvin',
-      'title' => 'Color Temp Kelvin',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempKelvin',
+        'title' => 'Color Temp Kelvin',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempKelvin',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempKelvin',
     ),
     108 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsFlash',
-      'title' => 'WB RGGB Levels Flash',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsFlash',
+        'title' => 'WB RGGB Levels Flash',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsFlash',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsFlash',
     ),
     112 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempFlash',
-      'title' => 'Color Temp Flash',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempFlash',
+        'title' => 'Color Temp Flash',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempFlash',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempFlash',
     ),
     113 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsPC1',
-      'title' => 'WB RGGB Levels PC1',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsPC1',
+        'title' => 'WB RGGB Levels PC1',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC1',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC1',
     ),
     117 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempPC1',
-      'title' => 'Color Temp PC1',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempPC1',
+        'title' => 'Color Temp PC1',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempPC1',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempPC1',
     ),
     118 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsPC2',
-      'title' => 'WB RGGB Levels PC2',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsPC2',
+        'title' => 'WB RGGB Levels PC2',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC2',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC2',
     ),
     122 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempPC2',
-      'title' => 'Color Temp PC2',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempPC2',
+        'title' => 'Color Temp PC2',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempPC2',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempPC2',
     ),
     123 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsPC3',
-      'title' => 'WB RGGB Levels PC3',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsPC3',
+        'title' => 'WB RGGB Levels PC3',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC3',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsPC3',
     ),
     127 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempPC3',
-      'title' => 'Color Temp PC3',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempPC3',
+        'title' => 'Color Temp PC3',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempPC3',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempPC3',
     ),
     128 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WB_RGGBLevelsCustom',
-      'title' => 'WB RGGB Levels Custom',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'WB_RGGBLevelsCustom',
+        'title' => 'WB RGGB Levels Custom',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsCustom',
       ),
-      'exiftoolDOMNode' => 'Canon:WB_RGGBLevelsCustom',
     ),
     132 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempCustom',
-      'title' => 'Color Temp Custom',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempCustom',
+        'title' => 'Color Temp Custom',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempCustom',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempCustom',
     ),
     196 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PerChannelBlackLevel',
-      'title' => 'Per Channel Black Level',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'PerChannelBlackLevel',
+        'title' => 'Per Channel Black Level',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
       ),
-      'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
     ),
     584 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashOutput',
-      'title' => 'Flash Output',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'FlashOutput',
+        'title' => 'Flash Output',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:FlashOutput',
       ),
-      'exiftoolDOMNode' => 'Canon:FlashOutput',
     ),
     585 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashBatteryLevel',
-      'title' => 'Flash Battery Level',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'FlashBatteryLevel',
+        'title' => 'Flash Battery Level',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:FlashBatteryLevel',
       ),
-      'exiftoolDOMNode' => 'Canon:FlashBatteryLevel',
     ),
     586 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTempFlashData',
-      'title' => 'Color Temp Flash Data',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'collection' => 'Tag',
+        'name' => 'ColorTempFlashData',
+        'title' => 'Color Temp Flash Data',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTempFlashData',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTempFlashData',
     ),
     647 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MeasuredRGGBData',
-      'title' => 'Measured RGGB Data',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'MeasuredRGGBData',
+        'title' => 'Measured RGGB Data',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:MeasuredRGGBData',
       ),
-      'exiftoolDOMNode' => 'Canon:MeasuredRGGBData',
     ),
   ),
 );

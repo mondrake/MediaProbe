@@ -882,22 +882,25 @@ class Functions2 extends Collection {
     ),
     258 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ISOSpeedIncrements',
-      'title' => 'ISO Speed Increments',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ISOSpeedIncrements',
+        'title' => 'ISO Speed Increments',
+        'format' =>
         array (
-          0 => '1/3 Stop',
-          1 => '1 Stop',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '1/3 Stop',
+            1 => '1 Stop',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ISOSpeedIncrements',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ISOSpeedIncrements',
     ),
     259 =>
     array (
@@ -945,42 +948,48 @@ class Functions2 extends Collection {
     ),
     260 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AEBAutoCancel',
-      'title' => 'AEB Auto Cancel',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AEBAutoCancel',
+        'title' => 'AEB Auto Cancel',
+        'format' =>
         array (
-          0 => 'On',
-          1 => 'Off',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'On',
+            1 => 'Off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AEBAutoCancel',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AEBAutoCancel',
     ),
     261 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AEBSequence',
-      'title' => 'AEB Sequence',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AEBSequence',
+        'title' => 'AEB Sequence',
+        'format' =>
         array (
-          0 => '0,-,+',
-          1 => '-,0,+',
-          2 => '+,0,-',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '0,-,+',
+            1 => '-,0,+',
+            2 => '+,0,-',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AEBSequence',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AEBSequence',
     ),
     262 =>
     array (
@@ -1030,104 +1039,119 @@ class Functions2 extends Collection {
     ),
     263 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SpotMeterLinkToAFPoint',
-      'title' => 'Spot Meter Link To AF Point',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SpotMeterLinkToAFPoint',
+        'title' => 'Spot Meter Link To AF Point',
+        'format' =>
         array (
-          0 => 'Disable (use center AF point)',
-          1 => 'Enable (use active AF point)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable (use center AF point)',
+            1 => 'Enable (use active AF point)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:SpotMeterLinkToAFPoint',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:SpotMeterLinkToAFPoint',
     ),
     264 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SafetyShift',
-      'title' => 'Safety Shift',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SafetyShift',
+        'title' => 'Safety Shift',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable (Tv/Av)',
-          2 => 'Enable (ISO speed)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable (Tv/Av)',
+            2 => 'Enable (ISO speed)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:SafetyShift',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:SafetyShift',
     ),
     265 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UsableShootingModes',
-      'title' => 'Usable Shooting Modes',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'UsableShootingModes',
+        'title' => 'Usable Shooting Modes',
+        'components' => 2,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:UsableShootingModes',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:UsableShootingModes',
     ),
     266 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UsableMeteringModes',
-      'title' => 'Usable Metering Modes',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'UsableMeteringModes',
+        'title' => 'Usable Metering Modes',
+        'components' => 2,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:UsableMeteringModes',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:UsableMeteringModes',
     ),
     267 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExposureModeInManual',
-      'title' => 'Exposure Mode In Manual',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ExposureModeInManual',
+        'title' => 'Exposure Mode In Manual',
+        'format' =>
         array (
-          0 => 'Specified metering mode',
-          1 => 'Evaluative metering',
-          2 => 'Partial metering',
-          3 => 'Spot metering',
-          4 => 'Center-weighted average',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Specified metering mode',
+            1 => 'Evaluative metering',
+            2 => 'Partial metering',
+            3 => 'Spot metering',
+            4 => 'Center-weighted average',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ExposureModeInManual',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ExposureModeInManual',
     ),
     268 =>
     array (
@@ -1205,23 +1229,26 @@ class Functions2 extends Collection {
     ),
     270 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ApplyShootingMeteringMode',
-      'title' => 'Apply Shooting Metering Mode',
-      'components' => 8,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ApplyShootingMeteringMode',
+        'title' => 'Apply Shooting Metering Mode',
+        'components' => 8,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ApplyShootingMeteringMode',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ApplyShootingMeteringMode',
     ),
     271 =>
     array (
@@ -1345,43 +1372,49 @@ class Functions2 extends Collection {
     ),
     272 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AEMicroadjustment',
-      'title' => 'AE Microadjustment',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AEMicroadjustment',
+        'title' => 'AE Microadjustment',
+        'components' => 3,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AEMicroadjustment',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AEMicroadjustment',
     ),
     273 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FEMicroadjustment',
-      'title' => 'FE Microadjustment',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FEMicroadjustment',
+        'title' => 'FE Microadjustment',
+        'components' => 3,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:FEMicroadjustment',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:FEMicroadjustment',
     ),
     274 =>
     array (
@@ -1429,63 +1462,72 @@ class Functions2 extends Collection {
     ),
     275 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ExposureCompAutoCancel',
-      'title' => 'Exposure Comp Auto Cancel',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ExposureCompAutoCancel',
+        'title' => 'Exposure Comp Auto Cancel',
+        'format' =>
         array (
-          0 => 'Enable',
-          1 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Enable',
+            1 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ExposureCompAutoCancel',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ExposureCompAutoCancel',
     ),
     276 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AELockMeterModeAfterFocus',
-      'title' => 'AE Lock Meter Mode After Focus',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AELockMeterModeAfterFocus',
+        'title' => 'AE Lock Meter Mode After Focus',
+        'format' =>
         array (
-          1 => 'Evaluative',
-          2 => 'Partial',
-          4 => 'Spot',
-          8 => 'Center-weighted',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Evaluative',
+            2 => 'Partial',
+            4 => 'Spot',
+            8 => 'Center-weighted',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AELockMeterModeAfterFocus',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AELockMeterModeAfterFocus',
     ),
     513 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LongExposureNoiseReduction',
-      'title' => 'Long Exposure Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LongExposureNoiseReduction',
+        'title' => 'Long Exposure Noise Reduction',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'Auto',
-          2 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'Auto',
+            2 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LongExposureNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LongExposureNoiseReduction',
     ),
     514 =>
     array (
@@ -1532,22 +1574,25 @@ class Functions2 extends Collection {
     ),
     515 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HighlightTonePriority',
-      'title' => 'Highlight Tone Priority',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'HighlightTonePriority',
+        'title' => 'Highlight Tone Priority',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:HighlightTonePriority',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:HighlightTonePriority',
     ),
     516 =>
     array (
@@ -1594,98 +1639,113 @@ class Functions2 extends Collection {
     ),
     772 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ETTLII',
-      'title' => 'E-TTL II',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ETTLII',
+        'title' => 'E-TTL II',
+        'format' =>
         array (
-          0 => 'Evaluative',
-          1 => 'Average',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Evaluative',
+            1 => 'Average',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ETTLII',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ETTLII',
     ),
     773 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShutterCurtainSync',
-      'title' => 'Shutter Curtain Sync',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ShutterCurtainSync',
+        'title' => 'Shutter Curtain Sync',
+        'format' =>
         array (
-          0 => '1st-curtain sync',
-          1 => '2nd-curtain sync',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '1st-curtain sync',
+            1 => '2nd-curtain sync',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ShutterCurtainSync',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ShutterCurtainSync',
     ),
     774 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashFiring',
-      'title' => 'Flash Firing',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FlashFiring',
+        'title' => 'Flash Firing',
+        'format' =>
         array (
-          0 => 'Fires',
-          1 => 'Does not fire',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Fires',
+            1 => 'Does not fire',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:FlashFiring',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:FlashFiring',
     ),
     1031 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ViewInfoDuringExposure',
-      'title' => 'View Info During Exposure',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ViewInfoDuringExposure',
+        'title' => 'View Info During Exposure',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ViewInfoDuringExposure',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ViewInfoDuringExposure',
     ),
     1032 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LCDIlluminationDuringBulb',
-      'title' => 'LCD Illumination During Bulb',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LCDIlluminationDuringBulb',
+        'title' => 'LCD Illumination During Bulb',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LCDIlluminationDuringBulb',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LCDIlluminationDuringBulb',
     ),
     1033 =>
     array (
@@ -1730,210 +1790,240 @@ class Functions2 extends Collection {
     ),
     1034 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ViewfinderWarnings',
-      'title' => 'Viewfinder Warnings',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ViewfinderWarnings',
+        'title' => 'Viewfinder Warnings',
+        'format' =>
         array (
-          1 => 'Monochrome',
-          2 => 'WB corrected',
-          4 => 'One-touch image quality',
-          8 => 'ISO expansion',
-          16 => 'Spot metering',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'Monochrome',
+            2 => 'WB corrected',
+            4 => 'One-touch image quality',
+            8 => 'ISO expansion',
+            16 => 'Spot metering',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ViewfinderWarnings',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ViewfinderWarnings',
     ),
     1035 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LVShootingAreaDisplay',
-      'title' => 'LV Shooting Area Display',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LVShootingAreaDisplay',
+        'title' => 'LV Shooting Area Display',
+        'format' =>
         array (
-          0 => 'Masked',
-          1 => 'Outlined',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Masked',
+            1 => 'Outlined',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LVShootingAreaDisplay',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LVShootingAreaDisplay',
     ),
     1036 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LVShootingAreaDisplay',
-      'title' => 'LV Shooting Area Display',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LVShootingAreaDisplay',
+        'title' => 'LV Shooting Area Display',
+        'format' =>
         array (
-          0 => 'Masked',
-          1 => 'Outlined',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Masked',
+            1 => 'Outlined',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LVShootingAreaDisplay',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LVShootingAreaDisplay',
     ),
     1281 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'USMLensElectronicMF',
-      'title' => 'USM Lens Electronic MF',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'USMLensElectronicMF',
+        'title' => 'USM Lens Electronic MF',
+        'format' =>
         array (
-          0 => 'Enable after one-shot AF',
-          1 => 'Disable after one-shot AF',
-          2 => 'Disable in AF mode',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Enable after one-shot AF',
+            1 => 'Disable after one-shot AF',
+            2 => 'Disable in AF mode',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:USMLensElectronicMF',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:USMLensElectronicMF',
     ),
     1282 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AIServoTrackingSensitivity',
-      'title' => 'AI Servo Tracking Sensitivity',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AIServoTrackingSensitivity',
+        'title' => 'AI Servo Tracking Sensitivity',
+        'format' =>
         array (
-          -2 => 'Slow',
-          -1 => 'Medium Slow',
-          0 => 'Standard',
-          1 => 'Medium Fast',
-          2 => 'Fast',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -2 => 'Slow',
+            -1 => 'Medium Slow',
+            0 => 'Standard',
+            1 => 'Medium Fast',
+            2 => 'Fast',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AIServoTrackingSensitivity',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AIServoTrackingSensitivity',
     ),
     1283 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AIServoImagePriority',
-      'title' => 'AI Servo Image Priority',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AIServoImagePriority',
+        'title' => 'AI Servo Image Priority',
+        'format' =>
         array (
-          0 => '1: AF, 2: Tracking',
-          1 => '1: AF, 2: Drive speed',
-          2 => '1: Release, 2: Drive speed',
-          3 => '1: Release, 2: Tracking',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '1: AF, 2: Tracking',
+            1 => '1: AF, 2: Drive speed',
+            2 => '1: Release, 2: Drive speed',
+            3 => '1: Release, 2: Tracking',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AIServoImagePriority',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AIServoImagePriority',
     ),
     1284 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AIServoTrackingMethod',
-      'title' => 'AI Servo Tracking Method',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AIServoTrackingMethod',
+        'title' => 'AI Servo Tracking Method',
+        'format' =>
         array (
-          0 => 'Main focus point priority',
-          1 => 'Continuous AF track priority',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Main focus point priority',
+            1 => 'Continuous AF track priority',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AIServoTrackingMethod',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AIServoTrackingMethod',
     ),
     1285 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensDriveNoAF',
-      'title' => 'Lens Drive No AF',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LensDriveNoAF',
+        'title' => 'Lens Drive No AF',
+        'format' =>
         array (
-          0 => 'Focus search on',
-          1 => 'Focus search off',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Focus search on',
+            1 => 'Focus search off',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LensDriveNoAF',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LensDriveNoAF',
     ),
     1286 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensAFStopButton',
-      'title' => 'Lens AF Stop Button',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LensAFStopButton',
+        'title' => 'Lens AF Stop Button',
+        'format' =>
         array (
-          0 => 'AF stop',
-          1 => 'AF start',
-          2 => 'AE lock',
-          3 => 'AF point: M->Auto/Auto->ctr',
-          4 => 'One Shot <-> AI servo',
-          5 => 'IS start',
-          6 => 'Switch to registered AF point',
-          7 => 'Spot AF',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'AF stop',
+            1 => 'AF start',
+            2 => 'AE lock',
+            3 => 'AF point: M->Auto/Auto->ctr',
+            4 => 'One Shot <-> AI servo',
+            5 => 'IS start',
+            6 => 'Switch to registered AF point',
+            7 => 'Spot AF',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LensAFStopButton',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LensAFStopButton',
     ),
     1287 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFMicroadjustment',
-      'title' => 'AF Microadjustment',
-      'components' => 5,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFMicroadjustment',
+        'title' => 'AF Microadjustment',
+        'components' => 5,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Adjust all by same amount',
-          2 => 'Adjust by lens',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Adjust all by same amount',
+            2 => 'Adjust by lens',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AFMicroadjustment',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AFMicroadjustment',
     ),
     1288 =>
     array (
@@ -2090,23 +2180,26 @@ class Functions2 extends Collection {
     ),
     1291 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFPointAutoSelection',
-      'title' => 'AF Point Auto Selection',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFPointAutoSelection',
+        'title' => 'AF Point Auto Selection',
+        'format' =>
         array (
-          0 => 'Control-direct:disable/Main:enable',
-          1 => 'Control-direct:disable/Main:disable',
-          2 => 'Control-direct:enable/Main:enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Control-direct:disable/Main:enable',
+            1 => 'Control-direct:disable/Main:disable',
+            2 => 'Control-direct:enable/Main:enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AFPointAutoSelection',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AFPointAutoSelection',
     ),
     1292 =>
     array (
@@ -2155,22 +2248,25 @@ class Functions2 extends Collection {
     ),
     1293 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFPointBrightness',
-      'title' => 'AF Point Brightness',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFPointBrightness',
+        'title' => 'AF Point Brightness',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Brighter',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Brighter',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AFPointBrightness',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AFPointBrightness',
     ),
     1294 =>
     array (
@@ -2344,328 +2440,379 @@ class Functions2 extends Collection {
     ),
     1298 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SelectAFAreaSelectMode',
-      'title' => 'Select AF Area Select Mode',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SelectAFAreaSelectMode',
+        'title' => 'Select AF Area Select Mode',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
-          2 => 'Register',
-          3 => 'Select AF-modes',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+            2 => 'Register',
+            3 => 'Select AF-modes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:SelectAFAreaSelectMode',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:SelectAFAreaSelectMode',
     ),
     1299 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ManualAFPointSelectPattern',
-      'title' => 'Manual AF Point Select Pattern',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ManualAFPointSelectPattern',
+        'title' => 'Manual AF Point Select Pattern',
+        'format' =>
         array (
-          0 => 'Stops at AF area edges',
-          1 => 'Continuous',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Stops at AF area edges',
+            1 => 'Continuous',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ManualAFPointSelectPattern',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ManualAFPointSelectPattern',
     ),
     1300 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DisplayAllAFPoints',
-      'title' => 'Display All AF Points',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DisplayAllAFPoints',
+        'title' => 'Display All AF Points',
+        'format' =>
         array (
-          0 => 'Enable',
-          1 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Enable',
+            1 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:DisplayAllAFPoints',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:DisplayAllAFPoints',
     ),
     1301 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocusDisplayAIServoAndMF',
-      'title' => 'Focus Display AI Servo And MF',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FocusDisplayAIServoAndMF',
+        'title' => 'Focus Display AI Servo And MF',
+        'format' =>
         array (
-          0 => 'Enable',
-          1 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Enable',
+            1 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:FocusDisplayAIServoAndMF',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:FocusDisplayAIServoAndMF',
     ),
     1302 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OrientationLinkedAFPoint',
-      'title' => 'Orientation Linked AF Point',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'OrientationLinkedAFPoint',
+        'title' => 'Orientation Linked AF Point',
+        'format' =>
         array (
-          0 => 'Same for vertical and horizontal',
-          1 => 'Select different AF points',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Same for vertical and horizontal',
+            1 => 'Select different AF points',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:OrientationLinkedAFPoint',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:OrientationLinkedAFPoint',
     ),
     1303 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiControllerWhileMetering',
-      'title' => 'Multi Controller While Metering',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MultiControllerWhileMetering',
+        'title' => 'Multi Controller While Metering',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'AF point selection',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'AF point selection',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:MultiControllerWhileMetering',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:MultiControllerWhileMetering',
     ),
     1304 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AccelerationTracking',
-      'title' => 'Acceleration Tracking',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'AccelerationTracking',
+        'title' => 'Acceleration Tracking',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AccelerationTracking',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AccelerationTracking',
     ),
     1305 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AIServoFirstImagePriority',
-      'title' => 'AI Servo First Image Priority',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AIServoFirstImagePriority',
+        'title' => 'AI Servo First Image Priority',
+        'format' =>
         array (
-          -1 => 'Release priority',
-          0 => 'Equal priority',
-          1 => 'Focus priority',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Release priority',
+            0 => 'Equal priority',
+            1 => 'Focus priority',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AIServoFirstImagePriority',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AIServoFirstImagePriority',
     ),
     1306 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AIServoSecondImagePriority',
-      'title' => 'AI Servo Second Image Priority',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AIServoSecondImagePriority',
+        'title' => 'AI Servo Second Image Priority',
+        'format' =>
         array (
-          -1 => 'Shooting speed priority',
-          0 => 'Equal priority',
-          1 => 'Focus priority',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Shooting speed priority',
+            0 => 'Equal priority',
+            1 => 'Focus priority',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AIServoSecondImagePriority',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AIServoSecondImagePriority',
     ),
     1307 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFAreaSelectMethod',
-      'title' => 'AF Area Select Method',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFAreaSelectMethod',
+        'title' => 'AF Area Select Method',
+        'format' =>
         array (
-          0 => 'AF area selection button',
-          1 => 'Main dial',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'AF area selection button',
+            1 => 'Main dial',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AFAreaSelectMethod',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AFAreaSelectMethod',
     ),
     1308 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AutoAFPointColorTracking',
-      'title' => 'Auto AF Point Color Tracking',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AutoAFPointColorTracking',
+        'title' => 'Auto AF Point Color Tracking',
+        'format' =>
         array (
-          0 => 'On-Shot AF only',
-          1 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'On-Shot AF only',
+            1 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AutoAFPointColorTracking',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AutoAFPointColorTracking',
     ),
     1309 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'VFDisplayIllumination',
-      'title' => 'VF Display Illumination',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'VFDisplayIllumination',
+        'title' => 'VF Display Illumination',
+        'format' =>
         array (
-          0 => 'Auto',
-          1 => 'Enable',
-          2 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Auto',
+            1 => 'Enable',
+            2 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:VFDisplayIllumination',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:VFDisplayIllumination',
     ),
     1310 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'InitialAFPointAIServoAF',
-      'title' => 'Initial AF Point AI Servo AF',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'InitialAFPointAIServoAF',
+        'title' => 'Initial AF Point AI Servo AF',
+        'format' =>
         array (
-          0 => 'Auto',
-          1 => 'Initial AF point selected',
-          2 => 'Manual AF point',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Auto',
+            1 => 'Initial AF point selected',
+            2 => 'Manual AF point',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:InitialAFPointAIServoAF',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:InitialAFPointAIServoAF',
     ),
     1551 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MirrorLockup',
-      'title' => 'Mirror Lockup',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MirrorLockup',
+        'title' => 'Mirror Lockup',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
-          2 => 'Enable: Down with Set',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+            2 => 'Enable: Down with Set',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:MirrorLockup',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:MirrorLockup',
     ),
     1552 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContinuousShootingSpeed',
-      'title' => 'Continuous Shooting Speed',
-      'components' => 3,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContinuousShootingSpeed',
+        'title' => 'Continuous Shooting Speed',
+        'components' => 3,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ContinuousShootingSpeed',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ContinuousShootingSpeed',
     ),
     1553 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContinuousShotLimit',
-      'title' => 'Continuous Shot Limit',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ContinuousShotLimit',
+        'title' => 'Continuous Shot Limit',
+        'components' => 2,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ContinuousShotLimit',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ContinuousShotLimit',
     ),
     1554 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RestrictDriveModes',
-      'title' => 'Restrict Drive Modes',
-      'components' => 2,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RestrictDriveModes',
+        'title' => 'Restrict Drive Modes',
+        'components' => 2,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:RestrictDriveModes',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:RestrictDriveModes',
     ),
     1793 =>
     array (
@@ -2737,44 +2884,50 @@ class Functions2 extends Collection {
     ),
     1794 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AFOnAELockButtonSwitch',
-      'title' => 'AF On AE Lock Button Switch',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AFOnAELockButtonSwitch',
+        'title' => 'AF On AE Lock Button Switch',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AFOnAELockButtonSwitch',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AFOnAELockButtonSwitch',
     ),
     1795 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'QuickControlDialInMeter',
-      'title' => 'Quick Control Dial In Meter',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'QuickControlDialInMeter',
+        'title' => 'Quick Control Dial In Meter',
+        'format' =>
         array (
-          0 => 'Exposure comp/Aperture',
-          1 => 'AF point selection',
-          2 => 'ISO speed',
-          3 => 'AF point selection swapped with Exposure comp',
-          4 => 'ISO speed swapped with Exposure comp',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Exposure comp/Aperture',
+            1 => 'AF point selection',
+            2 => 'ISO speed',
+            3 => 'AF point selection swapped with Exposure comp',
+            4 => 'ISO speed swapped with Exposure comp',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:QuickControlDialInMeter',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:QuickControlDialInMeter',
     ),
     1796 =>
     array (
@@ -2944,318 +3097,369 @@ class Functions2 extends Collection {
     ),
     1797 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ManualTv',
-      'title' => 'Manual Tv/Av For M',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ManualTv',
+        'title' => 'Manual Tv/Av For M',
+        'format' =>
         array (
-          0 => 'Tv=Main/Av=Control',
-          1 => 'Tv=Control/Av=Main',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Tv=Main/Av=Control',
+            1 => 'Tv=Control/Av=Main',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ManualTv',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ManualTv',
     ),
     1798 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DialDirectionTvAv',
-      'title' => 'Dial Direction Tv Av',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DialDirectionTvAv',
+        'title' => 'Dial Direction Tv Av',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Reversed',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Reversed',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:DialDirectionTvAv',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:DialDirectionTvAv',
     ),
     1799 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AvSettingWithoutLens',
-      'title' => 'Av Setting Without Lens',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AvSettingWithoutLens',
+        'title' => 'Av Setting Without Lens',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AvSettingWithoutLens',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AvSettingWithoutLens',
     ),
     1800 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBMediaImageSizeSetting',
-      'title' => 'WB Media Image Size Setting',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WBMediaImageSizeSetting',
+        'title' => 'WB Media Image Size Setting',
+        'format' =>
         array (
-          0 => 'Rear LCD panel',
-          1 => 'LCD monitor',
-          2 => 'Off (disable button)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Rear LCD panel',
+            1 => 'LCD monitor',
+            2 => 'Off (disable button)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:WBMediaImageSizeSetting',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:WBMediaImageSizeSetting',
     ),
     1801 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LockMicrophoneButton',
-      'title' => 'Lock Microphone Button',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LockMicrophoneButton',
+        'title' => 'Lock Microphone Button',
+        'format' =>
         array (
-          0 => 'Protect (hold:record memo)',
-          1 => 'Record memo (protect:disable)',
-          2 => 'Play memo (hold:record memo)',
-          3 => 'Rating (protect/memo:disable)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Protect (hold:record memo)',
+            1 => 'Record memo (protect:disable)',
+            2 => 'Play memo (hold:record memo)',
+            3 => 'Rating (protect/memo:disable)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LockMicrophoneButton',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LockMicrophoneButton',
     ),
     1802 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ButtonFunctionControlOff',
-      'title' => 'Button Function Control Off',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ButtonFunctionControlOff',
+        'title' => 'Button Function Control Off',
+        'format' =>
         array (
-          0 => 'Normal (enable)',
-          1 => 'Disable main, Control, Multi-control',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal (enable)',
+            1 => 'Disable main, Control, Multi-control',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ButtonFunctionControlOff',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ButtonFunctionControlOff',
     ),
     1803 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AssignFuncButton',
-      'title' => 'Assign Func Button',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AssignFuncButton',
+        'title' => 'Assign Func Button',
+        'format' =>
         array (
-          0 => 'LCD brightness',
-          1 => 'Image quality',
-          2 => 'Exposure comp./AEB setting',
-          3 => 'Image jump with main dial',
-          4 => 'Live view function settings',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'LCD brightness',
+            1 => 'Image quality',
+            2 => 'Exposure comp./AEB setting',
+            3 => 'Image jump with main dial',
+            4 => 'Live view function settings',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AssignFuncButton',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AssignFuncButton',
     ),
     1804 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CustomControls',
-      'title' => 'Custom Controls',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'CustomControls',
+        'title' => 'Custom Controls',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:CustomControls',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:CustomControls',
     ),
     1805 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StartMovieShooting',
-      'title' => 'Start Movie Shooting',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'StartMovieShooting',
+        'title' => 'Start Movie Shooting',
+        'format' =>
         array (
-          0 => 'Default (from LV)',
-          1 => 'Quick start (FEL button)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Default (from LV)',
+            1 => 'Quick start (FEL button)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:StartMovieShooting',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:StartMovieShooting',
     ),
     1806 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FlashButtonFunction',
-      'title' => 'Flash Button Function',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FlashButtonFunction',
+        'title' => 'Flash Button Function',
+        'format' =>
         array (
-          0 => 'Raise built-in flash',
-          1 => 'ISO speed',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Raise built-in flash',
+            1 => 'ISO speed',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:FlashButtonFunction',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:FlashButtonFunction',
     ),
     1807 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MultiFunctionLock',
-      'title' => 'Multi Function Lock',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MultiFunctionLock',
+        'title' => 'Multi Function Lock',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
-          2 => 'On (quick control dial)',
-          3 => 'On (main dial and quick control dial)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+            2 => 'On (quick control dial)',
+            3 => 'On (main dial and quick control dial)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:MultiFunctionLock',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:MultiFunctionLock',
     ),
     1808 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TrashButtonFunction',
-      'title' => 'Trash Button Function',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'TrashButtonFunction',
+        'title' => 'Trash Button Function',
+        'format' =>
         array (
-          0 => 'Normal (set center AF point)',
-          1 => 'Depth-of-field preview',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal (set center AF point)',
+            1 => 'Depth-of-field preview',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:TrashButtonFunction',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:TrashButtonFunction',
     ),
     1809 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShutterReleaseWithoutLens',
-      'title' => 'Shutter Release Without Lens',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ShutterReleaseWithoutLens',
+        'title' => 'Shutter Release Without Lens',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ShutterReleaseWithoutLens',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ShutterReleaseWithoutLens',
     ),
     1810 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ControlRingRotation',
-      'title' => 'Control Ring Rotation',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ControlRingRotation',
+        'title' => 'Control Ring Rotation',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Reversed',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Reversed',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ControlRingRotation',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ControlRingRotation',
     ),
     1811 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'FocusRingRotation',
-      'title' => 'Focus Ring Rotation',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'FocusRingRotation',
+        'title' => 'Focus Ring Rotation',
+        'format' =>
         array (
-          0 => 'Normal',
-          1 => 'Reversed',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Normal',
+            1 => 'Reversed',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:FocusRingRotation',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:FocusRingRotation',
     ),
     1812 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RFLensMFFocusRingSensitivity',
-      'title' => 'RF Lens MF Focus Ring Sensitivity',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RFLensMFFocusRingSensitivity',
+        'title' => 'RF Lens MF Focus Ring Sensitivity',
+        'format' =>
         array (
-          0 => 'Varies With Rotation Speed',
-          1 => 'Linked To Rotation Angle',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Varies With Rotation Speed',
+            1 => 'Linked To Rotation Angle',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:RFLensMFFocusRingSensitivity',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:RFLensMFFocusRingSensitivity',
     ),
     1813 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CustomizeDials',
-      'title' => 'Customize Dials',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
+        'collection' => 'Tag',
+        'name' => 'CustomizeDials',
+        'title' => 'Customize Dials',
+        'format' =>
+        array (
+          0 => 9,
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:CustomizeDials',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:CustomizeDials',
     ),
     2059 =>
     array (
@@ -3381,199 +3585,229 @@ class Functions2 extends Collection {
     ),
     2060 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'TimerLength',
-      'title' => 'Timer Length',
-      'components' => 4,
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'TimerLength',
+        'title' => 'Timer Length',
+        'components' => 4,
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:TimerLength',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:TimerLength',
     ),
     2061 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShortReleaseTimeLag',
-      'title' => 'Short Release Time Lag',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ShortReleaseTimeLag',
+        'title' => 'Short Release Time Lag',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:ShortReleaseTimeLag',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:ShortReleaseTimeLag',
     ),
     2062 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AddAspectRatioInfo',
-      'title' => 'Add Aspect Ratio Info',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AddAspectRatioInfo',
+        'title' => 'Add Aspect Ratio Info',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => '6:6',
-          2 => '3:4',
-          3 => '4:5',
-          4 => '6:7',
-          5 => '10:12',
-          6 => '5:7',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => '6:6',
+            2 => '3:4',
+            3 => '4:5',
+            4 => '6:7',
+            5 => '10:12',
+            6 => '5:7',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AddAspectRatioInfo',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AddAspectRatioInfo',
     ),
     2063 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AddOriginalDecisionData',
-      'title' => 'Add Original Decision Data',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AddOriginalDecisionData',
+        'title' => 'Add Original Decision Data',
+        'format' =>
         array (
-          0 => 'Off',
-          1 => 'On',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            1 => 'On',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AddOriginalDecisionData',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AddOriginalDecisionData',
     ),
     2064 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LiveViewExposureSimulation',
-      'title' => 'Live View Exposure Simulation',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LiveViewExposureSimulation',
+        'title' => 'Live View Exposure Simulation',
+        'format' =>
         array (
-          0 => 'Disable (LCD auto adjust)',
-          1 => 'Enable (simulates exposure)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable (LCD auto adjust)',
+            1 => 'Enable (simulates exposure)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LiveViewExposureSimulation',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LiveViewExposureSimulation',
     ),
     2065 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LCDDisplayAtPowerOn',
-      'title' => 'LCD Display At Power On',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LCDDisplayAtPowerOn',
+        'title' => 'LCD Display At Power On',
+        'format' =>
         array (
-          0 => 'Display',
-          1 => 'Retain power off status',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Display',
+            1 => 'Retain power off status',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:LCDDisplayAtPowerOn',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:LCDDisplayAtPowerOn',
     ),
     2066 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MemoAudioQuality',
-      'title' => 'Memo Audio Quality',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MemoAudioQuality',
+        'title' => 'Memo Audio Quality',
+        'format' =>
         array (
-          0 => 'High (48 kHz)',
-          1 => 'Low (8 kHz)',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'High (48 kHz)',
+            1 => 'Low (8 kHz)',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:MemoAudioQuality',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:MemoAudioQuality',
     ),
     2067 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DefaultEraseOption',
-      'title' => 'Default Erase Option',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DefaultEraseOption',
+        'title' => 'Default Erase Option',
+        'format' =>
         array (
-          0 => 'Cancel selected',
-          1 => 'Erase selected',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Cancel selected',
+            1 => 'Erase selected',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:DefaultEraseOption',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:DefaultEraseOption',
     ),
     2068 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RetractLensOnPowerOff',
-      'title' => 'Retract Lens On Power Off',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'RetractLensOnPowerOff',
+        'title' => 'Retract Lens On Power Off',
+        'format' =>
         array (
-          0 => 'Enable',
-          1 => 'Disable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Enable',
+            1 => 'Disable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:RetractLensOnPowerOff',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:RetractLensOnPowerOff',
     ),
     2069 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AddIPTCInformation',
-      'title' => 'Add IPTC Information',
-      'format' =>
+      0 =>
       array (
-        0 => 9,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AddIPTCInformation',
+        'title' => 'Add IPTC Information',
+        'format' =>
         array (
-          0 => 'Disable',
-          1 => 'Enable',
+          0 => 9,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Disable',
+            1 => 'Enable',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonCustom:AddIPTCInformation',
       ),
-      'exiftoolDOMNode' => 'CanonCustom:AddIPTCInformation',
     ),
   ),
 );

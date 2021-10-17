@@ -80,35 +80,41 @@ class FocalLength extends Collection {
   array (
     0 =>
     array (
-      'text' =>
+      0 =>
       array (
-        'default' => 'Unknown ({value})',
-        'mapping' =>
+        'text' =>
         array (
-          1 => 'Fixed',
-          2 => 'Zoom',
+          'default' => 'Unknown ({value})',
+          'mapping' =>
+          array (
+            1 => 'Fixed',
+            2 => 'Zoom',
+          ),
         ),
+        'collection' => 'Tag',
+        'name' => 'FocalType',
+        'title' => 'Focal Type',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:FocalType',
       ),
-      'collection' => 'Tag',
-      'name' => 'FocalType',
-      'title' => 'Focal Type',
-      'format' =>
-      array (
-        0 => 3,
-      ),
-      'exiftoolDOMNode' => 'Canon:FocalType',
     ),
     1 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FLFocalLength',
-      'collection' => 'Tag',
-      'name' => 'FocalLength',
-      'title' => 'Focal Length',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FLFocalLength',
+        'collection' => 'Tag',
+        'name' => 'FocalLength',
+        'title' => 'Focal Length',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:FocalLength',
       ),
-      'exiftoolDOMNode' => 'Canon:FocalLength',
     ),
     2 =>
     array (

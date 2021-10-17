@@ -72,69 +72,84 @@ class AspectInfo extends Collection {
   array (
     0 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AspectRatio',
-      'title' => 'Aspect Ratio',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AspectRatio',
+        'title' => 'Aspect Ratio',
+        'format' =>
         array (
-          0 => '3:2',
-          1 => '1:1',
-          2 => '4:3',
-          7 => '16:9',
-          8 => '4:5',
+          0 => 4,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '3:2',
+            1 => '1:1',
+            2 => '4:3',
+            7 => '16:9',
+            8 => '4:5',
+          ),
+        ),
+        'exiftoolDOMNode' => 'Canon:AspectRatio',
       ),
-      'exiftoolDOMNode' => 'Canon:AspectRatio',
     ),
     1 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CroppedImageWidth',
-      'title' => 'Cropped Image Width',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'CroppedImageWidth',
+        'title' => 'Cropped Image Width',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:CroppedImageWidth',
       ),
-      'exiftoolDOMNode' => 'Canon:CroppedImageWidth',
     ),
     2 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CroppedImageHeight',
-      'title' => 'Cropped Image Height',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'CroppedImageHeight',
+        'title' => 'Cropped Image Height',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:CroppedImageHeight',
       ),
-      'exiftoolDOMNode' => 'Canon:CroppedImageHeight',
     ),
     3 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CroppedImageLeft',
-      'title' => 'Cropped Image Left',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'CroppedImageLeft',
+        'title' => 'Cropped Image Left',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:CroppedImageLeft',
       ),
-      'exiftoolDOMNode' => 'Canon:CroppedImageLeft',
     ),
     4 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CroppedImageTop',
-      'title' => 'Cropped Image Top',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'CroppedImageTop',
+        'title' => 'Cropped Image Top',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:CroppedImageTop',
       ),
-      'exiftoolDOMNode' => 'Canon:CroppedImageTop',
     ),
   ),
 );

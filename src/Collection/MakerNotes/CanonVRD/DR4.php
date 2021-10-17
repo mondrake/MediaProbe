@@ -536,906 +536,1095 @@ class DR4 extends Collection {
   array (
     '0x20310.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessAdjOn',
-      'title' => 'Sharpness Adj On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessAdjOn',
+        'title' => 'Sharpness Adj On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SharpnessAdjOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SharpnessAdjOn',
     ),
     '0x20400.1' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveOriginal',
-      'title' => 'Tone Curve Original',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ToneCurveOriginal',
+        'title' => 'Tone Curve Original',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveOriginal',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveOriginal',
     ),
     '0x20500.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AutoLightingOptimizerOn',
-      'title' => 'Auto Lighting Optimizer On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AutoLightingOptimizerOn',
+        'title' => 'Auto Lighting Optimizer On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:AutoLightingOptimizerOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:AutoLightingOptimizerOn',
     ),
     '0x20670.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorMoireReductionOn',
-      'title' => 'Color Moire Reduction On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorMoireReductionOn',
+        'title' => 'Color Moire Reduction On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorMoireReductionOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorMoireReductionOn',
     ),
     '0x20702.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PeripheralIlluminationOn',
-      'title' => 'Peripheral Illumination On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PeripheralIlluminationOn',
+        'title' => 'Peripheral Illumination On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:PeripheralIlluminationOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:PeripheralIlluminationOn',
     ),
     '0x20703.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChromaticAberrationOn',
-      'title' => 'Chromatic Aberration On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ChromaticAberrationOn',
+        'title' => 'Chromatic Aberration On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationOn',
     ),
     '0x20705.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DistortionCorrectionOn',
-      'title' => 'Distortion Correction On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DistortionCorrectionOn',
+        'title' => 'Distortion Correction On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DistortionCorrectionOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DistortionCorrectionOn',
     ),
     '0x20706.0' =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DLOOn',
-      'title' => 'DLO On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DLOOn',
+        'title' => 'DLO On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DLOOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DLOOn',
     ),
     65538 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'Rotation',
-      'title' => 'Rotation',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'Rotation',
+        'title' => 'Rotation',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:Rotation',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:Rotation',
     ),
     65539 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AngleAdj',
-      'title' => 'Angle Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AngleAdj',
+        'title' => 'Angle Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:AngleAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:AngleAdj',
     ),
     65569 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CustomPictureStyle',
-      'title' => 'Custom Picture Style',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CustomPictureStyle',
+        'title' => 'Custom Picture Style',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CustomPictureStyle',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CustomPictureStyle',
     ),
     65793 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CheckMark',
-      'title' => 'Check Mark',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CheckMark',
+        'title' => 'Check Mark',
+        'format' =>
         array (
-          0 => 'Clear',
-          1 => '1',
-          2 => '2',
-          3 => '3',
-          4 => '4',
-          5 => '5',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Clear',
+            1 => '1',
+            2 => '2',
+            3 => '3',
+            4 => '4',
+            5 => '5',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CheckMark',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CheckMark',
     ),
     66048 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WorkColorSpace',
-      'title' => 'Work Color Space',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WorkColorSpace',
+        'title' => 'Work Color Space',
+        'format' =>
         array (
-          1 => 'sRGB',
-          2 => 'Adobe RGB',
-          3 => 'Wide Gamut RGB',
-          4 => 'Apple RGB',
-          5 => 'ColorMatch RGB',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            1 => 'sRGB',
+            2 => 'Adobe RGB',
+            3 => 'Wide Gamut RGB',
+            4 => 'Apple RGB',
+            5 => 'ColorMatch RGB',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WorkColorSpace',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WorkColorSpace',
     ),
     131073 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RawBrightnessAdj',
-      'title' => 'Raw Brightness Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'RawBrightnessAdj',
+        'title' => 'Raw Brightness Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RawBrightnessAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RawBrightnessAdj',
     ),
     131329 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WhiteBalanceAdj',
-      'title' => 'White Balance Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'WhiteBalanceAdj',
+        'title' => 'White Balance Adj',
+        'format' =>
         array (
-          -1 => 'Manual (Click)',
-          0 => 'Auto',
-          1 => 'Daylight',
-          2 => 'Cloudy',
-          3 => 'Tungsten',
-          4 => 'Fluorescent',
-          5 => 'Flash',
-          8 => 'Shade',
-          9 => 'Kelvin',
-          255 => 'Shot Settings',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            -1 => 'Manual (Click)',
+            0 => 'Auto',
+            1 => 'Daylight',
+            2 => 'Cloudy',
+            3 => 'Tungsten',
+            4 => 'Fluorescent',
+            5 => 'Flash',
+            8 => 'Shade',
+            9 => 'Kelvin',
+            255 => 'Shot Settings',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WhiteBalanceAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WhiteBalanceAdj',
     ),
     131330 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjColorTemp',
-      'title' => 'WB Adj Color Temp',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WBAdjColorTemp',
+        'title' => 'WB Adj Color Temp',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjColorTemp',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjColorTemp',
     ),
     131333 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjMagentaGreen',
-      'title' => 'WB Adj Magenta Green',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WBAdjMagentaGreen',
+        'title' => 'WB Adj Magenta Green',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjMagentaGreen',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjMagentaGreen',
     ),
     131334 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjBlueAmber',
-      'title' => 'WB Adj Blue Amber',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WBAdjBlueAmber',
+        'title' => 'WB Adj Blue Amber',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjBlueAmber',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjBlueAmber',
     ),
     131365 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'WBAdjRGGBLevels',
-      'title' => 'WB Adj RGGB Levels',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'WBAdjRGGBLevels',
+        'title' => 'WB Adj RGGB Levels',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:WBAdjRGGBLevels',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:WBAdjRGGBLevels',
     ),
     131584 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GammaLinear',
-      'title' => 'Gamma Linear',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'GammaLinear',
+        'title' => 'Gamma Linear',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:GammaLinear',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:GammaLinear',
     ),
     131841 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PictureStyle',
-      'title' => 'Picture Style',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'PictureStyle',
+        'title' => 'Picture Style',
+        'format' =>
         array (
-          129 => 'Standard',
-          130 => 'Portrait',
-          131 => 'Landscape',
-          132 => 'Neutral',
-          133 => 'Faithful',
-          134 => 'Monochrome',
-          135 => 'Auto',
-          136 => 'Fine Detail',
-          240 => 'Shot Settings',
-          255 => 'Custom',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            129 => 'Standard',
+            130 => 'Portrait',
+            131 => 'Landscape',
+            132 => 'Neutral',
+            133 => 'Faithful',
+            134 => 'Monochrome',
+            135 => 'Auto',
+            136 => 'Fine Detail',
+            240 => 'Shot Settings',
+            255 => 'Custom',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:PictureStyle',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:PictureStyle',
     ),
     131843 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ContrastAdj',
-      'title' => 'Contrast Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ContrastAdj',
+        'title' => 'Contrast Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ContrastAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ContrastAdj',
     ),
     131844 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorToneAdj',
-      'title' => 'Color Tone Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorToneAdj',
+        'title' => 'Color Tone Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorToneAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorToneAdj',
     ),
     131845 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorSaturationAdj',
-      'title' => 'Color Saturation Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorSaturationAdj',
+        'title' => 'Color Saturation Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorSaturationAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorSaturationAdj',
     ),
     131846 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MonochromeToningEffect',
-      'title' => 'Monochrome Toning Effect',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MonochromeToningEffect',
+        'title' => 'Monochrome Toning Effect',
+        'format' =>
         array (
-          0 => 'None',
-          1 => 'Sepia',
-          2 => 'Blue',
-          3 => 'Purple',
-          4 => 'Green',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'None',
+            1 => 'Sepia',
+            2 => 'Blue',
+            3 => 'Purple',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:MonochromeToningEffect',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:MonochromeToningEffect',
     ),
     131847 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MonochromeFilterEffect',
-      'title' => 'Monochrome Filter Effect',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'MonochromeFilterEffect',
+        'title' => 'Monochrome Filter Effect',
+        'format' =>
         array (
-          0 => 'None',
-          1 => 'Yellow',
-          2 => 'Orange',
-          3 => 'Red',
-          4 => 'Green',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'None',
+            1 => 'Yellow',
+            2 => 'Orange',
+            3 => 'Red',
+            4 => 'Green',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:MonochromeFilterEffect',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:MonochromeFilterEffect',
     ),
     131848 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UnsharpMaskStrength',
-      'title' => 'Unsharp Mask Strength',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UnsharpMaskStrength',
+        'title' => 'Unsharp Mask Strength',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskStrength',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskStrength',
     ),
     131849 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UnsharpMaskFineness',
-      'title' => 'Unsharp Mask Fineness',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UnsharpMaskFineness',
+        'title' => 'Unsharp Mask Fineness',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskFineness',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskFineness',
     ),
     131850 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'UnsharpMaskThreshold',
-      'title' => 'Unsharp Mask Threshold',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'UnsharpMaskThreshold',
+        'title' => 'Unsharp Mask Threshold',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskThreshold',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:UnsharpMaskThreshold',
     ),
     131851 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShadowAdj',
-      'title' => 'Shadow Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ShadowAdj',
+        'title' => 'Shadow Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ShadowAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ShadowAdj',
     ),
     131852 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'HighlightAdj',
-      'title' => 'Highlight Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'HighlightAdj',
+        'title' => 'Highlight Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:HighlightAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:HighlightAdj',
     ),
     131856 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessAdj',
-      'title' => 'Sharpness Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'SharpnessAdj',
+        'title' => 'Sharpness Adj',
+        'format' =>
         array (
-          0 => 'Sharpness',
-          1 => 'Unsharp Mask',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Sharpness',
+            1 => 'Unsharp Mask',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SharpnessAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SharpnessAdj',
     ),
     131857 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SharpnessStrength',
-      'title' => 'Sharpness Strength',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SharpnessStrength',
+        'title' => 'Sharpness Strength',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SharpnessStrength',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SharpnessStrength',
     ),
     132112 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveBrightness',
-      'title' => 'Tone Curve Brightness',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ToneCurveBrightness',
+        'title' => 'Tone Curve Brightness',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveBrightness',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveBrightness',
     ),
     132113 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ToneCurveContrast',
-      'title' => 'Tone Curve Contrast',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ToneCurveContrast',
+        'title' => 'Tone Curve Contrast',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ToneCurveContrast',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ToneCurveContrast',
     ),
     132352 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AutoLightingOptimizer',
-      'title' => 'Auto Lighting Optimizer',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'AutoLightingOptimizer',
+        'title' => 'Auto Lighting Optimizer',
+        'format' =>
         array (
-          0 => 'Low',
-          1 => 'Standard',
-          2 => 'Strong',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Low',
+            1 => 'Standard',
+            2 => 'Strong',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:AutoLightingOptimizer',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:AutoLightingOptimizer',
     ),
     132608 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LuminanceNoiseReduction',
-      'title' => 'Luminance Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'LuminanceNoiseReduction',
+        'title' => 'Luminance Noise Reduction',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LuminanceNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:LuminanceNoiseReduction',
     ),
     132609 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChrominanceNoiseReduction',
-      'title' => 'Chrominance Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ChrominanceNoiseReduction',
+        'title' => 'Chrominance Noise Reduction',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChrominanceNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChrominanceNoiseReduction',
     ),
     132720 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorMoireReduction',
-      'title' => 'Color Moire Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorMoireReduction',
+        'title' => 'Color Moire Reduction',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorMoireReduction',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorMoireReduction',
     ),
     132865 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ShootingDistance',
-      'title' => 'Shooting Distance',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ShootingDistance',
+        'title' => 'Shooting Distance',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ShootingDistance',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ShootingDistance',
     ),
     132866 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PeripheralIllumination',
-      'title' => 'Peripheral Illumination',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'PeripheralIllumination',
+        'title' => 'Peripheral Illumination',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:PeripheralIllumination',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:PeripheralIllumination',
     ),
     132867 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChromaticAberration',
-      'title' => 'Chromatic Aberration',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ChromaticAberration',
+        'title' => 'Chromatic Aberration',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChromaticAberration',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChromaticAberration',
     ),
     132868 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorBlurOn',
-      'title' => 'Color Blur On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ColorBlurOn',
+        'title' => 'Color Blur On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorBlurOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorBlurOn',
     ),
     132869 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DistortionCorrection',
-      'title' => 'Distortion Correction',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DistortionCorrection',
+        'title' => 'Distortion Correction',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DistortionCorrection',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DistortionCorrection',
     ),
     132870 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DLOSetting',
-      'title' => 'DLO Setting',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DLOSetting',
+        'title' => 'DLO Setting',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DLOSetting',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DLOSetting',
     ),
     132871 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChromaticAberrationRed',
-      'title' => 'Chromatic Aberration Red',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ChromaticAberrationRed',
+        'title' => 'Chromatic Aberration Red',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationRed',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationRed',
     ),
     132872 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChromaticAberrationBlue',
-      'title' => 'Chromatic Aberration Blue',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ChromaticAberrationBlue',
+        'title' => 'Chromatic Aberration Blue',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationBlue',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChromaticAberrationBlue',
     ),
     132873 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DistortionEffect',
-      'title' => 'Distortion Effect',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DistortionEffect',
+        'title' => 'Distortion Effect',
+        'format' =>
         array (
-          0 => 'Shot Settings',
-          1 => 'Emphasize Linearity',
-          2 => 'Emphasize Distance',
-          3 => 'Emphasize Periphery',
-          4 => 'Emphasize Center',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Shot Settings',
+            1 => 'Emphasize Linearity',
+            2 => 'Emphasize Distance',
+            3 => 'Emphasize Periphery',
+            4 => 'Emphasize Center',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DistortionEffect',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DistortionEffect',
     ),
     132875 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DiffractionCorrectionOn',
-      'title' => 'Diffraction Correction On',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'DiffractionCorrectionOn',
+        'title' => 'Diffraction Correction On',
+        'format' =>
         array (
-          0 => 'No',
-          1 => 'Yes',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'No',
+            1 => 'Yes',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:DiffractionCorrectionOn',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:DiffractionCorrectionOn',
     ),
     133376 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorHue',
-      'title' => 'Color Hue',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'ColorHue',
+        'title' => 'Color Hue',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ColorHue',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ColorHue',
     ),
     133377 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SaturationAdj',
-      'title' => 'Saturation Adj',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'SaturationAdj',
+        'title' => 'Saturation Adj',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:SaturationAdj',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:SaturationAdj',
     ),
     133392 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'RedHSL',
-      'title' => 'Red HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'RedHSL',
+        'title' => 'Red HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:RedHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:RedHSL',
     ),
     133393 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'OrangeHSL',
-      'title' => 'Orange HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'OrangeHSL',
+        'title' => 'Orange HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:OrangeHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:OrangeHSL',
     ),
     133394 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'YellowHSL',
-      'title' => 'Yellow HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'YellowHSL',
+        'title' => 'Yellow HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:YellowHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:YellowHSL',
     ),
     133395 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'GreenHSL',
-      'title' => 'Green HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'GreenHSL',
+        'title' => 'Green HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:GreenHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:GreenHSL',
     ),
     133396 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'AquaHSL',
-      'title' => 'Aqua HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'AquaHSL',
+        'title' => 'Aqua HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:AquaHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:AquaHSL',
     ),
     133397 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'BlueHSL',
-      'title' => 'Blue HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'BlueHSL',
+        'title' => 'Blue HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:BlueHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:BlueHSL',
     ),
     133398 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PurpleHSL',
-      'title' => 'Purple HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'PurpleHSL',
+        'title' => 'Purple HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:PurpleHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:PurpleHSL',
     ),
     133399 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'MagentaHSL',
-      'title' => 'Magenta HSL',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'MagentaHSL',
+        'title' => 'Magenta HSL',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:MagentaHSL',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:MagentaHSL',
     ),
     196865 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropAspectRatio',
-      'title' => 'Crop Aspect Ratio',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'CropAspectRatio',
+        'title' => 'Crop Aspect Ratio',
+        'format' =>
         array (
-          0 => 'Free',
-          1 => 'Custom',
-          2 => '1:1',
-          3 => '3:2',
-          4 => '2:3',
-          5 => '4:3',
-          6 => '3:4',
-          7 => '5:4',
-          8 => '4:5',
-          9 => '16:9',
-          10 => '9:16',
+          0 => 7,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Free',
+            1 => 'Custom',
+            2 => '1:1',
+            3 => '3:2',
+            4 => '2:3',
+            5 => '4:3',
+            6 => '3:4',
+            7 => '5:4',
+            8 => '4:5',
+            9 => '16:9',
+            10 => '9:16',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropAspectRatio',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropAspectRatio',
     ),
     196866 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CropAspectRatioCustom',
-      'title' => 'Crop Aspect Ratio Custom',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CropAspectRatioCustom',
+        'title' => 'Crop Aspect Ratio Custom',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CropAspectRatioCustom',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CropAspectRatioCustom',
     ),
     984320 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CustomPictureStyleData',
-      'title' => 'Custom Picture Style Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'CustomPictureStyleData',
+        'title' => 'Custom Picture Style Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:CustomPictureStyleData',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:CustomPictureStyleData',
     ),
     984338 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LensFocalLength',
-      'title' => 'Lens Focal Length',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'LensFocalLength',
+        'title' => 'Lens Focal Length',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LensFocalLength',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:LensFocalLength',
     ),
   ),
 );
