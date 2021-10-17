@@ -24,17 +24,41 @@ class CropInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CropBottomMargin' => 3,
-    'CropLeftMargin' => 0,
-    'CropRightMargin' => 1,
-    'CropTopMargin' => 2,
+    'CropBottomMargin' =>
+    array (
+      0 => 3,
+    ),
+    'CropLeftMargin' =>
+    array (
+      0 => 0,
+    ),
+    'CropRightMargin' =>
+    array (
+      0 => 1,
+    ),
+    'CropTopMargin' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CropBottomMargin' => 3,
-    'Canon:CropLeftMargin' => 0,
-    'Canon:CropRightMargin' => 1,
-    'Canon:CropTopMargin' => 2,
+    'Canon:CropBottomMargin' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:CropLeftMargin' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:CropRightMargin' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:CropTopMargin' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

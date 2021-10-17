@@ -24,27 +24,72 @@ class Interoperability extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'InteropIndex' => 1,
-    'InteropVersion' => 2,
-    'RelatedImageFileFormat' => 4096,
-    'RelatedImageHeight' => 4098,
-    'RelatedImageWidth' => 4097,
+    'InteropIndex' =>
+    array (
+      0 => 1,
+    ),
+    'InteropVersion' =>
+    array (
+      0 => 2,
+    ),
+    'RelatedImageFileFormat' =>
+    array (
+      0 => 4096,
+    ),
+    'RelatedImageHeight' =>
+    array (
+      0 => 4098,
+    ),
+    'RelatedImageWidth' =>
+    array (
+      0 => 4097,
+    ),
   ),
   'itemsByPhpExifTag' =>
   array (
-    'InterOperabilityIndex' => 1,
-    'InterOperabilityVersion' => 2,
-    'RelatedFileFormat' => 4096,
-    'RelatedImageHeight' => 4098,
-    'RelatedImageWidth' => 4097,
+    'InterOperabilityIndex' =>
+    array (
+      0 => 1,
+    ),
+    'InterOperabilityVersion' =>
+    array (
+      0 => 2,
+    ),
+    'RelatedFileFormat' =>
+    array (
+      0 => 4096,
+    ),
+    'RelatedImageHeight' =>
+    array (
+      0 => 4098,
+    ),
+    'RelatedImageWidth' =>
+    array (
+      0 => 4097,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'InteropIFD:InteropIndex' => 1,
-    'InteropIFD:InteropVersion' => 2,
-    'InteropIFD:RelatedImageFileFormat' => 4096,
-    'InteropIFD:RelatedImageHeight' => 4098,
-    'InteropIFD:RelatedImageWidth' => 4097,
+    'InteropIFD:InteropIndex' =>
+    array (
+      0 => 1,
+    ),
+    'InteropIFD:InteropVersion' =>
+    array (
+      0 => 2,
+    ),
+    'InteropIFD:RelatedImageFileFormat' =>
+    array (
+      0 => 4096,
+    ),
+    'InteropIFD:RelatedImageHeight' =>
+    array (
+      0 => 4098,
+    ),
+    'InteropIFD:RelatedImageWidth' =>
+    array (
+      0 => 4097,
+    ),
   ),
   'items' =>
   array (

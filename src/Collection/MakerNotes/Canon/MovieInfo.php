@@ -25,14 +25,40 @@ class MovieInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AudioBitrate' => 108,
-    'AudioChannels' => 112,
-    'AudioSampleRate' => 110,
-    'Duration' => 106,
-    'FrameCount' => 4,
-    'FrameRate' => 6,
-    'VideoCodec' => 116,
-    'indexSize' => 0,
+    'AudioBitrate' =>
+    array (
+      0 => 108,
+    ),
+    'AudioChannels' =>
+    array (
+      0 => 112,
+    ),
+    'AudioSampleRate' =>
+    array (
+      0 => 110,
+    ),
+    'Duration' =>
+    array (
+      0 => 106,
+    ),
+    'FrameCount' =>
+    array (
+      0 => 2,
+      1 => 4,
+    ),
+    'FrameRate' =>
+    array (
+      0 => 1,
+      1 => 6,
+    ),
+    'VideoCodec' =>
+    array (
+      0 => 116,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -148,13 +174,36 @@ class MovieInfo extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AudioBitrate' => 108,
-    'Canon:AudioChannels' => 112,
-    'Canon:AudioSampleRate' => 110,
-    'Canon:Duration' => 106,
-    'Canon:FrameCount' => 4,
-    'Canon:FrameRate' => 6,
-    'Canon:VideoCodec' => 116,
+    'Canon:AudioBitrate' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:AudioChannels' =>
+    array (
+      0 => 112,
+    ),
+    'Canon:AudioSampleRate' =>
+    array (
+      0 => 110,
+    ),
+    'Canon:Duration' =>
+    array (
+      0 => 106,
+    ),
+    'Canon:FrameCount' =>
+    array (
+      0 => 2,
+      1 => 4,
+    ),
+    'Canon:FrameRate' =>
+    array (
+      0 => 1,
+      1 => 6,
+    ),
+    'Canon:VideoCodec' =>
+    array (
+      0 => 116,
+    ),
   ),
 );
 }

@@ -21,13 +21,25 @@ class Uuid extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CompressorVersion' => 'CNCV',
-    'ThumbnailImage' => 'THMB',
+    'CompressorVersion' =>
+    array (
+      0 => 'CNCV',
+    ),
+    'ThumbnailImage' =>
+    array (
+      0 => 'THMB',
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CompressorVersion' => 'CNCV',
-    'Canon:ThumbnailImage' => 'THMB',
+    'Canon:CompressorVersion' =>
+    array (
+      0 => 'CNCV',
+    ),
+    'Canon:ThumbnailImage' =>
+    array (
+      0 => 'THMB',
+    ),
   ),
   'items' =>
   array (

@@ -24,11 +24,17 @@ class LensInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'LensSerialNumber' => 0,
+    'LensSerialNumber' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:LensSerialNumber' => 0,
+    'Canon:LensSerialNumber' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (

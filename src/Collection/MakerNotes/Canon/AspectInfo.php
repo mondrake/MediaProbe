@@ -24,19 +24,49 @@ class AspectInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AspectRatio' => 0,
-    'CroppedImageHeight' => 2,
-    'CroppedImageLeft' => 3,
-    'CroppedImageTop' => 4,
-    'CroppedImageWidth' => 1,
+    'AspectRatio' =>
+    array (
+      0 => 0,
+    ),
+    'CroppedImageHeight' =>
+    array (
+      0 => 2,
+    ),
+    'CroppedImageLeft' =>
+    array (
+      0 => 3,
+    ),
+    'CroppedImageTop' =>
+    array (
+      0 => 4,
+    ),
+    'CroppedImageWidth' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AspectRatio' => 0,
-    'Canon:CroppedImageHeight' => 2,
-    'Canon:CroppedImageLeft' => 3,
-    'Canon:CroppedImageTop' => 4,
-    'Canon:CroppedImageWidth' => 1,
+    'Canon:AspectRatio' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:CroppedImageHeight' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:CroppedImageLeft' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:CroppedImageTop' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:CroppedImageWidth' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

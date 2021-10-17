@@ -24,43 +24,145 @@ class Functions10D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBSequenceAutoCancel' => 9,
-    'AFAssist' => 5,
-    'AFPointRegistration' => 7,
-    'AssistButtonFunction' => 13,
-    'ExposureLevelIncrements' => 6,
-    'FillFlashAutoReduction' => 14,
-    'FlashSyncSpeedAv' => 3,
-    'LensAFStopButton' => 17,
-    'MenuButtonDisplayPosition' => 11,
-    'MirrorLockup' => 12,
-    'RawAndJpgRecording' => 8,
-    'SafetyShiftInAvOrTv' => 16,
-    'SetButtonWhenShooting' => 1,
-    'Shutter-AELock' => 4,
-    'ShutterCurtainSync' => 15,
-    'ShutterReleaseNoCFCard' => 2,
-    'SuperimposedDisplay' => 10,
+    'AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'AFAssist' =>
+    array (
+      0 => 5,
+    ),
+    'AFPointRegistration' =>
+    array (
+      0 => 7,
+    ),
+    'AssistButtonFunction' =>
+    array (
+      0 => 13,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'FillFlashAutoReduction' =>
+    array (
+      0 => 14,
+    ),
+    'FlashSyncSpeedAv' =>
+    array (
+      0 => 3,
+    ),
+    'LensAFStopButton' =>
+    array (
+      0 => 17,
+    ),
+    'MenuButtonDisplayPosition' =>
+    array (
+      0 => 11,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'RawAndJpgRecording' =>
+    array (
+      0 => 8,
+    ),
+    'SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'SetButtonWhenShooting' =>
+    array (
+      0 => 1,
+    ),
+    'Shutter-AELock' =>
+    array (
+      0 => 4,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'ShutterReleaseNoCFCard' =>
+    array (
+      0 => 2,
+    ),
+    'SuperimposedDisplay' =>
+    array (
+      0 => 10,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AEBSequenceAutoCancel' => 9,
-    'CanonCustom:AFAssist' => 5,
-    'CanonCustom:AFPointRegistration' => 7,
-    'CanonCustom:AssistButtonFunction' => 13,
-    'CanonCustom:ExposureLevelIncrements' => 6,
-    'CanonCustom:FillFlashAutoReduction' => 14,
-    'CanonCustom:FlashSyncSpeedAv' => 3,
-    'CanonCustom:LensAFStopButton' => 17,
-    'CanonCustom:MenuButtonDisplayPosition' => 11,
-    'CanonCustom:MirrorLockup' => 12,
-    'CanonCustom:RawAndJpgRecording' => 8,
-    'CanonCustom:SafetyShiftInAvOrTv' => 16,
-    'CanonCustom:SetButtonWhenShooting' => 1,
-    'CanonCustom:Shutter-AELock' => 4,
-    'CanonCustom:ShutterCurtainSync' => 15,
-    'CanonCustom:ShutterReleaseNoCFCard' => 2,
-    'CanonCustom:SuperimposedDisplay' => 10,
+    'CanonCustom:AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:AFAssist' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:AFPointRegistration' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:AssistButtonFunction' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:FillFlashAutoReduction' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:FlashSyncSpeedAv' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:LensAFStopButton' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:MenuButtonDisplayPosition' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:RawAndJpgRecording' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:SetButtonWhenShooting' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:Shutter-AELock' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:ShutterReleaseNoCFCard' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:SuperimposedDisplay' =>
+    array (
+      0 => 10,
+    ),
   ),
   'items' =>
   array (

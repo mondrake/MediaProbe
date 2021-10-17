@@ -24,39 +24,129 @@ class FunctionsD30 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBSequenceAutoCancel' => 7,
-    'AFAssist' => 5,
-    'ExposureLevelIncrements' => 4,
-    'FillFlashAutoReduction' => 10,
-    'FlashSyncSpeedAv' => 6,
-    'LensAFStopButton' => 9,
-    'LongExposureNoiseReduction' => 1,
-    'MenuButtonReturn' => 11,
-    'MirrorLockup' => 3,
-    'SensorCleaning' => 13,
-    'SetButtonWhenShooting' => 12,
-    'Shutter-AELock' => 2,
-    'ShutterCurtainSync' => 8,
-    'ShutterReleaseNoCFCard' => 15,
-    'SuperimposedDisplay' => 14,
+    'AEBSequenceAutoCancel' =>
+    array (
+      0 => 7,
+    ),
+    'AFAssist' =>
+    array (
+      0 => 5,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 4,
+    ),
+    'FillFlashAutoReduction' =>
+    array (
+      0 => 10,
+    ),
+    'FlashSyncSpeedAv' =>
+    array (
+      0 => 6,
+    ),
+    'LensAFStopButton' =>
+    array (
+      0 => 9,
+    ),
+    'LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'MenuButtonReturn' =>
+    array (
+      0 => 11,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 3,
+    ),
+    'SensorCleaning' =>
+    array (
+      0 => 13,
+    ),
+    'SetButtonWhenShooting' =>
+    array (
+      0 => 12,
+    ),
+    'Shutter-AELock' =>
+    array (
+      0 => 2,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 8,
+    ),
+    'ShutterReleaseNoCFCard' =>
+    array (
+      0 => 15,
+    ),
+    'SuperimposedDisplay' =>
+    array (
+      0 => 14,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AEBSequenceAutoCancel' => 7,
-    'CanonCustom:AFAssist' => 5,
-    'CanonCustom:ExposureLevelIncrements' => 4,
-    'CanonCustom:FillFlashAutoReduction' => 10,
-    'CanonCustom:FlashSyncSpeedAv' => 6,
-    'CanonCustom:LensAFStopButton' => 9,
-    'CanonCustom:LongExposureNoiseReduction' => 1,
-    'CanonCustom:MenuButtonReturn' => 11,
-    'CanonCustom:MirrorLockup' => 3,
-    'CanonCustom:SensorCleaning' => 13,
-    'CanonCustom:SetButtonWhenShooting' => 12,
-    'CanonCustom:Shutter-AELock' => 2,
-    'CanonCustom:ShutterCurtainSync' => 8,
-    'CanonCustom:ShutterReleaseNoCFCard' => 15,
-    'CanonCustom:SuperimposedDisplay' => 14,
+    'CanonCustom:AEBSequenceAutoCancel' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:AFAssist' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:FillFlashAutoReduction' =>
+    array (
+      0 => 10,
+    ),
+    'CanonCustom:FlashSyncSpeedAv' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:LensAFStopButton' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:MenuButtonReturn' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:SensorCleaning' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:SetButtonWhenShooting' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:Shutter-AELock' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:ShutterReleaseNoCFCard' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:SuperimposedDisplay' =>
+    array (
+      0 => 14,
+    ),
   ),
   'items' =>
   array (

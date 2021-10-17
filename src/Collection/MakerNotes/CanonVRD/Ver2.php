@@ -24,307 +24,1201 @@ class Ver2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AberrationCorrectionDistance' => 105,
-    'AngleAdj' => 139,
-    'AutoLightingOptimizer' => 111,
-    'AutoLightingOptimizerOn' => 110,
-    'CameraRawColorTone' => 225,
-    'CameraRawContrast' => 227,
-    'CameraRawHighlightPoint' => 230,
-    'CameraRawLinear' => 228,
-    'CameraRawOutputHighlightPoint' => 232,
-    'CameraRawOutputShadowPoint' => 233,
-    'CameraRawSaturation' => 226,
-    'CameraRawShadowPoint' => 231,
-    'CameraRawSharpness' => 229,
-    'CheckMark2' => 142,
-    'ChromaticAberration' => 102,
-    'ChromaticAberrationBlue' => 107,
-    'ChromaticAberrationOn' => 98,
-    'ChromaticAberrationRed' => 106,
-    'ChrominanceNR_TIFF_JPEG' => 96,
-    'ChrominanceNoiseReduction' => 94,
-    'ColorBlur' => 101,
-    'CropCircleActive' => 214,
-    'CropCircleRadius' => 217,
-    'CropCircleX' => 215,
-    'CropCircleY' => 216,
-    'CustomColorTone' => 76,
-    'CustomContrast' => 78,
-    'CustomDefaultUnsharpFineness' => 190,
-    'CustomDefaultUnsharpStrength' => 188,
-    'CustomDefaultUnsharpThreshold' => 192,
-    'CustomLinear' => 79,
-    'CustomOutputHighlightPoint' => 83,
-    'CustomOutputShadowPoint' => 84,
-    'CustomPictureStyleData' => 88,
-    'CustomRawHighlight' => 124,
-    'CustomRawHighlightPoint' => 81,
-    'CustomRawShadow' => 133,
-    'CustomRawShadowPoint' => 82,
-    'CustomSaturation' => 77,
-    'CustomSharpness' => 80,
-    'CustomUnsharpMaskFineness' => 184,
-    'CustomUnsharpMaskStrength' => 182,
-    'CustomUnsharpMaskThreshold' => 186,
-    'DLODataLength' => 223,
-    'DLOOn' => 220,
-    'DLOSetting' => 221,
-    'DLOShootingDistance' => 222,
-    'DistortionCorrection' => 103,
-    'DistortionCorrectionOn' => 99,
-    'FaithfulOutputHighlightPoint' => 56,
-    'FaithfulOutputShadowPoint' => 57,
-    'FaithfulRawColorTone' => 49,
-    'FaithfulRawContrast' => 51,
-    'FaithfulRawHighlight' => 121,
-    'FaithfulRawHighlightPoint' => 54,
-    'FaithfulRawLinear' => 52,
-    'FaithfulRawSaturation' => 50,
-    'FaithfulRawShadow' => 130,
-    'FaithfulRawShadowPoint' => 55,
-    'FaithfulRawSharpness' => 53,
-    'FaithfulUnsharpMaskFineness' => 172,
-    'FaithfulUnsharpMaskStrength' => 170,
-    'FaithfulUnsharpMaskThreshold' => 174,
-    'IsCustomPictureStyle' => 3,
-    'LandscapeOutputHighlightPoint' => 38,
-    'LandscapeOutputShadowPoint' => 39,
-    'LandscapeRawColorTone' => 31,
-    'LandscapeRawContrast' => 33,
-    'LandscapeRawHighlight' => 119,
-    'LandscapeRawHighlightPoint' => 36,
-    'LandscapeRawLinear' => 34,
-    'LandscapeRawSaturation' => 32,
-    'LandscapeRawShadow' => 128,
-    'LandscapeRawShadowPoint' => 37,
-    'LandscapeRawSharpness' => 35,
-    'LandscapeUnsharpMaskFineness' => 160,
-    'LandscapeUnsharpMaskStrength' => 158,
-    'LandscapeUnsharpMaskThreshold' => 162,
-    'LuminanceNR_TIFF_JPEG' => 109,
-    'LuminanceNoiseReduction' => 95,
-    'MonochromeContrast' => 60,
-    'MonochromeFilterEffect' => 58,
-    'MonochromeLinear' => 61,
-    'MonochromeOutputHighlightPoint' => 65,
-    'MonochromeOutputShadowPoint' => 66,
-    'MonochromeRawHighlight' => 122,
-    'MonochromeRawHighlightPoint' => 63,
-    'MonochromeRawShadow' => 131,
-    'MonochromeRawShadowPoint' => 64,
-    'MonochromeSharpness' => 62,
-    'MonochromeToningEffect' => 59,
-    'MonochromeUnsharpMaskFineness' => 178,
-    'MonochromeUnsharpMaskStrength' => 176,
-    'MonochromeUnsharpMaskThreshold' => 180,
-    'NeutraUnsharpMaskStrength' => 164,
-    'NeutralOutputHighlightPoint' => 47,
-    'NeutralOutputShadowPoint' => 48,
-    'NeutralRawColorTone' => 40,
-    'NeutralRawContrast' => 42,
-    'NeutralRawHighlight' => 120,
-    'NeutralRawHighlightPoint' => 45,
-    'NeutralRawLinear' => 43,
-    'NeutralRawSaturation' => 41,
-    'NeutralRawShadow' => 129,
-    'NeutralRawShadowPoint' => 46,
-    'NeutralRawSharpness' => 44,
-    'NeutralUnsharpMaskFineness' => 166,
-    'NeutralUnsharpMaskThreshold' => 168,
-    'PeripheralIllumination' => 104,
-    'PeripheralIlluminationOn' => 100,
-    'PictureStyle' => 2,
-    'PortraitOutputHighlightPoint' => 29,
-    'PortraitOutputShadowPoint' => 30,
-    'PortraitRawColorTone' => 22,
-    'PortraitRawContrast' => 24,
-    'PortraitRawHighlight' => 118,
-    'PortraitRawHighlightPoint' => 27,
-    'PortraitRawLinear' => 25,
-    'PortraitRawSaturation' => 23,
-    'PortraitRawShadow' => 127,
-    'PortraitRawShadowPoint' => 28,
-    'PortraitRawSharpness' => 26,
-    'PortraitUnsharpMaskFineness' => 154,
-    'PortraitUnsharpMaskStrength' => 152,
-    'PortraitUnsharpMaskThreshold' => 156,
-    'StandardOutputHighlightPoint' => 20,
-    'StandardOutputShadowPoint' => 21,
-    'StandardRawColorTone' => 13,
-    'StandardRawContrast' => 15,
-    'StandardRawHighlight' => 117,
-    'StandardRawHighlightPoint' => 18,
-    'StandardRawLinear' => 16,
-    'StandardRawSaturation' => 14,
-    'StandardRawShadow' => 126,
-    'StandardRawShadowPoint' => 19,
-    'StandardRawSharpness' => 17,
-    'StandardUnsharpMaskFineness' => 148,
-    'StandardUnsharpMaskStrength' => 146,
-    'StandardUnsharpMaskThreshold' => 150,
-    'UnknownContrast' => 69,
-    'UnknownLinear' => 70,
-    'UnknownOutputHighlightPoint' => 74,
-    'UnknownOutputShadowPoint' => 75,
-    'UnknownRawHighlight' => 123,
-    'UnknownRawHighlightPoint' => 72,
-    'UnknownRawShadow' => 132,
-    'UnknownRawShadowPoint' => 73,
-    'UnknownSharpness' => 71,
-    'UnsharpMask' => 144,
+    'AberrationCorrectionDistance' =>
+    array (
+      0 => 105,
+    ),
+    'AngleAdj' =>
+    array (
+      0 => 139,
+    ),
+    'AutoLightingOptimizer' =>
+    array (
+      0 => 111,
+    ),
+    'AutoLightingOptimizerOn' =>
+    array (
+      0 => 110,
+    ),
+    'CameraRawColorTone' =>
+    array (
+      0 => 225,
+    ),
+    'CameraRawContrast' =>
+    array (
+      0 => 227,
+    ),
+    'CameraRawHighlightPoint' =>
+    array (
+      0 => 230,
+    ),
+    'CameraRawLinear' =>
+    array (
+      0 => 228,
+    ),
+    'CameraRawOutputHighlightPoint' =>
+    array (
+      0 => 232,
+    ),
+    'CameraRawOutputShadowPoint' =>
+    array (
+      0 => 233,
+    ),
+    'CameraRawSaturation' =>
+    array (
+      0 => 226,
+    ),
+    'CameraRawShadowPoint' =>
+    array (
+      0 => 231,
+    ),
+    'CameraRawSharpness' =>
+    array (
+      0 => 229,
+    ),
+    'CheckMark2' =>
+    array (
+      0 => 142,
+    ),
+    'ChromaticAberration' =>
+    array (
+      0 => 102,
+    ),
+    'ChromaticAberrationBlue' =>
+    array (
+      0 => 107,
+    ),
+    'ChromaticAberrationOn' =>
+    array (
+      0 => 98,
+    ),
+    'ChromaticAberrationRed' =>
+    array (
+      0 => 106,
+    ),
+    'ChrominanceNR_TIFF_JPEG' =>
+    array (
+      0 => 96,
+    ),
+    'ChrominanceNoiseReduction' =>
+    array (
+      0 => 94,
+    ),
+    'ColorBlur' =>
+    array (
+      0 => 101,
+    ),
+    'CropCircleActive' =>
+    array (
+      0 => 214,
+    ),
+    'CropCircleRadius' =>
+    array (
+      0 => 217,
+    ),
+    'CropCircleX' =>
+    array (
+      0 => 215,
+    ),
+    'CropCircleY' =>
+    array (
+      0 => 216,
+    ),
+    'CustomColorTone' =>
+    array (
+      0 => 76,
+    ),
+    'CustomContrast' =>
+    array (
+      0 => 78,
+    ),
+    'CustomDefaultUnsharpFineness' =>
+    array (
+      0 => 190,
+    ),
+    'CustomDefaultUnsharpStrength' =>
+    array (
+      0 => 188,
+    ),
+    'CustomDefaultUnsharpThreshold' =>
+    array (
+      0 => 192,
+    ),
+    'CustomLinear' =>
+    array (
+      0 => 79,
+    ),
+    'CustomOutputHighlightPoint' =>
+    array (
+      0 => 83,
+    ),
+    'CustomOutputShadowPoint' =>
+    array (
+      0 => 84,
+    ),
+    'CustomPictureStyleData' =>
+    array (
+      0 => 88,
+    ),
+    'CustomRawHighlight' =>
+    array (
+      0 => 124,
+    ),
+    'CustomRawHighlightPoint' =>
+    array (
+      0 => 81,
+    ),
+    'CustomRawShadow' =>
+    array (
+      0 => 133,
+    ),
+    'CustomRawShadowPoint' =>
+    array (
+      0 => 82,
+    ),
+    'CustomSaturation' =>
+    array (
+      0 => 77,
+    ),
+    'CustomSharpness' =>
+    array (
+      0 => 80,
+    ),
+    'CustomUnsharpMaskFineness' =>
+    array (
+      0 => 184,
+    ),
+    'CustomUnsharpMaskStrength' =>
+    array (
+      0 => 182,
+    ),
+    'CustomUnsharpMaskThreshold' =>
+    array (
+      0 => 186,
+    ),
+    'DLODataLength' =>
+    array (
+      0 => 223,
+    ),
+    'DLOOn' =>
+    array (
+      0 => 220,
+    ),
+    'DLOSetting' =>
+    array (
+      0 => 221,
+    ),
+    'DLOShootingDistance' =>
+    array (
+      0 => 222,
+    ),
+    'DistortionCorrection' =>
+    array (
+      0 => 103,
+    ),
+    'DistortionCorrectionOn' =>
+    array (
+      0 => 99,
+    ),
+    'FaithfulOutputHighlightPoint' =>
+    array (
+      0 => 56,
+    ),
+    'FaithfulOutputShadowPoint' =>
+    array (
+      0 => 57,
+    ),
+    'FaithfulRawColorTone' =>
+    array (
+      0 => 49,
+    ),
+    'FaithfulRawContrast' =>
+    array (
+      0 => 51,
+    ),
+    'FaithfulRawHighlight' =>
+    array (
+      0 => 121,
+    ),
+    'FaithfulRawHighlightPoint' =>
+    array (
+      0 => 54,
+    ),
+    'FaithfulRawLinear' =>
+    array (
+      0 => 52,
+    ),
+    'FaithfulRawSaturation' =>
+    array (
+      0 => 50,
+    ),
+    'FaithfulRawShadow' =>
+    array (
+      0 => 130,
+    ),
+    'FaithfulRawShadowPoint' =>
+    array (
+      0 => 55,
+    ),
+    'FaithfulRawSharpness' =>
+    array (
+      0 => 53,
+    ),
+    'FaithfulUnsharpMaskFineness' =>
+    array (
+      0 => 172,
+    ),
+    'FaithfulUnsharpMaskStrength' =>
+    array (
+      0 => 170,
+    ),
+    'FaithfulUnsharpMaskThreshold' =>
+    array (
+      0 => 174,
+    ),
+    'IsCustomPictureStyle' =>
+    array (
+      0 => 3,
+    ),
+    'LandscapeOutputHighlightPoint' =>
+    array (
+      0 => 38,
+    ),
+    'LandscapeOutputShadowPoint' =>
+    array (
+      0 => 39,
+    ),
+    'LandscapeRawColorTone' =>
+    array (
+      0 => 31,
+    ),
+    'LandscapeRawContrast' =>
+    array (
+      0 => 33,
+    ),
+    'LandscapeRawHighlight' =>
+    array (
+      0 => 119,
+    ),
+    'LandscapeRawHighlightPoint' =>
+    array (
+      0 => 36,
+    ),
+    'LandscapeRawLinear' =>
+    array (
+      0 => 34,
+    ),
+    'LandscapeRawSaturation' =>
+    array (
+      0 => 32,
+    ),
+    'LandscapeRawShadow' =>
+    array (
+      0 => 128,
+    ),
+    'LandscapeRawShadowPoint' =>
+    array (
+      0 => 37,
+    ),
+    'LandscapeRawSharpness' =>
+    array (
+      0 => 35,
+    ),
+    'LandscapeUnsharpMaskFineness' =>
+    array (
+      0 => 160,
+    ),
+    'LandscapeUnsharpMaskStrength' =>
+    array (
+      0 => 158,
+    ),
+    'LandscapeUnsharpMaskThreshold' =>
+    array (
+      0 => 162,
+    ),
+    'LuminanceNR_TIFF_JPEG' =>
+    array (
+      0 => 109,
+    ),
+    'LuminanceNoiseReduction' =>
+    array (
+      0 => 95,
+    ),
+    'MonochromeContrast' =>
+    array (
+      0 => 60,
+    ),
+    'MonochromeFilterEffect' =>
+    array (
+      0 => 58,
+    ),
+    'MonochromeLinear' =>
+    array (
+      0 => 61,
+    ),
+    'MonochromeOutputHighlightPoint' =>
+    array (
+      0 => 65,
+    ),
+    'MonochromeOutputShadowPoint' =>
+    array (
+      0 => 66,
+    ),
+    'MonochromeRawHighlight' =>
+    array (
+      0 => 122,
+    ),
+    'MonochromeRawHighlightPoint' =>
+    array (
+      0 => 63,
+    ),
+    'MonochromeRawShadow' =>
+    array (
+      0 => 131,
+    ),
+    'MonochromeRawShadowPoint' =>
+    array (
+      0 => 64,
+    ),
+    'MonochromeSharpness' =>
+    array (
+      0 => 62,
+    ),
+    'MonochromeToningEffect' =>
+    array (
+      0 => 59,
+    ),
+    'MonochromeUnsharpMaskFineness' =>
+    array (
+      0 => 178,
+    ),
+    'MonochromeUnsharpMaskStrength' =>
+    array (
+      0 => 176,
+    ),
+    'MonochromeUnsharpMaskThreshold' =>
+    array (
+      0 => 180,
+    ),
+    'NeutraUnsharpMaskStrength' =>
+    array (
+      0 => 164,
+    ),
+    'NeutralOutputHighlightPoint' =>
+    array (
+      0 => 47,
+    ),
+    'NeutralOutputShadowPoint' =>
+    array (
+      0 => 48,
+    ),
+    'NeutralRawColorTone' =>
+    array (
+      0 => 40,
+    ),
+    'NeutralRawContrast' =>
+    array (
+      0 => 42,
+    ),
+    'NeutralRawHighlight' =>
+    array (
+      0 => 120,
+    ),
+    'NeutralRawHighlightPoint' =>
+    array (
+      0 => 45,
+    ),
+    'NeutralRawLinear' =>
+    array (
+      0 => 43,
+    ),
+    'NeutralRawSaturation' =>
+    array (
+      0 => 41,
+    ),
+    'NeutralRawShadow' =>
+    array (
+      0 => 129,
+    ),
+    'NeutralRawShadowPoint' =>
+    array (
+      0 => 46,
+    ),
+    'NeutralRawSharpness' =>
+    array (
+      0 => 44,
+    ),
+    'NeutralUnsharpMaskFineness' =>
+    array (
+      0 => 166,
+    ),
+    'NeutralUnsharpMaskThreshold' =>
+    array (
+      0 => 168,
+    ),
+    'PeripheralIllumination' =>
+    array (
+      0 => 104,
+    ),
+    'PeripheralIlluminationOn' =>
+    array (
+      0 => 100,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 2,
+    ),
+    'PortraitOutputHighlightPoint' =>
+    array (
+      0 => 29,
+    ),
+    'PortraitOutputShadowPoint' =>
+    array (
+      0 => 30,
+    ),
+    'PortraitRawColorTone' =>
+    array (
+      0 => 22,
+    ),
+    'PortraitRawContrast' =>
+    array (
+      0 => 24,
+    ),
+    'PortraitRawHighlight' =>
+    array (
+      0 => 118,
+    ),
+    'PortraitRawHighlightPoint' =>
+    array (
+      0 => 27,
+    ),
+    'PortraitRawLinear' =>
+    array (
+      0 => 25,
+    ),
+    'PortraitRawSaturation' =>
+    array (
+      0 => 23,
+    ),
+    'PortraitRawShadow' =>
+    array (
+      0 => 127,
+    ),
+    'PortraitRawShadowPoint' =>
+    array (
+      0 => 28,
+    ),
+    'PortraitRawSharpness' =>
+    array (
+      0 => 26,
+    ),
+    'PortraitUnsharpMaskFineness' =>
+    array (
+      0 => 154,
+    ),
+    'PortraitUnsharpMaskStrength' =>
+    array (
+      0 => 152,
+    ),
+    'PortraitUnsharpMaskThreshold' =>
+    array (
+      0 => 156,
+    ),
+    'StandardOutputHighlightPoint' =>
+    array (
+      0 => 20,
+    ),
+    'StandardOutputShadowPoint' =>
+    array (
+      0 => 21,
+    ),
+    'StandardRawColorTone' =>
+    array (
+      0 => 13,
+    ),
+    'StandardRawContrast' =>
+    array (
+      0 => 15,
+    ),
+    'StandardRawHighlight' =>
+    array (
+      0 => 117,
+    ),
+    'StandardRawHighlightPoint' =>
+    array (
+      0 => 18,
+    ),
+    'StandardRawLinear' =>
+    array (
+      0 => 16,
+    ),
+    'StandardRawSaturation' =>
+    array (
+      0 => 14,
+    ),
+    'StandardRawShadow' =>
+    array (
+      0 => 126,
+    ),
+    'StandardRawShadowPoint' =>
+    array (
+      0 => 19,
+    ),
+    'StandardRawSharpness' =>
+    array (
+      0 => 17,
+    ),
+    'StandardUnsharpMaskFineness' =>
+    array (
+      0 => 148,
+    ),
+    'StandardUnsharpMaskStrength' =>
+    array (
+      0 => 146,
+    ),
+    'StandardUnsharpMaskThreshold' =>
+    array (
+      0 => 150,
+    ),
+    'UnknownContrast' =>
+    array (
+      0 => 69,
+    ),
+    'UnknownLinear' =>
+    array (
+      0 => 70,
+    ),
+    'UnknownOutputHighlightPoint' =>
+    array (
+      0 => 74,
+    ),
+    'UnknownOutputShadowPoint' =>
+    array (
+      0 => 75,
+    ),
+    'UnknownRawHighlight' =>
+    array (
+      0 => 123,
+    ),
+    'UnknownRawHighlightPoint' =>
+    array (
+      0 => 72,
+    ),
+    'UnknownRawShadow' =>
+    array (
+      0 => 132,
+    ),
+    'UnknownRawShadowPoint' =>
+    array (
+      0 => 73,
+    ),
+    'UnknownSharpness' =>
+    array (
+      0 => 71,
+    ),
+    'UnsharpMask' =>
+    array (
+      0 => 144,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:AberrationCorrectionDistance' => 105,
-    'CanonVRD:AngleAdj' => 139,
-    'CanonVRD:AutoLightingOptimizer' => 111,
-    'CanonVRD:AutoLightingOptimizerOn' => 110,
-    'CanonVRD:CameraRawColorTone' => 225,
-    'CanonVRD:CameraRawContrast' => 227,
-    'CanonVRD:CameraRawHighlightPoint' => 230,
-    'CanonVRD:CameraRawLinear' => 228,
-    'CanonVRD:CameraRawOutputHighlightPoint' => 232,
-    'CanonVRD:CameraRawOutputShadowPoint' => 233,
-    'CanonVRD:CameraRawSaturation' => 226,
-    'CanonVRD:CameraRawShadowPoint' => 231,
-    'CanonVRD:CameraRawSharpness' => 229,
-    'CanonVRD:CheckMark2' => 142,
-    'CanonVRD:ChromaticAberration' => 102,
-    'CanonVRD:ChromaticAberrationBlue' => 107,
-    'CanonVRD:ChromaticAberrationOn' => 98,
-    'CanonVRD:ChromaticAberrationRed' => 106,
-    'CanonVRD:ChrominanceNR_TIFF_JPEG' => 96,
-    'CanonVRD:ChrominanceNoiseReduction' => 94,
-    'CanonVRD:ColorBlur' => 101,
-    'CanonVRD:CropCircleActive' => 214,
-    'CanonVRD:CropCircleRadius' => 217,
-    'CanonVRD:CropCircleX' => 215,
-    'CanonVRD:CropCircleY' => 216,
-    'CanonVRD:CustomColorTone' => 76,
-    'CanonVRD:CustomContrast' => 78,
-    'CanonVRD:CustomDefaultUnsharpFineness' => 190,
-    'CanonVRD:CustomDefaultUnsharpStrength' => 188,
-    'CanonVRD:CustomDefaultUnsharpThreshold' => 192,
-    'CanonVRD:CustomLinear' => 79,
-    'CanonVRD:CustomOutputHighlightPoint' => 83,
-    'CanonVRD:CustomOutputShadowPoint' => 84,
-    'CanonVRD:CustomPictureStyleData' => 88,
-    'CanonVRD:CustomRawHighlight' => 124,
-    'CanonVRD:CustomRawHighlightPoint' => 81,
-    'CanonVRD:CustomRawShadow' => 133,
-    'CanonVRD:CustomRawShadowPoint' => 82,
-    'CanonVRD:CustomSaturation' => 77,
-    'CanonVRD:CustomSharpness' => 80,
-    'CanonVRD:CustomUnsharpMaskFineness' => 184,
-    'CanonVRD:CustomUnsharpMaskStrength' => 182,
-    'CanonVRD:CustomUnsharpMaskThreshold' => 186,
-    'CanonVRD:DLODataLength' => 223,
-    'CanonVRD:DLOOn' => 220,
-    'CanonVRD:DLOSetting' => 221,
-    'CanonVRD:DLOShootingDistance' => 222,
-    'CanonVRD:DistortionCorrection' => 103,
-    'CanonVRD:DistortionCorrectionOn' => 99,
-    'CanonVRD:FaithfulOutputHighlightPoint' => 56,
-    'CanonVRD:FaithfulOutputShadowPoint' => 57,
-    'CanonVRD:FaithfulRawColorTone' => 49,
-    'CanonVRD:FaithfulRawContrast' => 51,
-    'CanonVRD:FaithfulRawHighlight' => 121,
-    'CanonVRD:FaithfulRawHighlightPoint' => 54,
-    'CanonVRD:FaithfulRawLinear' => 52,
-    'CanonVRD:FaithfulRawSaturation' => 50,
-    'CanonVRD:FaithfulRawShadow' => 130,
-    'CanonVRD:FaithfulRawShadowPoint' => 55,
-    'CanonVRD:FaithfulRawSharpness' => 53,
-    'CanonVRD:FaithfulUnsharpMaskFineness' => 172,
-    'CanonVRD:FaithfulUnsharpMaskStrength' => 170,
-    'CanonVRD:FaithfulUnsharpMaskThreshold' => 174,
-    'CanonVRD:IsCustomPictureStyle' => 3,
-    'CanonVRD:LandscapeOutputHighlightPoint' => 38,
-    'CanonVRD:LandscapeOutputShadowPoint' => 39,
-    'CanonVRD:LandscapeRawColorTone' => 31,
-    'CanonVRD:LandscapeRawContrast' => 33,
-    'CanonVRD:LandscapeRawHighlight' => 119,
-    'CanonVRD:LandscapeRawHighlightPoint' => 36,
-    'CanonVRD:LandscapeRawLinear' => 34,
-    'CanonVRD:LandscapeRawSaturation' => 32,
-    'CanonVRD:LandscapeRawShadow' => 128,
-    'CanonVRD:LandscapeRawShadowPoint' => 37,
-    'CanonVRD:LandscapeRawSharpness' => 35,
-    'CanonVRD:LandscapeUnsharpMaskFineness' => 160,
-    'CanonVRD:LandscapeUnsharpMaskStrength' => 158,
-    'CanonVRD:LandscapeUnsharpMaskThreshold' => 162,
-    'CanonVRD:LuminanceNR_TIFF_JPEG' => 109,
-    'CanonVRD:LuminanceNoiseReduction' => 95,
-    'CanonVRD:MonochromeContrast' => 60,
-    'CanonVRD:MonochromeFilterEffect' => 58,
-    'CanonVRD:MonochromeLinear' => 61,
-    'CanonVRD:MonochromeOutputHighlightPoint' => 65,
-    'CanonVRD:MonochromeOutputShadowPoint' => 66,
-    'CanonVRD:MonochromeRawHighlight' => 122,
-    'CanonVRD:MonochromeRawHighlightPoint' => 63,
-    'CanonVRD:MonochromeRawShadow' => 131,
-    'CanonVRD:MonochromeRawShadowPoint' => 64,
-    'CanonVRD:MonochromeSharpness' => 62,
-    'CanonVRD:MonochromeToningEffect' => 59,
-    'CanonVRD:MonochromeUnsharpMaskFineness' => 178,
-    'CanonVRD:MonochromeUnsharpMaskStrength' => 176,
-    'CanonVRD:MonochromeUnsharpMaskThreshold' => 180,
-    'CanonVRD:NeutraUnsharpMaskStrength' => 164,
-    'CanonVRD:NeutralOutputHighlightPoint' => 47,
-    'CanonVRD:NeutralOutputShadowPoint' => 48,
-    'CanonVRD:NeutralRawColorTone' => 40,
-    'CanonVRD:NeutralRawContrast' => 42,
-    'CanonVRD:NeutralRawHighlight' => 120,
-    'CanonVRD:NeutralRawHighlightPoint' => 45,
-    'CanonVRD:NeutralRawLinear' => 43,
-    'CanonVRD:NeutralRawSaturation' => 41,
-    'CanonVRD:NeutralRawShadow' => 129,
-    'CanonVRD:NeutralRawShadowPoint' => 46,
-    'CanonVRD:NeutralRawSharpness' => 44,
-    'CanonVRD:NeutralUnsharpMaskFineness' => 166,
-    'CanonVRD:NeutralUnsharpMaskThreshold' => 168,
-    'CanonVRD:PeripheralIllumination' => 104,
-    'CanonVRD:PeripheralIlluminationOn' => 100,
-    'CanonVRD:PictureStyle' => 2,
-    'CanonVRD:PortraitOutputHighlightPoint' => 29,
-    'CanonVRD:PortraitOutputShadowPoint' => 30,
-    'CanonVRD:PortraitRawColorTone' => 22,
-    'CanonVRD:PortraitRawContrast' => 24,
-    'CanonVRD:PortraitRawHighlight' => 118,
-    'CanonVRD:PortraitRawHighlightPoint' => 27,
-    'CanonVRD:PortraitRawLinear' => 25,
-    'CanonVRD:PortraitRawSaturation' => 23,
-    'CanonVRD:PortraitRawShadow' => 127,
-    'CanonVRD:PortraitRawShadowPoint' => 28,
-    'CanonVRD:PortraitRawSharpness' => 26,
-    'CanonVRD:PortraitUnsharpMaskFineness' => 154,
-    'CanonVRD:PortraitUnsharpMaskStrength' => 152,
-    'CanonVRD:PortraitUnsharpMaskThreshold' => 156,
-    'CanonVRD:StandardOutputHighlightPoint' => 20,
-    'CanonVRD:StandardOutputShadowPoint' => 21,
-    'CanonVRD:StandardRawColorTone' => 13,
-    'CanonVRD:StandardRawContrast' => 15,
-    'CanonVRD:StandardRawHighlight' => 117,
-    'CanonVRD:StandardRawHighlightPoint' => 18,
-    'CanonVRD:StandardRawLinear' => 16,
-    'CanonVRD:StandardRawSaturation' => 14,
-    'CanonVRD:StandardRawShadow' => 126,
-    'CanonVRD:StandardRawShadowPoint' => 19,
-    'CanonVRD:StandardRawSharpness' => 17,
-    'CanonVRD:StandardUnsharpMaskFineness' => 148,
-    'CanonVRD:StandardUnsharpMaskStrength' => 146,
-    'CanonVRD:StandardUnsharpMaskThreshold' => 150,
-    'CanonVRD:UnknownContrast' => 69,
-    'CanonVRD:UnknownLinear' => 70,
-    'CanonVRD:UnknownOutputHighlightPoint' => 74,
-    'CanonVRD:UnknownOutputShadowPoint' => 75,
-    'CanonVRD:UnknownRawHighlight' => 123,
-    'CanonVRD:UnknownRawHighlightPoint' => 72,
-    'CanonVRD:UnknownRawShadow' => 132,
-    'CanonVRD:UnknownRawShadowPoint' => 73,
-    'CanonVRD:UnknownSharpness' => 71,
-    'CanonVRD:UnsharpMask' => 144,
+    'CanonVRD:AberrationCorrectionDistance' =>
+    array (
+      0 => 105,
+    ),
+    'CanonVRD:AngleAdj' =>
+    array (
+      0 => 139,
+    ),
+    'CanonVRD:AutoLightingOptimizer' =>
+    array (
+      0 => 111,
+    ),
+    'CanonVRD:AutoLightingOptimizerOn' =>
+    array (
+      0 => 110,
+    ),
+    'CanonVRD:CameraRawColorTone' =>
+    array (
+      0 => 225,
+    ),
+    'CanonVRD:CameraRawContrast' =>
+    array (
+      0 => 227,
+    ),
+    'CanonVRD:CameraRawHighlightPoint' =>
+    array (
+      0 => 230,
+    ),
+    'CanonVRD:CameraRawLinear' =>
+    array (
+      0 => 228,
+    ),
+    'CanonVRD:CameraRawOutputHighlightPoint' =>
+    array (
+      0 => 232,
+    ),
+    'CanonVRD:CameraRawOutputShadowPoint' =>
+    array (
+      0 => 233,
+    ),
+    'CanonVRD:CameraRawSaturation' =>
+    array (
+      0 => 226,
+    ),
+    'CanonVRD:CameraRawShadowPoint' =>
+    array (
+      0 => 231,
+    ),
+    'CanonVRD:CameraRawSharpness' =>
+    array (
+      0 => 229,
+    ),
+    'CanonVRD:CheckMark2' =>
+    array (
+      0 => 142,
+    ),
+    'CanonVRD:ChromaticAberration' =>
+    array (
+      0 => 102,
+    ),
+    'CanonVRD:ChromaticAberrationBlue' =>
+    array (
+      0 => 107,
+    ),
+    'CanonVRD:ChromaticAberrationOn' =>
+    array (
+      0 => 98,
+    ),
+    'CanonVRD:ChromaticAberrationRed' =>
+    array (
+      0 => 106,
+    ),
+    'CanonVRD:ChrominanceNR_TIFF_JPEG' =>
+    array (
+      0 => 96,
+    ),
+    'CanonVRD:ChrominanceNoiseReduction' =>
+    array (
+      0 => 94,
+    ),
+    'CanonVRD:ColorBlur' =>
+    array (
+      0 => 101,
+    ),
+    'CanonVRD:CropCircleActive' =>
+    array (
+      0 => 214,
+    ),
+    'CanonVRD:CropCircleRadius' =>
+    array (
+      0 => 217,
+    ),
+    'CanonVRD:CropCircleX' =>
+    array (
+      0 => 215,
+    ),
+    'CanonVRD:CropCircleY' =>
+    array (
+      0 => 216,
+    ),
+    'CanonVRD:CustomColorTone' =>
+    array (
+      0 => 76,
+    ),
+    'CanonVRD:CustomContrast' =>
+    array (
+      0 => 78,
+    ),
+    'CanonVRD:CustomDefaultUnsharpFineness' =>
+    array (
+      0 => 190,
+    ),
+    'CanonVRD:CustomDefaultUnsharpStrength' =>
+    array (
+      0 => 188,
+    ),
+    'CanonVRD:CustomDefaultUnsharpThreshold' =>
+    array (
+      0 => 192,
+    ),
+    'CanonVRD:CustomLinear' =>
+    array (
+      0 => 79,
+    ),
+    'CanonVRD:CustomOutputHighlightPoint' =>
+    array (
+      0 => 83,
+    ),
+    'CanonVRD:CustomOutputShadowPoint' =>
+    array (
+      0 => 84,
+    ),
+    'CanonVRD:CustomPictureStyleData' =>
+    array (
+      0 => 88,
+    ),
+    'CanonVRD:CustomRawHighlight' =>
+    array (
+      0 => 124,
+    ),
+    'CanonVRD:CustomRawHighlightPoint' =>
+    array (
+      0 => 81,
+    ),
+    'CanonVRD:CustomRawShadow' =>
+    array (
+      0 => 133,
+    ),
+    'CanonVRD:CustomRawShadowPoint' =>
+    array (
+      0 => 82,
+    ),
+    'CanonVRD:CustomSaturation' =>
+    array (
+      0 => 77,
+    ),
+    'CanonVRD:CustomSharpness' =>
+    array (
+      0 => 80,
+    ),
+    'CanonVRD:CustomUnsharpMaskFineness' =>
+    array (
+      0 => 184,
+    ),
+    'CanonVRD:CustomUnsharpMaskStrength' =>
+    array (
+      0 => 182,
+    ),
+    'CanonVRD:CustomUnsharpMaskThreshold' =>
+    array (
+      0 => 186,
+    ),
+    'CanonVRD:DLODataLength' =>
+    array (
+      0 => 223,
+    ),
+    'CanonVRD:DLOOn' =>
+    array (
+      0 => 220,
+    ),
+    'CanonVRD:DLOSetting' =>
+    array (
+      0 => 221,
+    ),
+    'CanonVRD:DLOShootingDistance' =>
+    array (
+      0 => 222,
+    ),
+    'CanonVRD:DistortionCorrection' =>
+    array (
+      0 => 103,
+    ),
+    'CanonVRD:DistortionCorrectionOn' =>
+    array (
+      0 => 99,
+    ),
+    'CanonVRD:FaithfulOutputHighlightPoint' =>
+    array (
+      0 => 56,
+    ),
+    'CanonVRD:FaithfulOutputShadowPoint' =>
+    array (
+      0 => 57,
+    ),
+    'CanonVRD:FaithfulRawColorTone' =>
+    array (
+      0 => 49,
+    ),
+    'CanonVRD:FaithfulRawContrast' =>
+    array (
+      0 => 51,
+    ),
+    'CanonVRD:FaithfulRawHighlight' =>
+    array (
+      0 => 121,
+    ),
+    'CanonVRD:FaithfulRawHighlightPoint' =>
+    array (
+      0 => 54,
+    ),
+    'CanonVRD:FaithfulRawLinear' =>
+    array (
+      0 => 52,
+    ),
+    'CanonVRD:FaithfulRawSaturation' =>
+    array (
+      0 => 50,
+    ),
+    'CanonVRD:FaithfulRawShadow' =>
+    array (
+      0 => 130,
+    ),
+    'CanonVRD:FaithfulRawShadowPoint' =>
+    array (
+      0 => 55,
+    ),
+    'CanonVRD:FaithfulRawSharpness' =>
+    array (
+      0 => 53,
+    ),
+    'CanonVRD:FaithfulUnsharpMaskFineness' =>
+    array (
+      0 => 172,
+    ),
+    'CanonVRD:FaithfulUnsharpMaskStrength' =>
+    array (
+      0 => 170,
+    ),
+    'CanonVRD:FaithfulUnsharpMaskThreshold' =>
+    array (
+      0 => 174,
+    ),
+    'CanonVRD:IsCustomPictureStyle' =>
+    array (
+      0 => 3,
+    ),
+    'CanonVRD:LandscapeOutputHighlightPoint' =>
+    array (
+      0 => 38,
+    ),
+    'CanonVRD:LandscapeOutputShadowPoint' =>
+    array (
+      0 => 39,
+    ),
+    'CanonVRD:LandscapeRawColorTone' =>
+    array (
+      0 => 31,
+    ),
+    'CanonVRD:LandscapeRawContrast' =>
+    array (
+      0 => 33,
+    ),
+    'CanonVRD:LandscapeRawHighlight' =>
+    array (
+      0 => 119,
+    ),
+    'CanonVRD:LandscapeRawHighlightPoint' =>
+    array (
+      0 => 36,
+    ),
+    'CanonVRD:LandscapeRawLinear' =>
+    array (
+      0 => 34,
+    ),
+    'CanonVRD:LandscapeRawSaturation' =>
+    array (
+      0 => 32,
+    ),
+    'CanonVRD:LandscapeRawShadow' =>
+    array (
+      0 => 128,
+    ),
+    'CanonVRD:LandscapeRawShadowPoint' =>
+    array (
+      0 => 37,
+    ),
+    'CanonVRD:LandscapeRawSharpness' =>
+    array (
+      0 => 35,
+    ),
+    'CanonVRD:LandscapeUnsharpMaskFineness' =>
+    array (
+      0 => 160,
+    ),
+    'CanonVRD:LandscapeUnsharpMaskStrength' =>
+    array (
+      0 => 158,
+    ),
+    'CanonVRD:LandscapeUnsharpMaskThreshold' =>
+    array (
+      0 => 162,
+    ),
+    'CanonVRD:LuminanceNR_TIFF_JPEG' =>
+    array (
+      0 => 109,
+    ),
+    'CanonVRD:LuminanceNoiseReduction' =>
+    array (
+      0 => 95,
+    ),
+    'CanonVRD:MonochromeContrast' =>
+    array (
+      0 => 60,
+    ),
+    'CanonVRD:MonochromeFilterEffect' =>
+    array (
+      0 => 58,
+    ),
+    'CanonVRD:MonochromeLinear' =>
+    array (
+      0 => 61,
+    ),
+    'CanonVRD:MonochromeOutputHighlightPoint' =>
+    array (
+      0 => 65,
+    ),
+    'CanonVRD:MonochromeOutputShadowPoint' =>
+    array (
+      0 => 66,
+    ),
+    'CanonVRD:MonochromeRawHighlight' =>
+    array (
+      0 => 122,
+    ),
+    'CanonVRD:MonochromeRawHighlightPoint' =>
+    array (
+      0 => 63,
+    ),
+    'CanonVRD:MonochromeRawShadow' =>
+    array (
+      0 => 131,
+    ),
+    'CanonVRD:MonochromeRawShadowPoint' =>
+    array (
+      0 => 64,
+    ),
+    'CanonVRD:MonochromeSharpness' =>
+    array (
+      0 => 62,
+    ),
+    'CanonVRD:MonochromeToningEffect' =>
+    array (
+      0 => 59,
+    ),
+    'CanonVRD:MonochromeUnsharpMaskFineness' =>
+    array (
+      0 => 178,
+    ),
+    'CanonVRD:MonochromeUnsharpMaskStrength' =>
+    array (
+      0 => 176,
+    ),
+    'CanonVRD:MonochromeUnsharpMaskThreshold' =>
+    array (
+      0 => 180,
+    ),
+    'CanonVRD:NeutraUnsharpMaskStrength' =>
+    array (
+      0 => 164,
+    ),
+    'CanonVRD:NeutralOutputHighlightPoint' =>
+    array (
+      0 => 47,
+    ),
+    'CanonVRD:NeutralOutputShadowPoint' =>
+    array (
+      0 => 48,
+    ),
+    'CanonVRD:NeutralRawColorTone' =>
+    array (
+      0 => 40,
+    ),
+    'CanonVRD:NeutralRawContrast' =>
+    array (
+      0 => 42,
+    ),
+    'CanonVRD:NeutralRawHighlight' =>
+    array (
+      0 => 120,
+    ),
+    'CanonVRD:NeutralRawHighlightPoint' =>
+    array (
+      0 => 45,
+    ),
+    'CanonVRD:NeutralRawLinear' =>
+    array (
+      0 => 43,
+    ),
+    'CanonVRD:NeutralRawSaturation' =>
+    array (
+      0 => 41,
+    ),
+    'CanonVRD:NeutralRawShadow' =>
+    array (
+      0 => 129,
+    ),
+    'CanonVRD:NeutralRawShadowPoint' =>
+    array (
+      0 => 46,
+    ),
+    'CanonVRD:NeutralRawSharpness' =>
+    array (
+      0 => 44,
+    ),
+    'CanonVRD:NeutralUnsharpMaskFineness' =>
+    array (
+      0 => 166,
+    ),
+    'CanonVRD:NeutralUnsharpMaskThreshold' =>
+    array (
+      0 => 168,
+    ),
+    'CanonVRD:PeripheralIllumination' =>
+    array (
+      0 => 104,
+    ),
+    'CanonVRD:PeripheralIlluminationOn' =>
+    array (
+      0 => 100,
+    ),
+    'CanonVRD:PictureStyle' =>
+    array (
+      0 => 2,
+    ),
+    'CanonVRD:PortraitOutputHighlightPoint' =>
+    array (
+      0 => 29,
+    ),
+    'CanonVRD:PortraitOutputShadowPoint' =>
+    array (
+      0 => 30,
+    ),
+    'CanonVRD:PortraitRawColorTone' =>
+    array (
+      0 => 22,
+    ),
+    'CanonVRD:PortraitRawContrast' =>
+    array (
+      0 => 24,
+    ),
+    'CanonVRD:PortraitRawHighlight' =>
+    array (
+      0 => 118,
+    ),
+    'CanonVRD:PortraitRawHighlightPoint' =>
+    array (
+      0 => 27,
+    ),
+    'CanonVRD:PortraitRawLinear' =>
+    array (
+      0 => 25,
+    ),
+    'CanonVRD:PortraitRawSaturation' =>
+    array (
+      0 => 23,
+    ),
+    'CanonVRD:PortraitRawShadow' =>
+    array (
+      0 => 127,
+    ),
+    'CanonVRD:PortraitRawShadowPoint' =>
+    array (
+      0 => 28,
+    ),
+    'CanonVRD:PortraitRawSharpness' =>
+    array (
+      0 => 26,
+    ),
+    'CanonVRD:PortraitUnsharpMaskFineness' =>
+    array (
+      0 => 154,
+    ),
+    'CanonVRD:PortraitUnsharpMaskStrength' =>
+    array (
+      0 => 152,
+    ),
+    'CanonVRD:PortraitUnsharpMaskThreshold' =>
+    array (
+      0 => 156,
+    ),
+    'CanonVRD:StandardOutputHighlightPoint' =>
+    array (
+      0 => 20,
+    ),
+    'CanonVRD:StandardOutputShadowPoint' =>
+    array (
+      0 => 21,
+    ),
+    'CanonVRD:StandardRawColorTone' =>
+    array (
+      0 => 13,
+    ),
+    'CanonVRD:StandardRawContrast' =>
+    array (
+      0 => 15,
+    ),
+    'CanonVRD:StandardRawHighlight' =>
+    array (
+      0 => 117,
+    ),
+    'CanonVRD:StandardRawHighlightPoint' =>
+    array (
+      0 => 18,
+    ),
+    'CanonVRD:StandardRawLinear' =>
+    array (
+      0 => 16,
+    ),
+    'CanonVRD:StandardRawSaturation' =>
+    array (
+      0 => 14,
+    ),
+    'CanonVRD:StandardRawShadow' =>
+    array (
+      0 => 126,
+    ),
+    'CanonVRD:StandardRawShadowPoint' =>
+    array (
+      0 => 19,
+    ),
+    'CanonVRD:StandardRawSharpness' =>
+    array (
+      0 => 17,
+    ),
+    'CanonVRD:StandardUnsharpMaskFineness' =>
+    array (
+      0 => 148,
+    ),
+    'CanonVRD:StandardUnsharpMaskStrength' =>
+    array (
+      0 => 146,
+    ),
+    'CanonVRD:StandardUnsharpMaskThreshold' =>
+    array (
+      0 => 150,
+    ),
+    'CanonVRD:UnknownContrast' =>
+    array (
+      0 => 69,
+    ),
+    'CanonVRD:UnknownLinear' =>
+    array (
+      0 => 70,
+    ),
+    'CanonVRD:UnknownOutputHighlightPoint' =>
+    array (
+      0 => 74,
+    ),
+    'CanonVRD:UnknownOutputShadowPoint' =>
+    array (
+      0 => 75,
+    ),
+    'CanonVRD:UnknownRawHighlight' =>
+    array (
+      0 => 123,
+    ),
+    'CanonVRD:UnknownRawHighlightPoint' =>
+    array (
+      0 => 72,
+    ),
+    'CanonVRD:UnknownRawShadow' =>
+    array (
+      0 => 132,
+    ),
+    'CanonVRD:UnknownRawShadowPoint' =>
+    array (
+      0 => 73,
+    ),
+    'CanonVRD:UnknownSharpness' =>
+    array (
+      0 => 71,
+    ),
+    'CanonVRD:UnsharpMask' =>
+    array (
+      0 => 144,
+    ),
   ),
   'items' =>
   array (
@@ -1241,63 +2135,186 @@ class Ver2 extends Collection {
     ),
     94 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChrominanceNoiseReduction',
-      'title' => 'Chrominance Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ChrominanceNoiseReduction',
+        'title' => 'Chrominance Noise Reduction',
+        'format' =>
         array (
-          0 => 'Off',
-          58 => 'Low',
-          100 => 'High',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            58 => 'Low',
+            100 => 'High',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChrominanceNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChrominanceNoiseReduction',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'ChrominanceNoiseReduction',
+        'title' => 'Chrominance Noise Reduction',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '0',
+            16 => '1',
+            33 => '2',
+            50 => '3',
+            66 => '4',
+            83 => '5',
+            100 => '6',
+            116 => '7',
+            133 => '8',
+            150 => '9',
+            166 => '10',
+            167 => '11',
+            168 => '12',
+            169 => '13',
+            170 => '14',
+            171 => '15',
+            172 => '16',
+            173 => '17',
+            174 => '18',
+            175 => '19',
+            176 => '20',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChrominanceNoiseReduction',
+      ),
     ),
     95 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'LuminanceNoiseReduction',
-      'title' => 'Luminance Noise Reduction',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'LuminanceNoiseReduction',
+        'title' => 'Luminance Noise Reduction',
+        'format' =>
         array (
-          0 => 'Off',
-          65 => 'Low',
-          100 => 'High',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            65 => 'Low',
+            100 => 'High',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LuminanceNoiseReduction',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:LuminanceNoiseReduction',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'LuminanceNoiseReduction',
+        'title' => 'Luminance Noise Reduction',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '0',
+            65 => '1',
+            100 => '2',
+            110 => '3',
+            120 => '4',
+            130 => '5',
+            140 => '6',
+            150 => '7',
+            160 => '8',
+            170 => '9',
+            180 => '10',
+            181 => '11',
+            182 => '12',
+            183 => '13',
+            184 => '14',
+            185 => '15',
+            186 => '16',
+            187 => '17',
+            188 => '18',
+            189 => '19',
+            190 => '20',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:LuminanceNoiseReduction',
+      ),
     ),
     96 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ChrominanceNR_TIFF_JPEG',
-      'title' => 'Chrominance NR TIFF JPEG',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
-      ),
-      'text' =>
-      array (
-        'mapping' =>
+        'collection' => 'Tag',
+        'name' => 'ChrominanceNR_TIFF_JPEG',
+        'title' => 'Chrominance NR TIFF JPEG',
+        'format' =>
         array (
-          0 => 'Off',
-          33 => 'Low',
-          100 => 'High',
+          0 => 8,
         ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => 'Off',
+            33 => 'Low',
+            100 => 'High',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChrominanceNR_TIFF_JPEG',
       ),
-      'exiftoolDOMNode' => 'CanonVRD:ChrominanceNR_TIFF_JPEG',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'ChrominanceNR_TIFF_JPEG',
+        'title' => 'Chrominance NR TIFF JPEG',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'text' =>
+        array (
+          'mapping' =>
+          array (
+            0 => '0',
+            16 => '1',
+            33 => '2',
+            50 => '3',
+            66 => '4',
+            83 => '5',
+            100 => '6',
+            116 => '7',
+            133 => '8',
+            150 => '9',
+            166 => '10',
+            167 => '11',
+            168 => '12',
+            169 => '13',
+            170 => '14',
+            171 => '15',
+            172 => '16',
+            173 => '17',
+            174 => '18',
+            175 => '19',
+            176 => '20',
+          ),
+        ),
+        'exiftoolDOMNode' => 'CanonVRD:ChrominanceNR_TIFF_JPEG',
+      ),
     ),
     98 =>
     array (

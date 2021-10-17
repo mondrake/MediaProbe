@@ -24,71 +24,273 @@ class Main extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'BaseISO' => 4124,
-    'CanonColorInfo1' => 50,
-    'CanonColorInfo2' => 4140,
-    'CanonFileDescription' => 2053,
-    'CanonFirmwareVersion' => 2059,
-    'CanonFlashInfo' => 4136,
-    'CanonImageType' => 2069,
-    'CanonModelID' => 6196,
-    'ColorSpace' => 4276,
-    'ColorTemperature' => 4270,
-    'ComponentVersion' => 2060,
-    'FileNumber' => 6167,
-    'FreeBytes' => 1,
-    'JpgFromRaw' => 8199,
-    'MeasuredEV' => 6164,
-    'NullRecord' => 0,
-    'OriginalFileName' => 2070,
-    'OwnerName' => 2064,
-    'ROMOperationMode' => 2061,
-    'RawData' => 8197,
-    'RecordID' => 6148,
-    'ReleaseSetting' => 4118,
-    'SelfTimerTime' => 6150,
-    'SerialNumber' => 6155,
-    'SerialNumberFormat' => 6203,
-    'ShutterReleaseMethod' => 4112,
-    'ShutterReleaseTiming' => 4113,
-    'TargetDistanceSetting' => 6151,
-    'TargetImageType' => 4106,
-    'ThumbnailFileName' => 2071,
-    'ThumbnailImage' => 8200,
+    'BaseISO' =>
+    array (
+      0 => 4124,
+    ),
+    'CanonColorInfo1' =>
+    array (
+      0 => 50,
+    ),
+    'CanonColorInfo2' =>
+    array (
+      0 => 4140,
+    ),
+    'CanonFileDescription' =>
+    array (
+      0 => 2053,
+    ),
+    'CanonFirmwareVersion' =>
+    array (
+      0 => 2059,
+    ),
+    'CanonFlashInfo' =>
+    array (
+      0 => 4136,
+    ),
+    'CanonImageType' =>
+    array (
+      0 => 2069,
+    ),
+    'CanonModelID' =>
+    array (
+      0 => 6196,
+    ),
+    'ColorSpace' =>
+    array (
+      0 => 4276,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 4270,
+    ),
+    'ComponentVersion' =>
+    array (
+      0 => 2060,
+    ),
+    'FileNumber' =>
+    array (
+      0 => 6167,
+    ),
+    'FreeBytes' =>
+    array (
+      0 => 1,
+    ),
+    'JpgFromRaw' =>
+    array (
+      0 => 8199,
+    ),
+    'MeasuredEV' =>
+    array (
+      0 => 6164,
+    ),
+    'NullRecord' =>
+    array (
+      0 => 0,
+    ),
+    'OriginalFileName' =>
+    array (
+      0 => 2070,
+    ),
+    'OwnerName' =>
+    array (
+      0 => 2064,
+    ),
+    'ROMOperationMode' =>
+    array (
+      0 => 2061,
+    ),
+    'RawData' =>
+    array (
+      0 => 8197,
+    ),
+    'RecordID' =>
+    array (
+      0 => 6148,
+    ),
+    'ReleaseSetting' =>
+    array (
+      0 => 4118,
+    ),
+    'SelfTimerTime' =>
+    array (
+      0 => 6150,
+    ),
+    'SerialNumber' =>
+    array (
+      0 => 6155,
+    ),
+    'SerialNumberFormat' =>
+    array (
+      0 => 6203,
+    ),
+    'ShutterReleaseMethod' =>
+    array (
+      0 => 4112,
+    ),
+    'ShutterReleaseTiming' =>
+    array (
+      0 => 4113,
+    ),
+    'TargetDistanceSetting' =>
+    array (
+      0 => 6151,
+    ),
+    'TargetImageType' =>
+    array (
+      0 => 4106,
+    ),
+    'ThumbnailFileName' =>
+    array (
+      0 => 2071,
+    ),
+    'ThumbnailImage' =>
+    array (
+      0 => 8200,
+    ),
+    'UnknownNumber' =>
+    array (
+      0 => 6155,
+    ),
+    'UserComment' =>
+    array (
+      0 => 2053,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:BaseISO' => 4124,
-    'CanonRaw:CanonColorInfo1' => 50,
-    'CanonRaw:CanonColorInfo2' => 4140,
-    'CanonRaw:CanonFileDescription' => 2053,
-    'CanonRaw:CanonFirmwareVersion' => 2059,
-    'CanonRaw:CanonFlashInfo' => 4136,
-    'CanonRaw:CanonImageType' => 2069,
-    'CanonRaw:CanonModelID' => 6196,
-    'CanonRaw:ColorSpace' => 4276,
-    'CanonRaw:ColorTemperature' => 4270,
-    'CanonRaw:ComponentVersion' => 2060,
-    'CanonRaw:FileNumber' => 6167,
-    'CanonRaw:FreeBytes' => 1,
-    'CanonRaw:JpgFromRaw' => 8199,
-    'CanonRaw:MeasuredEV' => 6164,
-    'CanonRaw:NullRecord' => 0,
-    'CanonRaw:OriginalFileName' => 2070,
-    'CanonRaw:OwnerName' => 2064,
-    'CanonRaw:ROMOperationMode' => 2061,
-    'CanonRaw:RawData' => 8197,
-    'CanonRaw:RecordID' => 6148,
-    'CanonRaw:ReleaseSetting' => 4118,
-    'CanonRaw:SelfTimerTime' => 6150,
-    'CanonRaw:SerialNumber' => 6155,
-    'CanonRaw:SerialNumberFormat' => 6203,
-    'CanonRaw:ShutterReleaseMethod' => 4112,
-    'CanonRaw:ShutterReleaseTiming' => 4113,
-    'CanonRaw:TargetDistanceSetting' => 6151,
-    'CanonRaw:TargetImageType' => 4106,
-    'CanonRaw:ThumbnailFileName' => 2071,
-    'CanonRaw:ThumbnailImage' => 8200,
+    'CanonRaw:BaseISO' =>
+    array (
+      0 => 4124,
+    ),
+    'CanonRaw:CanonColorInfo1' =>
+    array (
+      0 => 50,
+    ),
+    'CanonRaw:CanonColorInfo2' =>
+    array (
+      0 => 4140,
+    ),
+    'CanonRaw:CanonFileDescription' =>
+    array (
+      0 => 2053,
+    ),
+    'CanonRaw:CanonFirmwareVersion' =>
+    array (
+      0 => 2059,
+    ),
+    'CanonRaw:CanonFlashInfo' =>
+    array (
+      0 => 4136,
+    ),
+    'CanonRaw:CanonImageType' =>
+    array (
+      0 => 2069,
+    ),
+    'CanonRaw:CanonModelID' =>
+    array (
+      0 => 6196,
+    ),
+    'CanonRaw:ColorSpace' =>
+    array (
+      0 => 4276,
+    ),
+    'CanonRaw:ColorTemperature' =>
+    array (
+      0 => 4270,
+    ),
+    'CanonRaw:ComponentVersion' =>
+    array (
+      0 => 2060,
+    ),
+    'CanonRaw:FileNumber' =>
+    array (
+      0 => 6167,
+    ),
+    'CanonRaw:FreeBytes' =>
+    array (
+      0 => 1,
+    ),
+    'CanonRaw:JpgFromRaw' =>
+    array (
+      0 => 8199,
+    ),
+    'CanonRaw:MeasuredEV' =>
+    array (
+      0 => 6164,
+    ),
+    'CanonRaw:NullRecord' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:OriginalFileName' =>
+    array (
+      0 => 2070,
+    ),
+    'CanonRaw:OwnerName' =>
+    array (
+      0 => 2064,
+    ),
+    'CanonRaw:ROMOperationMode' =>
+    array (
+      0 => 2061,
+    ),
+    'CanonRaw:RawData' =>
+    array (
+      0 => 8197,
+    ),
+    'CanonRaw:RecordID' =>
+    array (
+      0 => 6148,
+    ),
+    'CanonRaw:ReleaseSetting' =>
+    array (
+      0 => 4118,
+    ),
+    'CanonRaw:SelfTimerTime' =>
+    array (
+      0 => 6150,
+    ),
+    'CanonRaw:SerialNumber' =>
+    array (
+      0 => 6155,
+    ),
+    'CanonRaw:SerialNumberFormat' =>
+    array (
+      0 => 6203,
+    ),
+    'CanonRaw:ShutterReleaseMethod' =>
+    array (
+      0 => 4112,
+    ),
+    'CanonRaw:ShutterReleaseTiming' =>
+    array (
+      0 => 4113,
+    ),
+    'CanonRaw:TargetDistanceSetting' =>
+    array (
+      0 => 6151,
+    ),
+    'CanonRaw:TargetImageType' =>
+    array (
+      0 => 4106,
+    ),
+    'CanonRaw:ThumbnailFileName' =>
+    array (
+      0 => 2071,
+    ),
+    'CanonRaw:ThumbnailImage' =>
+    array (
+      0 => 8200,
+    ),
+    'CanonRaw:UnknownNumber' =>
+    array (
+      0 => 6155,
+    ),
+    'CanonRaw:UserComment' =>
+    array (
+      0 => 2053,
+    ),
   ),
   'items' =>
   array (
@@ -127,15 +329,30 @@ class Main extends Collection {
     ),
     2053 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'CanonFileDescription',
-      'title' => 'Canon File Description',
-      'components' => 32,
-      'format' =>
+      0 =>
       array (
-        0 => 2,
+        'collection' => 'Tag',
+        'name' => 'CanonFileDescription',
+        'title' => 'Canon File Description',
+        'components' => 32,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:CanonFileDescription',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:CanonFileDescription',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'UserComment',
+        'title' => 'User Comment',
+        'components' => 256,
+        'format' =>
+        array (
+          0 => 2,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:UserComment',
+      ),
     ),
     2059 =>
     array (
@@ -388,14 +605,39 @@ class Main extends Collection {
     ),
     6155 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SerialNumber',
-      'title' => 'Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:SerialNumber',
       ),
-      'exiftoolDOMNode' => 'CanonRaw:SerialNumber',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:SerialNumber',
+      ),
+      2 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'UnknownNumber',
+        'title' => 'Unknown Number',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'CanonRaw:UnknownNumber',
+      ),
     ),
     6164 =>
     array (

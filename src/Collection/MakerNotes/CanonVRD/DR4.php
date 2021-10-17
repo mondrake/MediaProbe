@@ -24,135 +24,513 @@ class DR4 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AngleAdj' => 65539,
-    'AquaHSL' => 133396,
-    'AutoLightingOptimizer' => 132352,
-    'AutoLightingOptimizerOn' => '0x20500.0',
-    'BlueHSL' => 133397,
-    'CheckMark' => 65793,
-    'ChromaticAberration' => 132867,
-    'ChromaticAberrationBlue' => 132872,
-    'ChromaticAberrationOn' => '0x20703.0',
-    'ChromaticAberrationRed' => 132871,
-    'ChrominanceNoiseReduction' => 132609,
-    'ColorBlurOn' => 132868,
-    'ColorHue' => 133376,
-    'ColorMoireReduction' => 132720,
-    'ColorMoireReductionOn' => '0x20670.0',
-    'ColorSaturationAdj' => 131845,
-    'ColorToneAdj' => 131844,
-    'ContrastAdj' => 131843,
-    'CropAspectRatio' => 196865,
-    'CropAspectRatioCustom' => 196866,
-    'CustomPictureStyle' => 65569,
-    'CustomPictureStyleData' => 984320,
-    'DLOOn' => '0x20706.0',
-    'DLOSetting' => 132870,
-    'DiffractionCorrectionOn' => 132875,
-    'DistortionCorrection' => 132869,
-    'DistortionCorrectionOn' => '0x20705.0',
-    'DistortionEffect' => 132873,
-    'GammaLinear' => 131584,
-    'GreenHSL' => 133395,
-    'HighlightAdj' => 131852,
-    'LensFocalLength' => 984338,
-    'LuminanceNoiseReduction' => 132608,
-    'MagentaHSL' => 133399,
-    'MonochromeFilterEffect' => 131847,
-    'MonochromeToningEffect' => 131846,
-    'OrangeHSL' => 133393,
-    'PeripheralIllumination' => 132866,
-    'PeripheralIlluminationOn' => '0x20702.0',
-    'PictureStyle' => 131841,
-    'PurpleHSL' => 133398,
-    'RawBrightnessAdj' => 131073,
-    'RedHSL' => 133392,
-    'Rotation' => 65538,
-    'SaturationAdj' => 133377,
-    'ShadowAdj' => 131851,
-    'SharpnessAdj' => 131856,
-    'SharpnessAdjOn' => '0x20310.0',
-    'SharpnessStrength' => 131857,
-    'ShootingDistance' => 132865,
-    'ToneCurveBrightness' => 132112,
-    'ToneCurveContrast' => 132113,
-    'ToneCurveOriginal' => '0x20400.1',
-    'UnsharpMaskFineness' => 131849,
-    'UnsharpMaskStrength' => 131848,
-    'UnsharpMaskThreshold' => 131850,
-    'WBAdjBlueAmber' => 131334,
-    'WBAdjColorTemp' => 131330,
-    'WBAdjMagentaGreen' => 131333,
-    'WBAdjRGGBLevels' => 131365,
-    'WhiteBalanceAdj' => 131329,
-    'WorkColorSpace' => 66048,
-    'YellowHSL' => 133394,
+    'AngleAdj' =>
+    array (
+      0 => 65539,
+    ),
+    'AquaHSL' =>
+    array (
+      0 => 133396,
+    ),
+    'AutoLightingOptimizer' =>
+    array (
+      0 => 132352,
+    ),
+    'AutoLightingOptimizerOn' =>
+    array (
+      0 => '0x20500.0',
+    ),
+    'BlueHSL' =>
+    array (
+      0 => 133397,
+    ),
+    'CheckMark' =>
+    array (
+      0 => 65793,
+    ),
+    'ChromaticAberration' =>
+    array (
+      0 => 132867,
+    ),
+    'ChromaticAberrationBlue' =>
+    array (
+      0 => 132872,
+    ),
+    'ChromaticAberrationOn' =>
+    array (
+      0 => '0x20703.0',
+    ),
+    'ChromaticAberrationRed' =>
+    array (
+      0 => 132871,
+    ),
+    'ChrominanceNoiseReduction' =>
+    array (
+      0 => 132609,
+    ),
+    'ColorBlurOn' =>
+    array (
+      0 => 132868,
+    ),
+    'ColorHue' =>
+    array (
+      0 => 133376,
+    ),
+    'ColorMoireReduction' =>
+    array (
+      0 => 132720,
+    ),
+    'ColorMoireReductionOn' =>
+    array (
+      0 => '0x20670.0',
+    ),
+    'ColorSaturationAdj' =>
+    array (
+      0 => 131845,
+    ),
+    'ColorToneAdj' =>
+    array (
+      0 => 131844,
+    ),
+    'ContrastAdj' =>
+    array (
+      0 => 131843,
+    ),
+    'CropAspectRatio' =>
+    array (
+      0 => 196865,
+    ),
+    'CropAspectRatioCustom' =>
+    array (
+      0 => 196866,
+    ),
+    'CustomPictureStyle' =>
+    array (
+      0 => 65569,
+    ),
+    'CustomPictureStyleData' =>
+    array (
+      0 => 984320,
+    ),
+    'DLOOn' =>
+    array (
+      0 => '0x20706.0',
+    ),
+    'DLOSetting' =>
+    array (
+      0 => 132870,
+    ),
+    'DiffractionCorrectionOn' =>
+    array (
+      0 => 132875,
+    ),
+    'DistortionCorrection' =>
+    array (
+      0 => 132869,
+    ),
+    'DistortionCorrectionOn' =>
+    array (
+      0 => '0x20705.0',
+    ),
+    'DistortionEffect' =>
+    array (
+      0 => 132873,
+    ),
+    'GammaLinear' =>
+    array (
+      0 => 131584,
+    ),
+    'GreenHSL' =>
+    array (
+      0 => 133395,
+    ),
+    'HighlightAdj' =>
+    array (
+      0 => 131852,
+    ),
+    'LensFocalLength' =>
+    array (
+      0 => 984338,
+    ),
+    'LuminanceNoiseReduction' =>
+    array (
+      0 => 132608,
+    ),
+    'MagentaHSL' =>
+    array (
+      0 => 133399,
+    ),
+    'MonochromeFilterEffect' =>
+    array (
+      0 => 131847,
+    ),
+    'MonochromeToningEffect' =>
+    array (
+      0 => 131846,
+    ),
+    'OrangeHSL' =>
+    array (
+      0 => 133393,
+    ),
+    'PeripheralIllumination' =>
+    array (
+      0 => 132866,
+    ),
+    'PeripheralIlluminationOn' =>
+    array (
+      0 => '0x20702.0',
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 131841,
+    ),
+    'PurpleHSL' =>
+    array (
+      0 => 133398,
+    ),
+    'RawBrightnessAdj' =>
+    array (
+      0 => 131073,
+    ),
+    'RedHSL' =>
+    array (
+      0 => 133392,
+    ),
+    'Rotation' =>
+    array (
+      0 => 65538,
+    ),
+    'SaturationAdj' =>
+    array (
+      0 => 133377,
+    ),
+    'ShadowAdj' =>
+    array (
+      0 => 131851,
+    ),
+    'SharpnessAdj' =>
+    array (
+      0 => 131856,
+    ),
+    'SharpnessAdjOn' =>
+    array (
+      0 => '0x20310.0',
+    ),
+    'SharpnessStrength' =>
+    array (
+      0 => 131857,
+    ),
+    'ShootingDistance' =>
+    array (
+      0 => 132865,
+    ),
+    'ToneCurveBrightness' =>
+    array (
+      0 => 132112,
+    ),
+    'ToneCurveContrast' =>
+    array (
+      0 => 132113,
+    ),
+    'ToneCurveOriginal' =>
+    array (
+      0 => '0x20400.1',
+    ),
+    'UnsharpMaskFineness' =>
+    array (
+      0 => 131849,
+    ),
+    'UnsharpMaskStrength' =>
+    array (
+      0 => 131848,
+    ),
+    'UnsharpMaskThreshold' =>
+    array (
+      0 => 131850,
+    ),
+    'WBAdjBlueAmber' =>
+    array (
+      0 => 131334,
+    ),
+    'WBAdjColorTemp' =>
+    array (
+      0 => 131330,
+    ),
+    'WBAdjMagentaGreen' =>
+    array (
+      0 => 131333,
+    ),
+    'WBAdjRGGBLevels' =>
+    array (
+      0 => 131365,
+    ),
+    'WhiteBalanceAdj' =>
+    array (
+      0 => 131329,
+    ),
+    'WorkColorSpace' =>
+    array (
+      0 => 66048,
+    ),
+    'YellowHSL' =>
+    array (
+      0 => 133394,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:AngleAdj' => 65539,
-    'CanonVRD:AquaHSL' => 133396,
-    'CanonVRD:AutoLightingOptimizer' => 132352,
-    'CanonVRD:AutoLightingOptimizerOn' => '0x20500.0',
-    'CanonVRD:BlueHSL' => 133397,
-    'CanonVRD:CheckMark' => 65793,
-    'CanonVRD:ChromaticAberration' => 132867,
-    'CanonVRD:ChromaticAberrationBlue' => 132872,
-    'CanonVRD:ChromaticAberrationOn' => '0x20703.0',
-    'CanonVRD:ChromaticAberrationRed' => 132871,
-    'CanonVRD:ChrominanceNoiseReduction' => 132609,
-    'CanonVRD:ColorBlurOn' => 132868,
-    'CanonVRD:ColorHue' => 133376,
-    'CanonVRD:ColorMoireReduction' => 132720,
-    'CanonVRD:ColorMoireReductionOn' => '0x20670.0',
-    'CanonVRD:ColorSaturationAdj' => 131845,
-    'CanonVRD:ColorToneAdj' => 131844,
-    'CanonVRD:ContrastAdj' => 131843,
-    'CanonVRD:CropAspectRatio' => 196865,
-    'CanonVRD:CropAspectRatioCustom' => 196866,
-    'CanonVRD:CustomPictureStyle' => 65569,
-    'CanonVRD:CustomPictureStyleData' => 984320,
-    'CanonVRD:DLOOn' => '0x20706.0',
-    'CanonVRD:DLOSetting' => 132870,
-    'CanonVRD:DiffractionCorrectionOn' => 132875,
-    'CanonVRD:DistortionCorrection' => 132869,
-    'CanonVRD:DistortionCorrectionOn' => '0x20705.0',
-    'CanonVRD:DistortionEffect' => 132873,
-    'CanonVRD:GammaLinear' => 131584,
-    'CanonVRD:GreenHSL' => 133395,
-    'CanonVRD:HighlightAdj' => 131852,
-    'CanonVRD:LensFocalLength' => 984338,
-    'CanonVRD:LuminanceNoiseReduction' => 132608,
-    'CanonVRD:MagentaHSL' => 133399,
-    'CanonVRD:MonochromeFilterEffect' => 131847,
-    'CanonVRD:MonochromeToningEffect' => 131846,
-    'CanonVRD:OrangeHSL' => 133393,
-    'CanonVRD:PeripheralIllumination' => 132866,
-    'CanonVRD:PeripheralIlluminationOn' => '0x20702.0',
-    'CanonVRD:PictureStyle' => 131841,
-    'CanonVRD:PurpleHSL' => 133398,
-    'CanonVRD:RawBrightnessAdj' => 131073,
-    'CanonVRD:RedHSL' => 133392,
-    'CanonVRD:Rotation' => 65538,
-    'CanonVRD:SaturationAdj' => 133377,
-    'CanonVRD:ShadowAdj' => 131851,
-    'CanonVRD:SharpnessAdj' => 131856,
-    'CanonVRD:SharpnessAdjOn' => '0x20310.0',
-    'CanonVRD:SharpnessStrength' => 131857,
-    'CanonVRD:ShootingDistance' => 132865,
-    'CanonVRD:ToneCurveBrightness' => 132112,
-    'CanonVRD:ToneCurveContrast' => 132113,
-    'CanonVRD:ToneCurveOriginal' => '0x20400.1',
-    'CanonVRD:UnsharpMaskFineness' => 131849,
-    'CanonVRD:UnsharpMaskStrength' => 131848,
-    'CanonVRD:UnsharpMaskThreshold' => 131850,
-    'CanonVRD:WBAdjBlueAmber' => 131334,
-    'CanonVRD:WBAdjColorTemp' => 131330,
-    'CanonVRD:WBAdjMagentaGreen' => 131333,
-    'CanonVRD:WBAdjRGGBLevels' => 131365,
-    'CanonVRD:WhiteBalanceAdj' => 131329,
-    'CanonVRD:WorkColorSpace' => 66048,
-    'CanonVRD:YellowHSL' => 133394,
+    'CanonVRD:AngleAdj' =>
+    array (
+      0 => 65539,
+    ),
+    'CanonVRD:AquaHSL' =>
+    array (
+      0 => 133396,
+    ),
+    'CanonVRD:AutoLightingOptimizer' =>
+    array (
+      0 => 132352,
+    ),
+    'CanonVRD:AutoLightingOptimizerOn' =>
+    array (
+      0 => '0x20500.0',
+    ),
+    'CanonVRD:BlueHSL' =>
+    array (
+      0 => 133397,
+    ),
+    'CanonVRD:CheckMark' =>
+    array (
+      0 => 65793,
+    ),
+    'CanonVRD:ChromaticAberration' =>
+    array (
+      0 => 132867,
+    ),
+    'CanonVRD:ChromaticAberrationBlue' =>
+    array (
+      0 => 132872,
+    ),
+    'CanonVRD:ChromaticAberrationOn' =>
+    array (
+      0 => '0x20703.0',
+    ),
+    'CanonVRD:ChromaticAberrationRed' =>
+    array (
+      0 => 132871,
+    ),
+    'CanonVRD:ChrominanceNoiseReduction' =>
+    array (
+      0 => 132609,
+    ),
+    'CanonVRD:ColorBlurOn' =>
+    array (
+      0 => 132868,
+    ),
+    'CanonVRD:ColorHue' =>
+    array (
+      0 => 133376,
+    ),
+    'CanonVRD:ColorMoireReduction' =>
+    array (
+      0 => 132720,
+    ),
+    'CanonVRD:ColorMoireReductionOn' =>
+    array (
+      0 => '0x20670.0',
+    ),
+    'CanonVRD:ColorSaturationAdj' =>
+    array (
+      0 => 131845,
+    ),
+    'CanonVRD:ColorToneAdj' =>
+    array (
+      0 => 131844,
+    ),
+    'CanonVRD:ContrastAdj' =>
+    array (
+      0 => 131843,
+    ),
+    'CanonVRD:CropAspectRatio' =>
+    array (
+      0 => 196865,
+    ),
+    'CanonVRD:CropAspectRatioCustom' =>
+    array (
+      0 => 196866,
+    ),
+    'CanonVRD:CustomPictureStyle' =>
+    array (
+      0 => 65569,
+    ),
+    'CanonVRD:CustomPictureStyleData' =>
+    array (
+      0 => 984320,
+    ),
+    'CanonVRD:DLOOn' =>
+    array (
+      0 => '0x20706.0',
+    ),
+    'CanonVRD:DLOSetting' =>
+    array (
+      0 => 132870,
+    ),
+    'CanonVRD:DiffractionCorrectionOn' =>
+    array (
+      0 => 132875,
+    ),
+    'CanonVRD:DistortionCorrection' =>
+    array (
+      0 => 132869,
+    ),
+    'CanonVRD:DistortionCorrectionOn' =>
+    array (
+      0 => '0x20705.0',
+    ),
+    'CanonVRD:DistortionEffect' =>
+    array (
+      0 => 132873,
+    ),
+    'CanonVRD:GammaLinear' =>
+    array (
+      0 => 131584,
+    ),
+    'CanonVRD:GreenHSL' =>
+    array (
+      0 => 133395,
+    ),
+    'CanonVRD:HighlightAdj' =>
+    array (
+      0 => 131852,
+    ),
+    'CanonVRD:LensFocalLength' =>
+    array (
+      0 => 984338,
+    ),
+    'CanonVRD:LuminanceNoiseReduction' =>
+    array (
+      0 => 132608,
+    ),
+    'CanonVRD:MagentaHSL' =>
+    array (
+      0 => 133399,
+    ),
+    'CanonVRD:MonochromeFilterEffect' =>
+    array (
+      0 => 131847,
+    ),
+    'CanonVRD:MonochromeToningEffect' =>
+    array (
+      0 => 131846,
+    ),
+    'CanonVRD:OrangeHSL' =>
+    array (
+      0 => 133393,
+    ),
+    'CanonVRD:PeripheralIllumination' =>
+    array (
+      0 => 132866,
+    ),
+    'CanonVRD:PeripheralIlluminationOn' =>
+    array (
+      0 => '0x20702.0',
+    ),
+    'CanonVRD:PictureStyle' =>
+    array (
+      0 => 131841,
+    ),
+    'CanonVRD:PurpleHSL' =>
+    array (
+      0 => 133398,
+    ),
+    'CanonVRD:RawBrightnessAdj' =>
+    array (
+      0 => 131073,
+    ),
+    'CanonVRD:RedHSL' =>
+    array (
+      0 => 133392,
+    ),
+    'CanonVRD:Rotation' =>
+    array (
+      0 => 65538,
+    ),
+    'CanonVRD:SaturationAdj' =>
+    array (
+      0 => 133377,
+    ),
+    'CanonVRD:ShadowAdj' =>
+    array (
+      0 => 131851,
+    ),
+    'CanonVRD:SharpnessAdj' =>
+    array (
+      0 => 131856,
+    ),
+    'CanonVRD:SharpnessAdjOn' =>
+    array (
+      0 => '0x20310.0',
+    ),
+    'CanonVRD:SharpnessStrength' =>
+    array (
+      0 => 131857,
+    ),
+    'CanonVRD:ShootingDistance' =>
+    array (
+      0 => 132865,
+    ),
+    'CanonVRD:ToneCurveBrightness' =>
+    array (
+      0 => 132112,
+    ),
+    'CanonVRD:ToneCurveContrast' =>
+    array (
+      0 => 132113,
+    ),
+    'CanonVRD:ToneCurveOriginal' =>
+    array (
+      0 => '0x20400.1',
+    ),
+    'CanonVRD:UnsharpMaskFineness' =>
+    array (
+      0 => 131849,
+    ),
+    'CanonVRD:UnsharpMaskStrength' =>
+    array (
+      0 => 131848,
+    ),
+    'CanonVRD:UnsharpMaskThreshold' =>
+    array (
+      0 => 131850,
+    ),
+    'CanonVRD:WBAdjBlueAmber' =>
+    array (
+      0 => 131334,
+    ),
+    'CanonVRD:WBAdjColorTemp' =>
+    array (
+      0 => 131330,
+    ),
+    'CanonVRD:WBAdjMagentaGreen' =>
+    array (
+      0 => 131333,
+    ),
+    'CanonVRD:WBAdjRGGBLevels' =>
+    array (
+      0 => 131365,
+    ),
+    'CanonVRD:WhiteBalanceAdj' =>
+    array (
+      0 => 131329,
+    ),
+    'CanonVRD:WorkColorSpace' =>
+    array (
+      0 => 66048,
+    ),
+    'CanonVRD:YellowHSL' =>
+    array (
+      0 => 133394,
+    ),
   ),
   'items' =>
   array (

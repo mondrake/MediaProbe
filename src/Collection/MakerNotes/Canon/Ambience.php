@@ -25,8 +25,14 @@ class Ambience extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AmbienceSelection' => 1,
-    'indexSize' => 0,
+    'AmbienceSelection' =>
+    array (
+      0 => 1,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -68,7 +74,10 @@ class Ambience extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AmbienceSelection' => 1,
+    'Canon:AmbienceSelection' =>
+    array (
+      0 => 1,
+    ),
   ),
 );
 }

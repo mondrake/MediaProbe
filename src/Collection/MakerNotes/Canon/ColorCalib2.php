@@ -24,39 +24,129 @@ class ColorCalib2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraColorCalibration01' => 0,
-    'CameraColorCalibration02' => 5,
-    'CameraColorCalibration03' => 10,
-    'CameraColorCalibration04' => 15,
-    'CameraColorCalibration05' => 20,
-    'CameraColorCalibration06' => 25,
-    'CameraColorCalibration07' => 30,
-    'CameraColorCalibration08' => 35,
-    'CameraColorCalibration09' => 40,
-    'CameraColorCalibration10' => 45,
-    'CameraColorCalibration11' => 50,
-    'CameraColorCalibration12' => 55,
-    'CameraColorCalibration13' => 60,
-    'CameraColorCalibration14' => 65,
-    'CameraColorCalibration15' => 70,
+    'CameraColorCalibration01' =>
+    array (
+      0 => 0,
+    ),
+    'CameraColorCalibration02' =>
+    array (
+      0 => 5,
+    ),
+    'CameraColorCalibration03' =>
+    array (
+      0 => 10,
+    ),
+    'CameraColorCalibration04' =>
+    array (
+      0 => 15,
+    ),
+    'CameraColorCalibration05' =>
+    array (
+      0 => 20,
+    ),
+    'CameraColorCalibration06' =>
+    array (
+      0 => 25,
+    ),
+    'CameraColorCalibration07' =>
+    array (
+      0 => 30,
+    ),
+    'CameraColorCalibration08' =>
+    array (
+      0 => 35,
+    ),
+    'CameraColorCalibration09' =>
+    array (
+      0 => 40,
+    ),
+    'CameraColorCalibration10' =>
+    array (
+      0 => 45,
+    ),
+    'CameraColorCalibration11' =>
+    array (
+      0 => 50,
+    ),
+    'CameraColorCalibration12' =>
+    array (
+      0 => 55,
+    ),
+    'CameraColorCalibration13' =>
+    array (
+      0 => 60,
+    ),
+    'CameraColorCalibration14' =>
+    array (
+      0 => 65,
+    ),
+    'CameraColorCalibration15' =>
+    array (
+      0 => 70,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraColorCalibration01' => 0,
-    'Canon:CameraColorCalibration02' => 5,
-    'Canon:CameraColorCalibration03' => 10,
-    'Canon:CameraColorCalibration04' => 15,
-    'Canon:CameraColorCalibration05' => 20,
-    'Canon:CameraColorCalibration06' => 25,
-    'Canon:CameraColorCalibration07' => 30,
-    'Canon:CameraColorCalibration08' => 35,
-    'Canon:CameraColorCalibration09' => 40,
-    'Canon:CameraColorCalibration10' => 45,
-    'Canon:CameraColorCalibration11' => 50,
-    'Canon:CameraColorCalibration12' => 55,
-    'Canon:CameraColorCalibration13' => 60,
-    'Canon:CameraColorCalibration14' => 65,
-    'Canon:CameraColorCalibration15' => 70,
+    'Canon:CameraColorCalibration01' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:CameraColorCalibration02' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:CameraColorCalibration03' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:CameraColorCalibration04' =>
+    array (
+      0 => 15,
+    ),
+    'Canon:CameraColorCalibration05' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:CameraColorCalibration06' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:CameraColorCalibration07' =>
+    array (
+      0 => 30,
+    ),
+    'Canon:CameraColorCalibration08' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:CameraColorCalibration09' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:CameraColorCalibration10' =>
+    array (
+      0 => 45,
+    ),
+    'Canon:CameraColorCalibration11' =>
+    array (
+      0 => 50,
+    ),
+    'Canon:CameraColorCalibration12' =>
+    array (
+      0 => 55,
+    ),
+    'Canon:CameraColorCalibration13' =>
+    array (
+      0 => 60,
+    ),
+    'Canon:CameraColorCalibration14' =>
+    array (
+      0 => 65,
+    ),
+    'Canon:CameraColorCalibration15' =>
+    array (
+      0 => 70,
+    ),
   ),
   'items' =>
   array (

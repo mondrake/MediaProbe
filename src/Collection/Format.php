@@ -16,21 +16,66 @@ class Format extends Collection {
   'title' => 'The list of MediaProbe supported data formats.',
   'itemsByName' =>
   array (
-    'Ascii' => 2,
-    'Byte' => 1,
-    'Double' => 12,
-    'Float' => 11,
-    'Long' => 4,
-    'Rational' => 5,
-    'Short' => 3,
-    'ShortRational' => 1001,
-    'ShortRev' => 1000,
-    'SignedByte' => 6,
-    'SignedLong' => 9,
-    'SignedRational' => 10,
-    'SignedShort' => 8,
-    'SignedShortRational' => 1002,
-    'Undefined' => 7,
+    'Ascii' =>
+    array (
+      0 => 2,
+    ),
+    'Byte' =>
+    array (
+      0 => 1,
+    ),
+    'Double' =>
+    array (
+      0 => 12,
+    ),
+    'Float' =>
+    array (
+      0 => 11,
+    ),
+    'Long' =>
+    array (
+      0 => 4,
+    ),
+    'Rational' =>
+    array (
+      0 => 5,
+    ),
+    'Short' =>
+    array (
+      0 => 3,
+    ),
+    'ShortRational' =>
+    array (
+      0 => 1001,
+    ),
+    'ShortRev' =>
+    array (
+      0 => 1000,
+    ),
+    'SignedByte' =>
+    array (
+      0 => 6,
+    ),
+    'SignedLong' =>
+    array (
+      0 => 9,
+    ),
+    'SignedRational' =>
+    array (
+      0 => 10,
+    ),
+    'SignedShort' =>
+    array (
+      0 => 8,
+    ),
+    'SignedShortRational' =>
+    array (
+      0 => 1002,
+    ),
+    'Undefined' =>
+    array (
+      0 => 7,
+    ),
   ),
   'items' =>
   array (

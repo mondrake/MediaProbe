@@ -24,27 +24,81 @@ class Functions350D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFAssistBeam' => 4,
-    'ETTLII' => 7,
-    'ExposureLevelIncrements' => 5,
-    'FlashSyncSpeedAv' => 2,
-    'LongExposureNoiseReduction' => 1,
-    'MirrorLockup' => 6,
-    'SetButtonCrossKeysFunc' => 0,
-    'Shutter-AELock' => 3,
-    'ShutterCurtainSync' => 8,
+    'AFAssistBeam' =>
+    array (
+      0 => 4,
+    ),
+    'ETTLII' =>
+    array (
+      0 => 7,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 5,
+    ),
+    'FlashSyncSpeedAv' =>
+    array (
+      0 => 2,
+    ),
+    'LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 6,
+    ),
+    'SetButtonCrossKeysFunc' =>
+    array (
+      0 => 0,
+    ),
+    'Shutter-AELock' =>
+    array (
+      0 => 3,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 8,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AFAssistBeam' => 4,
-    'CanonCustom:ETTLII' => 7,
-    'CanonCustom:ExposureLevelIncrements' => 5,
-    'CanonCustom:FlashSyncSpeedAv' => 2,
-    'CanonCustom:LongExposureNoiseReduction' => 1,
-    'CanonCustom:MirrorLockup' => 6,
-    'CanonCustom:SetButtonCrossKeysFunc' => 0,
-    'CanonCustom:Shutter-AELock' => 3,
-    'CanonCustom:ShutterCurtainSync' => 8,
+    'CanonCustom:AFAssistBeam' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:ETTLII' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:FlashSyncSpeedAv' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:SetButtonCrossKeysFunc' =>
+    array (
+      0 => 0,
+    ),
+    'CanonCustom:Shutter-AELock' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 8,
+    ),
   ),
   'items' =>
   array (

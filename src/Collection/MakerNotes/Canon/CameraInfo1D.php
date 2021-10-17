@@ -24,29 +24,99 @@ class CameraInfo1D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorTemperature' => 78,
-    'ExposureTime' => 4,
-    'FocalLength' => 10,
-    'LensType' => 13,
-    'MaxFocalLength' => 16,
-    'MinFocalLength' => 14,
-    'PictureStyle' => 81,
-    'Sharpness' => 66,
-    'SharpnessFrequency' => 71,
-    'WhiteBalance' => 74,
+    'ColorTemperature' =>
+    array (
+      0 => 72,
+      1 => 78,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 10,
+    ),
+    'LensType' =>
+    array (
+      0 => 13,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 16,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 14,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 75,
+      1 => 81,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 66,
+      1 => 72,
+    ),
+    'SharpnessFrequency' =>
+    array (
+      0 => 65,
+      1 => 71,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 68,
+      1 => 74,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorTemperature' => 78,
-    'Canon:ExposureTime' => 4,
-    'Canon:FocalLength' => 10,
-    'Canon:LensType' => 13,
-    'Canon:MaxFocalLength' => 16,
-    'Canon:MinFocalLength' => 14,
-    'Canon:PictureStyle' => 81,
-    'Canon:Sharpness' => 66,
-    'Canon:SharpnessFrequency' => 71,
-    'Canon:WhiteBalance' => 74,
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 72,
+      1 => 78,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 75,
+      1 => 81,
+    ),
+    'Canon:Sharpness' =>
+    array (
+      0 => 66,
+      1 => 72,
+    ),
+    'Canon:SharpnessFrequency' =>
+    array (
+      0 => 65,
+      1 => 71,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 68,
+      1 => 74,
+    ),
   ),
   'items' =>
   array (
@@ -612,14 +682,28 @@ class CameraInfo1D extends Collection {
     ),
     72 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'ColorTemperature',
-      'title' => 'Color Temperature',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'ColorTemperature',
+        'title' => 'Color Temperature',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:ColorTemperature',
       ),
-      'exiftoolDOMNode' => 'Canon:ColorTemperature',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'Sharpness',
+        'title' => 'Sharpness',
+        'format' =>
+        array (
+          0 => 6,
+        ),
+        'exiftoolDOMNode' => 'Canon:Sharpness',
+      ),
     ),
     74 =>
     array (

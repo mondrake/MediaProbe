@@ -24,37 +24,123 @@ class CameraInfo750D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraTemperature' => 27,
-    'ColorTemperature' => 309,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FirmwareVersion' => 1097,
-    'FocalLength' => 35,
-    'FocusDistanceLower' => 167,
-    'FocusDistanceUpper' => 165,
-    'ISO' => 6,
-    'LensType' => 388,
-    'MaxFocalLength' => 392,
-    'MinFocalLength' => 390,
-    'PictureStyle' => 361,
-    'WhiteBalance' => 305,
+    'CameraTemperature' =>
+    array (
+      0 => 27,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 309,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 1085,
+      1 => 1097,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 35,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 167,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 165,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 388,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 392,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 390,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 361,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 305,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraTemperature' => 27,
-    'Canon:ColorTemperature' => 309,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FirmwareVersion' => 1097,
-    'Canon:FocalLength' => 35,
-    'Canon:FocusDistanceLower' => 167,
-    'Canon:FocusDistanceUpper' => 165,
-    'Canon:ISO' => 6,
-    'Canon:LensType' => 388,
-    'Canon:MaxFocalLength' => 392,
-    'Canon:MinFocalLength' => 390,
-    'Canon:PictureStyle' => 361,
-    'Canon:WhiteBalance' => 305,
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 309,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 1085,
+      1 => 1097,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 167,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 165,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 388,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 392,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 390,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 361,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 305,
+    ),
   ),
   'items' =>
   array (

@@ -24,77 +24,281 @@ class ColorData3 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorDataVersion' => 0,
-    'ColorTempAsShot' => 67,
-    'ColorTempAuto' => 72,
-    'ColorTempCloudy' => 92,
-    'ColorTempCustom' => 132,
-    'ColorTempDaylight' => 82,
-    'ColorTempFlash' => 112,
-    'ColorTempFlashData' => 586,
-    'ColorTempFluorescent' => 102,
-    'ColorTempKelvin' => 107,
-    'ColorTempMeasured' => 77,
-    'ColorTempPC1' => 117,
-    'ColorTempPC2' => 122,
-    'ColorTempPC3' => 127,
-    'ColorTempShade' => 87,
-    'ColorTempTungsten' => 97,
-    'FlashBatteryLevel' => 585,
-    'FlashOutput' => 584,
-    'MeasuredRGGBData' => 647,
-    'PerChannelBlackLevel' => 196,
-    'WB_RGGBLevelsAsShot' => 63,
-    'WB_RGGBLevelsAuto' => 68,
-    'WB_RGGBLevelsCloudy' => 88,
-    'WB_RGGBLevelsCustom' => 128,
-    'WB_RGGBLevelsDaylight' => 78,
-    'WB_RGGBLevelsFlash' => 108,
-    'WB_RGGBLevelsFluorescent' => 98,
-    'WB_RGGBLevelsKelvin' => 103,
-    'WB_RGGBLevelsMeasured' => 73,
-    'WB_RGGBLevelsPC1' => 113,
-    'WB_RGGBLevelsPC2' => 118,
-    'WB_RGGBLevelsPC3' => 123,
-    'WB_RGGBLevelsShade' => 83,
-    'WB_RGGBLevelsTungsten' => 93,
+    'ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'ColorTempAsShot' =>
+    array (
+      0 => 67,
+    ),
+    'ColorTempAuto' =>
+    array (
+      0 => 72,
+    ),
+    'ColorTempCloudy' =>
+    array (
+      0 => 92,
+    ),
+    'ColorTempCustom' =>
+    array (
+      0 => 132,
+    ),
+    'ColorTempDaylight' =>
+    array (
+      0 => 82,
+    ),
+    'ColorTempFlash' =>
+    array (
+      0 => 112,
+    ),
+    'ColorTempFlashData' =>
+    array (
+      0 => 586,
+    ),
+    'ColorTempFluorescent' =>
+    array (
+      0 => 102,
+    ),
+    'ColorTempKelvin' =>
+    array (
+      0 => 107,
+    ),
+    'ColorTempMeasured' =>
+    array (
+      0 => 77,
+    ),
+    'ColorTempPC1' =>
+    array (
+      0 => 117,
+    ),
+    'ColorTempPC2' =>
+    array (
+      0 => 122,
+    ),
+    'ColorTempPC3' =>
+    array (
+      0 => 127,
+    ),
+    'ColorTempShade' =>
+    array (
+      0 => 87,
+    ),
+    'ColorTempTungsten' =>
+    array (
+      0 => 97,
+    ),
+    'FlashBatteryLevel' =>
+    array (
+      0 => 585,
+    ),
+    'FlashOutput' =>
+    array (
+      0 => 584,
+    ),
+    'MeasuredRGGBData' =>
+    array (
+      0 => 647,
+    ),
+    'PerChannelBlackLevel' =>
+    array (
+      0 => 196,
+    ),
+    'WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 63,
+    ),
+    'WB_RGGBLevelsAuto' =>
+    array (
+      0 => 68,
+    ),
+    'WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 88,
+    ),
+    'WB_RGGBLevelsCustom' =>
+    array (
+      0 => 128,
+    ),
+    'WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 78,
+    ),
+    'WB_RGGBLevelsFlash' =>
+    array (
+      0 => 108,
+    ),
+    'WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 98,
+    ),
+    'WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 103,
+    ),
+    'WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 73,
+    ),
+    'WB_RGGBLevelsPC1' =>
+    array (
+      0 => 113,
+    ),
+    'WB_RGGBLevelsPC2' =>
+    array (
+      0 => 118,
+    ),
+    'WB_RGGBLevelsPC3' =>
+    array (
+      0 => 123,
+    ),
+    'WB_RGGBLevelsShade' =>
+    array (
+      0 => 83,
+    ),
+    'WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 93,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorDataVersion' => 0,
-    'Canon:ColorTempAsShot' => 67,
-    'Canon:ColorTempAuto' => 72,
-    'Canon:ColorTempCloudy' => 92,
-    'Canon:ColorTempCustom' => 132,
-    'Canon:ColorTempDaylight' => 82,
-    'Canon:ColorTempFlash' => 112,
-    'Canon:ColorTempFlashData' => 586,
-    'Canon:ColorTempFluorescent' => 102,
-    'Canon:ColorTempKelvin' => 107,
-    'Canon:ColorTempMeasured' => 77,
-    'Canon:ColorTempPC1' => 117,
-    'Canon:ColorTempPC2' => 122,
-    'Canon:ColorTempPC3' => 127,
-    'Canon:ColorTempShade' => 87,
-    'Canon:ColorTempTungsten' => 97,
-    'Canon:FlashBatteryLevel' => 585,
-    'Canon:FlashOutput' => 584,
-    'Canon:MeasuredRGGBData' => 647,
-    'Canon:PerChannelBlackLevel' => 196,
-    'Canon:WB_RGGBLevelsAsShot' => 63,
-    'Canon:WB_RGGBLevelsAuto' => 68,
-    'Canon:WB_RGGBLevelsCloudy' => 88,
-    'Canon:WB_RGGBLevelsCustom' => 128,
-    'Canon:WB_RGGBLevelsDaylight' => 78,
-    'Canon:WB_RGGBLevelsFlash' => 108,
-    'Canon:WB_RGGBLevelsFluorescent' => 98,
-    'Canon:WB_RGGBLevelsKelvin' => 103,
-    'Canon:WB_RGGBLevelsMeasured' => 73,
-    'Canon:WB_RGGBLevelsPC1' => 113,
-    'Canon:WB_RGGBLevelsPC2' => 118,
-    'Canon:WB_RGGBLevelsPC3' => 123,
-    'Canon:WB_RGGBLevelsShade' => 83,
-    'Canon:WB_RGGBLevelsTungsten' => 93,
+    'Canon:ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:ColorTempAsShot' =>
+    array (
+      0 => 67,
+    ),
+    'Canon:ColorTempAuto' =>
+    array (
+      0 => 72,
+    ),
+    'Canon:ColorTempCloudy' =>
+    array (
+      0 => 92,
+    ),
+    'Canon:ColorTempCustom' =>
+    array (
+      0 => 132,
+    ),
+    'Canon:ColorTempDaylight' =>
+    array (
+      0 => 82,
+    ),
+    'Canon:ColorTempFlash' =>
+    array (
+      0 => 112,
+    ),
+    'Canon:ColorTempFlashData' =>
+    array (
+      0 => 586,
+    ),
+    'Canon:ColorTempFluorescent' =>
+    array (
+      0 => 102,
+    ),
+    'Canon:ColorTempKelvin' =>
+    array (
+      0 => 107,
+    ),
+    'Canon:ColorTempMeasured' =>
+    array (
+      0 => 77,
+    ),
+    'Canon:ColorTempPC1' =>
+    array (
+      0 => 117,
+    ),
+    'Canon:ColorTempPC2' =>
+    array (
+      0 => 122,
+    ),
+    'Canon:ColorTempPC3' =>
+    array (
+      0 => 127,
+    ),
+    'Canon:ColorTempShade' =>
+    array (
+      0 => 87,
+    ),
+    'Canon:ColorTempTungsten' =>
+    array (
+      0 => 97,
+    ),
+    'Canon:FlashBatteryLevel' =>
+    array (
+      0 => 585,
+    ),
+    'Canon:FlashOutput' =>
+    array (
+      0 => 584,
+    ),
+    'Canon:MeasuredRGGBData' =>
+    array (
+      0 => 647,
+    ),
+    'Canon:PerChannelBlackLevel' =>
+    array (
+      0 => 196,
+    ),
+    'Canon:WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 63,
+    ),
+    'Canon:WB_RGGBLevelsAuto' =>
+    array (
+      0 => 68,
+    ),
+    'Canon:WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 88,
+    ),
+    'Canon:WB_RGGBLevelsCustom' =>
+    array (
+      0 => 128,
+    ),
+    'Canon:WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 78,
+    ),
+    'Canon:WB_RGGBLevelsFlash' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 98,
+    ),
+    'Canon:WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 103,
+    ),
+    'Canon:WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 73,
+    ),
+    'Canon:WB_RGGBLevelsPC1' =>
+    array (
+      0 => 113,
+    ),
+    'Canon:WB_RGGBLevelsPC2' =>
+    array (
+      0 => 118,
+    ),
+    'Canon:WB_RGGBLevelsPC3' =>
+    array (
+      0 => 123,
+    ),
+    'Canon:WB_RGGBLevelsShade' =>
+    array (
+      0 => 83,
+    ),
+    'Canon:WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 93,
+    ),
   ),
   'items' =>
   array (

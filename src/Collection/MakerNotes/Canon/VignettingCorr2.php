@@ -25,9 +25,18 @@ class VignettingCorr2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ChromaticAberrationSetting' => 6,
-    'PeripheralLightingSetting' => 5,
-    'indexSize' => 0,
+    'ChromaticAberrationSetting' =>
+    array (
+      0 => 6,
+    ),
+    'PeripheralLightingSetting' =>
+    array (
+      0 => 5,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -77,8 +86,14 @@ class VignettingCorr2 extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ChromaticAberrationSetting' => 6,
-    'Canon:PeripheralLightingSetting' => 5,
+    'Canon:ChromaticAberrationSetting' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:PeripheralLightingSetting' =>
+    array (
+      0 => 5,
+    ),
   ),
 );
 }

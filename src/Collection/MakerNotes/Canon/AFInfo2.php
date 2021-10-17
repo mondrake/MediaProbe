@@ -25,39 +25,137 @@ class AFInfo2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFAreaHeights' => 9,
-    'AFAreaMode' => 1,
-    'AFAreaWidths' => 8,
-    'AFAreaXPositions' => 10,
-    'AFAreaYPositions' => 11,
-    'AFImageHeight' => 7,
-    'AFImageWidth' => 6,
-    'AFPointsInFocus' => 12,
-    'AFPointsSelected' => 13,
-    'CanonImageHeight' => 5,
-    'CanonImageWidth' => 4,
-    'NumAFPoints' => 2,
-    'PrimaryAFPoint' => 14,
-    'ValidAFPoints' => 3,
-    'indexSize' => 0,
+    'AFAreaHeights' =>
+    array (
+      0 => 9,
+    ),
+    'AFAreaMode' =>
+    array (
+      0 => 1,
+    ),
+    'AFAreaWidths' =>
+    array (
+      0 => 8,
+    ),
+    'AFAreaXPositions' =>
+    array (
+      0 => 10,
+    ),
+    'AFAreaYPositions' =>
+    array (
+      0 => 11,
+    ),
+    'AFImageHeight' =>
+    array (
+      0 => 7,
+    ),
+    'AFImageWidth' =>
+    array (
+      0 => 6,
+    ),
+    'AFPointsInFocus' =>
+    array (
+      0 => 12,
+    ),
+    'AFPointsSelected' =>
+    array (
+      0 => 13,
+    ),
+    'CanonImageHeight' =>
+    array (
+      0 => 5,
+    ),
+    'CanonImageWidth' =>
+    array (
+      0 => 4,
+    ),
+    'Canon_AFInfo2_0x000d' =>
+    array (
+      0 => 13,
+    ),
+    'NumAFPoints' =>
+    array (
+      0 => 2,
+    ),
+    'PrimaryAFPoint' =>
+    array (
+      0 => 14,
+    ),
+    'ValidAFPoints' =>
+    array (
+      0 => 3,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFAreaHeights' => 9,
-    'Canon:AFAreaMode' => 1,
-    'Canon:AFAreaWidths' => 8,
-    'Canon:AFAreaXPositions' => 10,
-    'Canon:AFAreaYPositions' => 11,
-    'Canon:AFImageHeight' => 7,
-    'Canon:AFImageWidth' => 6,
-    'Canon:AFInfoSize' => 0,
-    'Canon:AFPointsInFocus' => 12,
-    'Canon:AFPointsSelected' => 13,
-    'Canon:CanonImageHeight' => 5,
-    'Canon:CanonImageWidth' => 4,
-    'Canon:NumAFPoints' => 2,
-    'Canon:PrimaryAFPoint' => 14,
-    'Canon:ValidAFPoints' => 3,
+    'Canon:AFAreaHeights' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:AFAreaMode' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:AFAreaWidths' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:AFAreaXPositions' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:AFAreaYPositions' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:AFImageHeight' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:AFImageWidth' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:AFInfoSize' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:AFPointsInFocus' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:AFPointsSelected' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:CanonImageHeight' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:CanonImageWidth' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:Canon_AFInfo2_0x000d' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:NumAFPoints' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:PrimaryAFPoint' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:ValidAFPoints' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (
@@ -226,15 +324,30 @@ class AFInfo2 extends Collection {
     ),
     13 =>
     array (
-      '__todo' => 'add decoding',
-      'collection' => 'Tag',
-      'name' => 'AFPointsSelected',
-      'title' => 'AF Points Selected',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        '__todo' => 'add decoding',
+        'collection' => 'Tag',
+        'name' => 'AFPointsSelected',
+        'title' => 'AF Points Selected',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:AFPointsSelected',
       ),
-      'exiftoolDOMNode' => 'Canon:AFPointsSelected',
+      1 =>
+      array (
+        '__todo' => 'add decoding',
+        'collection' => 'Tag',
+        'name' => 'Canon_AFInfo2_0x000d',
+        'title' => 'Canon AF Info 2 0x000d',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:Canon_AFInfo2_0x000d',
+      ),
     ),
     14 =>
     array (

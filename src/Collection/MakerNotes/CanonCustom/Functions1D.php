@@ -24,53 +24,185 @@ class Functions1D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBSequenceAutoCancel' => 9,
-    'AFPointActivationArea' => 17,
-    'AFPointIllumination' => 10,
-    'AFPointSelection' => 11,
-    'AFPointSpotMetering' => 13,
-    'AIServoContinuousShooting' => 21,
-    'AIServoTrackingSensitivity' => 20,
-    'ExposureLevelIncrements' => 6,
-    'FillFlashAutoReduction' => 14,
-    'FinderDisplayDuringExposure' => 1,
-    'FocusingScreen' => 0,
-    'ISOSpeedExpansion' => 3,
-    'LCDPanels' => 8,
-    'LensAFStopButton' => 19,
-    'ManualTv' => 5,
-    'MirrorLockup' => 12,
-    'SafetyShiftInAvOrTv' => 16,
-    'ShutterAELButton' => 4,
-    'ShutterCurtainSync' => 15,
-    'ShutterReleaseNoCFCard' => 2,
-    'SwitchToRegisteredAFPoint' => 18,
-    'USMLensElectronicMF' => 7,
+    'AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'AFPointActivationArea' =>
+    array (
+      0 => 17,
+    ),
+    'AFPointIllumination' =>
+    array (
+      0 => 10,
+    ),
+    'AFPointSelection' =>
+    array (
+      0 => 11,
+    ),
+    'AFPointSpotMetering' =>
+    array (
+      0 => 13,
+    ),
+    'AIServoContinuousShooting' =>
+    array (
+      0 => 21,
+    ),
+    'AIServoTrackingSensitivity' =>
+    array (
+      0 => 20,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'FillFlashAutoReduction' =>
+    array (
+      0 => 14,
+    ),
+    'FinderDisplayDuringExposure' =>
+    array (
+      0 => 1,
+    ),
+    'FocusingScreen' =>
+    array (
+      0 => 0,
+    ),
+    'ISOSpeedExpansion' =>
+    array (
+      0 => 3,
+    ),
+    'LCDPanels' =>
+    array (
+      0 => 8,
+    ),
+    'LensAFStopButton' =>
+    array (
+      0 => 19,
+    ),
+    'ManualTv' =>
+    array (
+      0 => 5,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'ShutterAELButton' =>
+    array (
+      0 => 4,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'ShutterReleaseNoCFCard' =>
+    array (
+      0 => 2,
+    ),
+    'SwitchToRegisteredAFPoint' =>
+    array (
+      0 => 18,
+    ),
+    'USMLensElectronicMF' =>
+    array (
+      0 => 7,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AEBSequenceAutoCancel' => 9,
-    'CanonCustom:AFPointActivationArea' => 17,
-    'CanonCustom:AFPointIllumination' => 10,
-    'CanonCustom:AFPointSelection' => 11,
-    'CanonCustom:AFPointSpotMetering' => 13,
-    'CanonCustom:AIServoContinuousShooting' => 21,
-    'CanonCustom:AIServoTrackingSensitivity' => 20,
-    'CanonCustom:ExposureLevelIncrements' => 6,
-    'CanonCustom:FillFlashAutoReduction' => 14,
-    'CanonCustom:FinderDisplayDuringExposure' => 1,
-    'CanonCustom:FocusingScreen' => 0,
-    'CanonCustom:ISOSpeedExpansion' => 3,
-    'CanonCustom:LCDPanels' => 8,
-    'CanonCustom:LensAFStopButton' => 19,
-    'CanonCustom:ManualTv' => 5,
-    'CanonCustom:MirrorLockup' => 12,
-    'CanonCustom:SafetyShiftInAvOrTv' => 16,
-    'CanonCustom:ShutterAELButton' => 4,
-    'CanonCustom:ShutterCurtainSync' => 15,
-    'CanonCustom:ShutterReleaseNoCFCard' => 2,
-    'CanonCustom:SwitchToRegisteredAFPoint' => 18,
-    'CanonCustom:USMLensElectronicMF' => 7,
+    'CanonCustom:AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:AFPointActivationArea' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:AFPointIllumination' =>
+    array (
+      0 => 10,
+    ),
+    'CanonCustom:AFPointSelection' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:AFPointSpotMetering' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:AIServoContinuousShooting' =>
+    array (
+      0 => 21,
+    ),
+    'CanonCustom:AIServoTrackingSensitivity' =>
+    array (
+      0 => 20,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:FillFlashAutoReduction' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:FinderDisplayDuringExposure' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:FocusingScreen' =>
+    array (
+      0 => 0,
+    ),
+    'CanonCustom:ISOSpeedExpansion' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:LCDPanels' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:LensAFStopButton' =>
+    array (
+      0 => 19,
+    ),
+    'CanonCustom:ManualTv' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:ShutterAELButton' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:ShutterReleaseNoCFCard' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:SwitchToRegisteredAFPoint' =>
+    array (
+      0 => 18,
+    ),
+    'CanonCustom:USMLensElectronicMF' =>
+    array (
+      0 => 7,
+    ),
   ),
   'items' =>
   array (

@@ -24,51 +24,177 @@ class CameraInfo5DmkIII extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 125,
-    'CameraTemperature' => 27,
-    'ColorTemperature' => 192,
-    'DirectoryIndex' => 664,
-    'DirectoryIndex2' => 668,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 652,
-    'FileIndex2' => 656,
-    'FirmwareVersion' => 572,
-    'FirmwareVersionLookAhead' => 0,
-    'FocalLength' => 35,
-    'FocusDistanceLower' => 142,
-    'FocusDistanceUpper' => 140,
-    'ISO' => 6,
-    'LensSerialNumber' => 356,
-    'LensType' => 339,
-    'MaxFocalLength' => 343,
-    'MinFocalLength' => 341,
-    'PictureStyle' => 244,
-    'WhiteBalance' => 188,
+    'CameraOrientation' =>
+    array (
+      0 => 125,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 27,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 192,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 664,
+    ),
+    'DirectoryIndex2' =>
+    array (
+      0 => 668,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 652,
+    ),
+    'FileIndex2' =>
+    array (
+      0 => 656,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 572,
+    ),
+    'FirmwareVersionLookAhead' =>
+    array (
+      0 => 0,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 35,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 142,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 140,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensSerialNumber' =>
+    array (
+      0 => 356,
+    ),
+    'LensType' =>
+    array (
+      0 => 339,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 343,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 341,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 244,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 188,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraOrientation' => 125,
-    'Canon:CameraTemperature' => 27,
-    'Canon:ColorTemperature' => 192,
-    'Canon:DirectoryIndex' => 664,
-    'Canon:DirectoryIndex2' => 668,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 652,
-    'Canon:FileIndex2' => 656,
-    'Canon:FirmwareVersion' => 572,
-    'Canon:FirmwareVersionLookAhead' => 0,
-    'Canon:FocalLength' => 35,
-    'Canon:FocusDistanceLower' => 142,
-    'Canon:FocusDistanceUpper' => 140,
-    'Canon:ISO' => 6,
-    'Canon:LensSerialNumber' => 356,
-    'Canon:LensType' => 339,
-    'Canon:MaxFocalLength' => 343,
-    'Canon:MinFocalLength' => 341,
-    'Canon:PictureStyle' => 244,
-    'Canon:WhiteBalance' => 188,
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 125,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 192,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 664,
+    ),
+    'Canon:DirectoryIndex2' =>
+    array (
+      0 => 668,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 652,
+    ),
+    'Canon:FileIndex2' =>
+    array (
+      0 => 656,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 572,
+    ),
+    'Canon:FirmwareVersionLookAhead' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 142,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 140,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensSerialNumber' =>
+    array (
+      0 => 356,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 339,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 343,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 341,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 244,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 188,
+    ),
   ),
   'items' =>
   array (

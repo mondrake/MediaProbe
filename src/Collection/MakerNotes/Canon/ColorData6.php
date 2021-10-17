@@ -24,123 +24,465 @@ class ColorData6 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AverageBlackLevel' => 251,
-    'ColorDataVersion' => 0,
-    'ColorTempAsShot' => 67,
-    'ColorTempAuto' => 72,
-    'ColorTempCloudy' => 117,
-    'ColorTempDaylight' => 107,
-    'ColorTempFlash' => 137,
-    'ColorTempFluorescent' => 127,
-    'ColorTempKelvin' => 132,
-    'ColorTempMeasured' => 77,
-    'ColorTempShade' => 112,
-    'ColorTempTungsten' => 122,
-    'ColorTempUnknown' => 82,
-    'ColorTempUnknown10' => 162,
-    'ColorTempUnknown11' => 167,
-    'ColorTempUnknown12' => 172,
-    'ColorTempUnknown13' => 177,
-    'ColorTempUnknown14' => 182,
-    'ColorTempUnknown15' => 187,
-    'ColorTempUnknown2' => 87,
-    'ColorTempUnknown3' => 92,
-    'ColorTempUnknown4' => 97,
-    'ColorTempUnknown5' => 102,
-    'ColorTempUnknown6' => 142,
-    'ColorTempUnknown7' => 147,
-    'ColorTempUnknown8' => 152,
-    'ColorTempUnknown9' => 157,
-    'LinearityUpperMargin' => 485,
-    'NormalWhiteLevel' => 483,
-    'PerChannelBlackLevel' => 479,
-    'RawMeasuredRGGB' => 404,
-    'SpecularWhiteLevel' => 484,
-    'WB_RGGBLevelsAsShot' => 63,
-    'WB_RGGBLevelsAuto' => 68,
-    'WB_RGGBLevelsCloudy' => 113,
-    'WB_RGGBLevelsDaylight' => 103,
-    'WB_RGGBLevelsFlash' => 133,
-    'WB_RGGBLevelsFluorescent' => 123,
-    'WB_RGGBLevelsKelvin' => 128,
-    'WB_RGGBLevelsMeasured' => 73,
-    'WB_RGGBLevelsShade' => 108,
-    'WB_RGGBLevelsTungsten' => 118,
-    'WB_RGGBLevelsUnknown' => 78,
-    'WB_RGGBLevelsUnknown10' => 158,
-    'WB_RGGBLevelsUnknown11' => 163,
-    'WB_RGGBLevelsUnknown12' => 168,
-    'WB_RGGBLevelsUnknown13' => 173,
-    'WB_RGGBLevelsUnknown14' => 178,
-    'WB_RGGBLevelsUnknown15' => 183,
-    'WB_RGGBLevelsUnknown2' => 83,
-    'WB_RGGBLevelsUnknown3' => 88,
-    'WB_RGGBLevelsUnknown4' => 93,
-    'WB_RGGBLevelsUnknown5' => 98,
-    'WB_RGGBLevelsUnknown6' => 138,
-    'WB_RGGBLevelsUnknown7' => 143,
-    'WB_RGGBLevelsUnknown8' => 148,
-    'WB_RGGBLevelsUnknown9' => 153,
+    'AverageBlackLevel' =>
+    array (
+      0 => 251,
+    ),
+    'ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'ColorTempAsShot' =>
+    array (
+      0 => 67,
+    ),
+    'ColorTempAuto' =>
+    array (
+      0 => 72,
+    ),
+    'ColorTempCloudy' =>
+    array (
+      0 => 117,
+    ),
+    'ColorTempDaylight' =>
+    array (
+      0 => 107,
+    ),
+    'ColorTempFlash' =>
+    array (
+      0 => 137,
+    ),
+    'ColorTempFluorescent' =>
+    array (
+      0 => 127,
+    ),
+    'ColorTempKelvin' =>
+    array (
+      0 => 132,
+    ),
+    'ColorTempMeasured' =>
+    array (
+      0 => 77,
+    ),
+    'ColorTempShade' =>
+    array (
+      0 => 112,
+    ),
+    'ColorTempTungsten' =>
+    array (
+      0 => 122,
+    ),
+    'ColorTempUnknown' =>
+    array (
+      0 => 82,
+    ),
+    'ColorTempUnknown10' =>
+    array (
+      0 => 162,
+    ),
+    'ColorTempUnknown11' =>
+    array (
+      0 => 167,
+    ),
+    'ColorTempUnknown12' =>
+    array (
+      0 => 172,
+    ),
+    'ColorTempUnknown13' =>
+    array (
+      0 => 177,
+    ),
+    'ColorTempUnknown14' =>
+    array (
+      0 => 182,
+    ),
+    'ColorTempUnknown15' =>
+    array (
+      0 => 187,
+    ),
+    'ColorTempUnknown2' =>
+    array (
+      0 => 87,
+    ),
+    'ColorTempUnknown3' =>
+    array (
+      0 => 92,
+    ),
+    'ColorTempUnknown4' =>
+    array (
+      0 => 97,
+    ),
+    'ColorTempUnknown5' =>
+    array (
+      0 => 102,
+    ),
+    'ColorTempUnknown6' =>
+    array (
+      0 => 142,
+    ),
+    'ColorTempUnknown7' =>
+    array (
+      0 => 147,
+    ),
+    'ColorTempUnknown8' =>
+    array (
+      0 => 152,
+    ),
+    'ColorTempUnknown9' =>
+    array (
+      0 => 157,
+    ),
+    'LinearityUpperMargin' =>
+    array (
+      0 => 485,
+    ),
+    'NormalWhiteLevel' =>
+    array (
+      0 => 483,
+    ),
+    'PerChannelBlackLevel' =>
+    array (
+      0 => 479,
+    ),
+    'RawMeasuredRGGB' =>
+    array (
+      0 => 404,
+    ),
+    'SpecularWhiteLevel' =>
+    array (
+      0 => 484,
+    ),
+    'WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 63,
+    ),
+    'WB_RGGBLevelsAuto' =>
+    array (
+      0 => 68,
+    ),
+    'WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 113,
+    ),
+    'WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 103,
+    ),
+    'WB_RGGBLevelsFlash' =>
+    array (
+      0 => 133,
+    ),
+    'WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 123,
+    ),
+    'WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 128,
+    ),
+    'WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 73,
+    ),
+    'WB_RGGBLevelsShade' =>
+    array (
+      0 => 108,
+    ),
+    'WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 118,
+    ),
+    'WB_RGGBLevelsUnknown' =>
+    array (
+      0 => 78,
+    ),
+    'WB_RGGBLevelsUnknown10' =>
+    array (
+      0 => 158,
+    ),
+    'WB_RGGBLevelsUnknown11' =>
+    array (
+      0 => 163,
+    ),
+    'WB_RGGBLevelsUnknown12' =>
+    array (
+      0 => 168,
+    ),
+    'WB_RGGBLevelsUnknown13' =>
+    array (
+      0 => 173,
+    ),
+    'WB_RGGBLevelsUnknown14' =>
+    array (
+      0 => 178,
+    ),
+    'WB_RGGBLevelsUnknown15' =>
+    array (
+      0 => 183,
+    ),
+    'WB_RGGBLevelsUnknown2' =>
+    array (
+      0 => 83,
+    ),
+    'WB_RGGBLevelsUnknown3' =>
+    array (
+      0 => 88,
+    ),
+    'WB_RGGBLevelsUnknown4' =>
+    array (
+      0 => 93,
+    ),
+    'WB_RGGBLevelsUnknown5' =>
+    array (
+      0 => 98,
+    ),
+    'WB_RGGBLevelsUnknown6' =>
+    array (
+      0 => 138,
+    ),
+    'WB_RGGBLevelsUnknown7' =>
+    array (
+      0 => 143,
+    ),
+    'WB_RGGBLevelsUnknown8' =>
+    array (
+      0 => 148,
+    ),
+    'WB_RGGBLevelsUnknown9' =>
+    array (
+      0 => 153,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AverageBlackLevel' => 251,
-    'Canon:ColorDataVersion' => 0,
-    'Canon:ColorTempAsShot' => 67,
-    'Canon:ColorTempAuto' => 72,
-    'Canon:ColorTempCloudy' => 117,
-    'Canon:ColorTempDaylight' => 107,
-    'Canon:ColorTempFlash' => 137,
-    'Canon:ColorTempFluorescent' => 127,
-    'Canon:ColorTempKelvin' => 132,
-    'Canon:ColorTempMeasured' => 77,
-    'Canon:ColorTempShade' => 112,
-    'Canon:ColorTempTungsten' => 122,
-    'Canon:ColorTempUnknown' => 82,
-    'Canon:ColorTempUnknown10' => 162,
-    'Canon:ColorTempUnknown11' => 167,
-    'Canon:ColorTempUnknown12' => 172,
-    'Canon:ColorTempUnknown13' => 177,
-    'Canon:ColorTempUnknown14' => 182,
-    'Canon:ColorTempUnknown15' => 187,
-    'Canon:ColorTempUnknown2' => 87,
-    'Canon:ColorTempUnknown3' => 92,
-    'Canon:ColorTempUnknown4' => 97,
-    'Canon:ColorTempUnknown5' => 102,
-    'Canon:ColorTempUnknown6' => 142,
-    'Canon:ColorTempUnknown7' => 147,
-    'Canon:ColorTempUnknown8' => 152,
-    'Canon:ColorTempUnknown9' => 157,
-    'Canon:LinearityUpperMargin' => 485,
-    'Canon:NormalWhiteLevel' => 483,
-    'Canon:PerChannelBlackLevel' => 479,
-    'Canon:RawMeasuredRGGB' => 404,
-    'Canon:SpecularWhiteLevel' => 484,
-    'Canon:WB_RGGBLevelsAsShot' => 63,
-    'Canon:WB_RGGBLevelsAuto' => 68,
-    'Canon:WB_RGGBLevelsCloudy' => 113,
-    'Canon:WB_RGGBLevelsDaylight' => 103,
-    'Canon:WB_RGGBLevelsFlash' => 133,
-    'Canon:WB_RGGBLevelsFluorescent' => 123,
-    'Canon:WB_RGGBLevelsKelvin' => 128,
-    'Canon:WB_RGGBLevelsMeasured' => 73,
-    'Canon:WB_RGGBLevelsShade' => 108,
-    'Canon:WB_RGGBLevelsTungsten' => 118,
-    'Canon:WB_RGGBLevelsUnknown' => 78,
-    'Canon:WB_RGGBLevelsUnknown10' => 158,
-    'Canon:WB_RGGBLevelsUnknown11' => 163,
-    'Canon:WB_RGGBLevelsUnknown12' => 168,
-    'Canon:WB_RGGBLevelsUnknown13' => 173,
-    'Canon:WB_RGGBLevelsUnknown14' => 178,
-    'Canon:WB_RGGBLevelsUnknown15' => 183,
-    'Canon:WB_RGGBLevelsUnknown2' => 83,
-    'Canon:WB_RGGBLevelsUnknown3' => 88,
-    'Canon:WB_RGGBLevelsUnknown4' => 93,
-    'Canon:WB_RGGBLevelsUnknown5' => 98,
-    'Canon:WB_RGGBLevelsUnknown6' => 138,
-    'Canon:WB_RGGBLevelsUnknown7' => 143,
-    'Canon:WB_RGGBLevelsUnknown8' => 148,
-    'Canon:WB_RGGBLevelsUnknown9' => 153,
+    'Canon:AverageBlackLevel' =>
+    array (
+      0 => 251,
+    ),
+    'Canon:ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:ColorTempAsShot' =>
+    array (
+      0 => 67,
+    ),
+    'Canon:ColorTempAuto' =>
+    array (
+      0 => 72,
+    ),
+    'Canon:ColorTempCloudy' =>
+    array (
+      0 => 117,
+    ),
+    'Canon:ColorTempDaylight' =>
+    array (
+      0 => 107,
+    ),
+    'Canon:ColorTempFlash' =>
+    array (
+      0 => 137,
+    ),
+    'Canon:ColorTempFluorescent' =>
+    array (
+      0 => 127,
+    ),
+    'Canon:ColorTempKelvin' =>
+    array (
+      0 => 132,
+    ),
+    'Canon:ColorTempMeasured' =>
+    array (
+      0 => 77,
+    ),
+    'Canon:ColorTempShade' =>
+    array (
+      0 => 112,
+    ),
+    'Canon:ColorTempTungsten' =>
+    array (
+      0 => 122,
+    ),
+    'Canon:ColorTempUnknown' =>
+    array (
+      0 => 82,
+    ),
+    'Canon:ColorTempUnknown10' =>
+    array (
+      0 => 162,
+    ),
+    'Canon:ColorTempUnknown11' =>
+    array (
+      0 => 167,
+    ),
+    'Canon:ColorTempUnknown12' =>
+    array (
+      0 => 172,
+    ),
+    'Canon:ColorTempUnknown13' =>
+    array (
+      0 => 177,
+    ),
+    'Canon:ColorTempUnknown14' =>
+    array (
+      0 => 182,
+    ),
+    'Canon:ColorTempUnknown15' =>
+    array (
+      0 => 187,
+    ),
+    'Canon:ColorTempUnknown2' =>
+    array (
+      0 => 87,
+    ),
+    'Canon:ColorTempUnknown3' =>
+    array (
+      0 => 92,
+    ),
+    'Canon:ColorTempUnknown4' =>
+    array (
+      0 => 97,
+    ),
+    'Canon:ColorTempUnknown5' =>
+    array (
+      0 => 102,
+    ),
+    'Canon:ColorTempUnknown6' =>
+    array (
+      0 => 142,
+    ),
+    'Canon:ColorTempUnknown7' =>
+    array (
+      0 => 147,
+    ),
+    'Canon:ColorTempUnknown8' =>
+    array (
+      0 => 152,
+    ),
+    'Canon:ColorTempUnknown9' =>
+    array (
+      0 => 157,
+    ),
+    'Canon:LinearityUpperMargin' =>
+    array (
+      0 => 485,
+    ),
+    'Canon:NormalWhiteLevel' =>
+    array (
+      0 => 483,
+    ),
+    'Canon:PerChannelBlackLevel' =>
+    array (
+      0 => 479,
+    ),
+    'Canon:RawMeasuredRGGB' =>
+    array (
+      0 => 404,
+    ),
+    'Canon:SpecularWhiteLevel' =>
+    array (
+      0 => 484,
+    ),
+    'Canon:WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 63,
+    ),
+    'Canon:WB_RGGBLevelsAuto' =>
+    array (
+      0 => 68,
+    ),
+    'Canon:WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 113,
+    ),
+    'Canon:WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 103,
+    ),
+    'Canon:WB_RGGBLevelsFlash' =>
+    array (
+      0 => 133,
+    ),
+    'Canon:WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 123,
+    ),
+    'Canon:WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 128,
+    ),
+    'Canon:WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 73,
+    ),
+    'Canon:WB_RGGBLevelsShade' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 118,
+    ),
+    'Canon:WB_RGGBLevelsUnknown' =>
+    array (
+      0 => 78,
+    ),
+    'Canon:WB_RGGBLevelsUnknown10' =>
+    array (
+      0 => 158,
+    ),
+    'Canon:WB_RGGBLevelsUnknown11' =>
+    array (
+      0 => 163,
+    ),
+    'Canon:WB_RGGBLevelsUnknown12' =>
+    array (
+      0 => 168,
+    ),
+    'Canon:WB_RGGBLevelsUnknown13' =>
+    array (
+      0 => 173,
+    ),
+    'Canon:WB_RGGBLevelsUnknown14' =>
+    array (
+      0 => 178,
+    ),
+    'Canon:WB_RGGBLevelsUnknown15' =>
+    array (
+      0 => 183,
+    ),
+    'Canon:WB_RGGBLevelsUnknown2' =>
+    array (
+      0 => 83,
+    ),
+    'Canon:WB_RGGBLevelsUnknown3' =>
+    array (
+      0 => 88,
+    ),
+    'Canon:WB_RGGBLevelsUnknown4' =>
+    array (
+      0 => 93,
+    ),
+    'Canon:WB_RGGBLevelsUnknown5' =>
+    array (
+      0 => 98,
+    ),
+    'Canon:WB_RGGBLevelsUnknown6' =>
+    array (
+      0 => 138,
+    ),
+    'Canon:WB_RGGBLevelsUnknown7' =>
+    array (
+      0 => 143,
+    ),
+    'Canon:WB_RGGBLevelsUnknown8' =>
+    array (
+      0 => 148,
+    ),
+    'Canon:WB_RGGBLevelsUnknown9' =>
+    array (
+      0 => 153,
+    ),
   ),
   'items' =>
   array (

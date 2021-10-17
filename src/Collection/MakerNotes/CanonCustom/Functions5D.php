@@ -24,51 +24,177 @@ class Functions5D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBSequenceAutoCancel' => 9,
-    'AFAssistBeam' => 5,
-    'AFPointActivationArea' => 17,
-    'AFPointSelectionMethod' => 13,
-    'AddOriginalDecisionData' => 20,
-    'ETTLII' => 14,
-    'ExposureLevelIncrements' => 6,
-    'FlashFiring' => 7,
-    'FlashSyncSpeedAv' => 3,
-    'FocusingScreen' => 0,
-    'ISOExpansion' => 8,
-    'LCDDisplayReturnToShoot' => 18,
-    'LensAFStopButton' => 19,
-    'LongExposureNoiseReduction' => 2,
-    'MenuButtonDisplayPosition' => 11,
-    'MirrorLockup' => 12,
-    'SafetyShiftInAvOrTv' => 16,
-    'SetFunctionWhenShooting' => 1,
-    'Shutter-AELock' => 4,
-    'ShutterCurtainSync' => 15,
-    'SuperimposedDisplay' => 10,
+    'AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'AFAssistBeam' =>
+    array (
+      0 => 5,
+    ),
+    'AFPointActivationArea' =>
+    array (
+      0 => 17,
+    ),
+    'AFPointSelectionMethod' =>
+    array (
+      0 => 13,
+    ),
+    'AddOriginalDecisionData' =>
+    array (
+      0 => 20,
+    ),
+    'ETTLII' =>
+    array (
+      0 => 14,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'FlashFiring' =>
+    array (
+      0 => 7,
+    ),
+    'FlashSyncSpeedAv' =>
+    array (
+      0 => 3,
+    ),
+    'FocusingScreen' =>
+    array (
+      0 => 0,
+    ),
+    'ISOExpansion' =>
+    array (
+      0 => 8,
+    ),
+    'LCDDisplayReturnToShoot' =>
+    array (
+      0 => 18,
+    ),
+    'LensAFStopButton' =>
+    array (
+      0 => 19,
+    ),
+    'LongExposureNoiseReduction' =>
+    array (
+      0 => 2,
+    ),
+    'MenuButtonDisplayPosition' =>
+    array (
+      0 => 11,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'SetFunctionWhenShooting' =>
+    array (
+      0 => 1,
+    ),
+    'Shutter-AELock' =>
+    array (
+      0 => 4,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'SuperimposedDisplay' =>
+    array (
+      0 => 10,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AEBSequenceAutoCancel' => 9,
-    'CanonCustom:AFAssistBeam' => 5,
-    'CanonCustom:AFPointActivationArea' => 17,
-    'CanonCustom:AFPointSelectionMethod' => 13,
-    'CanonCustom:AddOriginalDecisionData' => 20,
-    'CanonCustom:ETTLII' => 14,
-    'CanonCustom:ExposureLevelIncrements' => 6,
-    'CanonCustom:FlashFiring' => 7,
-    'CanonCustom:FlashSyncSpeedAv' => 3,
-    'CanonCustom:FocusingScreen' => 0,
-    'CanonCustom:ISOExpansion' => 8,
-    'CanonCustom:LCDDisplayReturnToShoot' => 18,
-    'CanonCustom:LensAFStopButton' => 19,
-    'CanonCustom:LongExposureNoiseReduction' => 2,
-    'CanonCustom:MenuButtonDisplayPosition' => 11,
-    'CanonCustom:MirrorLockup' => 12,
-    'CanonCustom:SafetyShiftInAvOrTv' => 16,
-    'CanonCustom:SetFunctionWhenShooting' => 1,
-    'CanonCustom:Shutter-AELock' => 4,
-    'CanonCustom:ShutterCurtainSync' => 15,
-    'CanonCustom:SuperimposedDisplay' => 10,
+    'CanonCustom:AEBSequenceAutoCancel' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:AFAssistBeam' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:AFPointActivationArea' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:AFPointSelectionMethod' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:AddOriginalDecisionData' =>
+    array (
+      0 => 20,
+    ),
+    'CanonCustom:ETTLII' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:FlashFiring' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:FlashSyncSpeedAv' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:FocusingScreen' =>
+    array (
+      0 => 0,
+    ),
+    'CanonCustom:ISOExpansion' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:LCDDisplayReturnToShoot' =>
+    array (
+      0 => 18,
+    ),
+    'CanonCustom:LensAFStopButton' =>
+    array (
+      0 => 19,
+    ),
+    'CanonCustom:LongExposureNoiseReduction' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:MenuButtonDisplayPosition' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:SafetyShiftInAvOrTv' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:SetFunctionWhenShooting' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:Shutter-AELock' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:SuperimposedDisplay' =>
+    array (
+      0 => 10,
+    ),
   ),
   'items' =>
   array (

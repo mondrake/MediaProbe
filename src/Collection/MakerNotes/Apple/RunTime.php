@@ -20,17 +20,41 @@ class RunTime extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'RunTimeEpoch' => 'epoch',
-    'RunTimeFlags' => 'flags',
-    'RunTimeScale' => 'timescale',
-    'RunTimeValue' => 'value',
+    'RunTimeEpoch' =>
+    array (
+      0 => 'epoch',
+    ),
+    'RunTimeFlags' =>
+    array (
+      0 => 'flags',
+    ),
+    'RunTimeScale' =>
+    array (
+      0 => 'timescale',
+    ),
+    'RunTimeValue' =>
+    array (
+      0 => 'value',
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Apple:RunTimeEpoch' => 'epoch',
-    'Apple:RunTimeFlags' => 'flags',
-    'Apple:RunTimeScale' => 'timescale',
-    'Apple:RunTimeValue' => 'value',
+    'Apple:RunTimeEpoch' =>
+    array (
+      0 => 'epoch',
+    ),
+    'Apple:RunTimeFlags' =>
+    array (
+      0 => 'flags',
+    ),
+    'Apple:RunTimeScale' =>
+    array (
+      0 => 'timescale',
+    ),
+    'Apple:RunTimeValue' =>
+    array (
+      0 => 'value',
+    ),
   ),
   'items' =>
   array (

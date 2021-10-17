@@ -24,29 +24,89 @@ class ToneCurve extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'BlueCurvePoints' => 121,
-    'GreenCurvePoints' => 83,
-    'RGBCurvePoints' => 7,
-    'RedCurvePoints' => 45,
-    'ToneCurveColorSpace' => 0,
-    'ToneCurveInputRange' => 3,
-    'ToneCurveOutputRange' => 5,
-    'ToneCurveShape' => 1,
-    'ToneCurveX' => 10,
-    'ToneCurveY' => 11,
+    'BlueCurvePoints' =>
+    array (
+      0 => 121,
+    ),
+    'GreenCurvePoints' =>
+    array (
+      0 => 83,
+    ),
+    'RGBCurvePoints' =>
+    array (
+      0 => 7,
+    ),
+    'RedCurvePoints' =>
+    array (
+      0 => 45,
+    ),
+    'ToneCurveColorSpace' =>
+    array (
+      0 => 0,
+    ),
+    'ToneCurveInputRange' =>
+    array (
+      0 => 3,
+    ),
+    'ToneCurveOutputRange' =>
+    array (
+      0 => 5,
+    ),
+    'ToneCurveShape' =>
+    array (
+      0 => 1,
+    ),
+    'ToneCurveX' =>
+    array (
+      0 => 10,
+    ),
+    'ToneCurveY' =>
+    array (
+      0 => 11,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:BlueCurvePoints' => 121,
-    'CanonVRD:GreenCurvePoints' => 83,
-    'CanonVRD:RGBCurvePoints' => 7,
-    'CanonVRD:RedCurvePoints' => 45,
-    'CanonVRD:ToneCurveColorSpace' => 0,
-    'CanonVRD:ToneCurveInputRange' => 3,
-    'CanonVRD:ToneCurveOutputRange' => 5,
-    'CanonVRD:ToneCurveShape' => 1,
-    'CanonVRD:ToneCurveX' => 10,
-    'CanonVRD:ToneCurveY' => 11,
+    'CanonVRD:BlueCurvePoints' =>
+    array (
+      0 => 121,
+    ),
+    'CanonVRD:GreenCurvePoints' =>
+    array (
+      0 => 83,
+    ),
+    'CanonVRD:RGBCurvePoints' =>
+    array (
+      0 => 7,
+    ),
+    'CanonVRD:RedCurvePoints' =>
+    array (
+      0 => 45,
+    ),
+    'CanonVRD:ToneCurveColorSpace' =>
+    array (
+      0 => 0,
+    ),
+    'CanonVRD:ToneCurveInputRange' =>
+    array (
+      0 => 3,
+    ),
+    'CanonVRD:ToneCurveOutputRange' =>
+    array (
+      0 => 5,
+    ),
+    'CanonVRD:ToneCurveShape' =>
+    array (
+      0 => 1,
+    ),
+    'CanonVRD:ToneCurveX' =>
+    array (
+      0 => 10,
+    ),
+    'CanonVRD:ToneCurveY' =>
+    array (
+      0 => 11,
+    ),
   ),
   'items' =>
   array (

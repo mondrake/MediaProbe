@@ -24,11 +24,17 @@ class ContrastInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'IntelligentContrast' => 4,
+    'IntelligentContrast' =>
+    array (
+      0 => 4,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:IntelligentContrast' => 4,
+    'Canon:IntelligentContrast' =>
+    array (
+      0 => 4,
+    ),
   ),
   'items' =>
   array (

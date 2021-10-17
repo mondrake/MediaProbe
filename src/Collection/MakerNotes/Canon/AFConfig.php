@@ -25,26 +25,86 @@ class AFConfig extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFAccelDecelTracking' => 3,
-    'AFAreaSelectionMethod' => 13,
-    'AFAssistBeam' => 8,
-    'AFConfigTool' => 1,
-    'AFPointDisplayDuringFocus' => 16,
-    'AFPointSwitching' => 4,
-    'AFStatusViewfinder' => 18,
-    'AFTrackingSensitivity' => 2,
-    'AIServoFirstImage' => 5,
-    'AIServoSecondImage' => 6,
-    'AutoAFPointSelEOSiTRAF' => 10,
-    'InitialAFPointInServo' => 19,
-    'LensDriveWhenAFImpossible' => 11,
-    'ManualAFPointSelPattern' => 15,
-    'OneShotAFRelease' => 9,
-    'OrientationLinkedAF' => 14,
-    'SelectAFAreaSelectionMode' => 12,
-    'USMLensElectronicMF' => 7,
-    'VFDisplayIllumination' => 17,
-    'indexSize' => 0,
+    'AFAccelDecelTracking' =>
+    array (
+      0 => 3,
+    ),
+    'AFAreaSelectionMethod' =>
+    array (
+      0 => 13,
+    ),
+    'AFAssistBeam' =>
+    array (
+      0 => 8,
+    ),
+    'AFConfigTool' =>
+    array (
+      0 => 1,
+    ),
+    'AFPointDisplayDuringFocus' =>
+    array (
+      0 => 16,
+    ),
+    'AFPointSwitching' =>
+    array (
+      0 => 4,
+    ),
+    'AFStatusViewfinder' =>
+    array (
+      0 => 18,
+    ),
+    'AFTrackingSensitivity' =>
+    array (
+      0 => 2,
+    ),
+    'AIServoFirstImage' =>
+    array (
+      0 => 5,
+    ),
+    'AIServoSecondImage' =>
+    array (
+      0 => 6,
+    ),
+    'AutoAFPointSelEOSiTRAF' =>
+    array (
+      0 => 10,
+    ),
+    'InitialAFPointInServo' =>
+    array (
+      0 => 19,
+    ),
+    'LensDriveWhenAFImpossible' =>
+    array (
+      0 => 11,
+    ),
+    'ManualAFPointSelPattern' =>
+    array (
+      0 => 15,
+    ),
+    'OneShotAFRelease' =>
+    array (
+      0 => 9,
+    ),
+    'OrientationLinkedAF' =>
+    array (
+      0 => 14,
+    ),
+    'SelectAFAreaSelectionMode' =>
+    array (
+      0 => 12,
+    ),
+    'USMLensElectronicMF' =>
+    array (
+      0 => 7,
+    ),
+    'VFDisplayIllumination' =>
+    array (
+      0 => 17,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -405,25 +465,82 @@ class AFConfig extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFAccelDecelTracking' => 3,
-    'Canon:AFAreaSelectionMethod' => 13,
-    'Canon:AFAssistBeam' => 8,
-    'Canon:AFConfigTool' => 1,
-    'Canon:AFPointDisplayDuringFocus' => 16,
-    'Canon:AFPointSwitching' => 4,
-    'Canon:AFStatusViewfinder' => 18,
-    'Canon:AFTrackingSensitivity' => 2,
-    'Canon:AIServoFirstImage' => 5,
-    'Canon:AIServoSecondImage' => 6,
-    'Canon:AutoAFPointSelEOSiTRAF' => 10,
-    'Canon:InitialAFPointInServo' => 19,
-    'Canon:LensDriveWhenAFImpossible' => 11,
-    'Canon:ManualAFPointSelPattern' => 15,
-    'Canon:OneShotAFRelease' => 9,
-    'Canon:OrientationLinkedAF' => 14,
-    'Canon:SelectAFAreaSelectionMode' => 12,
-    'Canon:USMLensElectronicMF' => 7,
-    'Canon:VFDisplayIllumination' => 17,
+    'Canon:AFAccelDecelTracking' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:AFAreaSelectionMethod' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:AFAssistBeam' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:AFConfigTool' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:AFPointDisplayDuringFocus' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:AFPointSwitching' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:AFStatusViewfinder' =>
+    array (
+      0 => 18,
+    ),
+    'Canon:AFTrackingSensitivity' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:AIServoFirstImage' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:AIServoSecondImage' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:AutoAFPointSelEOSiTRAF' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:InitialAFPointInServo' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:LensDriveWhenAFImpossible' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:ManualAFPointSelPattern' =>
+    array (
+      0 => 15,
+    ),
+    'Canon:OneShotAFRelease' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:OrientationLinkedAF' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:SelectAFAreaSelectionMode' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:USMLensElectronicMF' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:VFDisplayIllumination' =>
+    array (
+      0 => 17,
+    ),
   ),
 );
 }

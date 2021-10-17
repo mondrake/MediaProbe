@@ -24,19 +24,49 @@ class IHL extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CRCDevelParams' => 6,
-    'IHL_EXIF' => 1,
-    'PreviewImage' => 4,
-    'RawCodecVersion' => 5,
-    'ThumbnailImage' => 3,
+    'CRCDevelParams' =>
+    array (
+      0 => 6,
+    ),
+    'IHL_EXIF' =>
+    array (
+      0 => 1,
+    ),
+    'PreviewImage' =>
+    array (
+      0 => 4,
+    ),
+    'RawCodecVersion' =>
+    array (
+      0 => 5,
+    ),
+    'ThumbnailImage' =>
+    array (
+      0 => 3,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:CRCDevelParams' => 6,
-    'CanonVRD:IHL_EXIF' => 1,
-    'CanonVRD:PreviewImage' => 4,
-    'CanonVRD:RawCodecVersion' => 5,
-    'CanonVRD:ThumbnailImage' => 3,
+    'CanonVRD:CRCDevelParams' =>
+    array (
+      0 => 6,
+    ),
+    'CanonVRD:IHL_EXIF' =>
+    array (
+      0 => 1,
+    ),
+    'CanonVRD:PreviewImage' =>
+    array (
+      0 => 4,
+    ),
+    'CanonVRD:RawCodecVersion' =>
+    array (
+      0 => 5,
+    ),
+    'CanonVRD:ThumbnailImage' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (

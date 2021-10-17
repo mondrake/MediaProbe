@@ -24,45 +24,153 @@ class CameraInfo450D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 48,
-    'CameraTemperature' => 24,
-    'ColorTemperature' => 115,
-    'DirectoryIndex' => 307,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 319,
-    'FirmwareVersion' => 263,
-    'FlashMeteringMode' => 21,
-    'FocalLength' => 29,
-    'FocusDistanceLower' => 69,
-    'FocusDistanceUpper' => 67,
-    'ISO' => 6,
-    'LensModel' => 2355,
-    'LensType' => 222,
-    'MacroMagnification' => 27,
-    'OwnerName' => 271,
-    'WhiteBalance' => 111,
+    'CameraOrientation' =>
+    array (
+      0 => 48,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 24,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 115,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 307,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 319,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 263,
+    ),
+    'FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 29,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 69,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 67,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensModel' =>
+    array (
+      0 => 2355,
+    ),
+    'LensType' =>
+    array (
+      0 => 222,
+    ),
+    'MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'OwnerName' =>
+    array (
+      0 => 271,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 111,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraOrientation' => 48,
-    'Canon:CameraTemperature' => 24,
-    'Canon:ColorTemperature' => 115,
-    'Canon:DirectoryIndex' => 307,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 319,
-    'Canon:FirmwareVersion' => 263,
-    'Canon:FlashMeteringMode' => 21,
-    'Canon:FocalLength' => 29,
-    'Canon:FocusDistanceLower' => 69,
-    'Canon:FocusDistanceUpper' => 67,
-    'Canon:ISO' => 6,
-    'Canon:LensModel' => 2355,
-    'Canon:LensType' => 222,
-    'Canon:MacroMagnification' => 27,
-    'Canon:OwnerName' => 271,
-    'Canon:WhiteBalance' => 111,
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 48,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 115,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 307,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 319,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 263,
+    ),
+    'Canon:FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 29,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 69,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 67,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensModel' =>
+    array (
+      0 => 2355,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 222,
+    ),
+    'Canon:MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:OwnerName' =>
+    array (
+      0 => 271,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 111,
+    ),
   ),
   'items' =>
   array (

@@ -25,20 +25,62 @@ class Processing extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorTemperature' => 9,
-    'DigitalGain' => 11,
-    'PictureStyle' => 10,
-    'SensorBlueLevel' => 5,
-    'SensorRedLevel' => 4,
-    'Sharpness' => 2,
-    'SharpnessFrequency' => 3,
-    'ToneCurve' => 1,
-    'WBShiftAB' => 12,
-    'WBShiftGM' => 13,
-    'WhiteBalance' => 8,
-    'WhiteBalanceBlue' => 7,
-    'WhiteBalanceRed' => 6,
-    'indexSize' => 0,
+    'ColorTemperature' =>
+    array (
+      0 => 9,
+    ),
+    'DigitalGain' =>
+    array (
+      0 => 11,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 10,
+    ),
+    'SensorBlueLevel' =>
+    array (
+      0 => 5,
+    ),
+    'SensorRedLevel' =>
+    array (
+      0 => 4,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 2,
+    ),
+    'SharpnessFrequency' =>
+    array (
+      0 => 3,
+    ),
+    'ToneCurve' =>
+    array (
+      0 => 1,
+    ),
+    'WBShiftAB' =>
+    array (
+      0 => 12,
+    ),
+    'WBShiftGM' =>
+    array (
+      0 => 13,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 8,
+    ),
+    'WhiteBalanceBlue' =>
+    array (
+      0 => 7,
+    ),
+    'WhiteBalanceRed' =>
+    array (
+      0 => 6,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -277,19 +319,58 @@ class Processing extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorTemperature' => 9,
-    'Canon:DigitalGain' => 11,
-    'Canon:PictureStyle' => 10,
-    'Canon:SensorBlueLevel' => 5,
-    'Canon:SensorRedLevel' => 4,
-    'Canon:Sharpness' => 2,
-    'Canon:SharpnessFrequency' => 3,
-    'Canon:ToneCurve' => 1,
-    'Canon:WBShiftAB' => 12,
-    'Canon:WBShiftGM' => 13,
-    'Canon:WhiteBalance' => 8,
-    'Canon:WhiteBalanceBlue' => 7,
-    'Canon:WhiteBalanceRed' => 6,
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:DigitalGain' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:SensorBlueLevel' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:SensorRedLevel' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:Sharpness' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:SharpnessFrequency' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:ToneCurve' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:WBShiftAB' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:WBShiftGM' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:WhiteBalanceBlue' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:WhiteBalanceRed' =>
+    array (
+      0 => 6,
+    ),
   ),
 );
 }

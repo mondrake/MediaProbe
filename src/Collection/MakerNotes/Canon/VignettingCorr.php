@@ -24,21 +24,59 @@ class VignettingCorr extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ChromaticAberrationCorr' => 5,
-    'OriginalImageHeight' => 12,
-    'OriginalImageWidth' => 11,
-    'PeripheralLighting' => 2,
-    'PeripheralLightingValue' => 6,
-    'VignettingCorrVersion' => 0,
+    'ChromaticAberrationCorr' =>
+    array (
+      0 => 4,
+      1 => 5,
+    ),
+    'OriginalImageHeight' =>
+    array (
+      0 => 12,
+    ),
+    'OriginalImageWidth' =>
+    array (
+      0 => 11,
+    ),
+    'PeripheralLighting' =>
+    array (
+      0 => 2,
+    ),
+    'PeripheralLightingValue' =>
+    array (
+      0 => 6,
+    ),
+    'VignettingCorrVersion' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ChromaticAberrationCorr' => 5,
-    'Canon:OriginalImageHeight' => 12,
-    'Canon:OriginalImageWidth' => 11,
-    'Canon:PeripheralLighting' => 2,
-    'Canon:PeripheralLightingValue' => 6,
-    'Canon:VignettingCorrVersion' => 0,
+    'Canon:ChromaticAberrationCorr' =>
+    array (
+      0 => 4,
+      1 => 5,
+    ),
+    'Canon:OriginalImageHeight' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:OriginalImageWidth' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:PeripheralLighting' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:PeripheralLightingValue' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:VignettingCorrVersion' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (

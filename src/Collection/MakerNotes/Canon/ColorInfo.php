@@ -24,15 +24,33 @@ class ColorInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorSpace' => 3,
-    'ColorTone' => 2,
-    'Saturation' => 1,
+    'ColorSpace' =>
+    array (
+      0 => 3,
+    ),
+    'ColorTone' =>
+    array (
+      0 => 2,
+    ),
+    'Saturation' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorSpace' => 3,
-    'Canon:ColorTone' => 2,
-    'Canon:Saturation' => 1,
+    'Canon:ColorSpace' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:ColorTone' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:Saturation' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

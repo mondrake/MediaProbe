@@ -20,12 +20,30 @@ class Main extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AccelerationVector' => 8,
-    'AppleRuntime' => 3,
-    'BurstUUID' => 11,
-    'ContentIdentifier' => 17,
-    'HDRImageType' => 10,
-    'ImageUniqueID' => 21,
+    'AccelerationVector' =>
+    array (
+      0 => 8,
+    ),
+    'AppleRuntime' =>
+    array (
+      0 => 3,
+    ),
+    'BurstUUID' =>
+    array (
+      0 => 11,
+    ),
+    'ContentIdentifier' =>
+    array (
+      0 => 17,
+    ),
+    'HDRImageType' =>
+    array (
+      0 => 10,
+    ),
+    'ImageUniqueID' =>
+    array (
+      0 => 21,
+    ),
   ),
   'items' =>
   array (
@@ -101,11 +119,26 @@ class Main extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Apple:AccelerationVector' => 8,
-    'Apple:BurstUUID' => 11,
-    'Apple:ContentIdentifier' => 17,
-    'Apple:HDRImageType' => 10,
-    'Apple:ImageUniqueID' => 21,
+    'Apple:AccelerationVector' =>
+    array (
+      0 => 8,
+    ),
+    'Apple:BurstUUID' =>
+    array (
+      0 => 11,
+    ),
+    'Apple:ContentIdentifier' =>
+    array (
+      0 => 17,
+    ),
+    'Apple:HDRImageType' =>
+    array (
+      0 => 10,
+    ),
+    'Apple:ImageUniqueID' =>
+    array (
+      0 => 21,
+    ),
   ),
 );
 }

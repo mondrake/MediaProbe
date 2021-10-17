@@ -24,47 +24,161 @@ class CameraInfo600D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 56,
-    'CameraTemperature' => 25,
-    'ColorTemperature' => 127,
-    'DirectoryIndex' => 487,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 475,
-    'FirmwareVersion' => 411,
-    'FlashMeteringMode' => 21,
-    'FocalLength' => 30,
-    'FocusDistanceLower' => 89,
-    'FocusDistanceUpper' => 87,
-    'HighlightTonePriority' => 7,
-    'ISO' => 6,
-    'LensType' => 234,
-    'MaxFocalLength' => 238,
-    'MinFocalLength' => 236,
-    'PictureStyle' => 179,
-    'WhiteBalance' => 123,
+    'CameraOrientation' =>
+    array (
+      0 => 56,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 25,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 127,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 487,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 475,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 411,
+    ),
+    'FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 30,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 89,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 87,
+    ),
+    'HighlightTonePriority' =>
+    array (
+      0 => 7,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 234,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 238,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 236,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 179,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 123,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraOrientation' => 56,
-    'Canon:CameraTemperature' => 25,
-    'Canon:ColorTemperature' => 127,
-    'Canon:DirectoryIndex' => 487,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 475,
-    'Canon:FirmwareVersion' => 411,
-    'Canon:FlashMeteringMode' => 21,
-    'Canon:FocalLength' => 30,
-    'Canon:FocusDistanceLower' => 89,
-    'Canon:FocusDistanceUpper' => 87,
-    'Canon:HighlightTonePriority' => 7,
-    'Canon:ISO' => 6,
-    'Canon:LensType' => 234,
-    'Canon:MaxFocalLength' => 238,
-    'Canon:MinFocalLength' => 236,
-    'Canon:PictureStyle' => 179,
-    'Canon:WhiteBalance' => 123,
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 56,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 127,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 487,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 475,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 411,
+    ),
+    'Canon:FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 30,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 89,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 87,
+    ),
+    'Canon:HighlightTonePriority' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 234,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 238,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 236,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 179,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 123,
+    ),
   ),
   'items' =>
   array (

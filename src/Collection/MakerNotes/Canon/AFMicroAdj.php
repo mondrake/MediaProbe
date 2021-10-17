@@ -25,9 +25,18 @@ class AFMicroAdj extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFMicroAdjMode' => 1,
-    'AFMicroAdjValue' => 2,
-    'indexSize' => 0,
+    'AFMicroAdjMode' =>
+    array (
+      0 => 1,
+    ),
+    'AFMicroAdjValue' =>
+    array (
+      0 => 2,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -74,8 +83,14 @@ class AFMicroAdj extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFMicroAdjMode' => 1,
-    'Canon:AFMicroAdjValue' => 2,
+    'Canon:AFMicroAdjMode' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:AFMicroAdjValue' =>
+    array (
+      0 => 2,
+    ),
   ),
 );
 }

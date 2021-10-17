@@ -24,57 +24,201 @@ class PersonalFuncValues extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'PF19ShootingSpeedHigh' => 10,
-    'PF19ShootingSpeedLow' => 9,
-    'PF1Value' => 1,
-    'PF20MaxContinousShots' => 11,
-    'PF23FELockTime' => 13,
-    'PF23PostReleaseTime' => 14,
-    'PF23ShutterButtonTime' => 12,
-    'PF25AEMode' => 15,
-    'PF25AFMode' => 18,
-    'PF25AFPointSel' => 19,
-    'PF25ColorMatrix' => 23,
-    'PF25DriveMode' => 17,
-    'PF25ImageSize' => 20,
-    'PF25MeteringMode' => 16,
-    'PF25Parameters' => 22,
-    'PF25WBMode' => 21,
-    'PF27Value' => 24,
-    'PF2Value' => 2,
-    'PF3Value' => 3,
-    'PF4ExposureTimeMax' => 5,
-    'PF4ExposureTimeMin' => 4,
-    'PF5ApertureMax' => 7,
-    'PF5ApertureMin' => 6,
-    'PF8BracketShots' => 8,
+    'PF19ShootingSpeedHigh' =>
+    array (
+      0 => 10,
+    ),
+    'PF19ShootingSpeedLow' =>
+    array (
+      0 => 9,
+    ),
+    'PF1Value' =>
+    array (
+      0 => 1,
+    ),
+    'PF20MaxContinousShots' =>
+    array (
+      0 => 11,
+    ),
+    'PF23FELockTime' =>
+    array (
+      0 => 13,
+    ),
+    'PF23PostReleaseTime' =>
+    array (
+      0 => 14,
+    ),
+    'PF23ShutterButtonTime' =>
+    array (
+      0 => 12,
+    ),
+    'PF25AEMode' =>
+    array (
+      0 => 15,
+    ),
+    'PF25AFMode' =>
+    array (
+      0 => 18,
+    ),
+    'PF25AFPointSel' =>
+    array (
+      0 => 19,
+    ),
+    'PF25ColorMatrix' =>
+    array (
+      0 => 23,
+    ),
+    'PF25DriveMode' =>
+    array (
+      0 => 17,
+    ),
+    'PF25ImageSize' =>
+    array (
+      0 => 20,
+    ),
+    'PF25MeteringMode' =>
+    array (
+      0 => 16,
+    ),
+    'PF25Parameters' =>
+    array (
+      0 => 22,
+    ),
+    'PF25WBMode' =>
+    array (
+      0 => 21,
+    ),
+    'PF27Value' =>
+    array (
+      0 => 24,
+    ),
+    'PF2Value' =>
+    array (
+      0 => 2,
+    ),
+    'PF3Value' =>
+    array (
+      0 => 3,
+    ),
+    'PF4ExposureTimeMax' =>
+    array (
+      0 => 5,
+    ),
+    'PF4ExposureTimeMin' =>
+    array (
+      0 => 4,
+    ),
+    'PF5ApertureMax' =>
+    array (
+      0 => 7,
+    ),
+    'PF5ApertureMin' =>
+    array (
+      0 => 6,
+    ),
+    'PF8BracketShots' =>
+    array (
+      0 => 8,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:PF19ShootingSpeedHigh' => 10,
-    'CanonCustom:PF19ShootingSpeedLow' => 9,
-    'CanonCustom:PF1Value' => 1,
-    'CanonCustom:PF20MaxContinousShots' => 11,
-    'CanonCustom:PF23FELockTime' => 13,
-    'CanonCustom:PF23PostReleaseTime' => 14,
-    'CanonCustom:PF23ShutterButtonTime' => 12,
-    'CanonCustom:PF25AEMode' => 15,
-    'CanonCustom:PF25AFMode' => 18,
-    'CanonCustom:PF25AFPointSel' => 19,
-    'CanonCustom:PF25ColorMatrix' => 23,
-    'CanonCustom:PF25DriveMode' => 17,
-    'CanonCustom:PF25ImageSize' => 20,
-    'CanonCustom:PF25MeteringMode' => 16,
-    'CanonCustom:PF25Parameters' => 22,
-    'CanonCustom:PF25WBMode' => 21,
-    'CanonCustom:PF27Value' => 24,
-    'CanonCustom:PF2Value' => 2,
-    'CanonCustom:PF3Value' => 3,
-    'CanonCustom:PF4ExposureTimeMax' => 5,
-    'CanonCustom:PF4ExposureTimeMin' => 4,
-    'CanonCustom:PF5ApertureMax' => 7,
-    'CanonCustom:PF5ApertureMin' => 6,
-    'CanonCustom:PF8BracketShots' => 8,
+    'CanonCustom:PF19ShootingSpeedHigh' =>
+    array (
+      0 => 10,
+    ),
+    'CanonCustom:PF19ShootingSpeedLow' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:PF1Value' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:PF20MaxContinousShots' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:PF23FELockTime' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:PF23PostReleaseTime' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:PF23ShutterButtonTime' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:PF25AEMode' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:PF25AFMode' =>
+    array (
+      0 => 18,
+    ),
+    'CanonCustom:PF25AFPointSel' =>
+    array (
+      0 => 19,
+    ),
+    'CanonCustom:PF25ColorMatrix' =>
+    array (
+      0 => 23,
+    ),
+    'CanonCustom:PF25DriveMode' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:PF25ImageSize' =>
+    array (
+      0 => 20,
+    ),
+    'CanonCustom:PF25MeteringMode' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:PF25Parameters' =>
+    array (
+      0 => 22,
+    ),
+    'CanonCustom:PF25WBMode' =>
+    array (
+      0 => 21,
+    ),
+    'CanonCustom:PF27Value' =>
+    array (
+      0 => 24,
+    ),
+    'CanonCustom:PF2Value' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:PF3Value' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:PF4ExposureTimeMax' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:PF4ExposureTimeMin' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:PF5ApertureMax' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:PF5ApertureMin' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:PF8BracketShots' =>
+    array (
+      0 => 8,
+    ),
   ),
   'items' =>
   array (

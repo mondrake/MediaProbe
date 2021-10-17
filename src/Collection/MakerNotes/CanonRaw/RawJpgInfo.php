@@ -24,17 +24,41 @@ class RawJpgInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'RawJpgHeight' => 4,
-    'RawJpgQuality' => 1,
-    'RawJpgSize' => 2,
-    'RawJpgWidth' => 3,
+    'RawJpgHeight' =>
+    array (
+      0 => 4,
+    ),
+    'RawJpgQuality' =>
+    array (
+      0 => 1,
+    ),
+    'RawJpgSize' =>
+    array (
+      0 => 2,
+    ),
+    'RawJpgWidth' =>
+    array (
+      0 => 3,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:RawJpgHeight' => 4,
-    'CanonRaw:RawJpgQuality' => 1,
-    'CanonRaw:RawJpgSize' => 2,
-    'CanonRaw:RawJpgWidth' => 3,
+    'CanonRaw:RawJpgHeight' =>
+    array (
+      0 => 4,
+    ),
+    'CanonRaw:RawJpgQuality' =>
+    array (
+      0 => 1,
+    ),
+    'CanonRaw:RawJpgSize' =>
+    array (
+      0 => 2,
+    ),
+    'CanonRaw:RawJpgWidth' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (

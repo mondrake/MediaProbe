@@ -24,27 +24,90 @@ class CameraInfo1DmkIV extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 53,
-    'CameraTemperature' => 25,
-    'ColorTemperature' => 124,
-    'DirectoryIndex' => 568,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 556,
-    'FirmwareVersion' => 493,
-    'FirmwareVersionLookAhead' => 0,
-    'FlashMeteringMode' => 21,
-    'FocalLength' => 30,
-    'FocusDistanceLower' => 86,
-    'FocusDistanceUpper' => 84,
-    'HighlightTonePriority' => 7,
-    'ISO' => 6,
-    'LensType' => 335,
-    'MaxFocalLength' => 339,
-    'MeasuredEV2' => 8,
-    'MeasuredEV3' => 9,
-    'MinFocalLength' => 337,
-    'WhiteBalance' => 120,
+    'CameraOrientation' =>
+    array (
+      0 => 53,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 25,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 124,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 568,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 556,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 493,
+    ),
+    'FirmwareVersionLookAhead' =>
+    array (
+      0 => 0,
+    ),
+    'FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 30,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 86,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 84,
+    ),
+    'HighlightTonePriority' =>
+    array (
+      0 => 7,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 335,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 339,
+    ),
+    'MeasuredEV2' =>
+    array (
+      0 => 8,
+    ),
+    'MeasuredEV3' =>
+    array (
+      0 => 9,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 337,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 120,
+    ),
   ),
   'items' =>
   array (

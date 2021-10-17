@@ -24,11 +24,17 @@ class CameraInfoUnknown extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'LensSerialNumber' => 363,
+    'LensSerialNumber' =>
+    array (
+      0 => 363,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:LensSerialNumber' => 363,
+    'Canon:LensSerialNumber' =>
+    array (
+      0 => 363,
+    ),
   ),
   'items' =>
   array (

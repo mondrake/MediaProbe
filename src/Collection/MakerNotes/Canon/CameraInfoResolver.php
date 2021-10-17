@@ -19,33 +19,114 @@ class CameraInfoResolver extends Collection {
   'DOMNode' => 'map',
   'itemsByName' =>
   array (
-    'CanonCameraInfo1000D' => 'CanonCameraInfo1000D',
-    'CanonCameraInfo1D' => 'CanonCameraInfo1D',
-    'CanonCameraInfo1DX' => 'CanonCameraInfo1DX',
-    'CanonCameraInfo1DmkII' => 'CanonCameraInfo1DmkII',
-    'CanonCameraInfo1DmkIII' => 'CanonCameraInfo1DmkIII',
-    'CanonCameraInfo1DmkIIN' => 'CanonCameraInfo1DmkIIN',
-    'CanonCameraInfo1DmkIV' => 'CanonCameraInfo1DmkIV',
-    'CanonCameraInfo40D' => 'CanonCameraInfo40D',
-    'CanonCameraInfo450D' => 'CanonCameraInfo450D',
-    'CanonCameraInfo500D' => 'CanonCameraInfo500D',
-    'CanonCameraInfo50D' => 'CanonCameraInfo50D',
-    'CanonCameraInfo550D' => 'CanonCameraInfo550D',
-    'CanonCameraInfo5D' => 'CanonCameraInfo5D',
-    'CanonCameraInfo5DmkII' => 'CanonCameraInfo5DmkII',
-    'CanonCameraInfo5DmkIII' => 'CanonCameraInfo5DmkIII',
-    'CanonCameraInfo600D' => 'CanonCameraInfo600D',
-    'CanonCameraInfo60D' => 'CanonCameraInfo60D',
-    'CanonCameraInfo650D' => 'CanonCameraInfo650D',
-    'CanonCameraInfo6D' => 'CanonCameraInfo6D',
-    'CanonCameraInfo70D' => 'CanonCameraInfo70D',
-    'CanonCameraInfo750D' => 'CanonCameraInfo750D',
-    'CanonCameraInfo7D' => 'CanonCameraInfo7D',
-    'CanonCameraInfo80D' => 'CanonCameraInfo80D',
-    'CanonCameraInfoPowerShot' => 'CanonCameraInfoPowerShot',
-    'CanonCameraInfoPowerShot2' => 'CanonCameraInfoPowerShot2',
-    'CanonCameraInfoUnknown' => 'CanonCameraInfoUnknown',
-    'CanonCameraInfoUnknown32' => 'CanonCameraInfoUnknown32',
+    'CanonCameraInfo1000D' =>
+    array (
+      0 => 'CanonCameraInfo1000D',
+    ),
+    'CanonCameraInfo1D' =>
+    array (
+      0 => 'CanonCameraInfo1D',
+    ),
+    'CanonCameraInfo1DX' =>
+    array (
+      0 => 'CanonCameraInfo1DX',
+    ),
+    'CanonCameraInfo1DmkII' =>
+    array (
+      0 => 'CanonCameraInfo1DmkII',
+    ),
+    'CanonCameraInfo1DmkIII' =>
+    array (
+      0 => 'CanonCameraInfo1DmkIII',
+    ),
+    'CanonCameraInfo1DmkIIN' =>
+    array (
+      0 => 'CanonCameraInfo1DmkIIN',
+    ),
+    'CanonCameraInfo1DmkIV' =>
+    array (
+      0 => 'CanonCameraInfo1DmkIV',
+    ),
+    'CanonCameraInfo40D' =>
+    array (
+      0 => 'CanonCameraInfo40D',
+    ),
+    'CanonCameraInfo450D' =>
+    array (
+      0 => 'CanonCameraInfo450D',
+    ),
+    'CanonCameraInfo500D' =>
+    array (
+      0 => 'CanonCameraInfo500D',
+    ),
+    'CanonCameraInfo50D' =>
+    array (
+      0 => 'CanonCameraInfo50D',
+    ),
+    'CanonCameraInfo550D' =>
+    array (
+      0 => 'CanonCameraInfo550D',
+    ),
+    'CanonCameraInfo5D' =>
+    array (
+      0 => 'CanonCameraInfo5D',
+    ),
+    'CanonCameraInfo5DmkII' =>
+    array (
+      0 => 'CanonCameraInfo5DmkII',
+    ),
+    'CanonCameraInfo5DmkIII' =>
+    array (
+      0 => 'CanonCameraInfo5DmkIII',
+    ),
+    'CanonCameraInfo600D' =>
+    array (
+      0 => 'CanonCameraInfo600D',
+    ),
+    'CanonCameraInfo60D' =>
+    array (
+      0 => 'CanonCameraInfo60D',
+    ),
+    'CanonCameraInfo650D' =>
+    array (
+      0 => 'CanonCameraInfo650D',
+    ),
+    'CanonCameraInfo6D' =>
+    array (
+      0 => 'CanonCameraInfo6D',
+    ),
+    'CanonCameraInfo70D' =>
+    array (
+      0 => 'CanonCameraInfo70D',
+    ),
+    'CanonCameraInfo750D' =>
+    array (
+      0 => 'CanonCameraInfo750D',
+    ),
+    'CanonCameraInfo7D' =>
+    array (
+      0 => 'CanonCameraInfo7D',
+    ),
+    'CanonCameraInfo80D' =>
+    array (
+      0 => 'CanonCameraInfo80D',
+    ),
+    'CanonCameraInfoPowerShot' =>
+    array (
+      0 => 'CanonCameraInfoPowerShot',
+    ),
+    'CanonCameraInfoPowerShot2' =>
+    array (
+      0 => 'CanonCameraInfoPowerShot2',
+    ),
+    'CanonCameraInfoUnknown' =>
+    array (
+      0 => 'CanonCameraInfoUnknown',
+    ),
+    'CanonCameraInfoUnknown32' =>
+    array (
+      0 => 'CanonCameraInfoUnknown32',
+    ),
   ),
   'items' =>
   array (

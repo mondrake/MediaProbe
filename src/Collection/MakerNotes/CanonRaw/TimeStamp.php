@@ -24,15 +24,33 @@ class TimeStamp extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'DateTimeOriginal' => 0,
-    'TimeZoneCode' => 1,
-    'TimeZoneInfo' => 2,
+    'DateTimeOriginal' =>
+    array (
+      0 => 0,
+    ),
+    'TimeZoneCode' =>
+    array (
+      0 => 1,
+    ),
+    'TimeZoneInfo' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:DateTimeOriginal' => 0,
-    'CanonRaw:TimeZoneCode' => 1,
-    'CanonRaw:TimeZoneInfo' => 2,
+    'CanonRaw:DateTimeOriginal' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:TimeZoneCode' =>
+    array (
+      0 => 1,
+    ),
+    'CanonRaw:TimeZoneInfo' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

@@ -24,35 +24,113 @@ class GammaInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'GammaBlackPoint' => 12,
-    'GammaColorTone' => 3,
-    'GammaContrast' => 2,
-    'GammaCurveOutputRange' => 15,
-    'GammaHighlight' => 10,
-    'GammaMidPoint' => 14,
-    'GammaSaturation' => 4,
-    'GammaShadow' => 9,
-    'GammaSharpnessStrength' => 8,
-    'GammaUnsharpMaskFineness' => 6,
-    'GammaUnsharpMaskStrength' => 5,
-    'GammaUnsharpMaskThreshold' => 7,
-    'GammaWhitePoint' => 13,
+    'GammaBlackPoint' =>
+    array (
+      0 => 12,
+    ),
+    'GammaColorTone' =>
+    array (
+      0 => 3,
+    ),
+    'GammaContrast' =>
+    array (
+      0 => 2,
+    ),
+    'GammaCurveOutputRange' =>
+    array (
+      0 => 15,
+    ),
+    'GammaHighlight' =>
+    array (
+      0 => 10,
+    ),
+    'GammaMidPoint' =>
+    array (
+      0 => 14,
+    ),
+    'GammaSaturation' =>
+    array (
+      0 => 4,
+    ),
+    'GammaShadow' =>
+    array (
+      0 => 9,
+    ),
+    'GammaSharpnessStrength' =>
+    array (
+      0 => 8,
+    ),
+    'GammaUnsharpMaskFineness' =>
+    array (
+      0 => 6,
+    ),
+    'GammaUnsharpMaskStrength' =>
+    array (
+      0 => 5,
+    ),
+    'GammaUnsharpMaskThreshold' =>
+    array (
+      0 => 7,
+    ),
+    'GammaWhitePoint' =>
+    array (
+      0 => 13,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:GammaBlackPoint' => 12,
-    'CanonVRD:GammaColorTone' => 3,
-    'CanonVRD:GammaContrast' => 2,
-    'CanonVRD:GammaCurveOutputRange' => 15,
-    'CanonVRD:GammaHighlight' => 10,
-    'CanonVRD:GammaMidPoint' => 14,
-    'CanonVRD:GammaSaturation' => 4,
-    'CanonVRD:GammaShadow' => 9,
-    'CanonVRD:GammaSharpnessStrength' => 8,
-    'CanonVRD:GammaUnsharpMaskFineness' => 6,
-    'CanonVRD:GammaUnsharpMaskStrength' => 5,
-    'CanonVRD:GammaUnsharpMaskThreshold' => 7,
-    'CanonVRD:GammaWhitePoint' => 13,
+    'CanonVRD:GammaBlackPoint' =>
+    array (
+      0 => 12,
+    ),
+    'CanonVRD:GammaColorTone' =>
+    array (
+      0 => 3,
+    ),
+    'CanonVRD:GammaContrast' =>
+    array (
+      0 => 2,
+    ),
+    'CanonVRD:GammaCurveOutputRange' =>
+    array (
+      0 => 15,
+    ),
+    'CanonVRD:GammaHighlight' =>
+    array (
+      0 => 10,
+    ),
+    'CanonVRD:GammaMidPoint' =>
+    array (
+      0 => 14,
+    ),
+    'CanonVRD:GammaSaturation' =>
+    array (
+      0 => 4,
+    ),
+    'CanonVRD:GammaShadow' =>
+    array (
+      0 => 9,
+    ),
+    'CanonVRD:GammaSharpnessStrength' =>
+    array (
+      0 => 8,
+    ),
+    'CanonVRD:GammaUnsharpMaskFineness' =>
+    array (
+      0 => 6,
+    ),
+    'CanonVRD:GammaUnsharpMaskStrength' =>
+    array (
+      0 => 5,
+    ),
+    'CanonVRD:GammaUnsharpMaskThreshold' =>
+    array (
+      0 => 7,
+    ),
+    'CanonVRD:GammaWhitePoint' =>
+    array (
+      0 => 13,
+    ),
   ),
   'items' =>
   array (

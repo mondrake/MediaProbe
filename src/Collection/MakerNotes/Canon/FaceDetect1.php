@@ -24,31 +24,97 @@ class FaceDetect1 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'Face1Position' => 8,
-    'Face2Position' => 10,
-    'Face3Position' => 12,
-    'Face4Position' => 14,
-    'Face5Position' => 16,
-    'Face6Position' => 18,
-    'Face7Position' => 20,
-    'Face8Position' => 22,
-    'Face9Position' => 24,
-    'FaceDetectFrameSize' => 3,
-    'FacesDetected' => 2,
+    'Face1Position' =>
+    array (
+      0 => 8,
+    ),
+    'Face2Position' =>
+    array (
+      0 => 10,
+    ),
+    'Face3Position' =>
+    array (
+      0 => 12,
+    ),
+    'Face4Position' =>
+    array (
+      0 => 14,
+    ),
+    'Face5Position' =>
+    array (
+      0 => 16,
+    ),
+    'Face6Position' =>
+    array (
+      0 => 18,
+    ),
+    'Face7Position' =>
+    array (
+      0 => 20,
+    ),
+    'Face8Position' =>
+    array (
+      0 => 22,
+    ),
+    'Face9Position' =>
+    array (
+      0 => 24,
+    ),
+    'FaceDetectFrameSize' =>
+    array (
+      0 => 3,
+    ),
+    'FacesDetected' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:Face1Position' => 8,
-    'Canon:Face2Position' => 10,
-    'Canon:Face3Position' => 12,
-    'Canon:Face4Position' => 14,
-    'Canon:Face5Position' => 16,
-    'Canon:Face6Position' => 18,
-    'Canon:Face7Position' => 20,
-    'Canon:Face8Position' => 22,
-    'Canon:Face9Position' => 24,
-    'Canon:FaceDetectFrameSize' => 3,
-    'Canon:FacesDetected' => 2,
+    'Canon:Face1Position' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:Face2Position' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:Face3Position' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:Face4Position' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:Face5Position' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:Face6Position' =>
+    array (
+      0 => 18,
+    ),
+    'Canon:Face7Position' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:Face8Position' =>
+    array (
+      0 => 22,
+    ),
+    'Canon:Face9Position' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:FaceDetectFrameSize' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FacesDetected' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

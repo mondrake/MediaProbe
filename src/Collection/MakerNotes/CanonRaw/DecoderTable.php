@@ -24,15 +24,33 @@ class DecoderTable extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CompressedDataLength' => 3,
-    'CompressedDataOffset' => 2,
-    'DecoderTableNumber' => 0,
+    'CompressedDataLength' =>
+    array (
+      0 => 3,
+    ),
+    'CompressedDataOffset' =>
+    array (
+      0 => 2,
+    ),
+    'DecoderTableNumber' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:CompressedDataLength' => 3,
-    'CanonRaw:CompressedDataOffset' => 2,
-    'CanonRaw:DecoderTableNumber' => 0,
+    'CanonRaw:CompressedDataLength' =>
+    array (
+      0 => 3,
+    ),
+    'CanonRaw:CompressedDataOffset' =>
+    array (
+      0 => 2,
+    ),
+    'CanonRaw:DecoderTableNumber' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (

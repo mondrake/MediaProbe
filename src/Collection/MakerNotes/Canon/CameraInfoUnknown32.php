@@ -24,11 +24,27 @@ class CameraInfoUnknown32 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraTemperature' => 100,
+    'CameraTemperature' =>
+    array (
+      0 => -3,
+      1 => 71,
+      2 => 83,
+      3 => 91,
+      4 => 92,
+      5 => 100,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraTemperature' => 100,
+    'Canon:CameraTemperature' =>
+    array (
+      0 => -3,
+      1 => 71,
+      2 => 83,
+      3 => 91,
+      4 => 92,
+      5 => 100,
+    ),
   ),
   'items' =>
   array (

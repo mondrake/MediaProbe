@@ -24,49 +24,169 @@ class ColorData1 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorTempAsShot' => 29,
-    'ColorTempAuto' => 34,
-    'ColorTempCloudy' => 49,
-    'ColorTempCustom1' => 69,
-    'ColorTempCustom2' => 74,
-    'ColorTempDaylight' => 39,
-    'ColorTempFlash' => 64,
-    'ColorTempFluorescent' => 59,
-    'ColorTempShade' => 44,
-    'ColorTempTungsten' => 54,
-    'WB_RGGBLevelsAsShot' => 25,
-    'WB_RGGBLevelsAuto' => 30,
-    'WB_RGGBLevelsCloudy' => 45,
-    'WB_RGGBLevelsCustom1' => 65,
-    'WB_RGGBLevelsCustom2' => 70,
-    'WB_RGGBLevelsDaylight' => 35,
-    'WB_RGGBLevelsFlash' => 60,
-    'WB_RGGBLevelsFluorescent' => 55,
-    'WB_RGGBLevelsShade' => 40,
-    'WB_RGGBLevelsTungsten' => 50,
+    'ColorTempAsShot' =>
+    array (
+      0 => 29,
+    ),
+    'ColorTempAuto' =>
+    array (
+      0 => 34,
+    ),
+    'ColorTempCloudy' =>
+    array (
+      0 => 49,
+    ),
+    'ColorTempCustom1' =>
+    array (
+      0 => 69,
+    ),
+    'ColorTempCustom2' =>
+    array (
+      0 => 74,
+    ),
+    'ColorTempDaylight' =>
+    array (
+      0 => 39,
+    ),
+    'ColorTempFlash' =>
+    array (
+      0 => 64,
+    ),
+    'ColorTempFluorescent' =>
+    array (
+      0 => 59,
+    ),
+    'ColorTempShade' =>
+    array (
+      0 => 44,
+    ),
+    'ColorTempTungsten' =>
+    array (
+      0 => 54,
+    ),
+    'WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 25,
+    ),
+    'WB_RGGBLevelsAuto' =>
+    array (
+      0 => 30,
+    ),
+    'WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 45,
+    ),
+    'WB_RGGBLevelsCustom1' =>
+    array (
+      0 => 65,
+    ),
+    'WB_RGGBLevelsCustom2' =>
+    array (
+      0 => 70,
+    ),
+    'WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 35,
+    ),
+    'WB_RGGBLevelsFlash' =>
+    array (
+      0 => 60,
+    ),
+    'WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 55,
+    ),
+    'WB_RGGBLevelsShade' =>
+    array (
+      0 => 40,
+    ),
+    'WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 50,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorTempAsShot' => 29,
-    'Canon:ColorTempAuto' => 34,
-    'Canon:ColorTempCloudy' => 49,
-    'Canon:ColorTempCustom1' => 69,
-    'Canon:ColorTempCustom2' => 74,
-    'Canon:ColorTempDaylight' => 39,
-    'Canon:ColorTempFlash' => 64,
-    'Canon:ColorTempFluorescent' => 59,
-    'Canon:ColorTempShade' => 44,
-    'Canon:ColorTempTungsten' => 54,
-    'Canon:WB_RGGBLevelsAsShot' => 25,
-    'Canon:WB_RGGBLevelsAuto' => 30,
-    'Canon:WB_RGGBLevelsCloudy' => 45,
-    'Canon:WB_RGGBLevelsCustom1' => 65,
-    'Canon:WB_RGGBLevelsCustom2' => 70,
-    'Canon:WB_RGGBLevelsDaylight' => 35,
-    'Canon:WB_RGGBLevelsFlash' => 60,
-    'Canon:WB_RGGBLevelsFluorescent' => 55,
-    'Canon:WB_RGGBLevelsShade' => 40,
-    'Canon:WB_RGGBLevelsTungsten' => 50,
+    'Canon:ColorTempAsShot' =>
+    array (
+      0 => 29,
+    ),
+    'Canon:ColorTempAuto' =>
+    array (
+      0 => 34,
+    ),
+    'Canon:ColorTempCloudy' =>
+    array (
+      0 => 49,
+    ),
+    'Canon:ColorTempCustom1' =>
+    array (
+      0 => 69,
+    ),
+    'Canon:ColorTempCustom2' =>
+    array (
+      0 => 74,
+    ),
+    'Canon:ColorTempDaylight' =>
+    array (
+      0 => 39,
+    ),
+    'Canon:ColorTempFlash' =>
+    array (
+      0 => 64,
+    ),
+    'Canon:ColorTempFluorescent' =>
+    array (
+      0 => 59,
+    ),
+    'Canon:ColorTempShade' =>
+    array (
+      0 => 44,
+    ),
+    'Canon:ColorTempTungsten' =>
+    array (
+      0 => 54,
+    ),
+    'Canon:WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:WB_RGGBLevelsAuto' =>
+    array (
+      0 => 30,
+    ),
+    'Canon:WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 45,
+    ),
+    'Canon:WB_RGGBLevelsCustom1' =>
+    array (
+      0 => 65,
+    ),
+    'Canon:WB_RGGBLevelsCustom2' =>
+    array (
+      0 => 70,
+    ),
+    'Canon:WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:WB_RGGBLevelsFlash' =>
+    array (
+      0 => 60,
+    ),
+    'Canon:WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 55,
+    ),
+    'Canon:WB_RGGBLevelsShade' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 50,
+    ),
   ),
   'items' =>
   array (

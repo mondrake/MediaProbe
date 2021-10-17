@@ -25,9 +25,18 @@ class Panorama extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'PanoramaDirection' => 5,
-    'PanoramaFrameNumber' => 2,
-    'indexSize' => 0,
+    'PanoramaDirection' =>
+    array (
+      0 => 5,
+    ),
+    'PanoramaFrameNumber' =>
+    array (
+      0 => 2,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -76,8 +85,14 @@ class Panorama extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:PanoramaDirection' => 5,
-    'Canon:PanoramaFrameNumber' => 2,
+    'Canon:PanoramaDirection' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:PanoramaFrameNumber' =>
+    array (
+      0 => 2,
+    ),
   ),
 );
 }

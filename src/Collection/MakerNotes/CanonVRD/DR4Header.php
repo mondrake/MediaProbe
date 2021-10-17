@@ -24,11 +24,17 @@ class DR4Header extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'DR4CameraModel' => 3,
+    'DR4CameraModel' =>
+    array (
+      0 => 3,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:DR4CameraModel' => 3,
+    'CanonVRD:DR4CameraModel' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (

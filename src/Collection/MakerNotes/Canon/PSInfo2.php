@@ -24,135 +24,513 @@ class PSInfo2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorToneAuto' => 156,
-    'ColorToneFaithful' => 108,
-    'ColorToneLandscape' => 60,
-    'ColorToneMonochrome' => 132,
-    'ColorToneNeutral' => 84,
-    'ColorTonePortrait' => 36,
-    'ColorToneStandard' => 12,
-    'ColorToneUserDef1' => 180,
-    'ColorToneUserDef2' => 204,
-    'ColorToneUserDef3' => 228,
-    'ContrastAuto' => 144,
-    'ContrastFaithful' => 96,
-    'ContrastLandscape' => 48,
-    'ContrastMonochrome' => 120,
-    'ContrastNeutral' => 72,
-    'ContrastPortrait' => 24,
-    'ContrastStandard' => 0,
-    'ContrastUserDef1' => 168,
-    'ContrastUserDef2' => 192,
-    'ContrastUserDef3' => 216,
-    'FilterEffectAuto' => 160,
-    'FilterEffectFaithful' => 112,
-    'FilterEffectLandscape' => 64,
-    'FilterEffectMonochrome' => 136,
-    'FilterEffectNeutral' => 88,
-    'FilterEffectPortrait' => 40,
-    'FilterEffectStandard' => 16,
-    'FilterEffectUserDef1' => 184,
-    'FilterEffectUserDef2' => 208,
-    'FilterEffectUserDef3' => 232,
-    'SaturationAuto' => 152,
-    'SaturationFaithful' => 104,
-    'SaturationLandscape' => 56,
-    'SaturationMonochrome' => 128,
-    'SaturationNeutral' => 80,
-    'SaturationPortrait' => 32,
-    'SaturationStandard' => 8,
-    'SaturationUserDef1' => 176,
-    'SaturationUserDef2' => 200,
-    'SaturationUserDef3' => 224,
-    'SharpnessAuto' => 148,
-    'SharpnessFaithful' => 100,
-    'SharpnessLandscape' => 52,
-    'SharpnessMonochrome' => 124,
-    'SharpnessNeutral' => 76,
-    'SharpnessPortrait' => 28,
-    'SharpnessStandard' => 4,
-    'SharpnessUserDef1' => 172,
-    'SharpnessUserDef2' => 196,
-    'SharpnessUserDef3' => 220,
-    'ToningEffectAuto' => 164,
-    'ToningEffectFaithful' => 116,
-    'ToningEffectLandscape' => 68,
-    'ToningEffectMonochrome' => 140,
-    'ToningEffectNeutral' => 92,
-    'ToningEffectPortrait' => 44,
-    'ToningEffectStandard' => 20,
-    'ToningEffectUserDef1' => 188,
-    'ToningEffectUserDef2' => 212,
-    'ToningEffectUserDef3' => 236,
-    'UserDef1PictureStyle' => 240,
-    'UserDef2PictureStyle' => 242,
-    'UserDef3PictureStyle' => 244,
+    'ColorToneAuto' =>
+    array (
+      0 => 156,
+    ),
+    'ColorToneFaithful' =>
+    array (
+      0 => 108,
+    ),
+    'ColorToneLandscape' =>
+    array (
+      0 => 60,
+    ),
+    'ColorToneMonochrome' =>
+    array (
+      0 => 132,
+    ),
+    'ColorToneNeutral' =>
+    array (
+      0 => 84,
+    ),
+    'ColorTonePortrait' =>
+    array (
+      0 => 36,
+    ),
+    'ColorToneStandard' =>
+    array (
+      0 => 12,
+    ),
+    'ColorToneUserDef1' =>
+    array (
+      0 => 180,
+    ),
+    'ColorToneUserDef2' =>
+    array (
+      0 => 204,
+    ),
+    'ColorToneUserDef3' =>
+    array (
+      0 => 228,
+    ),
+    'ContrastAuto' =>
+    array (
+      0 => 144,
+    ),
+    'ContrastFaithful' =>
+    array (
+      0 => 96,
+    ),
+    'ContrastLandscape' =>
+    array (
+      0 => 48,
+    ),
+    'ContrastMonochrome' =>
+    array (
+      0 => 120,
+    ),
+    'ContrastNeutral' =>
+    array (
+      0 => 72,
+    ),
+    'ContrastPortrait' =>
+    array (
+      0 => 24,
+    ),
+    'ContrastStandard' =>
+    array (
+      0 => 0,
+    ),
+    'ContrastUserDef1' =>
+    array (
+      0 => 168,
+    ),
+    'ContrastUserDef2' =>
+    array (
+      0 => 192,
+    ),
+    'ContrastUserDef3' =>
+    array (
+      0 => 216,
+    ),
+    'FilterEffectAuto' =>
+    array (
+      0 => 160,
+    ),
+    'FilterEffectFaithful' =>
+    array (
+      0 => 112,
+    ),
+    'FilterEffectLandscape' =>
+    array (
+      0 => 64,
+    ),
+    'FilterEffectMonochrome' =>
+    array (
+      0 => 136,
+    ),
+    'FilterEffectNeutral' =>
+    array (
+      0 => 88,
+    ),
+    'FilterEffectPortrait' =>
+    array (
+      0 => 40,
+    ),
+    'FilterEffectStandard' =>
+    array (
+      0 => 16,
+    ),
+    'FilterEffectUserDef1' =>
+    array (
+      0 => 184,
+    ),
+    'FilterEffectUserDef2' =>
+    array (
+      0 => 208,
+    ),
+    'FilterEffectUserDef3' =>
+    array (
+      0 => 232,
+    ),
+    'SaturationAuto' =>
+    array (
+      0 => 152,
+    ),
+    'SaturationFaithful' =>
+    array (
+      0 => 104,
+    ),
+    'SaturationLandscape' =>
+    array (
+      0 => 56,
+    ),
+    'SaturationMonochrome' =>
+    array (
+      0 => 128,
+    ),
+    'SaturationNeutral' =>
+    array (
+      0 => 80,
+    ),
+    'SaturationPortrait' =>
+    array (
+      0 => 32,
+    ),
+    'SaturationStandard' =>
+    array (
+      0 => 8,
+    ),
+    'SaturationUserDef1' =>
+    array (
+      0 => 176,
+    ),
+    'SaturationUserDef2' =>
+    array (
+      0 => 200,
+    ),
+    'SaturationUserDef3' =>
+    array (
+      0 => 224,
+    ),
+    'SharpnessAuto' =>
+    array (
+      0 => 148,
+    ),
+    'SharpnessFaithful' =>
+    array (
+      0 => 100,
+    ),
+    'SharpnessLandscape' =>
+    array (
+      0 => 52,
+    ),
+    'SharpnessMonochrome' =>
+    array (
+      0 => 124,
+    ),
+    'SharpnessNeutral' =>
+    array (
+      0 => 76,
+    ),
+    'SharpnessPortrait' =>
+    array (
+      0 => 28,
+    ),
+    'SharpnessStandard' =>
+    array (
+      0 => 4,
+    ),
+    'SharpnessUserDef1' =>
+    array (
+      0 => 172,
+    ),
+    'SharpnessUserDef2' =>
+    array (
+      0 => 196,
+    ),
+    'SharpnessUserDef3' =>
+    array (
+      0 => 220,
+    ),
+    'ToningEffectAuto' =>
+    array (
+      0 => 164,
+    ),
+    'ToningEffectFaithful' =>
+    array (
+      0 => 116,
+    ),
+    'ToningEffectLandscape' =>
+    array (
+      0 => 68,
+    ),
+    'ToningEffectMonochrome' =>
+    array (
+      0 => 140,
+    ),
+    'ToningEffectNeutral' =>
+    array (
+      0 => 92,
+    ),
+    'ToningEffectPortrait' =>
+    array (
+      0 => 44,
+    ),
+    'ToningEffectStandard' =>
+    array (
+      0 => 20,
+    ),
+    'ToningEffectUserDef1' =>
+    array (
+      0 => 188,
+    ),
+    'ToningEffectUserDef2' =>
+    array (
+      0 => 212,
+    ),
+    'ToningEffectUserDef3' =>
+    array (
+      0 => 236,
+    ),
+    'UserDef1PictureStyle' =>
+    array (
+      0 => 240,
+    ),
+    'UserDef2PictureStyle' =>
+    array (
+      0 => 242,
+    ),
+    'UserDef3PictureStyle' =>
+    array (
+      0 => 244,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorToneAuto' => 156,
-    'Canon:ColorToneFaithful' => 108,
-    'Canon:ColorToneLandscape' => 60,
-    'Canon:ColorToneMonochrome' => 132,
-    'Canon:ColorToneNeutral' => 84,
-    'Canon:ColorTonePortrait' => 36,
-    'Canon:ColorToneStandard' => 12,
-    'Canon:ColorToneUserDef1' => 180,
-    'Canon:ColorToneUserDef2' => 204,
-    'Canon:ColorToneUserDef3' => 228,
-    'Canon:ContrastAuto' => 144,
-    'Canon:ContrastFaithful' => 96,
-    'Canon:ContrastLandscape' => 48,
-    'Canon:ContrastMonochrome' => 120,
-    'Canon:ContrastNeutral' => 72,
-    'Canon:ContrastPortrait' => 24,
-    'Canon:ContrastStandard' => 0,
-    'Canon:ContrastUserDef1' => 168,
-    'Canon:ContrastUserDef2' => 192,
-    'Canon:ContrastUserDef3' => 216,
-    'Canon:FilterEffectAuto' => 160,
-    'Canon:FilterEffectFaithful' => 112,
-    'Canon:FilterEffectLandscape' => 64,
-    'Canon:FilterEffectMonochrome' => 136,
-    'Canon:FilterEffectNeutral' => 88,
-    'Canon:FilterEffectPortrait' => 40,
-    'Canon:FilterEffectStandard' => 16,
-    'Canon:FilterEffectUserDef1' => 184,
-    'Canon:FilterEffectUserDef2' => 208,
-    'Canon:FilterEffectUserDef3' => 232,
-    'Canon:SaturationAuto' => 152,
-    'Canon:SaturationFaithful' => 104,
-    'Canon:SaturationLandscape' => 56,
-    'Canon:SaturationMonochrome' => 128,
-    'Canon:SaturationNeutral' => 80,
-    'Canon:SaturationPortrait' => 32,
-    'Canon:SaturationStandard' => 8,
-    'Canon:SaturationUserDef1' => 176,
-    'Canon:SaturationUserDef2' => 200,
-    'Canon:SaturationUserDef3' => 224,
-    'Canon:SharpnessAuto' => 148,
-    'Canon:SharpnessFaithful' => 100,
-    'Canon:SharpnessLandscape' => 52,
-    'Canon:SharpnessMonochrome' => 124,
-    'Canon:SharpnessNeutral' => 76,
-    'Canon:SharpnessPortrait' => 28,
-    'Canon:SharpnessStandard' => 4,
-    'Canon:SharpnessUserDef1' => 172,
-    'Canon:SharpnessUserDef2' => 196,
-    'Canon:SharpnessUserDef3' => 220,
-    'Canon:ToningEffectAuto' => 164,
-    'Canon:ToningEffectFaithful' => 116,
-    'Canon:ToningEffectLandscape' => 68,
-    'Canon:ToningEffectMonochrome' => 140,
-    'Canon:ToningEffectNeutral' => 92,
-    'Canon:ToningEffectPortrait' => 44,
-    'Canon:ToningEffectStandard' => 20,
-    'Canon:ToningEffectUserDef1' => 188,
-    'Canon:ToningEffectUserDef2' => 212,
-    'Canon:ToningEffectUserDef3' => 236,
-    'Canon:UserDef1PictureStyle' => 240,
-    'Canon:UserDef2PictureStyle' => 242,
-    'Canon:UserDef3PictureStyle' => 244,
+    'Canon:ColorToneAuto' =>
+    array (
+      0 => 156,
+    ),
+    'Canon:ColorToneFaithful' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:ColorToneLandscape' =>
+    array (
+      0 => 60,
+    ),
+    'Canon:ColorToneMonochrome' =>
+    array (
+      0 => 132,
+    ),
+    'Canon:ColorToneNeutral' =>
+    array (
+      0 => 84,
+    ),
+    'Canon:ColorTonePortrait' =>
+    array (
+      0 => 36,
+    ),
+    'Canon:ColorToneStandard' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:ColorToneUserDef1' =>
+    array (
+      0 => 180,
+    ),
+    'Canon:ColorToneUserDef2' =>
+    array (
+      0 => 204,
+    ),
+    'Canon:ColorToneUserDef3' =>
+    array (
+      0 => 228,
+    ),
+    'Canon:ContrastAuto' =>
+    array (
+      0 => 144,
+    ),
+    'Canon:ContrastFaithful' =>
+    array (
+      0 => 96,
+    ),
+    'Canon:ContrastLandscape' =>
+    array (
+      0 => 48,
+    ),
+    'Canon:ContrastMonochrome' =>
+    array (
+      0 => 120,
+    ),
+    'Canon:ContrastNeutral' =>
+    array (
+      0 => 72,
+    ),
+    'Canon:ContrastPortrait' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:ContrastStandard' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:ContrastUserDef1' =>
+    array (
+      0 => 168,
+    ),
+    'Canon:ContrastUserDef2' =>
+    array (
+      0 => 192,
+    ),
+    'Canon:ContrastUserDef3' =>
+    array (
+      0 => 216,
+    ),
+    'Canon:FilterEffectAuto' =>
+    array (
+      0 => 160,
+    ),
+    'Canon:FilterEffectFaithful' =>
+    array (
+      0 => 112,
+    ),
+    'Canon:FilterEffectLandscape' =>
+    array (
+      0 => 64,
+    ),
+    'Canon:FilterEffectMonochrome' =>
+    array (
+      0 => 136,
+    ),
+    'Canon:FilterEffectNeutral' =>
+    array (
+      0 => 88,
+    ),
+    'Canon:FilterEffectPortrait' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:FilterEffectStandard' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:FilterEffectUserDef1' =>
+    array (
+      0 => 184,
+    ),
+    'Canon:FilterEffectUserDef2' =>
+    array (
+      0 => 208,
+    ),
+    'Canon:FilterEffectUserDef3' =>
+    array (
+      0 => 232,
+    ),
+    'Canon:SaturationAuto' =>
+    array (
+      0 => 152,
+    ),
+    'Canon:SaturationFaithful' =>
+    array (
+      0 => 104,
+    ),
+    'Canon:SaturationLandscape' =>
+    array (
+      0 => 56,
+    ),
+    'Canon:SaturationMonochrome' =>
+    array (
+      0 => 128,
+    ),
+    'Canon:SaturationNeutral' =>
+    array (
+      0 => 80,
+    ),
+    'Canon:SaturationPortrait' =>
+    array (
+      0 => 32,
+    ),
+    'Canon:SaturationStandard' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:SaturationUserDef1' =>
+    array (
+      0 => 176,
+    ),
+    'Canon:SaturationUserDef2' =>
+    array (
+      0 => 200,
+    ),
+    'Canon:SaturationUserDef3' =>
+    array (
+      0 => 224,
+    ),
+    'Canon:SharpnessAuto' =>
+    array (
+      0 => 148,
+    ),
+    'Canon:SharpnessFaithful' =>
+    array (
+      0 => 100,
+    ),
+    'Canon:SharpnessLandscape' =>
+    array (
+      0 => 52,
+    ),
+    'Canon:SharpnessMonochrome' =>
+    array (
+      0 => 124,
+    ),
+    'Canon:SharpnessNeutral' =>
+    array (
+      0 => 76,
+    ),
+    'Canon:SharpnessPortrait' =>
+    array (
+      0 => 28,
+    ),
+    'Canon:SharpnessStandard' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:SharpnessUserDef1' =>
+    array (
+      0 => 172,
+    ),
+    'Canon:SharpnessUserDef2' =>
+    array (
+      0 => 196,
+    ),
+    'Canon:SharpnessUserDef3' =>
+    array (
+      0 => 220,
+    ),
+    'Canon:ToningEffectAuto' =>
+    array (
+      0 => 164,
+    ),
+    'Canon:ToningEffectFaithful' =>
+    array (
+      0 => 116,
+    ),
+    'Canon:ToningEffectLandscape' =>
+    array (
+      0 => 68,
+    ),
+    'Canon:ToningEffectMonochrome' =>
+    array (
+      0 => 140,
+    ),
+    'Canon:ToningEffectNeutral' =>
+    array (
+      0 => 92,
+    ),
+    'Canon:ToningEffectPortrait' =>
+    array (
+      0 => 44,
+    ),
+    'Canon:ToningEffectStandard' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:ToningEffectUserDef1' =>
+    array (
+      0 => 188,
+    ),
+    'Canon:ToningEffectUserDef2' =>
+    array (
+      0 => 212,
+    ),
+    'Canon:ToningEffectUserDef3' =>
+    array (
+      0 => 236,
+    ),
+    'Canon:UserDef1PictureStyle' =>
+    array (
+      0 => 240,
+    ),
+    'Canon:UserDef2PictureStyle' =>
+    array (
+      0 => 242,
+    ),
+    'Canon:UserDef3PictureStyle' =>
+    array (
+      0 => 244,
+    ),
   ),
   'items' =>
   array (

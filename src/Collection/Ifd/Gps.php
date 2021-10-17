@@ -20,107 +20,392 @@ class Gps extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'GPSAltitude' => 6,
-    'GPSAltitudeRef' => 5,
-    'GPSAreaInformation' => 28,
-    'GPSDOP' => 11,
-    'GPSDateStamp' => 29,
-    'GPSDestBearing' => 24,
-    'GPSDestBearingRef' => 23,
-    'GPSDestDistance' => 26,
-    'GPSDestDistanceRef' => 25,
-    'GPSDestLatitude' => 20,
-    'GPSDestLatitudeRef' => 19,
-    'GPSDestLongitude' => 22,
-    'GPSDestLongitudeRef' => 21,
-    'GPSDifferential' => 30,
-    'GPSHPositioningError' => 31,
-    'GPSImgDirection' => 17,
-    'GPSImgDirectionRef' => 16,
-    'GPSLatitude' => 2,
-    'GPSLatitudeRef' => 1,
-    'GPSLongitude' => 4,
-    'GPSLongitudeRef' => 3,
-    'GPSMapDatum' => 18,
-    'GPSMeasureMode' => 10,
-    'GPSProcessingMethod' => 27,
-    'GPSSatellites' => 8,
-    'GPSSpeed' => 13,
-    'GPSSpeedRef' => 12,
-    'GPSStatus' => 9,
-    'GPSTimeStamp' => 7,
-    'GPSTrack' => 15,
-    'GPSTrackRef' => 14,
-    'GPSVersionID' => 0,
+    'GPSAltitude' =>
+    array (
+      0 => 6,
+    ),
+    'GPSAltitudeRef' =>
+    array (
+      0 => 5,
+    ),
+    'GPSAreaInformation' =>
+    array (
+      0 => 28,
+    ),
+    'GPSDOP' =>
+    array (
+      0 => 11,
+    ),
+    'GPSDateStamp' =>
+    array (
+      0 => 29,
+    ),
+    'GPSDestBearing' =>
+    array (
+      0 => 24,
+    ),
+    'GPSDestBearingRef' =>
+    array (
+      0 => 23,
+    ),
+    'GPSDestDistance' =>
+    array (
+      0 => 26,
+    ),
+    'GPSDestDistanceRef' =>
+    array (
+      0 => 25,
+    ),
+    'GPSDestLatitude' =>
+    array (
+      0 => 20,
+    ),
+    'GPSDestLatitudeRef' =>
+    array (
+      0 => 19,
+    ),
+    'GPSDestLongitude' =>
+    array (
+      0 => 22,
+    ),
+    'GPSDestLongitudeRef' =>
+    array (
+      0 => 21,
+    ),
+    'GPSDifferential' =>
+    array (
+      0 => 30,
+    ),
+    'GPSHPositioningError' =>
+    array (
+      0 => 31,
+    ),
+    'GPSImgDirection' =>
+    array (
+      0 => 17,
+    ),
+    'GPSImgDirectionRef' =>
+    array (
+      0 => 16,
+    ),
+    'GPSLatitude' =>
+    array (
+      0 => 2,
+    ),
+    'GPSLatitudeRef' =>
+    array (
+      0 => 1,
+    ),
+    'GPSLongitude' =>
+    array (
+      0 => 4,
+    ),
+    'GPSLongitudeRef' =>
+    array (
+      0 => 3,
+    ),
+    'GPSMapDatum' =>
+    array (
+      0 => 18,
+    ),
+    'GPSMeasureMode' =>
+    array (
+      0 => 10,
+    ),
+    'GPSProcessingMethod' =>
+    array (
+      0 => 27,
+    ),
+    'GPSSatellites' =>
+    array (
+      0 => 8,
+    ),
+    'GPSSpeed' =>
+    array (
+      0 => 13,
+    ),
+    'GPSSpeedRef' =>
+    array (
+      0 => 12,
+    ),
+    'GPSStatus' =>
+    array (
+      0 => 9,
+    ),
+    'GPSTimeStamp' =>
+    array (
+      0 => 7,
+    ),
+    'GPSTrack' =>
+    array (
+      0 => 15,
+    ),
+    'GPSTrackRef' =>
+    array (
+      0 => 14,
+    ),
+    'GPSVersionID' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByPhpExifTag' =>
   array (
-    'GPSAltitude' => 6,
-    'GPSAltitudeRef' => 5,
-    'GPSAreaInformation' => 28,
-    'GPSDOP' => 11,
-    'GPSDateStamp' => 29,
-    'GPSDestBearing' => 24,
-    'GPSDestBearingRef' => 23,
-    'GPSDestDistance' => 26,
-    'GPSDestDistanceRef' => 25,
-    'GPSDestLatitude' => 20,
-    'GPSDestLatitudeRef' => 19,
-    'GPSDestLongitude' => 22,
-    'GPSDestLongitudeRef' => 21,
-    'GPSDifferential' => 30,
-    'GPSImgDirection' => 17,
-    'GPSImgDirectionRef' => 16,
-    'GPSLatitude' => 2,
-    'GPSLatitudeRef' => 1,
-    'GPSLongitude' => 4,
-    'GPSLongitudeRef' => 3,
-    'GPSMapDatum' => 18,
-    'GPSMeasureMode' => 10,
-    'GPSProcessingMode' => 27,
-    'GPSSatellites' => 8,
-    'GPSSpeed' => 13,
-    'GPSSpeedRef' => 12,
-    'GPSStatus' => 9,
-    'GPSTimeStamp' => 7,
-    'GPSTrack' => 15,
-    'GPSTrackRef' => 14,
-    'GPSVersion' => 0,
+    'GPSAltitude' =>
+    array (
+      0 => 6,
+    ),
+    'GPSAltitudeRef' =>
+    array (
+      0 => 5,
+    ),
+    'GPSAreaInformation' =>
+    array (
+      0 => 28,
+    ),
+    'GPSDOP' =>
+    array (
+      0 => 11,
+    ),
+    'GPSDateStamp' =>
+    array (
+      0 => 29,
+    ),
+    'GPSDestBearing' =>
+    array (
+      0 => 24,
+    ),
+    'GPSDestBearingRef' =>
+    array (
+      0 => 23,
+    ),
+    'GPSDestDistance' =>
+    array (
+      0 => 26,
+    ),
+    'GPSDestDistanceRef' =>
+    array (
+      0 => 25,
+    ),
+    'GPSDestLatitude' =>
+    array (
+      0 => 20,
+    ),
+    'GPSDestLatitudeRef' =>
+    array (
+      0 => 19,
+    ),
+    'GPSDestLongitude' =>
+    array (
+      0 => 22,
+    ),
+    'GPSDestLongitudeRef' =>
+    array (
+      0 => 21,
+    ),
+    'GPSDifferential' =>
+    array (
+      0 => 30,
+    ),
+    'GPSImgDirection' =>
+    array (
+      0 => 17,
+    ),
+    'GPSImgDirectionRef' =>
+    array (
+      0 => 16,
+    ),
+    'GPSLatitude' =>
+    array (
+      0 => 2,
+    ),
+    'GPSLatitudeRef' =>
+    array (
+      0 => 1,
+    ),
+    'GPSLongitude' =>
+    array (
+      0 => 4,
+    ),
+    'GPSLongitudeRef' =>
+    array (
+      0 => 3,
+    ),
+    'GPSMapDatum' =>
+    array (
+      0 => 18,
+    ),
+    'GPSMeasureMode' =>
+    array (
+      0 => 10,
+    ),
+    'GPSProcessingMode' =>
+    array (
+      0 => 27,
+    ),
+    'GPSSatellites' =>
+    array (
+      0 => 8,
+    ),
+    'GPSSpeed' =>
+    array (
+      0 => 13,
+    ),
+    'GPSSpeedRef' =>
+    array (
+      0 => 12,
+    ),
+    'GPSStatus' =>
+    array (
+      0 => 9,
+    ),
+    'GPSTimeStamp' =>
+    array (
+      0 => 7,
+    ),
+    'GPSTrack' =>
+    array (
+      0 => 15,
+    ),
+    'GPSTrackRef' =>
+    array (
+      0 => 14,
+    ),
+    'GPSVersion' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'GPS:GPSAltitude' => 6,
-    'GPS:GPSAltitudeRef' => 5,
-    'GPS:GPSAreaInformation' => 28,
-    'GPS:GPSDOP' => 11,
-    'GPS:GPSDateStamp' => 29,
-    'GPS:GPSDestBearing' => 24,
-    'GPS:GPSDestBearingRef' => 23,
-    'GPS:GPSDestDistance' => 26,
-    'GPS:GPSDestDistanceRef' => 25,
-    'GPS:GPSDestLatitude' => 20,
-    'GPS:GPSDestLatitudeRef' => 19,
-    'GPS:GPSDestLongitude' => 22,
-    'GPS:GPSDestLongitudeRef' => 21,
-    'GPS:GPSDifferential' => 30,
-    'GPS:GPSHPositioningError' => 31,
-    'GPS:GPSImgDirection' => 17,
-    'GPS:GPSImgDirectionRef' => 16,
-    'GPS:GPSLatitude' => 2,
-    'GPS:GPSLatitudeRef' => 1,
-    'GPS:GPSLongitude' => 4,
-    'GPS:GPSLongitudeRef' => 3,
-    'GPS:GPSMapDatum' => 18,
-    'GPS:GPSMeasureMode' => 10,
-    'GPS:GPSProcessingMethod' => 27,
-    'GPS:GPSSatellites' => 8,
-    'GPS:GPSSpeed' => 13,
-    'GPS:GPSSpeedRef' => 12,
-    'GPS:GPSStatus' => 9,
-    'GPS:GPSTimeStamp' => 7,
-    'GPS:GPSTrack' => 15,
-    'GPS:GPSTrackRef' => 14,
-    'GPS:GPSVersionID' => 0,
+    'GPS:GPSAltitude' =>
+    array (
+      0 => 6,
+    ),
+    'GPS:GPSAltitudeRef' =>
+    array (
+      0 => 5,
+    ),
+    'GPS:GPSAreaInformation' =>
+    array (
+      0 => 28,
+    ),
+    'GPS:GPSDOP' =>
+    array (
+      0 => 11,
+    ),
+    'GPS:GPSDateStamp' =>
+    array (
+      0 => 29,
+    ),
+    'GPS:GPSDestBearing' =>
+    array (
+      0 => 24,
+    ),
+    'GPS:GPSDestBearingRef' =>
+    array (
+      0 => 23,
+    ),
+    'GPS:GPSDestDistance' =>
+    array (
+      0 => 26,
+    ),
+    'GPS:GPSDestDistanceRef' =>
+    array (
+      0 => 25,
+    ),
+    'GPS:GPSDestLatitude' =>
+    array (
+      0 => 20,
+    ),
+    'GPS:GPSDestLatitudeRef' =>
+    array (
+      0 => 19,
+    ),
+    'GPS:GPSDestLongitude' =>
+    array (
+      0 => 22,
+    ),
+    'GPS:GPSDestLongitudeRef' =>
+    array (
+      0 => 21,
+    ),
+    'GPS:GPSDifferential' =>
+    array (
+      0 => 30,
+    ),
+    'GPS:GPSHPositioningError' =>
+    array (
+      0 => 31,
+    ),
+    'GPS:GPSImgDirection' =>
+    array (
+      0 => 17,
+    ),
+    'GPS:GPSImgDirectionRef' =>
+    array (
+      0 => 16,
+    ),
+    'GPS:GPSLatitude' =>
+    array (
+      0 => 2,
+    ),
+    'GPS:GPSLatitudeRef' =>
+    array (
+      0 => 1,
+    ),
+    'GPS:GPSLongitude' =>
+    array (
+      0 => 4,
+    ),
+    'GPS:GPSLongitudeRef' =>
+    array (
+      0 => 3,
+    ),
+    'GPS:GPSMapDatum' =>
+    array (
+      0 => 18,
+    ),
+    'GPS:GPSMeasureMode' =>
+    array (
+      0 => 10,
+    ),
+    'GPS:GPSProcessingMethod' =>
+    array (
+      0 => 27,
+    ),
+    'GPS:GPSSatellites' =>
+    array (
+      0 => 8,
+    ),
+    'GPS:GPSSpeed' =>
+    array (
+      0 => 13,
+    ),
+    'GPS:GPSSpeedRef' =>
+    array (
+      0 => 12,
+    ),
+    'GPS:GPSStatus' =>
+    array (
+      0 => 9,
+    ),
+    'GPS:GPSTimeStamp' =>
+    array (
+      0 => 7,
+    ),
+    'GPS:GPSTrack' =>
+    array (
+      0 => 15,
+    ),
+    'GPS:GPSTrackRef' =>
+    array (
+      0 => 14,
+    ),
+    'GPS:GPSVersionID' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (

@@ -24,55 +24,193 @@ class CameraInfo7D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 53,
-    'CameraPictureStyle' => 175,
-    'CameraTemperature' => 25,
-    'ColorTemperature' => 123,
-    'DirectoryIndex' => 503,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 491,
-    'FirmwareVersion' => 428,
-    'FirmwareVersionLookAhead' => 0,
-    'FlashMeteringMode' => 21,
-    'FocalLength' => 30,
-    'FocusDistanceLower' => 86,
-    'FocusDistanceUpper' => 84,
-    'HighISONoiseReduction' => 201,
-    'HighlightTonePriority' => 7,
-    'ISO' => 6,
-    'LensType' => 274,
-    'MaxFocalLength' => 278,
-    'MeasuredEV' => 9,
-    'MeasuredEV2' => 8,
-    'MinFocalLength' => 276,
-    'WhiteBalance' => 119,
+    'CameraOrientation' =>
+    array (
+      0 => 53,
+    ),
+    'CameraPictureStyle' =>
+    array (
+      0 => 175,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 25,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 123,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 503,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 491,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 428,
+    ),
+    'FirmwareVersionLookAhead' =>
+    array (
+      0 => 0,
+    ),
+    'FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 30,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 86,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 84,
+    ),
+    'HighISONoiseReduction' =>
+    array (
+      0 => 201,
+    ),
+    'HighlightTonePriority' =>
+    array (
+      0 => 7,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 274,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 278,
+    ),
+    'MeasuredEV' =>
+    array (
+      0 => 9,
+    ),
+    'MeasuredEV2' =>
+    array (
+      0 => 8,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 276,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 119,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraOrientation' => 53,
-    'Canon:CameraPictureStyle' => 175,
-    'Canon:CameraTemperature' => 25,
-    'Canon:ColorTemperature' => 123,
-    'Canon:DirectoryIndex' => 503,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 491,
-    'Canon:FirmwareVersion' => 428,
-    'Canon:FirmwareVersionLookAhead' => 0,
-    'Canon:FlashMeteringMode' => 21,
-    'Canon:FocalLength' => 30,
-    'Canon:FocusDistanceLower' => 86,
-    'Canon:FocusDistanceUpper' => 84,
-    'Canon:HighISONoiseReduction' => 201,
-    'Canon:HighlightTonePriority' => 7,
-    'Canon:ISO' => 6,
-    'Canon:LensType' => 274,
-    'Canon:MaxFocalLength' => 278,
-    'Canon:MeasuredEV' => 9,
-    'Canon:MeasuredEV2' => 8,
-    'Canon:MinFocalLength' => 276,
-    'Canon:WhiteBalance' => 119,
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 53,
+    ),
+    'Canon:CameraPictureStyle' =>
+    array (
+      0 => 175,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 123,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 503,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 491,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 428,
+    ),
+    'Canon:FirmwareVersionLookAhead' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:FlashMeteringMode' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 30,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 86,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 84,
+    ),
+    'Canon:HighISONoiseReduction' =>
+    array (
+      0 => 201,
+    ),
+    'Canon:HighlightTonePriority' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 274,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 278,
+    ),
+    'Canon:MeasuredEV' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:MeasuredEV2' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 276,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 119,
+    ),
   ),
   'items' =>
   array (

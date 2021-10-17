@@ -21,11 +21,17 @@ class Skip extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'Unknown_CNDB' => 'CNDB',
+    'Unknown_CNDB' =>
+    array (
+      0 => 'CNDB',
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:Unknown_CNDB' => 'CNDB',
+    'Canon:Unknown_CNDB' =>
+    array (
+      0 => 'CNDB',
+    ),
   ),
   'items' =>
   array (

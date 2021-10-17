@@ -24,11 +24,17 @@ class MyColors extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'MyColorMode' => 2,
+    'MyColorMode' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:MyColorMode' => 2,
+    'Canon:MyColorMode' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

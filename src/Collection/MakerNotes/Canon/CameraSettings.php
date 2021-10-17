@@ -25,83 +25,305 @@ class CameraSettings extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AESetting' => 33,
-    'AFPoint' => 19,
-    'CameraISO' => 16,
-    'CanonExposureMode' => 20,
-    'CanonFlashMode' => 4,
-    'CanonImageSize' => 10,
-    'ColorTone' => 42,
-    'ContinuousDrive' => 5,
-    'Contrast' => 13,
-    'DigitalZoom' => 12,
-    'DisplayAperture' => 35,
-    'EasyMode' => 11,
-    'FlashActivity' => 28,
-    'FlashBits' => 29,
-    'FocalUnits' => 25,
-    'FocusContinuous' => 32,
-    'FocusMode' => 7,
-    'FocusRange' => 18,
-    'ImageStabilization' => 34,
-    'LensType' => 22,
-    'MacroMode' => 1,
-    'ManualFlashOutput' => 41,
-    'MaxAperture' => 26,
-    'MaxFocalLength' => 23,
-    'MeteringMode' => 17,
-    'MinAperture' => 27,
-    'MinFocalLength' => 24,
-    'PhotoEffect' => 40,
-    'Quality' => 3,
-    'RecordMode' => 9,
-    'SRAWQuality' => 46,
-    'Saturation' => 14,
-    'SelfTimer' => 2,
-    'Sharpness' => 15,
-    'SpotMeteringMode' => 39,
-    'ZoomSourceWidth' => 36,
-    'ZoomTargetWidth' => 37,
+    'AESetting' =>
+    array (
+      0 => 33,
+    ),
+    'AFPoint' =>
+    array (
+      0 => 19,
+    ),
+    'CameraISO' =>
+    array (
+      0 => 16,
+    ),
+    'CanonExposureMode' =>
+    array (
+      0 => 20,
+    ),
+    'CanonFlashMode' =>
+    array (
+      0 => 4,
+    ),
+    'CanonImageSize' =>
+    array (
+      0 => 10,
+    ),
+    'ColorTone' =>
+    array (
+      0 => 42,
+    ),
+    'ContinuousDrive' =>
+    array (
+      0 => 5,
+    ),
+    'Contrast' =>
+    array (
+      0 => 13,
+    ),
+    'DigitalZoom' =>
+    array (
+      0 => 12,
+    ),
+    'DisplayAperture' =>
+    array (
+      0 => 35,
+    ),
+    'EasyMode' =>
+    array (
+      0 => 11,
+    ),
+    'FlashActivity' =>
+    array (
+      0 => 28,
+    ),
+    'FlashBits' =>
+    array (
+      0 => 29,
+    ),
+    'FocalUnits' =>
+    array (
+      0 => 25,
+    ),
+    'FocusContinuous' =>
+    array (
+      0 => 32,
+    ),
+    'FocusMode' =>
+    array (
+      0 => 7,
+    ),
+    'FocusRange' =>
+    array (
+      0 => 18,
+    ),
+    'ImageStabilization' =>
+    array (
+      0 => 34,
+    ),
+    'LensType' =>
+    array (
+      0 => 22,
+    ),
+    'MacroMode' =>
+    array (
+      0 => 1,
+    ),
+    'ManualFlashOutput' =>
+    array (
+      0 => 41,
+    ),
+    'MaxAperture' =>
+    array (
+      0 => 26,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 23,
+    ),
+    'MeteringMode' =>
+    array (
+      0 => 17,
+    ),
+    'MinAperture' =>
+    array (
+      0 => 27,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 24,
+    ),
+    'PhotoEffect' =>
+    array (
+      0 => 40,
+    ),
+    'Quality' =>
+    array (
+      0 => 3,
+    ),
+    'RecordMode' =>
+    array (
+      0 => 9,
+    ),
+    'SRAWQuality' =>
+    array (
+      0 => 46,
+    ),
+    'Saturation' =>
+    array (
+      0 => 14,
+    ),
+    'SelfTimer' =>
+    array (
+      0 => 2,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 15,
+    ),
+    'SpotMeteringMode' =>
+    array (
+      0 => 39,
+    ),
+    'ZoomSourceWidth' =>
+    array (
+      0 => 36,
+    ),
+    'ZoomTargetWidth' =>
+    array (
+      0 => 37,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AESetting' => 33,
-    'Canon:AFPoint' => 19,
-    'Canon:CameraISO' => 16,
-    'Canon:CanonExposureMode' => 20,
-    'Canon:CanonFlashMode' => 4,
-    'Canon:CanonImageSize' => 10,
-    'Canon:ColorTone' => 42,
-    'Canon:ContinuousDrive' => 5,
-    'Canon:Contrast' => 13,
-    'Canon:DigitalZoom' => 12,
-    'Canon:DisplayAperture' => 35,
-    'Canon:EasyMode' => 11,
-    'Canon:FlashActivity' => 28,
-    'Canon:FlashBits' => 29,
-    'Canon:FocalUnits' => 25,
-    'Canon:FocusContinuous' => 32,
-    'Canon:FocusMode' => 7,
-    'Canon:FocusRange' => 18,
-    'Canon:ImageStabilization' => 34,
-    'Canon:LensType' => 22,
-    'Canon:MacroMode' => 1,
-    'Canon:ManualFlashOutput' => 41,
-    'Canon:MaxAperture' => 26,
-    'Canon:MaxFocalLength' => 23,
-    'Canon:MeteringMode' => 17,
-    'Canon:MinAperture' => 27,
-    'Canon:MinFocalLength' => 24,
-    'Canon:PhotoEffect' => 40,
-    'Canon:Quality' => 3,
-    'Canon:RecordMode' => 9,
-    'Canon:SRAWQuality' => 46,
-    'Canon:Saturation' => 14,
-    'Canon:SelfTimer' => 2,
-    'Canon:Sharpness' => 15,
-    'Canon:SpotMeteringMode' => 39,
-    'Canon:ZoomSourceWidth' => 36,
-    'Canon:ZoomTargetWidth' => 37,
+    'Canon:AESetting' =>
+    array (
+      0 => 33,
+    ),
+    'Canon:AFPoint' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:CameraISO' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:CanonExposureMode' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:CanonFlashMode' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:CanonImageSize' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:ColorTone' =>
+    array (
+      0 => 42,
+    ),
+    'Canon:ContinuousDrive' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:Contrast' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:DigitalZoom' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:DisplayAperture' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:EasyMode' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:FlashActivity' =>
+    array (
+      0 => 28,
+    ),
+    'Canon:FlashBits' =>
+    array (
+      0 => 29,
+    ),
+    'Canon:FocalUnits' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:FocusContinuous' =>
+    array (
+      0 => 32,
+    ),
+    'Canon:FocusMode' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:FocusRange' =>
+    array (
+      0 => 18,
+    ),
+    'Canon:ImageStabilization' =>
+    array (
+      0 => 34,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 22,
+    ),
+    'Canon:MacroMode' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:ManualFlashOutput' =>
+    array (
+      0 => 41,
+    ),
+    'Canon:MaxAperture' =>
+    array (
+      0 => 26,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 23,
+    ),
+    'Canon:MeteringMode' =>
+    array (
+      0 => 17,
+    ),
+    'Canon:MinAperture' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:PhotoEffect' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:Quality' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:RecordMode' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:SRAWQuality' =>
+    array (
+      0 => 46,
+    ),
+    'Canon:Saturation' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:SelfTimer' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:Sharpness' =>
+    array (
+      0 => 15,
+    ),
+    'Canon:SpotMeteringMode' =>
+    array (
+      0 => 39,
+    ),
+    'Canon:ZoomSourceWidth' =>
+    array (
+      0 => 36,
+    ),
+    'Canon:ZoomTargetWidth' =>
+    array (
+      0 => 37,
+    ),
   ),
   'items' =>
   array (

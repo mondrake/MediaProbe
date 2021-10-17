@@ -25,57 +25,206 @@ class FileInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'BracketMode' => 3,
-    'BracketShotNumber' => 5,
-    'BracketValue' => 4,
-    'FileNumber' => 1,
-    'FilterEffect' => 14,
-    'FlashExposureLock' => 25,
-    'FocusDistanceLower' => 21,
-    'FocusDistanceUpper' => 20,
-    'LiveViewShooting' => 19,
-    'LongExposureNoiseReduction2' => 8,
-    'MacroMagnification' => 16,
-    'RawJpgQuality' => 6,
-    'RawJpgSize' => 7,
-    'ToningEffect' => 15,
-    'WBBracketMode' => 9,
-    'WBBracketValueAB' => 12,
-    'WBBracketValueGM' => 13,
+    'BracketMode' =>
+    array (
+      0 => 3,
+    ),
+    'BracketShotNumber' =>
+    array (
+      0 => 5,
+    ),
+    'BracketValue' =>
+    array (
+      0 => 4,
+    ),
+    'FileNumber' =>
+    array (
+      0 => 1,
+    ),
+    'FilterEffect' =>
+    array (
+      0 => 14,
+    ),
+    'FlashExposureLock' =>
+    array (
+      0 => 25,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 21,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 20,
+    ),
+    'LiveViewShooting' =>
+    array (
+      0 => 19,
+    ),
+    'LongExposureNoiseReduction2' =>
+    array (
+      0 => 8,
+    ),
+    'MacroMagnification' =>
+    array (
+      0 => 16,
+    ),
+    'RawJpgQuality' =>
+    array (
+      0 => 6,
+    ),
+    'RawJpgSize' =>
+    array (
+      0 => 7,
+    ),
+    'ShutterCount' =>
+    array (
+      0 => 1,
+    ),
+    'ToningEffect' =>
+    array (
+      0 => 15,
+    ),
+    'WBBracketMode' =>
+    array (
+      0 => 9,
+    ),
+    'WBBracketValueAB' =>
+    array (
+      0 => 12,
+    ),
+    'WBBracketValueGM' =>
+    array (
+      0 => 13,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:BracketMode' => 3,
-    'Canon:BracketShotNumber' => 5,
-    'Canon:BracketValue' => 4,
-    'Canon:FileNumber' => 1,
-    'Canon:FilterEffect' => 14,
-    'Canon:FlashExposureLock' => 25,
-    'Canon:FocusDistanceLower' => 21,
-    'Canon:FocusDistanceUpper' => 20,
-    'Canon:LiveViewShooting' => 19,
-    'Canon:LongExposureNoiseReduction2' => 8,
-    'Canon:MacroMagnification' => 16,
-    'Canon:RawJpgQuality' => 6,
-    'Canon:RawJpgSize' => 7,
-    'Canon:ToningEffect' => 15,
-    'Canon:WBBracketMode' => 9,
-    'Canon:WBBracketValueAB' => 12,
-    'Canon:WBBracketValueGM' => 13,
+    'Canon:BracketMode' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:BracketShotNumber' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:BracketValue' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FileNumber' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:FilterEffect' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:FlashExposureLock' =>
+    array (
+      0 => 25,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:LiveViewShooting' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:LongExposureNoiseReduction2' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:MacroMagnification' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:RawJpgQuality' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:RawJpgSize' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:ShutterCount' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:ToningEffect' =>
+    array (
+      0 => 15,
+    ),
+    'Canon:WBBracketMode' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:WBBracketValueAB' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:WBBracketValueGM' =>
+    array (
+      0 => 13,
+    ),
   ),
   'items' =>
   array (
     1 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FileNumber',
-      'collection' => 'Tag',
-      'name' => 'FileNumber',
-      'title' => 'File Number',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FileNumber',
+        'collection' => 'Tag',
+        'name' => 'FileNumber',
+        'title' => 'File Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:FileNumber',
       ),
-      'exiftoolDOMNode' => 'Canon:FileNumber',
+      1 =>
+      array (
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FileNumber',
+        'collection' => 'Tag',
+        'name' => 'FileNumber',
+        'title' => 'File Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:FileNumber',
+      ),
+      2 =>
+      array (
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FileNumber',
+        'collection' => 'Tag',
+        'name' => 'ShutterCount',
+        'title' => 'Shutter Count',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:ShutterCount',
+      ),
+      3 =>
+      array (
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\FileNumber',
+        'collection' => 'Tag',
+        'name' => 'ShutterCount',
+        'title' => 'Shutter Count',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:ShutterCount',
+      ),
     ),
     3 =>
     array (

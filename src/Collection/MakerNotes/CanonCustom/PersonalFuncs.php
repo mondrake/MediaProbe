@@ -24,67 +24,241 @@ class PersonalFuncs extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'PF0CustomFuncRegistration' => 1,
-    'PF10RetainProgramShift' => 11,
-    'PF13DrivePriority' => 14,
-    'PF14DisableFocusSearch' => 15,
-    'PF15DisableAFAssistBeam' => 16,
-    'PF16AutoFocusPointShoot' => 17,
-    'PF17DisableAFPointSel' => 18,
-    'PF18EnableAutoAFPointSel' => 19,
-    'PF19ContinuousShootSpeed' => 20,
-    'PF1DisableShootingModes' => 2,
-    'PF20LimitContinousShots' => 21,
-    'PF21EnableQuietOperation' => 22,
-    'PF23SetTimerLengths' => 24,
-    'PF24LightLCDDuringBulb' => 25,
-    'PF25DefaultClearSettings' => 26,
-    'PF26ShortenReleaseLag' => 27,
-    'PF27ReverseDialRotation' => 28,
-    'PF28NoQuickDialExpComp' => 29,
-    'PF29QuickDialSwitchOff' => 30,
-    'PF2DisableMeteringModes' => 3,
-    'PF30EnlargementMode' => 31,
-    'PF31OriginalDecisionData' => 32,
-    'PF3ManualExposureMetering' => 4,
-    'PF4ExposureTimeLimits' => 5,
-    'PF5ApertureLimits' => 6,
-    'PF6PresetShootingModes' => 7,
-    'PF7BracketContinuousShoot' => 8,
-    'PF8SetBracketShots' => 9,
-    'PF9ChangeBracketSequence' => 10,
+    'PF0CustomFuncRegistration' =>
+    array (
+      0 => 1,
+    ),
+    'PF10RetainProgramShift' =>
+    array (
+      0 => 11,
+    ),
+    'PF13DrivePriority' =>
+    array (
+      0 => 14,
+    ),
+    'PF14DisableFocusSearch' =>
+    array (
+      0 => 15,
+    ),
+    'PF15DisableAFAssistBeam' =>
+    array (
+      0 => 16,
+    ),
+    'PF16AutoFocusPointShoot' =>
+    array (
+      0 => 17,
+    ),
+    'PF17DisableAFPointSel' =>
+    array (
+      0 => 18,
+    ),
+    'PF18EnableAutoAFPointSel' =>
+    array (
+      0 => 19,
+    ),
+    'PF19ContinuousShootSpeed' =>
+    array (
+      0 => 20,
+    ),
+    'PF1DisableShootingModes' =>
+    array (
+      0 => 2,
+    ),
+    'PF20LimitContinousShots' =>
+    array (
+      0 => 21,
+    ),
+    'PF21EnableQuietOperation' =>
+    array (
+      0 => 22,
+    ),
+    'PF23SetTimerLengths' =>
+    array (
+      0 => 24,
+    ),
+    'PF24LightLCDDuringBulb' =>
+    array (
+      0 => 25,
+    ),
+    'PF25DefaultClearSettings' =>
+    array (
+      0 => 26,
+    ),
+    'PF26ShortenReleaseLag' =>
+    array (
+      0 => 27,
+    ),
+    'PF27ReverseDialRotation' =>
+    array (
+      0 => 28,
+    ),
+    'PF28NoQuickDialExpComp' =>
+    array (
+      0 => 29,
+    ),
+    'PF29QuickDialSwitchOff' =>
+    array (
+      0 => 30,
+    ),
+    'PF2DisableMeteringModes' =>
+    array (
+      0 => 3,
+    ),
+    'PF30EnlargementMode' =>
+    array (
+      0 => 31,
+    ),
+    'PF31OriginalDecisionData' =>
+    array (
+      0 => 32,
+    ),
+    'PF3ManualExposureMetering' =>
+    array (
+      0 => 4,
+    ),
+    'PF4ExposureTimeLimits' =>
+    array (
+      0 => 5,
+    ),
+    'PF5ApertureLimits' =>
+    array (
+      0 => 6,
+    ),
+    'PF6PresetShootingModes' =>
+    array (
+      0 => 7,
+    ),
+    'PF7BracketContinuousShoot' =>
+    array (
+      0 => 8,
+    ),
+    'PF8SetBracketShots' =>
+    array (
+      0 => 9,
+    ),
+    'PF9ChangeBracketSequence' =>
+    array (
+      0 => 10,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:PF0CustomFuncRegistration' => 1,
-    'CanonCustom:PF10RetainProgramShift' => 11,
-    'CanonCustom:PF13DrivePriority' => 14,
-    'CanonCustom:PF14DisableFocusSearch' => 15,
-    'CanonCustom:PF15DisableAFAssistBeam' => 16,
-    'CanonCustom:PF16AutoFocusPointShoot' => 17,
-    'CanonCustom:PF17DisableAFPointSel' => 18,
-    'CanonCustom:PF18EnableAutoAFPointSel' => 19,
-    'CanonCustom:PF19ContinuousShootSpeed' => 20,
-    'CanonCustom:PF1DisableShootingModes' => 2,
-    'CanonCustom:PF20LimitContinousShots' => 21,
-    'CanonCustom:PF21EnableQuietOperation' => 22,
-    'CanonCustom:PF23SetTimerLengths' => 24,
-    'CanonCustom:PF24LightLCDDuringBulb' => 25,
-    'CanonCustom:PF25DefaultClearSettings' => 26,
-    'CanonCustom:PF26ShortenReleaseLag' => 27,
-    'CanonCustom:PF27ReverseDialRotation' => 28,
-    'CanonCustom:PF28NoQuickDialExpComp' => 29,
-    'CanonCustom:PF29QuickDialSwitchOff' => 30,
-    'CanonCustom:PF2DisableMeteringModes' => 3,
-    'CanonCustom:PF30EnlargementMode' => 31,
-    'CanonCustom:PF31OriginalDecisionData' => 32,
-    'CanonCustom:PF3ManualExposureMetering' => 4,
-    'CanonCustom:PF4ExposureTimeLimits' => 5,
-    'CanonCustom:PF5ApertureLimits' => 6,
-    'CanonCustom:PF6PresetShootingModes' => 7,
-    'CanonCustom:PF7BracketContinuousShoot' => 8,
-    'CanonCustom:PF8SetBracketShots' => 9,
-    'CanonCustom:PF9ChangeBracketSequence' => 10,
+    'CanonCustom:PF0CustomFuncRegistration' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:PF10RetainProgramShift' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:PF13DrivePriority' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:PF14DisableFocusSearch' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:PF15DisableAFAssistBeam' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:PF16AutoFocusPointShoot' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:PF17DisableAFPointSel' =>
+    array (
+      0 => 18,
+    ),
+    'CanonCustom:PF18EnableAutoAFPointSel' =>
+    array (
+      0 => 19,
+    ),
+    'CanonCustom:PF19ContinuousShootSpeed' =>
+    array (
+      0 => 20,
+    ),
+    'CanonCustom:PF1DisableShootingModes' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:PF20LimitContinousShots' =>
+    array (
+      0 => 21,
+    ),
+    'CanonCustom:PF21EnableQuietOperation' =>
+    array (
+      0 => 22,
+    ),
+    'CanonCustom:PF23SetTimerLengths' =>
+    array (
+      0 => 24,
+    ),
+    'CanonCustom:PF24LightLCDDuringBulb' =>
+    array (
+      0 => 25,
+    ),
+    'CanonCustom:PF25DefaultClearSettings' =>
+    array (
+      0 => 26,
+    ),
+    'CanonCustom:PF26ShortenReleaseLag' =>
+    array (
+      0 => 27,
+    ),
+    'CanonCustom:PF27ReverseDialRotation' =>
+    array (
+      0 => 28,
+    ),
+    'CanonCustom:PF28NoQuickDialExpComp' =>
+    array (
+      0 => 29,
+    ),
+    'CanonCustom:PF29QuickDialSwitchOff' =>
+    array (
+      0 => 30,
+    ),
+    'CanonCustom:PF2DisableMeteringModes' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:PF30EnlargementMode' =>
+    array (
+      0 => 31,
+    ),
+    'CanonCustom:PF31OriginalDecisionData' =>
+    array (
+      0 => 32,
+    ),
+    'CanonCustom:PF3ManualExposureMetering' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:PF4ExposureTimeLimits' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:PF5ApertureLimits' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:PF6PresetShootingModes' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:PF7BracketContinuousShoot' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:PF8SetBracketShots' =>
+    array (
+      0 => 9,
+    ),
+    'CanonCustom:PF9ChangeBracketSequence' =>
+    array (
+      0 => 10,
+    ),
   ),
   'items' =>
   array (

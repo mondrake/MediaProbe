@@ -24,31 +24,97 @@ class ModifiedInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ModifiedColorTemp' => 9,
-    'ModifiedDigitalGain' => 11,
-    'ModifiedPictureStyle' => 10,
-    'ModifiedSensorBlueLevel' => 5,
-    'ModifiedSensorRedLevel' => 4,
-    'ModifiedSharpness' => 2,
-    'ModifiedSharpnessFreq' => 3,
-    'ModifiedToneCurve' => 1,
-    'ModifiedWhiteBalance' => 8,
-    'ModifiedWhiteBalanceBlue' => 7,
-    'ModifiedWhiteBalanceRed' => 6,
+    'ModifiedColorTemp' =>
+    array (
+      0 => 9,
+    ),
+    'ModifiedDigitalGain' =>
+    array (
+      0 => 11,
+    ),
+    'ModifiedPictureStyle' =>
+    array (
+      0 => 10,
+    ),
+    'ModifiedSensorBlueLevel' =>
+    array (
+      0 => 5,
+    ),
+    'ModifiedSensorRedLevel' =>
+    array (
+      0 => 4,
+    ),
+    'ModifiedSharpness' =>
+    array (
+      0 => 2,
+    ),
+    'ModifiedSharpnessFreq' =>
+    array (
+      0 => 3,
+    ),
+    'ModifiedToneCurve' =>
+    array (
+      0 => 1,
+    ),
+    'ModifiedWhiteBalance' =>
+    array (
+      0 => 8,
+    ),
+    'ModifiedWhiteBalanceBlue' =>
+    array (
+      0 => 7,
+    ),
+    'ModifiedWhiteBalanceRed' =>
+    array (
+      0 => 6,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ModifiedColorTemp' => 9,
-    'Canon:ModifiedDigitalGain' => 11,
-    'Canon:ModifiedPictureStyle' => 10,
-    'Canon:ModifiedSensorBlueLevel' => 5,
-    'Canon:ModifiedSensorRedLevel' => 4,
-    'Canon:ModifiedSharpness' => 2,
-    'Canon:ModifiedSharpnessFreq' => 3,
-    'Canon:ModifiedToneCurve' => 1,
-    'Canon:ModifiedWhiteBalance' => 8,
-    'Canon:ModifiedWhiteBalanceBlue' => 7,
-    'Canon:ModifiedWhiteBalanceRed' => 6,
+    'Canon:ModifiedColorTemp' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:ModifiedDigitalGain' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:ModifiedPictureStyle' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:ModifiedSensorBlueLevel' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:ModifiedSensorRedLevel' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:ModifiedSharpness' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:ModifiedSharpnessFreq' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:ModifiedToneCurve' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:ModifiedWhiteBalance' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:ModifiedWhiteBalanceBlue' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:ModifiedWhiteBalanceRed' =>
+    array (
+      0 => 6,
+    ),
   ),
   'items' =>
   array (

@@ -24,13 +24,25 @@ class HDRInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'HDR' => 1,
-    'HDREffect' => 2,
+    'HDR' =>
+    array (
+      0 => 1,
+    ),
+    'HDREffect' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:HDR' => 1,
-    'Canon:HDREffect' => 2,
+    'Canon:HDR' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:HDREffect' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

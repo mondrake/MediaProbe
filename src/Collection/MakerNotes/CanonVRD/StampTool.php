@@ -24,11 +24,17 @@ class StampTool extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'StampToolCount' => 0,
+    'StampToolCount' =>
+    array (
+      0 => 0,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:StampToolCount' => 0,
+    'CanonVRD:StampToolCount' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (

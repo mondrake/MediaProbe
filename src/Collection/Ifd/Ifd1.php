@@ -29,349 +29,1372 @@ class Ifd1 extends Collection {
   ),
   'itemsByName' =>
   array (
-    'A100DataOffset' => 330,
-    'AnalogBalance' => 50727,
-    'ApplicationNotes' => 700,
-    'Artist' => 315,
-    'AsShotICCProfile' => 50831,
-    'AsShotNeutral' => 50728,
-    'AsShotPreProfileMatrix' => 50832,
-    'AsShotProfileName' => 50934,
-    'AsShotWhiteXY' => 50729,
-    'BaselineExposure' => 50730,
-    'BaselineExposureOffset' => 51109,
-    'BaselineNoise' => 50731,
-    'BaselineSharpness' => 50732,
-    'BitsPerSample' => 258,
-    'CalibrationIlluminant1' => 50778,
-    'CalibrationIlluminant2' => 50779,
-    'CameraCalibration1' => 50723,
-    'CameraCalibration2' => 50724,
-    'CameraCalibrationSig' => 50931,
-    'CameraLabel' => 51105,
-    'CameraSerialNumber' => 50735,
-    'CellLength' => 265,
-    'CellWidth' => 264,
-    'ColorMatrix1' => 50721,
-    'ColorMatrix2' => 50722,
-    'ColorimetricReference' => 50879,
-    'Compression' => 259,
-    'Copyright' => 33432,
-    'CurrentICCProfile' => 50833,
-    'CurrentPreProfileMatrix' => 50834,
-    'DNGAdobeData' => 50740,
-    'DNGBackwardVersion' => 50707,
-    'DNGLensInfo' => 50736,
-    'DNGVersion' => 50706,
-    'DefaultBlackRender' => 51110,
-    'DocumentName' => 269,
-    'ExifIFD' => 34665,
-    'FillOrder' => 266,
-    'ForwardMatrix1' => 50964,
-    'ForwardMatrix2' => 50965,
-    'FrameRate' => 51044,
-    'GPS' => 34853,
-    'GeoTiffAsciiParams' => 34737,
-    'GeoTiffDirectory' => 34735,
-    'GeoTiffDoubleParams' => 34736,
-    'GrayResponseUnit' => 290,
-    'HalftoneHints' => 321,
-    'HostComputer' => 316,
-    'IPTC-NAA' => 33723,
-    'ImageDescription' => 270,
-    'ImageHeight' => 257,
-    'ImageSourceData' => 37724,
-    'ImageWidth' => 256,
-    'InkSet' => 332,
-    'LinearResponseLimit' => 50734,
-    'LocalizedCameraModel' => 50709,
-    'Make' => 271,
-    'MakerNoteSafety' => 50741,
-    'MaxSampleValue' => 281,
-    'MinSampleValue' => 280,
-    'Model' => 272,
-    'ModifyDate' => 306,
-    'NewRawImageDigest' => 51111,
-    'OldSubfileType' => 255,
-    'Orientation' => 274,
-    'OriginalBestQualitySize' => 51090,
-    'OriginalDefaultCropSize' => 51091,
-    'OriginalDefaultFinalSize' => 51089,
-    'OriginalRawFileData' => 50828,
-    'OriginalRawFileDigest' => 50973,
-    'OriginalRawFileName' => 50827,
-    'PageName' => 285,
-    'PageNumber' => 297,
-    'PanasonicTitle' => 50898,
-    'PanasonicTitle2' => 50899,
-    'PhotometricInterpretation' => 262,
-    'PlanarConfiguration' => 284,
-    'Predictor' => 317,
-    'PreviewApplicationName' => 50966,
-    'PreviewApplicationVersion' => 50967,
-    'PreviewColorSpace' => 50970,
-    'PreviewDateTime' => 50971,
-    'PreviewImageLength' => 279,
-    'PreviewImageStart' => 273,
-    'PreviewSettingsDigest' => 50969,
-    'PreviewSettingsName' => 50968,
-    'PrimaryChromaticities' => 319,
-    'PrintIM' => 50341,
-    'ProcessingSoftware' => 11,
-    'ProfileCalibrationSig' => 50932,
-    'ProfileCopyright' => 50942,
-    'ProfileEmbedPolicy' => 50941,
-    'ProfileHueSatMapData1' => 50938,
-    'ProfileHueSatMapData2' => 50939,
-    'ProfileHueSatMapDims' => 50937,
-    'ProfileHueSatMapEncoding' => 51107,
-    'ProfileLookTableData' => 50982,
-    'ProfileLookTableDims' => 50981,
-    'ProfileLookTableEncoding' => 51108,
-    'ProfileName' => 50936,
-    'ProfileToneCurve' => 50940,
-    'Rating' => 18246,
-    'RatingPercent' => 18249,
-    'RawDataUniqueID' => 50781,
-    'RawImageDigest' => 50972,
-    'RawToPreviewGain' => 51112,
-    'ReductionMatrix1' => 50725,
-    'ReductionMatrix2' => 50726,
-    'ReelName' => 51081,
-    'ReferenceBlackWhite' => 532,
-    'ResolutionUnit' => 296,
-    'RowsPerStrip' => 278,
-    'SEMInfo' => 34118,
-    'SRawType' => 50885,
-    'SamplesPerPixel' => 277,
-    'ShadowScale' => 50739,
-    'Software' => 305,
-    'SubfileType' => 254,
-    'TStop' => 51058,
-    'TargetPrinter' => 337,
-    'Thresholding' => 263,
-    'ThumbnailLength' => 514,
-    'ThumbnailOffset' => 513,
-    'TileLength' => 323,
-    'TileWidth' => 322,
-    'TimeCodes' => 51043,
-    'TransferFunction' => 301,
-    'UniqueCameraModel' => 50708,
-    'WhitePoint' => 318,
-    'XPAuthor' => 40093,
-    'XPComment' => 40092,
-    'XPKeywords' => 40094,
-    'XPSubject' => 40095,
-    'XPTitle' => 40091,
-    'XPosition' => 286,
-    'XResolution' => 282,
-    'YCbCrCoefficients' => 529,
-    'YCbCrPositioning' => 531,
-    'YCbCrSubSampling' => 530,
-    'YPosition' => 287,
-    'YResolution' => 283,
+    'A100DataOffset' =>
+    array (
+      0 => 330,
+    ),
+    'AnalogBalance' =>
+    array (
+      0 => 50727,
+    ),
+    'ApplicationNotes' =>
+    array (
+      0 => 700,
+    ),
+    'Artist' =>
+    array (
+      0 => 315,
+    ),
+    'AsShotICCProfile' =>
+    array (
+      0 => 50831,
+    ),
+    'AsShotNeutral' =>
+    array (
+      0 => 50728,
+    ),
+    'AsShotPreProfileMatrix' =>
+    array (
+      0 => 50832,
+    ),
+    'AsShotProfileName' =>
+    array (
+      0 => 50934,
+    ),
+    'AsShotWhiteXY' =>
+    array (
+      0 => 50729,
+    ),
+    'BaselineExposure' =>
+    array (
+      0 => 50730,
+    ),
+    'BaselineExposureOffset' =>
+    array (
+      0 => 51109,
+    ),
+    'BaselineNoise' =>
+    array (
+      0 => 50731,
+    ),
+    'BaselineSharpness' =>
+    array (
+      0 => 50732,
+    ),
+    'BitsPerSample' =>
+    array (
+      0 => 258,
+    ),
+    'CalibrationIlluminant1' =>
+    array (
+      0 => 50778,
+    ),
+    'CalibrationIlluminant2' =>
+    array (
+      0 => 50779,
+    ),
+    'CameraCalibration1' =>
+    array (
+      0 => 50723,
+    ),
+    'CameraCalibration2' =>
+    array (
+      0 => 50724,
+    ),
+    'CameraCalibrationSig' =>
+    array (
+      0 => 50931,
+    ),
+    'CameraLabel' =>
+    array (
+      0 => 51105,
+    ),
+    'CameraSerialNumber' =>
+    array (
+      0 => 50735,
+    ),
+    'CellLength' =>
+    array (
+      0 => 265,
+    ),
+    'CellWidth' =>
+    array (
+      0 => 264,
+    ),
+    'ColorMatrix1' =>
+    array (
+      0 => 50721,
+    ),
+    'ColorMatrix2' =>
+    array (
+      0 => 50722,
+    ),
+    'ColorimetricReference' =>
+    array (
+      0 => 50879,
+    ),
+    'Compression' =>
+    array (
+      0 => 259,
+    ),
+    'Copyright' =>
+    array (
+      0 => 33432,
+    ),
+    'CurrentICCProfile' =>
+    array (
+      0 => 50833,
+    ),
+    'CurrentPreProfileMatrix' =>
+    array (
+      0 => 50834,
+    ),
+    'DNGAdobeData' =>
+    array (
+      0 => 50740,
+    ),
+    'DNGBackwardVersion' =>
+    array (
+      0 => 50707,
+    ),
+    'DNGLensInfo' =>
+    array (
+      0 => 50736,
+    ),
+    'DNGPrivateData' =>
+    array (
+      0 => 50740,
+    ),
+    'DNGVersion' =>
+    array (
+      0 => 50706,
+    ),
+    'DefaultBlackRender' =>
+    array (
+      0 => 51110,
+    ),
+    'DocumentName' =>
+    array (
+      0 => 269,
+    ),
+    'ExifIFD' =>
+    array (
+      0 => 34665,
+    ),
+    'FillOrder' =>
+    array (
+      0 => 266,
+    ),
+    'ForwardMatrix1' =>
+    array (
+      0 => 50964,
+    ),
+    'ForwardMatrix2' =>
+    array (
+      0 => 50965,
+    ),
+    'FrameRate' =>
+    array (
+      0 => 51044,
+    ),
+    'GPS' =>
+    array (
+      0 => 34853,
+    ),
+    'GeoTiffAsciiParams' =>
+    array (
+      0 => 34737,
+    ),
+    'GeoTiffDirectory' =>
+    array (
+      0 => 34735,
+    ),
+    'GeoTiffDoubleParams' =>
+    array (
+      0 => 34736,
+    ),
+    'GrayResponseUnit' =>
+    array (
+      0 => 290,
+    ),
+    'HalftoneHints' =>
+    array (
+      0 => 321,
+    ),
+    'HostComputer' =>
+    array (
+      0 => 316,
+    ),
+    'IPTC-NAA' =>
+    array (
+      0 => 33723,
+    ),
+    'ImageDescription' =>
+    array (
+      0 => 270,
+    ),
+    'ImageHeight' =>
+    array (
+      0 => 257,
+    ),
+    'ImageSourceData' =>
+    array (
+      0 => 37724,
+    ),
+    'ImageWidth' =>
+    array (
+      0 => 256,
+    ),
+    'InkSet' =>
+    array (
+      0 => 332,
+    ),
+    'LinearResponseLimit' =>
+    array (
+      0 => 50734,
+    ),
+    'LocalizedCameraModel' =>
+    array (
+      0 => 50709,
+    ),
+    'Make' =>
+    array (
+      0 => 271,
+    ),
+    'MakerNoteSafety' =>
+    array (
+      0 => 50741,
+    ),
+    'MaxSampleValue' =>
+    array (
+      0 => 281,
+    ),
+    'MinSampleValue' =>
+    array (
+      0 => 280,
+    ),
+    'Model' =>
+    array (
+      0 => 272,
+    ),
+    'ModifyDate' =>
+    array (
+      0 => 306,
+    ),
+    'NewRawImageDigest' =>
+    array (
+      0 => 51111,
+    ),
+    'OldSubfileType' =>
+    array (
+      0 => 255,
+    ),
+    'Orientation' =>
+    array (
+      0 => 274,
+    ),
+    'OriginalBestQualitySize' =>
+    array (
+      0 => 51090,
+    ),
+    'OriginalDefaultCropSize' =>
+    array (
+      0 => 51091,
+    ),
+    'OriginalDefaultFinalSize' =>
+    array (
+      0 => 51089,
+    ),
+    'OriginalRawFileData' =>
+    array (
+      0 => 50828,
+    ),
+    'OriginalRawFileDigest' =>
+    array (
+      0 => 50973,
+    ),
+    'OriginalRawFileName' =>
+    array (
+      0 => 50827,
+    ),
+    'PageName' =>
+    array (
+      0 => 285,
+    ),
+    'PageNumber' =>
+    array (
+      0 => 297,
+    ),
+    'PanasonicTitle' =>
+    array (
+      0 => 50898,
+    ),
+    'PanasonicTitle2' =>
+    array (
+      0 => 50899,
+    ),
+    'PhotometricInterpretation' =>
+    array (
+      0 => 262,
+    ),
+    'PlanarConfiguration' =>
+    array (
+      0 => 284,
+    ),
+    'Predictor' =>
+    array (
+      0 => 317,
+    ),
+    'PreviewApplicationName' =>
+    array (
+      0 => 50966,
+    ),
+    'PreviewApplicationVersion' =>
+    array (
+      0 => 50967,
+    ),
+    'PreviewColorSpace' =>
+    array (
+      0 => 50970,
+    ),
+    'PreviewDateTime' =>
+    array (
+      0 => 50971,
+    ),
+    'PreviewImageLength' =>
+    array (
+      0 => 279,
+      1 => 514,
+    ),
+    'PreviewImageStart' =>
+    array (
+      0 => 273,
+      1 => 513,
+    ),
+    'PreviewSettingsDigest' =>
+    array (
+      0 => 50969,
+    ),
+    'PreviewSettingsName' =>
+    array (
+      0 => 50968,
+    ),
+    'PrimaryChromaticities' =>
+    array (
+      0 => 319,
+    ),
+    'PrintIM' =>
+    array (
+      0 => 50341,
+    ),
+    'ProcessingSoftware' =>
+    array (
+      0 => 11,
+    ),
+    'ProfileCalibrationSig' =>
+    array (
+      0 => 50932,
+    ),
+    'ProfileCopyright' =>
+    array (
+      0 => 50942,
+    ),
+    'ProfileEmbedPolicy' =>
+    array (
+      0 => 50941,
+    ),
+    'ProfileHueSatMapData1' =>
+    array (
+      0 => 50938,
+    ),
+    'ProfileHueSatMapData2' =>
+    array (
+      0 => 50939,
+    ),
+    'ProfileHueSatMapDims' =>
+    array (
+      0 => 50937,
+    ),
+    'ProfileHueSatMapEncoding' =>
+    array (
+      0 => 51107,
+    ),
+    'ProfileLookTableData' =>
+    array (
+      0 => 50982,
+    ),
+    'ProfileLookTableDims' =>
+    array (
+      0 => 50981,
+    ),
+    'ProfileLookTableEncoding' =>
+    array (
+      0 => 51108,
+    ),
+    'ProfileName' =>
+    array (
+      0 => 50936,
+    ),
+    'ProfileToneCurve' =>
+    array (
+      0 => 50940,
+    ),
+    'Rating' =>
+    array (
+      0 => 18246,
+    ),
+    'RatingPercent' =>
+    array (
+      0 => 18249,
+    ),
+    'RawDataUniqueID' =>
+    array (
+      0 => 50781,
+    ),
+    'RawImageDigest' =>
+    array (
+      0 => 50972,
+    ),
+    'RawToPreviewGain' =>
+    array (
+      0 => 51112,
+    ),
+    'ReductionMatrix1' =>
+    array (
+      0 => 50725,
+    ),
+    'ReductionMatrix2' =>
+    array (
+      0 => 50726,
+    ),
+    'ReelName' =>
+    array (
+      0 => 51081,
+    ),
+    'ReferenceBlackWhite' =>
+    array (
+      0 => 532,
+    ),
+    'ResolutionUnit' =>
+    array (
+      0 => 296,
+    ),
+    'RowsPerStrip' =>
+    array (
+      0 => 278,
+    ),
+    'SEMInfo' =>
+    array (
+      0 => 34118,
+    ),
+    'SRawType' =>
+    array (
+      0 => 50885,
+    ),
+    'SamplesPerPixel' =>
+    array (
+      0 => 277,
+    ),
+    'ShadowScale' =>
+    array (
+      0 => 50739,
+    ),
+    'Software' =>
+    array (
+      0 => 305,
+    ),
+    'SubfileType' =>
+    array (
+      0 => 254,
+    ),
+    'TStop' =>
+    array (
+      0 => 51058,
+    ),
+    'TargetPrinter' =>
+    array (
+      0 => 337,
+    ),
+    'Thresholding' =>
+    array (
+      0 => 263,
+    ),
+    'ThumbnailLength' =>
+    array (
+      0 => 514,
+    ),
+    'ThumbnailOffset' =>
+    array (
+      0 => 513,
+    ),
+    'TileLength' =>
+    array (
+      0 => 323,
+    ),
+    'TileWidth' =>
+    array (
+      0 => 322,
+    ),
+    'TimeCodes' =>
+    array (
+      0 => 51043,
+    ),
+    'TransferFunction' =>
+    array (
+      0 => 301,
+    ),
+    'UniqueCameraModel' =>
+    array (
+      0 => 50708,
+    ),
+    'WhitePoint' =>
+    array (
+      0 => 318,
+    ),
+    'XPAuthor' =>
+    array (
+      0 => 40093,
+    ),
+    'XPComment' =>
+    array (
+      0 => 40092,
+    ),
+    'XPKeywords' =>
+    array (
+      0 => 40094,
+    ),
+    'XPSubject' =>
+    array (
+      0 => 40095,
+    ),
+    'XPTitle' =>
+    array (
+      0 => 40091,
+    ),
+    'XPosition' =>
+    array (
+      0 => 286,
+    ),
+    'XResolution' =>
+    array (
+      0 => 282,
+    ),
+    'YCbCrCoefficients' =>
+    array (
+      0 => 529,
+    ),
+    'YCbCrPositioning' =>
+    array (
+      0 => 531,
+    ),
+    'YCbCrSubSampling' =>
+    array (
+      0 => 530,
+    ),
+    'YPosition' =>
+    array (
+      0 => 287,
+    ),
+    'YResolution' =>
+    array (
+      0 => 283,
+    ),
   ),
   'itemsByPhpExifTag' =>
   array (
-    'THUMBNAIL::ACDComment' => 11,
-    'THUMBNAIL::Artist' => 315,
-    'THUMBNAIL::Author' => 40093,
-    'THUMBNAIL::BitsPerSample' => 258,
-    'THUMBNAIL::Comments' => 40092,
-    'THUMBNAIL::Compression' => 259,
-    'THUMBNAIL::Copyright' => 33432,
-    'THUMBNAIL::DateTime' => 306,
-    'THUMBNAIL::DocumentName' => 269,
-    'THUMBNAIL::ExtensibleMetadataPlatform' => 700,
-    'THUMBNAIL::FillOrder' => 266,
-    'THUMBNAIL::GrayResponseUnit' => 290,
-    'THUMBNAIL::HalfToneHints' => 321,
-    'THUMBNAIL::HostComputer' => 316,
-    'THUMBNAIL::IPTC/NAA' => 33723,
-    'THUMBNAIL::ImageDescription' => 270,
-    'THUMBNAIL::ImageLength' => 257,
-    'THUMBNAIL::ImageSourceData' => 37724,
-    'THUMBNAIL::ImageWidth' => 256,
-    'THUMBNAIL::InkSet' => 332,
-    'THUMBNAIL::JPEGInterchangeFormat' => 513,
-    'THUMBNAIL::JPEGInterchangeFormatLength' => 514,
-    'THUMBNAIL::Keywords' => 40094,
-    'THUMBNAIL::Make' => 271,
-    'THUMBNAIL::MaxSampleValue' => 281,
-    'THUMBNAIL::MinSampleValue' => 280,
-    'THUMBNAIL::Model' => 272,
-    'THUMBNAIL::NewSubFile' => 254,
-    'THUMBNAIL::Orientation' => 274,
-    'THUMBNAIL::PageName' => 285,
-    'THUMBNAIL::PageNumber' => 297,
-    'THUMBNAIL::PhotometricInterpretation' => 262,
-    'THUMBNAIL::PlanarConfiguration' => 284,
-    'THUMBNAIL::Predictor' => 317,
-    'THUMBNAIL::PrimaryChromaticities' => 319,
-    'THUMBNAIL::ReferenceBlackWhite' => 532,
-    'THUMBNAIL::ResolutionUnit' => 296,
-    'THUMBNAIL::RowsPerStrip' => 278,
-    'THUMBNAIL::SamplesPerPixel' => 277,
-    'THUMBNAIL::Software' => 305,
-    'THUMBNAIL::StripByteCounts' => 279,
-    'THUMBNAIL::StripOffsets' => 273,
-    'THUMBNAIL::SubFile' => 255,
-    'THUMBNAIL::SubIFD' => 330,
-    'THUMBNAIL::Subject' => 40095,
-    'THUMBNAIL::TargetPrinter' => 337,
-    'THUMBNAIL::TileLength' => 323,
-    'THUMBNAIL::TileWidth' => 322,
-    'THUMBNAIL::Title' => 40091,
-    'THUMBNAIL::TransferFunction' => 301,
-    'THUMBNAIL::WhitePoint' => 318,
-    'THUMBNAIL::XPosition' => 286,
-    'THUMBNAIL::XResolution' => 282,
-    'THUMBNAIL::YCbCrCoefficients' => 529,
-    'THUMBNAIL::YCbCrPositioning' => 531,
-    'THUMBNAIL::YCbCrSubSampling' => 530,
-    'THUMBNAIL::YPosition' => 287,
-    'THUMBNAIL::YResolution' => 283,
+    'THUMBNAIL::ACDComment' =>
+    array (
+      0 => 11,
+    ),
+    'THUMBNAIL::Artist' =>
+    array (
+      0 => 315,
+    ),
+    'THUMBNAIL::Author' =>
+    array (
+      0 => 40093,
+    ),
+    'THUMBNAIL::BitsPerSample' =>
+    array (
+      0 => 258,
+    ),
+    'THUMBNAIL::Comments' =>
+    array (
+      0 => 40092,
+    ),
+    'THUMBNAIL::Compression' =>
+    array (
+      0 => 259,
+    ),
+    'THUMBNAIL::Copyright' =>
+    array (
+      0 => 33432,
+    ),
+    'THUMBNAIL::DateTime' =>
+    array (
+      0 => 306,
+    ),
+    'THUMBNAIL::DocumentName' =>
+    array (
+      0 => 269,
+    ),
+    'THUMBNAIL::ExtensibleMetadataPlatform' =>
+    array (
+      0 => 700,
+    ),
+    'THUMBNAIL::FillOrder' =>
+    array (
+      0 => 266,
+    ),
+    'THUMBNAIL::GrayResponseUnit' =>
+    array (
+      0 => 290,
+    ),
+    'THUMBNAIL::HalfToneHints' =>
+    array (
+      0 => 321,
+    ),
+    'THUMBNAIL::HostComputer' =>
+    array (
+      0 => 316,
+    ),
+    'THUMBNAIL::IPTC/NAA' =>
+    array (
+      0 => 33723,
+    ),
+    'THUMBNAIL::ImageDescription' =>
+    array (
+      0 => 270,
+    ),
+    'THUMBNAIL::ImageLength' =>
+    array (
+      0 => 257,
+    ),
+    'THUMBNAIL::ImageSourceData' =>
+    array (
+      0 => 37724,
+    ),
+    'THUMBNAIL::ImageWidth' =>
+    array (
+      0 => 256,
+    ),
+    'THUMBNAIL::InkSet' =>
+    array (
+      0 => 332,
+    ),
+    'THUMBNAIL::JPEGInterchangeFormat' =>
+    array (
+      0 => 513,
+    ),
+    'THUMBNAIL::JPEGInterchangeFormatLength' =>
+    array (
+      0 => 514,
+    ),
+    'THUMBNAIL::Keywords' =>
+    array (
+      0 => 40094,
+    ),
+    'THUMBNAIL::Make' =>
+    array (
+      0 => 271,
+    ),
+    'THUMBNAIL::MaxSampleValue' =>
+    array (
+      0 => 281,
+    ),
+    'THUMBNAIL::MinSampleValue' =>
+    array (
+      0 => 280,
+    ),
+    'THUMBNAIL::Model' =>
+    array (
+      0 => 272,
+    ),
+    'THUMBNAIL::NewSubFile' =>
+    array (
+      0 => 254,
+    ),
+    'THUMBNAIL::Orientation' =>
+    array (
+      0 => 274,
+    ),
+    'THUMBNAIL::PageName' =>
+    array (
+      0 => 285,
+    ),
+    'THUMBNAIL::PageNumber' =>
+    array (
+      0 => 297,
+    ),
+    'THUMBNAIL::PhotometricInterpretation' =>
+    array (
+      0 => 262,
+    ),
+    'THUMBNAIL::PlanarConfiguration' =>
+    array (
+      0 => 284,
+    ),
+    'THUMBNAIL::Predictor' =>
+    array (
+      0 => 317,
+    ),
+    'THUMBNAIL::PrimaryChromaticities' =>
+    array (
+      0 => 319,
+    ),
+    'THUMBNAIL::ReferenceBlackWhite' =>
+    array (
+      0 => 532,
+    ),
+    'THUMBNAIL::ResolutionUnit' =>
+    array (
+      0 => 296,
+    ),
+    'THUMBNAIL::RowsPerStrip' =>
+    array (
+      0 => 278,
+    ),
+    'THUMBNAIL::SamplesPerPixel' =>
+    array (
+      0 => 277,
+    ),
+    'THUMBNAIL::Software' =>
+    array (
+      0 => 305,
+    ),
+    'THUMBNAIL::StripByteCounts' =>
+    array (
+      0 => 279,
+    ),
+    'THUMBNAIL::StripOffsets' =>
+    array (
+      0 => 273,
+    ),
+    'THUMBNAIL::SubFile' =>
+    array (
+      0 => 255,
+    ),
+    'THUMBNAIL::SubIFD' =>
+    array (
+      0 => 330,
+    ),
+    'THUMBNAIL::Subject' =>
+    array (
+      0 => 40095,
+    ),
+    'THUMBNAIL::TargetPrinter' =>
+    array (
+      0 => 337,
+    ),
+    'THUMBNAIL::TileLength' =>
+    array (
+      0 => 323,
+    ),
+    'THUMBNAIL::TileWidth' =>
+    array (
+      0 => 322,
+    ),
+    'THUMBNAIL::Title' =>
+    array (
+      0 => 40091,
+    ),
+    'THUMBNAIL::TransferFunction' =>
+    array (
+      0 => 301,
+    ),
+    'THUMBNAIL::WhitePoint' =>
+    array (
+      0 => 318,
+    ),
+    'THUMBNAIL::XPosition' =>
+    array (
+      0 => 286,
+    ),
+    'THUMBNAIL::XResolution' =>
+    array (
+      0 => 282,
+    ),
+    'THUMBNAIL::YCbCrCoefficients' =>
+    array (
+      0 => 529,
+    ),
+    'THUMBNAIL::YCbCrPositioning' =>
+    array (
+      0 => 531,
+    ),
+    'THUMBNAIL::YCbCrSubSampling' =>
+    array (
+      0 => 530,
+    ),
+    'THUMBNAIL::YPosition' =>
+    array (
+      0 => 287,
+    ),
+    'THUMBNAIL::YResolution' =>
+    array (
+      0 => 283,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'IFD1:A100DataOffset' => 330,
-    'IFD1:AnalogBalance' => 50727,
-    'IFD1:ApplicationNotes' => 700,
-    'IFD1:Artist' => 315,
-    'IFD1:AsShotICCProfile' => 50831,
-    'IFD1:AsShotNeutral' => 50728,
-    'IFD1:AsShotPreProfileMatrix' => 50832,
-    'IFD1:AsShotProfileName' => 50934,
-    'IFD1:AsShotWhiteXY' => 50729,
-    'IFD1:BaselineExposure' => 50730,
-    'IFD1:BaselineExposureOffset' => 51109,
-    'IFD1:BaselineNoise' => 50731,
-    'IFD1:BaselineSharpness' => 50732,
-    'IFD1:BitsPerSample' => 258,
-    'IFD1:CalibrationIlluminant1' => 50778,
-    'IFD1:CalibrationIlluminant2' => 50779,
-    'IFD1:CameraCalibration1' => 50723,
-    'IFD1:CameraCalibration2' => 50724,
-    'IFD1:CameraCalibrationSig' => 50931,
-    'IFD1:CameraLabel' => 51105,
-    'IFD1:CameraSerialNumber' => 50735,
-    'IFD1:CellLength' => 265,
-    'IFD1:CellWidth' => 264,
-    'IFD1:ColorMatrix1' => 50721,
-    'IFD1:ColorMatrix2' => 50722,
-    'IFD1:ColorimetricReference' => 50879,
-    'IFD1:Compression' => 259,
-    'IFD1:Copyright' => 33432,
-    'IFD1:CurrentICCProfile' => 50833,
-    'IFD1:CurrentPreProfileMatrix' => 50834,
-    'IFD1:DNGAdobeData' => 50740,
-    'IFD1:DNGBackwardVersion' => 50707,
-    'IFD1:DNGLensInfo' => 50736,
-    'IFD1:DNGVersion' => 50706,
-    'IFD1:DefaultBlackRender' => 51110,
-    'IFD1:DocumentName' => 269,
-    'IFD1:FillOrder' => 266,
-    'IFD1:ForwardMatrix1' => 50964,
-    'IFD1:ForwardMatrix2' => 50965,
-    'IFD1:FrameRate' => 51044,
-    'IFD1:GeoTiffAsciiParams' => 34737,
-    'IFD1:GeoTiffDirectory' => 34735,
-    'IFD1:GeoTiffDoubleParams' => 34736,
-    'IFD1:GrayResponseUnit' => 290,
-    'IFD1:HalftoneHints' => 321,
-    'IFD1:HostComputer' => 316,
-    'IFD1:IPTC-NAA' => 33723,
-    'IFD1:ImageDescription' => 270,
-    'IFD1:ImageHeight' => 257,
-    'IFD1:ImageSourceData' => 37724,
-    'IFD1:ImageWidth' => 256,
-    'IFD1:InkSet' => 332,
-    'IFD1:LinearResponseLimit' => 50734,
-    'IFD1:LocalizedCameraModel' => 50709,
-    'IFD1:Make' => 271,
-    'IFD1:MakerNoteSafety' => 50741,
-    'IFD1:MaxSampleValue' => 281,
-    'IFD1:MinSampleValue' => 280,
-    'IFD1:Model' => 272,
-    'IFD1:ModifyDate' => 306,
-    'IFD1:NewRawImageDigest' => 51111,
-    'IFD1:OldSubfileType' => 255,
-    'IFD1:Orientation' => 274,
-    'IFD1:OriginalBestQualitySize' => 51090,
-    'IFD1:OriginalDefaultCropSize' => 51091,
-    'IFD1:OriginalDefaultFinalSize' => 51089,
-    'IFD1:OriginalRawFileData' => 50828,
-    'IFD1:OriginalRawFileDigest' => 50973,
-    'IFD1:OriginalRawFileName' => 50827,
-    'IFD1:PageName' => 285,
-    'IFD1:PageNumber' => 297,
-    'IFD1:PanasonicTitle' => 50898,
-    'IFD1:PanasonicTitle2' => 50899,
-    'IFD1:PhotometricInterpretation' => 262,
-    'IFD1:PlanarConfiguration' => 284,
-    'IFD1:Predictor' => 317,
-    'IFD1:PreviewApplicationName' => 50966,
-    'IFD1:PreviewApplicationVersion' => 50967,
-    'IFD1:PreviewColorSpace' => 50970,
-    'IFD1:PreviewDateTime' => 50971,
-    'IFD1:PreviewImageLength' => 279,
-    'IFD1:PreviewImageStart' => 273,
-    'IFD1:PreviewSettingsDigest' => 50969,
-    'IFD1:PreviewSettingsName' => 50968,
-    'IFD1:PrimaryChromaticities' => 319,
-    'IFD1:ProcessingSoftware' => 11,
-    'IFD1:ProfileCalibrationSig' => 50932,
-    'IFD1:ProfileCopyright' => 50942,
-    'IFD1:ProfileEmbedPolicy' => 50941,
-    'IFD1:ProfileHueSatMapData1' => 50938,
-    'IFD1:ProfileHueSatMapData2' => 50939,
-    'IFD1:ProfileHueSatMapDims' => 50937,
-    'IFD1:ProfileHueSatMapEncoding' => 51107,
-    'IFD1:ProfileLookTableData' => 50982,
-    'IFD1:ProfileLookTableDims' => 50981,
-    'IFD1:ProfileLookTableEncoding' => 51108,
-    'IFD1:ProfileName' => 50936,
-    'IFD1:ProfileToneCurve' => 50940,
-    'IFD1:Rating' => 18246,
-    'IFD1:RatingPercent' => 18249,
-    'IFD1:RawDataUniqueID' => 50781,
-    'IFD1:RawImageDigest' => 50972,
-    'IFD1:RawToPreviewGain' => 51112,
-    'IFD1:ReductionMatrix1' => 50725,
-    'IFD1:ReductionMatrix2' => 50726,
-    'IFD1:ReelName' => 51081,
-    'IFD1:ReferenceBlackWhite' => 532,
-    'IFD1:ResolutionUnit' => 296,
-    'IFD1:RowsPerStrip' => 278,
-    'IFD1:SEMInfo' => 34118,
-    'IFD1:SRawType' => 50885,
-    'IFD1:SamplesPerPixel' => 277,
-    'IFD1:ShadowScale' => 50739,
-    'IFD1:Software' => 305,
-    'IFD1:SubfileType' => 254,
-    'IFD1:TStop' => 51058,
-    'IFD1:TargetPrinter' => 337,
-    'IFD1:Thresholding' => 263,
-    'IFD1:ThumbnailLength' => 514,
-    'IFD1:ThumbnailOffset' => 513,
-    'IFD1:TileLength' => 323,
-    'IFD1:TileWidth' => 322,
-    'IFD1:TimeCodes' => 51043,
-    'IFD1:TransferFunction' => 301,
-    'IFD1:UniqueCameraModel' => 50708,
-    'IFD1:WhitePoint' => 318,
-    'IFD1:XPAuthor' => 40093,
-    'IFD1:XPComment' => 40092,
-    'IFD1:XPKeywords' => 40094,
-    'IFD1:XPSubject' => 40095,
-    'IFD1:XPTitle' => 40091,
-    'IFD1:XPosition' => 286,
-    'IFD1:XResolution' => 282,
-    'IFD1:YCbCrCoefficients' => 529,
-    'IFD1:YCbCrPositioning' => 531,
-    'IFD1:YCbCrSubSampling' => 530,
-    'IFD1:YPosition' => 287,
-    'IFD1:YResolution' => 283,
+    'IFD1:A100DataOffset' =>
+    array (
+      0 => 330,
+    ),
+    'IFD1:AnalogBalance' =>
+    array (
+      0 => 50727,
+    ),
+    'IFD1:ApplicationNotes' =>
+    array (
+      0 => 700,
+    ),
+    'IFD1:Artist' =>
+    array (
+      0 => 315,
+    ),
+    'IFD1:AsShotICCProfile' =>
+    array (
+      0 => 50831,
+    ),
+    'IFD1:AsShotNeutral' =>
+    array (
+      0 => 50728,
+    ),
+    'IFD1:AsShotPreProfileMatrix' =>
+    array (
+      0 => 50832,
+    ),
+    'IFD1:AsShotProfileName' =>
+    array (
+      0 => 50934,
+    ),
+    'IFD1:AsShotWhiteXY' =>
+    array (
+      0 => 50729,
+    ),
+    'IFD1:BaselineExposure' =>
+    array (
+      0 => 50730,
+    ),
+    'IFD1:BaselineExposureOffset' =>
+    array (
+      0 => 51109,
+    ),
+    'IFD1:BaselineNoise' =>
+    array (
+      0 => 50731,
+    ),
+    'IFD1:BaselineSharpness' =>
+    array (
+      0 => 50732,
+    ),
+    'IFD1:BitsPerSample' =>
+    array (
+      0 => 258,
+    ),
+    'IFD1:CalibrationIlluminant1' =>
+    array (
+      0 => 50778,
+    ),
+    'IFD1:CalibrationIlluminant2' =>
+    array (
+      0 => 50779,
+    ),
+    'IFD1:CameraCalibration1' =>
+    array (
+      0 => 50723,
+    ),
+    'IFD1:CameraCalibration2' =>
+    array (
+      0 => 50724,
+    ),
+    'IFD1:CameraCalibrationSig' =>
+    array (
+      0 => 50931,
+    ),
+    'IFD1:CameraLabel' =>
+    array (
+      0 => 51105,
+    ),
+    'IFD1:CameraSerialNumber' =>
+    array (
+      0 => 50735,
+    ),
+    'IFD1:CellLength' =>
+    array (
+      0 => 265,
+    ),
+    'IFD1:CellWidth' =>
+    array (
+      0 => 264,
+    ),
+    'IFD1:ColorMatrix1' =>
+    array (
+      0 => 50721,
+    ),
+    'IFD1:ColorMatrix2' =>
+    array (
+      0 => 50722,
+    ),
+    'IFD1:ColorimetricReference' =>
+    array (
+      0 => 50879,
+    ),
+    'IFD1:Compression' =>
+    array (
+      0 => 259,
+    ),
+    'IFD1:Copyright' =>
+    array (
+      0 => 33432,
+    ),
+    'IFD1:CurrentICCProfile' =>
+    array (
+      0 => 50833,
+    ),
+    'IFD1:CurrentPreProfileMatrix' =>
+    array (
+      0 => 50834,
+    ),
+    'IFD1:DNGAdobeData' =>
+    array (
+      0 => 50740,
+    ),
+    'IFD1:DNGBackwardVersion' =>
+    array (
+      0 => 50707,
+    ),
+    'IFD1:DNGLensInfo' =>
+    array (
+      0 => 50736,
+    ),
+    'IFD1:DNGPrivateData' =>
+    array (
+      0 => 50740,
+    ),
+    'IFD1:DNGVersion' =>
+    array (
+      0 => 50706,
+    ),
+    'IFD1:DefaultBlackRender' =>
+    array (
+      0 => 51110,
+    ),
+    'IFD1:DocumentName' =>
+    array (
+      0 => 269,
+    ),
+    'IFD1:FillOrder' =>
+    array (
+      0 => 266,
+    ),
+    'IFD1:ForwardMatrix1' =>
+    array (
+      0 => 50964,
+    ),
+    'IFD1:ForwardMatrix2' =>
+    array (
+      0 => 50965,
+    ),
+    'IFD1:FrameRate' =>
+    array (
+      0 => 51044,
+    ),
+    'IFD1:GeoTiffAsciiParams' =>
+    array (
+      0 => 34737,
+    ),
+    'IFD1:GeoTiffDirectory' =>
+    array (
+      0 => 34735,
+    ),
+    'IFD1:GeoTiffDoubleParams' =>
+    array (
+      0 => 34736,
+    ),
+    'IFD1:GrayResponseUnit' =>
+    array (
+      0 => 290,
+    ),
+    'IFD1:HalftoneHints' =>
+    array (
+      0 => 321,
+    ),
+    'IFD1:HostComputer' =>
+    array (
+      0 => 316,
+    ),
+    'IFD1:IPTC-NAA' =>
+    array (
+      0 => 33723,
+    ),
+    'IFD1:ImageDescription' =>
+    array (
+      0 => 270,
+    ),
+    'IFD1:ImageHeight' =>
+    array (
+      0 => 257,
+    ),
+    'IFD1:ImageSourceData' =>
+    array (
+      0 => 37724,
+    ),
+    'IFD1:ImageWidth' =>
+    array (
+      0 => 256,
+    ),
+    'IFD1:InkSet' =>
+    array (
+      0 => 332,
+    ),
+    'IFD1:LinearResponseLimit' =>
+    array (
+      0 => 50734,
+    ),
+    'IFD1:LocalizedCameraModel' =>
+    array (
+      0 => 50709,
+    ),
+    'IFD1:Make' =>
+    array (
+      0 => 271,
+    ),
+    'IFD1:MakerNoteSafety' =>
+    array (
+      0 => 50741,
+    ),
+    'IFD1:MaxSampleValue' =>
+    array (
+      0 => 281,
+    ),
+    'IFD1:MinSampleValue' =>
+    array (
+      0 => 280,
+    ),
+    'IFD1:Model' =>
+    array (
+      0 => 272,
+    ),
+    'IFD1:ModifyDate' =>
+    array (
+      0 => 306,
+    ),
+    'IFD1:NewRawImageDigest' =>
+    array (
+      0 => 51111,
+    ),
+    'IFD1:OldSubfileType' =>
+    array (
+      0 => 255,
+    ),
+    'IFD1:Orientation' =>
+    array (
+      0 => 274,
+    ),
+    'IFD1:OriginalBestQualitySize' =>
+    array (
+      0 => 51090,
+    ),
+    'IFD1:OriginalDefaultCropSize' =>
+    array (
+      0 => 51091,
+    ),
+    'IFD1:OriginalDefaultFinalSize' =>
+    array (
+      0 => 51089,
+    ),
+    'IFD1:OriginalRawFileData' =>
+    array (
+      0 => 50828,
+    ),
+    'IFD1:OriginalRawFileDigest' =>
+    array (
+      0 => 50973,
+    ),
+    'IFD1:OriginalRawFileName' =>
+    array (
+      0 => 50827,
+    ),
+    'IFD1:PageName' =>
+    array (
+      0 => 285,
+    ),
+    'IFD1:PageNumber' =>
+    array (
+      0 => 297,
+    ),
+    'IFD1:PanasonicTitle' =>
+    array (
+      0 => 50898,
+    ),
+    'IFD1:PanasonicTitle2' =>
+    array (
+      0 => 50899,
+    ),
+    'IFD1:PhotometricInterpretation' =>
+    array (
+      0 => 262,
+    ),
+    'IFD1:PlanarConfiguration' =>
+    array (
+      0 => 284,
+    ),
+    'IFD1:Predictor' =>
+    array (
+      0 => 317,
+    ),
+    'IFD1:PreviewApplicationName' =>
+    array (
+      0 => 50966,
+    ),
+    'IFD1:PreviewApplicationVersion' =>
+    array (
+      0 => 50967,
+    ),
+    'IFD1:PreviewColorSpace' =>
+    array (
+      0 => 50970,
+    ),
+    'IFD1:PreviewDateTime' =>
+    array (
+      0 => 50971,
+    ),
+    'IFD1:PreviewImageLength' =>
+    array (
+      0 => 279,
+      1 => 514,
+    ),
+    'IFD1:PreviewImageStart' =>
+    array (
+      0 => 273,
+      1 => 513,
+    ),
+    'IFD1:PreviewSettingsDigest' =>
+    array (
+      0 => 50969,
+    ),
+    'IFD1:PreviewSettingsName' =>
+    array (
+      0 => 50968,
+    ),
+    'IFD1:PrimaryChromaticities' =>
+    array (
+      0 => 319,
+    ),
+    'IFD1:ProcessingSoftware' =>
+    array (
+      0 => 11,
+    ),
+    'IFD1:ProfileCalibrationSig' =>
+    array (
+      0 => 50932,
+    ),
+    'IFD1:ProfileCopyright' =>
+    array (
+      0 => 50942,
+    ),
+    'IFD1:ProfileEmbedPolicy' =>
+    array (
+      0 => 50941,
+    ),
+    'IFD1:ProfileHueSatMapData1' =>
+    array (
+      0 => 50938,
+    ),
+    'IFD1:ProfileHueSatMapData2' =>
+    array (
+      0 => 50939,
+    ),
+    'IFD1:ProfileHueSatMapDims' =>
+    array (
+      0 => 50937,
+    ),
+    'IFD1:ProfileHueSatMapEncoding' =>
+    array (
+      0 => 51107,
+    ),
+    'IFD1:ProfileLookTableData' =>
+    array (
+      0 => 50982,
+    ),
+    'IFD1:ProfileLookTableDims' =>
+    array (
+      0 => 50981,
+    ),
+    'IFD1:ProfileLookTableEncoding' =>
+    array (
+      0 => 51108,
+    ),
+    'IFD1:ProfileName' =>
+    array (
+      0 => 50936,
+    ),
+    'IFD1:ProfileToneCurve' =>
+    array (
+      0 => 50940,
+    ),
+    'IFD1:Rating' =>
+    array (
+      0 => 18246,
+    ),
+    'IFD1:RatingPercent' =>
+    array (
+      0 => 18249,
+    ),
+    'IFD1:RawDataUniqueID' =>
+    array (
+      0 => 50781,
+    ),
+    'IFD1:RawImageDigest' =>
+    array (
+      0 => 50972,
+    ),
+    'IFD1:RawToPreviewGain' =>
+    array (
+      0 => 51112,
+    ),
+    'IFD1:ReductionMatrix1' =>
+    array (
+      0 => 50725,
+    ),
+    'IFD1:ReductionMatrix2' =>
+    array (
+      0 => 50726,
+    ),
+    'IFD1:ReelName' =>
+    array (
+      0 => 51081,
+    ),
+    'IFD1:ReferenceBlackWhite' =>
+    array (
+      0 => 532,
+    ),
+    'IFD1:ResolutionUnit' =>
+    array (
+      0 => 296,
+    ),
+    'IFD1:RowsPerStrip' =>
+    array (
+      0 => 278,
+    ),
+    'IFD1:SEMInfo' =>
+    array (
+      0 => 34118,
+    ),
+    'IFD1:SRawType' =>
+    array (
+      0 => 50885,
+    ),
+    'IFD1:SamplesPerPixel' =>
+    array (
+      0 => 277,
+    ),
+    'IFD1:ShadowScale' =>
+    array (
+      0 => 50739,
+    ),
+    'IFD1:Software' =>
+    array (
+      0 => 305,
+    ),
+    'IFD1:SubfileType' =>
+    array (
+      0 => 254,
+    ),
+    'IFD1:TStop' =>
+    array (
+      0 => 51058,
+    ),
+    'IFD1:TargetPrinter' =>
+    array (
+      0 => 337,
+    ),
+    'IFD1:Thresholding' =>
+    array (
+      0 => 263,
+    ),
+    'IFD1:ThumbnailLength' =>
+    array (
+      0 => 514,
+    ),
+    'IFD1:ThumbnailOffset' =>
+    array (
+      0 => 513,
+    ),
+    'IFD1:TileLength' =>
+    array (
+      0 => 323,
+    ),
+    'IFD1:TileWidth' =>
+    array (
+      0 => 322,
+    ),
+    'IFD1:TimeCodes' =>
+    array (
+      0 => 51043,
+    ),
+    'IFD1:TransferFunction' =>
+    array (
+      0 => 301,
+    ),
+    'IFD1:UniqueCameraModel' =>
+    array (
+      0 => 50708,
+    ),
+    'IFD1:WhitePoint' =>
+    array (
+      0 => 318,
+    ),
+    'IFD1:XPAuthor' =>
+    array (
+      0 => 40093,
+    ),
+    'IFD1:XPComment' =>
+    array (
+      0 => 40092,
+    ),
+    'IFD1:XPKeywords' =>
+    array (
+      0 => 40094,
+    ),
+    'IFD1:XPSubject' =>
+    array (
+      0 => 40095,
+    ),
+    'IFD1:XPTitle' =>
+    array (
+      0 => 40091,
+    ),
+    'IFD1:XPosition' =>
+    array (
+      0 => 286,
+    ),
+    'IFD1:XResolution' =>
+    array (
+      0 => 282,
+    ),
+    'IFD1:YCbCrCoefficients' =>
+    array (
+      0 => 529,
+    ),
+    'IFD1:YCbCrPositioning' =>
+    array (
+      0 => 531,
+    ),
+    'IFD1:YCbCrSubSampling' =>
+    array (
+      0 => 530,
+    ),
+    'IFD1:YPosition' =>
+    array (
+      0 => 287,
+    ),
+    'IFD1:YResolution' =>
+    array (
+      0 => 283,
+    ),
   ),
   'items' =>
   array (
@@ -1129,29 +2152,87 @@ class Ifd1 extends Collection {
     ),
     513 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ThumbnailOffset',
-      'title' => 'Thumbnail Offset',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailOffset',
+        'title' => 'Thumbnail Offset',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormat',
+        'exiftoolDOMNode' => 'IFD1:ThumbnailOffset',
       ),
-      'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormat',
-      'exiftoolDOMNode' => 'IFD1:ThumbnailOffset',
+      1 =>
+      array (
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailOffset',
+        'title' => 'Thumbnail Offset',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormat',
+        'exiftoolDOMNode' => 'IFD1:ThumbnailOffset',
+      ),
+      2 =>
+      array (
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'PreviewImageStart',
+        'title' => 'Preview Image Start',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormat',
+        'exiftoolDOMNode' => 'IFD1:PreviewImageStart',
+      ),
     ),
     514 =>
     array (
-      'components' => 1,
-      'collection' => 'Tag',
-      'name' => 'ThumbnailLength',
-      'title' => 'Thumbnail Length',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailLength',
+        'title' => 'Thumbnail Length',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormatLength',
+        'exiftoolDOMNode' => 'IFD1:ThumbnailLength',
       ),
-      'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormatLength',
-      'exiftoolDOMNode' => 'IFD1:ThumbnailLength',
+      1 =>
+      array (
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'ThumbnailLength',
+        'title' => 'Thumbnail Length',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormatLength',
+        'exiftoolDOMNode' => 'IFD1:ThumbnailLength',
+      ),
+      2 =>
+      array (
+        'components' => 1,
+        'collection' => 'Tag',
+        'name' => 'PreviewImageLength',
+        'title' => 'Preview Image Length',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'phpExifTag' => 'THUMBNAIL::JPEGInterchangeFormatLength',
+        'exiftoolDOMNode' => 'IFD1:PreviewImageLength',
+      ),
     ),
     529 =>
     array (
@@ -1659,14 +2740,28 @@ class Ifd1 extends Collection {
     ),
     50740 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'DNGAdobeData',
-      'title' => 'DNG Adobe Data',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'DNGAdobeData',
+        'title' => 'DNG Adobe Data',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'exiftoolDOMNode' => 'IFD1:DNGAdobeData',
       ),
-      'exiftoolDOMNode' => 'IFD1:DNGAdobeData',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'DNGPrivateData',
+        'title' => 'DNG Private Data',
+        'format' =>
+        array (
+          0 => 1,
+        ),
+        'exiftoolDOMNode' => 'IFD1:DNGPrivateData',
+      ),
     ),
     50741 =>
     array (

@@ -16,8 +16,14 @@ class MakerNotes extends Collection {
   'class' => '????',
   'itemsByName' =>
   array (
-    'Apple' => 'Apple',
-    'Canon' => 'Canon',
+    'Apple' =>
+    array (
+      0 => 'Apple',
+    ),
+    'Canon' =>
+    array (
+      0 => 'Canon',
+    ),
   ),
   'items' =>
   array (

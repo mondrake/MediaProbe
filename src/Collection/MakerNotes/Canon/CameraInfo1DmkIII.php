@@ -24,51 +24,177 @@ class CameraInfo1DmkIII extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraOrientation' => 48,
-    'CameraTemperature' => 24,
-    'ColorTemperature' => 98,
-    'DirectoryIndex' => 382,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 370,
-    'FirmwareVersion' => 310,
-    'FocalLength' => 29,
-    'FocusDistanceLower' => 69,
-    'FocusDistanceUpper' => 67,
-    'ISO' => 6,
-    'LensType' => 273,
-    'MacroMagnification' => 27,
-    'MaxFocalLength' => 277,
-    'MinFocalLength' => 275,
-    'PictureStyle' => 134,
-    'ShutterCount' => 374,
-    'TimeStamp' => 1118,
-    'TimeStamp1' => 1114,
-    'WhiteBalance' => 94,
+    'CameraOrientation' =>
+    array (
+      0 => 48,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 24,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 98,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 382,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 370,
+    ),
+    'FirmwareVersion' =>
+    array (
+      0 => 310,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 29,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 69,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 67,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 273,
+    ),
+    'MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 277,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 275,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 134,
+    ),
+    'ShutterCount' =>
+    array (
+      0 => 374,
+    ),
+    'TimeStamp' =>
+    array (
+      0 => 1118,
+    ),
+    'TimeStamp1' =>
+    array (
+      0 => 1114,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 94,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraOrientation' => 48,
-    'Canon:CameraTemperature' => 24,
-    'Canon:ColorTemperature' => 98,
-    'Canon:DirectoryIndex' => 382,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 370,
-    'Canon:FirmwareVersion' => 310,
-    'Canon:FocalLength' => 29,
-    'Canon:FocusDistanceLower' => 69,
-    'Canon:FocusDistanceUpper' => 67,
-    'Canon:ISO' => 6,
-    'Canon:LensType' => 273,
-    'Canon:MacroMagnification' => 27,
-    'Canon:MaxFocalLength' => 277,
-    'Canon:MinFocalLength' => 275,
-    'Canon:PictureStyle' => 134,
-    'Canon:ShutterCount' => 374,
-    'Canon:TimeStamp' => 1118,
-    'Canon:TimeStamp1' => 1114,
-    'Canon:WhiteBalance' => 94,
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 48,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 98,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 382,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 370,
+    ),
+    'Canon:FirmwareVersion' =>
+    array (
+      0 => 310,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 29,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 69,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 67,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 273,
+    ),
+    'Canon:MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 277,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 275,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 134,
+    ),
+    'Canon:ShutterCount' =>
+    array (
+      0 => 374,
+    ),
+    'Canon:TimeStamp' =>
+    array (
+      0 => 1118,
+    ),
+    'Canon:TimeStamp1' =>
+    array (
+      0 => 1114,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 94,
+    ),
   ),
   'items' =>
   array (

@@ -24,11 +24,17 @@ class Flags extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ModifiedParamFlag' => 1,
+    'ModifiedParamFlag' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ModifiedParamFlag' => 1,
+    'Canon:ModifiedParamFlag' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

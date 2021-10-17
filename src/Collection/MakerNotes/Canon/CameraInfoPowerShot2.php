@@ -24,19 +24,57 @@ class CameraInfoPowerShot2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CameraTemperature' => 261,
-    'ExposureTime' => 7,
-    'FNumber' => 6,
-    'ISO' => 1,
-    'Rotation' => 24,
+    'CameraTemperature' =>
+    array (
+      0 => 153,
+      1 => 159,
+      2 => 164,
+      3 => 168,
+      4 => 261,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 7,
+    ),
+    'FNumber' =>
+    array (
+      0 => 6,
+    ),
+    'ISO' =>
+    array (
+      0 => 1,
+    ),
+    'Rotation' =>
+    array (
+      0 => 24,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CameraTemperature' => 261,
-    'Canon:ExposureTime' => 7,
-    'Canon:FNumber' => 6,
-    'Canon:ISO' => 1,
-    'Canon:Rotation' => 24,
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 153,
+      1 => 159,
+      2 => 164,
+      3 => 168,
+      4 => 261,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:Rotation' =>
+    array (
+      0 => 24,
+    ),
   ),
   'items' =>
   array (

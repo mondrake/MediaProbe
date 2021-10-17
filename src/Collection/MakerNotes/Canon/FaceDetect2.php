@@ -24,13 +24,25 @@ class FaceDetect2 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'FaceWidth' => 1,
-    'FacesDetected' => 2,
+    'FaceWidth' =>
+    array (
+      0 => 1,
+    ),
+    'FacesDetected' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:FaceWidth' => 1,
-    'Canon:FacesDetected' => 2,
+    'Canon:FaceWidth' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:FacesDetected' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

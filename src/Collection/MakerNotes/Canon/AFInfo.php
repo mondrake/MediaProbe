@@ -24,33 +24,115 @@ class AFInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFAreaHeight' => 7,
-    'AFAreaWidth' => 6,
-    'AFAreaXPositions' => 8,
-    'AFAreaYPositions' => 9,
-    'AFImageHeight' => 5,
-    'AFImageWidth' => 4,
-    'AFPointsInFocus' => 10,
-    'CanonImageHeight' => 3,
-    'CanonImageWidth' => 2,
-    'NumAFPoints' => 0,
-    'PrimaryAFPoint' => 12,
-    'ValidAFPoints' => 1,
+    'AFAreaHeight' =>
+    array (
+      0 => 7,
+    ),
+    'AFAreaWidth' =>
+    array (
+      0 => 6,
+    ),
+    'AFAreaXPositions' =>
+    array (
+      0 => 8,
+    ),
+    'AFAreaYPositions' =>
+    array (
+      0 => 9,
+    ),
+    'AFImageHeight' =>
+    array (
+      0 => 5,
+    ),
+    'AFImageWidth' =>
+    array (
+      0 => 4,
+    ),
+    'AFPointsInFocus' =>
+    array (
+      0 => 10,
+    ),
+    'CanonImageHeight' =>
+    array (
+      0 => 3,
+    ),
+    'CanonImageWidth' =>
+    array (
+      0 => 2,
+    ),
+    'Canon_AFInfo_0x000b' =>
+    array (
+      0 => 11,
+    ),
+    'NumAFPoints' =>
+    array (
+      0 => 0,
+    ),
+    'PrimaryAFPoint' =>
+    array (
+      0 => 11,
+      1 => 12,
+    ),
+    'ValidAFPoints' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFAreaHeight' => 7,
-    'Canon:AFAreaWidth' => 6,
-    'Canon:AFAreaXPositions' => 8,
-    'Canon:AFAreaYPositions' => 9,
-    'Canon:AFImageHeight' => 5,
-    'Canon:AFImageWidth' => 4,
-    'Canon:AFPointsInFocus' => 10,
-    'Canon:CanonImageHeight' => 3,
-    'Canon:CanonImageWidth' => 2,
-    'Canon:NumAFPoints' => 0,
-    'Canon:PrimaryAFPoint' => 12,
-    'Canon:ValidAFPoints' => 1,
+    'Canon:AFAreaHeight' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:AFAreaWidth' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:AFAreaXPositions' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:AFAreaYPositions' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:AFImageHeight' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:AFImageWidth' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:AFPointsInFocus' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:CanonImageHeight' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:CanonImageWidth' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:Canon_AFInfo_0x000b' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:NumAFPoints' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:PrimaryAFPoint' =>
+    array (
+      0 => 11,
+      1 => 12,
+    ),
+    'Canon:ValidAFPoints' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (
@@ -178,14 +260,29 @@ class AFInfo extends Collection {
     ),
     11 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'PrimaryAFPoint',
-      'title' => 'Primary AF Point',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'PrimaryAFPoint',
+        'title' => 'Primary AF Point',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:PrimaryAFPoint',
       ),
-      'exiftoolDOMNode' => 'Canon:PrimaryAFPoint',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'Canon_AFInfo_0x000b',
+        'title' => 'Canon AF Info 0x000b',
+        'components' => 8,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:Canon_AFInfo_0x000b',
+      ),
     ),
     12 =>
     array (

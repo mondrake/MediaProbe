@@ -24,125 +24,475 @@ class CameraInfo5D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFPointsInFocus5D' => 56,
-    'CameraOrientation' => 39,
-    'CameraTemperature' => 23,
-    'ColorTemperature' => 88,
-    'ColorToneFaithful' => 263,
-    'ColorToneLandscape' => 261,
-    'ColorToneNeutral' => 262,
-    'ColorTonePortrait' => 260,
-    'ColorToneStandard' => 259,
-    'ColorToneUserDef1' => 265,
-    'ColorToneUserDef2' => 266,
-    'ColorToneUserDef3' => 267,
-    'ContrastFaithful' => 236,
-    'ContrastLandscape' => 234,
-    'ContrastMonochrome' => 237,
-    'ContrastNeutral' => 235,
-    'ContrastPortrait' => 233,
-    'ContrastStandard' => 232,
-    'ContrastUserDef1' => 238,
-    'ContrastUserDef2' => 239,
-    'ContrastUserDef3' => 240,
-    'DirectoryIndex' => 204,
-    'ExposureTime' => 4,
-    'FNumber' => 3,
-    'FileIndex' => 208,
-    'FilterEffectMonochrome' => 255,
-    'FirmwareRevision' => 164,
-    'FocalLength' => 40,
-    'ISO' => 6,
-    'LensType' => 151,
-    'MacroMagnification' => 27,
-    'MaxFocalLength' => 149,
-    'MinFocalLength' => 147,
-    'PictureStyle' => 108,
-    'SaturationFaithful' => 254,
-    'SaturationLandscape' => 252,
-    'SaturationNeutral' => 253,
-    'SaturationPortrait' => 251,
-    'SaturationStandard' => 250,
-    'SaturationUserDef1' => 256,
-    'SaturationUserDef2' => 257,
-    'SaturationUserDef3' => 258,
-    'SharpnessFaithful' => 245,
-    'SharpnessLandscape' => 243,
-    'SharpnessMonochrome' => 246,
-    'SharpnessNeutral' => 244,
-    'SharpnessPortrait' => 242,
-    'SharpnessStandard' => 241,
-    'SharpnessUserDef1' => 247,
-    'SharpnessUserDef2' => 248,
-    'SharpnessUserDef3' => 249,
-    'ShortOwnerName' => 172,
-    'TimeStamp' => 284,
-    'ToningEffectMonochrome' => 264,
-    'UserDef1PictureStyle' => 268,
-    'UserDef2PictureStyle' => 270,
-    'UserDef3PictureStyle' => 272,
-    'WhiteBalance' => 84,
+    'AFPointsInFocus5D' =>
+    array (
+      0 => 56,
+    ),
+    'CameraOrientation' =>
+    array (
+      0 => 39,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 23,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 88,
+    ),
+    'ColorToneFaithful' =>
+    array (
+      0 => 263,
+    ),
+    'ColorToneLandscape' =>
+    array (
+      0 => 261,
+    ),
+    'ColorToneNeutral' =>
+    array (
+      0 => 262,
+    ),
+    'ColorTonePortrait' =>
+    array (
+      0 => 260,
+    ),
+    'ColorToneStandard' =>
+    array (
+      0 => 259,
+    ),
+    'ColorToneUserDef1' =>
+    array (
+      0 => 265,
+    ),
+    'ColorToneUserDef2' =>
+    array (
+      0 => 266,
+    ),
+    'ColorToneUserDef3' =>
+    array (
+      0 => 267,
+    ),
+    'ContrastFaithful' =>
+    array (
+      0 => 236,
+    ),
+    'ContrastLandscape' =>
+    array (
+      0 => 234,
+    ),
+    'ContrastMonochrome' =>
+    array (
+      0 => 237,
+    ),
+    'ContrastNeutral' =>
+    array (
+      0 => 235,
+    ),
+    'ContrastPortrait' =>
+    array (
+      0 => 233,
+    ),
+    'ContrastStandard' =>
+    array (
+      0 => 232,
+    ),
+    'ContrastUserDef1' =>
+    array (
+      0 => 238,
+    ),
+    'ContrastUserDef2' =>
+    array (
+      0 => 239,
+    ),
+    'ContrastUserDef3' =>
+    array (
+      0 => 240,
+    ),
+    'DirectoryIndex' =>
+    array (
+      0 => 204,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'FileIndex' =>
+    array (
+      0 => 208,
+    ),
+    'FilterEffectMonochrome' =>
+    array (
+      0 => 255,
+    ),
+    'FirmwareRevision' =>
+    array (
+      0 => 164,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 40,
+    ),
+    'ISO' =>
+    array (
+      0 => 6,
+    ),
+    'LensType' =>
+    array (
+      0 => 12,
+      1 => 151,
+    ),
+    'MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 149,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 147,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 108,
+    ),
+    'SaturationFaithful' =>
+    array (
+      0 => 254,
+    ),
+    'SaturationLandscape' =>
+    array (
+      0 => 252,
+    ),
+    'SaturationNeutral' =>
+    array (
+      0 => 253,
+    ),
+    'SaturationPortrait' =>
+    array (
+      0 => 251,
+    ),
+    'SaturationStandard' =>
+    array (
+      0 => 250,
+    ),
+    'SaturationUserDef1' =>
+    array (
+      0 => 256,
+    ),
+    'SaturationUserDef2' =>
+    array (
+      0 => 257,
+    ),
+    'SaturationUserDef3' =>
+    array (
+      0 => 258,
+    ),
+    'SharpnessFaithful' =>
+    array (
+      0 => 245,
+    ),
+    'SharpnessLandscape' =>
+    array (
+      0 => 243,
+    ),
+    'SharpnessMonochrome' =>
+    array (
+      0 => 246,
+    ),
+    'SharpnessNeutral' =>
+    array (
+      0 => 244,
+    ),
+    'SharpnessPortrait' =>
+    array (
+      0 => 242,
+    ),
+    'SharpnessStandard' =>
+    array (
+      0 => 241,
+    ),
+    'SharpnessUserDef1' =>
+    array (
+      0 => 247,
+    ),
+    'SharpnessUserDef2' =>
+    array (
+      0 => 248,
+    ),
+    'SharpnessUserDef3' =>
+    array (
+      0 => 249,
+    ),
+    'ShortOwnerName' =>
+    array (
+      0 => 172,
+    ),
+    'TimeStamp' =>
+    array (
+      0 => 284,
+    ),
+    'ToningEffectMonochrome' =>
+    array (
+      0 => 264,
+    ),
+    'UserDef1PictureStyle' =>
+    array (
+      0 => 268,
+    ),
+    'UserDef2PictureStyle' =>
+    array (
+      0 => 270,
+    ),
+    'UserDef3PictureStyle' =>
+    array (
+      0 => 272,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 84,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFPointsInFocus5D' => 56,
-    'Canon:CameraOrientation' => 39,
-    'Canon:CameraTemperature' => 23,
-    'Canon:ColorTemperature' => 88,
-    'Canon:ColorToneFaithful' => 263,
-    'Canon:ColorToneLandscape' => 261,
-    'Canon:ColorToneNeutral' => 262,
-    'Canon:ColorTonePortrait' => 260,
-    'Canon:ColorToneStandard' => 259,
-    'Canon:ColorToneUserDef1' => 265,
-    'Canon:ColorToneUserDef2' => 266,
-    'Canon:ColorToneUserDef3' => 267,
-    'Canon:ContrastFaithful' => 236,
-    'Canon:ContrastLandscape' => 234,
-    'Canon:ContrastMonochrome' => 237,
-    'Canon:ContrastNeutral' => 235,
-    'Canon:ContrastPortrait' => 233,
-    'Canon:ContrastStandard' => 232,
-    'Canon:ContrastUserDef1' => 238,
-    'Canon:ContrastUserDef2' => 239,
-    'Canon:ContrastUserDef3' => 240,
-    'Canon:DirectoryIndex' => 204,
-    'Canon:ExposureTime' => 4,
-    'Canon:FNumber' => 3,
-    'Canon:FileIndex' => 208,
-    'Canon:FilterEffectMonochrome' => 255,
-    'Canon:FirmwareRevision' => 164,
-    'Canon:FocalLength' => 40,
-    'Canon:ISO' => 6,
-    'Canon:LensType' => 151,
-    'Canon:MacroMagnification' => 27,
-    'Canon:MaxFocalLength' => 149,
-    'Canon:MinFocalLength' => 147,
-    'Canon:PictureStyle' => 108,
-    'Canon:SaturationFaithful' => 254,
-    'Canon:SaturationLandscape' => 252,
-    'Canon:SaturationNeutral' => 253,
-    'Canon:SaturationPortrait' => 251,
-    'Canon:SaturationStandard' => 250,
-    'Canon:SaturationUserDef1' => 256,
-    'Canon:SaturationUserDef2' => 257,
-    'Canon:SaturationUserDef3' => 258,
-    'Canon:SharpnessFaithful' => 245,
-    'Canon:SharpnessLandscape' => 243,
-    'Canon:SharpnessMonochrome' => 246,
-    'Canon:SharpnessNeutral' => 244,
-    'Canon:SharpnessPortrait' => 242,
-    'Canon:SharpnessStandard' => 241,
-    'Canon:SharpnessUserDef1' => 247,
-    'Canon:SharpnessUserDef2' => 248,
-    'Canon:SharpnessUserDef3' => 249,
-    'Canon:ShortOwnerName' => 172,
-    'Canon:TimeStamp' => 284,
-    'Canon:ToningEffectMonochrome' => 264,
-    'Canon:UserDef1PictureStyle' => 268,
-    'Canon:UserDef2PictureStyle' => 270,
-    'Canon:UserDef3PictureStyle' => 272,
-    'Canon:WhiteBalance' => 84,
+    'Canon:AFPointsInFocus5D' =>
+    array (
+      0 => 56,
+    ),
+    'Canon:CameraOrientation' =>
+    array (
+      0 => 39,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 23,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 88,
+    ),
+    'Canon:ColorToneFaithful' =>
+    array (
+      0 => 263,
+    ),
+    'Canon:ColorToneLandscape' =>
+    array (
+      0 => 261,
+    ),
+    'Canon:ColorToneNeutral' =>
+    array (
+      0 => 262,
+    ),
+    'Canon:ColorTonePortrait' =>
+    array (
+      0 => 260,
+    ),
+    'Canon:ColorToneStandard' =>
+    array (
+      0 => 259,
+    ),
+    'Canon:ColorToneUserDef1' =>
+    array (
+      0 => 265,
+    ),
+    'Canon:ColorToneUserDef2' =>
+    array (
+      0 => 266,
+    ),
+    'Canon:ColorToneUserDef3' =>
+    array (
+      0 => 267,
+    ),
+    'Canon:ContrastFaithful' =>
+    array (
+      0 => 236,
+    ),
+    'Canon:ContrastLandscape' =>
+    array (
+      0 => 234,
+    ),
+    'Canon:ContrastMonochrome' =>
+    array (
+      0 => 237,
+    ),
+    'Canon:ContrastNeutral' =>
+    array (
+      0 => 235,
+    ),
+    'Canon:ContrastPortrait' =>
+    array (
+      0 => 233,
+    ),
+    'Canon:ContrastStandard' =>
+    array (
+      0 => 232,
+    ),
+    'Canon:ContrastUserDef1' =>
+    array (
+      0 => 238,
+    ),
+    'Canon:ContrastUserDef2' =>
+    array (
+      0 => 239,
+    ),
+    'Canon:ContrastUserDef3' =>
+    array (
+      0 => 240,
+    ),
+    'Canon:DirectoryIndex' =>
+    array (
+      0 => 204,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:FileIndex' =>
+    array (
+      0 => 208,
+    ),
+    'Canon:FilterEffectMonochrome' =>
+    array (
+      0 => 255,
+    ),
+    'Canon:FirmwareRevision' =>
+    array (
+      0 => 164,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 12,
+      1 => 151,
+    ),
+    'Canon:MacroMagnification' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 149,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 147,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:SaturationFaithful' =>
+    array (
+      0 => 254,
+    ),
+    'Canon:SaturationLandscape' =>
+    array (
+      0 => 252,
+    ),
+    'Canon:SaturationNeutral' =>
+    array (
+      0 => 253,
+    ),
+    'Canon:SaturationPortrait' =>
+    array (
+      0 => 251,
+    ),
+    'Canon:SaturationStandard' =>
+    array (
+      0 => 250,
+    ),
+    'Canon:SaturationUserDef1' =>
+    array (
+      0 => 256,
+    ),
+    'Canon:SaturationUserDef2' =>
+    array (
+      0 => 257,
+    ),
+    'Canon:SaturationUserDef3' =>
+    array (
+      0 => 258,
+    ),
+    'Canon:SharpnessFaithful' =>
+    array (
+      0 => 245,
+    ),
+    'Canon:SharpnessLandscape' =>
+    array (
+      0 => 243,
+    ),
+    'Canon:SharpnessMonochrome' =>
+    array (
+      0 => 246,
+    ),
+    'Canon:SharpnessNeutral' =>
+    array (
+      0 => 244,
+    ),
+    'Canon:SharpnessPortrait' =>
+    array (
+      0 => 242,
+    ),
+    'Canon:SharpnessStandard' =>
+    array (
+      0 => 241,
+    ),
+    'Canon:SharpnessUserDef1' =>
+    array (
+      0 => 247,
+    ),
+    'Canon:SharpnessUserDef2' =>
+    array (
+      0 => 248,
+    ),
+    'Canon:SharpnessUserDef3' =>
+    array (
+      0 => 249,
+    ),
+    'Canon:ShortOwnerName' =>
+    array (
+      0 => 172,
+    ),
+    'Canon:TimeStamp' =>
+    array (
+      0 => 284,
+    ),
+    'Canon:ToningEffectMonochrome' =>
+    array (
+      0 => 264,
+    ),
+    'Canon:UserDef1PictureStyle' =>
+    array (
+      0 => 268,
+    ),
+    'Canon:UserDef2PictureStyle' =>
+    array (
+      0 => 270,
+    ),
+    'Canon:UserDef3PictureStyle' =>
+    array (
+      0 => 272,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 84,
+    ),
   ),
   'items' =>
   array (

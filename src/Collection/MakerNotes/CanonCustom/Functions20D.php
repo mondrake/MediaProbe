@@ -24,45 +24,153 @@ class Functions20D extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBSequenceAutoCancel' => 8,
-    'AFAssistBeam' => 4,
-    'AFPointSelectionMethod' => 12,
-    'AddOriginalDecisionData' => 17,
-    'ETTLII' => 13,
-    'ExposureLevelIncrements' => 5,
-    'FlashFiring' => 6,
-    'FlashSyncSpeedAv' => 2,
-    'ISOExpansion' => 7,
-    'LensAFStopButton' => 16,
-    'LongExposureNoiseReduction' => 1,
-    'MenuButtonDisplayPosition' => 10,
-    'MirrorLockup' => 11,
-    'SafetyShiftInAvOrTv' => 15,
-    'SetFunctionWhenShooting' => 0,
-    'Shutter-AELock' => 3,
-    'ShutterCurtainSync' => 14,
-    'SuperimposedDisplay' => 9,
+    'AEBSequenceAutoCancel' =>
+    array (
+      0 => 8,
+    ),
+    'AFAssistBeam' =>
+    array (
+      0 => 4,
+    ),
+    'AFPointSelectionMethod' =>
+    array (
+      0 => 12,
+    ),
+    'AddOriginalDecisionData' =>
+    array (
+      0 => 17,
+    ),
+    'ETTLII' =>
+    array (
+      0 => 13,
+    ),
+    'ExposureLevelIncrements' =>
+    array (
+      0 => 5,
+    ),
+    'FlashFiring' =>
+    array (
+      0 => 6,
+    ),
+    'FlashSyncSpeedAv' =>
+    array (
+      0 => 2,
+    ),
+    'ISOExpansion' =>
+    array (
+      0 => 7,
+    ),
+    'LensAFStopButton' =>
+    array (
+      0 => 16,
+    ),
+    'LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'MenuButtonDisplayPosition' =>
+    array (
+      0 => 10,
+    ),
+    'MirrorLockup' =>
+    array (
+      0 => 11,
+    ),
+    'SafetyShiftInAvOrTv' =>
+    array (
+      0 => 15,
+    ),
+    'SetFunctionWhenShooting' =>
+    array (
+      0 => 0,
+    ),
+    'Shutter-AELock' =>
+    array (
+      0 => 3,
+    ),
+    'ShutterCurtainSync' =>
+    array (
+      0 => 14,
+    ),
+    'SuperimposedDisplay' =>
+    array (
+      0 => 9,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonCustom:AEBSequenceAutoCancel' => 8,
-    'CanonCustom:AFAssistBeam' => 4,
-    'CanonCustom:AFPointSelectionMethod' => 12,
-    'CanonCustom:AddOriginalDecisionData' => 17,
-    'CanonCustom:ETTLII' => 13,
-    'CanonCustom:ExposureLevelIncrements' => 5,
-    'CanonCustom:FlashFiring' => 6,
-    'CanonCustom:FlashSyncSpeedAv' => 2,
-    'CanonCustom:ISOExpansion' => 7,
-    'CanonCustom:LensAFStopButton' => 16,
-    'CanonCustom:LongExposureNoiseReduction' => 1,
-    'CanonCustom:MenuButtonDisplayPosition' => 10,
-    'CanonCustom:MirrorLockup' => 11,
-    'CanonCustom:SafetyShiftInAvOrTv' => 15,
-    'CanonCustom:SetFunctionWhenShooting' => 0,
-    'CanonCustom:Shutter-AELock' => 3,
-    'CanonCustom:ShutterCurtainSync' => 14,
-    'CanonCustom:SuperimposedDisplay' => 9,
+    'CanonCustom:AEBSequenceAutoCancel' =>
+    array (
+      0 => 8,
+    ),
+    'CanonCustom:AFAssistBeam' =>
+    array (
+      0 => 4,
+    ),
+    'CanonCustom:AFPointSelectionMethod' =>
+    array (
+      0 => 12,
+    ),
+    'CanonCustom:AddOriginalDecisionData' =>
+    array (
+      0 => 17,
+    ),
+    'CanonCustom:ETTLII' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCustom:ExposureLevelIncrements' =>
+    array (
+      0 => 5,
+    ),
+    'CanonCustom:FlashFiring' =>
+    array (
+      0 => 6,
+    ),
+    'CanonCustom:FlashSyncSpeedAv' =>
+    array (
+      0 => 2,
+    ),
+    'CanonCustom:ISOExpansion' =>
+    array (
+      0 => 7,
+    ),
+    'CanonCustom:LensAFStopButton' =>
+    array (
+      0 => 16,
+    ),
+    'CanonCustom:LongExposureNoiseReduction' =>
+    array (
+      0 => 1,
+    ),
+    'CanonCustom:MenuButtonDisplayPosition' =>
+    array (
+      0 => 10,
+    ),
+    'CanonCustom:MirrorLockup' =>
+    array (
+      0 => 11,
+    ),
+    'CanonCustom:SafetyShiftInAvOrTv' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustom:SetFunctionWhenShooting' =>
+    array (
+      0 => 0,
+    ),
+    'CanonCustom:Shutter-AELock' =>
+    array (
+      0 => 3,
+    ),
+    'CanonCustom:ShutterCurtainSync' =>
+    array (
+      0 => 14,
+    ),
+    'CanonCustom:SuperimposedDisplay' =>
+    array (
+      0 => 9,
+    ),
   ),
   'items' =>
   array (

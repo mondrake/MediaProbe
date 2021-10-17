@@ -24,11 +24,17 @@ class Main extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'XMP' => '4294902006',
+    'XMP' =>
+    array (
+      0 => '4294902006',
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:XMP' => '4294902006',
+    'CanonVRD:XMP' =>
+    array (
+      0 => '4294902006',
+    ),
   ),
   'items' =>
   array (

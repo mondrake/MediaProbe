@@ -25,15 +25,33 @@ class TimeInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'DaylightSavings' => 3,
-    'TimeZone' => 1,
-    'TimeZoneCity' => 2,
+    'DaylightSavings' =>
+    array (
+      0 => 3,
+    ),
+    'TimeZone' =>
+    array (
+      0 => 1,
+    ),
+    'TimeZoneCity' =>
+    array (
+      0 => 2,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:DaylightSavings' => 3,
-    'Canon:TimeZone' => 1,
-    'Canon:TimeZoneCity' => 2,
+    'Canon:DaylightSavings' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:TimeZone' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:TimeZoneCity' =>
+    array (
+      0 => 2,
+    ),
   ),
   'items' =>
   array (

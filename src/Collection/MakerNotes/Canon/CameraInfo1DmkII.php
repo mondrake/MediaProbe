@@ -24,41 +24,137 @@ class CameraInfo1DmkII extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CanonImageSize' => 57,
-    'ColorTemperature' => 55,
-    'ColorTone' => 111,
-    'Contrast' => 115,
-    'ExposureTime' => 4,
-    'FocalLength' => 9,
-    'FocalType' => 45,
-    'ISO' => 117,
-    'JPEGQuality' => 102,
-    'LensType' => 12,
-    'MaxFocalLength' => 19,
-    'MinFocalLength' => 17,
-    'PictureStyle' => 108,
-    'Saturation' => 110,
-    'Sharpness' => 114,
-    'WhiteBalance' => 54,
+    'CanonImageSize' =>
+    array (
+      0 => 57,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 55,
+    ),
+    'ColorTone' =>
+    array (
+      0 => 111,
+    ),
+    'Contrast' =>
+    array (
+      0 => 115,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 9,
+    ),
+    'FocalType' =>
+    array (
+      0 => 45,
+    ),
+    'ISO' =>
+    array (
+      0 => 117,
+    ),
+    'JPEGQuality' =>
+    array (
+      0 => 102,
+    ),
+    'LensType' =>
+    array (
+      0 => 12,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 19,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 17,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 108,
+    ),
+    'Saturation' =>
+    array (
+      0 => 110,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 114,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 54,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:CanonImageSize' => 57,
-    'Canon:ColorTemperature' => 55,
-    'Canon:ColorTone' => 111,
-    'Canon:Contrast' => 115,
-    'Canon:ExposureTime' => 4,
-    'Canon:FocalLength' => 9,
-    'Canon:FocalType' => 45,
-    'Canon:ISO' => 117,
-    'Canon:JPEGQuality' => 102,
-    'Canon:LensType' => 12,
-    'Canon:MaxFocalLength' => 19,
-    'Canon:MinFocalLength' => 17,
-    'Canon:PictureStyle' => 108,
-    'Canon:Saturation' => 110,
-    'Canon:Sharpness' => 114,
-    'Canon:WhiteBalance' => 54,
+    'Canon:CanonImageSize' =>
+    array (
+      0 => 57,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 55,
+    ),
+    'Canon:ColorTone' =>
+    array (
+      0 => 111,
+    ),
+    'Canon:Contrast' =>
+    array (
+      0 => 115,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:FocalType' =>
+    array (
+      0 => 45,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 117,
+    ),
+    'Canon:JPEGQuality' =>
+    array (
+      0 => 102,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 17,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 108,
+    ),
+    'Canon:Saturation' =>
+    array (
+      0 => 110,
+    ),
+    'Canon:Sharpness' =>
+    array (
+      0 => 114,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 54,
+    ),
   ),
   'items' =>
   array (

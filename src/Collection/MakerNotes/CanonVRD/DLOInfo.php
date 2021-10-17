@@ -24,15 +24,33 @@ class DLOInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'DLOData' => 10,
-    'DLOSettingApplied' => 4,
-    'DLOVersion' => 5,
+    'DLOData' =>
+    array (
+      0 => 10,
+    ),
+    'DLOSettingApplied' =>
+    array (
+      0 => 4,
+    ),
+    'DLOVersion' =>
+    array (
+      0 => 5,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:DLOData' => 10,
-    'CanonVRD:DLOSettingApplied' => 4,
-    'CanonVRD:DLOVersion' => 5,
+    'CanonVRD:DLOData' =>
+    array (
+      0 => 10,
+    ),
+    'CanonVRD:DLOSettingApplied' =>
+    array (
+      0 => 4,
+    ),
+    'CanonVRD:DLOVersion' =>
+    array (
+      0 => 5,
+    ),
   ),
   'items' =>
   array (

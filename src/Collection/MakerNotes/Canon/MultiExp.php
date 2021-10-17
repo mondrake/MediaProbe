@@ -24,15 +24,33 @@ class MultiExp extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'MultiExposure' => 1,
-    'MultiExposureControl' => 2,
-    'MultiExposureShots' => 3,
+    'MultiExposure' =>
+    array (
+      0 => 1,
+    ),
+    'MultiExposureControl' =>
+    array (
+      0 => 2,
+    ),
+    'MultiExposureShots' =>
+    array (
+      0 => 3,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:MultiExposure' => 1,
-    'Canon:MultiExposureControl' => 2,
-    'Canon:MultiExposureShots' => 3,
+    'Canon:MultiExposure' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:MultiExposureControl' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:MultiExposureShots' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (

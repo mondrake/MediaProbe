@@ -24,13 +24,25 @@ class ImageFormat extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'FileFormat' => 0,
-    'TargetCompressionRatio' => 1,
+    'FileFormat' =>
+    array (
+      0 => 0,
+    ),
+    'TargetCompressionRatio' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:FileFormat' => 0,
-    'CanonRaw:TargetCompressionRatio' => 1,
+    'CanonRaw:FileFormat' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:TargetCompressionRatio' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

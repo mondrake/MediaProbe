@@ -20,664 +20,2623 @@ class Exif extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'Acceleration' => 37892,
-    'AdventRevision' => 33590,
-    'AdventScale' => 33589,
-    'AffineTransformMat' => 32956,
-    'AliasLayerMetadata' => 50784,
-    'AlphaByteCount' => 48323,
-    'AlphaDataDiscard' => 48325,
-    'AlphaOffset' => 48322,
-    'AmbientTemperature' => 37888,
-    'Annotations' => 50255,
-    'ApertureValue' => 37378,
-    'BackgroundColorIndicator' => 34024,
-    'BackgroundColorValue' => 34026,
-    'BadFaxLines' => 326,
-    'BatteryLevel' => 33423,
-    'BitsPerExtendedRunLength' => 34021,
-    'BitsPerRunLength' => 34020,
-    'Brightness' => 65107,
-    'BrightnessValue' => 37379,
-    'CFAPattern' => 41730,
-    'CIP3DataFile' => 37434,
-    'CIP3Sheet' => 37435,
-    'CIP3Side' => 37436,
-    'CMYKEquivalent' => 34032,
-    'CR2CFAPattern' => 50656,
-    'CameraElevationAngle' => 37893,
-    'CleanFaxData' => 327,
-    'ClipPath' => 343,
-    'CodingMethods' => 403,
-    'ColorCharacterization' => 34029,
-    'ColorMap' => 320,
-    'ColorResponseUnit' => 300,
-    'ColorSequence' => 34017,
-    'ColorSpace' => 40961,
-    'ColorTable' => 34022,
-    'ComponentsConfiguration' => 37121,
-    'CompressedBitsPerPixel' => 37122,
-    'ConsecutiveBadFaxLines' => 328,
-    'Contrast' => 65108,
-    'Converter' => 65101,
-    'CreateDate' => 36868,
-    'CustomRendered' => 41985,
-    'DataType' => 32996,
-    'DateTimeOriginal' => 36867,
-    'Decode' => 433,
-    'DefaultImageColor' => 434,
-    'DeviceSettingDescription' => 41995,
-    'DigitalZoomRatio' => 41988,
-    'DotRange' => 336,
-    'ExifImageHeight' => 40963,
-    'ExifImageWidth' => 40962,
-    'ExifVersion' => 36864,
-    'ExpandFilm' => 44994,
-    'ExpandFilterLens' => 44995,
-    'ExpandFlashLamp' => 44997,
-    'ExpandLens' => 44993,
-    'ExpandScanner' => 44996,
-    'ExpandSoftware' => 44992,
-    'Exposure' => 65105,
-    'ExposureCompensation' => 37380,
-    'ExposureIndex' => 41493,
-    'ExposureMode' => 41986,
-    'ExposureProgram' => 34850,
-    'ExposureTime' => 33434,
-    'ExtraSamples' => 338,
-    'FNumber' => 33437,
-    'FaxProfile' => 402,
-    'FaxRecvParams' => 34908,
-    'FaxRecvTime' => 34910,
-    'FaxSubAddress' => 34909,
-    'FedexEDR' => 34929,
-    'FileSource' => 41728,
-    'Flash' => 37385,
-    'FlashEnergy' => 41483,
-    'FlashpixVersion' => 40960,
-    'FocalLength' => 37386,
-    'FocalLengthIn35mmFormat' => 41989,
-    'FocalPlaneResolutionUnit' => 41488,
-    'FocalPlaneXResolution' => 41486,
-    'FocalPlaneYResolution' => 41487,
-    'FovCot' => 33304,
-    'FreeByteCounts' => 289,
-    'FreeOffsets' => 288,
-    'GDALMetadata' => 42112,
-    'GDALNoData' => 42113,
-    'GainControl' => 41991,
-    'Gamma' => 42240,
-    'GooglePlusUploadCode' => 36873,
-    'GrayResponseCurve' => 291,
-    'HCUsage' => 34030,
-    'HeightResolution' => 48259,
-    'Humidity' => 37889,
-    'INGRReserved' => 33921,
-    'ISO' => 34855,
-    'ISOSpeed' => 34867,
-    'ISOSpeedLatitudeyyy' => 34868,
-    'ISOSpeedLatitudezzz' => 34869,
-    'IT8Header' => 34018,
-    'ImageByteCount' => 48321,
-    'ImageColorIndicator' => 34023,
-    'ImageColorValue' => 34025,
-    'ImageDataDiscard' => 48324,
-    'ImageDepth' => 32997,
-    'ImageFullHeight' => 33301,
-    'ImageFullWidth' => 33300,
-    'ImageHeight' => 48257,
-    'ImageHistory' => 41491,
-    'ImageID' => 32781,
-    'ImageLayer' => 34732,
-    'ImageNumber' => 41489,
-    'ImageOffset' => 48320,
-    'ImageReferencePoints' => 32953,
-    'ImageType' => 48132,
-    'ImageUniqueID' => 42016,
-    'ImageWidth' => 48256,
-    'Indexed' => 346,
-    'InkNames' => 333,
-    'IntergraphFlagRegisters' => 33919,
-    'IntergraphMatrix' => 33920,
-    'IntergraphPacketData' => 33918,
-    'Interlace' => 34857,
-    'JBIGOptions' => 34750,
-    'JPEGACTables' => 521,
-    'JPEGDCTables' => 520,
-    'JPEGLosslessPredictors' => 517,
-    'JPEGPointTransforms' => 518,
-    'JPEGProc' => 512,
-    'JPEGQTables' => 519,
-    'JPEGRestartInterval' => 515,
-    'JPEGTables' => 437,
-    'JPLCartoIFD' => 34263,
-    'Lens' => 65002,
-    'LensInfo' => 42034,
-    'LensMake' => 42035,
-    'LensModel' => 42036,
-    'LensSerialNumber' => 42037,
-    'LightSource' => 37384,
-    'MDColorTable' => 33447,
-    'MDFileTag' => 33445,
-    'MDFileUnits' => 33452,
-    'MDLabName' => 33448,
-    'MDPrepDate' => 33450,
-    'MDPrepTime' => 33451,
-    'MDSampleInfo' => 33449,
-    'MDScalePixel' => 33446,
-    'MSDocumentText' => 37679,
-    'MSDocumentTextPosition' => 37681,
-    'MSPropertySetStorage' => 37680,
-    'MakerNote' => 37500,
-    'MatrixWorldToCamera' => 33306,
-    'MatrixWorldToScreen' => 33305,
-    'Matteing' => 32995,
-    'MaxApertureValue' => 37381,
-    'MeteringMode' => 37383,
-    'ModeNumber' => 405,
-    'Model2' => 33405,
-    'ModelTiePoint' => 33922,
-    'ModelTransform' => 34264,
-    'MoireFilter' => 65112,
-    'MultiProfiles' => 34688,
-    'Noise' => 41485,
-    'NumberofInks' => 334,
-    'OPIProxy' => 351,
-    'OceApplicationSelector' => 50216,
-    'OceIDNumber' => 50217,
-    'OceImageLogic' => 50218,
-    'OceScanjobDesc' => 50215,
-    'OffsetSchema' => 59933,
-    'OffsetTime' => 36880,
-    'OffsetTimeDigitized' => 36882,
-    'OffsetTimeOriginal' => 36881,
-    'Opto-ElectricConvFactor' => 34856,
-    'OriginalFileName' => 50547,
-    'OtherImageLength' => 514,
-    'OtherImageStart' => 513,
-    'OwnerName' => 65000,
-    'Padding' => 59932,
-    'PixelFormat' => 48129,
-    'PixelIntensityRange' => 34027,
-    'PixelMagicJBIGOptions' => 34232,
-    'PixelScale' => 33550,
-    'Pressure' => 37890,
-    'ProfileType' => 401,
-    'RasterPadding' => 34019,
-    'RawFile' => 65100,
-    'RawImageSegmentation' => 50752,
-    'RecommendedExposureIndex' => 34866,
-    'RegionXformTackPoint' => 32954,
-    'RelatedSoundFile' => 40964,
-    'RowInterleaveFactor' => 50975,
-    'SMaxSampleValue' => 341,
-    'SMinSampleValue' => 340,
-    'SamsungRawByteOrder' => 41217,
-    'SamsungRawPointersLength' => 40977,
-    'SamsungRawPointersOffset' => 40976,
-    'SamsungRawUnknown' => 41218,
-    'Saturation' => 65109,
-    'SceneCaptureType' => 41990,
-    'SceneType' => 41729,
-    'SecurityClassification' => 41490,
-    'SelfTimerMode' => 34859,
-    'SensingMethod' => 41495,
-    'SensitivityType' => 34864,
-    'SerialNumber' => 65001,
-    'Shadows' => 65106,
-    'SharedData' => 34689,
-    'Sharpness' => 65110,
-    'ShutterSpeedValue' => 37377,
-    'Site' => 34016,
-    'Smoothness' => 65111,
-    'SonyRawFileType' => 28672,
-    'SonyToneCurve' => 28688,
-    'SpatialFrequencyResponse' => 41484,
-    'SpectralSensitivity' => 34852,
-    'StandardOutputSensitivity' => 34865,
-    'StoNits' => 37439,
-    'StripByteCounts' => 279,
-    'StripOffsets' => 273,
-    'StripRowCounts' => 559,
-    'SubSecTime' => 37520,
-    'SubSecTimeDigitized' => 37522,
-    'SubSecTimeOriginal' => 37521,
-    'SubTileBlockSize' => 50974,
-    'SubjectArea' => 37396,
-    'SubjectDistance' => 37382,
-    'SubjectDistanceRange' => 41996,
-    'SubjectLocation' => 41492,
-    'T4Options' => 292,
-    'T6Options' => 293,
-    'T82Options' => 435,
-    'T88Options' => 34690,
-    'TIFF-EPStandardID' => 41494,
-    'TIFF_FXExtensions' => 34687,
-    'TextureFormat' => 33302,
-    'TileByteCounts' => 325,
-    'TileDepth' => 32998,
-    'TileOffsets' => 324,
-    'TimeZoneOffset' => 34858,
-    'TransferRange' => 342,
-    'Transformation' => 48130,
-    'TransparencyIndicator' => 34028,
-    'TrapIndicator' => 34031,
-    'UIC1Tag' => 33628,
-    'UIC2Tag' => 33629,
-    'UIC3Tag' => 33630,
-    'UIC4Tag' => 33631,
-    'USPTOMiscellaneous' => 999,
-    'USPTOOriginalContentType' => 50560,
-    'Uncompressed' => 48131,
-    'UserComment' => 37510,
-    'VersionYear' => 404,
-    'WB_GRGBLevels' => 34306,
-    'WangAnnotation' => 32932,
-    'WangTag1' => 32931,
-    'WangTag3' => 32933,
-    'WangTag4' => 32934,
-    'WarpQuadrilateral' => 32955,
-    'WaterDepth' => 37891,
-    'WhiteBalance' => 65102,
-    'WidthResolution' => 48258,
-    'WrapModes' => 33303,
-    'XClipPathUnits' => 344,
-    'XP_DIP_XML' => 18247,
-    'YClipPathUnits' => 345,
+    'Acceleration' =>
+    array (
+      0 => 37892,
+    ),
+    'AdventRevision' =>
+    array (
+      0 => 33590,
+    ),
+    'AdventScale' =>
+    array (
+      0 => 33589,
+    ),
+    'AffineTransformMat' =>
+    array (
+      0 => 32956,
+    ),
+    'AliasLayerMetadata' =>
+    array (
+      0 => 50784,
+    ),
+    'AlphaByteCount' =>
+    array (
+      0 => 48323,
+    ),
+    'AlphaDataDiscard' =>
+    array (
+      0 => 48325,
+    ),
+    'AlphaOffset' =>
+    array (
+      0 => 48322,
+    ),
+    'AmbientTemperature' =>
+    array (
+      0 => 37888,
+    ),
+    'Annotations' =>
+    array (
+      0 => 50255,
+    ),
+    'ApertureValue' =>
+    array (
+      0 => 37378,
+    ),
+    'BackgroundColorIndicator' =>
+    array (
+      0 => 34024,
+    ),
+    'BackgroundColorValue' =>
+    array (
+      0 => 34026,
+    ),
+    'BadFaxLines' =>
+    array (
+      0 => 326,
+    ),
+    'BatteryLevel' =>
+    array (
+      0 => 33423,
+    ),
+    'BitsPerExtendedRunLength' =>
+    array (
+      0 => 34021,
+    ),
+    'BitsPerRunLength' =>
+    array (
+      0 => 34020,
+    ),
+    'Brightness' =>
+    array (
+      0 => 65107,
+    ),
+    'BrightnessValue' =>
+    array (
+      0 => 37379,
+    ),
+    'CFAPattern' =>
+    array (
+      0 => 41730,
+    ),
+    'CIP3DataFile' =>
+    array (
+      0 => 37434,
+    ),
+    'CIP3Sheet' =>
+    array (
+      0 => 37435,
+    ),
+    'CIP3Side' =>
+    array (
+      0 => 37436,
+    ),
+    'CMYKEquivalent' =>
+    array (
+      0 => 34032,
+    ),
+    'CR2CFAPattern' =>
+    array (
+      0 => 50656,
+    ),
+    'CameraElevationAngle' =>
+    array (
+      0 => 37893,
+    ),
+    'CleanFaxData' =>
+    array (
+      0 => 327,
+    ),
+    'ClipPath' =>
+    array (
+      0 => 343,
+    ),
+    'CodingMethods' =>
+    array (
+      0 => 403,
+    ),
+    'ColorCharacterization' =>
+    array (
+      0 => 34029,
+    ),
+    'ColorMap' =>
+    array (
+      0 => 320,
+    ),
+    'ColorResponseUnit' =>
+    array (
+      0 => 300,
+    ),
+    'ColorSequence' =>
+    array (
+      0 => 34017,
+    ),
+    'ColorSpace' =>
+    array (
+      0 => 40961,
+    ),
+    'ColorTable' =>
+    array (
+      0 => 34022,
+    ),
+    'ComponentsConfiguration' =>
+    array (
+      0 => 37121,
+    ),
+    'CompressedBitsPerPixel' =>
+    array (
+      0 => 37122,
+    ),
+    'ConsecutiveBadFaxLines' =>
+    array (
+      0 => 328,
+    ),
+    'Contrast' =>
+    array (
+      0 => 41992,
+      1 => 65108,
+    ),
+    'Converter' =>
+    array (
+      0 => 65101,
+    ),
+    'CreateDate' =>
+    array (
+      0 => 36868,
+    ),
+    'CustomRendered' =>
+    array (
+      0 => 41985,
+    ),
+    'DataType' =>
+    array (
+      0 => 32996,
+    ),
+    'DateTimeOriginal' =>
+    array (
+      0 => 36867,
+    ),
+    'Decode' =>
+    array (
+      0 => 433,
+    ),
+    'DefaultImageColor' =>
+    array (
+      0 => 434,
+    ),
+    'DeviceSettingDescription' =>
+    array (
+      0 => 41995,
+    ),
+    'DigitalZoomRatio' =>
+    array (
+      0 => 41988,
+    ),
+    'DotRange' =>
+    array (
+      0 => 336,
+    ),
+    'ExifImageHeight' =>
+    array (
+      0 => 40963,
+    ),
+    'ExifImageWidth' =>
+    array (
+      0 => 40962,
+    ),
+    'ExifVersion' =>
+    array (
+      0 => 36864,
+    ),
+    'ExpandFilm' =>
+    array (
+      0 => 44994,
+    ),
+    'ExpandFilterLens' =>
+    array (
+      0 => 44995,
+    ),
+    'ExpandFlashLamp' =>
+    array (
+      0 => 44997,
+    ),
+    'ExpandLens' =>
+    array (
+      0 => 44993,
+    ),
+    'ExpandScanner' =>
+    array (
+      0 => 44996,
+    ),
+    'ExpandSoftware' =>
+    array (
+      0 => 44992,
+    ),
+    'Exposure' =>
+    array (
+      0 => 65105,
+    ),
+    'ExposureCompensation' =>
+    array (
+      0 => 37380,
+    ),
+    'ExposureIndex' =>
+    array (
+      0 => 37397,
+      1 => 41493,
+    ),
+    'ExposureMode' =>
+    array (
+      0 => 41986,
+    ),
+    'ExposureProgram' =>
+    array (
+      0 => 34850,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 33434,
+    ),
+    'ExtraSamples' =>
+    array (
+      0 => 338,
+    ),
+    'FNumber' =>
+    array (
+      0 => 33437,
+    ),
+    'FaxProfile' =>
+    array (
+      0 => 402,
+    ),
+    'FaxRecvParams' =>
+    array (
+      0 => 34908,
+    ),
+    'FaxRecvTime' =>
+    array (
+      0 => 34910,
+    ),
+    'FaxSubAddress' =>
+    array (
+      0 => 34909,
+    ),
+    'FedexEDR' =>
+    array (
+      0 => 34929,
+    ),
+    'FileSource' =>
+    array (
+      0 => 41728,
+    ),
+    'Flash' =>
+    array (
+      0 => 37385,
+    ),
+    'FlashEnergy' =>
+    array (
+      0 => 37387,
+      1 => 41483,
+    ),
+    'FlashpixVersion' =>
+    array (
+      0 => 40960,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 37386,
+    ),
+    'FocalLengthIn35mmFormat' =>
+    array (
+      0 => 41989,
+    ),
+    'FocalPlaneResolutionUnit' =>
+    array (
+      0 => 37392,
+      1 => 41488,
+    ),
+    'FocalPlaneXResolution' =>
+    array (
+      0 => 37390,
+      1 => 41486,
+    ),
+    'FocalPlaneYResolution' =>
+    array (
+      0 => 37391,
+      1 => 41487,
+    ),
+    'FovCot' =>
+    array (
+      0 => 33304,
+    ),
+    'FreeByteCounts' =>
+    array (
+      0 => 289,
+    ),
+    'FreeOffsets' =>
+    array (
+      0 => 288,
+    ),
+    'GDALMetadata' =>
+    array (
+      0 => 42112,
+    ),
+    'GDALNoData' =>
+    array (
+      0 => 42113,
+    ),
+    'GainControl' =>
+    array (
+      0 => 41991,
+    ),
+    'Gamma' =>
+    array (
+      0 => 42240,
+    ),
+    'GooglePlusUploadCode' =>
+    array (
+      0 => 36873,
+    ),
+    'GrayResponseCurve' =>
+    array (
+      0 => 291,
+    ),
+    'HCUsage' =>
+    array (
+      0 => 34030,
+    ),
+    'HeightResolution' =>
+    array (
+      0 => 48259,
+    ),
+    'Humidity' =>
+    array (
+      0 => 37889,
+    ),
+    'INGRReserved' =>
+    array (
+      0 => 33921,
+    ),
+    'ISO' =>
+    array (
+      0 => 34855,
+    ),
+    'ISOSpeed' =>
+    array (
+      0 => 34867,
+    ),
+    'ISOSpeedLatitudeyyy' =>
+    array (
+      0 => 34868,
+    ),
+    'ISOSpeedLatitudezzz' =>
+    array (
+      0 => 34869,
+    ),
+    'IT8Header' =>
+    array (
+      0 => 34018,
+    ),
+    'ImageByteCount' =>
+    array (
+      0 => 48321,
+    ),
+    'ImageColorIndicator' =>
+    array (
+      0 => 34023,
+    ),
+    'ImageColorValue' =>
+    array (
+      0 => 34025,
+    ),
+    'ImageDataDiscard' =>
+    array (
+      0 => 48324,
+    ),
+    'ImageDepth' =>
+    array (
+      0 => 32997,
+    ),
+    'ImageFullHeight' =>
+    array (
+      0 => 33301,
+    ),
+    'ImageFullWidth' =>
+    array (
+      0 => 33300,
+    ),
+    'ImageHeight' =>
+    array (
+      0 => 48257,
+    ),
+    'ImageHistory' =>
+    array (
+      0 => 37395,
+      1 => 41491,
+    ),
+    'ImageID' =>
+    array (
+      0 => 32781,
+    ),
+    'ImageLayer' =>
+    array (
+      0 => 34732,
+    ),
+    'ImageNumber' =>
+    array (
+      0 => 37393,
+      1 => 41489,
+    ),
+    'ImageOffset' =>
+    array (
+      0 => 48320,
+    ),
+    'ImageReferencePoints' =>
+    array (
+      0 => 32953,
+    ),
+    'ImageType' =>
+    array (
+      0 => 48132,
+    ),
+    'ImageUniqueID' =>
+    array (
+      0 => 42016,
+    ),
+    'ImageWidth' =>
+    array (
+      0 => 48256,
+    ),
+    'Indexed' =>
+    array (
+      0 => 346,
+    ),
+    'InkNames' =>
+    array (
+      0 => 333,
+    ),
+    'IntergraphFlagRegisters' =>
+    array (
+      0 => 33919,
+    ),
+    'IntergraphMatrix' =>
+    array (
+      0 => 33920,
+    ),
+    'IntergraphPacketData' =>
+    array (
+      0 => 33918,
+    ),
+    'Interlace' =>
+    array (
+      0 => 34857,
+    ),
+    'JBIGOptions' =>
+    array (
+      0 => 34750,
+    ),
+    'JPEGACTables' =>
+    array (
+      0 => 521,
+    ),
+    'JPEGDCTables' =>
+    array (
+      0 => 520,
+    ),
+    'JPEGLosslessPredictors' =>
+    array (
+      0 => 517,
+    ),
+    'JPEGPointTransforms' =>
+    array (
+      0 => 518,
+    ),
+    'JPEGProc' =>
+    array (
+      0 => 512,
+    ),
+    'JPEGQTables' =>
+    array (
+      0 => 519,
+    ),
+    'JPEGRestartInterval' =>
+    array (
+      0 => 515,
+    ),
+    'JPEGTables' =>
+    array (
+      0 => 347,
+      1 => 437,
+    ),
+    'JPLCartoIFD' =>
+    array (
+      0 => 34263,
+    ),
+    'Lens' =>
+    array (
+      0 => 65002,
+    ),
+    'LensInfo' =>
+    array (
+      0 => 42034,
+    ),
+    'LensMake' =>
+    array (
+      0 => 42035,
+    ),
+    'LensModel' =>
+    array (
+      0 => 42036,
+    ),
+    'LensSerialNumber' =>
+    array (
+      0 => 42037,
+    ),
+    'LightSource' =>
+    array (
+      0 => 37384,
+    ),
+    'MDColorTable' =>
+    array (
+      0 => 33447,
+    ),
+    'MDFileTag' =>
+    array (
+      0 => 33445,
+    ),
+    'MDFileUnits' =>
+    array (
+      0 => 33452,
+    ),
+    'MDLabName' =>
+    array (
+      0 => 33448,
+    ),
+    'MDPrepDate' =>
+    array (
+      0 => 33450,
+    ),
+    'MDPrepTime' =>
+    array (
+      0 => 33451,
+    ),
+    'MDSampleInfo' =>
+    array (
+      0 => 33449,
+    ),
+    'MDScalePixel' =>
+    array (
+      0 => 33446,
+    ),
+    'MSDocumentText' =>
+    array (
+      0 => 37679,
+    ),
+    'MSDocumentTextPosition' =>
+    array (
+      0 => 37681,
+    ),
+    'MSPropertySetStorage' =>
+    array (
+      0 => 37680,
+    ),
+    'MakerNote' =>
+    array (
+      0 => 37500,
+    ),
+    'MatrixWorldToCamera' =>
+    array (
+      0 => 33306,
+    ),
+    'MatrixWorldToScreen' =>
+    array (
+      0 => 33305,
+    ),
+    'Matteing' =>
+    array (
+      0 => 32995,
+    ),
+    'MaxApertureValue' =>
+    array (
+      0 => 37381,
+    ),
+    'MeteringMode' =>
+    array (
+      0 => 37383,
+    ),
+    'ModeNumber' =>
+    array (
+      0 => 405,
+    ),
+    'Model2' =>
+    array (
+      0 => 33405,
+    ),
+    'ModelTiePoint' =>
+    array (
+      0 => 33922,
+    ),
+    'ModelTransform' =>
+    array (
+      0 => 34264,
+    ),
+    'MoireFilter' =>
+    array (
+      0 => 65112,
+    ),
+    'MultiProfiles' =>
+    array (
+      0 => 34688,
+    ),
+    'Noise' =>
+    array (
+      0 => 37389,
+      1 => 41485,
+    ),
+    'NumberofInks' =>
+    array (
+      0 => 334,
+    ),
+    'OPIProxy' =>
+    array (
+      0 => 351,
+    ),
+    'OceApplicationSelector' =>
+    array (
+      0 => 50216,
+    ),
+    'OceIDNumber' =>
+    array (
+      0 => 50217,
+    ),
+    'OceImageLogic' =>
+    array (
+      0 => 50218,
+    ),
+    'OceScanjobDesc' =>
+    array (
+      0 => 50215,
+    ),
+    'OffsetSchema' =>
+    array (
+      0 => 59933,
+    ),
+    'OffsetTime' =>
+    array (
+      0 => 36880,
+    ),
+    'OffsetTimeDigitized' =>
+    array (
+      0 => 36882,
+    ),
+    'OffsetTimeOriginal' =>
+    array (
+      0 => 36881,
+    ),
+    'Opto-ElectricConvFactor' =>
+    array (
+      0 => 34856,
+    ),
+    'OriginalFileName' =>
+    array (
+      0 => 50547,
+    ),
+    'OtherImageLength' =>
+    array (
+      0 => 514,
+    ),
+    'OtherImageStart' =>
+    array (
+      0 => 513,
+    ),
+    'OwnerName' =>
+    array (
+      0 => 42032,
+      1 => 65000,
+    ),
+    'Padding' =>
+    array (
+      0 => 59932,
+    ),
+    'PixelFormat' =>
+    array (
+      0 => 48129,
+    ),
+    'PixelIntensityRange' =>
+    array (
+      0 => 34027,
+    ),
+    'PixelMagicJBIGOptions' =>
+    array (
+      0 => 34232,
+    ),
+    'PixelScale' =>
+    array (
+      0 => 33550,
+    ),
+    'Pressure' =>
+    array (
+      0 => 37890,
+    ),
+    'ProfileType' =>
+    array (
+      0 => 401,
+    ),
+    'RasterPadding' =>
+    array (
+      0 => 34019,
+    ),
+    'RawFile' =>
+    array (
+      0 => 65100,
+    ),
+    'RawImageSegmentation' =>
+    array (
+      0 => 50752,
+    ),
+    'RecommendedExposureIndex' =>
+    array (
+      0 => 34866,
+    ),
+    'RegionXformTackPoint' =>
+    array (
+      0 => 32954,
+    ),
+    'RelatedSoundFile' =>
+    array (
+      0 => 40964,
+    ),
+    'RowInterleaveFactor' =>
+    array (
+      0 => 50975,
+    ),
+    'SMaxSampleValue' =>
+    array (
+      0 => 341,
+    ),
+    'SMinSampleValue' =>
+    array (
+      0 => 340,
+    ),
+    'SamsungRawByteOrder' =>
+    array (
+      0 => 41217,
+    ),
+    'SamsungRawPointersLength' =>
+    array (
+      0 => 40977,
+    ),
+    'SamsungRawPointersOffset' =>
+    array (
+      0 => 40976,
+    ),
+    'SamsungRawUnknown' =>
+    array (
+      0 => 41218,
+    ),
+    'Saturation' =>
+    array (
+      0 => 41993,
+      1 => 65109,
+    ),
+    'SceneCaptureType' =>
+    array (
+      0 => 41990,
+    ),
+    'SceneType' =>
+    array (
+      0 => 41729,
+    ),
+    'SecurityClassification' =>
+    array (
+      0 => 37394,
+      1 => 41490,
+    ),
+    'SelfTimerMode' =>
+    array (
+      0 => 34859,
+    ),
+    'SensingMethod' =>
+    array (
+      0 => 37399,
+      1 => 41495,
+    ),
+    'SensitivityType' =>
+    array (
+      0 => 34864,
+    ),
+    'SerialNumber' =>
+    array (
+      0 => 42033,
+      1 => 65001,
+    ),
+    'Shadows' =>
+    array (
+      0 => 65106,
+    ),
+    'SharedData' =>
+    array (
+      0 => 34689,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 41994,
+      1 => 65110,
+    ),
+    'ShutterSpeedValue' =>
+    array (
+      0 => 37377,
+    ),
+    'Site' =>
+    array (
+      0 => 34016,
+    ),
+    'Smoothness' =>
+    array (
+      0 => 65111,
+    ),
+    'SonyRawFileType' =>
+    array (
+      0 => 28672,
+    ),
+    'SonyToneCurve' =>
+    array (
+      0 => 28688,
+    ),
+    'SpatialFrequencyResponse' =>
+    array (
+      0 => 37388,
+      1 => 41484,
+    ),
+    'SpectralSensitivity' =>
+    array (
+      0 => 34852,
+    ),
+    'StandardOutputSensitivity' =>
+    array (
+      0 => 34865,
+    ),
+    'StoNits' =>
+    array (
+      0 => 37439,
+    ),
+    'StripByteCounts' =>
+    array (
+      0 => 279,
+    ),
+    'StripOffsets' =>
+    array (
+      0 => 273,
+    ),
+    'StripRowCounts' =>
+    array (
+      0 => 559,
+    ),
+    'SubSecTime' =>
+    array (
+      0 => 37520,
+    ),
+    'SubSecTimeDigitized' =>
+    array (
+      0 => 37522,
+    ),
+    'SubSecTimeOriginal' =>
+    array (
+      0 => 37521,
+    ),
+    'SubTileBlockSize' =>
+    array (
+      0 => 50974,
+    ),
+    'SubjectArea' =>
+    array (
+      0 => 37396,
+    ),
+    'SubjectDistance' =>
+    array (
+      0 => 37382,
+    ),
+    'SubjectDistanceRange' =>
+    array (
+      0 => 41996,
+    ),
+    'SubjectLocation' =>
+    array (
+      0 => 41492,
+    ),
+    'T4Options' =>
+    array (
+      0 => 292,
+    ),
+    'T6Options' =>
+    array (
+      0 => 293,
+    ),
+    'T82Options' =>
+    array (
+      0 => 435,
+    ),
+    'T88Options' =>
+    array (
+      0 => 34690,
+    ),
+    'TIFF-EPStandardID' =>
+    array (
+      0 => 37398,
+      1 => 41494,
+    ),
+    'TIFF_FXExtensions' =>
+    array (
+      0 => 34687,
+    ),
+    'TextureFormat' =>
+    array (
+      0 => 33302,
+    ),
+    'TileByteCounts' =>
+    array (
+      0 => 325,
+    ),
+    'TileDepth' =>
+    array (
+      0 => 32998,
+    ),
+    'TileOffsets' =>
+    array (
+      0 => 324,
+    ),
+    'TimeZoneOffset' =>
+    array (
+      0 => 34858,
+    ),
+    'TransferRange' =>
+    array (
+      0 => 342,
+    ),
+    'Transformation' =>
+    array (
+      0 => 48130,
+    ),
+    'TransparencyIndicator' =>
+    array (
+      0 => 34028,
+    ),
+    'TrapIndicator' =>
+    array (
+      0 => 34031,
+    ),
+    'UIC1Tag' =>
+    array (
+      0 => 33628,
+    ),
+    'UIC2Tag' =>
+    array (
+      0 => 33629,
+    ),
+    'UIC3Tag' =>
+    array (
+      0 => 33630,
+    ),
+    'UIC4Tag' =>
+    array (
+      0 => 33631,
+    ),
+    'USPTOMiscellaneous' =>
+    array (
+      0 => 999,
+    ),
+    'USPTOOriginalContentType' =>
+    array (
+      0 => 50560,
+    ),
+    'Uncompressed' =>
+    array (
+      0 => 48131,
+    ),
+    'UserComment' =>
+    array (
+      0 => 37510,
+    ),
+    'VersionYear' =>
+    array (
+      0 => 404,
+    ),
+    'WB_GRGBLevels' =>
+    array (
+      0 => 34306,
+    ),
+    'WangAnnotation' =>
+    array (
+      0 => 32932,
+    ),
+    'WangTag1' =>
+    array (
+      0 => 32931,
+    ),
+    'WangTag3' =>
+    array (
+      0 => 32933,
+    ),
+    'WangTag4' =>
+    array (
+      0 => 32934,
+    ),
+    'WarpQuadrilateral' =>
+    array (
+      0 => 32955,
+    ),
+    'WaterDepth' =>
+    array (
+      0 => 37891,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 41987,
+      1 => 65102,
+    ),
+    'WidthResolution' =>
+    array (
+      0 => 48258,
+    ),
+    'WrapModes' =>
+    array (
+      0 => 33303,
+    ),
+    'XClipPathUnits' =>
+    array (
+      0 => 344,
+    ),
+    'XP_DIP_XML' =>
+    array (
+      0 => 18247,
+    ),
+    'YClipPathUnits' =>
+    array (
+      0 => 345,
+    ),
   ),
   'itemsByPhpExifTag' =>
   array (
-    'ApertureValue' => 37378,
-    'BatteryLevel' => 33423,
-    'BrightnessValue' => 37379,
-    'CFAPattern' => 41730,
-    'ClipPath' => 343,
-    'ColorMap' => 320,
-    'ColorSpace' => 40961,
-    'ComponentsConfiguration' => 37121,
-    'CompressedBitsPerPixel' => 37122,
-    'Contrast' => 41992,
-    'CustomRendered' => 41985,
-    'DataType' => 32996,
-    'DateTimeDigitized' => 36868,
-    'DateTimeOriginal' => 36867,
-    'DeviceSettingDescription' => 41995,
-    'DigitalZoomRatio' => 41988,
-    'DotRange' => 336,
-    'ExifImageLength' => 40963,
-    'ExifImageWidth' => 40962,
-    'ExifVersion' => 36864,
-    'ExposureBiasValue' => 37380,
-    'ExposureIndex' => 41493,
-    'ExposureMode' => 41986,
-    'ExposureProgram' => 34850,
-    'ExposureTime' => 33434,
-    'ExtraSample' => 338,
-    'FNumber' => 33437,
-    'FileSource' => 41728,
-    'Flash' => 37385,
-    'FlashEnergy' => 41483,
-    'FlashPixVersion' => 40960,
-    'FocalLength' => 37386,
-    'FocalLengthIn35mmFilm' => 41989,
-    'FocalPlaneResolutionUnit' => 41488,
-    'FocalPlaneXResolution' => 41486,
-    'FocalPlaneYResolution' => 41487,
-    'FreeByteCounts' => 289,
-    'FreeOffsets' => 288,
-    'GainControl' => 41991,
-    'GrayResponseCurve' => 291,
-    'ISOSpeedRatings' => 34855,
-    'IT8ColorTable' => 34021,
-    'IT8RasterPadding' => 34019,
-    'ImageDepth' => 32997,
-    'ImageHistory' => 41491,
-    'ImageID' => 32781,
-    'ImageNumber' => 41489,
-    'ImageUniqueID' => 42016,
-    'Indexed' => 346,
-    'InkNames' => 333,
-    'JPEGACTables' => 521,
-    'JPEGDCTables' => 520,
-    'JPEGInterchangeFormat' => 513,
-    'JPEGInterchangeFormatLength' => 514,
-    'JPEGLosslessPredictors' => 517,
-    'JPEGPointTransforms' => 518,
-    'JPEGProc' => 512,
-    'JPEGQTables' => 519,
-    'JPEGRestartInterval' => 515,
-    'JPEGTables' => 347,
-    'LightSource' => 37384,
-    'Matteing' => 32995,
-    'MaxApertureValue' => 37381,
-    'MeteringMode' => 37383,
-    'Noise' => 41485,
-    'NumberOfInks' => 334,
-    'OECF' => 34856,
-    'OPIProxy' => 351,
-    'RelatedSoundFile' => 40964,
-    'SMaxSampleValue' => 341,
-    'SMinSampleValue' => 340,
-    'Saturation' => 41993,
-    'SceneCaptureType' => 41990,
-    'SceneType' => 41729,
-    'SecurityClassification' => 41490,
-    'SensingMethod' => 41495,
-    'Sharpness' => 41994,
-    'ShutterSpeedValue' => 37377,
-    'SpatialFrequencyResponse' => 41484,
-    'SpectralSensity' => 34852,
-    'StoNits' => 37439,
-    'StripByteCounts' => 279,
-    'StripOffsets' => 273,
-    'SubSecTime' => 37520,
-    'SubSecTimeDigitized' => 37522,
-    'SubSecTimeOriginal' => 37521,
-    'SubjectDistance' => 37382,
-    'SubjectDistanceRange' => 41996,
-    'SubjectLocation' => 41492,
-    'T4Options' => 292,
-    'T6Options' => 293,
-    'TIFF/EPStandardID' => 41494,
-    'TileByteCounts' => 325,
-    'TileDepth' => 32998,
-    'TileOffsets' => 324,
-    'TransferRange' => 342,
-    'UserComment' => 37510,
-    'WhiteBalance' => 41987,
-    'XClipPathUnits' => 344,
-    'YClipPathUnits' => 345,
+    'ApertureValue' =>
+    array (
+      0 => 37378,
+    ),
+    'BatteryLevel' =>
+    array (
+      0 => 33423,
+    ),
+    'BrightnessValue' =>
+    array (
+      0 => 37379,
+    ),
+    'CFAPattern' =>
+    array (
+      0 => 41730,
+    ),
+    'ClipPath' =>
+    array (
+      0 => 343,
+    ),
+    'ColorMap' =>
+    array (
+      0 => 320,
+    ),
+    'ColorSpace' =>
+    array (
+      0 => 40961,
+    ),
+    'ComponentsConfiguration' =>
+    array (
+      0 => 37121,
+    ),
+    'CompressedBitsPerPixel' =>
+    array (
+      0 => 37122,
+    ),
+    'Contrast' =>
+    array (
+      0 => 41992,
+    ),
+    'CustomRendered' =>
+    array (
+      0 => 41985,
+    ),
+    'DataType' =>
+    array (
+      0 => 32996,
+    ),
+    'DateTimeDigitized' =>
+    array (
+      0 => 36868,
+    ),
+    'DateTimeOriginal' =>
+    array (
+      0 => 36867,
+    ),
+    'DeviceSettingDescription' =>
+    array (
+      0 => 41995,
+    ),
+    'DigitalZoomRatio' =>
+    array (
+      0 => 41988,
+    ),
+    'DotRange' =>
+    array (
+      0 => 336,
+    ),
+    'ExifImageLength' =>
+    array (
+      0 => 40963,
+    ),
+    'ExifImageWidth' =>
+    array (
+      0 => 40962,
+    ),
+    'ExifVersion' =>
+    array (
+      0 => 36864,
+    ),
+    'ExposureBiasValue' =>
+    array (
+      0 => 37380,
+    ),
+    'ExposureIndex' =>
+    array (
+      0 => 37397,
+      1 => 41493,
+    ),
+    'ExposureMode' =>
+    array (
+      0 => 41986,
+    ),
+    'ExposureProgram' =>
+    array (
+      0 => 34850,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 33434,
+    ),
+    'ExtraSample' =>
+    array (
+      0 => 338,
+    ),
+    'FNumber' =>
+    array (
+      0 => 33437,
+    ),
+    'FileSource' =>
+    array (
+      0 => 41728,
+    ),
+    'Flash' =>
+    array (
+      0 => 37385,
+    ),
+    'FlashEnergy' =>
+    array (
+      0 => 37387,
+      1 => 41483,
+    ),
+    'FlashPixVersion' =>
+    array (
+      0 => 40960,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 37386,
+    ),
+    'FocalLengthIn35mmFilm' =>
+    array (
+      0 => 41989,
+    ),
+    'FocalPlaneResolutionUnit' =>
+    array (
+      0 => 37392,
+      1 => 41488,
+    ),
+    'FocalPlaneXResolution' =>
+    array (
+      0 => 37390,
+      1 => 41486,
+    ),
+    'FocalPlaneYResolution' =>
+    array (
+      0 => 37391,
+      1 => 41487,
+    ),
+    'FreeByteCounts' =>
+    array (
+      0 => 289,
+    ),
+    'FreeOffsets' =>
+    array (
+      0 => 288,
+    ),
+    'GainControl' =>
+    array (
+      0 => 41991,
+    ),
+    'GrayResponseCurve' =>
+    array (
+      0 => 291,
+    ),
+    'ISOSpeedRatings' =>
+    array (
+      0 => 34855,
+    ),
+    'IT8ColorTable' =>
+    array (
+      0 => 34021,
+    ),
+    'IT8RasterPadding' =>
+    array (
+      0 => 34019,
+    ),
+    'ImageDepth' =>
+    array (
+      0 => 32997,
+    ),
+    'ImageHistory' =>
+    array (
+      0 => 37395,
+      1 => 41491,
+    ),
+    'ImageID' =>
+    array (
+      0 => 32781,
+    ),
+    'ImageNumber' =>
+    array (
+      0 => 37393,
+      1 => 41489,
+    ),
+    'ImageUniqueID' =>
+    array (
+      0 => 42016,
+    ),
+    'Indexed' =>
+    array (
+      0 => 346,
+    ),
+    'InkNames' =>
+    array (
+      0 => 333,
+    ),
+    'JPEGACTables' =>
+    array (
+      0 => 521,
+    ),
+    'JPEGDCTables' =>
+    array (
+      0 => 520,
+    ),
+    'JPEGInterchangeFormat' =>
+    array (
+      0 => 513,
+    ),
+    'JPEGInterchangeFormatLength' =>
+    array (
+      0 => 514,
+    ),
+    'JPEGLosslessPredictors' =>
+    array (
+      0 => 517,
+    ),
+    'JPEGPointTransforms' =>
+    array (
+      0 => 518,
+    ),
+    'JPEGProc' =>
+    array (
+      0 => 512,
+    ),
+    'JPEGQTables' =>
+    array (
+      0 => 519,
+    ),
+    'JPEGRestartInterval' =>
+    array (
+      0 => 515,
+    ),
+    'JPEGTables' =>
+    array (
+      0 => 347,
+    ),
+    'LightSource' =>
+    array (
+      0 => 37384,
+    ),
+    'Matteing' =>
+    array (
+      0 => 32995,
+    ),
+    'MaxApertureValue' =>
+    array (
+      0 => 37381,
+    ),
+    'MeteringMode' =>
+    array (
+      0 => 37383,
+    ),
+    'Noise' =>
+    array (
+      0 => 37389,
+      1 => 41485,
+    ),
+    'NumberOfInks' =>
+    array (
+      0 => 334,
+    ),
+    'OECF' =>
+    array (
+      0 => 34856,
+    ),
+    'OPIProxy' =>
+    array (
+      0 => 351,
+    ),
+    'RelatedSoundFile' =>
+    array (
+      0 => 40964,
+    ),
+    'SMaxSampleValue' =>
+    array (
+      0 => 341,
+    ),
+    'SMinSampleValue' =>
+    array (
+      0 => 340,
+    ),
+    'Saturation' =>
+    array (
+      0 => 41993,
+    ),
+    'SceneCaptureType' =>
+    array (
+      0 => 41990,
+    ),
+    'SceneType' =>
+    array (
+      0 => 41729,
+    ),
+    'SecurityClassification' =>
+    array (
+      0 => 37394,
+      1 => 41490,
+    ),
+    'SensingMethod' =>
+    array (
+      0 => 37399,
+      1 => 41495,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 41994,
+    ),
+    'ShutterSpeedValue' =>
+    array (
+      0 => 37377,
+    ),
+    'SpatialFrequencyResponse' =>
+    array (
+      0 => 37388,
+      1 => 41484,
+    ),
+    'SpectralSensity' =>
+    array (
+      0 => 34852,
+    ),
+    'StoNits' =>
+    array (
+      0 => 37439,
+    ),
+    'StripByteCounts' =>
+    array (
+      0 => 279,
+    ),
+    'StripOffsets' =>
+    array (
+      0 => 273,
+    ),
+    'SubSecTime' =>
+    array (
+      0 => 37520,
+    ),
+    'SubSecTimeDigitized' =>
+    array (
+      0 => 37522,
+    ),
+    'SubSecTimeOriginal' =>
+    array (
+      0 => 37521,
+    ),
+    'SubjectDistance' =>
+    array (
+      0 => 37382,
+    ),
+    'SubjectDistanceRange' =>
+    array (
+      0 => 41996,
+    ),
+    'SubjectLocation' =>
+    array (
+      0 => 37396,
+      1 => 41492,
+    ),
+    'T4Options' =>
+    array (
+      0 => 292,
+    ),
+    'T6Options' =>
+    array (
+      0 => 293,
+    ),
+    'TIFF/EPStandardID' =>
+    array (
+      0 => 37398,
+      1 => 41494,
+    ),
+    'TileByteCounts' =>
+    array (
+      0 => 325,
+    ),
+    'TileDepth' =>
+    array (
+      0 => 32998,
+    ),
+    'TileOffsets' =>
+    array (
+      0 => 324,
+    ),
+    'TransferRange' =>
+    array (
+      0 => 342,
+    ),
+    'UserComment' =>
+    array (
+      0 => 37510,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 41987,
+    ),
+    'XClipPathUnits' =>
+    array (
+      0 => 344,
+    ),
+    'YClipPathUnits' =>
+    array (
+      0 => 345,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'ExifIFD:Acceleration' => 37892,
-    'ExifIFD:AdventRevision' => 33590,
-    'ExifIFD:AdventScale' => 33589,
-    'ExifIFD:AffineTransformMat' => 32956,
-    'ExifIFD:AliasLayerMetadata' => 50784,
-    'ExifIFD:AlphaByteCount' => 48323,
-    'ExifIFD:AlphaDataDiscard' => 48325,
-    'ExifIFD:AlphaOffset' => 48322,
-    'ExifIFD:AmbientTemperature' => 37888,
-    'ExifIFD:Annotations' => 50255,
-    'ExifIFD:ApertureValue' => 37378,
-    'ExifIFD:BackgroundColorIndicator' => 34024,
-    'ExifIFD:BackgroundColorValue' => 34026,
-    'ExifIFD:BadFaxLines' => 326,
-    'ExifIFD:BatteryLevel' => 33423,
-    'ExifIFD:BitsPerExtendedRunLength' => 34021,
-    'ExifIFD:BitsPerRunLength' => 34020,
-    'ExifIFD:Brightness' => 65107,
-    'ExifIFD:BrightnessValue' => 37379,
-    'ExifIFD:CFAPattern' => 41730,
-    'ExifIFD:CIP3DataFile' => 37434,
-    'ExifIFD:CIP3Sheet' => 37435,
-    'ExifIFD:CIP3Side' => 37436,
-    'ExifIFD:CMYKEquivalent' => 34032,
-    'ExifIFD:CR2CFAPattern' => 50656,
-    'ExifIFD:CameraElevationAngle' => 37893,
-    'ExifIFD:CleanFaxData' => 327,
-    'ExifIFD:ClipPath' => 343,
-    'ExifIFD:CodingMethods' => 403,
-    'ExifIFD:ColorCharacterization' => 34029,
-    'ExifIFD:ColorMap' => 320,
-    'ExifIFD:ColorResponseUnit' => 300,
-    'ExifIFD:ColorSequence' => 34017,
-    'ExifIFD:ColorSpace' => 40961,
-    'ExifIFD:ColorTable' => 34022,
-    'ExifIFD:ComponentsConfiguration' => 37121,
-    'ExifIFD:CompressedBitsPerPixel' => 37122,
-    'ExifIFD:ConsecutiveBadFaxLines' => 328,
-    'ExifIFD:Contrast' => 65108,
-    'ExifIFD:Converter' => 65101,
-    'ExifIFD:CreateDate' => 36868,
-    'ExifIFD:CustomRendered' => 41985,
-    'ExifIFD:DataType' => 32996,
-    'ExifIFD:DateTimeOriginal' => 36867,
-    'ExifIFD:Decode' => 433,
-    'ExifIFD:DefaultImageColor' => 434,
-    'ExifIFD:DeviceSettingDescription' => 41995,
-    'ExifIFD:DigitalZoomRatio' => 41988,
-    'ExifIFD:DotRange' => 336,
-    'ExifIFD:ExifImageHeight' => 40963,
-    'ExifIFD:ExifImageWidth' => 40962,
-    'ExifIFD:ExifVersion' => 36864,
-    'ExifIFD:ExpandFilm' => 44994,
-    'ExifIFD:ExpandFilterLens' => 44995,
-    'ExifIFD:ExpandFlashLamp' => 44997,
-    'ExifIFD:ExpandLens' => 44993,
-    'ExifIFD:ExpandScanner' => 44996,
-    'ExifIFD:ExpandSoftware' => 44992,
-    'ExifIFD:Exposure' => 65105,
-    'ExifIFD:ExposureCompensation' => 37380,
-    'ExifIFD:ExposureIndex' => 41493,
-    'ExifIFD:ExposureMode' => 41986,
-    'ExifIFD:ExposureProgram' => 34850,
-    'ExifIFD:ExposureTime' => 33434,
-    'ExifIFD:ExtraSamples' => 338,
-    'ExifIFD:FNumber' => 33437,
-    'ExifIFD:FaxProfile' => 402,
-    'ExifIFD:FaxRecvParams' => 34908,
-    'ExifIFD:FaxRecvTime' => 34910,
-    'ExifIFD:FaxSubAddress' => 34909,
-    'ExifIFD:FedexEDR' => 34929,
-    'ExifIFD:FileSource' => 41728,
-    'ExifIFD:Flash' => 37385,
-    'ExifIFD:FlashEnergy' => 41483,
-    'ExifIFD:FlashpixVersion' => 40960,
-    'ExifIFD:FocalLength' => 37386,
-    'ExifIFD:FocalLengthIn35mmFormat' => 41989,
-    'ExifIFD:FocalPlaneResolutionUnit' => 41488,
-    'ExifIFD:FocalPlaneXResolution' => 41486,
-    'ExifIFD:FocalPlaneYResolution' => 41487,
-    'ExifIFD:FovCot' => 33304,
-    'ExifIFD:FreeByteCounts' => 289,
-    'ExifIFD:FreeOffsets' => 288,
-    'ExifIFD:GDALMetadata' => 42112,
-    'ExifIFD:GDALNoData' => 42113,
-    'ExifIFD:GainControl' => 41991,
-    'ExifIFD:Gamma' => 42240,
-    'ExifIFD:GooglePlusUploadCode' => 36873,
-    'ExifIFD:GrayResponseCurve' => 291,
-    'ExifIFD:HCUsage' => 34030,
-    'ExifIFD:HeightResolution' => 48259,
-    'ExifIFD:Humidity' => 37889,
-    'ExifIFD:INGRReserved' => 33921,
-    'ExifIFD:ISO' => 34855,
-    'ExifIFD:ISOSpeed' => 34867,
-    'ExifIFD:ISOSpeedLatitudeyyy' => 34868,
-    'ExifIFD:ISOSpeedLatitudezzz' => 34869,
-    'ExifIFD:IT8Header' => 34018,
-    'ExifIFD:ImageByteCount' => 48321,
-    'ExifIFD:ImageColorIndicator' => 34023,
-    'ExifIFD:ImageColorValue' => 34025,
-    'ExifIFD:ImageDataDiscard' => 48324,
-    'ExifIFD:ImageDepth' => 32997,
-    'ExifIFD:ImageFullHeight' => 33301,
-    'ExifIFD:ImageFullWidth' => 33300,
-    'ExifIFD:ImageHeight' => 48257,
-    'ExifIFD:ImageHistory' => 41491,
-    'ExifIFD:ImageID' => 32781,
-    'ExifIFD:ImageLayer' => 34732,
-    'ExifIFD:ImageNumber' => 41489,
-    'ExifIFD:ImageOffset' => 48320,
-    'ExifIFD:ImageReferencePoints' => 32953,
-    'ExifIFD:ImageType' => 48132,
-    'ExifIFD:ImageUniqueID' => 42016,
-    'ExifIFD:ImageWidth' => 48256,
-    'ExifIFD:Indexed' => 346,
-    'ExifIFD:InkNames' => 333,
-    'ExifIFD:IntergraphFlagRegisters' => 33919,
-    'ExifIFD:IntergraphMatrix' => 33920,
-    'ExifIFD:IntergraphPacketData' => 33918,
-    'ExifIFD:Interlace' => 34857,
-    'ExifIFD:JBIGOptions' => 34750,
-    'ExifIFD:JPEGACTables' => 521,
-    'ExifIFD:JPEGDCTables' => 520,
-    'ExifIFD:JPEGLosslessPredictors' => 517,
-    'ExifIFD:JPEGPointTransforms' => 518,
-    'ExifIFD:JPEGProc' => 512,
-    'ExifIFD:JPEGQTables' => 519,
-    'ExifIFD:JPEGRestartInterval' => 515,
-    'ExifIFD:JPEGTables' => 437,
-    'ExifIFD:JPLCartoIFD' => 34263,
-    'ExifIFD:Lens' => 65002,
-    'ExifIFD:LensInfo' => 42034,
-    'ExifIFD:LensMake' => 42035,
-    'ExifIFD:LensModel' => 42036,
-    'ExifIFD:LensSerialNumber' => 42037,
-    'ExifIFD:LightSource' => 37384,
-    'ExifIFD:MDColorTable' => 33447,
-    'ExifIFD:MDFileTag' => 33445,
-    'ExifIFD:MDFileUnits' => 33452,
-    'ExifIFD:MDLabName' => 33448,
-    'ExifIFD:MDPrepDate' => 33450,
-    'ExifIFD:MDPrepTime' => 33451,
-    'ExifIFD:MDSampleInfo' => 33449,
-    'ExifIFD:MDScalePixel' => 33446,
-    'ExifIFD:MSDocumentText' => 37679,
-    'ExifIFD:MSDocumentTextPosition' => 37681,
-    'ExifIFD:MSPropertySetStorage' => 37680,
-    'ExifIFD:MatrixWorldToCamera' => 33306,
-    'ExifIFD:MatrixWorldToScreen' => 33305,
-    'ExifIFD:Matteing' => 32995,
-    'ExifIFD:MaxApertureValue' => 37381,
-    'ExifIFD:MeteringMode' => 37383,
-    'ExifIFD:ModeNumber' => 405,
-    'ExifIFD:Model2' => 33405,
-    'ExifIFD:ModelTiePoint' => 33922,
-    'ExifIFD:ModelTransform' => 34264,
-    'ExifIFD:MoireFilter' => 65112,
-    'ExifIFD:MultiProfiles' => 34688,
-    'ExifIFD:Noise' => 41485,
-    'ExifIFD:NumberofInks' => 334,
-    'ExifIFD:OPIProxy' => 351,
-    'ExifIFD:OceApplicationSelector' => 50216,
-    'ExifIFD:OceIDNumber' => 50217,
-    'ExifIFD:OceImageLogic' => 50218,
-    'ExifIFD:OceScanjobDesc' => 50215,
-    'ExifIFD:OffsetSchema' => 59933,
-    'ExifIFD:OffsetTime' => 36880,
-    'ExifIFD:OffsetTimeDigitized' => 36882,
-    'ExifIFD:OffsetTimeOriginal' => 36881,
-    'ExifIFD:Opto-ElectricConvFactor' => 34856,
-    'ExifIFD:OriginalFileName' => 50547,
-    'ExifIFD:OtherImageLength' => 514,
-    'ExifIFD:OtherImageStart' => 513,
-    'ExifIFD:OwnerName' => 65000,
-    'ExifIFD:PixelFormat' => 48129,
-    'ExifIFD:PixelIntensityRange' => 34027,
-    'ExifIFD:PixelMagicJBIGOptions' => 34232,
-    'ExifIFD:PixelScale' => 33550,
-    'ExifIFD:Pressure' => 37890,
-    'ExifIFD:ProfileType' => 401,
-    'ExifIFD:RasterPadding' => 34019,
-    'ExifIFD:RawFile' => 65100,
-    'ExifIFD:RawImageSegmentation' => 50752,
-    'ExifIFD:RecommendedExposureIndex' => 34866,
-    'ExifIFD:RegionXformTackPoint' => 32954,
-    'ExifIFD:RelatedSoundFile' => 40964,
-    'ExifIFD:RowInterleaveFactor' => 50975,
-    'ExifIFD:SMaxSampleValue' => 341,
-    'ExifIFD:SMinSampleValue' => 340,
-    'ExifIFD:SamsungRawByteOrder' => 41217,
-    'ExifIFD:SamsungRawPointersLength' => 40977,
-    'ExifIFD:SamsungRawPointersOffset' => 40976,
-    'ExifIFD:SamsungRawUnknown' => 41218,
-    'ExifIFD:Saturation' => 65109,
-    'ExifIFD:SceneCaptureType' => 41990,
-    'ExifIFD:SceneType' => 41729,
-    'ExifIFD:SecurityClassification' => 41490,
-    'ExifIFD:SelfTimerMode' => 34859,
-    'ExifIFD:SensingMethod' => 41495,
-    'ExifIFD:SensitivityType' => 34864,
-    'ExifIFD:SerialNumber' => 65001,
-    'ExifIFD:Shadows' => 65106,
-    'ExifIFD:SharedData' => 34689,
-    'ExifIFD:Sharpness' => 65110,
-    'ExifIFD:ShutterSpeedValue' => 37377,
-    'ExifIFD:Site' => 34016,
-    'ExifIFD:Smoothness' => 65111,
-    'ExifIFD:SonyRawFileType' => 28672,
-    'ExifIFD:SonyToneCurve' => 28688,
-    'ExifIFD:SpatialFrequencyResponse' => 41484,
-    'ExifIFD:SpectralSensitivity' => 34852,
-    'ExifIFD:StandardOutputSensitivity' => 34865,
-    'ExifIFD:StoNits' => 37439,
-    'ExifIFD:StripByteCounts' => 279,
-    'ExifIFD:StripOffsets' => 273,
-    'ExifIFD:StripRowCounts' => 559,
-    'ExifIFD:SubSecTime' => 37520,
-    'ExifIFD:SubSecTimeDigitized' => 37522,
-    'ExifIFD:SubSecTimeOriginal' => 37521,
-    'ExifIFD:SubTileBlockSize' => 50974,
-    'ExifIFD:SubjectArea' => 37396,
-    'ExifIFD:SubjectDistance' => 37382,
-    'ExifIFD:SubjectDistanceRange' => 41996,
-    'ExifIFD:SubjectLocation' => 41492,
-    'ExifIFD:T4Options' => 292,
-    'ExifIFD:T6Options' => 293,
-    'ExifIFD:T82Options' => 435,
-    'ExifIFD:T88Options' => 34690,
-    'ExifIFD:TIFF-EPStandardID' => 41494,
-    'ExifIFD:TIFF_FXExtensions' => 34687,
-    'ExifIFD:TextureFormat' => 33302,
-    'ExifIFD:TileByteCounts' => 325,
-    'ExifIFD:TileDepth' => 32998,
-    'ExifIFD:TileOffsets' => 324,
-    'ExifIFD:TimeZoneOffset' => 34858,
-    'ExifIFD:TransferRange' => 342,
-    'ExifIFD:Transformation' => 48130,
-    'ExifIFD:TransparencyIndicator' => 34028,
-    'ExifIFD:TrapIndicator' => 34031,
-    'ExifIFD:UIC1Tag' => 33628,
-    'ExifIFD:UIC2Tag' => 33629,
-    'ExifIFD:UIC3Tag' => 33630,
-    'ExifIFD:UIC4Tag' => 33631,
-    'ExifIFD:USPTOMiscellaneous' => 999,
-    'ExifIFD:USPTOOriginalContentType' => 50560,
-    'ExifIFD:Uncompressed' => 48131,
-    'ExifIFD:UserComment' => 37510,
-    'ExifIFD:VersionYear' => 404,
-    'ExifIFD:WB_GRGBLevels' => 34306,
-    'ExifIFD:WangAnnotation' => 32932,
-    'ExifIFD:WangTag1' => 32931,
-    'ExifIFD:WangTag3' => 32933,
-    'ExifIFD:WangTag4' => 32934,
-    'ExifIFD:WarpQuadrilateral' => 32955,
-    'ExifIFD:WaterDepth' => 37891,
-    'ExifIFD:WhiteBalance' => 65102,
-    'ExifIFD:WidthResolution' => 48258,
-    'ExifIFD:WrapModes' => 33303,
-    'ExifIFD:XClipPathUnits' => 344,
-    'ExifIFD:XP_DIP_XML' => 18247,
-    'ExifIFD:YClipPathUnits' => 345,
+    'ExifIFD:Acceleration' =>
+    array (
+      0 => 37892,
+    ),
+    'ExifIFD:AdventRevision' =>
+    array (
+      0 => 33590,
+    ),
+    'ExifIFD:AdventScale' =>
+    array (
+      0 => 33589,
+    ),
+    'ExifIFD:AffineTransformMat' =>
+    array (
+      0 => 32956,
+    ),
+    'ExifIFD:AliasLayerMetadata' =>
+    array (
+      0 => 50784,
+    ),
+    'ExifIFD:AlphaByteCount' =>
+    array (
+      0 => 48323,
+    ),
+    'ExifIFD:AlphaDataDiscard' =>
+    array (
+      0 => 48325,
+    ),
+    'ExifIFD:AlphaOffset' =>
+    array (
+      0 => 48322,
+    ),
+    'ExifIFD:AmbientTemperature' =>
+    array (
+      0 => 37888,
+    ),
+    'ExifIFD:Annotations' =>
+    array (
+      0 => 50255,
+    ),
+    'ExifIFD:ApertureValue' =>
+    array (
+      0 => 37378,
+    ),
+    'ExifIFD:BackgroundColorIndicator' =>
+    array (
+      0 => 34024,
+    ),
+    'ExifIFD:BackgroundColorValue' =>
+    array (
+      0 => 34026,
+    ),
+    'ExifIFD:BadFaxLines' =>
+    array (
+      0 => 326,
+    ),
+    'ExifIFD:BatteryLevel' =>
+    array (
+      0 => 33423,
+    ),
+    'ExifIFD:BitsPerExtendedRunLength' =>
+    array (
+      0 => 34021,
+    ),
+    'ExifIFD:BitsPerRunLength' =>
+    array (
+      0 => 34020,
+    ),
+    'ExifIFD:Brightness' =>
+    array (
+      0 => 65107,
+    ),
+    'ExifIFD:BrightnessValue' =>
+    array (
+      0 => 37379,
+    ),
+    'ExifIFD:CFAPattern' =>
+    array (
+      0 => 41730,
+    ),
+    'ExifIFD:CIP3DataFile' =>
+    array (
+      0 => 37434,
+    ),
+    'ExifIFD:CIP3Sheet' =>
+    array (
+      0 => 37435,
+    ),
+    'ExifIFD:CIP3Side' =>
+    array (
+      0 => 37436,
+    ),
+    'ExifIFD:CMYKEquivalent' =>
+    array (
+      0 => 34032,
+    ),
+    'ExifIFD:CR2CFAPattern' =>
+    array (
+      0 => 50656,
+    ),
+    'ExifIFD:CameraElevationAngle' =>
+    array (
+      0 => 37893,
+    ),
+    'ExifIFD:CleanFaxData' =>
+    array (
+      0 => 327,
+    ),
+    'ExifIFD:ClipPath' =>
+    array (
+      0 => 343,
+    ),
+    'ExifIFD:CodingMethods' =>
+    array (
+      0 => 403,
+    ),
+    'ExifIFD:ColorCharacterization' =>
+    array (
+      0 => 34029,
+    ),
+    'ExifIFD:ColorMap' =>
+    array (
+      0 => 320,
+    ),
+    'ExifIFD:ColorResponseUnit' =>
+    array (
+      0 => 300,
+    ),
+    'ExifIFD:ColorSequence' =>
+    array (
+      0 => 34017,
+    ),
+    'ExifIFD:ColorSpace' =>
+    array (
+      0 => 40961,
+    ),
+    'ExifIFD:ColorTable' =>
+    array (
+      0 => 34022,
+    ),
+    'ExifIFD:ComponentsConfiguration' =>
+    array (
+      0 => 37121,
+    ),
+    'ExifIFD:CompressedBitsPerPixel' =>
+    array (
+      0 => 37122,
+    ),
+    'ExifIFD:ConsecutiveBadFaxLines' =>
+    array (
+      0 => 328,
+    ),
+    'ExifIFD:Contrast' =>
+    array (
+      0 => 41992,
+      1 => 65108,
+    ),
+    'ExifIFD:Converter' =>
+    array (
+      0 => 65101,
+    ),
+    'ExifIFD:CreateDate' =>
+    array (
+      0 => 36868,
+    ),
+    'ExifIFD:CustomRendered' =>
+    array (
+      0 => 41985,
+    ),
+    'ExifIFD:DataType' =>
+    array (
+      0 => 32996,
+    ),
+    'ExifIFD:DateTimeOriginal' =>
+    array (
+      0 => 36867,
+    ),
+    'ExifIFD:Decode' =>
+    array (
+      0 => 433,
+    ),
+    'ExifIFD:DefaultImageColor' =>
+    array (
+      0 => 434,
+    ),
+    'ExifIFD:DeviceSettingDescription' =>
+    array (
+      0 => 41995,
+    ),
+    'ExifIFD:DigitalZoomRatio' =>
+    array (
+      0 => 41988,
+    ),
+    'ExifIFD:DotRange' =>
+    array (
+      0 => 336,
+    ),
+    'ExifIFD:ExifImageHeight' =>
+    array (
+      0 => 40963,
+    ),
+    'ExifIFD:ExifImageWidth' =>
+    array (
+      0 => 40962,
+    ),
+    'ExifIFD:ExifVersion' =>
+    array (
+      0 => 36864,
+    ),
+    'ExifIFD:ExpandFilm' =>
+    array (
+      0 => 44994,
+    ),
+    'ExifIFD:ExpandFilterLens' =>
+    array (
+      0 => 44995,
+    ),
+    'ExifIFD:ExpandFlashLamp' =>
+    array (
+      0 => 44997,
+    ),
+    'ExifIFD:ExpandLens' =>
+    array (
+      0 => 44993,
+    ),
+    'ExifIFD:ExpandScanner' =>
+    array (
+      0 => 44996,
+    ),
+    'ExifIFD:ExpandSoftware' =>
+    array (
+      0 => 44992,
+    ),
+    'ExifIFD:Exposure' =>
+    array (
+      0 => 65105,
+    ),
+    'ExifIFD:ExposureCompensation' =>
+    array (
+      0 => 37380,
+    ),
+    'ExifIFD:ExposureIndex' =>
+    array (
+      0 => 37397,
+      1 => 41493,
+    ),
+    'ExifIFD:ExposureMode' =>
+    array (
+      0 => 41986,
+    ),
+    'ExifIFD:ExposureProgram' =>
+    array (
+      0 => 34850,
+    ),
+    'ExifIFD:ExposureTime' =>
+    array (
+      0 => 33434,
+    ),
+    'ExifIFD:ExtraSamples' =>
+    array (
+      0 => 338,
+    ),
+    'ExifIFD:FNumber' =>
+    array (
+      0 => 33437,
+    ),
+    'ExifIFD:FaxProfile' =>
+    array (
+      0 => 402,
+    ),
+    'ExifIFD:FaxRecvParams' =>
+    array (
+      0 => 34908,
+    ),
+    'ExifIFD:FaxRecvTime' =>
+    array (
+      0 => 34910,
+    ),
+    'ExifIFD:FaxSubAddress' =>
+    array (
+      0 => 34909,
+    ),
+    'ExifIFD:FedexEDR' =>
+    array (
+      0 => 34929,
+    ),
+    'ExifIFD:FileSource' =>
+    array (
+      0 => 41728,
+    ),
+    'ExifIFD:Flash' =>
+    array (
+      0 => 37385,
+    ),
+    'ExifIFD:FlashEnergy' =>
+    array (
+      0 => 37387,
+      1 => 41483,
+    ),
+    'ExifIFD:FlashpixVersion' =>
+    array (
+      0 => 40960,
+    ),
+    'ExifIFD:FocalLength' =>
+    array (
+      0 => 37386,
+    ),
+    'ExifIFD:FocalLengthIn35mmFormat' =>
+    array (
+      0 => 41989,
+    ),
+    'ExifIFD:FocalPlaneResolutionUnit' =>
+    array (
+      0 => 37392,
+      1 => 41488,
+    ),
+    'ExifIFD:FocalPlaneXResolution' =>
+    array (
+      0 => 37390,
+      1 => 41486,
+    ),
+    'ExifIFD:FocalPlaneYResolution' =>
+    array (
+      0 => 37391,
+      1 => 41487,
+    ),
+    'ExifIFD:FovCot' =>
+    array (
+      0 => 33304,
+    ),
+    'ExifIFD:FreeByteCounts' =>
+    array (
+      0 => 289,
+    ),
+    'ExifIFD:FreeOffsets' =>
+    array (
+      0 => 288,
+    ),
+    'ExifIFD:GDALMetadata' =>
+    array (
+      0 => 42112,
+    ),
+    'ExifIFD:GDALNoData' =>
+    array (
+      0 => 42113,
+    ),
+    'ExifIFD:GainControl' =>
+    array (
+      0 => 41991,
+    ),
+    'ExifIFD:Gamma' =>
+    array (
+      0 => 42240,
+    ),
+    'ExifIFD:GooglePlusUploadCode' =>
+    array (
+      0 => 36873,
+    ),
+    'ExifIFD:GrayResponseCurve' =>
+    array (
+      0 => 291,
+    ),
+    'ExifIFD:HCUsage' =>
+    array (
+      0 => 34030,
+    ),
+    'ExifIFD:HeightResolution' =>
+    array (
+      0 => 48259,
+    ),
+    'ExifIFD:Humidity' =>
+    array (
+      0 => 37889,
+    ),
+    'ExifIFD:INGRReserved' =>
+    array (
+      0 => 33921,
+    ),
+    'ExifIFD:ISO' =>
+    array (
+      0 => 34855,
+    ),
+    'ExifIFD:ISOSpeed' =>
+    array (
+      0 => 34867,
+    ),
+    'ExifIFD:ISOSpeedLatitudeyyy' =>
+    array (
+      0 => 34868,
+    ),
+    'ExifIFD:ISOSpeedLatitudezzz' =>
+    array (
+      0 => 34869,
+    ),
+    'ExifIFD:IT8Header' =>
+    array (
+      0 => 34018,
+    ),
+    'ExifIFD:ImageByteCount' =>
+    array (
+      0 => 48321,
+    ),
+    'ExifIFD:ImageColorIndicator' =>
+    array (
+      0 => 34023,
+    ),
+    'ExifIFD:ImageColorValue' =>
+    array (
+      0 => 34025,
+    ),
+    'ExifIFD:ImageDataDiscard' =>
+    array (
+      0 => 48324,
+    ),
+    'ExifIFD:ImageDepth' =>
+    array (
+      0 => 32997,
+    ),
+    'ExifIFD:ImageFullHeight' =>
+    array (
+      0 => 33301,
+    ),
+    'ExifIFD:ImageFullWidth' =>
+    array (
+      0 => 33300,
+    ),
+    'ExifIFD:ImageHeight' =>
+    array (
+      0 => 48257,
+    ),
+    'ExifIFD:ImageHistory' =>
+    array (
+      0 => 37395,
+      1 => 41491,
+    ),
+    'ExifIFD:ImageID' =>
+    array (
+      0 => 32781,
+    ),
+    'ExifIFD:ImageLayer' =>
+    array (
+      0 => 34732,
+    ),
+    'ExifIFD:ImageNumber' =>
+    array (
+      0 => 37393,
+      1 => 41489,
+    ),
+    'ExifIFD:ImageOffset' =>
+    array (
+      0 => 48320,
+    ),
+    'ExifIFD:ImageReferencePoints' =>
+    array (
+      0 => 32953,
+    ),
+    'ExifIFD:ImageType' =>
+    array (
+      0 => 48132,
+    ),
+    'ExifIFD:ImageUniqueID' =>
+    array (
+      0 => 42016,
+    ),
+    'ExifIFD:ImageWidth' =>
+    array (
+      0 => 48256,
+    ),
+    'ExifIFD:Indexed' =>
+    array (
+      0 => 346,
+    ),
+    'ExifIFD:InkNames' =>
+    array (
+      0 => 333,
+    ),
+    'ExifIFD:IntergraphFlagRegisters' =>
+    array (
+      0 => 33919,
+    ),
+    'ExifIFD:IntergraphMatrix' =>
+    array (
+      0 => 33920,
+    ),
+    'ExifIFD:IntergraphPacketData' =>
+    array (
+      0 => 33918,
+    ),
+    'ExifIFD:Interlace' =>
+    array (
+      0 => 34857,
+    ),
+    'ExifIFD:JBIGOptions' =>
+    array (
+      0 => 34750,
+    ),
+    'ExifIFD:JPEGACTables' =>
+    array (
+      0 => 521,
+    ),
+    'ExifIFD:JPEGDCTables' =>
+    array (
+      0 => 520,
+    ),
+    'ExifIFD:JPEGLosslessPredictors' =>
+    array (
+      0 => 517,
+    ),
+    'ExifIFD:JPEGPointTransforms' =>
+    array (
+      0 => 518,
+    ),
+    'ExifIFD:JPEGProc' =>
+    array (
+      0 => 512,
+    ),
+    'ExifIFD:JPEGQTables' =>
+    array (
+      0 => 519,
+    ),
+    'ExifIFD:JPEGRestartInterval' =>
+    array (
+      0 => 515,
+    ),
+    'ExifIFD:JPEGTables' =>
+    array (
+      0 => 347,
+      1 => 437,
+    ),
+    'ExifIFD:JPLCartoIFD' =>
+    array (
+      0 => 34263,
+    ),
+    'ExifIFD:Lens' =>
+    array (
+      0 => 65002,
+    ),
+    'ExifIFD:LensInfo' =>
+    array (
+      0 => 42034,
+    ),
+    'ExifIFD:LensMake' =>
+    array (
+      0 => 42035,
+    ),
+    'ExifIFD:LensModel' =>
+    array (
+      0 => 42036,
+    ),
+    'ExifIFD:LensSerialNumber' =>
+    array (
+      0 => 42037,
+    ),
+    'ExifIFD:LightSource' =>
+    array (
+      0 => 37384,
+    ),
+    'ExifIFD:MDColorTable' =>
+    array (
+      0 => 33447,
+    ),
+    'ExifIFD:MDFileTag' =>
+    array (
+      0 => 33445,
+    ),
+    'ExifIFD:MDFileUnits' =>
+    array (
+      0 => 33452,
+    ),
+    'ExifIFD:MDLabName' =>
+    array (
+      0 => 33448,
+    ),
+    'ExifIFD:MDPrepDate' =>
+    array (
+      0 => 33450,
+    ),
+    'ExifIFD:MDPrepTime' =>
+    array (
+      0 => 33451,
+    ),
+    'ExifIFD:MDSampleInfo' =>
+    array (
+      0 => 33449,
+    ),
+    'ExifIFD:MDScalePixel' =>
+    array (
+      0 => 33446,
+    ),
+    'ExifIFD:MSDocumentText' =>
+    array (
+      0 => 37679,
+    ),
+    'ExifIFD:MSDocumentTextPosition' =>
+    array (
+      0 => 37681,
+    ),
+    'ExifIFD:MSPropertySetStorage' =>
+    array (
+      0 => 37680,
+    ),
+    'ExifIFD:MatrixWorldToCamera' =>
+    array (
+      0 => 33306,
+    ),
+    'ExifIFD:MatrixWorldToScreen' =>
+    array (
+      0 => 33305,
+    ),
+    'ExifIFD:Matteing' =>
+    array (
+      0 => 32995,
+    ),
+    'ExifIFD:MaxApertureValue' =>
+    array (
+      0 => 37381,
+    ),
+    'ExifIFD:MeteringMode' =>
+    array (
+      0 => 37383,
+    ),
+    'ExifIFD:ModeNumber' =>
+    array (
+      0 => 405,
+    ),
+    'ExifIFD:Model2' =>
+    array (
+      0 => 33405,
+    ),
+    'ExifIFD:ModelTiePoint' =>
+    array (
+      0 => 33922,
+    ),
+    'ExifIFD:ModelTransform' =>
+    array (
+      0 => 34264,
+    ),
+    'ExifIFD:MoireFilter' =>
+    array (
+      0 => 65112,
+    ),
+    'ExifIFD:MultiProfiles' =>
+    array (
+      0 => 34688,
+    ),
+    'ExifIFD:Noise' =>
+    array (
+      0 => 37389,
+      1 => 41485,
+    ),
+    'ExifIFD:NumberofInks' =>
+    array (
+      0 => 334,
+    ),
+    'ExifIFD:OPIProxy' =>
+    array (
+      0 => 351,
+    ),
+    'ExifIFD:OceApplicationSelector' =>
+    array (
+      0 => 50216,
+    ),
+    'ExifIFD:OceIDNumber' =>
+    array (
+      0 => 50217,
+    ),
+    'ExifIFD:OceImageLogic' =>
+    array (
+      0 => 50218,
+    ),
+    'ExifIFD:OceScanjobDesc' =>
+    array (
+      0 => 50215,
+    ),
+    'ExifIFD:OffsetSchema' =>
+    array (
+      0 => 59933,
+    ),
+    'ExifIFD:OffsetTime' =>
+    array (
+      0 => 36880,
+    ),
+    'ExifIFD:OffsetTimeDigitized' =>
+    array (
+      0 => 36882,
+    ),
+    'ExifIFD:OffsetTimeOriginal' =>
+    array (
+      0 => 36881,
+    ),
+    'ExifIFD:Opto-ElectricConvFactor' =>
+    array (
+      0 => 34856,
+    ),
+    'ExifIFD:OriginalFileName' =>
+    array (
+      0 => 50547,
+    ),
+    'ExifIFD:OtherImageLength' =>
+    array (
+      0 => 514,
+    ),
+    'ExifIFD:OtherImageStart' =>
+    array (
+      0 => 513,
+    ),
+    'ExifIFD:OwnerName' =>
+    array (
+      0 => 42032,
+      1 => 65000,
+    ),
+    'ExifIFD:PixelFormat' =>
+    array (
+      0 => 48129,
+    ),
+    'ExifIFD:PixelIntensityRange' =>
+    array (
+      0 => 34027,
+    ),
+    'ExifIFD:PixelMagicJBIGOptions' =>
+    array (
+      0 => 34232,
+    ),
+    'ExifIFD:PixelScale' =>
+    array (
+      0 => 33550,
+    ),
+    'ExifIFD:Pressure' =>
+    array (
+      0 => 37890,
+    ),
+    'ExifIFD:ProfileType' =>
+    array (
+      0 => 401,
+    ),
+    'ExifIFD:RasterPadding' =>
+    array (
+      0 => 34019,
+    ),
+    'ExifIFD:RawFile' =>
+    array (
+      0 => 65100,
+    ),
+    'ExifIFD:RawImageSegmentation' =>
+    array (
+      0 => 50752,
+    ),
+    'ExifIFD:RecommendedExposureIndex' =>
+    array (
+      0 => 34866,
+    ),
+    'ExifIFD:RegionXformTackPoint' =>
+    array (
+      0 => 32954,
+    ),
+    'ExifIFD:RelatedSoundFile' =>
+    array (
+      0 => 40964,
+    ),
+    'ExifIFD:RowInterleaveFactor' =>
+    array (
+      0 => 50975,
+    ),
+    'ExifIFD:SMaxSampleValue' =>
+    array (
+      0 => 341,
+    ),
+    'ExifIFD:SMinSampleValue' =>
+    array (
+      0 => 340,
+    ),
+    'ExifIFD:SamsungRawByteOrder' =>
+    array (
+      0 => 41217,
+    ),
+    'ExifIFD:SamsungRawPointersLength' =>
+    array (
+      0 => 40977,
+    ),
+    'ExifIFD:SamsungRawPointersOffset' =>
+    array (
+      0 => 40976,
+    ),
+    'ExifIFD:SamsungRawUnknown' =>
+    array (
+      0 => 41218,
+    ),
+    'ExifIFD:Saturation' =>
+    array (
+      0 => 41993,
+      1 => 65109,
+    ),
+    'ExifIFD:SceneCaptureType' =>
+    array (
+      0 => 41990,
+    ),
+    'ExifIFD:SceneType' =>
+    array (
+      0 => 41729,
+    ),
+    'ExifIFD:SecurityClassification' =>
+    array (
+      0 => 37394,
+      1 => 41490,
+    ),
+    'ExifIFD:SelfTimerMode' =>
+    array (
+      0 => 34859,
+    ),
+    'ExifIFD:SensingMethod' =>
+    array (
+      0 => 37399,
+      1 => 41495,
+    ),
+    'ExifIFD:SensitivityType' =>
+    array (
+      0 => 34864,
+    ),
+    'ExifIFD:SerialNumber' =>
+    array (
+      0 => 42033,
+      1 => 65001,
+    ),
+    'ExifIFD:Shadows' =>
+    array (
+      0 => 65106,
+    ),
+    'ExifIFD:SharedData' =>
+    array (
+      0 => 34689,
+    ),
+    'ExifIFD:Sharpness' =>
+    array (
+      0 => 41994,
+      1 => 65110,
+    ),
+    'ExifIFD:ShutterSpeedValue' =>
+    array (
+      0 => 37377,
+    ),
+    'ExifIFD:Site' =>
+    array (
+      0 => 34016,
+    ),
+    'ExifIFD:Smoothness' =>
+    array (
+      0 => 65111,
+    ),
+    'ExifIFD:SonyRawFileType' =>
+    array (
+      0 => 28672,
+    ),
+    'ExifIFD:SonyToneCurve' =>
+    array (
+      0 => 28688,
+    ),
+    'ExifIFD:SpatialFrequencyResponse' =>
+    array (
+      0 => 37388,
+      1 => 41484,
+    ),
+    'ExifIFD:SpectralSensitivity' =>
+    array (
+      0 => 34852,
+    ),
+    'ExifIFD:StandardOutputSensitivity' =>
+    array (
+      0 => 34865,
+    ),
+    'ExifIFD:StoNits' =>
+    array (
+      0 => 37439,
+    ),
+    'ExifIFD:StripByteCounts' =>
+    array (
+      0 => 279,
+    ),
+    'ExifIFD:StripOffsets' =>
+    array (
+      0 => 273,
+    ),
+    'ExifIFD:StripRowCounts' =>
+    array (
+      0 => 559,
+    ),
+    'ExifIFD:SubSecTime' =>
+    array (
+      0 => 37520,
+    ),
+    'ExifIFD:SubSecTimeDigitized' =>
+    array (
+      0 => 37522,
+    ),
+    'ExifIFD:SubSecTimeOriginal' =>
+    array (
+      0 => 37521,
+    ),
+    'ExifIFD:SubTileBlockSize' =>
+    array (
+      0 => 50974,
+    ),
+    'ExifIFD:SubjectArea' =>
+    array (
+      0 => 37396,
+    ),
+    'ExifIFD:SubjectDistance' =>
+    array (
+      0 => 37382,
+    ),
+    'ExifIFD:SubjectDistanceRange' =>
+    array (
+      0 => 41996,
+    ),
+    'ExifIFD:SubjectLocation' =>
+    array (
+      0 => 41492,
+    ),
+    'ExifIFD:T4Options' =>
+    array (
+      0 => 292,
+    ),
+    'ExifIFD:T6Options' =>
+    array (
+      0 => 293,
+    ),
+    'ExifIFD:T82Options' =>
+    array (
+      0 => 435,
+    ),
+    'ExifIFD:T88Options' =>
+    array (
+      0 => 34690,
+    ),
+    'ExifIFD:TIFF-EPStandardID' =>
+    array (
+      0 => 37398,
+      1 => 41494,
+    ),
+    'ExifIFD:TIFF_FXExtensions' =>
+    array (
+      0 => 34687,
+    ),
+    'ExifIFD:TextureFormat' =>
+    array (
+      0 => 33302,
+    ),
+    'ExifIFD:TileByteCounts' =>
+    array (
+      0 => 325,
+    ),
+    'ExifIFD:TileDepth' =>
+    array (
+      0 => 32998,
+    ),
+    'ExifIFD:TileOffsets' =>
+    array (
+      0 => 324,
+    ),
+    'ExifIFD:TimeZoneOffset' =>
+    array (
+      0 => 34858,
+    ),
+    'ExifIFD:TransferRange' =>
+    array (
+      0 => 342,
+    ),
+    'ExifIFD:Transformation' =>
+    array (
+      0 => 48130,
+    ),
+    'ExifIFD:TransparencyIndicator' =>
+    array (
+      0 => 34028,
+    ),
+    'ExifIFD:TrapIndicator' =>
+    array (
+      0 => 34031,
+    ),
+    'ExifIFD:UIC1Tag' =>
+    array (
+      0 => 33628,
+    ),
+    'ExifIFD:UIC2Tag' =>
+    array (
+      0 => 33629,
+    ),
+    'ExifIFD:UIC3Tag' =>
+    array (
+      0 => 33630,
+    ),
+    'ExifIFD:UIC4Tag' =>
+    array (
+      0 => 33631,
+    ),
+    'ExifIFD:USPTOMiscellaneous' =>
+    array (
+      0 => 999,
+    ),
+    'ExifIFD:USPTOOriginalContentType' =>
+    array (
+      0 => 50560,
+    ),
+    'ExifIFD:Uncompressed' =>
+    array (
+      0 => 48131,
+    ),
+    'ExifIFD:UserComment' =>
+    array (
+      0 => 37510,
+    ),
+    'ExifIFD:VersionYear' =>
+    array (
+      0 => 404,
+    ),
+    'ExifIFD:WB_GRGBLevels' =>
+    array (
+      0 => 34306,
+    ),
+    'ExifIFD:WangAnnotation' =>
+    array (
+      0 => 32932,
+    ),
+    'ExifIFD:WangTag1' =>
+    array (
+      0 => 32931,
+    ),
+    'ExifIFD:WangTag3' =>
+    array (
+      0 => 32933,
+    ),
+    'ExifIFD:WangTag4' =>
+    array (
+      0 => 32934,
+    ),
+    'ExifIFD:WarpQuadrilateral' =>
+    array (
+      0 => 32955,
+    ),
+    'ExifIFD:WaterDepth' =>
+    array (
+      0 => 37891,
+    ),
+    'ExifIFD:WhiteBalance' =>
+    array (
+      0 => 41987,
+      1 => 65102,
+    ),
+    'ExifIFD:WidthResolution' =>
+    array (
+      0 => 48258,
+    ),
+    'ExifIFD:WrapModes' =>
+    array (
+      0 => 33303,
+    ),
+    'ExifIFD:XClipPathUnits' =>
+    array (
+      0 => 344,
+    ),
+    'ExifIFD:XP_DIP_XML' =>
+    array (
+      0 => 18247,
+    ),
+    'ExifIFD:YClipPathUnits' =>
+    array (
+      0 => 345,
+    ),
   ),
   'items' =>
   array (
     273 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StripOffsets',
-      'title' => 'Strip Offsets',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'StripOffsets',
+        'title' => 'Strip Offsets',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'StripOffsets',
+        'exiftoolDOMNode' => 'ExifIFD:StripOffsets',
       ),
-      'phpExifTag' => 'StripOffsets',
-      'exiftoolDOMNode' => 'ExifIFD:StripOffsets',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'StripOffsets',
+        'title' => 'Strip Offsets',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'StripOffsets',
+        'exiftoolDOMNode' => 'ExifIFD:StripOffsets',
+      ),
     ),
     279 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'StripByteCounts',
-      'title' => 'Strip Byte Counts',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'collection' => 'Tag',
+        'name' => 'StripByteCounts',
+        'title' => 'Strip Byte Counts',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'StripByteCounts',
+        'exiftoolDOMNode' => 'ExifIFD:StripByteCounts',
       ),
-      'phpExifTag' => 'StripByteCounts',
-      'exiftoolDOMNode' => 'ExifIFD:StripByteCounts',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'StripByteCounts',
+        'title' => 'Strip Byte Counts',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'phpExifTag' => 'StripByteCounts',
+        'exiftoolDOMNode' => 'ExifIFD:StripByteCounts',
+      ),
     ),
     288 =>
     array (
@@ -3011,14 +4970,952 @@ class Exif extends Collection {
     ),
     37500 =>
     array (
-      'name' => 'MakerNote',
-      'title' => 'Maker Note',
-      'format' =>
+      0 =>
       array (
-        0 => 7,
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
       ),
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
-      'collection' => 'Tag',
+      1 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      2 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      3 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      4 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      5 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      6 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      7 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      8 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      9 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      10 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      11 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      12 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      13 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      14 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      15 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      16 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      17 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      18 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      19 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      20 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      21 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      22 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      23 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      24 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      25 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      26 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      27 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      28 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      29 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      30 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      31 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      32 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      33 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      34 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      35 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      36 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      37 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      38 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      39 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      40 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      41 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      42 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      43 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      44 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      45 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      46 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      47 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      48 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      49 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      50 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      51 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      52 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      53 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      54 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      55 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      56 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      57 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      58 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      59 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      60 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      61 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      62 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      63 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      64 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      65 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      66 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      67 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      68 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      69 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      70 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      71 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      72 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      73 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      74 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      75 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      76 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      77 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      78 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      79 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      80 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      81 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      82 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      83 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      84 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
+      85 =>
+      array (
+        'name' => 'MakerNote',
+        'title' => 'Maker Note',
+        'format' =>
+        array (
+          0 => 7,
+        ),
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\ExifMakerNote',
+        'collection' => 'Tag',
+      ),
     ),
     37510 =>
     array (

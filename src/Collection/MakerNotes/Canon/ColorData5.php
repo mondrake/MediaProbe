@@ -24,13 +24,27 @@ class ColorData5 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorDataVersion' => 0,
-    'PerChannelBlackLevel' => 333,
+    'ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'PerChannelBlackLevel' =>
+    array (
+      0 => 264,
+      1 => 333,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorDataVersion' => 0,
-    'Canon:PerChannelBlackLevel' => 333,
+    'Canon:ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:PerChannelBlackLevel' =>
+    array (
+      0 => 264,
+      1 => 333,
+    ),
   ),
   'items' =>
   array (

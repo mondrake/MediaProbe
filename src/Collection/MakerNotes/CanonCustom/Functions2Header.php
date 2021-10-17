@@ -20,10 +20,22 @@ class Functions2Header extends Collection {
   'defaultItemCollection' => 'MakerNotes\\CanonCustom\\Functions2',
   'itemsByName' =>
   array (
-    'AutoFocusDrive' => 3,
-    'Exposure' => 1,
-    'ImageFlashExposureDisplay' => 2,
-    'OperationOthers' => 4,
+    'AutoFocusDrive' =>
+    array (
+      0 => 3,
+    ),
+    'Exposure' =>
+    array (
+      0 => 1,
+    ),
+    'ImageFlashExposureDisplay' =>
+    array (
+      0 => 2,
+    ),
+    'OperationOthers' =>
+    array (
+      0 => 4,
+    ),
   ),
   'items' =>
   array (

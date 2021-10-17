@@ -24,13 +24,25 @@ class MakeModel extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'Make' => 0,
-    'Model' => 6,
+    'Make' =>
+    array (
+      0 => 0,
+    ),
+    'Model' =>
+    array (
+      0 => 6,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:Make' => 0,
-    'CanonRaw:Model' => 6,
+    'CanonRaw:Make' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:Model' =>
+    array (
+      0 => 6,
+    ),
   ),
   'items' =>
   array (

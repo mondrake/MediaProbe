@@ -24,23 +24,81 @@ class ColorData4 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AverageBlackLevel' => 231,
-    'ColorDataVersion' => 0,
-    'LinearityUpperMargin' => 725,
-    'NormalWhiteLevel' => 723,
-    'PerChannelBlackLevel' => 715,
-    'RawMeasuredRGGB' => 640,
-    'SpecularWhiteLevel' => 724,
+    'AverageBlackLevel' =>
+    array (
+      0 => 231,
+    ),
+    'ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'LinearityUpperMargin' =>
+    array (
+      0 => 698,
+      1 => 721,
+      2 => 725,
+    ),
+    'NormalWhiteLevel' =>
+    array (
+      0 => 696,
+      1 => 719,
+      2 => 723,
+    ),
+    'PerChannelBlackLevel' =>
+    array (
+      0 => 692,
+      1 => 715,
+      2 => 719,
+    ),
+    'RawMeasuredRGGB' =>
+    array (
+      0 => 640,
+    ),
+    'SpecularWhiteLevel' =>
+    array (
+      0 => 697,
+      1 => 720,
+      2 => 724,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AverageBlackLevel' => 231,
-    'Canon:ColorDataVersion' => 0,
-    'Canon:LinearityUpperMargin' => 725,
-    'Canon:NormalWhiteLevel' => 723,
-    'Canon:PerChannelBlackLevel' => 715,
-    'Canon:RawMeasuredRGGB' => 640,
-    'Canon:SpecularWhiteLevel' => 724,
+    'Canon:AverageBlackLevel' =>
+    array (
+      0 => 231,
+    ),
+    'Canon:ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:LinearityUpperMargin' =>
+    array (
+      0 => 698,
+      1 => 721,
+      2 => 725,
+    ),
+    'Canon:NormalWhiteLevel' =>
+    array (
+      0 => 696,
+      1 => 719,
+      2 => 723,
+    ),
+    'Canon:PerChannelBlackLevel' =>
+    array (
+      0 => 692,
+      1 => 715,
+      2 => 719,
+    ),
+    'Canon:RawMeasuredRGGB' =>
+    array (
+      0 => 640,
+    ),
+    'Canon:SpecularWhiteLevel' =>
+    array (
+      0 => 697,
+      1 => 720,
+      2 => 724,
+    ),
   ),
   'items' =>
   array (
@@ -152,14 +210,29 @@ class ColorData4 extends Collection {
     ),
     719 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'NormalWhiteLevel',
-      'title' => 'Normal White Level',
-      'format' =>
+      0 =>
       array (
-        0 => 3,
+        'collection' => 'Tag',
+        'name' => 'NormalWhiteLevel',
+        'title' => 'Normal White Level',
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:NormalWhiteLevel',
       ),
-      'exiftoolDOMNode' => 'Canon:NormalWhiteLevel',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'PerChannelBlackLevel',
+        'title' => 'Per Channel Black Level',
+        'components' => 4,
+        'format' =>
+        array (
+          0 => 3,
+        ),
+        'exiftoolDOMNode' => 'Canon:PerChannelBlackLevel',
+      ),
     ),
     720 =>
     array (

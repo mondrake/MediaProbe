@@ -24,15 +24,33 @@ class ExposureInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ApertureValue' => 2,
-    'ExposureCompensation' => 0,
-    'ShutterSpeedValue' => 1,
+    'ApertureValue' =>
+    array (
+      0 => 2,
+    ),
+    'ExposureCompensation' =>
+    array (
+      0 => 0,
+    ),
+    'ShutterSpeedValue' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:ApertureValue' => 2,
-    'CanonRaw:ExposureCompensation' => 0,
-    'CanonRaw:ShutterSpeedValue' => 1,
+    'CanonRaw:ApertureValue' =>
+    array (
+      0 => 2,
+    ),
+    'CanonRaw:ExposureCompensation' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:ShutterSpeedValue' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

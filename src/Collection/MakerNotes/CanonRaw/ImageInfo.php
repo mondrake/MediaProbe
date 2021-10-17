@@ -24,23 +24,65 @@ class ImageInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorBW' => 6,
-    'ColorBitDepth' => 5,
-    'ComponentBitDepth' => 4,
-    'ImageHeight' => 1,
-    'ImageWidth' => 0,
-    'PixelAspectRatio' => 2,
-    'Rotation' => 3,
+    'ColorBW' =>
+    array (
+      0 => 6,
+    ),
+    'ColorBitDepth' =>
+    array (
+      0 => 5,
+    ),
+    'ComponentBitDepth' =>
+    array (
+      0 => 4,
+    ),
+    'ImageHeight' =>
+    array (
+      0 => 1,
+    ),
+    'ImageWidth' =>
+    array (
+      0 => 0,
+    ),
+    'PixelAspectRatio' =>
+    array (
+      0 => 2,
+    ),
+    'Rotation' =>
+    array (
+      0 => 3,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:ColorBW' => 6,
-    'CanonRaw:ColorBitDepth' => 5,
-    'CanonRaw:ComponentBitDepth' => 4,
-    'CanonRaw:ImageHeight' => 1,
-    'CanonRaw:ImageWidth' => 0,
-    'CanonRaw:PixelAspectRatio' => 2,
-    'CanonRaw:Rotation' => 3,
+    'CanonRaw:ColorBW' =>
+    array (
+      0 => 6,
+    ),
+    'CanonRaw:ColorBitDepth' =>
+    array (
+      0 => 5,
+    ),
+    'CanonRaw:ComponentBitDepth' =>
+    array (
+      0 => 4,
+    ),
+    'CanonRaw:ImageHeight' =>
+    array (
+      0 => 1,
+    ),
+    'CanonRaw:ImageWidth' =>
+    array (
+      0 => 0,
+    ),
+    'CanonRaw:PixelAspectRatio' =>
+    array (
+      0 => 2,
+    ),
+    'CanonRaw:Rotation' =>
+    array (
+      0 => 3,
+    ),
   ),
   'items' =>
   array (

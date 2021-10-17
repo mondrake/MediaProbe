@@ -24,19 +24,49 @@ class PreviewImageInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'PreviewImageHeight' => 4,
-    'PreviewImageLength' => 2,
-    'PreviewImageStart' => 5,
-    'PreviewImageWidth' => 3,
-    'PreviewQuality' => 1,
+    'PreviewImageHeight' =>
+    array (
+      0 => 4,
+    ),
+    'PreviewImageLength' =>
+    array (
+      0 => 2,
+    ),
+    'PreviewImageStart' =>
+    array (
+      0 => 5,
+    ),
+    'PreviewImageWidth' =>
+    array (
+      0 => 3,
+    ),
+    'PreviewQuality' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:PreviewImageHeight' => 4,
-    'Canon:PreviewImageLength' => 2,
-    'Canon:PreviewImageStart' => 5,
-    'Canon:PreviewImageWidth' => 3,
-    'Canon:PreviewQuality' => 1,
+    'Canon:PreviewImageHeight' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:PreviewImageLength' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:PreviewImageStart' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:PreviewImageWidth' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:PreviewQuality' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

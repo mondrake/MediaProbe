@@ -24,11 +24,17 @@ class SerialInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'InternalSerialNumber' => 9,
+    'InternalSerialNumber' =>
+    array (
+      0 => 9,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:InternalSerialNumber' => 9,
+    'Canon:InternalSerialNumber' =>
+    array (
+      0 => 9,
+    ),
   ),
   'items' =>
   array (

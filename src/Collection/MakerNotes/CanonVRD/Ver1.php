@@ -24,95 +24,353 @@ class Ver1 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'BlueCurveLimits' => 510,
-    'BlueCurvePoints' => 468,
-    'BrightnessAdj' => 276,
-    'CheckMark' => 618,
-    'ColorToneAdj' => 286,
-    'ConstrainedCropHeight' => 614,
-    'ConstrainedCropWidth' => 610,
-    'ContrastAdj' => 277,
-    'CropActive' => 580,
-    'CropAspectRatio' => 608,
-    'CropHeight' => 588,
-    'CropLeft' => 582,
-    'CropTop' => 584,
-    'CropWidth' => 586,
-    'DynamicRangeMax' => 124,
-    'DynamicRangeMin' => 122,
-    'GreenCurveLimits' => 452,
-    'GreenCurvePoints' => 410,
-    'LuminanceCurveLimits' => 336,
-    'LuminanceCurvePoints' => 294,
-    'RGBCurveLimits' => 568,
-    'RGBCurvePoints' => 526,
-    'RawBrightnessAdj' => 56,
-    'RawColorAdj' => 46,
-    'RawCustomSaturation' => 48,
-    'RawCustomTone' => 52,
-    'RedCurveLimits' => 394,
-    'RedCurvePoints' => 352,
-    'Rotation' => 622,
-    'SaturationAdj' => 278,
-    'SharpnessAdj' => 602,
-    'ToneCurveActive' => 272,
-    'ToneCurveInterpolation' => 345,
-    'ToneCurveMode' => 275,
-    'ToneCurveProperty' => 60,
-    'VRDVersion' => 2,
-    'WBAdjColorTemp' => 26,
-    'WBAdjRGGBLevels' => 6,
-    'WBFineTuneActive' => 36,
-    'WBFineTuneSaturation' => 40,
-    'WBFineTuneTone' => 44,
-    'WhiteBalanceAdj' => 24,
-    'WorkColorSpace' => 624,
+    'BlueCurveLimits' =>
+    array (
+      0 => 510,
+    ),
+    'BlueCurvePoints' =>
+    array (
+      0 => 468,
+    ),
+    'BrightnessAdj' =>
+    array (
+      0 => 276,
+    ),
+    'CheckMark' =>
+    array (
+      0 => 618,
+    ),
+    'ColorToneAdj' =>
+    array (
+      0 => 286,
+    ),
+    'ConstrainedCropHeight' =>
+    array (
+      0 => 614,
+    ),
+    'ConstrainedCropWidth' =>
+    array (
+      0 => 610,
+    ),
+    'ContrastAdj' =>
+    array (
+      0 => 277,
+    ),
+    'CropActive' =>
+    array (
+      0 => 580,
+    ),
+    'CropAspectRatio' =>
+    array (
+      0 => 608,
+    ),
+    'CropHeight' =>
+    array (
+      0 => 588,
+    ),
+    'CropLeft' =>
+    array (
+      0 => 582,
+    ),
+    'CropTop' =>
+    array (
+      0 => 584,
+    ),
+    'CropWidth' =>
+    array (
+      0 => 586,
+    ),
+    'DynamicRangeMax' =>
+    array (
+      0 => 124,
+    ),
+    'DynamicRangeMin' =>
+    array (
+      0 => 122,
+    ),
+    'GreenCurveLimits' =>
+    array (
+      0 => 452,
+    ),
+    'GreenCurvePoints' =>
+    array (
+      0 => 410,
+    ),
+    'LuminanceCurveLimits' =>
+    array (
+      0 => 336,
+    ),
+    'LuminanceCurvePoints' =>
+    array (
+      0 => 294,
+    ),
+    'RGBCurveLimits' =>
+    array (
+      0 => 568,
+    ),
+    'RGBCurvePoints' =>
+    array (
+      0 => 526,
+    ),
+    'RawBrightnessAdj' =>
+    array (
+      0 => 56,
+    ),
+    'RawColorAdj' =>
+    array (
+      0 => 46,
+    ),
+    'RawCustomSaturation' =>
+    array (
+      0 => 48,
+    ),
+    'RawCustomTone' =>
+    array (
+      0 => 52,
+    ),
+    'RedCurveLimits' =>
+    array (
+      0 => 394,
+    ),
+    'RedCurvePoints' =>
+    array (
+      0 => 352,
+    ),
+    'Rotation' =>
+    array (
+      0 => 622,
+    ),
+    'SaturationAdj' =>
+    array (
+      0 => 278,
+    ),
+    'SharpnessAdj' =>
+    array (
+      0 => 602,
+    ),
+    'ToneCurveActive' =>
+    array (
+      0 => 272,
+    ),
+    'ToneCurveInterpolation' =>
+    array (
+      0 => 345,
+    ),
+    'ToneCurveMode' =>
+    array (
+      0 => 275,
+    ),
+    'ToneCurveProperty' =>
+    array (
+      0 => 60,
+    ),
+    'VRDVersion' =>
+    array (
+      0 => 2,
+    ),
+    'WBAdjColorTemp' =>
+    array (
+      0 => 26,
+    ),
+    'WBAdjRGGBLevels' =>
+    array (
+      0 => 6,
+    ),
+    'WBFineTuneActive' =>
+    array (
+      0 => 36,
+    ),
+    'WBFineTuneSaturation' =>
+    array (
+      0 => 40,
+    ),
+    'WBFineTuneTone' =>
+    array (
+      0 => 44,
+    ),
+    'WhiteBalanceAdj' =>
+    array (
+      0 => 24,
+    ),
+    'WorkColorSpace' =>
+    array (
+      0 => 624,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:BlueCurveLimits' => 510,
-    'CanonVRD:BlueCurvePoints' => 468,
-    'CanonVRD:BrightnessAdj' => 276,
-    'CanonVRD:CheckMark' => 618,
-    'CanonVRD:ColorToneAdj' => 286,
-    'CanonVRD:ConstrainedCropHeight' => 614,
-    'CanonVRD:ConstrainedCropWidth' => 610,
-    'CanonVRD:ContrastAdj' => 277,
-    'CanonVRD:CropActive' => 580,
-    'CanonVRD:CropAspectRatio' => 608,
-    'CanonVRD:CropHeight' => 588,
-    'CanonVRD:CropLeft' => 582,
-    'CanonVRD:CropTop' => 584,
-    'CanonVRD:CropWidth' => 586,
-    'CanonVRD:DynamicRangeMax' => 124,
-    'CanonVRD:DynamicRangeMin' => 122,
-    'CanonVRD:GreenCurveLimits' => 452,
-    'CanonVRD:GreenCurvePoints' => 410,
-    'CanonVRD:LuminanceCurveLimits' => 336,
-    'CanonVRD:LuminanceCurvePoints' => 294,
-    'CanonVRD:RGBCurveLimits' => 568,
-    'CanonVRD:RGBCurvePoints' => 526,
-    'CanonVRD:RawBrightnessAdj' => 56,
-    'CanonVRD:RawColorAdj' => 46,
-    'CanonVRD:RawCustomSaturation' => 48,
-    'CanonVRD:RawCustomTone' => 52,
-    'CanonVRD:RedCurveLimits' => 394,
-    'CanonVRD:RedCurvePoints' => 352,
-    'CanonVRD:Rotation' => 622,
-    'CanonVRD:SaturationAdj' => 278,
-    'CanonVRD:SharpnessAdj' => 602,
-    'CanonVRD:ToneCurveActive' => 272,
-    'CanonVRD:ToneCurveInterpolation' => 345,
-    'CanonVRD:ToneCurveMode' => 275,
-    'CanonVRD:ToneCurveProperty' => 60,
-    'CanonVRD:VRDVersion' => 2,
-    'CanonVRD:WBAdjColorTemp' => 26,
-    'CanonVRD:WBAdjRGGBLevels' => 6,
-    'CanonVRD:WBFineTuneActive' => 36,
-    'CanonVRD:WBFineTuneSaturation' => 40,
-    'CanonVRD:WBFineTuneTone' => 44,
-    'CanonVRD:WhiteBalanceAdj' => 24,
-    'CanonVRD:WorkColorSpace' => 624,
+    'CanonVRD:BlueCurveLimits' =>
+    array (
+      0 => 510,
+    ),
+    'CanonVRD:BlueCurvePoints' =>
+    array (
+      0 => 468,
+    ),
+    'CanonVRD:BrightnessAdj' =>
+    array (
+      0 => 276,
+    ),
+    'CanonVRD:CheckMark' =>
+    array (
+      0 => 618,
+    ),
+    'CanonVRD:ColorToneAdj' =>
+    array (
+      0 => 286,
+    ),
+    'CanonVRD:ConstrainedCropHeight' =>
+    array (
+      0 => 614,
+    ),
+    'CanonVRD:ConstrainedCropWidth' =>
+    array (
+      0 => 610,
+    ),
+    'CanonVRD:ContrastAdj' =>
+    array (
+      0 => 277,
+    ),
+    'CanonVRD:CropActive' =>
+    array (
+      0 => 580,
+    ),
+    'CanonVRD:CropAspectRatio' =>
+    array (
+      0 => 608,
+    ),
+    'CanonVRD:CropHeight' =>
+    array (
+      0 => 588,
+    ),
+    'CanonVRD:CropLeft' =>
+    array (
+      0 => 582,
+    ),
+    'CanonVRD:CropTop' =>
+    array (
+      0 => 584,
+    ),
+    'CanonVRD:CropWidth' =>
+    array (
+      0 => 586,
+    ),
+    'CanonVRD:DynamicRangeMax' =>
+    array (
+      0 => 124,
+    ),
+    'CanonVRD:DynamicRangeMin' =>
+    array (
+      0 => 122,
+    ),
+    'CanonVRD:GreenCurveLimits' =>
+    array (
+      0 => 452,
+    ),
+    'CanonVRD:GreenCurvePoints' =>
+    array (
+      0 => 410,
+    ),
+    'CanonVRD:LuminanceCurveLimits' =>
+    array (
+      0 => 336,
+    ),
+    'CanonVRD:LuminanceCurvePoints' =>
+    array (
+      0 => 294,
+    ),
+    'CanonVRD:RGBCurveLimits' =>
+    array (
+      0 => 568,
+    ),
+    'CanonVRD:RGBCurvePoints' =>
+    array (
+      0 => 526,
+    ),
+    'CanonVRD:RawBrightnessAdj' =>
+    array (
+      0 => 56,
+    ),
+    'CanonVRD:RawColorAdj' =>
+    array (
+      0 => 46,
+    ),
+    'CanonVRD:RawCustomSaturation' =>
+    array (
+      0 => 48,
+    ),
+    'CanonVRD:RawCustomTone' =>
+    array (
+      0 => 52,
+    ),
+    'CanonVRD:RedCurveLimits' =>
+    array (
+      0 => 394,
+    ),
+    'CanonVRD:RedCurvePoints' =>
+    array (
+      0 => 352,
+    ),
+    'CanonVRD:Rotation' =>
+    array (
+      0 => 622,
+    ),
+    'CanonVRD:SaturationAdj' =>
+    array (
+      0 => 278,
+    ),
+    'CanonVRD:SharpnessAdj' =>
+    array (
+      0 => 602,
+    ),
+    'CanonVRD:ToneCurveActive' =>
+    array (
+      0 => 272,
+    ),
+    'CanonVRD:ToneCurveInterpolation' =>
+    array (
+      0 => 345,
+    ),
+    'CanonVRD:ToneCurveMode' =>
+    array (
+      0 => 275,
+    ),
+    'CanonVRD:ToneCurveProperty' =>
+    array (
+      0 => 60,
+    ),
+    'CanonVRD:VRDVersion' =>
+    array (
+      0 => 2,
+    ),
+    'CanonVRD:WBAdjColorTemp' =>
+    array (
+      0 => 26,
+    ),
+    'CanonVRD:WBAdjRGGBLevels' =>
+    array (
+      0 => 6,
+    ),
+    'CanonVRD:WBFineTuneActive' =>
+    array (
+      0 => 36,
+    ),
+    'CanonVRD:WBFineTuneSaturation' =>
+    array (
+      0 => 40,
+    ),
+    'CanonVRD:WBFineTuneTone' =>
+    array (
+      0 => 44,
+    ),
+    'CanonVRD:WhiteBalanceAdj' =>
+    array (
+      0 => 24,
+    ),
+    'CanonVRD:WorkColorSpace' =>
+    array (
+      0 => 624,
+    ),
   ),
   'items' =>
   array (

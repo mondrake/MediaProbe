@@ -25,17 +25,50 @@ class SensorInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'BlackMaskBottomBorder' => 12,
-    'BlackMaskLeftBorder' => 9,
-    'BlackMaskRightBorder' => 11,
-    'BlackMaskTopBorder' => 10,
-    'SensorBottomBorder' => 8,
-    'SensorHeight' => 2,
-    'SensorLeftBorder' => 5,
-    'SensorRightBorder' => 7,
-    'SensorTopBorder' => 6,
-    'SensorWidth' => 1,
-    'indexSize' => 0,
+    'BlackMaskBottomBorder' =>
+    array (
+      0 => 12,
+    ),
+    'BlackMaskLeftBorder' =>
+    array (
+      0 => 9,
+    ),
+    'BlackMaskRightBorder' =>
+    array (
+      0 => 11,
+    ),
+    'BlackMaskTopBorder' =>
+    array (
+      0 => 10,
+    ),
+    'SensorBottomBorder' =>
+    array (
+      0 => 8,
+    ),
+    'SensorHeight' =>
+    array (
+      0 => 2,
+    ),
+    'SensorLeftBorder' =>
+    array (
+      0 => 5,
+    ),
+    'SensorRightBorder' =>
+    array (
+      0 => 7,
+    ),
+    'SensorTopBorder' =>
+    array (
+      0 => 6,
+    ),
+    'SensorWidth' =>
+    array (
+      0 => 1,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -161,16 +194,46 @@ class SensorInfo extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:BlackMaskBottomBorder' => 12,
-    'Canon:BlackMaskLeftBorder' => 9,
-    'Canon:BlackMaskRightBorder' => 11,
-    'Canon:BlackMaskTopBorder' => 10,
-    'Canon:SensorBottomBorder' => 8,
-    'Canon:SensorHeight' => 2,
-    'Canon:SensorLeftBorder' => 5,
-    'Canon:SensorRightBorder' => 7,
-    'Canon:SensorTopBorder' => 6,
-    'Canon:SensorWidth' => 1,
+    'Canon:BlackMaskBottomBorder' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:BlackMaskLeftBorder' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:BlackMaskRightBorder' =>
+    array (
+      0 => 11,
+    ),
+    'Canon:BlackMaskTopBorder' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:SensorBottomBorder' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:SensorHeight' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:SensorLeftBorder' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:SensorRightBorder' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:SensorTopBorder' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:SensorWidth' =>
+    array (
+      0 => 1,
+    ),
   ),
 );
 }

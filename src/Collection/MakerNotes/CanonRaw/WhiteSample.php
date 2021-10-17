@@ -24,19 +24,49 @@ class WhiteSample extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'WhiteSampleBits' => 5,
-    'WhiteSampleHeight' => 2,
-    'WhiteSampleLeftBorder' => 3,
-    'WhiteSampleTopBorder' => 4,
-    'WhiteSampleWidth' => 1,
+    'WhiteSampleBits' =>
+    array (
+      0 => 5,
+    ),
+    'WhiteSampleHeight' =>
+    array (
+      0 => 2,
+    ),
+    'WhiteSampleLeftBorder' =>
+    array (
+      0 => 3,
+    ),
+    'WhiteSampleTopBorder' =>
+    array (
+      0 => 4,
+    ),
+    'WhiteSampleWidth' =>
+    array (
+      0 => 1,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonRaw:WhiteSampleBits' => 5,
-    'CanonRaw:WhiteSampleHeight' => 2,
-    'CanonRaw:WhiteSampleLeftBorder' => 3,
-    'CanonRaw:WhiteSampleTopBorder' => 4,
-    'CanonRaw:WhiteSampleWidth' => 1,
+    'CanonRaw:WhiteSampleBits' =>
+    array (
+      0 => 5,
+    ),
+    'CanonRaw:WhiteSampleHeight' =>
+    array (
+      0 => 2,
+    ),
+    'CanonRaw:WhiteSampleLeftBorder' =>
+    array (
+      0 => 3,
+    ),
+    'CanonRaw:WhiteSampleTopBorder' =>
+    array (
+      0 => 4,
+    ),
+    'CanonRaw:WhiteSampleWidth' =>
+    array (
+      0 => 1,
+    ),
   ),
   'items' =>
   array (

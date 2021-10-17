@@ -20,85 +20,322 @@ class Main extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AFPointsInFocus1D' => 148,
-    'BatteryType' => 56,
-    'CRWParam' => 16386,
-    'CanonAFInfo' => 18,
-    'CanonAFInfo2' => 38,
-    'CanonAFInfo3' => 60,
-    'CanonAFMicroAdj' => 16403,
-    'CanonAmbience' => 16416,
-    'CanonAspectInfo' => 154,
-    'CanonCameraInfo' => 13,
-    'CanonCameraSettings' => 1,
-    'CanonColorBalance' => 169,
-    'CanonColorData' => 16385,
-    'CanonColorInfo' => 16387,
-    'CanonContrastInfo' => 39,
-    'CanonCropInfo' => 152,
-    'CanonCustomFunctions' => 15,
-    'CanonCustomFunctions1D' => 144,
-    'CanonCustomFunctions2Header' => 153,
-    'CanonCustomPersonalFuncValues' => 146,
-    'CanonCustomPersonalFuncs' => 145,
-    'CanonFaceDetect1' => 36,
-    'CanonFaceDetect2' => 37,
-    'CanonFaceDetect3' => 47,
-    'CanonFileInfo' => 147,
-    'CanonFileLength' => 14,
-    'CanonFilterInfo' => 16420,
-    'CanonFirmwareVersion' => 7,
-    'CanonFlags' => 176,
-    'CanonFlashInfo' => 3,
-    'CanonFocalLength' => 2,
-    'CanonImageType' => 6,
-    'CanonLensInfo' => 16409,
-    'CanonLightingOpt' => 16408,
-    'CanonMeasuredColor' => 170,
-    'CanonModelID' => 16,
-    'CanonModifiedInfo' => 177,
-    'CanonMovieInfo' => 17,
-    'CanonMultiExp' => 16417,
-    'CanonMyColors' => 29,
-    'CanonPanorama' => 5,
-    'CanonPreviewImageInfo' => 182,
-    'CanonProcessing' => 160,
-    'CanonRawBurstModeRoll' => 16421,
-    'CanonSensorInfo' => 224,
-    'CanonShotInfo' => 4,
-    'CanonTimeInfo' => 53,
-    'CanonVignettingCorr' => 16405,
-    'CanonVignettingCorr2' => 16406,
-    'CanonWBInfo' => 41,
-    'Categories' => 35,
-    'ColorSpace' => 180,
-    'ColorTemperature' => 174,
-    'CustomPictureStyleFileName' => 16400,
-    'DateStampMode' => 28,
-    'DustRemovalData' => 151,
-    'FileNumber' => 8,
-    'FirmwareRevision' => 30,
-    'Flavor' => 16389,
-    'ImageUniqueID' => 40,
-    'InternalSerialNumber' => 150,
-    'LensModel' => 149,
-    'OriginalDecisionDataOffset' => 131,
-    'OwnerName' => 9,
-    'PictureStylePC' => 16393,
-    'PictureStyleUserDef' => 16392,
-    'RawDataOffset' => 129,
-    'SerialNumber' => 12,
-    'SerialNumberFormat' => 21,
-    'SharpnessFreqTable' => 163,
-    'SharpnessTable' => 162,
-    'SuperMacro' => 26,
-    'ThumbnailImageValidArea' => 19,
-    'ToneCurveMatching' => 178,
-    'ToneCurveTable' => 161,
-    'UnknownD30' => 10,
-    'VRDOffset' => 208,
-    'WhiteBalanceMatching' => 179,
-    'WhiteBalanceTable' => 164,
+    'AFPointsInFocus1D' =>
+    array (
+      0 => 148,
+    ),
+    'BatteryType' =>
+    array (
+      0 => 56,
+    ),
+    'CRWParam' =>
+    array (
+      0 => 16386,
+    ),
+    'CanonAFInfo' =>
+    array (
+      0 => 18,
+    ),
+    'CanonAFInfo2' =>
+    array (
+      0 => 38,
+    ),
+    'CanonAFInfo3' =>
+    array (
+      0 => 60,
+    ),
+    'CanonAFMicroAdj' =>
+    array (
+      0 => 16403,
+    ),
+    'CanonAmbience' =>
+    array (
+      0 => 16416,
+    ),
+    'CanonAspectInfo' =>
+    array (
+      0 => 154,
+    ),
+    'CanonCameraInfo' =>
+    array (
+      0 => 13,
+    ),
+    'CanonCameraSettings' =>
+    array (
+      0 => 1,
+    ),
+    'CanonColorBalance' =>
+    array (
+      0 => 169,
+    ),
+    'CanonColorData' =>
+    array (
+      0 => 16385,
+    ),
+    'CanonColorInfo' =>
+    array (
+      0 => 16387,
+    ),
+    'CanonContrastInfo' =>
+    array (
+      0 => 39,
+    ),
+    'CanonCropInfo' =>
+    array (
+      0 => 152,
+    ),
+    'CanonCustomFunctions' =>
+    array (
+      0 => 15,
+    ),
+    'CanonCustomFunctions1D' =>
+    array (
+      0 => 144,
+    ),
+    'CanonCustomFunctions2Header' =>
+    array (
+      0 => 153,
+    ),
+    'CanonCustomPersonalFuncValues' =>
+    array (
+      0 => 146,
+    ),
+    'CanonCustomPersonalFuncs' =>
+    array (
+      0 => 145,
+    ),
+    'CanonFaceDetect1' =>
+    array (
+      0 => 36,
+    ),
+    'CanonFaceDetect2' =>
+    array (
+      0 => 37,
+    ),
+    'CanonFaceDetect3' =>
+    array (
+      0 => 47,
+    ),
+    'CanonFileInfo' =>
+    array (
+      0 => 147,
+    ),
+    'CanonFileLength' =>
+    array (
+      0 => 14,
+    ),
+    'CanonFilterInfo' =>
+    array (
+      0 => 16420,
+    ),
+    'CanonFirmwareVersion' =>
+    array (
+      0 => 7,
+    ),
+    'CanonFlags' =>
+    array (
+      0 => 176,
+    ),
+    'CanonFlashInfo' =>
+    array (
+      0 => 3,
+    ),
+    'CanonFocalLength' =>
+    array (
+      0 => 2,
+    ),
+    'CanonImageType' =>
+    array (
+      0 => 6,
+    ),
+    'CanonLensInfo' =>
+    array (
+      0 => 16409,
+    ),
+    'CanonLightingOpt' =>
+    array (
+      0 => 16408,
+    ),
+    'CanonMeasuredColor' =>
+    array (
+      0 => 170,
+    ),
+    'CanonModelID' =>
+    array (
+      0 => 16,
+    ),
+    'CanonModifiedInfo' =>
+    array (
+      0 => 177,
+    ),
+    'CanonMovieInfo' =>
+    array (
+      0 => 17,
+    ),
+    'CanonMultiExp' =>
+    array (
+      0 => 16417,
+    ),
+    'CanonMyColors' =>
+    array (
+      0 => 29,
+    ),
+    'CanonPanorama' =>
+    array (
+      0 => 5,
+    ),
+    'CanonPreviewImageInfo' =>
+    array (
+      0 => 182,
+    ),
+    'CanonProcessing' =>
+    array (
+      0 => 160,
+    ),
+    'CanonRawBurstModeRoll' =>
+    array (
+      0 => 16421,
+    ),
+    'CanonSensorInfo' =>
+    array (
+      0 => 224,
+    ),
+    'CanonShotInfo' =>
+    array (
+      0 => 4,
+    ),
+    'CanonTimeInfo' =>
+    array (
+      0 => 53,
+    ),
+    'CanonVignettingCorr' =>
+    array (
+      0 => 16405,
+    ),
+    'CanonVignettingCorr2' =>
+    array (
+      0 => 16406,
+    ),
+    'CanonWBInfo' =>
+    array (
+      0 => 41,
+    ),
+    'Categories' =>
+    array (
+      0 => 35,
+    ),
+    'ColorSpace' =>
+    array (
+      0 => 180,
+    ),
+    'ColorTemperature' =>
+    array (
+      0 => 174,
+    ),
+    'CustomPictureStyleFileName' =>
+    array (
+      0 => 16400,
+    ),
+    'DateStampMode' =>
+    array (
+      0 => 28,
+    ),
+    'DustRemovalData' =>
+    array (
+      0 => 151,
+    ),
+    'FileNumber' =>
+    array (
+      0 => 8,
+    ),
+    'FirmwareRevision' =>
+    array (
+      0 => 30,
+    ),
+    'Flavor' =>
+    array (
+      0 => 16389,
+    ),
+    'ImageUniqueID' =>
+    array (
+      0 => 40,
+    ),
+    'InternalSerialNumber' =>
+    array (
+      0 => 150,
+    ),
+    'LensModel' =>
+    array (
+      0 => 149,
+    ),
+    'OriginalDecisionDataOffset' =>
+    array (
+      0 => 131,
+    ),
+    'OwnerName' =>
+    array (
+      0 => 9,
+    ),
+    'PictureStylePC' =>
+    array (
+      0 => 16393,
+    ),
+    'PictureStyleUserDef' =>
+    array (
+      0 => 16392,
+    ),
+    'RawDataOffset' =>
+    array (
+      0 => 129,
+    ),
+    'SerialNumber' =>
+    array (
+      0 => 12,
+    ),
+    'SerialNumberFormat' =>
+    array (
+      0 => 21,
+    ),
+    'SharpnessFreqTable' =>
+    array (
+      0 => 163,
+    ),
+    'SharpnessTable' =>
+    array (
+      0 => 162,
+    ),
+    'SuperMacro' =>
+    array (
+      0 => 26,
+    ),
+    'ThumbnailImageValidArea' =>
+    array (
+      0 => 19,
+    ),
+    'ToneCurveMatching' =>
+    array (
+      0 => 178,
+    ),
+    'ToneCurveTable' =>
+    array (
+      0 => 161,
+    ),
+    'UnknownD30' =>
+    array (
+      0 => 10,
+    ),
+    'VRDOffset' =>
+    array (
+      0 => 208,
+    ),
+    'WhiteBalanceMatching' =>
+    array (
+      0 => 179,
+    ),
+    'WhiteBalanceTable' =>
+    array (
+      0 => 164,
+    ),
   ),
   'items' =>
   array (
@@ -185,14 +422,39 @@ class Main extends Collection {
     ),
     12 =>
     array (
-      'collection' => 'Tag',
-      'name' => 'SerialNumber',
-      'title' => 'Serial Number',
-      'format' =>
+      0 =>
       array (
-        0 => 4,
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:SerialNumber',
       ),
-      'exiftoolDOMNode' => 'Canon:SerialNumber',
+      1 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:SerialNumber',
+      ),
+      2 =>
+      array (
+        'collection' => 'Tag',
+        'name' => 'SerialNumber',
+        'title' => 'Serial Number',
+        'format' =>
+        array (
+          0 => 4,
+        ),
+        'exiftoolDOMNode' => 'Canon:SerialNumber',
+      ),
     ),
     13 =>
     array (
@@ -1179,42 +1441,150 @@ class Main extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AFPointsInFocus1D' => 148,
-    'Canon:BatteryType' => 56,
-    'Canon:CRWParam' => 16386,
-    'Canon:CanonFileLength' => 14,
-    'Canon:CanonFirmwareVersion' => 7,
-    'Canon:CanonFlashInfo' => 3,
-    'Canon:CanonImageType' => 6,
-    'Canon:CanonModelID' => 16,
-    'Canon:Categories' => 35,
-    'Canon:ColorSpace' => 180,
-    'Canon:ColorTemperature' => 174,
-    'Canon:CustomPictureStyleFileName' => 16400,
-    'Canon:DateStampMode' => 28,
-    'Canon:DustRemovalData' => 151,
-    'Canon:FileNumber' => 8,
-    'Canon:FirmwareRevision' => 30,
-    'Canon:Flavor' => 16389,
-    'Canon:ImageUniqueID' => 40,
-    'Canon:InternalSerialNumber' => 150,
-    'Canon:LensModel' => 149,
-    'Canon:OriginalDecisionDataOffset' => 131,
-    'Canon:OwnerName' => 9,
-    'Canon:PictureStylePC' => 16393,
-    'Canon:PictureStyleUserDef' => 16392,
-    'Canon:RawDataOffset' => 129,
-    'Canon:SerialNumber' => 12,
-    'Canon:SerialNumberFormat' => 21,
-    'Canon:SharpnessFreqTable' => 163,
-    'Canon:SharpnessTable' => 162,
-    'Canon:SuperMacro' => 26,
-    'Canon:ThumbnailImageValidArea' => 19,
-    'Canon:ToneCurveMatching' => 178,
-    'Canon:ToneCurveTable' => 161,
-    'Canon:VRDOffset' => 208,
-    'Canon:WhiteBalanceMatching' => 179,
-    'Canon:WhiteBalanceTable' => 164,
+    'Canon:AFPointsInFocus1D' =>
+    array (
+      0 => 148,
+    ),
+    'Canon:BatteryType' =>
+    array (
+      0 => 56,
+    ),
+    'Canon:CRWParam' =>
+    array (
+      0 => 16386,
+    ),
+    'Canon:CanonFileLength' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:CanonFirmwareVersion' =>
+    array (
+      0 => 7,
+    ),
+    'Canon:CanonFlashInfo' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:CanonImageType' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:CanonModelID' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:Categories' =>
+    array (
+      0 => 35,
+    ),
+    'Canon:ColorSpace' =>
+    array (
+      0 => 180,
+    ),
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 174,
+    ),
+    'Canon:CustomPictureStyleFileName' =>
+    array (
+      0 => 16400,
+    ),
+    'Canon:DateStampMode' =>
+    array (
+      0 => 28,
+    ),
+    'Canon:DustRemovalData' =>
+    array (
+      0 => 151,
+    ),
+    'Canon:FileNumber' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:FirmwareRevision' =>
+    array (
+      0 => 30,
+    ),
+    'Canon:Flavor' =>
+    array (
+      0 => 16389,
+    ),
+    'Canon:ImageUniqueID' =>
+    array (
+      0 => 40,
+    ),
+    'Canon:InternalSerialNumber' =>
+    array (
+      0 => 150,
+    ),
+    'Canon:LensModel' =>
+    array (
+      0 => 149,
+    ),
+    'Canon:OriginalDecisionDataOffset' =>
+    array (
+      0 => 131,
+    ),
+    'Canon:OwnerName' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:PictureStylePC' =>
+    array (
+      0 => 16393,
+    ),
+    'Canon:PictureStyleUserDef' =>
+    array (
+      0 => 16392,
+    ),
+    'Canon:RawDataOffset' =>
+    array (
+      0 => 129,
+    ),
+    'Canon:SerialNumber' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:SerialNumberFormat' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:SharpnessFreqTable' =>
+    array (
+      0 => 163,
+    ),
+    'Canon:SharpnessTable' =>
+    array (
+      0 => 162,
+    ),
+    'Canon:SuperMacro' =>
+    array (
+      0 => 26,
+    ),
+    'Canon:ThumbnailImageValidArea' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:ToneCurveMatching' =>
+    array (
+      0 => 178,
+    ),
+    'Canon:ToneCurveTable' =>
+    array (
+      0 => 161,
+    ),
+    'Canon:VRDOffset' =>
+    array (
+      0 => 208,
+    ),
+    'Canon:WhiteBalanceMatching' =>
+    array (
+      0 => 179,
+    ),
+    'Canon:WhiteBalanceTable' =>
+    array (
+      0 => 164,
+    ),
   ),
 );
 }

@@ -24,35 +24,113 @@ class CameraInfo1DmkIIN extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorTemperature' => 55,
-    'ColorTone' => 119,
-    'Contrast' => 117,
-    'ExposureTime' => 4,
-    'FocalLength' => 9,
-    'ISO' => 121,
-    'LensType' => 12,
-    'MaxFocalLength' => 19,
-    'MinFocalLength' => 17,
-    'PictureStyle' => 115,
-    'Saturation' => 118,
-    'Sharpness' => 116,
-    'WhiteBalance' => 54,
+    'ColorTemperature' =>
+    array (
+      0 => 55,
+    ),
+    'ColorTone' =>
+    array (
+      0 => 119,
+    ),
+    'Contrast' =>
+    array (
+      0 => 117,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'FocalLength' =>
+    array (
+      0 => 9,
+    ),
+    'ISO' =>
+    array (
+      0 => 121,
+    ),
+    'LensType' =>
+    array (
+      0 => 12,
+    ),
+    'MaxFocalLength' =>
+    array (
+      0 => 19,
+    ),
+    'MinFocalLength' =>
+    array (
+      0 => 17,
+    ),
+    'PictureStyle' =>
+    array (
+      0 => 115,
+    ),
+    'Saturation' =>
+    array (
+      0 => 118,
+    ),
+    'Sharpness' =>
+    array (
+      0 => 116,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 54,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorTemperature' => 55,
-    'Canon:ColorTone' => 119,
-    'Canon:Contrast' => 117,
-    'Canon:ExposureTime' => 4,
-    'Canon:FocalLength' => 9,
-    'Canon:ISO' => 121,
-    'Canon:LensType' => 12,
-    'Canon:MaxFocalLength' => 19,
-    'Canon:MinFocalLength' => 17,
-    'Canon:PictureStyle' => 115,
-    'Canon:Saturation' => 118,
-    'Canon:Sharpness' => 116,
-    'Canon:WhiteBalance' => 54,
+    'Canon:ColorTemperature' =>
+    array (
+      0 => 55,
+    ),
+    'Canon:ColorTone' =>
+    array (
+      0 => 119,
+    ),
+    'Canon:Contrast' =>
+    array (
+      0 => 117,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:FocalLength' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:ISO' =>
+    array (
+      0 => 121,
+    ),
+    'Canon:LensType' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:MaxFocalLength' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:MinFocalLength' =>
+    array (
+      0 => 17,
+    ),
+    'Canon:PictureStyle' =>
+    array (
+      0 => 115,
+    ),
+    'Canon:Saturation' =>
+    array (
+      0 => 118,
+    ),
+    'Canon:Sharpness' =>
+    array (
+      0 => 116,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 54,
+    ),
   ),
   'items' =>
   array (

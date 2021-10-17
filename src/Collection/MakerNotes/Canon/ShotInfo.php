@@ -25,65 +25,233 @@ class ShotInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'AEBBracketValue' => 17,
-    'AFPointsInFocus' => 14,
-    'AutoExposureBracketing' => 16,
-    'AutoISO' => 1,
-    'AutoRotate' => 27,
-    'BaseISO' => 2,
-    'BulbDuration' => 24,
-    'CameraTemperature' => 12,
-    'CameraType' => 26,
-    'ControlMode' => 18,
-    'ExposureCompensation' => 6,
-    'ExposureTime' => 22,
-    'FNumber' => 21,
-    'FlashExposureComp' => 15,
-    'FlashGuideNumber' => 13,
-    'FlashOutput' => 33,
-    'FocusDistanceLower' => 20,
-    'FocusDistanceUpper' => 19,
-    'MeasuredEV' => 3,
-    'MeasuredEV2' => 23,
-    'NDFilter' => 28,
-    'OpticalZoomCode' => 10,
-    'SelfTimer2' => 29,
-    'SequenceNumber' => 9,
-    'SlowShutter' => 8,
-    'TargetAperture' => 4,
-    'TargetExposureTime' => 5,
-    'WhiteBalance' => 7,
+    'AEBBracketValue' =>
+    array (
+      0 => 17,
+    ),
+    'AFPointsInFocus' =>
+    array (
+      0 => 14,
+    ),
+    'AutoExposureBracketing' =>
+    array (
+      0 => 16,
+    ),
+    'AutoISO' =>
+    array (
+      0 => 1,
+    ),
+    'AutoRotate' =>
+    array (
+      0 => 27,
+    ),
+    'BaseISO' =>
+    array (
+      0 => 2,
+    ),
+    'BulbDuration' =>
+    array (
+      0 => 24,
+    ),
+    'CameraTemperature' =>
+    array (
+      0 => 12,
+    ),
+    'CameraType' =>
+    array (
+      0 => 26,
+    ),
+    'ControlMode' =>
+    array (
+      0 => 18,
+    ),
+    'ExposureCompensation' =>
+    array (
+      0 => 6,
+    ),
+    'ExposureTime' =>
+    array (
+      0 => 22,
+    ),
+    'FNumber' =>
+    array (
+      0 => 21,
+    ),
+    'FlashExposureComp' =>
+    array (
+      0 => 15,
+    ),
+    'FlashGuideNumber' =>
+    array (
+      0 => 13,
+    ),
+    'FlashOutput' =>
+    array (
+      0 => 33,
+    ),
+    'FocusDistanceLower' =>
+    array (
+      0 => 20,
+    ),
+    'FocusDistanceUpper' =>
+    array (
+      0 => 19,
+    ),
+    'MeasuredEV' =>
+    array (
+      0 => 3,
+    ),
+    'MeasuredEV2' =>
+    array (
+      0 => 23,
+    ),
+    'NDFilter' =>
+    array (
+      0 => 28,
+    ),
+    'OpticalZoomCode' =>
+    array (
+      0 => 10,
+    ),
+    'SelfTimer2' =>
+    array (
+      0 => 29,
+    ),
+    'SequenceNumber' =>
+    array (
+      0 => 9,
+    ),
+    'SlowShutter' =>
+    array (
+      0 => 8,
+    ),
+    'TargetAperture' =>
+    array (
+      0 => 4,
+    ),
+    'TargetExposureTime' =>
+    array (
+      0 => 5,
+    ),
+    'WhiteBalance' =>
+    array (
+      0 => 7,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:AEBBracketValue' => 17,
-    'Canon:AFPointsInFocus' => 14,
-    'Canon:AutoExposureBracketing' => 16,
-    'Canon:AutoISO' => 1,
-    'Canon:AutoRotate' => 27,
-    'Canon:BaseISO' => 2,
-    'Canon:BulbDuration' => 24,
-    'Canon:CameraTemperature' => 12,
-    'Canon:CameraType' => 26,
-    'Canon:ControlMode' => 18,
-    'Canon:ExposureCompensation' => 6,
-    'Canon:ExposureTime' => 22,
-    'Canon:FNumber' => 21,
-    'Canon:FlashExposureComp' => 15,
-    'Canon:FlashGuideNumber' => 13,
-    'Canon:FlashOutput' => 33,
-    'Canon:FocusDistanceLower' => 20,
-    'Canon:FocusDistanceUpper' => 19,
-    'Canon:MeasuredEV' => 3,
-    'Canon:MeasuredEV2' => 23,
-    'Canon:NDFilter' => 28,
-    'Canon:OpticalZoomCode' => 10,
-    'Canon:SelfTimer2' => 29,
-    'Canon:SequenceNumber' => 9,
-    'Canon:SlowShutter' => 8,
-    'Canon:TargetAperture' => 4,
-    'Canon:TargetExposureTime' => 5,
-    'Canon:WhiteBalance' => 7,
+    'Canon:AEBBracketValue' =>
+    array (
+      0 => 17,
+    ),
+    'Canon:AFPointsInFocus' =>
+    array (
+      0 => 14,
+    ),
+    'Canon:AutoExposureBracketing' =>
+    array (
+      0 => 16,
+    ),
+    'Canon:AutoISO' =>
+    array (
+      0 => 1,
+    ),
+    'Canon:AutoRotate' =>
+    array (
+      0 => 27,
+    ),
+    'Canon:BaseISO' =>
+    array (
+      0 => 2,
+    ),
+    'Canon:BulbDuration' =>
+    array (
+      0 => 24,
+    ),
+    'Canon:CameraTemperature' =>
+    array (
+      0 => 12,
+    ),
+    'Canon:CameraType' =>
+    array (
+      0 => 26,
+    ),
+    'Canon:ControlMode' =>
+    array (
+      0 => 18,
+    ),
+    'Canon:ExposureCompensation' =>
+    array (
+      0 => 6,
+    ),
+    'Canon:ExposureTime' =>
+    array (
+      0 => 22,
+    ),
+    'Canon:FNumber' =>
+    array (
+      0 => 21,
+    ),
+    'Canon:FlashExposureComp' =>
+    array (
+      0 => 15,
+    ),
+    'Canon:FlashGuideNumber' =>
+    array (
+      0 => 13,
+    ),
+    'Canon:FlashOutput' =>
+    array (
+      0 => 33,
+    ),
+    'Canon:FocusDistanceLower' =>
+    array (
+      0 => 20,
+    ),
+    'Canon:FocusDistanceUpper' =>
+    array (
+      0 => 19,
+    ),
+    'Canon:MeasuredEV' =>
+    array (
+      0 => 3,
+    ),
+    'Canon:MeasuredEV2' =>
+    array (
+      0 => 23,
+    ),
+    'Canon:NDFilter' =>
+    array (
+      0 => 28,
+    ),
+    'Canon:OpticalZoomCode' =>
+    array (
+      0 => 10,
+    ),
+    'Canon:SelfTimer2' =>
+    array (
+      0 => 29,
+    ),
+    'Canon:SequenceNumber' =>
+    array (
+      0 => 9,
+    ),
+    'Canon:SlowShutter' =>
+    array (
+      0 => 8,
+    ),
+    'Canon:TargetAperture' =>
+    array (
+      0 => 4,
+    ),
+    'Canon:TargetExposureTime' =>
+    array (
+      0 => 5,
+    ),
+    'Canon:WhiteBalance' =>
+    array (
+      0 => 7,
+    ),
   ),
   'items' =>
   array (
@@ -394,15 +562,30 @@ class ShotInfo extends Collection {
     ),
     22 =>
     array (
-      'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\ExposureTime',
-      'collection' => 'Tag',
-      'name' => 'ExposureTime',
-      'title' => 'Exposure Time',
-      'format' =>
+      0 =>
       array (
-        0 => 8,
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\ExposureTime',
+        'collection' => 'Tag',
+        'name' => 'ExposureTime',
+        'title' => 'Exposure Time',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ExposureTime',
       ),
-      'exiftoolDOMNode' => 'Canon:ExposureTime',
+      1 =>
+      array (
+        'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\ExposureTime',
+        'collection' => 'Tag',
+        'name' => 'ExposureTime',
+        'title' => 'Exposure Time',
+        'format' =>
+        array (
+          0 => 8,
+        ),
+        'exiftoolDOMNode' => 'Canon:ExposureTime',
+      ),
     ),
     23 =>
     array (

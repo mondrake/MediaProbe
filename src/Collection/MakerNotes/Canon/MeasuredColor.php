@@ -25,8 +25,14 @@ class MeasuredColor extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'MeasuredRGGB' => 1,
-    'indexSize' => 0,
+    'MeasuredRGGB' =>
+    array (
+      0 => 1,
+    ),
+    'indexSize' =>
+    array (
+      0 => 0,
+    ),
   ),
   'items' =>
   array (
@@ -54,7 +60,10 @@ class MeasuredColor extends Collection {
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:MeasuredRGGB' => 1,
+    'Canon:MeasuredRGGB' =>
+    array (
+      0 => 1,
+    ),
   ),
 );
 }

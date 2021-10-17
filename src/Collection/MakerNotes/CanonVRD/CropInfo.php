@@ -24,29 +24,89 @@ class CropInfo extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'CropActive' => 0,
-    'CropHeight' => 6,
-    'CropOriginalHeight' => 11,
-    'CropOriginalWidth' => 10,
-    'CropRotatedOriginalHeight' => 2,
-    'CropRotatedOriginalWidth' => 1,
-    'CropRotation' => 8,
-    'CropWidth' => 5,
-    'CropX' => 3,
-    'CropY' => 4,
+    'CropActive' =>
+    array (
+      0 => 0,
+    ),
+    'CropHeight' =>
+    array (
+      0 => 6,
+    ),
+    'CropOriginalHeight' =>
+    array (
+      0 => 11,
+    ),
+    'CropOriginalWidth' =>
+    array (
+      0 => 10,
+    ),
+    'CropRotatedOriginalHeight' =>
+    array (
+      0 => 2,
+    ),
+    'CropRotatedOriginalWidth' =>
+    array (
+      0 => 1,
+    ),
+    'CropRotation' =>
+    array (
+      0 => 8,
+    ),
+    'CropWidth' =>
+    array (
+      0 => 5,
+    ),
+    'CropX' =>
+    array (
+      0 => 3,
+    ),
+    'CropY' =>
+    array (
+      0 => 4,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'CanonVRD:CropActive' => 0,
-    'CanonVRD:CropHeight' => 6,
-    'CanonVRD:CropOriginalHeight' => 11,
-    'CanonVRD:CropOriginalWidth' => 10,
-    'CanonVRD:CropRotatedOriginalHeight' => 2,
-    'CanonVRD:CropRotatedOriginalWidth' => 1,
-    'CanonVRD:CropRotation' => 8,
-    'CanonVRD:CropWidth' => 5,
-    'CanonVRD:CropX' => 3,
-    'CanonVRD:CropY' => 4,
+    'CanonVRD:CropActive' =>
+    array (
+      0 => 0,
+    ),
+    'CanonVRD:CropHeight' =>
+    array (
+      0 => 6,
+    ),
+    'CanonVRD:CropOriginalHeight' =>
+    array (
+      0 => 11,
+    ),
+    'CanonVRD:CropOriginalWidth' =>
+    array (
+      0 => 10,
+    ),
+    'CanonVRD:CropRotatedOriginalHeight' =>
+    array (
+      0 => 2,
+    ),
+    'CanonVRD:CropRotatedOriginalWidth' =>
+    array (
+      0 => 1,
+    ),
+    'CanonVRD:CropRotation' =>
+    array (
+      0 => 8,
+    ),
+    'CanonVRD:CropWidth' =>
+    array (
+      0 => 5,
+    ),
+    'CanonVRD:CropX' =>
+    array (
+      0 => 3,
+    ),
+    'CanonVRD:CropY' =>
+    array (
+      0 => 4,
+    ),
   ),
   'items' =>
   array (

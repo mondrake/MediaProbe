@@ -24,175 +24,673 @@ class ColorData9 extends Collection {
   'defaultItemCollection' => 'Tag',
   'itemsByName' =>
   array (
-    'ColorDataVersion' => 0,
-    'ColorTempAsShot' => 75,
-    'ColorTempAuto' => 80,
-    'ColorTempCloudy' => 150,
-    'ColorTempDaylight' => 140,
-    'ColorTempFlash' => 170,
-    'ColorTempFluorescent' => 160,
-    'ColorTempKelvin' => 165,
-    'ColorTempMeasured' => 85,
-    'ColorTempShade' => 145,
-    'ColorTempTungsten' => 155,
-    'ColorTempUnknown' => 90,
-    'ColorTempUnknown10' => 135,
-    'ColorTempUnknown11' => 175,
-    'ColorTempUnknown12' => 180,
-    'ColorTempUnknown13' => 185,
-    'ColorTempUnknown14' => 190,
-    'ColorTempUnknown15' => 195,
-    'ColorTempUnknown16' => 200,
-    'ColorTempUnknown17' => 205,
-    'ColorTempUnknown18' => 210,
-    'ColorTempUnknown19' => 215,
-    'ColorTempUnknown2' => 95,
-    'ColorTempUnknown20' => 220,
-    'ColorTempUnknown21' => 225,
-    'ColorTempUnknown22' => 230,
-    'ColorTempUnknown23' => 235,
-    'ColorTempUnknown24' => 240,
-    'ColorTempUnknown25' => 245,
-    'ColorTempUnknown26' => 250,
-    'ColorTempUnknown27' => 255,
-    'ColorTempUnknown28' => 260,
-    'ColorTempUnknown29' => 265,
-    'ColorTempUnknown3' => 100,
-    'ColorTempUnknown4' => 105,
-    'ColorTempUnknown5' => 110,
-    'ColorTempUnknown6' => 115,
-    'ColorTempUnknown7' => 120,
-    'ColorTempUnknown8' => 125,
-    'ColorTempUnknown9' => 130,
-    'LinearityUpperMargin' => 798,
-    'NormalWhiteLevel' => 796,
-    'PerChannelBlackLevel' => 329,
-    'SpecularWhiteLevel' => 797,
-    'WB_RGGBLevelsAsShot' => 71,
-    'WB_RGGBLevelsAuto' => 76,
-    'WB_RGGBLevelsCloudy' => 146,
-    'WB_RGGBLevelsDaylight' => 136,
-    'WB_RGGBLevelsFlash' => 166,
-    'WB_RGGBLevelsFluorescent' => 156,
-    'WB_RGGBLevelsKelvin' => 161,
-    'WB_RGGBLevelsMeasured' => 81,
-    'WB_RGGBLevelsShade' => 141,
-    'WB_RGGBLevelsTungsten' => 151,
-    'WB_RGGBLevelsUnknown' => 86,
-    'WB_RGGBLevelsUnknown10' => 131,
-    'WB_RGGBLevelsUnknown11' => 171,
-    'WB_RGGBLevelsUnknown12' => 176,
-    'WB_RGGBLevelsUnknown13' => 181,
-    'WB_RGGBLevelsUnknown14' => 186,
-    'WB_RGGBLevelsUnknown15' => 191,
-    'WB_RGGBLevelsUnknown16' => 196,
-    'WB_RGGBLevelsUnknown17' => 201,
-    'WB_RGGBLevelsUnknown18' => 206,
-    'WB_RGGBLevelsUnknown19' => 211,
-    'WB_RGGBLevelsUnknown2' => 91,
-    'WB_RGGBLevelsUnknown20' => 216,
-    'WB_RGGBLevelsUnknown21' => 221,
-    'WB_RGGBLevelsUnknown22' => 226,
-    'WB_RGGBLevelsUnknown23' => 231,
-    'WB_RGGBLevelsUnknown24' => 236,
-    'WB_RGGBLevelsUnknown25' => 241,
-    'WB_RGGBLevelsUnknown26' => 246,
-    'WB_RGGBLevelsUnknown27' => 251,
-    'WB_RGGBLevelsUnknown28' => 256,
-    'WB_RGGBLevelsUnknown29' => 261,
-    'WB_RGGBLevelsUnknown3' => 96,
-    'WB_RGGBLevelsUnknown4' => 101,
-    'WB_RGGBLevelsUnknown5' => 106,
-    'WB_RGGBLevelsUnknown6' => 111,
-    'WB_RGGBLevelsUnknown7' => 116,
-    'WB_RGGBLevelsUnknown8' => 121,
-    'WB_RGGBLevelsUnknown9' => 126,
+    'ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'ColorTempAsShot' =>
+    array (
+      0 => 75,
+    ),
+    'ColorTempAuto' =>
+    array (
+      0 => 80,
+    ),
+    'ColorTempCloudy' =>
+    array (
+      0 => 150,
+    ),
+    'ColorTempDaylight' =>
+    array (
+      0 => 140,
+    ),
+    'ColorTempFlash' =>
+    array (
+      0 => 170,
+    ),
+    'ColorTempFluorescent' =>
+    array (
+      0 => 160,
+    ),
+    'ColorTempKelvin' =>
+    array (
+      0 => 165,
+    ),
+    'ColorTempMeasured' =>
+    array (
+      0 => 85,
+    ),
+    'ColorTempShade' =>
+    array (
+      0 => 145,
+    ),
+    'ColorTempTungsten' =>
+    array (
+      0 => 155,
+    ),
+    'ColorTempUnknown' =>
+    array (
+      0 => 90,
+    ),
+    'ColorTempUnknown10' =>
+    array (
+      0 => 135,
+    ),
+    'ColorTempUnknown11' =>
+    array (
+      0 => 175,
+    ),
+    'ColorTempUnknown12' =>
+    array (
+      0 => 180,
+    ),
+    'ColorTempUnknown13' =>
+    array (
+      0 => 185,
+    ),
+    'ColorTempUnknown14' =>
+    array (
+      0 => 190,
+    ),
+    'ColorTempUnknown15' =>
+    array (
+      0 => 195,
+    ),
+    'ColorTempUnknown16' =>
+    array (
+      0 => 200,
+    ),
+    'ColorTempUnknown17' =>
+    array (
+      0 => 205,
+    ),
+    'ColorTempUnknown18' =>
+    array (
+      0 => 210,
+    ),
+    'ColorTempUnknown19' =>
+    array (
+      0 => 215,
+    ),
+    'ColorTempUnknown2' =>
+    array (
+      0 => 95,
+    ),
+    'ColorTempUnknown20' =>
+    array (
+      0 => 220,
+    ),
+    'ColorTempUnknown21' =>
+    array (
+      0 => 225,
+    ),
+    'ColorTempUnknown22' =>
+    array (
+      0 => 230,
+    ),
+    'ColorTempUnknown23' =>
+    array (
+      0 => 235,
+    ),
+    'ColorTempUnknown24' =>
+    array (
+      0 => 240,
+    ),
+    'ColorTempUnknown25' =>
+    array (
+      0 => 245,
+    ),
+    'ColorTempUnknown26' =>
+    array (
+      0 => 250,
+    ),
+    'ColorTempUnknown27' =>
+    array (
+      0 => 255,
+    ),
+    'ColorTempUnknown28' =>
+    array (
+      0 => 260,
+    ),
+    'ColorTempUnknown29' =>
+    array (
+      0 => 265,
+    ),
+    'ColorTempUnknown3' =>
+    array (
+      0 => 100,
+    ),
+    'ColorTempUnknown4' =>
+    array (
+      0 => 105,
+    ),
+    'ColorTempUnknown5' =>
+    array (
+      0 => 110,
+    ),
+    'ColorTempUnknown6' =>
+    array (
+      0 => 115,
+    ),
+    'ColorTempUnknown7' =>
+    array (
+      0 => 120,
+    ),
+    'ColorTempUnknown8' =>
+    array (
+      0 => 125,
+    ),
+    'ColorTempUnknown9' =>
+    array (
+      0 => 130,
+    ),
+    'LinearityUpperMargin' =>
+    array (
+      0 => 798,
+    ),
+    'NormalWhiteLevel' =>
+    array (
+      0 => 796,
+    ),
+    'PerChannelBlackLevel' =>
+    array (
+      0 => 329,
+    ),
+    'SpecularWhiteLevel' =>
+    array (
+      0 => 797,
+    ),
+    'WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 71,
+    ),
+    'WB_RGGBLevelsAuto' =>
+    array (
+      0 => 76,
+    ),
+    'WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 146,
+    ),
+    'WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 136,
+    ),
+    'WB_RGGBLevelsFlash' =>
+    array (
+      0 => 166,
+    ),
+    'WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 156,
+    ),
+    'WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 161,
+    ),
+    'WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 81,
+    ),
+    'WB_RGGBLevelsShade' =>
+    array (
+      0 => 141,
+    ),
+    'WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 151,
+    ),
+    'WB_RGGBLevelsUnknown' =>
+    array (
+      0 => 86,
+    ),
+    'WB_RGGBLevelsUnknown10' =>
+    array (
+      0 => 131,
+    ),
+    'WB_RGGBLevelsUnknown11' =>
+    array (
+      0 => 171,
+    ),
+    'WB_RGGBLevelsUnknown12' =>
+    array (
+      0 => 176,
+    ),
+    'WB_RGGBLevelsUnknown13' =>
+    array (
+      0 => 181,
+    ),
+    'WB_RGGBLevelsUnknown14' =>
+    array (
+      0 => 186,
+    ),
+    'WB_RGGBLevelsUnknown15' =>
+    array (
+      0 => 191,
+    ),
+    'WB_RGGBLevelsUnknown16' =>
+    array (
+      0 => 196,
+    ),
+    'WB_RGGBLevelsUnknown17' =>
+    array (
+      0 => 201,
+    ),
+    'WB_RGGBLevelsUnknown18' =>
+    array (
+      0 => 206,
+    ),
+    'WB_RGGBLevelsUnknown19' =>
+    array (
+      0 => 211,
+    ),
+    'WB_RGGBLevelsUnknown2' =>
+    array (
+      0 => 91,
+    ),
+    'WB_RGGBLevelsUnknown20' =>
+    array (
+      0 => 216,
+    ),
+    'WB_RGGBLevelsUnknown21' =>
+    array (
+      0 => 221,
+    ),
+    'WB_RGGBLevelsUnknown22' =>
+    array (
+      0 => 226,
+    ),
+    'WB_RGGBLevelsUnknown23' =>
+    array (
+      0 => 231,
+    ),
+    'WB_RGGBLevelsUnknown24' =>
+    array (
+      0 => 236,
+    ),
+    'WB_RGGBLevelsUnknown25' =>
+    array (
+      0 => 241,
+    ),
+    'WB_RGGBLevelsUnknown26' =>
+    array (
+      0 => 246,
+    ),
+    'WB_RGGBLevelsUnknown27' =>
+    array (
+      0 => 251,
+    ),
+    'WB_RGGBLevelsUnknown28' =>
+    array (
+      0 => 256,
+    ),
+    'WB_RGGBLevelsUnknown29' =>
+    array (
+      0 => 261,
+    ),
+    'WB_RGGBLevelsUnknown3' =>
+    array (
+      0 => 96,
+    ),
+    'WB_RGGBLevelsUnknown4' =>
+    array (
+      0 => 101,
+    ),
+    'WB_RGGBLevelsUnknown5' =>
+    array (
+      0 => 106,
+    ),
+    'WB_RGGBLevelsUnknown6' =>
+    array (
+      0 => 111,
+    ),
+    'WB_RGGBLevelsUnknown7' =>
+    array (
+      0 => 116,
+    ),
+    'WB_RGGBLevelsUnknown8' =>
+    array (
+      0 => 121,
+    ),
+    'WB_RGGBLevelsUnknown9' =>
+    array (
+      0 => 126,
+    ),
   ),
   'itemsByExiftoolDOMNode' =>
   array (
-    'Canon:ColorDataVersion' => 0,
-    'Canon:ColorTempAsShot' => 75,
-    'Canon:ColorTempAuto' => 80,
-    'Canon:ColorTempCloudy' => 150,
-    'Canon:ColorTempDaylight' => 140,
-    'Canon:ColorTempFlash' => 170,
-    'Canon:ColorTempFluorescent' => 160,
-    'Canon:ColorTempKelvin' => 165,
-    'Canon:ColorTempMeasured' => 85,
-    'Canon:ColorTempShade' => 145,
-    'Canon:ColorTempTungsten' => 155,
-    'Canon:ColorTempUnknown' => 90,
-    'Canon:ColorTempUnknown10' => 135,
-    'Canon:ColorTempUnknown11' => 175,
-    'Canon:ColorTempUnknown12' => 180,
-    'Canon:ColorTempUnknown13' => 185,
-    'Canon:ColorTempUnknown14' => 190,
-    'Canon:ColorTempUnknown15' => 195,
-    'Canon:ColorTempUnknown16' => 200,
-    'Canon:ColorTempUnknown17' => 205,
-    'Canon:ColorTempUnknown18' => 210,
-    'Canon:ColorTempUnknown19' => 215,
-    'Canon:ColorTempUnknown2' => 95,
-    'Canon:ColorTempUnknown20' => 220,
-    'Canon:ColorTempUnknown21' => 225,
-    'Canon:ColorTempUnknown22' => 230,
-    'Canon:ColorTempUnknown23' => 235,
-    'Canon:ColorTempUnknown24' => 240,
-    'Canon:ColorTempUnknown25' => 245,
-    'Canon:ColorTempUnknown26' => 250,
-    'Canon:ColorTempUnknown27' => 255,
-    'Canon:ColorTempUnknown28' => 260,
-    'Canon:ColorTempUnknown29' => 265,
-    'Canon:ColorTempUnknown3' => 100,
-    'Canon:ColorTempUnknown4' => 105,
-    'Canon:ColorTempUnknown5' => 110,
-    'Canon:ColorTempUnknown6' => 115,
-    'Canon:ColorTempUnknown7' => 120,
-    'Canon:ColorTempUnknown8' => 125,
-    'Canon:ColorTempUnknown9' => 130,
-    'Canon:LinearityUpperMargin' => 798,
-    'Canon:NormalWhiteLevel' => 796,
-    'Canon:PerChannelBlackLevel' => 329,
-    'Canon:SpecularWhiteLevel' => 797,
-    'Canon:WB_RGGBLevelsAsShot' => 71,
-    'Canon:WB_RGGBLevelsAuto' => 76,
-    'Canon:WB_RGGBLevelsCloudy' => 146,
-    'Canon:WB_RGGBLevelsDaylight' => 136,
-    'Canon:WB_RGGBLevelsFlash' => 166,
-    'Canon:WB_RGGBLevelsFluorescent' => 156,
-    'Canon:WB_RGGBLevelsKelvin' => 161,
-    'Canon:WB_RGGBLevelsMeasured' => 81,
-    'Canon:WB_RGGBLevelsShade' => 141,
-    'Canon:WB_RGGBLevelsTungsten' => 151,
-    'Canon:WB_RGGBLevelsUnknown' => 86,
-    'Canon:WB_RGGBLevelsUnknown10' => 131,
-    'Canon:WB_RGGBLevelsUnknown11' => 171,
-    'Canon:WB_RGGBLevelsUnknown12' => 176,
-    'Canon:WB_RGGBLevelsUnknown13' => 181,
-    'Canon:WB_RGGBLevelsUnknown14' => 186,
-    'Canon:WB_RGGBLevelsUnknown15' => 191,
-    'Canon:WB_RGGBLevelsUnknown16' => 196,
-    'Canon:WB_RGGBLevelsUnknown17' => 201,
-    'Canon:WB_RGGBLevelsUnknown18' => 206,
-    'Canon:WB_RGGBLevelsUnknown19' => 211,
-    'Canon:WB_RGGBLevelsUnknown2' => 91,
-    'Canon:WB_RGGBLevelsUnknown20' => 216,
-    'Canon:WB_RGGBLevelsUnknown21' => 221,
-    'Canon:WB_RGGBLevelsUnknown22' => 226,
-    'Canon:WB_RGGBLevelsUnknown23' => 231,
-    'Canon:WB_RGGBLevelsUnknown24' => 236,
-    'Canon:WB_RGGBLevelsUnknown25' => 241,
-    'Canon:WB_RGGBLevelsUnknown26' => 246,
-    'Canon:WB_RGGBLevelsUnknown27' => 251,
-    'Canon:WB_RGGBLevelsUnknown28' => 256,
-    'Canon:WB_RGGBLevelsUnknown29' => 261,
-    'Canon:WB_RGGBLevelsUnknown3' => 96,
-    'Canon:WB_RGGBLevelsUnknown4' => 101,
-    'Canon:WB_RGGBLevelsUnknown5' => 106,
-    'Canon:WB_RGGBLevelsUnknown6' => 111,
-    'Canon:WB_RGGBLevelsUnknown7' => 116,
-    'Canon:WB_RGGBLevelsUnknown8' => 121,
-    'Canon:WB_RGGBLevelsUnknown9' => 126,
+    'Canon:ColorDataVersion' =>
+    array (
+      0 => 0,
+    ),
+    'Canon:ColorTempAsShot' =>
+    array (
+      0 => 75,
+    ),
+    'Canon:ColorTempAuto' =>
+    array (
+      0 => 80,
+    ),
+    'Canon:ColorTempCloudy' =>
+    array (
+      0 => 150,
+    ),
+    'Canon:ColorTempDaylight' =>
+    array (
+      0 => 140,
+    ),
+    'Canon:ColorTempFlash' =>
+    array (
+      0 => 170,
+    ),
+    'Canon:ColorTempFluorescent' =>
+    array (
+      0 => 160,
+    ),
+    'Canon:ColorTempKelvin' =>
+    array (
+      0 => 165,
+    ),
+    'Canon:ColorTempMeasured' =>
+    array (
+      0 => 85,
+    ),
+    'Canon:ColorTempShade' =>
+    array (
+      0 => 145,
+    ),
+    'Canon:ColorTempTungsten' =>
+    array (
+      0 => 155,
+    ),
+    'Canon:ColorTempUnknown' =>
+    array (
+      0 => 90,
+    ),
+    'Canon:ColorTempUnknown10' =>
+    array (
+      0 => 135,
+    ),
+    'Canon:ColorTempUnknown11' =>
+    array (
+      0 => 175,
+    ),
+    'Canon:ColorTempUnknown12' =>
+    array (
+      0 => 180,
+    ),
+    'Canon:ColorTempUnknown13' =>
+    array (
+      0 => 185,
+    ),
+    'Canon:ColorTempUnknown14' =>
+    array (
+      0 => 190,
+    ),
+    'Canon:ColorTempUnknown15' =>
+    array (
+      0 => 195,
+    ),
+    'Canon:ColorTempUnknown16' =>
+    array (
+      0 => 200,
+    ),
+    'Canon:ColorTempUnknown17' =>
+    array (
+      0 => 205,
+    ),
+    'Canon:ColorTempUnknown18' =>
+    array (
+      0 => 210,
+    ),
+    'Canon:ColorTempUnknown19' =>
+    array (
+      0 => 215,
+    ),
+    'Canon:ColorTempUnknown2' =>
+    array (
+      0 => 95,
+    ),
+    'Canon:ColorTempUnknown20' =>
+    array (
+      0 => 220,
+    ),
+    'Canon:ColorTempUnknown21' =>
+    array (
+      0 => 225,
+    ),
+    'Canon:ColorTempUnknown22' =>
+    array (
+      0 => 230,
+    ),
+    'Canon:ColorTempUnknown23' =>
+    array (
+      0 => 235,
+    ),
+    'Canon:ColorTempUnknown24' =>
+    array (
+      0 => 240,
+    ),
+    'Canon:ColorTempUnknown25' =>
+    array (
+      0 => 245,
+    ),
+    'Canon:ColorTempUnknown26' =>
+    array (
+      0 => 250,
+    ),
+    'Canon:ColorTempUnknown27' =>
+    array (
+      0 => 255,
+    ),
+    'Canon:ColorTempUnknown28' =>
+    array (
+      0 => 260,
+    ),
+    'Canon:ColorTempUnknown29' =>
+    array (
+      0 => 265,
+    ),
+    'Canon:ColorTempUnknown3' =>
+    array (
+      0 => 100,
+    ),
+    'Canon:ColorTempUnknown4' =>
+    array (
+      0 => 105,
+    ),
+    'Canon:ColorTempUnknown5' =>
+    array (
+      0 => 110,
+    ),
+    'Canon:ColorTempUnknown6' =>
+    array (
+      0 => 115,
+    ),
+    'Canon:ColorTempUnknown7' =>
+    array (
+      0 => 120,
+    ),
+    'Canon:ColorTempUnknown8' =>
+    array (
+      0 => 125,
+    ),
+    'Canon:ColorTempUnknown9' =>
+    array (
+      0 => 130,
+    ),
+    'Canon:LinearityUpperMargin' =>
+    array (
+      0 => 798,
+    ),
+    'Canon:NormalWhiteLevel' =>
+    array (
+      0 => 796,
+    ),
+    'Canon:PerChannelBlackLevel' =>
+    array (
+      0 => 329,
+    ),
+    'Canon:SpecularWhiteLevel' =>
+    array (
+      0 => 797,
+    ),
+    'Canon:WB_RGGBLevelsAsShot' =>
+    array (
+      0 => 71,
+    ),
+    'Canon:WB_RGGBLevelsAuto' =>
+    array (
+      0 => 76,
+    ),
+    'Canon:WB_RGGBLevelsCloudy' =>
+    array (
+      0 => 146,
+    ),
+    'Canon:WB_RGGBLevelsDaylight' =>
+    array (
+      0 => 136,
+    ),
+    'Canon:WB_RGGBLevelsFlash' =>
+    array (
+      0 => 166,
+    ),
+    'Canon:WB_RGGBLevelsFluorescent' =>
+    array (
+      0 => 156,
+    ),
+    'Canon:WB_RGGBLevelsKelvin' =>
+    array (
+      0 => 161,
+    ),
+    'Canon:WB_RGGBLevelsMeasured' =>
+    array (
+      0 => 81,
+    ),
+    'Canon:WB_RGGBLevelsShade' =>
+    array (
+      0 => 141,
+    ),
+    'Canon:WB_RGGBLevelsTungsten' =>
+    array (
+      0 => 151,
+    ),
+    'Canon:WB_RGGBLevelsUnknown' =>
+    array (
+      0 => 86,
+    ),
+    'Canon:WB_RGGBLevelsUnknown10' =>
+    array (
+      0 => 131,
+    ),
+    'Canon:WB_RGGBLevelsUnknown11' =>
+    array (
+      0 => 171,
+    ),
+    'Canon:WB_RGGBLevelsUnknown12' =>
+    array (
+      0 => 176,
+    ),
+    'Canon:WB_RGGBLevelsUnknown13' =>
+    array (
+      0 => 181,
+    ),
+    'Canon:WB_RGGBLevelsUnknown14' =>
+    array (
+      0 => 186,
+    ),
+    'Canon:WB_RGGBLevelsUnknown15' =>
+    array (
+      0 => 191,
+    ),
+    'Canon:WB_RGGBLevelsUnknown16' =>
+    array (
+      0 => 196,
+    ),
+    'Canon:WB_RGGBLevelsUnknown17' =>
+    array (
+      0 => 201,
+    ),
+    'Canon:WB_RGGBLevelsUnknown18' =>
+    array (
+      0 => 206,
+    ),
+    'Canon:WB_RGGBLevelsUnknown19' =>
+    array (
+      0 => 211,
+    ),
+    'Canon:WB_RGGBLevelsUnknown2' =>
+    array (
+      0 => 91,
+    ),
+    'Canon:WB_RGGBLevelsUnknown20' =>
+    array (
+      0 => 216,
+    ),
+    'Canon:WB_RGGBLevelsUnknown21' =>
+    array (
+      0 => 221,
+    ),
+    'Canon:WB_RGGBLevelsUnknown22' =>
+    array (
+      0 => 226,
+    ),
+    'Canon:WB_RGGBLevelsUnknown23' =>
+    array (
+      0 => 231,
+    ),
+    'Canon:WB_RGGBLevelsUnknown24' =>
+    array (
+      0 => 236,
+    ),
+    'Canon:WB_RGGBLevelsUnknown25' =>
+    array (
+      0 => 241,
+    ),
+    'Canon:WB_RGGBLevelsUnknown26' =>
+    array (
+      0 => 246,
+    ),
+    'Canon:WB_RGGBLevelsUnknown27' =>
+    array (
+      0 => 251,
+    ),
+    'Canon:WB_RGGBLevelsUnknown28' =>
+    array (
+      0 => 256,
+    ),
+    'Canon:WB_RGGBLevelsUnknown29' =>
+    array (
+      0 => 261,
+    ),
+    'Canon:WB_RGGBLevelsUnknown3' =>
+    array (
+      0 => 96,
+    ),
+    'Canon:WB_RGGBLevelsUnknown4' =>
+    array (
+      0 => 101,
+    ),
+    'Canon:WB_RGGBLevelsUnknown5' =>
+    array (
+      0 => 106,
+    ),
+    'Canon:WB_RGGBLevelsUnknown6' =>
+    array (
+      0 => 111,
+    ),
+    'Canon:WB_RGGBLevelsUnknown7' =>
+    array (
+      0 => 116,
+    ),
+    'Canon:WB_RGGBLevelsUnknown8' =>
+    array (
+      0 => 121,
+    ),
+    'Canon:WB_RGGBLevelsUnknown9' =>
+    array (
+      0 => 126,
+    ),
   ),
   'items' =>
   array (
