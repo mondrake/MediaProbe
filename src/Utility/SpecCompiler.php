@@ -228,7 +228,8 @@ DATA;
                 }
 
                 // Add item to map by collection/id.
-                if (!isset($map['items'][$id])) {
+                $map['items'][$id][] = $xxx;
+/*                if (!isset($map['items'][$id])) {
                     $map['items'][$id] = $xxx;
                 } else {
                     if (isset($map['items'][$id]['collection'])) {
@@ -237,7 +238,7 @@ DATA;
                         $map['items'][$id][] = $yyy;
                     }
                     $map['items'][$id][] = $xxx;
-                }
+                }*/
             } else {
                 foreach ($item['exiftool'] as $i => $exiftool) {
                     if ($item['compiler']['exiftool']['skipDOMNode'] ?? false) {
@@ -269,7 +270,8 @@ DATA;
                     }
 
                     // Add item to map by collection/id.
-                    if (!isset($map['items'][$id])) {
+                    $map['items'][$id][] = $xxx;
+    /*                if (!isset($map['items'][$id])) {
                         $map['items'][$id] = $xxx;
                     } else {
                         if (isset($map['items'][$id]['collection'])) {
@@ -278,7 +280,7 @@ DATA;
                             $map['items'][$id][] = $yyy;
                         }
                         $map['items'][$id][] = $xxx;
-                    }
+                    }*/
                 }
             }
 
