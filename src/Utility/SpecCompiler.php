@@ -228,7 +228,9 @@ DATA;
                     $map['items'][$id] = $xxx;
                 } else {
                     if (!is_array($map['items'][$id])) {
-                       $map['items'][$id] = [$map['items'][$id]];
+                       $yyy = $map['items'][$id];
+                       unset($map['items'][$id]);
+                       $map['items'][$id][] = $yyy;
                     }
                     $map['items'][$id][] = $xxx;
                 }
@@ -238,7 +240,7 @@ DATA;
                         unset($exiftool['DOMNode']);
                     }
                     $xxx = $this->processExiftoolEntry($exiftool, $item, $file);
-                    
+
                     // Add item to map by collection/name.
                     if (isset($xxx['name'])) {
                         if (!in_array($id, array_values($map['itemsByName'][$xxx['name']] ?? []))) {
@@ -263,7 +265,9 @@ DATA;
                         $map['items'][$id] = $xxx;
                     } else {
                         if (!is_array($map['items'][$id])) {
-                           $map['items'][$id] = [$map['items'][$id]];
+                            $yyy = $map['items'][$id];
+                            unset($map['items'][$id]);
+                            $map['items'][$id][] = $yyy;
                         }
                         $map['items'][$id][] = $xxx;
                     }
