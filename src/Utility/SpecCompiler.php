@@ -215,7 +215,7 @@ DATA;
                     $map['items'][$id] = $xxx;
                 } else {
                     if (!is_array($map['items'][$id])) {
-                       $map['items'][$id] = [$map['items'][$id]]:
+                       $map['items'][$id] = [$map['items'][$id]];
                     }
                     $map['items'][$id][] = $xxx;
                 }
@@ -237,7 +237,7 @@ DATA;
                     $map['items'][$id] = $xxx;
                 } else {
                     if (!is_array($map['items'][$id])) {
-                       $map['items'][$id] = [$map['items'][$id]]:
+                       $map['items'][$id] = [$map['items'][$id]];
                     }
                     $map['items'][$id][] = $xxx;
                 }
