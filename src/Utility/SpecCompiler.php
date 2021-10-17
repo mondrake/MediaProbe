@@ -221,7 +221,7 @@ DATA;
                 if (isset($exiftool['DOMNode'])) { // xx
                     $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
                     if (!in_array($id, array_values($map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] ?? []))) {
-                        $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                        $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']][] = $id;
                     }
                 }
 
@@ -260,7 +260,7 @@ DATA;
                     if (isset($exiftool['DOMNode'])) { // xx
                         $xxx['exiftoolDOMNode'] = $exiftool['DOMNode'];
                         if (!in_array($id, array_values($map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] ?? []))) {
-                            $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']] = $id;
+                            $map['itemsByExiftoolDOMNode'][$exiftool['DOMNode']][] = $id;
                         }
                     }
 
