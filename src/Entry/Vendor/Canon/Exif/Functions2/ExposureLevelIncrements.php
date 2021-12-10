@@ -12,7 +12,7 @@ class ExposureLevelIncrements extends SignedLong
     /**
      * @todo
      */
-    public static determineCollectionIndex(ElementInterface $root): int
+    public static function determineCollectionIndex(ElementInterface $root): int
     {
         // Gets the Model from IFD0.
         $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
