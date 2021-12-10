@@ -46,7 +46,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * @todo
      */
-    public static determineCollectionIndex(ElementInterface $root): int
+    public static function determineCollectionIndex(ElementInterface $root): int
     {
         return 0;
     }
