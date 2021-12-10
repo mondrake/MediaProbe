@@ -42,8 +42,13 @@ class CustomFunctions2 extends ListBase
             $rec_pos += 8;
             try {
                 $xxx = $this->getCollection()->getItemCollection($id);
-                $entry_class = $xxx->getEntryClass();
-                $index = $entry_class::determineCollectionIndex($this->getRootElement());
+                $entry_class = $xxx->getPropertyValue('entryClass');
+                if ($entry_class) {
+                  $index = $entry_class::determineCollectionIndex($this->getRootElement());
+                }
+                else {
+                  $index = 0;
+                }
 
                 $item_collection = $this->getCollection()->getItemCollection($id, $index, 'UnknownTag', [
                     'item' => $id,
