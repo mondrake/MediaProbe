@@ -10,9 +10,21 @@ use FileEye\MediaProbe\Entry\Core\SignedLong;
 class ExposureLevelIncrements extends SignedLong
 {
     /**
+     * @todo
+     */
+    public static determineCollectionIndex(ElementInterface $root): int
+    {
+        // Gets the Model from IFD0.
+        $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
+        $model = $model_entry ? $model_entry->getValue() : 'n/a';
+dump($model);
+        return 1;
+    }
+
+    /**
      * {@inheritdoc}
      */
-    public function toString(array $options = [])
+/*    public function toString(array $options = [])
     {
         // Gets the Model from IFD0.
         $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
@@ -27,5 +39,5 @@ return $a;
         }
 
         return */
-    }
+ //   }
 }
