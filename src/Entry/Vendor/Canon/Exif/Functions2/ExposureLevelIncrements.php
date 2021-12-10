@@ -20,7 +20,9 @@ class ExposureLevelIncrements extends SignedLong
 dump($model);
 global $xxx;
 $xxx = true;
-return parent::toString($options);
+$a = parent::toString($options);
+$xxx = false;
+return $a;
 /*        if (preg_match('/\b1D.*\b/', $model) === 1) {
         }
 
