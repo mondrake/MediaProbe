@@ -1309,6 +1309,7 @@ items:
                     - 'Raise built-in flash'
                     - 'ISO speed'
     1807:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\MultiFunctionLock
         exiftool:
             -
                 name: MultiFunctionLock
