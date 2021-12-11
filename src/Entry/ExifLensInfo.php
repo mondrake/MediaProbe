@@ -14,23 +14,22 @@ class ExifLensInfo extends Rational
      */
     public function toString(array $options = [])
     {
-        if (($options['format'] ?? null) === 'exiftool') {
-            $val = $this->getValue($options);
-            if ($val[0] == $val[1]) {
-              $str = $val[0];
-            } else {
-              $str = $val[0] . '-'. $val[1];
-            }
-            $str .= 'mm f/';
-            if ($val[3] == 'undef') {
-              $str .= '?';
-            } elseif ($val[2] == $val[3]) {
-              $str .= $val[2];
-            } else {
-              $str .= $val[2] . '-'. $val[3];
-            }
-            return $str;
+        $options['format'] = 'exiftool';
+        $val = $this->getValue($options);
+dump($val);
+        if ($val[0] == $val[1]) {
+          $str = $val[0];
+        } else {
+          $str = $val[0] . '-'. $val[1];
         }
-        return parent::toString($options);
+        $str .= 'mm f/';
+        if ($val[3] == 'undef') {
+          $str .= '?';
+        } elseif ($val[2] == $val[3]) {
+          $str .= $val[2];
+        } else {
+          $str .= $val[2] . '-'. $val[3];
+        }
+        return $str;
     }
 }
