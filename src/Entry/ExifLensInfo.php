@@ -29,7 +29,7 @@ class ExifLensInfo extends Rational
         } else {
           $str .= $val[2] . '-'. $val[3];
         }
-dump([$val, $str]);
+
         return $str;
     }
 }
