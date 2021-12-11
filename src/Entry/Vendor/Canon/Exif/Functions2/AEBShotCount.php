@@ -30,6 +30,7 @@ class AEBShotCount extends SignedLong
      */
     public function toString(array $options = [])
     {
+dump($this->getValue($options));
         $val = implode(' ', $this->getValue($options));
         return $this->getMappedText($val);
     }
