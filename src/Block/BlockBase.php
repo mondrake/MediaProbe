@@ -60,7 +60,7 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
-     * Resolves, in relation to the context, the index of the item collection to be used to instantiate the block.
+     * Resolves, in relation to the context, the index of the item collection to be used to instantiate the Block.
      *
      * @param ElementInterface $context
      *   An element that can be used to provide context.

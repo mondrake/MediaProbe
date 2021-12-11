@@ -719,6 +719,7 @@ items:
                     - 'Control-direct:disable/Main:disable'
                     - 'Control-direct:enable/Main:enable'
     1292:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\AFPointDisplayDuringFocus
         exiftool:
             -
                 name: AFPointDisplayDuringFocus

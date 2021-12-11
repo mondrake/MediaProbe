@@ -69,7 +69,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
-     * Resolves, in relation to the context, the index of the item collection to be used to instantiate the entry.
+     * Resolves, in relation to the context, the index of the item collection to be used to instantiate the Entry.
      *
      * @param ElementInterface $context
      *   An element that can be used to provide context.
