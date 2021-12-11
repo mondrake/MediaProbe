@@ -18,9 +18,10 @@ class ViewfinderWarnings extends SignedLong
         for ($i = 0; $i < 32; $i++) {
             $mask = 2 ** $i;
             if ($this->getValue($options) & $mask) {
-                $ret[] = $mask;
+                $text = $this->getMappedText($mask);
+                $ret[] = $text ?? '[' . $i + 1 . ']';
             }
         }
-        return implode(' ,', $ret);
+        return implode(', ', $ret);
     }
 }
