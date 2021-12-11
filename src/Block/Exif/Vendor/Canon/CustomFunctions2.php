@@ -55,7 +55,6 @@ class CustomFunctions2 extends ListBase
                     'DOMNode' => 'tag',
                 ]);
                 $item_definition = new ItemDefinition($item_collection, ItemFormat::SIGNED_LONG, $num, $rec_pos);
-dump(['$item_definition', $item_definition, $item_definition->getEntryClass()]);
                 $class = $item_definition->getCollection()->getPropertyValue('class');
                 $tag = new $class($item_definition, $this);
                 $tag_data_window = new DataWindow($data, $item_definition->getDataOffset(), $item_definition->getSize());

@@ -11,7 +11,7 @@ use FileEye\MediaProbe\Entry\Core\SignedLong;
 class ExposureLevelIncrements extends SignedLong
 {
     /**
-     * @todo
+     * {@inheritdoc}
      */
     public static function resolveItemCollectionIndex(ElementInterface $root)
     {
