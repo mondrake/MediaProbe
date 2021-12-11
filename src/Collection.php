@@ -192,24 +192,17 @@ abstract class Collection
      *
      * @param string $item_id
      *   The item id.
-     * @param ElementInterface|null $context
+     * @param ElementInterface $context
      *   An element that can be used to provide context.
      *
      * @return mixed
      *   The item collection index.
      */
-    private function getItemCollectionIndex(string $item_id, ?ElementInterface $context)
+    private function getItemCollectionIndex(string $item_id, ElementInterface $context)
     {
-        if ($context === null) {
-            return 0;
-        }
+        $entry_class = static::$map['items'][$item_id][0]['entryClass'] ?? null;
 
-        if (!isset(static::$map['items'][$item_id][0]['entryClass'])) {
-            return 0;
-        }
-
-        $entry_class = static::$map['items'][$item_id][0]['entryClass'];
-        return $entry_class::resolveItemCollectionIndex($context);
+        return $entry_class ? $entry_class::resolveItemCollectionIndex($context) : 0;
     }
 
     /**
@@ -229,7 +222,12 @@ abstract class Collection
     public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], ElementInterface $context = null): Collection
     {
         if ($index === null) {
-            $index = $this->getItemCollectionIndex($item, $context);
+            if ($context === null) {
+                $index = 0;
+            }
+            else {
+                $index = $this->getItemCollectionIndex($item, $context);
+            }
         }
 
         if (!isset(static::$map['items'][$item][$index]['collection'])) {
