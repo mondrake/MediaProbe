@@ -13,7 +13,7 @@ class ExposureLevelIncrements extends SignedLong
     /**
      * {@inheritdoc}
      */
-    public static function resolveItemCollectionIndex(ElementInterface $context)
+    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context)
     {
         // Gets the Model from IFD0.
         $model = $context->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue();
