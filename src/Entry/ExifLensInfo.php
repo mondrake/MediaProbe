@@ -14,7 +14,7 @@ class ExifLensInfo extends Rational
      */
     public function getValue(array $options = [])
     {
-dump([$this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue(), $this->value, $parent::getValue($options), $options]);
+dump([$this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue(), $this->value, parent::getValue($options), $options]);
         if (($options['format'] ?? null) === 'exiftool') {
             $val = $this->getValue();
 //            $val[2] = $val[2] === 0 ? 'undef' : $val[2];
