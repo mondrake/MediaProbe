@@ -44,7 +44,7 @@ class CustomFunctions2 extends ListBase
                 $xxx = $this->getCollection()->getItemCollection($id);
                 $entry_class = $xxx->getPropertyValue('entryClass');
                 if ($entry_class) {
-                  $index = $entry_class::determineCollectionIndex($this->getRootElement());
+                  $index = $entry_class::resolveItemCollectionIndex($this->getRootElement());
                 }
                 else {
                   $index = 0;

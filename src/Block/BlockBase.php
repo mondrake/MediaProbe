@@ -60,6 +60,14 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public static function resolveItemCollectionIndex(ElementInterface $root)
+    {
+        return 0;
+    }
+
+    /**
      * Gets the Definition of this Block.
      *
      * @return \FileEye\MediaProbe\ItemDefinition

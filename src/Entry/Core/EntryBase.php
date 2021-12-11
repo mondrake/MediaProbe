@@ -71,6 +71,14 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
+    public static function resolveItemCollectionIndex(ElementInterface $root)
+    {
+        return 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getFormat()
     {
         return $this->format;
@@ -126,7 +134,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$text_config = $this->getParentElement()->getCollection()->getPropertyValue('text')) {
             return false;
         }
-global $xxx; if ($xxx) dump([__METHOD__, $this->getParentElement()->getCollection(), $text_config]);
         return isset($text_config['mapping']);
     }
 
@@ -206,7 +213,6 @@ global $xxx; if ($xxx) dump([__METHOD__, $this->getParentElement()->getCollectio
             return $text;
         }
 
-//if (!is_scalar($value)) dump($value);
         return is_scalar($value) ? $value : serialize($value);
     }
 
@@ -216,7 +222,6 @@ global $xxx; if ($xxx) dump([__METHOD__, $this->getParentElement()->getCollectio
     public function toString(array $options = [])
     {
         $text = $this->resolveText($this->getValue($options));
-global $xxx; if ($xxx) dump([__METHOD__, $text]);
         if (is_array($text)) {
             if (!$this->hasMappedText() && !$this->hasDefaultText()) {
                 return implode(' ', $text);

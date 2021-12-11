@@ -44,14 +44,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected $parsed = false;
 
     /**
-     * @todo
-     */
-    public static function determineCollectionIndex(ElementInterface $root): int
-    {
-        return 0;
-    }
-
-    /**
      * Constructs an Element object.
      *
      * @param string $dom_node_name

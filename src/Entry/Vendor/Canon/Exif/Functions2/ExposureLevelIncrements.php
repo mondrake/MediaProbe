@@ -13,32 +13,16 @@ class ExposureLevelIncrements extends SignedLong
     /**
      * @todo
      */
-    public static function determineCollectionIndex(ElementInterface $root): int
+    public static function resolveItemCollectionIndex(ElementInterface $root)
     {
         // Gets the Model from IFD0.
-        $model_entry = $root->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
-        $model = $model_entry ? $model_entry->getValue() : 'n/a';
-dump($model);
+        $model = $root->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue();
+
+        if (preg_match('/\b1D.*\b/', $model) === 1) {
+            // 1DmkIII and 1DmkIV.
+            return 0;
+        }
+        // Other models.
         return 1;
     }
-
-    /**
-     * {@inheritdoc}
-     */
-/*    public function toString(array $options = [])
-    {
-        // Gets the Model from IFD0.
-        $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
-        $model = $model_entry ? $model_entry->getValue() : 'n/a';
-dump($model);
-global $xxx;
-$xxx = true;
-$a = parent::toString($options);
-$xxx = false;
-return $a;
-/*        if (preg_match('/\b1D.*\b/', $model) === 1) {
-        }
-
-        return */
- //   }
 }
