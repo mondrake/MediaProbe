@@ -60,7 +60,13 @@ abstract class BlockBase extends ElementBase
     }
 
     /**
-     * {@inheritdoc}
+     * Resolves, in relation to the context, the index of the item collection to be used to instantiate the block.
+     *
+     * @param ElementInterface $context
+     *   An element that can be used to provide context.
+     *
+     * @return mixed
+     *   The item collection index.
      */
     public static function resolveItemCollectionIndex(ElementInterface $context)
     {
