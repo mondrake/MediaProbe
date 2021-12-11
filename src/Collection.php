@@ -201,7 +201,7 @@ abstract class Collection
         if ($context === null) {
             return 0;
         }
-
+dump([$item, static::$map['items'][$item] ?? 'und']);
         if (!isset(static::$map['items'][$item]['entryClass'])) {
             return 0;
         }
