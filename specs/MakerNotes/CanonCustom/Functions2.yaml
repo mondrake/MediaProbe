@@ -616,6 +616,7 @@ items:
                     - 'Switch to registered AF point'
                     - 'Spot AF'
     1287:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\AFMicroadjustment
         exiftool:
             -
                 name: AFMicroadjustment
