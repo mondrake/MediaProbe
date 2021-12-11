@@ -22,7 +22,7 @@ class ExifLensInfo extends Rational
           $str = $val[0] . '-'. $val[1];
         }
         $str .= 'mm f/';
-        if ($val[3] == 'undef') {
+        if ($val[3] === 'undef') {
           $str .= '?';
         } elseif ($val[2] == $val[3]) {
           $str .= $val[2];
