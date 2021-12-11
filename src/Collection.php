@@ -201,12 +201,12 @@ abstract class Collection
         if ($context === null) {
             return 0;
         }
-dump([$item, static::$map['items'][$item] ?? 'und']);
-        if (!isset(static::$map['items'][$item]['entryClass'])) {
+
+        if (!isset(static::$map['items'][$item][0]['entryClass'])) {
             return 0;
         }
 
-        $entry_class = static::$map['items'][$item]['entryClass'];
+        $entry_class = static::$map['items'][$item][0]['entryClass'];
         return $entry_class::resolveItemCollectionIndex($context);
     }
 
