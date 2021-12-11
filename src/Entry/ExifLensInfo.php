@@ -16,7 +16,6 @@ class ExifLensInfo extends Rational
     {
         $options['format'] = 'exiftool';
         $val = $this->getValue($options);
-dump($val);
         if ($val[0] == $val[1]) {
           $str = $val[0];
         } else {
@@ -30,6 +29,7 @@ dump($val);
         } else {
           $str .= $val[2] . '-'. $val[3];
         }
+dump([$val, $str]);
         return $str;
     }
 }

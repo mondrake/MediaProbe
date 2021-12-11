@@ -6961,7 +6961,7 @@ elements:
                                                                     format: Rational
                                                                     components: 4
                                                                     bytesHash: a89734e22e1cd4c646a72e723df7a55514e8fa37652d3b209698f1aff1f5ee1f
-                                                                    text: '18 135 0 0'
+                                                                    text: '18-135mm f/0'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensModel:42036'
