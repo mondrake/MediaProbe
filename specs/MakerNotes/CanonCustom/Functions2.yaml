@@ -843,6 +843,7 @@ items:
                     - 'Quick mode'
                     - 'Live mode'
     1298:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\SelectAFAreaSelectMode
         exiftool:
             -
                 name: SelectAFAreaSelectMode
