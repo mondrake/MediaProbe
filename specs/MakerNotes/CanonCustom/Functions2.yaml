@@ -500,6 +500,7 @@ items:
                     - 'Displays shooting functions'
                     - 'Displays camera settings'
     1034:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ViewfinderWarnings
         exiftool:
             -
                 name: ViewfinderWarnings
