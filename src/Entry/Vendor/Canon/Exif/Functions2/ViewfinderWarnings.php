@@ -15,9 +15,11 @@ class ViewfinderWarnings extends SignedLong
     public function toString(array $options = [])
     {
         $value = (int) $this->getValue($options);
+
         $ret = [];
         for ($i = 0; $i < 32; $i++) {
             $mask = 2 ** $i;
+dump([$value, $mask]);
             if ($value & $mask) {
                 $text = $this->getMappedText($mask);
                 $ret[] = $text ?? '[' . $i + 1 . ']';
