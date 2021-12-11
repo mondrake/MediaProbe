@@ -24,4 +24,13 @@ class AEBShotCount extends SignedLong
 
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toString(array $options = [])
+    {
+        $val = implode(' ', $this->getValue($options));
+        return $this->getMappedText($val);
+    }
 }
