@@ -18,7 +18,7 @@ class AFPointDisplayDuringFocus extends SignedLong
         // Gets the Model from IFD0.
         $model = $context->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue();
 
-        if (preg_match('/\b1D.*\b/', $model) === 1) {
+        if (preg_match('/\b1D\b/', $model) === 1) {
             // 1D models.
             return 0;
         }
