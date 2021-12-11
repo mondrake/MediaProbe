@@ -14,6 +14,13 @@ class ViewfinderWarnings extends SignedLong
      */
     public function toString(array $options = [])
     {
-        return $this->getValue($options);
+        $ret = [];
+        for ($i = 0; $i < 32; $i++) {
+            $mask = 2 ** $i;
+            if ($this->getValue($options) & $mask) {
+                $ret[] = $mask;
+            }
+        }
+        return implode(' ,', $ret);
     }
 }
