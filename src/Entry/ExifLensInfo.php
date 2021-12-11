@@ -37,7 +37,7 @@ class ExifLensInfo extends Rational
             }
             $str .= 'mm f/';
             if ($val[3] == 0) {
-              $str .= '?';
+              $str .= '0';
             } elseif ($val[2] == $val[3]) {
               $str .= $val[2];
             } else {
