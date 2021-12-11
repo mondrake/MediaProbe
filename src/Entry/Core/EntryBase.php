@@ -71,7 +71,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public static function resolveItemCollectionIndex(ElementInterface $root)
+    public static function resolveItemCollectionIndex(ElementInterface $context)
     {
         return 0;
     }

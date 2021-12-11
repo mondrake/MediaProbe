@@ -41,18 +41,12 @@ class CustomFunctions2 extends ListBase
             ]);
             $rec_pos += 8;
             try {
-                $xxx = $this->getCollection()->getItemCollection($id);
-                $entry_class = $xxx->getPropertyValue('entryClass');
-                if ($entry_class) {
-                  $index = $entry_class::resolveItemCollectionIndex($this->getRootElement());
-                }
-                else {
-                  $index = 0;
-                }
-
-                $item_collection = $this->getCollection()->getItemCollection($id, $index, 'UnknownTag', [
-                    'item' => $id,
-                    'DOMNode' => 'tag',
+                $item_collection = $this->getCollection()->getItemCollection(
+                    $id,
+                    null,
+                    'UnknownTag',
+                    ['item' => $id, 'DOMNode' => 'tag'],
+                    $this->getRootElement()
                 ]);
                 $item_definition = new ItemDefinition($item_collection, ItemFormat::SIGNED_LONG, $num, $rec_pos);
                 $class = $item_definition->getCollection()->getPropertyValue('class');
