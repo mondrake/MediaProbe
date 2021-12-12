@@ -197,7 +197,7 @@ items:
                 DOMNode: 'CanonCustom:ShutterSpeedRange'
                 desc: 'Shutter Speed Range'
     269:
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomApertureRange
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ApertureRange
         exiftool:
             -
                 name: ApertureRange

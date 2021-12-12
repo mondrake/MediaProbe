@@ -3451,7 +3451,7 @@ elements:
                                                                                         -
                                                                                             node: entry
                                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:Exposure:1/tag:ApertureRange:269/entry'
-                                                                                            class: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\CustomApertureRange
+                                                                                            class: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ApertureRange
                                                                                             parsed: true
                                                                                             format: SignedLong
                                                                                             components: 3
