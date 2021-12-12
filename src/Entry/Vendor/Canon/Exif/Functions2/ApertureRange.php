@@ -40,7 +40,7 @@ class ApertureRange extends SignedLong
                     break;
                 case 4:
                     $v[0] = exp($this->value[0] / 2400);
-                    $v[1] = exp($this->value[1] / 2400)
+                    $v[1] = exp($this->value[1] / 2400);
                     $v[2] = exp($this->value[2] / 2400);
                     $v[3] = exp($this->value[3] / 2400);
                     break;
