@@ -49,8 +49,7 @@ class ShutterSpeedRange extends SignedLong
     public function toString(array $options = [])
     {
         if (($options['format'] ?? null) === 'exiftool') {
-            $val = $this->getValue();
-dump($val);
+            $val = explode(' ', $this->getValue($options));
             switch (count($val)) {
                 case 3:
                     $str = $val[0] === 0 ? 'Disable; Hi ' : 'Enable; Hi ';
