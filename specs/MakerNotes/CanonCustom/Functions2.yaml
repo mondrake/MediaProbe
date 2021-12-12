@@ -372,6 +372,7 @@ items:
                     - Auto
                     - 'On'
     514:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\HighISONoiseReduction
         exiftool:
             -
                 name: HighISONoiseReduction
