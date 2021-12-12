@@ -217,6 +217,7 @@ items:
                 DOMNode: 'CanonCustom:ApertureRange'
                 desc: 'Aperture Range'
     270:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ApplyShootingMeteringMode
         exiftool:
             -
                 name: ApplyShootingMeteringMode
