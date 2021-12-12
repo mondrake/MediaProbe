@@ -16,6 +16,7 @@ class FNumber extends ApertureValue
     {
 $model = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue();
 dump([$model, $this->value, $this->getValue(), round($this->getValue(), 1)]);
-        return round($this->getValue(), 1);
+        return sprintf("%.2g", $this->getValue());
+        //return round($this->getValue(), 1);
     }
 }
