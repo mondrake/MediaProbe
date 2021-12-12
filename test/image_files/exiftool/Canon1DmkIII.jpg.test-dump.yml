@@ -3798,7 +3798,7 @@ elements:
                                                                                             format: SignedLong
                                                                                             components: 5
                                                                                             bytesHash: de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90
-                                                                                            text: 'Disable, Disable, Disable, Disable, Disable'
+                                                                                            text: 'Disable; 0; 0; 0; 0'
                                                                                 -
                                                                                     node: tag
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:AutoFocusDrive:3/tag:AFPointAreaExpansion:1288'
