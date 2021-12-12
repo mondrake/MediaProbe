@@ -14,6 +14,7 @@ class FNumber extends ApertureValue
      */
     public function toString(array $options = [])
     {
+dump([$this->value, $this->getValue(), round($this->getValue(), 1)]);
         return round($this->getValue(), 1);
     }
 }
