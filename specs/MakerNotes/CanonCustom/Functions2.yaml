@@ -1019,6 +1019,7 @@ items:
                     - Disable
                     - Enable
     1553:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ContinuousShotLimit
         exiftool:
             -
                 name: ContinuousShotLimit
