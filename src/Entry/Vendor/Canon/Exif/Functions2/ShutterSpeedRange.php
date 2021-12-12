@@ -15,10 +15,24 @@ class ShutterSpeedRange extends SignedLong
     /**
      * {@inheritdoc}
      */
+    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context)
+    {
+        switch ($components_count) {
+            case 3:
+                return 0;
+
+            case 4:
+                return 1;
+
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getValue(array $options = [])
     {
-        $format = $options['format'] ?? null;
-        if ($format === 'exiftool') {
+        if (($options['format'] ?? null) === 'exiftool') {
             $v = [];
             $v[0] = $this->value[0];
             $v[1] = exp(-($this->value[1] / 8 - 7) * log(2));
@@ -33,13 +47,19 @@ class ShutterSpeedRange extends SignedLong
      */
     public function toString(array $options = [])
     {
-        $format = $options['format'] ?? null;
-        if ($format === 'exiftool') {
+        if (($options['format'] ?? null) === 'exiftool') {
             $val = $this->getValue($options);
-            $str = $val[0] === 0 ? 'Disable; Hi ' : 'Enable; Hi ';
-            $str .= $this->exposureTimeToString($val[1]) . '; Lo ';
-            $str .= $this->exposureTimeToString($val[2]);
-            return $str;
+            switch (count($val)) {
+                case 3:
+                    $str = $val[0] === 0 ? 'Disable; Hi ' : 'Enable; Hi ';
+                    $str .= $this->exposureTimeToString($val[1]) . '; Lo ';
+                    $str .= $this->exposureTimeToString($val[2]);
+                    return $str;
+
+                case 4:
+                    return 'boing boing';
+
+            }
         }
         return parent::toString($options);
     }
