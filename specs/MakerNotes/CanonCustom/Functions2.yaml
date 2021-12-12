@@ -1391,6 +1391,7 @@ items:
                 DOMNode: 'CanonCustom:CustomizeDials'
                 desc: 'Customize Dials'
     2059:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\FocusingScreen
         exiftool:
             -
                 name: FocusingScreen
