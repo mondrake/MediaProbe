@@ -11,6 +11,8 @@ use FileEye\MediaProbe\MediaProbe;
  */
 class ApertureValue extends SignedShort
 {
+    use ExifTrait;
+
     /**
      * {@inheritdoc}
      */
