@@ -3474,7 +3474,7 @@ elements:
                                                                                             format: SignedLong
                                                                                             components: 8
                                                                                             bytesHash: cdcfd860b677cbcf9ecea4c793210a649a5c98572f8bd7d9a13731ae51f9cd84
-                                                                                            text: 'Disable, Disable, Disable, 3, 112, 48, Disable, Disable'
+                                                                                            text: 'Disable; 0; 0; 3; 112; 48; 0; 0'
                                                                                 -
                                                                                     node: tag
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:Exposure:1/tag:FlashSyncSpeedAv:271'
