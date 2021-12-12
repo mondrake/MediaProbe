@@ -35,9 +35,19 @@ class ShutterSpeedRange extends SignedLong
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $v = [];
-            $v[0] = $this->value[0];
-            $v[1] = exp(-($this->value[1] / 8 - 7) * log(2));
-            $v[2] = exp(-($this->value[2] / 8 - 7) * log(2));
+            switch (count($this->value)) {
+                case 3:
+                    $v[0] = $this->value[0];
+                    $v[1] = exp(-($this->value[1] / 8 - 7) * log(2));
+                    $v[2] = exp(-($this->value[2] / 8 - 7) * log(2));
+                    break;
+                case 4:
+                    $v[0] = exp(-$this->value[0] / (1600 * log(2)));
+                    $v[1] = exp(-$this->value[1] / (1600 * log(2)));
+                    $v[2] = exp(-$this->value[2] / (1600 * log(2)));
+                    $v[3] = exp(-$this->value[3] / (1600 * log(2)));
+                    break;
+            }
             return implode(' ', $v);
         }
         return parent::getValue();
@@ -52,13 +62,22 @@ class ShutterSpeedRange extends SignedLong
             $val = explode(' ', $this->getValue($options));
             switch (count($val)) {
                 case 3:
-                    $str = $val[0] === 0 ? 'Disable; Hi ' : 'Enable; Hi ';
-                    $str .= $this->exposureTimeToString($val[1]) . '; Lo ';
+                    $str = 'Enable; Hi ';
+                    $str .= $this->exposureTimeToString($val[1]);
+                    $str .= '; Lo ';
                     $str .= $this->exposureTimeToString($val[2]);
                     return $str;
 
                 case 4:
-                    return 'boing boing';
+                    $str = 'Manual: Hi ';
+                    $str .= $this->exposureTimeToString($val[0]);
+                    $str .= '; Lo ';
+                    $str .= $this->exposureTimeToString($val[1]);
+                    $str = '; Auto: Hi ';
+                    $str .= $this->exposureTimeToString($val[2]);
+                    $str .= '; Lo ';
+                    $str .= $this->exposureTimeToString($val[3]);
+                    return $str;
 
             }
         }
