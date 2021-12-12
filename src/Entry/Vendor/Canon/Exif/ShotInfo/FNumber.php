@@ -14,7 +14,8 @@ class FNumber extends ApertureValue
      */
     public function toString(array $options = [])
     {
-dump([$this->value, $this->getValue(), round($this->getValue(), 1)]);
+$model = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry")->getValue();
+dump([$model, $this->value, $this->getValue(), round($this->getValue(), 1)]);
         return round($this->getValue(), 1);
     }
 }
