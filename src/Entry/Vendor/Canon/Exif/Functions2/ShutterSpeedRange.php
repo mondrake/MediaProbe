@@ -62,7 +62,7 @@ class ShutterSpeedRange extends SignedLong
             $val = explode(' ', $this->getValue($options));
             switch (count($val)) {
                 case 3:
-                    $str = 'Enable; Hi ';
+                    $str = (int) $val[0] === 0 ?  'Disable; Hi ' : 'Enable; Hi ';
                     $str .= $this->exposureTimeToString($val[1]);
                     $str .= '; Lo ';
                     $str .= $this->exposureTimeToString($val[2]);
