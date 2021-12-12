@@ -1006,6 +1006,7 @@ items:
                     - Enable
                     - 'Enable: Down with Set'
     1552:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\ContinuousShootingSpeed
         exiftool:
             -
                 name: ContinuousShootingSpeed

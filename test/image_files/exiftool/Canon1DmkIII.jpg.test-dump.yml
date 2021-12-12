@@ -3960,7 +3960,7 @@ elements:
                                                                                             format: SignedLong
                                                                                             components: 3
                                                                                             bytesHash: e1a1fed3fb5e36a2ae3b63691bb023341a735d295718f08f18a4c702bbacbbec
-                                                                                            text: 'Disable, 10, 3'
+                                                                                            text: 'Disable; Hi 10; Lo 3'
                                                                                 -
                                                                                     node: tag
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:AutoFocusDrive:3/tag:ContinuousShotLimit:1553'
