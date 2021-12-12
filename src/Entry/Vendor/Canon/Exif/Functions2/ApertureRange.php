@@ -60,20 +60,20 @@ class ApertureRange extends SignedLong
             switch (count($val)) {
                 case 3:
                     $str = (int) $val[0] === 0 ?  'Disable; Closed ' : 'Enable; Closed ';
-                    $str .= $val[1];
+                    $str .= round($val[1]);
                     $str .= '; Open ';
-                    $str .= $val[2];
+                    $str .= round($val[2]);
                     return $str;
 
                 case 4:
                     $str = 'Manual: Closed ';
-                    $str .= $val[0];
+                    $str .= round($val[0]);
                     $str .= '; Open ';
-                    $str .= $val[1];
+                    $str .= round($val[1]);
                     $str = '; Auto: Closed ';
-                    $str .= $val[2];
+                    $str .= round($val[1]);
                     $str .= '; Open ';
-                    $str .= $val[3];
+                    $str .= round($val[3]);
                     return $str;
 
             }
