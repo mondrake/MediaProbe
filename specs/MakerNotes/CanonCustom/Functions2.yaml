@@ -1453,6 +1453,7 @@ items:
                     - Ec-S
                     - 'Ec-N,R'
     2060:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\TimerLength
         exiftool:
             -
                 name: TimerLength

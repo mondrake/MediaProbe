@@ -4203,7 +4203,7 @@ elements:
                                                                                             format: SignedLong
                                                                                             components: 4
                                                                                             bytesHash: 9e92db3fb903d738ba7d3555b28197adffda640121de63a5a3803dab8e01f149
-                                                                                            text: 'Disable, 6, 16, 2'
+                                                                                            text: 'Disable; 6 s: 6; 16 s: 16; After release: 2'
                                                                                 -
                                                                                     node: tag
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:OperationOthers:4/tag:ShortReleaseTimeLag:2061'
