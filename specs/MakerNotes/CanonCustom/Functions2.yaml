@@ -664,6 +664,7 @@ items:
                     - 'Surrounding AF points'
                     - 'All 45 points area'
     1289:
+        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2\SelectableAFPoint
         exiftool:
             -
                 name: SelectableAFPoint
