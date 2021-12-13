@@ -24,7 +24,6 @@ class ShutterSpeedRange extends SignedLong
 
             case 4:
                 return 1;
-
         }
     }
 
@@ -78,7 +77,6 @@ class ShutterSpeedRange extends SignedLong
                     $str .= '; Lo ';
                     $str .= $this->exposureTimeToString($val[3]);
                     return $str;
-
             }
         }
         return parent::toString($options);

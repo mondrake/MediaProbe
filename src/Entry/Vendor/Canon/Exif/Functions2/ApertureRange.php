@@ -21,7 +21,6 @@ class ApertureRange extends SignedLong
 
             case 4:
                 return 1;
-
         }
     }
 
@@ -75,7 +74,6 @@ class ApertureRange extends SignedLong
                     $str .= '; Open ';
                     $str .= round($val[3]);
                     return $str;
-
             }
         }
         return parent::toString($options);

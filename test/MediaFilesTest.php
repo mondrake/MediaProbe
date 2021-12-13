@@ -282,7 +282,6 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $ret[] = $trail;
                 }
             }
-
         }
         return $ret;
     }

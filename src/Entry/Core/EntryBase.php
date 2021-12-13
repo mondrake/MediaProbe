@@ -182,7 +182,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText($value, bool $null_on_missing = FALSE)
+    public function resolveText($value, bool $null_on_missing = false)
     {
         if (!$this->getParentElement()) {
             return is_array($value) ? implode(' ', $value) : $value;
@@ -208,7 +208,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             $id = is_int($value) ? $value : (string) $value;
             $raw = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
             if (!is_null($raw)) {
-              $text = $this->resolveValuePlaceholder($value, $raw);
+                $text = $this->resolveValuePlaceholder($value, $raw);
             }
         }
         if (is_null($text) && $this->hasDefaultText()) {

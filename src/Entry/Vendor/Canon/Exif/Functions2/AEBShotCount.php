@@ -21,7 +21,6 @@ class AEBShotCount extends SignedLong
 
             case 2:
                 return 1;
-
         }
     }
 
