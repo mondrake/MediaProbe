@@ -77,7 +77,6 @@ items:
                 DOMNode: 'Canon:AFAreaHeight'
                 desc: 'AF Area Height'
     -
-        entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\AFInfo\AFAreaXPositions
         exiftool:
             -
                 name: AFAreaXPositions
