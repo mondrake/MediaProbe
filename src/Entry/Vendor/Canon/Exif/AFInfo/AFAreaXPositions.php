@@ -17,7 +17,7 @@ class AFAreaXPositions extends SignedShort
     public function getValue(array $options = [])
     {
 dump(['getValue', $this->value, parent::getValue($options)]);
-        return parent::getValue($options];
+        return parent::getValue($options);
     }
 
     /**
@@ -26,6 +26,6 @@ dump(['getValue', $this->value, parent::getValue($options)]);
     public function toString(array $options = [])
     {
 dump(['toString', parent::toString($options)]);
-        return parent::toString($options];
+        return parent::toString($options);
     }
 }
