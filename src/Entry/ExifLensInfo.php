@@ -12,7 +12,7 @@ class ExifLensInfo extends Rational
     /**
      * {@inheritdoc}
      */
-    public function toString(array $options = [])
+    public function toString(array $options = []): string
     {
         $options['format'] = 'exiftool';
         $val = $this->getValue($options);

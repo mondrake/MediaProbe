@@ -86,7 +86,7 @@ class WindowsString extends Byte
     /**
      * {@inheritdoc}
      */
-    public function toString(array $options = [])
+    public function toString(array $options = []): string
     {
         return $this->getValue()[0];
     }

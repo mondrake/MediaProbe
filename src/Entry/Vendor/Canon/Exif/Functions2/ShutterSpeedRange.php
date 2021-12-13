@@ -55,7 +55,7 @@ class ShutterSpeedRange extends SignedLong
     /**
      * {@inheritdoc}
      */
-    public function toString(array $options = [])
+    public function toString(array $options = []): string
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $val = explode(' ', $this->getValue($options));
