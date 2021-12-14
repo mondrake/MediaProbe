@@ -36,7 +36,6 @@ class WindowsString extends Byte
     {
         $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         $this->setValue([mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE')]);
-//dump([__METHOD__, $this->getContextPath(), $bytes, $this->parsed, $this->value]);
         return $this;
     }
 
@@ -45,11 +44,9 @@ class WindowsString extends Byte
      */
     public function setValue(array $data)
     {
-//        parent::setValue($data);
-//dump([__METHOD__, $data, $this->parsed]);
-
         $php_string = rtrim($data[0], "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
+dump([__METHOD__, $data, $php_string, $windows_string, strlen($windows_string), mb_strlen($windows_string)]);
         $this->components = strlen($windows_string) + 2;
         $this->value = [$php_string, $windows_string];
 
