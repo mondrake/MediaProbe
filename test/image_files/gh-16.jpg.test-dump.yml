@@ -282,11 +282,7 @@ elements:
                             components: 2
                             bytesHash: cde66e78e5419dea74df7cf43d9aa876b8c669d40067992e719cef90ac5f3fe0
                             text: '2 byte(s) of data'
-log:
-    ERROR:
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPSubject:40095/entry'
-            message: "Value Ïðåâåä, ìåäâåä!\0 out of range [0,255]"
+log: {  }
 gdInfo:
     0: 600
     1: 600
