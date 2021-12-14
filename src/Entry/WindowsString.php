@@ -36,6 +36,7 @@ class WindowsString extends Byte
     {
         $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         $this->setValue([mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE')]);
+dump([$this->getContextPath(), $bytes, $this->parsed, $this->value]);
         return $this;
     }
 
