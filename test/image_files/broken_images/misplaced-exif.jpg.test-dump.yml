@@ -122,7 +122,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\WindowsString
                                                             parsed: false
                                                             format: Byte
-                                                            components: 4
+                                                            components: 2
                                                             bytesHash: 96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
                                                             text: ''
                                                 -
