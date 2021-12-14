@@ -35,6 +35,7 @@ class WindowsString extends Byte
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
         $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
+dump([__METHOD__, $bytes, mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE')]);
         $this->setValue([mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE')]);
         return $this;
     }
