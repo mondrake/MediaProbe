@@ -97,7 +97,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPSubject:40095/entry'
                                                             class: FileEye\MediaProbe\Entry\WindowsString
-                                                            parsed: true
+                                                            parsed: false
                                                             format: Byte
                                                             components: 32
                                                             bytesHash: 2a6160460df9e6fa2035e50e75971dc59bd28d707f07537a7abcc778977153b8
@@ -282,7 +282,11 @@ elements:
                             components: 2
                             bytesHash: cde66e78e5419dea74df7cf43d9aa876b8c669d40067992e719cef90ac5f3fe0
                             text: '2 byte(s) of data'
-log: {  }
+log:
+    ERROR:
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPSubject:40095/entry'
+            message: "Value Ïðåâåä, ìåäâåä!\0 out of range [0,255]"
 gdInfo:
     0: 600
     1: 600

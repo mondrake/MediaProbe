@@ -120,7 +120,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPTitle:40091/entry'
                                                             class: FileEye\MediaProbe\Entry\WindowsString
-                                                            parsed: true
+                                                            parsed: false
                                                             format: Byte
                                                             components: 2
                                                             bytesHash: 96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
@@ -422,6 +422,9 @@ elements:
                             text: '2 byte(s) of data'
 log:
     ERROR:
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPTitle:40091/entry'
+            message: 'Value  out of range [0,255]'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864/entry'
             message: 'Incorrect version data.'
