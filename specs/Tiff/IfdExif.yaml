@@ -2807,7 +2807,7 @@ items:
                 DOMNode: 'ExifIFD:RelatedSoundFile'
                 desc: 'Related Sound File'
     40965:
-        collection: Ifd\Interoperability
+        collection: Tiff\IfdInteroperability
     40976:
         exiftool:
             -
