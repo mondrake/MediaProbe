@@ -1,4 +1,4 @@
-collection: Jpeg
+collection: Jpeg\Jpeg
 title: JPEG image
 class: FileEye\MediaProbe\Block\Jpeg
 DOMNode: jpeg
