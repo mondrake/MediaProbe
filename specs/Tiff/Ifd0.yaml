@@ -1,4 +1,4 @@
-collection: Ifd\Ifd0
+collection: Tiff\Ifd0
 name: IFD0
 title: IFD0
 class: FileEye\MediaProbe\Block\Exif\Ifd
@@ -782,7 +782,7 @@ items:
                 DOMNode: 'IFD0:SEMInfo'
                 desc: 'SEM Info'
     34665:
-        collection: Ifd\Exif
+        collection: Tiff\IfdExif
         name: ExifIFD
     34735:
         exiftool:
@@ -809,7 +809,7 @@ items:
                 DOMNode: 'IFD0:GeoTiffAsciiParams'
                 desc: 'Geo Tiff Ascii Params'
     34853:
-        collection: Ifd\Gps
+        collection: Tiff\IfdGps
         name: GPS
     37724:
         exifReadData:

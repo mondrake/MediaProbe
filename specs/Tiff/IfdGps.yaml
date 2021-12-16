@@ -1,4 +1,4 @@
-collection: Ifd\Gps
+collection: Tiff\IfdGps
 name: GPS
 title: 'GPS IFD'
 class: FileEye\MediaProbe\Block\Exif\Ifd

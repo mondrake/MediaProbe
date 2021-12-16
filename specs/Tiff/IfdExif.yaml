@@ -1,4 +1,4 @@
-collection: Ifd\Exif
+collection: Tiff\IfdExif
 name: ExifIFD
 title: 'Exif IFD'
 class: FileEye\MediaProbe\Block\Exif\Ifd

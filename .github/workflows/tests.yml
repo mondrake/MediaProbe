@@ -55,7 +55,7 @@ jobs:
         # re-compile the specification PHP file from the YAML files, and refresh
         # the media file dumps.
         php bin/fileeye-mediaprobe compile
-        git diff
+        # git diff
         # php bin/fileeye-mediaprobe dump test/image_files
 
     - name: Image file dumps
