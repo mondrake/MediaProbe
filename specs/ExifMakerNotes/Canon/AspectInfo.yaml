@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\AspectInfo
+collection: ExifMakerNotes\Canon\AspectInfo
 name: CanonAspectInfo
 title: 'Canon AspectInfo'
 class: FileEye\MediaProbe\Block\Index

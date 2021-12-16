@@ -1,5 +1,5 @@
 __todo: true
-collection: MakerNotes\Canon\Uuid
+collection: ExifMakerNotes\Canon\Uuid
 name: CanonUuid
 title: 'Canon Uuid'
 class: FileEye\MediaProbe\Block\Index

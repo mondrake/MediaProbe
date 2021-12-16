@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\Flags
+collection: ExifMakerNotes\Canon\Flags
 name: CanonFlags
 title: 'Canon Flags'
 class: FileEye\MediaProbe\Block\Exif\Ifd

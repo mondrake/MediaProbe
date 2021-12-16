@@ -1,5 +1,5 @@
 __todo: true
-collection: MakerNotes\Canon\CNTH
+collection: ExifMakerNotes\Canon\CNTH
 name: CanonCNTH
 title: 'Canon CNTH'
 class: FileEye\MediaProbe\Block\Index

@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ExposureInfo
+collection: ExifMakerNotes\Canon\ExposureInfo
 name: CanonExposureInfo
 title: 'Canon ExposureInfo'
 class: FileEye\MediaProbe\Block\Index

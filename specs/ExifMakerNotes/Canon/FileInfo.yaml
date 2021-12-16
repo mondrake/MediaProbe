@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\FileInfo
+collection: ExifMakerNotes\Canon\FileInfo
 name: CanonFileInfo
 title: 'File Information'
 class: FileEye\MediaProbe\Block\Map

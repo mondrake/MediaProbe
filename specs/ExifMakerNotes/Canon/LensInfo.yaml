@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\LensInfo
+collection: ExifMakerNotes\Canon\LensInfo
 name: CanonLensInfo
 title: 'Canon LensInfo'
 class: FileEye\MediaProbe\Block\Index

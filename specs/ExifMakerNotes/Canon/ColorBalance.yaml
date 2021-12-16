@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ColorBalance
+collection: ExifMakerNotes\Canon\ColorBalance
 name: CanonColorBalance
 title: 'Canon Color Balance'
 class: FileEye\MediaProbe\Block\Map

@@ -1,9 +1,9 @@
-collection: MakerNotes\CanonCustom\Functions2Header
+collection: ExifMakerNotes\CanonCustom\Functions2Header
 name: CanonCustomFunctions2Header
 title: 'CanonCustom Functions2 Header'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CustomFunctions2Header
 DOMNode: index
-defaultItemCollection: MakerNotes\CanonCustom\Functions2
+defaultItemCollection: ExifMakerNotes\CanonCustom\Functions2
 items:
     1:
         name: Exposure

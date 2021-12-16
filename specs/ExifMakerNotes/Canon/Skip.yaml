@@ -1,5 +1,5 @@
 __todo: true
-collection: MakerNotes\Canon\Skip
+collection: ExifMakerNotes\Canon\Skip
 name: CanonSkip
 title: 'Canon Skip'
 class: FileEye\MediaProbe\Block\Index

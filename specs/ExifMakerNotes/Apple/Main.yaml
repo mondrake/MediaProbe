@@ -1,4 +1,4 @@
-collection: MakerNotes\Apple\Main
+collection: ExifMakerNotes\Apple\Main
 name: Apple
 title: 'Apple Maker Notes'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Apple\MakerNote
@@ -11,7 +11,7 @@ compiler:
 items:
     3:
         name: AppleRuntime
-        collection: MakerNotes\Apple\RunTime
+        collection: ExifMakerNotes\Apple\RunTime
     8:
         exiftool:
             -

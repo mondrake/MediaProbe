@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\CanonCustom;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\CanonCustom;
 
 use FileEye\MediaProbe\Collection;
 
@@ -17,7 +17,7 @@ class Functions2Header extends Collection {
   'title' => 'CanonCustom Functions2 Header',
   'class' => 'FileEye\\MediaProbe\\Block\\Exif\\Vendor\\Canon\\CustomFunctions2Header',
   'DOMNode' => 'index',
-  'defaultItemCollection' => 'MakerNotes\\CanonCustom\\Functions2',
+  'defaultItemCollection' => 'ExifMakerNotes\\CanonCustom\\Functions2',
   'itemsByName' =>
   array (
     'AutoFocusDrive' =>
@@ -45,7 +45,7 @@ class Functions2Header extends Collection {
       array (
         'name' => 'Exposure',
         'title' => 'Exposure (0x0101-0x010f)',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions2',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions2',
       ),
     ),
     2 =>
@@ -54,7 +54,7 @@ class Functions2Header extends Collection {
       array (
         'name' => 'ImageFlashExposureDisplay',
         'title' => 'Image (0x0201-0x0203), Flash Exposure (0x0304-0x0306) and Display (0x0407-0x0409)',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions2',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions2',
       ),
     ),
     3 =>
@@ -63,7 +63,7 @@ class Functions2Header extends Collection {
       array (
         'name' => 'AutoFocusDrive',
         'title' => 'Auto Focus (0x0501-0x050e) and Drive (0x060f-0x0611)',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions2',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions2',
       ),
     ),
     4 =>
@@ -72,7 +72,7 @@ class Functions2Header extends Collection {
       array (
         'name' => 'OperationOthers',
         'title' => 'Operation (0x0701-0x070a) and Others (0x080b-0x0810)',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions2',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions2',
       ),
     ),
   ),

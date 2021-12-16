@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\Canon;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\Canon;
 
 use FileEye\MediaProbe\Collection;
 
@@ -344,7 +344,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonCameraSettings',
-        'collection' => 'MakerNotes\\Canon\\CameraSettings',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraSettings',
       ),
     ),
     2 =>
@@ -352,7 +352,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFocalLength',
-        'collection' => 'MakerNotes\\Canon\\FocalLength',
+        'collection' => 'ExifMakerNotes\\Canon\\FocalLength',
       ),
     ),
     3 =>
@@ -374,7 +374,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonShotInfo',
-        'collection' => 'MakerNotes\\Canon\\ShotInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\ShotInfo',
       ),
     ),
     5 =>
@@ -382,7 +382,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonPanorama',
-        'collection' => 'MakerNotes\\Canon\\Panorama',
+        'collection' => 'ExifMakerNotes\\Canon\\Panorama',
       ),
     ),
     6 =>
@@ -492,7 +492,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonCameraInfo',
-        'collection' => 'MakerNotes\\Canon\\CameraInfoResolver',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfoResolver',
       ),
     ),
     14 =>
@@ -515,7 +515,7 @@ class Main extends Collection {
       array (
         '__todo' => 'fix',
         'name' => 'CanonCustomFunctions',
-        'collection' => 'MakerNotes\\CanonCustom\\FunctionsResolver',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\FunctionsResolver',
       ),
     ),
     16 =>
@@ -871,7 +871,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonMovieInfo',
-        'collection' => 'MakerNotes\\Canon\\MovieInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\MovieInfo',
       ),
     ),
     18 =>
@@ -879,7 +879,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAFInfo',
-        'collection' => 'MakerNotes\\Canon\\AFInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\AFInfo',
       ),
     ),
     19 =>
@@ -970,7 +970,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonMyColors',
-        'collection' => 'MakerNotes\\Canon\\MyColors',
+        'collection' => 'ExifMakerNotes\\Canon\\MyColors',
       ),
     ),
     30 =>
@@ -1021,7 +1021,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFaceDetect1',
-        'collection' => 'MakerNotes\\Canon\\FaceDetect1',
+        'collection' => 'ExifMakerNotes\\Canon\\FaceDetect1',
       ),
     ),
     37 =>
@@ -1029,7 +1029,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFaceDetect2',
-        'collection' => 'MakerNotes\\Canon\\FaceDetect2',
+        'collection' => 'ExifMakerNotes\\Canon\\FaceDetect2',
       ),
     ),
     38 =>
@@ -1037,7 +1037,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAFInfo2',
-        'collection' => 'MakerNotes\\Canon\\AFInfo2',
+        'collection' => 'ExifMakerNotes\\Canon\\AFInfo2',
       ),
     ),
     39 =>
@@ -1045,7 +1045,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonContrastInfo',
-        'collection' => 'MakerNotes\\Canon\\ContrastInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\ContrastInfo',
       ),
     ),
     40 =>
@@ -1078,7 +1078,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFaceDetect3',
-        'collection' => 'MakerNotes\\Canon\\FaceDetect3',
+        'collection' => 'ExifMakerNotes\\Canon\\FaceDetect3',
       ),
     ),
     53 =>
@@ -1086,7 +1086,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonTimeInfo',
-        'collection' => 'MakerNotes\\Canon\\TimeInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\TimeInfo',
       ),
     ),
     56 =>
@@ -1108,7 +1108,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAFInfo3',
-        'collection' => 'MakerNotes\\Canon\\AFInfo2',
+        'collection' => 'ExifMakerNotes\\Canon\\AFInfo2',
       ),
     ),
     129 =>
@@ -1145,7 +1145,7 @@ class Main extends Collection {
       array (
         '__todo' => 'fix',
         'name' => 'CanonCustomFunctions1D',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions1D',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions1D',
       ),
     ),
     145 =>
@@ -1154,7 +1154,7 @@ class Main extends Collection {
       array (
         '__todo' => 'fix',
         'name' => 'CanonCustomPersonalFuncs',
-        'collection' => 'MakerNotes\\CanonCustom\\PersonalFuncs',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\PersonalFuncs',
       ),
     ),
     146 =>
@@ -1163,7 +1163,7 @@ class Main extends Collection {
       array (
         '__todo' => 'fix',
         'name' => 'CanonCustomPersonalFuncValues',
-        'collection' => 'MakerNotes\\CanonCustom\\PersonalFuncValues',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\PersonalFuncValues',
       ),
     ),
     147 =>
@@ -1171,7 +1171,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFileInfo',
-        'collection' => 'MakerNotes\\Canon\\FileInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\FileInfo',
       ),
     ),
     148 =>
@@ -1235,7 +1235,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonCropInfo',
-        'collection' => 'MakerNotes\\Canon\\CropInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\CropInfo',
       ),
     ),
     153 =>
@@ -1243,7 +1243,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonCustomFunctions2Header',
-        'collection' => 'MakerNotes\\CanonCustom\\Functions2Header',
+        'collection' => 'ExifMakerNotes\\CanonCustom\\Functions2Header',
       ),
     ),
     154 =>
@@ -1251,7 +1251,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAspectInfo',
-        'collection' => 'MakerNotes\\Canon\\AspectInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\AspectInfo',
       ),
     ),
     160 =>
@@ -1259,7 +1259,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonProcessing',
-        'collection' => 'MakerNotes\\Canon\\Processing',
+        'collection' => 'ExifMakerNotes\\Canon\\Processing',
       ),
     ),
     161 =>
@@ -1323,7 +1323,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonColorBalance',
-        'collection' => 'MakerNotes\\Canon\\ColorBalance',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorBalance',
       ),
     ),
     170 =>
@@ -1331,7 +1331,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonMeasuredColor',
-        'collection' => 'MakerNotes\\Canon\\MeasuredColor',
+        'collection' => 'ExifMakerNotes\\Canon\\MeasuredColor',
       ),
     ),
     174 =>
@@ -1353,7 +1353,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFlags',
-        'collection' => 'MakerNotes\\Canon\\Flags',
+        'collection' => 'ExifMakerNotes\\Canon\\Flags',
       ),
     ),
     177 =>
@@ -1361,7 +1361,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonModifiedInfo',
-        'collection' => 'MakerNotes\\Canon\\ModifiedInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\ModifiedInfo',
       ),
     ),
     178 =>
@@ -1420,7 +1420,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonPreviewImageInfo',
-        'collection' => 'MakerNotes\\Canon\\PreviewImageInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\PreviewImageInfo',
       ),
     ),
     208 =>
@@ -1442,7 +1442,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonSensorInfo',
-        'collection' => 'MakerNotes\\Canon\\SensorInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\SensorInfo',
       ),
     ),
     16385 =>
@@ -1450,7 +1450,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonColorData',
-        'collection' => 'MakerNotes\\Canon\\ColorDataResolver',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorDataResolver',
       ),
     ),
     16386 =>
@@ -1472,7 +1472,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonColorInfo',
-        'collection' => 'MakerNotes\\Canon\\ColorInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorInfo',
       ),
     ),
     16389 =>
@@ -1600,7 +1600,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAFMicroAdj',
-        'collection' => 'MakerNotes\\Canon\\AFMicroAdj',
+        'collection' => 'ExifMakerNotes\\Canon\\AFMicroAdj',
       ),
     ),
     16405 =>
@@ -1609,7 +1609,7 @@ class Main extends Collection {
       array (
         'name' => 'CanonVignettingCorr',
         '__todo' => true,
-        '__collection' => 'MakerNotes\\Canon\\VignettingCorrResolver',
+        '__collection' => 'ExifMakerNotes\\Canon\\VignettingCorrResolver',
         'collection' => 'Tag',
       ),
     ),
@@ -1618,7 +1618,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonVignettingCorr2',
-        'collection' => 'MakerNotes\\Canon\\VignettingCorr2',
+        'collection' => 'ExifMakerNotes\\Canon\\VignettingCorr2',
       ),
     ),
     16408 =>
@@ -1626,7 +1626,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonLightingOpt',
-        'collection' => 'MakerNotes\\Canon\\LightingOpt',
+        'collection' => 'ExifMakerNotes\\Canon\\LightingOpt',
       ),
     ),
     16409 =>
@@ -1636,7 +1636,7 @@ class Main extends Collection {
         'name' => 'CanonLensInfo',
         'title' => 'Canon LensInfo',
         'entryClass' => 'FileEye\\MediaProbe\\Entry\\Vendor\\Canon\\Exif\\LensInfo',
-        '__collection' => 'MakerNotes\\Canon\\LensInfo',
+        '__collection' => 'ExifMakerNotes\\Canon\\LensInfo',
         'collection' => 'Tag',
       ),
     ),
@@ -1645,7 +1645,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonAmbience',
-        'collection' => 'MakerNotes\\Canon\\Ambience',
+        'collection' => 'ExifMakerNotes\\Canon\\Ambience',
       ),
     ),
     16417 =>
@@ -1653,7 +1653,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonMultiExp',
-        'collection' => 'MakerNotes\\Canon\\MultiExp',
+        'collection' => 'ExifMakerNotes\\Canon\\MultiExp',
       ),
     ),
     16420 =>
@@ -1661,7 +1661,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'CanonFilterInfo',
-        'collection' => 'MakerNotes\\Canon\\FilterInfo',
+        'collection' => 'ExifMakerNotes\\Canon\\FilterInfo',
       ),
     ),
     16421 =>
@@ -1670,7 +1670,7 @@ class Main extends Collection {
       array (
         'name' => 'CanonRawBurstModeRoll',
         '__todo' => true,
-        '__collection' => 'MakerNotes\\Canon\\RawBurstModeRoll',
+        '__collection' => 'ExifMakerNotes\\Canon\\RawBurstModeRoll',
         'collection' => 'Tag',
       ),
     ),

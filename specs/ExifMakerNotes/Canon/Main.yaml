@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\Main
+collection: ExifMakerNotes\Canon\Main
 name: Canon
 title: 'Canon Maker Notes'
 class: FileEye\MediaProbe\Block\Exif\Ifd
@@ -11,10 +11,10 @@ compiler:
 items:
     1:
         name: CanonCameraSettings
-        collection: MakerNotes\Canon\CameraSettings
+        collection: ExifMakerNotes\Canon\CameraSettings
     2:
         name: CanonFocalLength
-        collection: MakerNotes\Canon\FocalLength
+        collection: ExifMakerNotes\Canon\FocalLength
     3:
         format: Short
         exiftool:
@@ -26,10 +26,10 @@ items:
                 desc: 'Canon Flash Info'
     4:
         name: CanonShotInfo
-        collection: MakerNotes\Canon\ShotInfo
+        collection: ExifMakerNotes\Canon\ShotInfo
     5:
         name: CanonPanorama
-        collection: MakerNotes\Canon\Panorama
+        collection: ExifMakerNotes\Canon\Panorama
     6:
         exiftool:
             -
@@ -90,7 +90,7 @@ items:
                 desc: 'Serial Number'
     13:
         name: CanonCameraInfo
-        collection: MakerNotes\Canon\CameraInfoResolver
+        collection: ExifMakerNotes\Canon\CameraInfoResolver
     14:
         exiftool:
             -
@@ -103,7 +103,7 @@ items:
     15:
         __todo: fix
         name: CanonCustomFunctions
-        collection: MakerNotes\CanonCustom\FunctionsResolver
+        collection: ExifMakerNotes\CanonCustom\FunctionsResolver
     16:
         text:
             default: 'Unknown (0x{valuehex})'
@@ -444,10 +444,10 @@ items:
                     '2147484722': 'EOS Rebel T7 / 2000D / 1500D / Kiss X90'
     17:
         name: CanonMovieInfo
-        collection: MakerNotes\Canon\MovieInfo
+        collection: ExifMakerNotes\Canon\MovieInfo
     18:
         name: CanonAFInfo
-        collection: MakerNotes\Canon\AFInfo
+        collection: ExifMakerNotes\Canon\AFInfo
     19:
         exiftool:
             -
@@ -494,7 +494,7 @@ items:
                     - 'Date & Time'
     29:
         name: CanonMyColors
-        collection: MakerNotes\Canon\MyColors
+        collection: ExifMakerNotes\Canon\MyColors
     30:
         exiftool:
             -
@@ -523,16 +523,16 @@ items:
                     64: 'To Do'
     36:
         name: CanonFaceDetect1
-        collection: MakerNotes\Canon\FaceDetect1
+        collection: ExifMakerNotes\Canon\FaceDetect1
     37:
         name: CanonFaceDetect2
-        collection: MakerNotes\Canon\FaceDetect2
+        collection: ExifMakerNotes\Canon\FaceDetect2
     38:
         name: CanonAFInfo2
-        collection: MakerNotes\Canon\AFInfo2
+        collection: ExifMakerNotes\Canon\AFInfo2
     39:
         name: CanonContrastInfo
-        collection: MakerNotes\Canon\ContrastInfo
+        collection: ExifMakerNotes\Canon\ContrastInfo
     40:
         entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\ImageUniqueID
         outputFormat: Ascii
@@ -549,10 +549,10 @@ items:
         name: CanonWBInfo
     47:
         name: CanonFaceDetect3
-        collection: MakerNotes\Canon\FaceDetect3
+        collection: ExifMakerNotes\Canon\FaceDetect3
     53:
         name: CanonTimeInfo
-        collection: MakerNotes\Canon\TimeInfo
+        collection: ExifMakerNotes\Canon\TimeInfo
     56:
         exiftool:
             -
@@ -563,7 +563,7 @@ items:
                 desc: 'Battery Type'
     60:
         name: CanonAFInfo3
-        collection: MakerNotes\Canon\AFInfo2
+        collection: ExifMakerNotes\Canon\AFInfo2
     129:
         exiftool:
             -
@@ -583,18 +583,18 @@ items:
     144:
         __todo: fix
         name: CanonCustomFunctions1D
-        collection: MakerNotes\CanonCustom\Functions1D
+        collection: ExifMakerNotes\CanonCustom\Functions1D
     145:
         __todo: fix
         name: CanonCustomPersonalFuncs
-        collection: MakerNotes\CanonCustom\PersonalFuncs
+        collection: ExifMakerNotes\CanonCustom\PersonalFuncs
     146:
         __todo: fix
         name: CanonCustomPersonalFuncValues
-        collection: MakerNotes\CanonCustom\PersonalFuncValues
+        collection: ExifMakerNotes\CanonCustom\PersonalFuncValues
     147:
         name: CanonFileInfo
-        collection: MakerNotes\Canon\FileInfo
+        collection: ExifMakerNotes\Canon\FileInfo
     148:
         exiftool:
             -
@@ -629,16 +629,16 @@ items:
                 desc: 'Dust Removal Data'
     152:
         name: CanonCropInfo
-        collection: MakerNotes\Canon\CropInfo
+        collection: ExifMakerNotes\Canon\CropInfo
     153:
         name: CanonCustomFunctions2Header
-        collection: MakerNotes\CanonCustom\Functions2Header
+        collection: ExifMakerNotes\CanonCustom\Functions2Header
     154:
         name: CanonAspectInfo
-        collection: MakerNotes\Canon\AspectInfo
+        collection: ExifMakerNotes\Canon\AspectInfo
     160:
         name: CanonProcessing
-        collection: MakerNotes\Canon\Processing
+        collection: ExifMakerNotes\Canon\Processing
     161:
         exiftool:
             -
@@ -673,10 +673,10 @@ items:
                 desc: 'White Balance Table'
     169:
         name: CanonColorBalance
-        collection: MakerNotes\Canon\ColorBalance
+        collection: ExifMakerNotes\Canon\ColorBalance
     170:
         name: CanonMeasuredColor
-        collection: MakerNotes\Canon\MeasuredColor
+        collection: ExifMakerNotes\Canon\MeasuredColor
     174:
         exiftool:
             -
@@ -687,10 +687,10 @@ items:
                 desc: 'Color Temperature'
     176:
         name: CanonFlags
-        collection: MakerNotes\Canon\Flags
+        collection: ExifMakerNotes\Canon\Flags
     177:
         name: CanonModifiedInfo
-        collection: MakerNotes\Canon\ModifiedInfo
+        collection: ExifMakerNotes\Canon\ModifiedInfo
     178:
         exiftool:
             -
@@ -721,7 +721,7 @@ items:
                     2: 'Adobe RGB'
     182:
         name: CanonPreviewImageInfo
-        collection: MakerNotes\Canon\PreviewImageInfo
+        collection: ExifMakerNotes\Canon\PreviewImageInfo
     208:
         exiftool:
             -
@@ -732,10 +732,10 @@ items:
                 desc: 'VRD Offset'
     224:
         name: CanonSensorInfo
-        collection: MakerNotes\Canon\SensorInfo
+        collection: ExifMakerNotes\Canon\SensorInfo
     16385:
         name: CanonColorData
-        collection: MakerNotes\Canon\ColorDataResolver
+        collection: ExifMakerNotes\Canon\ColorDataResolver
     16386:
         exiftool:
             -
@@ -746,7 +746,7 @@ items:
                 desc: 'CRW Param'
     16387:
         name: CanonColorInfo
-        collection: MakerNotes\Canon\ColorInfo
+        collection: ExifMakerNotes\Canon\ColorInfo
     16389:
         exiftool:
             -
@@ -835,32 +835,32 @@ items:
                 desc: 'Custom Picture Style File Name'
     16403:
         name: CanonAFMicroAdj
-        collection: MakerNotes\Canon\AFMicroAdj
+        collection: ExifMakerNotes\Canon\AFMicroAdj
     16405:
         name: CanonVignettingCorr
         __todo: true
-        __collection: MakerNotes\Canon\VignettingCorrResolver
+        __collection: ExifMakerNotes\Canon\VignettingCorrResolver
     16406:
         name: CanonVignettingCorr2
-        collection: MakerNotes\Canon\VignettingCorr2
+        collection: ExifMakerNotes\Canon\VignettingCorr2
     16408:
         name: CanonLightingOpt
-        collection: MakerNotes\Canon\LightingOpt
+        collection: ExifMakerNotes\Canon\LightingOpt
     16409:
         name: CanonLensInfo
         title: 'Canon LensInfo'
         entryClass: FileEye\MediaProbe\Entry\Vendor\Canon\Exif\LensInfo
-        __collection: MakerNotes\Canon\LensInfo
+        __collection: ExifMakerNotes\Canon\LensInfo
     16416:
         name: CanonAmbience
-        collection: MakerNotes\Canon\Ambience
+        collection: ExifMakerNotes\Canon\Ambience
     16417:
         name: CanonMultiExp
-        collection: MakerNotes\Canon\MultiExp
+        collection: ExifMakerNotes\Canon\MultiExp
     16420:
         name: CanonFilterInfo
-        collection: MakerNotes\Canon\FilterInfo
+        collection: ExifMakerNotes\Canon\FilterInfo
     16421:
         name: CanonRawBurstModeRoll
         __todo: true
-        __collection: MakerNotes\Canon\RawBurstModeRoll
+        __collection: ExifMakerNotes\Canon\RawBurstModeRoll

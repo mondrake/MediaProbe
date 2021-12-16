@@ -2,12 +2,12 @@ collection: MakerNotes
 class: ????
 items:
     Canon:
-        collection: MakerNotes\Canon\Main
+        collection: ExifMakerNotes\Canon\Main
         name: 'Canon'
         make: 'Canon'
         model: '.*'
     Apple:
-        collection: MakerNotes\Apple\Main
+        collection: ExifMakerNotes\Apple\Main
         name: 'Apple'
         make: 'Apple'
         model: '.*'

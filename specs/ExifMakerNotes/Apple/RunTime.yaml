@@ -1,4 +1,4 @@
-collection: MakerNotes\Apple\RunTime
+collection: ExifMakerNotes\Apple\RunTime
 name: AppleRuntime
 title: 'Apple Runtime'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Apple\RunTime

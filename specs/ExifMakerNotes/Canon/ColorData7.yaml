@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ColorData7
+collection: ExifMakerNotes\Canon\ColorData7
 name: CanonColorData7
 title: 'Canon Color Data7'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorDataMap

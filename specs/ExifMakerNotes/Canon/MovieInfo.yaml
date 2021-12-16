@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\MovieInfo
+collection: ExifMakerNotes\Canon\MovieInfo
 name: CanonMovieInfo
 title: 'Canon Movie Info'
 class: FileEye\MediaProbe\Block\Index

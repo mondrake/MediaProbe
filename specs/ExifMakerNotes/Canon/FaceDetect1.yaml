@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\FaceDetect1
+collection: ExifMakerNotes\Canon\FaceDetect1
 name: CanonFaceDetect1
 title: 'Canon FaceDetect1'
 class: FileEye\MediaProbe\Block\Index

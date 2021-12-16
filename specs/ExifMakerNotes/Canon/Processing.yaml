@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\Processing
+collection: ExifMakerNotes\Canon\Processing
 name: CanonProcessing
 title: 'Canon Processing'
 class: FileEye\MediaProbe\Block\Index

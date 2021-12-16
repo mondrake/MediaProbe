@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\CameraSettings
+collection: ExifMakerNotes\Canon\CameraSettings
 name: CanonCameraSettings
 title: 'Canon Camera Settings'
 class: FileEye\MediaProbe\Block\Map

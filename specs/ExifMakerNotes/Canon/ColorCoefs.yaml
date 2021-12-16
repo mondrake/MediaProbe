@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ColorCoefs
+collection: ExifMakerNotes\Canon\ColorCoefs
 name: CanonColorCoefs
 title: 'Canon ColorCoefs'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorCalibMap

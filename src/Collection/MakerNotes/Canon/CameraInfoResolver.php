@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\Canon;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\Canon;
 
 use FileEye\MediaProbe\Collection;
 
@@ -134,7 +134,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1000D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1000D',
         'name' => 'CanonCameraInfo1000D',
         'condition' =>
         array (
@@ -146,7 +146,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1D',
         'name' => 'CanonCameraInfo1D',
         'condition' =>
         array (
@@ -158,7 +158,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1DX',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1DX',
         'name' => 'CanonCameraInfo1DX',
         'condition' =>
         array (
@@ -170,7 +170,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1DmkII',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1DmkII',
         'name' => 'CanonCameraInfo1DmkII',
         'condition' =>
         array (
@@ -182,7 +182,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1DmkIII',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1DmkIII',
         'name' => 'CanonCameraInfo1DmkIII',
         'condition' =>
         array (
@@ -194,7 +194,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1DmkIIN',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1DmkIIN',
         'name' => 'CanonCameraInfo1DmkIIN',
         'condition' =>
         array (
@@ -206,7 +206,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo1DmkIV',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo1DmkIV',
         'name' => 'CanonCameraInfo1DmkIV',
         'condition' =>
         array (
@@ -218,7 +218,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo40D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo40D',
         'name' => 'CanonCameraInfo40D',
         'condition' =>
         array (
@@ -230,7 +230,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo450D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo450D',
         'name' => 'CanonCameraInfo450D',
         'condition' =>
         array (
@@ -242,7 +242,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo500D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo500D',
         'name' => 'CanonCameraInfo500D',
         'condition' =>
         array (
@@ -254,7 +254,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo50D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo50D',
         'name' => 'CanonCameraInfo50D',
         'condition' =>
         array (
@@ -266,7 +266,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo550D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo550D',
         'name' => 'CanonCameraInfo550D',
         'condition' =>
         array (
@@ -278,7 +278,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo5D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo5D',
         'name' => 'CanonCameraInfo5D',
         'condition' =>
         array (
@@ -290,7 +290,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo5DmkII',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo5DmkII',
         'name' => 'CanonCameraInfo5DmkII',
         'condition' =>
         array (
@@ -302,7 +302,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo5DmkIII',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo5DmkIII',
         'name' => 'CanonCameraInfo5DmkIII',
         'condition' =>
         array (
@@ -314,7 +314,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo600D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo600D',
         'name' => 'CanonCameraInfo600D',
         'condition' =>
         array (
@@ -326,7 +326,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo60D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo60D',
         'name' => 'CanonCameraInfo60D',
         'condition' =>
         array (
@@ -338,7 +338,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo650D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo650D',
         'name' => 'CanonCameraInfo650D',
         'condition' =>
         array (
@@ -350,7 +350,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo6D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo6D',
         'name' => 'CanonCameraInfo6D',
         'condition' =>
         array (
@@ -362,7 +362,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo70D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo70D',
         'name' => 'CanonCameraInfo70D',
         'condition' =>
         array (
@@ -374,7 +374,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo750D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo750D',
         'name' => 'CanonCameraInfo750D',
         'condition' =>
         array (
@@ -386,7 +386,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo7D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo7D',
         'name' => 'CanonCameraInfo7D',
         'condition' =>
         array (
@@ -398,7 +398,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfo80D',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfo80D',
         'name' => 'CanonCameraInfo80D',
         'condition' =>
         array (
@@ -410,7 +410,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfoPowerShot',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfoPowerShot',
         'name' => 'CanonCameraInfoPowerShot',
         'condition' =>
         array (
@@ -422,7 +422,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfoPowerShot2',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfoPowerShot2',
         'name' => 'CanonCameraInfoPowerShot2',
         'condition' =>
         array (
@@ -434,7 +434,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfoUnknown',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfoUnknown',
         'name' => 'CanonCameraInfoUnknown',
         'condition' =>
         array (
@@ -446,7 +446,7 @@ class CameraInfoResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\CameraInfoUnknown32',
+        'collection' => 'ExifMakerNotes\\Canon\\CameraInfoUnknown32',
         'name' => 'CanonCameraInfoUnknown32',
         'condition' =>
         array (

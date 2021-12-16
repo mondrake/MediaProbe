@@ -532,7 +532,7 @@ elements:
                                                             parsed: true
                                                             name: Apple
                                                             id: '37500'
-                                                            collection: MakerNotes\Apple\Main
+                                                            collection: ExifMakerNotes\Apple\Main
                                                             elements:
                                                                 -
                                                                     node: rawData
@@ -592,7 +592,7 @@ elements:
                                                                     parsed: true
                                                                     name: AppleRuntime
                                                                     id: '3'
-                                                                    collection: MakerNotes\Apple\RunTime
+                                                                    collection: ExifMakerNotes\Apple\RunTime
                                                                     elements:
                                                                         -
                                                                             node: tag

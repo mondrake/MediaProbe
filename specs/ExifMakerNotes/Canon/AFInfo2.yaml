@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\AFInfo2
+collection: ExifMakerNotes\Canon\AFInfo2
 name: CanonAFInfo2
 title: 'Canon AF Info2'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\AFInfoIndex

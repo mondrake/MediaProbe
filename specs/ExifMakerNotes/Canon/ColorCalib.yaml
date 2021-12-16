@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ColorCalib
+collection: ExifMakerNotes\Canon\ColorCalib
 name: CanonColorCalib
 title: 'Canon ColorCalib'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorCalibMap

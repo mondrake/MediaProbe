@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\PSInfo2
+collection: ExifMakerNotes\Canon\PSInfo2
 name: CanonPSInfo2
 title: 'Canon PSInfo2'
 class: FileEye\MediaProbe\Block\IndexMap

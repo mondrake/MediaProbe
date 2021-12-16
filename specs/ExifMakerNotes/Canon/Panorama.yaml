@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\Panorama
+collection: ExifMakerNotes\Canon\Panorama
 name: CanonPanorama
 title: 'Panorama Information'
 class: FileEye\MediaProbe\Block\Index

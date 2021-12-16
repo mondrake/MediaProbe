@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\MeasuredColor
+collection: ExifMakerNotes\Canon\MeasuredColor
 name: CanonMeasuredColor
 title: 'Canon Measured Color'
 class: FileEye\MediaProbe\Block\Index

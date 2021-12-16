@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\Canon;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\Canon;
 
 use FileEye\MediaProbe\Collection;
 

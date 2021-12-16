@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\Canon;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\Canon;
 
 use FileEye\MediaProbe\Collection;
 
@@ -66,7 +66,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorDataUnknown',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorDataUnknown',
         'name' => 'CanonColorDataUnknown',
       ),
     ),
@@ -74,7 +74,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData1',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData1',
         'name' => 'CanonColorData1',
         'condition' =>
         array (
@@ -86,7 +86,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData2',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData2',
         'name' => 'CanonColorData2',
         'condition' =>
         array (
@@ -98,7 +98,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData3',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData3',
         'name' => 'CanonColorData3',
         'condition' =>
         array (
@@ -110,7 +110,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData4',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData4',
         'name' => 'CanonColorData4',
         'condition' =>
         array (
@@ -130,7 +130,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData5',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData5',
         'name' => 'CanonColorData5',
         'condition' =>
         array (
@@ -142,7 +142,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData6',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData6',
         'name' => 'CanonColorData6',
         'condition' =>
         array (
@@ -155,7 +155,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData7',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData7',
         'name' => 'CanonColorData7',
         'condition' =>
         array (
@@ -170,7 +170,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData8',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData8',
         'name' => 'CanonColorData8',
         'condition' =>
         array (
@@ -185,7 +185,7 @@ class ColorDataResolver extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\ColorData9',
+        'collection' => 'ExifMakerNotes\\Canon\\ColorData9',
         'name' => 'CanonColorData9',
         'condition' =>
         array (

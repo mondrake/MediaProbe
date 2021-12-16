@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\HDRInfo
+collection: ExifMakerNotes\Canon\HDRInfo
 name: CanonHDRInfo
 title: 'Canon HDRInfo'
 class: FileEye\MediaProbe\Block\Index

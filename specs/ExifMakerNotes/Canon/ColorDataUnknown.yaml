@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ColorDataUnknown
+collection: ExifMakerNotes\Canon\ColorDataUnknown
 name: CanonColorDataUnknown
 title: 'Canon Color DataUnknown'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\ColorDataMap

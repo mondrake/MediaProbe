@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ShotInfo
+collection: ExifMakerNotes\Canon\ShotInfo
 name: CanonShotInfo
 title: 'Shot Information'
 class: FileEye\MediaProbe\Block\Map

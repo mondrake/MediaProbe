@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\AFConfig
+collection: ExifMakerNotes\Canon\AFConfig
 name: CanonAFConfig
 title: 'Canon AF Config'
 class: FileEye\MediaProbe\Block\Index

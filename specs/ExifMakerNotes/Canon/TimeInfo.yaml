@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\TimeInfo
+collection: ExifMakerNotes\Canon\TimeInfo
 name: CanonTimeInfo
 title: 'Canon TimeInfo'
 class: FileEye\MediaProbe\Block\Map

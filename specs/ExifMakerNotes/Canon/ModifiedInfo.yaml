@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\ModifiedInfo
+collection: ExifMakerNotes\Canon\ModifiedInfo
 name: CanonModifiedInfo
 title: 'Canon ModifiedInfo'
 class: FileEye\MediaProbe\Block\Index

@@ -1,5 +1,5 @@
 __todo: true
-collection: MakerNotes\Canon\CTMD
+collection: ExifMakerNotes\Canon\CTMD
 name: CanonCTMD
 title: 'Canon CTMD'
 class: FileEye\MediaProbe\Block\Index

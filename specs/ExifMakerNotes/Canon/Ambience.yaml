@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\Ambience
+collection: ExifMakerNotes\Canon\Ambience
 name: CanonAmbience
 title: 'Canon Ambience'
 class: FileEye\MediaProbe\Block\Map

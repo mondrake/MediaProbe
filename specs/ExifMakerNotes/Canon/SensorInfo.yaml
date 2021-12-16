@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\SensorInfo
+collection: ExifMakerNotes\Canon\SensorInfo
 name: CanonSensorInfo
 title: 'Canon Sensor Info'
 class: FileEye\MediaProbe\Block\Index

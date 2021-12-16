@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\FilterInfo
+collection: ExifMakerNotes\Canon\FilterInfo
 name: CanonFilterInfo
 title: 'Canon FilterInfo'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\FilterInfoIndex

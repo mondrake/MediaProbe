@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\PreviewImageInfo
+collection: ExifMakerNotes\Canon\PreviewImageInfo
 name: CanonPreviewImageInfo
 title: 'Canon PreviewImageInfo'
 class: FileEye\MediaProbe\Block\Index

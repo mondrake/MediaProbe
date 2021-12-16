@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\FocalLength
+collection: ExifMakerNotes\Canon\FocalLength
 name: CanonFocalLength
 title: 'Canon Focal Length'
 class: FileEye\MediaProbe\Block\Index

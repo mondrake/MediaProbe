@@ -1,4 +1,4 @@
-collection: MakerNotes\Canon\CameraInfo70D
+collection: ExifMakerNotes\Canon\CameraInfo70D
 name: CanonCameraInfo70D
 title: 'Canon CameraInfo70D'
 class: FileEye\MediaProbe\Block\Exif\Vendor\Canon\CameraInfoMap

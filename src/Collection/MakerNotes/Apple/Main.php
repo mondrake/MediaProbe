@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\MakerNotes\Apple;
+namespace FileEye\MediaProbe\Collection\ExifMakerNotes\Apple;
 
 use FileEye\MediaProbe\Collection;
 
@@ -52,7 +52,7 @@ class Main extends Collection {
       0 =>
       array (
         'name' => 'AppleRuntime',
-        'collection' => 'MakerNotes\\Apple\\RunTime',
+        'collection' => 'ExifMakerNotes\\Apple\\RunTime',
       ),
     ),
     8 =>

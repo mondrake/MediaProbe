@@ -30,7 +30,7 @@ class SpecTest extends MediaProbeTestCaseBase
             ->getMock();
         $ifd_0 = new Ifd(new ItemDefinition(Collection::get('Tiff\Ifd0'), ItemFormat::LONG), $tiff_mock);
         $ifd_exif = new Ifd(new ItemDefinition($ifd_0->getCollection()->getItemCollection(0x8769), ItemFormat::LONG), $ifd_0);
-        $ifd_canon_camera_settings = new Index(new ItemDefinition(Collection::get('MakerNotes\\Canon\\Main')->getItemCollection(1), ItemFormat::LONG), $tiff_mock);
+        $ifd_canon_camera_settings = new Index(new ItemDefinition(Collection::get('ExifMakerNotes\\Canon\\Main')->getItemCollection(1), ItemFormat::LONG), $tiff_mock);
 
         // Test retrieving IFD id by name.
         $this->assertEquals(Collection::getByName('IFD0'), Collection::getByName('0'));
@@ -79,7 +79,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $this->assertEquals(ExifUserComment::class, Collection::get('Tiff\IfdExif')->getItemCollection(0x9286)->getPropertyValue('entryClass'));
         $this->assertEquals(Time::class, Collection::get('Tiff\IfdExif')->getItemCollection(0x9003)->getPropertyValue('entryClass'));
-        $this->assertNull(Collection::get('MakerNotes\\Canon\\CameraSettings')->getItemCollection(1)->getPropertyValue('entryClass'));
+        $this->assertNull(Collection::get('ExifMakerNotes\\Canon\\CameraSettings')->getItemCollection(1)->getPropertyValue('entryClass'));
     }
 
     /**
@@ -124,13 +124,13 @@ class SpecTest extends MediaProbeTestCaseBase
                 '6', 'FileEye\MediaProbe\Entry\Core\Short', 'Tiff\Ifd0', 'PlanarConfiguration', [6],
             ],
             'CanonPanoramaInformation/PanoramaDirection - value 4' => [
-                '2x2 Matrix (Clockwise)', 'FileEye\MediaProbe\Entry\Core\SignedShort', 'MakerNotes\\Canon\\Panorama', 'PanoramaDirection', [4],
+                '2x2 Matrix (Clockwise)', 'FileEye\MediaProbe\Entry\Core\SignedShort', 'ExifMakerNotes\\Canon\\Panorama', 'PanoramaDirection', [4],
             ],
             'CanonCameraSettings/LensType - value 493' => [
-                'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'MakerNotes\\Canon\\CameraSettings', 'LensType', [493],
+                'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', [493],
             ],
             'CanonCameraSettings/LensType - value 493.1' => [
-                'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'MakerNotes\\Canon\\CameraSettings', 'LensType', [493.1],
+                'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', [493.1],
             ],
             'IFD0/YCbCrSubSampling - value 2, 1' => [
                 'YCbCr4:2:2', 'FileEye\MediaProbe\Entry\IfdYCbCrSubSampling', 'Tiff\Ifd0', 'YCbCrSubSampling', [2, 1],

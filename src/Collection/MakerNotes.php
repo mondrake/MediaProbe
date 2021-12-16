@@ -31,7 +31,7 @@ class MakerNotes extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Apple\\Main',
+        'collection' => 'ExifMakerNotes\\Apple\\Main',
         'name' => 'Apple',
         'make' => 'Apple',
         'model' => '.*',
@@ -41,7 +41,7 @@ class MakerNotes extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'MakerNotes\\Canon\\Main',
+        'collection' => 'ExifMakerNotes\\Canon\\Main',
         'name' => 'Canon',
         'make' => 'Canon',
         'model' => '.*',
