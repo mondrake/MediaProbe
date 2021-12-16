@@ -22,14 +22,14 @@ class Tiff extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'Ifd\\Ifd0',
+        'collection' => 'Tiff\\Ifd0',
       ),
     ),
     1 =>
     array (
       0 =>
       array (
-        'collection' => 'Ifd\\Ifd1',
+        'collection' => 'Tiff\\Ifd1',
       ),
     ),
   ),

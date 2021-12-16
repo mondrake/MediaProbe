@@ -6,11 +6,11 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\Ifd;
+namespace FileEye\MediaProbe\Collection\Tiff;
 
 use FileEye\MediaProbe\Collection;
 
-class Any extends Collection {
+class IfdAny extends Collection {
 
   protected static $map = array (
   'title' => 'A catchall generic IFD definition, used as a fallback to describe tags that are not expected in a specific IFD.',

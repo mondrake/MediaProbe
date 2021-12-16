@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\Ifd;
+namespace FileEye\MediaProbe\Collection\Tiff;
 
 use FileEye\MediaProbe\Collection;
 
@@ -2556,7 +2556,7 @@ class Ifd1 extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'Ifd\\Exif',
+        'collection' => 'Tiff\\IfdExif',
         'name' => 'ExifIFD',
       ),
     ),
@@ -2606,7 +2606,7 @@ class Ifd1 extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'Ifd\\Gps',
+        'collection' => 'Tiff\\IfdGps',
         'name' => 'GPS',
       ),
     ),

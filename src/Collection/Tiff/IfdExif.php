@@ -6,11 +6,11 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\Ifd;
+namespace FileEye\MediaProbe\Collection\Tiff;
 
 use FileEye\MediaProbe\Collection;
 
-class Exif extends Collection {
+class IfdExif extends Collection {
 
   protected static $map = array (
   'name' => 'ExifIFD',
@@ -6725,7 +6725,7 @@ class Exif extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'Ifd\\Interoperability',
+        'collection' => 'Tiff\\IfdInteroperability',
       ),
     ),
     40976 =>

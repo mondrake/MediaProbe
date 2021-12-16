@@ -6,11 +6,11 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection\Ifd;
+namespace FileEye\MediaProbe\Collection\Tiff;
 
 use FileEye\MediaProbe\Collection;
 
-class Gps extends Collection {
+class IfdGps extends Collection {
 
   protected static $map = array (
   'name' => 'GPS',
