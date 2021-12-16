@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection;
+namespace FileEye\MediaProbe\Collection\Jpeg;
 
 use FileEye\MediaProbe\Collection;
 
