@@ -300,7 +300,7 @@ class Ifd extends ListBase
             $size = $dataxx->getSize();
 
             // Now move backwards until we find the EOI JPEG marker.
-            while ($dataxx->getByte($size - 2) !== Jpeg::JPEG_DELIMITER || $dataxx->getByte($size - 1) != Collection::get('Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
+            while ($dataxx->getByte($size - 2) !== Jpeg::JPEG_DELIMITER || $dataxx->getByte($size - 1) != Collection::get('Jpeg\Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
                 $size --;
             }
             if ($size != $dataxx->getSize()) {
@@ -385,7 +385,7 @@ class Ifd extends ListBase
      */
     protected static function getMakerNoteCollection($make, $model)
     {
-        $maker_notes_collection = Collection::get('MakerNotes');
+        $maker_notes_collection = Collection::get('ExifMakerNotes\MakerNotes');
         foreach ($maker_notes_collection->listItemIds() as $maker_note_collection_id) {
             $maker_note_collection = $maker_notes_collection->getItemCollection($maker_note_collection_id);
             if ($maker_note_collection->getPropertyValue('make') === $make) {
