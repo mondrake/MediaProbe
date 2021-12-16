@@ -15,11 +15,11 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-#          - "7.2"
-#          - "7.3"
+          - "7.2"
+          - "7.3"
           - "7.4"
-#          - "8.0"
-#          - "8.1"
+          - "8.0"
+          - "8.1"
 
     steps:
     - name: Install PHP
@@ -54,7 +54,7 @@ jobs:
         # Remove the comment to the lines below during development, to let
         # re-compile the specification PHP file from the YAML files, and refresh
         # the media file dumps.
-        php bin/fileeye-mediaprobe compile
+        # php bin/fileeye-mediaprobe compile
         # git diff
         # php bin/fileeye-mediaprobe dump test/image_files
 
