@@ -6,7 +6,7 @@
  */
 // phpcs:disable
 
-namespace FileEye\MediaProbe\Collection;
+namespace FileEye\MediaProbe\Collection\Exif;
 
 use FileEye\MediaProbe\Collection;
 
@@ -22,7 +22,7 @@ class Exif extends Collection {
     array (
       0 =>
       array (
-        'collection' => 'Tiff',
+        'collection' => 'Tiff\\Tiff',
       ),
     ),
   ),
