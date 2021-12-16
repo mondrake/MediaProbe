@@ -34,9 +34,9 @@ class Bug3017880Test extends MediaProbeTestCaseBase
                     ->disableOriginalConstructor()
                     ->getMock();
 
-                $exif_definition = new ItemDefinition(Collection::get('Exif'));
+                $exif_definition = new ItemDefinition(Collection::get('Exif\Exif'));
                 $exif = new Exif($exif_definition, $app1_segment_mock);
-                $tiff_definition = new ItemDefinition(Collection::get('Tiff'));
+                $tiff_definition = new ItemDefinition(Collection::get('Tiff\Tiff'));
                 new Tiff($tiff_definition, $exif);
             }
 

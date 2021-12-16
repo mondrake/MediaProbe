@@ -230,7 +230,7 @@ class SpecTest extends MediaProbeTestCaseBase
 
     public function testJpegSegmentIds()
     {
-        $collection = Collection::get('Jpeg');
+        $collection = Collection::get('Jpeg\Jpeg');
         $this->assertEquals(0xC0, $collection->getItemCollectionByName('SOF0')->getPropertyValue('item'));
         $this->assertEquals(0xD3, $collection->getItemCollectionByName('RST3')->getPropertyValue('item'));
         $this->assertEquals(0xE3, $collection->getItemCollectionByName('APP3')->getPropertyValue('item'));
@@ -243,7 +243,7 @@ class SpecTest extends MediaProbeTestCaseBase
 
     public function testJpegSegmentNames()
     {
-        $collection = Collection::get('Jpeg');
+        $collection = Collection::get('Jpeg\Jpeg');
         $this->assertEquals('SOF0', $collection->getItemCollection(0xC0)->getPropertyValue('name'));
         $this->assertEquals('RST3', $collection->getItemCollection(0xD3)->getPropertyValue('name'));
         $this->assertEquals('APP3', $collection->getItemCollection(0xE3)->getPropertyValue('name'));
@@ -254,7 +254,7 @@ class SpecTest extends MediaProbeTestCaseBase
 
     public function testJpegSegmentTitles()
     {
-        $collection = Collection::get('Jpeg');
+        $collection = Collection::get('Jpeg\Jpeg');
         $this->assertEquals('Start of frame (baseline DCT)', $collection->getItemCollection(0xC0)->getPropertyValue('title'));
         $this->assertEquals(MediaProbe::fmt('Restart %d', 3), $collection->getItemCollection(0xD3)->getPropertyValue('title'));
         $this->assertEquals(MediaProbe::fmt('Application segment %d', 3), $collection->getItemCollection(0xE3)->getPropertyValue('title'));
