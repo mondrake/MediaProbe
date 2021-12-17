@@ -33,7 +33,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     public function mediaFileProvider()
     {
         $finder = new Finder();
-        $finder->files()->in(dirname(__FILE__) . '/image_files')->name('*.test-dump.yml');
+        $finder->files()->in(dirname(__FILE__) . '/media-samples/image')->name('*.dump.yml');
         $result = [];
         foreach ($finder as $file) {
             $result[$file->getBasename()] = [$file];
@@ -47,7 +47,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     public function testParse($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
-        // $this->testDump = yaml_parse_file($mediaDumpFile);
+
         if (isset($this->testDump['exiftool'])) {
             $this->exiftoolDump =new \DOMDocument();
             $this->exiftoolDump->loadXML($this->testDump['exiftool']);
