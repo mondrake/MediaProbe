@@ -70,8 +70,8 @@ class DumpCommand extends Command
         foreach ($finder as $file) {
             $output->write('Processing ' . $file . '... ');
 
-            $dumpFile = $dumpPath . '/' . $file->getRelativePathName() . '.dump.yml';
-            $input_yaml = Yaml::parse(@file_get_contents($dumpFile));
+            $dumpFilePrefix = $dumpPath . '/' . $file->getRelativePathName();
+            $input_yaml = Yaml::parse(@file_get_contents($dumpFilePrefix . '.dump.yml'));
 
             // Dump via MediaProbe.
             $output->write('1');
@@ -112,7 +112,7 @@ class DumpCommand extends Command
             }
             $output_yaml = array_merge($output_yaml, $yaml);
 
-            $fs->dumpFile($dumpFile, Yaml::dump($output_yaml, 40));
+            $fs->dumpFile($dumpFilePrefix . '.dump.yml', Yaml::dump($output_yaml, 40));
             $output->writeln(' done.');
         }
 
