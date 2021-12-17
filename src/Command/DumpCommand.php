@@ -78,7 +78,7 @@ class DumpCommand extends Command
             try {
                 $yaml = $this->fileToTestDumpArray($file);
             } catch (\Exception $e) {
-                $output->write(' error: ' . $e->getMessage());
+                $output->writeln(' error: ' . $e->getMessage());
                 continue;
             }
 
@@ -89,7 +89,7 @@ class DumpCommand extends Command
                 try {
                     $process->run();
                     $formatter = new Formatter();
-//                    $yaml['exiftool'] = $formatter->format($process->getOutput());
+                    $fs->dumpFile($dumpFilePrefix . '.exiftool.xml', $formatter->format($process->getOutput()));
                 } catch (\Exception $e) {
                     $output->write(' error: ' . $e->getMessage());
                 }
@@ -99,7 +99,7 @@ class DumpCommand extends Command
                 try {
                     $process->run();
                     $formatter = new Formatter();
-//                    $yaml['exiftool_raw'] = $formatter->format($process->getOutput());
+                    $fs->dumpFile($dumpFilePrefix . '.exiftool-raw.xml', $formatter->format($process->getOutput()));
                 } catch (\Exception $e) {
                     $output->write(' error: ' . $e->getMessage());
                 }
