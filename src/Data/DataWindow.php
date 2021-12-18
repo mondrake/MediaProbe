@@ -43,7 +43,7 @@ final class DataWindow extends DataElement
         }
 
         if ($dataElement instanceof DataWindow) {
-            $this->underlyingDataElement = $dataElement->getDataElement();
+            $this->underlyingDataElement = $dataElement->getUnderlyingDataElement();
             $this->start = $dataElement->getStart() + $start;
         } else {
             $this->underlyingDataElement = $dataElement;
@@ -62,9 +62,9 @@ final class DataWindow extends DataElement
     }
 
     /**
-     * {@inheritdoc}
+     * Returns the underlying DataElement.
      */
-    public function getDataElement(): DataElement
+    private function getUnderlyingDataElement(): DataElement
     {
         return $this->underlyingDataElement;
     }
