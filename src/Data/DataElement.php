@@ -127,11 +127,10 @@ abstract class DataElement
     /**
      * Gets a specific portion of bytes from the data element.
      *
-     * @param int|null $start
+     * @param int $start
      *   (Optional) The offset, relative to the data element, to the first byte
      *   returned. If omitted, the bytes will be returned from the first byte
      *   in the data element.
-     *
      * @param int|null $size
      *   (Optional) The number of bytes to be returned. If omitted, all the
      *   bytes to the end of the data element will be returned.

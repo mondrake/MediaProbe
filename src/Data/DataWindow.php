@@ -23,50 +23,37 @@ final class DataWindow extends DataElement
     /**
      * Construct a new data window with the data supplied.
      *
-     * @param mixed $data
-     *            the data that this window will contain. This can
-     *            either be given as a string (interpreted litteraly as a sequence
-     *            of bytes) or a PHP image resource handle. The data will be copied
-     *            into the new data window.
-     *
-     * @param boolean $endianess
-     *            the initial byte order of the window. This must
-     *            be either {@link ConvertBytes::LITTLE_ENDIAN} or {@link
-     *            ConvertBytes::BIG_ENDIAN}. This will be used when integers are
-     *            read from the data, and it can be changed later with {@link
-     *            setByteOrder()}.
+     * @param DataElement $dataElement
+     *   The underlying DataElement.
+     * @param int $offset
+     *   The offset at the underlying DataElement where the window starts.
+     * @param int|null $size
+     *   The size of the data window. If unspecified, will be determined to the remaining size of the underlying
+     *   DataElement after the offset.
      */
-    public function __construct(DataElement $dataElement, int $start = 0, ?int $size = null)
+    public function __construct(DataElement $dataElement, int $offset = 0, ?int $size = null)
     {
-        if ($start < 0) {
+        if ($offset < 0) {
             throw new DataException('Invalid negative offset for DataWindow');
         }
 
         if ($dataElement instanceof DataWindow) {
-            $this->underlyingDataElement = $dataElement->getUnderlyingDataElement();
-            $this->start = $dataElement->getStart() + $start;
+            $this->underlyingDataElement = $dataElement->underlyingDataElement;
+            $this->start = $dataElement->getStart() + $offset;
         } else {
             $this->underlyingDataElement = $dataElement;
-            $this->start = $start;
+            $this->start = $offset;
         }
 
-        $this->size = $size ?? ($dataElement->getSize() - $start);
+        $this->size = $size ?? ($dataElement->getSize() - $offset);
         if ($this->size < 1) {
             throw new DataException('Zero or negative size for DataWindow');
         }
-        if ($this->size > ($dataElement->getSize() - $start)) {
+        if ($this->size > ($dataElement->getSize() - $offset)) {
             throw new DataException('Excessive size for DataWindow');
         }
 
         $this->order = $dataElement->getByteOrder();
-    }
-
-    /**
-     * Returns the underlying DataElement.
-     */
-    private function getUnderlyingDataElement(): DataElement
-    {
-        return $this->underlyingDataElement;
     }
 
     /**

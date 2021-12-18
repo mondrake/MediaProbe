@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Data;
 /**
  * A value object holding generic data, as bytes.
  */
-class DataString extends DataElement
+final class DataString extends DataElement
 {
     /**
      * The data.
@@ -14,7 +14,7 @@ class DataString extends DataElement
      *
      * @var string
      */
-    protected $data;
+    private $data;
 
     /**
      * Construct a new DataString object with the data supplied.
