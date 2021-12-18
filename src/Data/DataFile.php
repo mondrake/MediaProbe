@@ -2,6 +2,8 @@
 
 namespace FileEye\MediaProbe\Data;
 
+use SplFileObject;
+
 /**
  * A DataElement object holding a file's data.
  */
@@ -10,7 +12,7 @@ final class DataFile extends DataElement
     /**
      * The file handle.
      *
-     * @var resource
+     * @var SplFileObject
      */
     private $fileHandle;
 
@@ -20,11 +22,11 @@ final class DataFile extends DataElement
      * @param string $data
      *   The data string.
      */
-    public function __construct(resource $fileHandle)
+    public function __construct(SplFileObject $fileHandle)
     {
         $this->fileHandle = $fileHandle;
         $this->start = 0;
-        $this->size = fstat($this->fileHandle)['size'];
+        $this->size = $this->fileHandle->fstat()['size'];
     }
 
     /**

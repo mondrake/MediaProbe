@@ -79,7 +79,8 @@ class Media extends BlockBase
      */
     public static function loadFromFile(string $path, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
-        $dataElement = new DataFile(fopen($path, 'r'));
+        $handle = new \SplFileObject($path, 'r');
+        $dataElement = new DataFile($handle);
         //$magic_data_element = new DataString(file_get_contents($path, false, null, 0, 10));
         //$media_format_collection = static::getMatchingMediaCollection($magic_data_element);
         $media_format_collection = static::getMatchingMediaCollection($dataElement);
