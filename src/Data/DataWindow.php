@@ -9,16 +9,16 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 use Psr\Log\LoggerInterface;
 
 /**
- * A data window object.
+ * An object opening a window on an underlying DataElement
  */
-class DataWindow extends DataElement
+final class DataWindow extends DataElement
 {
     /**
      * The underlying data element for this window.
      *
      * @var DataElement
      */
-    protected $dataElement;
+    private $underlyingDataElement;
 
     /**
      * Construct a new data window with the data supplied.
@@ -36,29 +36,29 @@ class DataWindow extends DataElement
      *            read from the data, and it can be changed later with {@link
      *            setByteOrder()}.
      */
-    public function __construct(DataElement $data_element, int $start = 0, ?int $size = null)
+    public function __construct(DataElement $dataElement, int $start = 0, ?int $size = null)
     {
         if ($start < 0) {
             throw new DataException('Invalid negative offset for DataWindow');
         }
 
-        if ($data_element instanceof DataWindow) {
-            $this->dataElement = $data_element->getDataElement();
-            $this->start = $data_element->getStart() + $start;
+        if ($dataElement instanceof DataWindow) {
+            $this->underlyingDataElement = $dataElement->getDataElement();
+            $this->start = $dataElement->getStart() + $start;
         } else {
-            $this->dataElement = $data_element;
+            $this->underlyingDataElement = $dataElement;
             $this->start = $start;
         }
 
-        $this->size = $size ?? ($data_element->getSize() - $start);
+        $this->size = $size ?? ($dataElement->getSize() - $start);
         if ($this->size < 1) {
             throw new DataException('Zero or negative size for DataWindow');
         }
-        if ($this->size > ($data_element->getSize() - $start)) {
+        if ($this->size > ($dataElement->getSize() - $start)) {
             throw new DataException('Excessive size for DataWindow');
         }
 
-        $this->order = $data_element->getByteOrder();
+        $this->order = $dataElement->getByteOrder();
     }
 
     /**
@@ -66,7 +66,7 @@ class DataWindow extends DataElement
      */
     public function getDataElement(): DataElement
     {
-        return $this->dataElement;
+        return $this->underlyingDataElement;
     }
 
     /**
@@ -85,6 +85,6 @@ class DataWindow extends DataElement
         }
         $this->validateOffset($start + $size - 1);
 
-        return $this->dataElement->getBytes($this->getStart() + $start, $size);
+        return $this->underlyingDataElement->getBytes($this->getStart() + $start, $size);
     }
 }
