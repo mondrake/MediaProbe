@@ -11,7 +11,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * Real implementation can be strings of data, windows of data on underlying
  * data elements, etc.
  */
-abstract class DataElement implements \Iterator
+abstract class DataElement
 {
     /**
      * The offset start of this element against the real underlying element.
@@ -122,41 +122,6 @@ abstract class DataElement implements \Iterator
     public function getByteOrder(): ?int
     {
         return $this->order;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function current()
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function key()
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function next(): void
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rewind(): void
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function valid(): bool
-    {
     }
 
     /**
