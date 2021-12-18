@@ -11,7 +11,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * Real implementation can be strings of data, windows of data on underlying
  * data elements, etc.
  */
-abstract class DataElement
+abstract class DataElement implements \Iterator
 {
     /**
      * The offset start of this element against the real underlying element.
