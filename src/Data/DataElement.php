@@ -127,7 +127,7 @@ abstract class DataElement
     /**
      * Gets a specific portion of bytes from the data element.
      *
-     * @param int $start
+     * @param int $offset
      *   (Optional) The offset, relative to the data element, to the first byte
      *   returned. If omitted, the bytes will be returned from the first byte
      *   in the data element.
@@ -141,7 +141,7 @@ abstract class DataElement
      * @throws DataException
      *   When the requested bytes are out of bounds of the data element.
      */
-    abstract public function getBytes(int $start = 0, ?int $size = null): string;
+    abstract public function getBytes(int $offset = 0, ?int $size = null): string;
 
     /**
      * Return an unsigned byte from the data.
