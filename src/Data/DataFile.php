@@ -45,6 +45,7 @@ final class DataFile extends DataElement
         }
         $this->validateOffset($offset + $size - 1);
 
-        return substr($this->data, $offset, $size);
+        $this->fileHandle->fseek($offset);
+        return $this->fileHandle->fread($size);
     }
 }
