@@ -90,7 +90,10 @@ if (!is_readable($file)) {
 
 try {
     /* Load data from file */
+    $baseline_memory = memory_get_usage();
     $media = Media::loadFromFile($file, $logger, $fail_on_error);
+    $max_memory = memory_get_peak_usage();
+    $curr_memory = memory_get_usage();
     if ($media === null) {
         print("dump-media: Unrecognized media format!\n");
         exit(1);
@@ -104,11 +107,9 @@ try {
 
 if (!isset($err)) {
     dump_element($media);
+    print "\n\n Base: $baseline_memory Curr: $curr_memory Max: $max_memory";
 } else {
     print("dump-media: Error while reading media file: " . $err . "\n");
 }
-
-// Dump via exif_read_data().
-//dump(@exif_read_data($file));
 
 exit(0);  // xx decide exit code
