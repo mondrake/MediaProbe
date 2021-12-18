@@ -51,12 +51,15 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
         $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
         $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';
+dump([$testFile, $exiftoolDumpFile, $exiftoolRawDumpFile]);
 
         $this->exiftoolDump =new \DOMDocument();
         $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
+dump(['exiftoolDump', $this->exiftoolDump]);
 
         $this->exiftoolRawDump =new \DOMDocument();
         $this->exiftoolDump->loadXML(file_get_contents($exiftoolRawDumpFile));
+dump(['exiftoolRawDump', $this->exiftoolRawDump]);
 
         $media = Media::createFromFile($testFile);
 
