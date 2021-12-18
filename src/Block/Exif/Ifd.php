@@ -247,8 +247,10 @@ class Ifd extends ListBase
      *            the data from which the thumbnail will be
      *            extracted.
      */
-    public static function thumbnailToBlock(DataElement $data_element, Ifd $ifd)
+    public static function thumbnailToBlock(DataElement $data_element, Ifd $ifd): void
     {
+        return;
+        
         if (!$ifd->getElement("tag[@name='ThumbnailOffset']") || !$ifd->getElement("tag[@name='ThumbnailLength']")) {
             return;
         }
