@@ -125,6 +125,41 @@ abstract class DataElement implements \Iterator
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public current()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public key()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public next(): void
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public rewind(): void
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public valid(): bool
+    {
+    }
+
+    /**
      * Gets a specific portion of bytes from the data element.
      *
      * @param int $offset
