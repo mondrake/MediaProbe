@@ -49,8 +49,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
-        $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName() . '.exiftool.xml';
-        $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName() . '.exiftool-raw.xml';
+        $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
+        $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';
 
         $this->exiftoolDump =new \DOMDocument();
         $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
