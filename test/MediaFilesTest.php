@@ -123,7 +123,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
 
         $this->exiftoolRawDump =new \DOMDocument();
-        $this->exiftoolDump->loadXML(file_get_contents($exiftoolRawDumpFile));
+        $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
         $original_media = Media::createFromFile($testFile);
         $original_media->saveToFile($testFile . '-rewrite.img');
