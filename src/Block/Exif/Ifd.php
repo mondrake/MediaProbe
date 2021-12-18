@@ -249,8 +249,6 @@ class Ifd extends ListBase
      */
     public static function thumbnailToBlock(DataElement $data_element, Ifd $ifd): void
     {
-        return;
-        
         if (!$ifd->getElement("tag[@name='ThumbnailOffset']") || !$ifd->getElement("tag[@name='ThumbnailLength']")) {
             return;
         }
@@ -328,8 +326,10 @@ class Ifd extends ListBase
      * @param Ifd $ifd
      *            the root Ifd object.
      */
-    public static function makerNoteToBlock(DataElement $d, Ifd $ifd)
+    public static function makerNoteToBlock(DataElement $d, Ifd $ifd): void
     {
+        return;
+        
         // Get the Exif subIfd if existing.
         if (!$exif_ifd = $ifd->getElement("ifd[@name='ExifIFD']")) {
             return;
