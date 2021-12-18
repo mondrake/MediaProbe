@@ -71,7 +71,7 @@ class Media extends BlockBase
      *            (Optional) a PSR-3 compliant log level. Any log entry at this
      *            level or above will force media parsing to stop.
      *
-     * @return Media|null
+     * @return Media
      *            The Media object.
      *
      * @throws InvalidFileException
