@@ -118,6 +118,12 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
         $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';
 
+        $this->exiftoolDump =new \DOMDocument();
+        $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
+
+        $this->exiftoolRawDump =new \DOMDocument();
+        $this->exiftoolDump->loadXML(file_get_contents($exiftoolRawDumpFile));
+
         $original_media = Media::createFromFile($testFile);
         $original_media->saveToFile($testFile . '-rewrite.img');
         $media = Media::createFromFile($testFile . '-rewrite.img');
