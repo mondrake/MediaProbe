@@ -11,7 +11,6 @@ use FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\MediaProbe;
-use PrettyXml\Formatter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -88,8 +87,7 @@ class DumpCommand extends Command
                 $process = new Process(['exiftool', (string) $file, '-X', '-t', '-D']);
                 try {
                     $process->run();
-                    $formatter = new Formatter();
-                    $fs->dumpFile($dumpFilePrefix . '.exiftool.xml', $formatter->format($process->getOutput()));
+                    $fs->dumpFile($dumpFilePrefix . '.exiftool.xml', $process->getOutput());
                 } catch (\Exception $e) {
                     $output->write(' error: ' . $e->getMessage());
                 }
@@ -98,8 +96,7 @@ class DumpCommand extends Command
                 $process = new Process(['exiftool', (string) $file, '-X', '-t', '-D', '-n']);
                 try {
                     $process->run();
-                    $formatter = new Formatter();
-                    $fs->dumpFile($dumpFilePrefix . '.exiftool-raw.xml', $formatter->format($process->getOutput()));
+                    $fs->dumpFile($dumpFilePrefix . '.exiftool-raw.xml', $process->getOutput());
                 } catch (\Exception $e) {
                     $output->write(' error: ' . $e->getMessage());
                 }
