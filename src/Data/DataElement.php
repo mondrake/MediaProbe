@@ -127,35 +127,35 @@ abstract class DataElement implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public current()
+    public function current()
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public key()
+    public function key()
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public next(): void
+    public function next(): void
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public rewind(): void
+    public function rewind(): void
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public valid(): bool
+    public function valid(): bool
     {
     }
 
