@@ -2,11 +2,12 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Entry\Core\EntryInterface;
-use FileEye\MediaProbe\MediaProbe;
-use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\Block\Jpeg;
+use FileEye\MediaProbe\Data\DataString;
+use FileEye\MediaProbe\Entry\Core\EntryInterface;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\Media;
+use FileEye\MediaProbe\MediaProbe;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;
 
