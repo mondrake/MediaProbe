@@ -51,14 +51,17 @@ class Ascii extends EntryBase
     {
         parent::setValue($data);
 
-        $str = isset($data[0]) ? $data[0] : '';
+        $this->value = $data;
+        $this->components = $data->getSize();
 
-        $this->value = $str;
-        if ($this->value === null || $this->value === '') {
-            $this->components = 1;
-        } else {
-            $this->components = substr($this->value, -1) === "\x0" ? strlen($str) : strlen($str) + 1;
-        }
+//        $str = isset($data[0]) ? $data[0] : '';
+
+//        $this->value = $str;
+//        if ($this->value === null || $this->value === '') {
+//            $this->components = 1;
+//        } else {
+//            $this->components = substr($this->value, -1) === "\x0" ? strlen($str) : strlen($str) + 1;
+//        }
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
@@ -95,8 +98,8 @@ class Ascii extends EntryBase
      */
     public function toString(array $options = []): string
     {
-        $first_zero_pos = strpos($this->value, "\x0");
-        $value = substr($this->value, 0, $first_zero_pos === false ? strlen($this->value) : $first_zero_pos);
+        $first_zero_pos = strpos($this->value->getBytes(), "\x0");
+        $value = substr($this->value->getBytes(), 0, $first_zero_pos === false ? strlen($this->value->getBytes()) : $first_zero_pos);
         return $this->resolveText($value);
     }
 }

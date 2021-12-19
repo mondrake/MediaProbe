@@ -70,7 +70,6 @@ class Tag extends BlockBase
     {
         try {
             $class = $this->getDefinition()->getEntryClass();
-dump($class);
             new $class($this, $data);
             // $entry->loadFromData($data, 0, $data->getSize(), [], $this->getDefinition());
         } catch (DataException $e) {
