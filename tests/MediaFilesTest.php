@@ -45,7 +45,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     /**
      * @dataProvider mediaFileProvider
      */
-    public function testLoadFromFile($mediaDumpFile)
+    public function __testLoadFromFile($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
@@ -110,7 +110,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     /**
      * @dataProvider mediaFileProvider
      */
-    public function testRewriteThroughGd($mediaDumpFile)
+    public function __testRewriteThroughGd($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
@@ -144,7 +144,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     /**
      * @dataProvider mediaFileProvider
      */
-    public function testRewrite($mediaDumpFile)
+    public function __testRewrite($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
