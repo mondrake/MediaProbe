@@ -77,7 +77,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     /**
      * @dataProvider mediaFileProvider
      */
-    public function testLoadFromDataElement($mediaDumpFile)
+    public function testParse($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
@@ -92,7 +92,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
         $testDataElement = new DataString(file_get_contents($testFile));
-        $media = Media::loadFromDataElement($testDataElement);
+        $media = Media::parse($testDataElement);
 
         $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
 
