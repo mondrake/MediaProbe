@@ -32,7 +32,6 @@ class Undefined extends EntryBase
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        $this->setValue([$data_element->getBytes()]);
         return $this;
     }
 
@@ -72,9 +71,9 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0)
+    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
-        return $this->value;
+        return $this->value->getBytes();
     }
 
     /**
