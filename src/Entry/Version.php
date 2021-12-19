@@ -25,14 +25,14 @@ class Version extends Undefined
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        $this->setValue([$data_element->getBytes(0, $item_definition->getValuesCount())]);
+        $this->setDataElement([$data_element->getBytes(0, $item_definition->getValuesCount())]);
         return $this;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
         $this->parsed = true;
 

@@ -30,7 +30,7 @@ class ExifUserComment extends Undefined
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        $this->setValue([$data_element->getBytes(0, $item_definition->getValuesCount())]);
+        $this->setDataElement([$data_element->getBytes(0, $item_definition->getValuesCount())]);
         return $this;
     }
 
@@ -43,7 +43,7 @@ class ExifUserComment extends Undefined
      *            should be either 'ASCII', 'JIS', 'Unicode', or the empty
      *            string specifying an unknown encoding.
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
         $this->value = $data[0];
         $this->components = strlen($this->value);

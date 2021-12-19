@@ -49,7 +49,7 @@ class SignedLong extends NumberBase
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getSignedLong($i * 4);
         }
-        $this->setValue($args);
+        $this->setDataElement($args);
         return $this;
     }
 

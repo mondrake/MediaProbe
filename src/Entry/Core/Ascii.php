@@ -33,23 +33,23 @@ class Ascii extends EntryBase
      */
     public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
     {
-        $bytes = $data_element->getBytes();
+//        $bytes = $data_element->getBytes();
 
         // Check the last byte is NULL.
-        if (substr($bytes, -1) !== "\x0") {
-            $this->notice('Ascii entry missing final NUL character.');
-        }
+//        if (substr($bytes, -1) !== "\x0") {
+//            $this->notice('Ascii entry missing final NUL character.');
+//        }
 
-        $this->setValue([$bytes]);
+//        $this->setDataElement([$bytes]);
         return $this;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
-        parent::setValue($data);
+        parent::setDataElement($data);
 
         $this->value = $data;
         $this->components = $data->getSize();

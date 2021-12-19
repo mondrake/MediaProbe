@@ -37,14 +37,14 @@ class WindowsString extends Byte
         $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         // Remove any question marks that have been introduced because of illegal characters.
         $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
-        $this->setValue([$value]);
+        $this->setDataElement([$value]);
         return $this;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
         $php_string = rtrim($data[0], "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');

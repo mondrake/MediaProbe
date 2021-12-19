@@ -49,7 +49,7 @@ class SignedShort extends NumberBase
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getSignedShort($i * 2);
         }
-        $this->setValue($args);
+        $this->setDataElement($args);
         return $this;
     }
 

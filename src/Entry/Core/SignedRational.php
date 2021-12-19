@@ -59,7 +59,7 @@ class SignedRational extends SignedLong
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getSignedRational($i * 8);
         }
-        $this->setValue($args);
+        $this->setDataElement($args);
         return $this;
     }
 

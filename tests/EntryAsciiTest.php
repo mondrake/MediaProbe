@@ -28,11 +28,11 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('1970:01:01 00:00:10' . chr(0), $entry->toBytes());
 
         // Malformed Exif timestamp.
-        $entry->setValue(['1970!01-01 00 00 30' . chr(0)]);
+        $entry->setDataElement(['1970!01-01 00 00 30' . chr(0)]);
         $this->assertEquals('1970:01:01 00:00:30', $entry->getValue());
         $this->assertEquals('1970!01-01 00 00 30' . chr(0), $entry->toBytes());
 
-        $entry->setValue([2415021.75, Time::JULIAN_DAY_COUNT]);
+        $entry->setDataElement([2415021.75, Time::JULIAN_DAY_COUNT]);
         // This is Jan 1st 1900 at 18:00, outside the range of a UNIX
         // timestamp:
         $this->assertFalse($entry->getValue(['type' => Time::UNIX_TIMESTAMP]));
@@ -40,13 +40,13 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('1900:01:01 18:00:00' . chr(0), $entry->toBytes());
         $this->assertEquals(2415021.75, $entry->getValue(['type' => Time::JULIAN_DAY_COUNT]));
 
-        $entry->setValue(['0000:00:00 00:00:00' . chr(0)]);
+        $entry->setDataElement(['0000:00:00 00:00:00' . chr(0)]);
         $this->assertFalse($entry->getValue(['type' => Time::UNIX_TIMESTAMP]));
         $this->assertEquals('0000:00:00 00:00:00', $entry->getValue());
         $this->assertEquals('0000:00:00 00:00:00' . chr(0), $entry->toBytes());
         $this->assertEquals(0, $entry->getValue(['type' => Time::JULIAN_DAY_COUNT]));
 
-        $entry->setValue(['9999:12:31 23:59:59' . chr(0)]);
+        $entry->setDataElement(['9999:12:31 23:59:59' . chr(0)]);
         // this test will fail on 32bit machines
         $this->assertEquals(253402300799, $entry->getValue(['type' => Time::UNIX_TIMESTAMP]));
         $this->assertEquals('9999:12:31 23:59:59', $entry->getValue());
@@ -54,9 +54,9 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals(5373484 + 86399 / 86400, $entry->getValue(['type' => Time::JULIAN_DAY_COUNT]));
 
         // Check day roll-over for SF bug #1699489.
-        $entry->setValue(['2007:04:23 23:30:00' . chr(0)]);
+        $entry->setDataElement(['2007:04:23 23:30:00' . chr(0)]);
         $t = $entry->getValue(['type' => Time::UNIX_TIMESTAMP]);
-        $entry->setValue([$t + 3600, Time::UNIX_TIMESTAMP]);
+        $entry->setDataElement([$t + 3600, Time::UNIX_TIMESTAMP]);
         $this->assertEquals('2007:04:24 00:30:00', $entry->getValue());
         $this->assertEquals('2007:04:24 00:30:00' . chr(0), $entry->toBytes());
     }
@@ -64,7 +64,7 @@ class EntryAsciiTest extends EntryTestBase
     public function testCopyright()
     {
         $entry = new IfdCopyright($this->mockParentElement);
-        $entry->setValue([]);
+        $entry->setDataElement([]);
 
         $value = $entry->getValue();
         $this->assertEquals('', $value[0]);
@@ -73,7 +73,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('', $entry->toString(['short' => false]));
         $this->assertEquals('', $entry->toString(['short' => true]));
 
-        $entry->setValue(['A']);
+        $entry->setDataElement(['A']);
         $value = $entry->getValue();
         $this->assertEquals('A', $value[0]);
         $this->assertEquals('', $value[1]);
@@ -81,7 +81,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('A', $entry->toString(['short' => true]));
         $this->assertEquals('A' . chr(0), $entry->toBytes());
 
-        $entry->setValue(['', 'B']);
+        $entry->setDataElement(['', 'B']);
         $value = $entry->getValue();
         $this->assertEquals('', $value[0]);
         $this->assertEquals('B', $value[1]);
@@ -89,7 +89,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('B', $entry->toString(['short' => true]));
         $this->assertEquals(chr(0) . 'B' . chr(0), $entry->toBytes());
 
-        $entry->setValue(['A', 'B']);
+        $entry->setDataElement(['A', 'B']);
         $value = $entry->getValue();
         $this->assertEquals('A', $value[0]);
         $this->assertEquals('B', $value[1]);

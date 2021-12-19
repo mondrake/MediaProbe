@@ -58,7 +58,7 @@ class Rational extends Long
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getRational($i * 8);
         }
-        $this->setValue($args);
+        $this->setDataElement($args);
         return $this;
     }
 

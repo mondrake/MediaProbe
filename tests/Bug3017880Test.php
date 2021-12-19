@@ -54,7 +54,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
                 new Ascii($tag, [$software_name]);
                 $resave_file = 1;
             } else {
-                $software_tag->getElement("entry")->setValue([$software_name]);
+                $software_tag->getElement("entry")->setDataElement([$software_name]);
                 $resave_file = 1;
             }
 

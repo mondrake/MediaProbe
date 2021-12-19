@@ -41,9 +41,9 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
-        parent::setValue($data);
+        parent::setDataElement($data);
 
         foreach ($data as &$v) {
             $this->validateNumber($v);

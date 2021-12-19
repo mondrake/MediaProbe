@@ -25,7 +25,7 @@ class IfdCopyright extends Ascii
     {
         $v = explode("\0", $data_element->getBytes(0, $item_definition->getValuesCount()));
         $v[1] = isset($v[1]) ? $v[1] : '';
-        $this->setValue($v);
+        $this->setDataElement($v);
         return $this;
     }
 
@@ -38,7 +38,7 @@ class IfdCopyright extends Ascii
      *            key 1 - the editor copyright. Use the empty string if there
      *            is no editor copyright.
      */
-    public function setValue(DataElement $data)
+    public function setDataElement(DataElement $data)
     {
         $this->parsed = true;
 
