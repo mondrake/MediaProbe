@@ -32,7 +32,7 @@ final class DataFile extends DataElement
     public function __construct(string $filePath)
     {
         $this->filePath = $filePath;
-        $this->fileHandle = new \SplFileObject($path, 'r');
+        $this->fileHandle = new \SplFileObject($this->filePath, 'r');
         $this->start = 0;
         $this->size = $this->fileHandle->fstat()['size'];
     }
