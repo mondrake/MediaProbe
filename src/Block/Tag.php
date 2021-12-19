@@ -68,10 +68,11 @@ class Tag extends BlockBase
      */
     protected function doParseData(DataElement $data): void
     {
-        $class = $this->getDefinition()->getEntryClass();
-        $entry = new $class($this);
         try {
-            $entry->loadFromData($data, 0, $data->getSize(), [], $this->getDefinition());
+            $class = $this->getDefinition()->getEntryClass();
+dump($class);
+            new $class($this, $data);
+            // $entry->loadFromData($data, 0, $data->getSize(), [], $this->getDefinition());
         } catch (DataException $e) {
             $this->error($e->getMessage());
         }
