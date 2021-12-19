@@ -51,7 +51,6 @@ class Ascii extends EntryBase
     {
         parent::setDataElement($data);
 
-        $this->value = $data;
         $this->components = $data->getSize();
 
 //        $str = isset($data[0]) ? $data[0] : '';

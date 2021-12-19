@@ -42,7 +42,6 @@ class Undefined extends EntryBase
     {
         parent::setDataElement($data);
 
-        $this->value = $data;
         $this->components = $data->getSize();
 
         if ($this->hasMappedText()) {

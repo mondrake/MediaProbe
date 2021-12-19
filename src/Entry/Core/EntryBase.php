@@ -119,6 +119,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     public function setDataElement(DataElement $value)
     {
         $this->parsed = true;
+        $this->value = $data;
         return $this;
     }
 

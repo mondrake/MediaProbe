@@ -41,20 +41,22 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+/*    public function setDataElement(DataElement $data)
     {
         parent::setDataElement($data);
 
-        foreach ($data as &$v) {
-            $this->validateNumber($v);
-        }
+        $this->components = $data->getSize();
 
-        $this->components = count($data);
-        $this->value = empty($data) ? null : $data;
+//        foreach ($data as &$v) {
+//            $this->validateNumber($v);
+//        }
+
+//        $this->components = count($data);
+//        $this->value = empty($data) ? null : $data;
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
-    }
+    }*/
 
     /**
      * {@inheritdoc}
