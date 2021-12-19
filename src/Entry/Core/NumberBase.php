@@ -61,7 +61,7 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function getValue(array $options = [])
+/*    public function getValue(array $options = [])
     {
         if (is_null($this->value)) {
             return null;
@@ -75,7 +75,7 @@ abstract class NumberBase extends EntryBase
         }
         return $ret;
     }
-
+*/
     /**
      * Validate a number.
      *

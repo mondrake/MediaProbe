@@ -65,6 +65,34 @@ class Rational extends Long
     /**
      * {@inheritdoc}
      */
+    public function setDataElement(DataElement $data)
+    {
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize() / 8; // @todo xxx check if components calculation can be abstracted
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->formatNumber($this->value->getRational(), $options);
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->formatNumber($this->value->getRational($i * 8), $options);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function formatNumber($number, array $options = [])
     {
         $format = $options['format'] ?? null;
