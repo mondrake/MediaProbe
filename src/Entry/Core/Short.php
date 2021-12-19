@@ -70,6 +70,21 @@ class Short extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->formatNumber($this->value->getShort(), $options);
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->formatNumber($this->value->getShort($i * 2), $options);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function numberToBytes($number, $order)
     {
         return ConvertBytes::fromShort($number, $order);
