@@ -52,9 +52,15 @@ class Time extends Ascii
      *            count and the fractional part denotes the time of day (0.25
      *            means 6:00, 0.75 means 18:00).
      */
-    public function setDataElement(DataElement $data)
+/*    public function setDataElement(DataElement $data)
     {
-        $type = $data[1] ?? self::EXIF_STRING;
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize();
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+        return $this;
+/*        $type = $data[1] ?? self::EXIF_STRING;
 
         if (!in_array($type, [self::UNIX_TIMESTAMP, self::EXIF_STRING, self::JULIAN_DAY_COUNT])) {
             $this->error('Expected UNIX_TIMESTAMP, EXIF_STRING, or JULIAN_DAY_COUNT for \'type\', got {type}.', [
@@ -93,7 +99,7 @@ class Time extends Ascii
         $this->debug("text: {text}", ['text' => $this->toString()]);
         $this->parsed = true;
         return $this;
-    }
+    }*/
 
     /**
      * Return the timestamp of the entry.
