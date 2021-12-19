@@ -98,7 +98,7 @@ class Media extends BlockBase
      * @return Media
      *            The Media object.
      */
-    protected static function parse(DataElement $data_element, ?LoggerInterface $external_logger, ?string $fail_level): Media
+    public static function parse(DataElement $data_element, ?LoggerInterface $external_logger, ?string $fail_level): Media
     {
         // Determine the media format.
         $media_format_collection = static::getMatchingMediaCollection($data_element);
