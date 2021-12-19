@@ -79,11 +79,9 @@ class Media extends BlockBase
      */
     public static function loadFromFile(string $path, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
-        $handle = new \SplFileObject($path, 'r');
         // @todo lock file while reading, capture fstats to prevent overwrites.
-        $dataElement = new DataFile($handle);
-        $media_format_collection = static::getMatchingMediaCollection($dataElement);
-        return static::parse($media_format_collection, $dataElement, $external_logger, $fail_level);
+        $data = new DataFile($path);
+        return static::parse(static::getMatchingMediaCollection($data), $data, $external_logger, $fail_level);
     }
 
     /**
@@ -103,10 +101,9 @@ class Media extends BlockBase
      * @throws InvalidFileException
      *            On failure.
      */
-    public static function createFromData(DataElement $data_element, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
+    public static function loadFromDataElement(DataElement $data_element, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
-        $media_format_collection = static::getMatchingMediaCollection($data_element);
-        return static::parse($media_format_collection, $data_element, $external_logger, $fail_level);
+        return static::parse(static::getMatchingMediaCollection($data_element), $data_element, $external_logger, $fail_level);
     }
 
     /**

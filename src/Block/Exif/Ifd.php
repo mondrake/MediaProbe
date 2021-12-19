@@ -328,8 +328,6 @@ class Ifd extends ListBase
      */
     public static function makerNoteToBlock(DataElement $d, Ifd $ifd): void
     {
-        return;
-        
         // Get the Exif subIfd if existing.
         if (!$exif_ifd = $ifd->getElement("ifd[@name='ExifIFD']")) {
             return;
