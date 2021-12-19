@@ -43,8 +43,8 @@ class Undefined extends EntryBase
     {
         parent::setValue($data);
 
-        $this->value = $data[0];
-        $this->components = strlen($data[0]);
+        $this->value = $data;
+        $this->components = $data->getSize();
 
         if ($this->hasMappedText()) {
             $this->debug("text: {text}", ['text' => $this->toString()]);
