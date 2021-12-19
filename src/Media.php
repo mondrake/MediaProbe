@@ -80,8 +80,8 @@ class Media extends BlockBase
     public static function loadFromFile(string $path, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
         // @todo lock file while reading, capture fstats to prevent overwrites.
-        $data = new DataFile($path);
-        return static::parse(static::getMatchingMediaCollection($data), $data, $external_logger, $fail_level);
+        $dataFile = new DataFile($path);
+        return static::parse(static::getMatchingMediaCollection($dataFile), $dataFile, $external_logger, $fail_level);
     }
 
     /**

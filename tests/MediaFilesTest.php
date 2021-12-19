@@ -44,14 +44,13 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     /**
      * @dataProvider mediaFileProvider
      */
-    public function testParse($mediaDumpFile)
+    public function testLoadFromFile($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
         $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
         $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';
-//dump([$testFile, $exiftoolDumpFile, $exiftoolRawDumpFile]);
 
         $this->exiftoolDump =new \DOMDocument();
         $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
@@ -60,6 +59,39 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
         $media = Media::loadFromFile($testFile);
+
+        $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
+
+        if (isset($this->testDump['elements'])) {
+            $this->assertElement($this->testDump['elements'], $media);
+        }
+
+        foreach (['ERROR', 'WARNING', 'NOTICE'] as $level) {
+            if (isset($this->testDump['log'][$level])) {
+                $this->assertEquals(count($this->testDump['log'][$level]), count($media->dumpLog($level)));
+            }
+        }
+    }
+
+    /**
+     * @dataProvider mediaFileProvider
+     */
+    public function testLoadFromDataElement($mediaDumpFile)
+    {
+        $this->testDump = Yaml::parse($mediaDumpFile->getContents());
+
+        $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
+        $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
+        $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';
+
+        $this->exiftoolDump =new \DOMDocument();
+        $this->exiftoolDump->loadXML(file_get_contents($exiftoolDumpFile));
+
+        $this->exiftoolRawDump =new \DOMDocument();
+        $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
+
+        $testDataElement = new DataString(file_get_contents($testFile));
+        $media = Media::loadFromDataElement($testDataElement);
 
         $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
 
