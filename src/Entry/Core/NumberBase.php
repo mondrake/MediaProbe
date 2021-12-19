@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Entry\Core;
 
+use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -40,7 +41,7 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         parent::setValue($data);
 

@@ -34,7 +34,7 @@ class ExifMakerNote extends Undefined
      *            key 1 - the offset of the MakerNote IFD vs the main
      *            DataWindow.
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         parent::setValue($data);
 

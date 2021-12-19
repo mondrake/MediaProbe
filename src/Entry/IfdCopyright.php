@@ -38,7 +38,7 @@ class IfdCopyright extends Ascii
      *            key 1 - the editor copyright. Use the empty string if there
      *            is no editor copyright.
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         $this->parsed = true;
 

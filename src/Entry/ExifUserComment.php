@@ -43,7 +43,7 @@ class ExifUserComment extends Undefined
      *            should be either 'ASCII', 'JIS', 'Unicode', or the empty
      *            string specifying an unknown encoding.
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         $this->value = $data[0];
         $this->components = strlen($this->value);

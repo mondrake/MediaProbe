@@ -44,7 +44,7 @@ class WindowsString extends Byte
     /**
      * {@inheritdoc}
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         $php_string = rtrim($data[0], "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');

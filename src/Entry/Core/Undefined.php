@@ -39,7 +39,7 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         parent::setValue($data);
 

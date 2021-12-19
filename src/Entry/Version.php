@@ -32,7 +32,7 @@ class Version extends Undefined
     /**
      * {@inheritdoc}
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         $this->parsed = true;
 

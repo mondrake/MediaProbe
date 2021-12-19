@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Entry\Core;
 
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\ItemFormat;
+use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ElementBase;
 use FileEye\MediaProbe\ElementInterface;
@@ -44,22 +45,22 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      * A representation of the value of the entry which is more suitable for
      * handling than the bytes.
      *
-     * @var mixed
+     * @var DataElement
      */
     protected $value;
 
     /**
      * Constructs an EntryInterface object.
      *
-     * @param \FileEye\MediaProbe\ElementInterface $parent
+     * @param ElementInterface $parent
      *            xx
-     * @param array $data
+     * @param DataElement $data
      *            the data that this entry will be holding.
-     * @param \FileEye\MediaProbe\ElementInterface|null $reference
+     * @param ElementInterface|null $reference
      *            (Optional) if specified, the new element will be inserted
      *            before the reference element.
      */
-    public function __construct(ElementInterface $parent, array $data = [], ElementInterface $reference = null)
+    public function __construct(ElementInterface $parent, DataElement $data = [], ElementInterface $reference = null)
     {
         parent::__construct(static::DOM_NODE_NAME, $parent, $reference);
         if (!empty($data)) {
@@ -117,7 +118,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function setValue(array $value)
+    public function setValue(DataElement $value)
     {
         $this->parsed = true;
         return $this;

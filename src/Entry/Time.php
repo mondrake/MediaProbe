@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Entry;
 
+use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\MediaProbe;
@@ -51,7 +52,7 @@ class Time extends Ascii
      *            count and the fractional part denotes the time of day (0.25
      *            means 6:00, 0.75 means 18:00).
      */
-    public function setValue(array $data)
+    public function setValue(DataElement $data)
     {
         $type = $data[1] ?? self::EXIF_STRING;
 
