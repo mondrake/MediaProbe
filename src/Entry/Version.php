@@ -34,7 +34,11 @@ class Version extends Undefined
      */
     public function setDataElement(DataElement $data)
     {
-        $this->parsed = true;
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize();
+
+/*        $this->parsed = true;
 
         if (!is_numeric($data[0])) {
             $this->error('Incorrect version data.');
@@ -42,7 +46,7 @@ class Version extends Undefined
         }
 
         $this->value = $data[0];
-        $this->components = strlen($this->value);
+        $this->components = strlen($this->value);*/
         $this->debug("text: {text}", ['text' => $this->toString()]);
         return $this;
     }
@@ -54,10 +58,10 @@ class Version extends Undefined
     {
         $format = $options['format'] ?? null;
         if (in_array($format, ['phpExif', 'exiftool'])) {
-            return $this->value;
+            return $this->value->getBytes();
         }
-        if (isset($this->value) && is_numeric($this->value)) {
-            $version = $this->value / 100;
+        if (is_numeric($this->value->getBytes())) {
+            $version = $this->value->getBytes() / 100;
         } else {
             $version = 0;
         }
@@ -72,7 +76,7 @@ class Version extends Undefined
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
-        return $this->value;
+        return $this->value->getBytes();
     }
 
     /**
