@@ -60,12 +60,10 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      *            (Optional) if specified, the new element will be inserted
      *            before the reference element.
      */
-    public function __construct(ElementInterface $parent, DataElement $data = [], ElementInterface $reference = null)
+    public function __construct(ElementInterface $parent, DataElement $data, ElementInterface $reference = null)
     {
         parent::__construct(static::DOM_NODE_NAME, $parent, $reference);
-        if (!empty($data)) {
-            $this->setValue($data);
-        }
+        $this->setValue($data);
         $this->format = ItemFormat::getFromName($this->formatName);
     }
 
