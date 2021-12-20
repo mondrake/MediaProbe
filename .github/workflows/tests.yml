@@ -104,11 +104,11 @@ jobs:
         #- php examples/dump-media.php -d    tests/media-samples/image/pel-157.tiff-rewrite.img
         #- php examples/dump-media.php -d    tests/media-samples/image/broken/gh-11.jpg-rewrite.img
         php examples/dump-media.php -d    tests/media-samples/image/camera/olympus-c765uz.jpg
-        php examples/dump-media.php -d -w tests/media-samples/image/camera/fujifilm_x_a5.jpg
+        php examples/dump-media.php -d    tests/media-samples/image/camera/fujifilm_x_a5.jpg
         #- php examples/dump-media.php -d    tests/media-samples/image/camera/fujifilm_x_a5.jpg-rewrite.img
         #php examples/dump-media.php -d -w tests/media-samples/image/camera/canon_eos_70d_29.jpg
         #- php examples/dump-media.php -d    tests/media-samples/image/camera/canon_eos_70d_29.jpg-rewrite.img
-        php examples/dump-media.php -d -w tests/media-samples/image/camera/canon_eos_850d_08.jpg
+        php examples/dump-media.php -d    tests/media-samples/image/camera/canon_eos_850d_08.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/camera/canon_eos_850d_08.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/broken/pel-176-RPT200076_03.jpg
 

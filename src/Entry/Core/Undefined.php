@@ -56,14 +56,6 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        return $this->value->getBytes();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function toString(array $options = []): string
     {
         $value = null;
