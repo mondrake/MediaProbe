@@ -68,7 +68,7 @@ class Undefined extends EntryBase
     {
         $value = null;
         if ($this->components === 1) {
-            $value = unpack('C', $this->value)[1]; // xx note that we may want to have alternative check for string... if the collection has a string index. see ifdExif/FileSource
+            $value = unpack('C', $this->value->getBytes())[1]; // xx note that we may want to have alternative check for string... if the collection has a string index. see ifdExif/FileSource
         }
         $text = $this->resolveText($value, true);
         return $text ?? $this->components . ' byte(s) of data';
