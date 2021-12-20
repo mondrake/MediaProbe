@@ -49,7 +49,7 @@ class Long extends NumberBase
         }
         $ret = [];
         for ($i = 0; $i < $this->components; $i++) {
-            $ret[] = $this->value->getLong($i * 4));
+            $ret[] = $this->value->getLong($i * 4);
         }
         return $ret;
     }
