@@ -31,7 +31,7 @@ class IfdCopyright extends Ascii
      *            key 1 - the editor copyright. Use the empty string if there
      *            is no editor copyright.
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         $this->parsed = true;
 
@@ -44,7 +44,6 @@ class IfdCopyright extends Ascii
         }
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
     }
 
     /**

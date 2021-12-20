@@ -40,7 +40,7 @@ class Ascii extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
@@ -56,7 +56,6 @@ class Ascii extends EntryBase
 //        }
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
     }
 
     /**

@@ -25,14 +25,12 @@ class ExifMakerNote extends Undefined
      *            key 1 - the offset of the MakerNote IFD vs the main
      *            DataWindow.
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
         $this->value = $data;
         $this->components = strlen($data[0]);
-
-        return $this;
     }
 
     /**

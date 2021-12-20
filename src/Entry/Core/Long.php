@@ -43,7 +43,6 @@ class Long extends NumberBase
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getLong($i * 4);
         }*/
-    }
 
     /**
      * {@inheritdoc}

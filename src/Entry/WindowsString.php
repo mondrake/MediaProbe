@@ -37,7 +37,7 @@ class WindowsString extends Byte
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         $php_string = rtrim($data[0], "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
@@ -47,7 +47,6 @@ class WindowsString extends Byte
         $this->debug("text: {text}", ['text' => $this->toString()]);
 
         $this->parsed = true;
-        return $this;
     }
 
     /**

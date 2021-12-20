@@ -50,14 +50,13 @@ class Short extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
         $this->components = $data->getSize() / 2; // @todo xxx check if components calculation can be abstracted
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
     }
 
     /**

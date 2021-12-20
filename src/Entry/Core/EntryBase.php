@@ -70,11 +70,10 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         $this->parsed = true;
         $this->value = $data;
-        return $this;
     }
 
     /**

@@ -58,14 +58,13 @@ class Rational extends Long
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
         $this->components = $data->getSize() / 8; // @todo xxx check if components calculation can be abstracted
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
     }
 
     /**

@@ -30,7 +30,7 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
@@ -40,7 +40,6 @@ class Undefined extends EntryBase
             $this->debug("text: {text}", ['text' => $this->toString()]);
         }
         $this->debug("data: {data}", ['data' => MediaProbe::dumpHex($this->toBytes(), 12)]);
-        return $this;
     }
 
     /**

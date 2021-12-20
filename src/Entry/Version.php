@@ -23,7 +23,7 @@ class Version extends Undefined
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data)
+    public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
 
@@ -39,7 +39,6 @@ class Version extends Undefined
         $this->value = $data[0];
         $this->components = strlen($this->value);*/
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
     }
 
     /**
