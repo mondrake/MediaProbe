@@ -364,8 +364,8 @@ class Ifd extends ListBase
         // xxx
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
-dump($maker_note_tag->getElement("entry")->getDataElement());
-        $ifd->parseData($maker_note_tag->getElement("entry")->getDataElement(), 0, null, -958+12);
+        $data = $maker_note_tag->getElement("entry")->getDataElement();
+        $ifd->parseData($data, 0, null, - $data->getStart() + 12);  // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");
