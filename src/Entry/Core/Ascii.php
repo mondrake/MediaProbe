@@ -23,11 +23,6 @@ class Ascii extends EntryBase
      */
     protected $formatName = 'Ascii';
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $format;
-
 //        $bytes = $data_element->getBytes();
 
         // Check the last byte is NULL.

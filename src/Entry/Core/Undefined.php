@@ -25,11 +25,6 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
-
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
