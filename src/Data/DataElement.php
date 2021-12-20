@@ -318,4 +318,45 @@ abstract class DataElement
     {
         return ConvertBytes::toSignedRational($this->getBytes($offset, 8), $this->getByteOrder());
     }
+
+    /**
+     * Return an unsigned rational read from the data, as a float.
+     *
+     *
+     * @param int $offset
+     *            the offset into the data. An offset of zero will return the
+     *            first byte in the current allowed window. The last valid
+     *            offset is equal to ::getSize()-8.
+     *
+     * @return float
+     *            the unsigned rational found at offset.
+     *
+     * @throws DataException
+     *            in case of invalid offset.
+     */
+    public function getRationalFloat(int $offset = 0): float
+    {
+        [$numerator, $denominator] = ConvertBytes::toRational($this->getBytes($offset, 8), $this->getByteOrder());
+        return $numerator / $denominator;
+    }
+
+    /**
+     * Return a signed rational read from the data, as a float.
+     *
+     * @param int $offset
+     *            the offset into the data. An offset of zero will return the
+     *            first byte in the current allowed window. The last valid
+     *            offset is equal to ::getSize()-8.
+     *
+     * @return float
+     *            the signed rational found at offset.
+     *
+     * @throws DataException
+     *            in case of invalid offset.
+     */
+    public function getSignedRationalFloat(int $offset = 0): float
+    {
+        [$numerator, $denominator] = ConvertBytes::toSignedRational($this->getBytes($offset, 8), $this->getByteOrder());
+        return $numerator / $denominator;
+    }
 }
