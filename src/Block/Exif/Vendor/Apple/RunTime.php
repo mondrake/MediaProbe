@@ -9,6 +9,7 @@ use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
@@ -23,7 +24,7 @@ class RunTime extends ListBase
     {
         $plist = new CFPropertyList();
         $plist->parse($data->getBytes(0, $this->getDefinition()->getValuesCount()));
-
+dump($plist->toArray());
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {
             $item_collection = $this->getCollection()->getItemCollection($tag_name);
@@ -31,6 +32,7 @@ class RunTime extends ListBase
             $item_definition = new ItemDefinition($item_collection, $item_format);
             $tag = new Tag($item_definition, $this);
             $entry_class = $item_definition->getEntryClass();
+dump($tag_name, $value, $entry_class);
             new $entry_class($tag, [$value]);
             $tag->parsed = true;
         }

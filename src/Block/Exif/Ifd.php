@@ -319,7 +319,7 @@ class Ifd extends ListBase
     }
 
     /**
-     * Converts a maker note tag to an IFD structure for dumping.
+     * Converts a maker note tag to an IFD structure.
      *
      * @param DataWindow $d
      *            the data window that will provide the data.
