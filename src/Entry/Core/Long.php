@@ -39,10 +39,20 @@ class Long extends NumberBase
      */
     protected $max = 4294967295;
 
-/*        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getLong($i * 4);
-        }*/
+    /**
+     * {@inheritdoc}
+     */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->value->getLong();
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->value->getLong($i * 4));
+        }
+        return $ret;
+    }
 
     /**
      * {@inheritdoc}
