@@ -24,7 +24,7 @@ class RunTime extends ListBase
     {
         $plist = new CFPropertyList();
         $plist->parse($data->getBytes(0, $this->getDefinition()->getValuesCount()));
-dump($plist->toArray());
+
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {
             $item_collection = $this->getCollection()->getItemCollection($tag_name);
@@ -33,7 +33,7 @@ dump($plist->toArray());
             $tag = new Tag($item_definition, $this);
             $entry_class = $item_definition->getEntryClass();
 dump($tag_name, $value, $entry_class);
-            new $entry_class($tag, [$value]);
+            new $entry_class($tag, new DataString((string) $value));
             $tag->parsed = true;
         }
     }
