@@ -211,14 +211,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function getValue(array $options = [])
-    {
-        throw new MediaProbeException("%s does not implement the %s method.", get_called_class(), __FUNCTION__);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function toString(array $options = []): string
     {
         throw new MediaProbeException("%s does not implement the %s method.", get_called_class(), __FUNCTION__);

@@ -123,11 +123,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
-     * {@inheritdoc}
-     */
-    abstract public function getValue(array $options = []);
-
-    /**
      * @todo xxx
      */
     protected function hasMappedText(): bool
