@@ -3,14 +3,15 @@
 namespace FileEye\MediaProbe\Entry\Core;
 
 use FileEye\MediaProbe\Block\BlockBase;
-use FileEye\MediaProbe\ItemFormat;
+use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ElementBase;
 use FileEye\MediaProbe\ElementInterface;
+use FileEye\MediaProbe\ItemFormat;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Collection;
+use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Base class for EntryInterface objects.
