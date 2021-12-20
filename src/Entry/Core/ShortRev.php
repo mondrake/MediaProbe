@@ -41,11 +41,20 @@ class ShortRev extends NumberBase
      */
     protected $max = 65535;
 
-/*        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getShortRev($i * 2);
+    /**
+     * {@inheritdoc}
+     */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->value->getShortRev();
         }
-        $this->setDataElement($args);*/
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->value->getShortRev($i * 2);
+        }
+        return $ret;
+    }
 
     /**
      * {@inheritdoc}

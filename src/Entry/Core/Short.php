@@ -53,11 +53,11 @@ class Short extends NumberBase
     public function getValue(array $options = [])
     {
         if ($this->components == 1) {
-            return $this->formatNumber($this->value->getShort(), $options);
+            return $this->value->getShort();
         }
         $ret = [];
         for ($i = 0; $i < $this->components; $i++) {
-            $ret[] = $this->formatNumber($this->value->getShort($i * 2), $options);
+            $ret[] = $this->value->getShort($i * 2);
         }
         return $ret;
     }

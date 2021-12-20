@@ -37,6 +37,21 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->value->getSignedByte();
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->value->getSignedByte($i);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function numberToBytes($number, $order)
     {
         return chr($number);

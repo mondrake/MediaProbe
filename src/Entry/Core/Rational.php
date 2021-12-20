@@ -49,12 +49,6 @@ class Rational extends NumberBase
      */
     protected $max = 4294967295;
 
-/*        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getRational($i * 8);
-        }
-        $this->setDataElement($args);*/
-
     /**
      * {@inheritdoc}
      */

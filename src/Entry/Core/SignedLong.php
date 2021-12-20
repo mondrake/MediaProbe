@@ -46,11 +46,11 @@ class SignedLong extends NumberBase
     public function getValue(array $options = [])
     {
         if ($this->components == 1) {
-            return $this->formatNumber($this->value->getSignedLong(), $options);
+            return $this->value->getSignedLong();
         }
         $ret = [];
         for ($i = 0; $i < $this->components; $i++) {
-            $ret[] = $this->formatNumber($this->value->getSignedLong($i * 4), $options);
+            $ret[] = $this->value->getSignedLong($i * 4);
         }
         return $ret;
     }

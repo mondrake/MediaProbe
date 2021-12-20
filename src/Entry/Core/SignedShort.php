@@ -43,6 +43,21 @@ class SignedShort extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->value->getSignedShort();
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->value->getSignedShort($i * 2);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function numberToBytes($number, $order)
     {
         return ConvertBytes::fromSignedShort($number, $order);
