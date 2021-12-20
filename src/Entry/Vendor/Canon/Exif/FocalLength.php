@@ -22,6 +22,6 @@ class FocalLength extends Short
             $denominator = $focal_units->getValue();
         }
 
-        return $this->value[0] / $denominator;
+        return parent::getValue() / $denominator;
     }
 }

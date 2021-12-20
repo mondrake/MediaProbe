@@ -23,6 +23,6 @@ class ProcessingWhiteBalance extends SignedShort
                 return $alternate->getValue($options);
             }
         }
-        return $this->value[0];
+        return parent::getValue();
     }
 }
