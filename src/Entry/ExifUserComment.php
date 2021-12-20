@@ -36,10 +36,9 @@ class ExifUserComment extends Undefined
      */
     public function setDataElement(DataElement $data): void
     {
-        $this->value = $data[0];
-        $this->components = strlen($this->value);
+        parent::setDataElement($data);
 
-        if (strlen($this->value) < 8) {
+/*        if (strlen($this->value) < 8) {
             $this->parsed = false;
         } else {
             $encoding = strtoupper(rtrim(substr($this->value, 0, 8), "\x00"));
@@ -50,7 +49,7 @@ class ExifUserComment extends Undefined
 
         if (!$this->parsed) {
             $this->error('Invalid EXIF text encoding for UserComment.');
-        }
+        }*/
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
