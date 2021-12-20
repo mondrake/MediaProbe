@@ -72,6 +72,7 @@ class Rational extends Long
      */
     public function getValue(array $options = [])
     {
+dump($this);
         if ($this->components == 1) {
             return $this->formatNumber($this->value->getRational(), $options);
         }
