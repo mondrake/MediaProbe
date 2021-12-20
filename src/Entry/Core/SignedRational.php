@@ -53,6 +53,21 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->formatNumber($this->value->getSignedRational(), $options);
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->formatNumber($this->value->getSignedRational($i * 8), $options);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function formatNumber($number, array $options = [])
     {
         $format = $options['format'] ?? null;
