@@ -127,7 +127,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function getValue(array $options = [])
     {
-        return $this->value;
+        return $this->value->getBytes();
     }
 
     /**
