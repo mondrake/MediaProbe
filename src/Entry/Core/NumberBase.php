@@ -31,8 +31,7 @@ abstract class NumberBase extends EntryBase
     /**
      * The dimension of the number held.
      *
-     * Normal numbers have a dimension of one, pairs have a dimension of two,
-     * etc.
+     * Normal numbers have a dimension of one, fractions like Rational have a dimension of two.
      *
      * @var int
      */

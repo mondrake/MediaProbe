@@ -17,7 +17,7 @@ use FileEye\MediaProbe\MediaProbe;
  *
  * The class can hold either just a single rational or an array of rationals.
  */
-class Rational extends Long
+class Rational extends NumberBase
 {
     /**
      * {@inheritdoc}
@@ -72,7 +72,6 @@ class Rational extends Long
      */
     public function getValue(array $options = [])
     {
-dump($this);
         if ($this->components == 1) {
             return $this->formatNumber($this->value->getRational(), $options);
         }
