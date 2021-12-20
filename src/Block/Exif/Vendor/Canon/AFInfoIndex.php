@@ -38,6 +38,7 @@ class AFInfoIndex extends Index
 
             if (in_array($item_definition->getCollection()->getPropertyValue('name'), ['AFAreaWidths', 'AFAreaHeights', 'AFAreaXPositions', 'AFAreaYPositions'])) {
                 $value_components = $this->getElement("tag[@name='NumAFPoints']")->getElement("entry")->getValue();
+dump($value_components);
                 $index_components -= ($value_components - 1);
             } elseif (in_array($item_definition->getCollection()->getPropertyValue('name'), ['AFPointsInFocus', 'AFPointsSelected'])) {
                 $value_components = (int) (($this->getElement("tag[@name='NumAFPoints']")->getElement("entry")->getValue() + 15) / 16);
