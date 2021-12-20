@@ -61,30 +61,22 @@ class ExifUserComment extends Undefined
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            $value = rtrim(substr($this->value, 8), " \x00");
+            $value = rtrim(substr($this->value->getBytes(), 8), " \x00");
             return rtrim($value, " ");
         }
         if ($format === 'phpExif') {
-            $encoding = rtrim(substr($this->value, 0, 8), "\x00");
-            $value = rtrim(substr($this->value, 8), " \x00");
-            if (strlen($value) === 0 && substr($this->value, 8, 1) === ' ') {
+            $encoding = rtrim(substr($this->value->getBytes(), 0, 8), "\x00");
+            $value = rtrim(substr($this->value->getBytes(), 8), " \x00");
+            if (strlen($value) === 0 && substr($this->value->getBytes(), 8, 1) === ' ') {
                 $value = ' ';
             }
             if (in_array($encoding, ['', 'ASCII', 'JIS', 'UNICODE'])) {
-                return str_pad($encoding, 8, chr(0)) . str_pad($value, strlen($this->value) - 8, chr(0));
+                return str_pad($encoding, 8, chr(0)) . str_pad($value, strlen($this->value->getBytes()) - 8, chr(0));
             } else {
-                return rtrim($this->value, "\x00");
+                return rtrim($this->value->getBytes(), "\x00");
             }
         }
-        return rtrim(substr($this->value, 8), "\x00");
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        return $this->value;
+        return rtrim(substr($this->value->getBytes(), 8), "\x00");
     }
 
     /**
