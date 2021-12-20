@@ -364,11 +364,7 @@ class Ifd extends ListBase
         // xxx
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
-//dump([$maker_note_ifd_name, $maker_note_tag->getElement("entry")->getValue(), $maker_note_tag->getElement("entry")->toBytes()]);
-//        $data = new DataWindow($d, $maker_note_tag->getElement("entry")->getValue()[1]);
-//        $ifd->parseData($data, $maker_note_tag->getElement("entry")->getValue()[1], null, -$maker_note_tag->getElement("entry")->getValue()[1]);
-//        $data = new DataString($maker_note_tag->getElement("entry")->toBytes());
-        $ifd->parseData($maker_note_tag->getElement("entry")->getDataElement(), 0, null, 0);
+        $ifd->parseData($maker_note_tag->getElement("entry")->getDataElement());
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");

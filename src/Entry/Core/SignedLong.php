@@ -43,6 +43,21 @@ class SignedLong extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function getValue(array $options = [])
+    {
+        if ($this->components == 1) {
+            return $this->formatNumber($this->value->getSignedLong(), $options);
+        }
+        $ret = [];
+        for ($i = 0; $i < $this->components; $i++) {
+            $ret[] = $this->formatNumber($this->value->getSignedLong($i * 4), $options);
+        }
+        return $ret;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function numberToBytes($number, $order)
     {
         return ConvertBytes::fromSignedLong($number, $order);
