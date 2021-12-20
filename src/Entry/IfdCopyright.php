@@ -103,6 +103,9 @@ class IfdCopyright extends Ascii
             $e = ' ' . MediaProbe::tra('(Editor)');
         }
 
+        $value = explode("\0", $this->value->getBytes());
+        $value[1] = $value[1] ?? '';
+
         if ($this->value[0] !== '' && $this->value[1] !== '') {
             return $this->value[0] . $p . ' - ' . $this->value[1] . $e;
         } elseif ($this->value[0] != '') {
