@@ -42,6 +42,18 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
+    public function setDataElement(DataElement $data): void
+    {
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize(); // @todo xxx check if components calculation can be abstracted
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function numberToBytes($number, $order)
     {
         return chr($number);

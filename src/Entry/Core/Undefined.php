@@ -55,7 +55,7 @@ class Undefined extends EntryBase
             });
             return implode(' ', $val);
         }
-        return parent::getValue($options);
+        return $this->value->getBytes();
     }
 
     /**

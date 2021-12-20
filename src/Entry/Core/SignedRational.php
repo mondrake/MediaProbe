@@ -53,6 +53,18 @@ class SignedRational extends SignedLong
     /**
      * {@inheritdoc}
      */
+    public function setDataElement(DataElement $data): void
+    {
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize() / 8; // @todo xxx check if components calculation can be abstracted
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function formatNumber($number, array $options = [])
     {
         $format = $options['format'] ?? null;

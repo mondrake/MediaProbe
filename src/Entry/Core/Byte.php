@@ -38,6 +38,18 @@ class Byte extends NumberBase
      */
     protected $max = 255;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function setDataElement(DataElement $data): void
+    {
+        parent::setDataElement($data);
+
+        $this->components = $data->getSize(); // @todo xxx check if components calculation can be abstracted
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
 /*        $args = [];
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getByte($i);
