@@ -59,7 +59,7 @@ class Ascii extends EntryBase
     public function getValue(array $options = [])
     {
         $format = $options['format'] ?? null;
-        $val = rtrim($this->value, "\x0");
+        $val = rtrim($this->value->getBytes(), "\x0");
         if ($format === 'exiftool') {
             $val = rtrim($val, " ");
             $first_zero_pos = strpos($val, "\x0");
