@@ -107,52 +107,32 @@ class Index extends ListBase
     /**
      * @todo xxx
      */
-    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): array
+    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): DataElement
     {
-        if ($format === ItemFormat::ASCII) {
-            $value = $data_element->getBytes($offset, $count);
-            $offset += $count;
-            return [$value];
-        }
-        $value = [];
-        for ($h = 0; $h < $count; $h++) {
-            switch ($format) {
-                case ItemFormat::BYTE:
-                case ItemFormat::UNDEFINED:
-                    $value[] = $data_element->getByte($offset);
-                    $offset++;
-                    break;
-                case ItemFormat::SHORT:
-                    $value[] = $data_element->getShort($offset);
-                    $offset += 2;
-                    break;
-                case ItemFormat::SHORT_REV:
-                    $value[] = $data_element->getShortRev($offset);
-                    $offset += 2;
-                    break;
-                case ItemFormat::SIGNED_SHORT:
-                    $value[] = $data_element->getSignedShort($offset);
-                    $offset += 2;
-                    break;
-                case ItemFormat::LONG:
-                    $value[] = $data_element->getLong($offset);
-                    $offset += 4;
-                    break;
-                case ItemFormat::SIGNED_LONG:
-                    $value[] = $data_element->getSignedLong($offset);
-                    $offset += 4;
-                    break;
-                case ItemFormat::RATIONAL:
-                    $value[] = $data_element->getRational($offset);
-                    $offset += 8;
-                    break;
-                case ItemFormat::SIGNED_RATIONAL:
-                    $value[] = $data_element->getSignedRational($offset);
-                    $offset += 8;
-                    break;
-                default:
-                    $this->error("Unsupported format.");
-            }
+        $value = new DataWindow($data_element, $offset, $count);
+        switch ($format) {
+            case ItemFormat::ASCII:
+                $offset += $count;
+                break;
+            case ItemFormat::BYTE:
+            case ItemFormat::UNDEFINED:
+                $offset += $count;
+                break;
+            case ItemFormat::SHORT:
+            case ItemFormat::SHORT_REV:
+            case ItemFormat::SIGNED_SHORT:
+                $offset += ($count * 2);
+                break;
+            case ItemFormat::LONG:
+            case ItemFormat::SIGNED_LONG:
+                $offset += ($count * 4);
+                break;
+            case ItemFormat::RATIONAL:
+            case ItemFormat::SIGNED_RATIONAL:
+                $offset += ($count * 8);
+                break;
+            default:
+                $this->error("Unsupported format.");
         }
         return $value;
     }
