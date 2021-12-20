@@ -106,12 +106,12 @@ class IfdCopyright extends Ascii
         $value = explode("\0", $this->value->getBytes());
         $value[1] = $value[1] ?? '';
 
-        if ($this->value[0] !== '' && $this->value[1] !== '') {
-            return $this->value[0] . $p . ' - ' . $this->value[1] . $e;
-        } elseif ($this->value[0] != '') {
-            return $this->value[0] . $p;
-        } elseif ($this->value[1] != '') {
-            return $this->value[1] . $e;
+        if ($value[0] !== '' && $value[1] !== '') {
+            return $value[0] . $p . ' - ' . $this->value[1] . $e;
+        } elseif ($value[0] != '') {
+            return $value[0] . $p;
+        } elseif ($value[1] != '') {
+            return $value[1] . $e;
         }
 
         return '';
