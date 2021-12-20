@@ -33,7 +33,8 @@ class IfdCopyright extends Ascii
      */
     public function setDataElement(DataElement $data): void
     {
-        $this->parsed = true;
+        parent::setDataElement($data);
+/*        $this->parsed = true;
 
         $this->value = array_replace(['', ''], $data);
 
@@ -42,7 +43,7 @@ class IfdCopyright extends Ascii
         } else {
             $this->components = strlen($this->value[0]) + 1 + strlen($this->value[1]) + 1;
         }
-
+*/
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
@@ -66,14 +67,14 @@ class IfdCopyright extends Ascii
     /**
      * {@inheritdoc}
      */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
+ /*   public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
         if ($this->value[1] === '') {
             return $this->value[0] .  chr(0x00);
         } else {
             return $this->value[0] .  chr(0x00) . $this->value[1] .  chr(0x00);
         }
-    }
+    }*/
 
     /**
      * Return a text string with the copyright information.
