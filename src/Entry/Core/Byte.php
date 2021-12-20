@@ -26,29 +26,12 @@ class Byte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
-
-    /**
-     * {@inheritdoc}
-     */
     protected $min = 0;
 
     /**
      * {@inheritdoc}
      */
     protected $max = 255;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize(); // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
 /*        $args = [];
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {

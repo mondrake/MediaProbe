@@ -27,7 +27,7 @@ class Long extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
+    protected $formatSize = 4;
 
     /**
      * {@inheritdoc}
@@ -43,18 +43,6 @@ class Long extends NumberBase
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getLong($i * 4);
         }*/
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize() / 4; // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}

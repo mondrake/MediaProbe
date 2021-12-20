@@ -18,7 +18,7 @@ use FileEye\MediaProbe\MediaProbe;
  * The class can hold either just a single rational or an array of
  * rationals.
  */
-class SignedRational extends SignedLong
+class SignedRational extends NumberBase
 {
     /**
      * {@inheritdoc}
@@ -33,7 +33,7 @@ class SignedRational extends SignedLong
     /**
      * {@inheritdoc}
      */
-    protected $format;
+    protected $formatSize = 8;
 
     /**
      * {@inheritdoc}
@@ -49,18 +49,6 @@ class SignedRational extends SignedLong
      * {@inheritdoc}
      */
     protected $max = 2147483647;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize() / 8; // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}
@@ -91,5 +79,13 @@ class SignedRational extends SignedLong
                 $ret = $number[0] / $number[1];
                 return $ret == 0.0 ? 0 : $ret;
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function numberToBytes($number, $order)
+    {
+        return ConvertBytes::fromLong($number, $order);
     }
 }

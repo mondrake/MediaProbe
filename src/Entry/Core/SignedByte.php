@@ -27,29 +27,12 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
-
-    /**
-     * {@inheritdoc}
-     */
     protected $min = -128;
 
     /**
      * {@inheritdoc}
      */
     protected $max = 127;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize(); // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}

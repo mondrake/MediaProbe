@@ -15,6 +15,22 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class NumberBase extends EntryBase
 {
     /**
+     * The size, in bytes, of the number held.
+     *
+     * @var int
+     */
+    protected $formatSize = 1;
+
+    /**
+     * The dimension of the number held.
+     *
+     * Normal numbers have a dimension of one, fractions like Rational have a dimension of two.
+     *
+     * @var int
+     */
+    protected $dimension = 1;
+
+    /**
      * The minimum allowed value.
      *
      * @var int
@@ -28,24 +44,6 @@ abstract class NumberBase extends EntryBase
      */
     protected $max;
 
-    /**
-     * The dimension of the number held.
-     *
-     * Normal numbers have a dimension of one, fractions like Rational have a dimension of two.
-     *
-     * @var int
-     */
-    protected $dimension = 1;
-
-    /**
-     * {@inheritdoc}
-     */
-/*    public function setDataElement(DataElement $data)
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize();
-
 //        foreach ($data as &$v) {
 //            $this->validateNumber($v);
 //        }
@@ -53,9 +51,15 @@ abstract class NumberBase extends EntryBase
 //        $this->components = count($data);
 //        $this->value = empty($data) ? null : $data;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function setDataElement(DataElement $data): void
+    {
+        parent::setDataElement($data);
+        $this->components = $data->getSize() / $this->formatSize;
         $this->debug("text: {text}", ['text' => $this->toString()]);
-        return $this;
-    }*/
+    }
 
     /**
      * {@inheritdoc}

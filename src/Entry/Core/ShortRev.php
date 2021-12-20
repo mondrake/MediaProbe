@@ -29,7 +29,7 @@ class ShortRev extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
+    protected $formatSize = 2;
 
     /**
      * {@inheritdoc}
@@ -46,18 +46,6 @@ class ShortRev extends NumberBase
             $args[] = $data_element->getShortRev($i * 2);
         }
         $this->setDataElement($args);*/
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize() / 2; // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}

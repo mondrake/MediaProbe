@@ -32,7 +32,7 @@ class Rational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
+    protected $formatSize = 8;
 
     /**
      * {@inheritdoc}
@@ -54,18 +54,6 @@ class Rational extends NumberBase
             $args[] = $data_element->getRational($i * 8);
         }
         $this->setDataElement($args);*/
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize() / 8; // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}
@@ -107,5 +95,13 @@ class Rational extends NumberBase
                 $ret = $number[0] / $number[1];
                 return $ret == 0.0 ? 0 : $ret;
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function numberToBytes($number, $order)
+    {
+        return ConvertBytes::fromLong($number, $order);
     }
 }

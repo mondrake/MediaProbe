@@ -28,7 +28,7 @@ class SignedShort extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $format;
+    protected $formatSize = 2;
 
     /**
      * {@inheritdoc}
@@ -39,18 +39,6 @@ class SignedShort extends NumberBase
      * {@inheritdoc}
      */
     protected $max = 32767;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-
-        $this->components = $data->getSize() / 2; // @todo xxx check if components calculation can be abstracted
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}
