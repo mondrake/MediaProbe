@@ -77,6 +77,14 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getDataElement(): DataElement
+    {
+        return $this->value;
+    }
+
+    /**
      * Resolves, in relation to the context, the index of the item collection to be used to instantiate the Entry.
      *
      * @param int|null $components_count
