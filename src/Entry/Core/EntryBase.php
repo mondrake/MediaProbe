@@ -68,6 +68,16 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function setDataElement(DataElement $data)
+    {
+        $this->parsed = true;
+        $this->value = $data;
+        return $this;
+    }
+
+    /**
      * Resolves, in relation to the context, the index of the item collection to be used to instantiate the Entry.
      *
      * @param int|null $components_count
@@ -111,16 +121,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     public function getComponents()
     {
         return $this->components;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data)
-    {
-        $this->parsed = true;
-        $this->value = $data;
-        return $this;
     }
 
     /**

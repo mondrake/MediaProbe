@@ -26,15 +26,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class ExifUserComment extends Undefined
 {
     /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $this->setDataElement([$data_element->getBytes(0, $item_definition->getValuesCount())]);
-        return $this;
-    }
-
-    /**
      * Set the user comment.
      *
      * @param array $data

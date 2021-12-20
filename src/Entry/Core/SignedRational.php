@@ -53,19 +53,6 @@ class SignedRational extends SignedLong
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getSignedRational($i * 8);
-        }
-        $this->setDataElement($args);
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     protected function formatNumber($number, array $options = [])
     {
         $format = $options['format'] ?? null;

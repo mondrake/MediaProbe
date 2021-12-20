@@ -23,15 +23,6 @@ class Version extends Undefined
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $this->setDataElement([$data_element->getBytes(0, $item_definition->getValuesCount())]);
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $data)
     {
         parent::setDataElement($data);

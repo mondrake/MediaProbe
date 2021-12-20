@@ -39,17 +39,10 @@ class Long extends NumberBase
      */
     protected $max = 4294967295;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $args = [];
+/*        $args = [];
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getLong($i * 4);
-        }
-        $this->setDataElement($args);
-        return $this;
+        }*/
     }
 
     /**

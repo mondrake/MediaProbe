@@ -18,15 +18,6 @@ class ExifMakerNote extends Undefined
     protected $name = 'MakerNote';
 
     /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $this->setDataElement([$data_element->getBytes(0, $item_definition->getValuesCount()), $item_definition->getDataOffset()]);
-        return $this;
-    }
-
-    /**
      * Set the data of this undefined entry.
      *
      * @param array $data

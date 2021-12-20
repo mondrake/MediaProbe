@@ -18,16 +18,9 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class IfdCopyright extends Ascii
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $v = explode("\0", $data_element->getBytes(0, $item_definition->getValuesCount()));
+/*        $v = explode("\0", $data_element->getBytes(0, $item_definition->getValuesCount()));
         $v[1] = isset($v[1]) ? $v[1] : '';
-        $this->setDataElement($v);
-        return $this;
-    }
+        $this->setDataElement($v);*/
 
     /**
      * Update the copyright information.

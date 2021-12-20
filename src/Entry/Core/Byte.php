@@ -38,18 +38,11 @@ class Byte extends NumberBase
      */
     protected $max = 255;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $args = [];
+/*        $args = [];
         for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
             $args[] = $data_element->getByte($i);
         }
-        $this->setDataElement($args);
-        return $this;
-    }
+        $this->setDataElement($args);*/
 
     /**
      * {@inheritdoc}

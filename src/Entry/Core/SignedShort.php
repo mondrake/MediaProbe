@@ -43,19 +43,6 @@ class SignedShort extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getSignedShort($i * 2);
-        }
-        $this->setDataElement($args);
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function numberToBytes($number, $order)
     {
         return ConvertBytes::fromSignedShort($number, $order);

@@ -29,17 +29,10 @@ class WindowsString extends Byte
      */
     protected $name = 'WindowsString';
 
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
+/*        $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         // Remove any question marks that have been introduced because of illegal characters.
         $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
-        $this->setDataElement([$value]);
-        return $this;
-    }
+        $this->setDataElement([$value]);*/
 
     /**
      * {@inheritdoc}

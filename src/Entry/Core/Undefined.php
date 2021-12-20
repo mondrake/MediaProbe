@@ -30,14 +30,6 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $data)
     {
         parent::setDataElement($data);

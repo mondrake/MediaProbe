@@ -28,11 +28,6 @@ class Ascii extends EntryBase
      */
     protected $format;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
 //        $bytes = $data_element->getBytes();
 
         // Check the last byte is NULL.
@@ -41,8 +36,6 @@ class Ascii extends EntryBase
 //        }
 
 //        $this->setDataElement([$bytes]);
-        return $this;
-    }
 
     /**
      * {@inheritdoc}

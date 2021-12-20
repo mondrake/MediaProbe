@@ -42,19 +42,6 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function loadFromData(DataElement $data_element, $offset, $size, array $options = [], ItemDefinition $item_definition = null)
-    {
-        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getSignedByte($i);
-        }
-        $this->setDataElement($args);
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function numberToBytes($number, $order)
     {
         return chr($number);
