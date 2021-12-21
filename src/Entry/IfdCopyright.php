@@ -60,7 +60,7 @@ class IfdCopyright extends Ascii
                 $ret = rtrim($this->toBytes(), "\x00");
                 return $ret === '' ? null : $ret;
             default:
-                return $this->value;
+                return explode("\0", rtrim($this->toBytes(), "\x00"));
         }
     }
 

@@ -12,7 +12,7 @@ class EntryAsciiTest extends EntryTestBase
 {
     public function testReturnValues()
     {
-        $entry = new Ascii($this->mockParentElement, new DataString('foo bar baz'));
+        $entry = new Ascii($this->mockParentElement, new DataString('foo bar baz' . chr(0)));
         $this->assertEquals(12, $entry->getComponents());
         $this->assertEquals('foo bar baz', $entry->getValue());
     }
