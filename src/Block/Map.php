@@ -38,7 +38,6 @@ class Map extends Index
         parent::__construct($definition, $parent, $reference);
         $this->components = $definition->getValuesCount();
         $this->format = $definition->getFormat();
-//dump($definition);
     }
 
     /**
@@ -50,6 +49,7 @@ class Map extends Index
 
         // Preserve the entire map as a raw data block.
         $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
+dump($data);
         $this->addBlock($mapdata)->parseData($data);
 
         $i = 0;

@@ -73,7 +73,7 @@ jobs:
         #php examples/dump-media.php -d    tests/media-samples/image/camera/apple-iphone6s.jpg-rewrite.img
         #php examples/dump-media.php -d -w tests/media-samples/image/camera/apple-iphone7.JPG
         #php examples/dump-media.php -d    tests/media-samples/image/camera/apple-iphone7.JPG-rewrite.img
-        php examples/dump-media.php -d    tests/media-samples/image/camera/apple-iphone11.jpg
+        #php examples/dump-media.php -d    tests/media-samples/image/camera/apple-iphone11.jpg
         #php examples/dump-media.php -d -w tests/media-samples/image/camera/nikon-e5000.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/camera/nikon-e5000.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/camera/pentax-istDS.jpg

@@ -17,9 +17,9 @@ class CustomIsoSpeedRange extends SignedLong
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
             $v = [];
-            $v[0] = $this->value[0];
-            $v[1] = $this->value[1] < 2 ? $this->value[1] : ($this->value[1] < 1000 ? exp(($this->value[1] / 8 - 9) * log(2)) * 100 : 0);
-            $v[2] = $this->value[2] < 2 ? $this->value[2] : ($this->value[2] < 1000 ? exp(($this->value[2] / 8 - 9) * log(2)) * 100 : 0);
+            $v[0] = parent::getValue()[0];
+            $v[1] = parent::getValue()[1] < 2 ? parent::getValue()[1] : (parent::getValue()[1] < 1000 ? exp((parent::getValue()[1] / 8 - 9) * log(2)) * 100 : 0);
+            $v[2] = parent::getValue()[2] < 2 ? parent::getValue()[2] : (parent::getValue()[2] < 1000 ? exp((parent::getValue()[2] / 8 - 9) * log(2)) * 100 : 0);
             return $v;
         }
         return parent::getValue($options);
