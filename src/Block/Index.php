@@ -111,7 +111,6 @@ dump($offset, $this->getCollection()->getPropertyValue('format'), $index_size);
     protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1)
     {
         $dataWindow = $this->getDataWindowFromData($data_element, $offset, $format, $count);
-dump($data_element, $dataWindow, $offset, $format, $count);
         switch ($format) {
             case ItemFormat::BYTE:
                 return $dataWindow->getByte();
