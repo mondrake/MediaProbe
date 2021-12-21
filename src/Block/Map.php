@@ -49,7 +49,6 @@ class Map extends Index
 
         // Preserve the entire map as a raw data block.
         $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
-dump($data);
         $this->addBlock($mapdata)->parseData($data);
 
         $i = 0;
