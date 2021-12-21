@@ -38,7 +38,7 @@ class Index extends ListBase
         // itself). This should match the size determined in the parent IFD.
         if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
             $offset = 0;
-            $index_size = $this->getValueFromData($data_element, $offset, $this->getCollection()->getPropertyValue('format')[0])[0];
+            $index_size = $this->getValueFromData($data_element, $offset, $this->getCollection()->getPropertyValue('format')[0]);
             if ($index_size !== $this->getDefinition()->getSize()) {
                 $this->warning("Size mismatch between IFD and index header");
             }
@@ -107,7 +107,35 @@ class Index extends ListBase
     /**
      * @todo xxx
      */
-    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): DataElement
+    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1)
+    {
+        $dataWindow = $this->getDataWindowFromData($data_element, $offset, $format, $count);
+        switch ($format) {
+            case ItemFormat::BYTE:
+                return $dataWindow->getByte();
+            case ItemFormat::SHORT:
+                return $dataWindow->getShort();
+            case ItemFormat::SHORT_REV:
+                return $dataWindow->getShortRev();
+            case ItemFormat::SIGNED_SHORT:
+                return $dataWindow->getSignedShort();
+            case ItemFormat::LONG:
+                return $dataWindow->getLong();
+            case ItemFormat::SIGNED_LONG:
+                return $dataWindow->getSignedLong();
+            case ItemFormat::RATIONAL:
+                return $dataWindow->getRational();
+            case ItemFormat::SIGNED_RATIONAL:
+                return $dataWindow->getSignedRational();
+            default:
+                $this->error("Unsupported format.");
+        }
+    }
+
+    /**
+     * @todo xxx
+     */
+    protected function getDataWindowFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): DataWindow
     {
         $value = new DataWindow($data_element, $offset, $count);
         switch ($format) {
