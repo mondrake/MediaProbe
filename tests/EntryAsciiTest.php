@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Test;
 
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\Entry\IfdCopyright;
 use FileEye\MediaProbe\Entry\Time;
@@ -11,7 +12,7 @@ class EntryAsciiTest extends EntryTestBase
 {
     public function testReturnValues()
     {
-        $entry = new Ascii($this->mockParentElement, ['foo bar baz']);
+        $entry = new Ascii($this->mockParentElement, new DataString('foo bar baz'));
         $this->assertEquals(12, $entry->getComponents());
         $this->assertEquals('foo bar baz', $entry->getValue());
     }
