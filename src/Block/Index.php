@@ -111,7 +111,7 @@ dump($offset, $this->getCollection()->getPropertyValue('format'), $index_size);
     protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1)
     {
         $dataWindow = $this->getDataWindowFromData($data_element, $offset, $format, $count);
-dump($dataWindow, $data_element, $offset, $format, $count);
+dump($data_element, $dataWindow, $offset, $format, $count);
         switch ($format) {
             case ItemFormat::BYTE:
                 return $dataWindow->getByte();
@@ -139,31 +139,30 @@ dump($dataWindow, $data_element, $offset, $format, $count);
      */
     protected function getDataWindowFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): DataWindow
     {
-        $value = new DataWindow($data_element, $offset, $count);
         switch ($format) {
             case ItemFormat::ASCII:
-                $offset += $count;
-                break;
             case ItemFormat::BYTE:
             case ItemFormat::UNDEFINED:
-                $offset += $count;
+                $size = 1;
                 break;
             case ItemFormat::SHORT:
             case ItemFormat::SHORT_REV:
             case ItemFormat::SIGNED_SHORT:
-                $offset += ($count * 2);
+                $size = 2;
                 break;
             case ItemFormat::LONG:
             case ItemFormat::SIGNED_LONG:
-                $offset += ($count * 4);
+                $size = 4;
                 break;
             case ItemFormat::RATIONAL:
             case ItemFormat::SIGNED_RATIONAL:
-                $offset += ($count * 8);
+                $size = 8;
                 break;
             default:
                 $this->error("Unsupported format.");
         }
+        $value = new DataWindow($data_element, $offset, $count * $size);
+        $offset += ($count * $size);
         return $value;
     }
 
