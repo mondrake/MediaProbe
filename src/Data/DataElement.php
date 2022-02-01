@@ -39,7 +39,7 @@ abstract class DataElement
      *
      * @var int
      */
-    protected $order;
+    protected $order = ConvertBytes::BIG_ENDIAN;
 
     /**
      * Gets the offset start of this element.
