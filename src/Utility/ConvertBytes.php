@@ -106,7 +106,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned long.
      */
-    public static function fromLong($value, $byte_order)
+    public static function fromLong(int $value, int $byte_order): string
     {
         // We cannot convert the number to bytes in the normal way (using shifts
         // and modulo calculations) because the PHP operator >> and function
@@ -135,7 +135,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the signed long.
      */
-    public static function fromSignedLong($value, $byte_order)
+    public static function fromSignedLong(int $value, int $byte_order): string
     {
         // We can convert the number into bytes in the normal way using shifts
         // and modulo calculations here (in contrast with fromLong) because
@@ -156,7 +156,7 @@ class ConvertBytes
      * @return int
      *            the unsigned byte found at the first position of the string.
      */
-    public static function toByte($bytes)
+    public static function toByte(string $bytes): int
     {
         if (!is_string($bytes) || strlen($bytes) < 1) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -174,7 +174,7 @@ class ConvertBytes
      *            the signed byte found at the first position of the string, in
      *            the range -128 to 127.
      */
-    public static function toSignedByte($bytes)
+    public static function toSignedByte(string $bytes): int
     {
         if (!is_string($bytes) || strlen($bytes) < 1) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -195,7 +195,7 @@ class ConvertBytes
      *            the unsigned short found at the first position of the string,
      *            in the range 0 to 65535.
      */
-    public static function toShort($bytes, $byte_order)
+    public static function toShort(string $bytes, int $byte_order): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -219,7 +219,7 @@ class ConvertBytes
      *            the unsigned short found at the first position of the string,
      *            in the range 0 to 65535.
      */
-    public static function toShortRev($bytes, $byte_order)
+    public static function toShortRev(string $bytes, int $byte_order): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -243,7 +243,7 @@ class ConvertBytes
      *            the signed short found at the first position of the string, in
      *            the range -32768 to 32767.
      */
-    public static function toSignedShort($bytes, $byte_order)
+    public static function toSignedShort(string $bytes, int $byte_order): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -264,7 +264,7 @@ class ConvertBytes
      *            the unsigned long found at the first position of the string,
      *            in the range 0 to 4294967295.
      */
-    public static function toLong($bytes, $byte_order)
+    public static function toLong(string $bytes, int $byte_order): int
     {
         if (!is_string($bytes) || strlen($bytes) < 4) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -288,7 +288,7 @@ class ConvertBytes
      *            the signed long found at the first position of the string,
      *            in the range -2147483648 to 2147483647.
      */
-    public static function toSignedLong($bytes, $byte_order)
+    public static function toSignedLong(string $bytes, int $byte_order): int
     {
         if (!is_string($bytes) || strlen($bytes) < 4) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -309,7 +309,7 @@ class ConvertBytes
      *            the unsigned rational found at offset, an array with two
      *            integers in the range 0 to 4294967295.
      */
-    public static function toRational($bytes, $byte_order)
+    public static function toRational(string $bytes, int $byte_order): array
     {
         if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -332,7 +332,7 @@ class ConvertBytes
      *            the signed rational found at offset, an array with two
      *            integers in the range -2147483648 to 2147483647.
      */
-    public static function toSignedRational($bytes, $byte_order)
+    public static function toSignedRational(string $bytes, int $byte_order): array
     {
         if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);

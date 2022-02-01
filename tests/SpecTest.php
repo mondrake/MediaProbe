@@ -120,16 +120,16 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         return [
             'IFD0/PlanarConfiguration - value 1' => [
-                'Chunky', 'FileEye\MediaProbe\Entry\Core\Short', 'Tiff\Ifd0', 'PlanarConfiguration', ConvertBytes::fromShort(1, ConvertBytes::LITTLE_ENDIAN),
+                'Chunky', 'FileEye\MediaProbe\Entry\Core\Short', 'Tiff\Ifd0', 'PlanarConfiguration', ConvertBytes::fromShort(1, ConvertBytes::BIG_ENDIAN),
             ],
             'IFD0/PlanarConfiguration - missing mapping' => [
-                '6', 'FileEye\MediaProbe\Entry\Core\Short', 'Tiff\Ifd0', 'PlanarConfiguration', ConvertBytes::fromShort(6, ConvertBytes::LITTLE_ENDIAN),
+                '6', 'FileEye\MediaProbe\Entry\Core\Short', 'Tiff\Ifd0', 'PlanarConfiguration', ConvertBytes::fromShort(6, ConvertBytes::BIG_ENDIAN),
             ],
             'CanonPanoramaInformation/PanoramaDirection - value 4' => [
-                '2x2 Matrix (Clockwise)', 'FileEye\MediaProbe\Entry\Core\SignedShort', 'ExifMakerNotes\\Canon\\Panorama', 'PanoramaDirection', ConvertBytes::fromSignedShort(4, ConvertBytes::LITTLE_ENDIAN),
+                '2x2 Matrix (Clockwise)', 'FileEye\MediaProbe\Entry\Core\SignedShort', 'ExifMakerNotes\\Canon\\Panorama', 'PanoramaDirection', ConvertBytes::fromSignedShort(4, ConvertBytes::BIG_ENDIAN),
             ],
             'CanonCameraSettings/LensType - value 493' => [
-                'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493, ConvertBytes::LITTLE_ENDIAN),
+                'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493, ConvertBytes::BIG_ENDIAN),
             ],
             'CanonCameraSettings/LensType - value 493.1' => [
                 'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', [493.1],
