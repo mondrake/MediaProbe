@@ -22,5 +22,4 @@ class NumberShortTest extends NumberTestCase
     {
         return ConvertBytes::fromShort($value);
     }
-
 }
