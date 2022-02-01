@@ -39,6 +39,30 @@ class Time extends Ascii
     const JULIAN_DAY_COUNT = 3;
 
     /**
+     * {@inheritdoc}
+     */
+    public function setDataElement(DataElement $data): void
+    {
+        $this->parsed = true;
+        $this->value = $data;
+        $this->validateDataElement();
+
+        $this->components = $data->getSize();
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    protected function validateDataElement(): bool
+    {
+        // Check the last byte is NUL.
+        if (substr($this->value->getBytes(), -1) !== "\x0") {
+            $this->notice('Ascii entry missing final NUL character.');
+        }
+
+        return true;
+    }
+
+    /**
      * Update the timestamp held by this entry.
      *
      * @param array $data
@@ -122,7 +146,8 @@ class Time extends Ascii
      */
     public function getValue(array $options = [])
     {
-        $format = $options['format'] ?? null;
+        return rtrim($this->value, "\x00");
+/*        $format = $options['format'] ?? null;
         $type = $options['type'] ?? self::EXIF_STRING;
 
         if (!in_array($type, [self::UNIX_TIMESTAMP, self::EXIF_STRING, self::JULIAN_DAY_COUNT])) {
@@ -167,7 +192,7 @@ class Time extends Ascii
                 return sprintf('%04d:%02d:%02d %02d:%02d:%02d', $year, $month, $day, $hours, $minutes, $day_count_to_seconds);
             case self::JULIAN_DAY_COUNT:
                 return $day_count + $seconds_count / 86400;
-        }
+        }*/
     }
 
     /**
