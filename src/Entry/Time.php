@@ -146,8 +146,9 @@ class Time extends Ascii
      */
     public function getValue(array $options = [])
     {
-        return rtrim($this->value->getBytes(), "\x00");
-/*        $format = $options['format'] ?? null;
+        $value = rtrim($this->value->getBytes(), "\x00");
+
+        $format = $options['format'] ?? null;
         $type = $options['type'] ?? self::EXIF_STRING;
 
         if (!in_array($type, [self::UNIX_TIMESTAMP, self::EXIF_STRING, self::JULIAN_DAY_COUNT])) {
@@ -158,12 +159,12 @@ class Time extends Ascii
         }
 
         if (in_array($format, ['phpExif', 'exiftool'])) {
-            return rtrim($this->value[0], "\x00");
+            return $value;
         }
 
         // Clean the timestamp: some timestamps are broken other
         // separators than ':' and ' '.
-        $d = preg_split('/[^0-9]+/', $this->value[0]);
+        $d = preg_split('/[^0-9]+/', $value);
         for ($i = 0; $i < 6; $i ++) {
             if (empty($d[$i])) {
                 $d[$i] = 0;
@@ -179,7 +180,7 @@ class Time extends Ascii
                 // of a UNIX timestamp.
                 if ($day_count_to_seconds === false) {
                     $this->error('Cannot convert timestamp {timestamp} to UNIX format', [
-                        'timestamp' => $this->value,
+                        'timestamp' => $value,
                     ]);
                     return false;
                 }
