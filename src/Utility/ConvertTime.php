@@ -101,4 +101,19 @@ abstract class ConvertTime
         }
         return false;
     }
+
+    /**
+     * Converts a UNIX timestamp to an EXIF datetime string.
+     */
+    public static function unixToExifString(int $timestamp): string
+    {
+        [$year, $month, $day] = static::julianDayToGregorian(static::unixToJulianDay($timestamp));
+        $beginning_of_day = static::julianDayToUnix(static::gregorianToJulianDay($year, $month, $day));
+        $seconds_count = $timestamp - $beginning_of_day;
+        $hours = (int) ($seconds_count / 3600);
+        $minutes = (int) ($seconds_count % 3600 / 60);
+        $day_count_to_seconds = $seconds_count % 60;
+        return sprintf('%04d:%02d:%02d %02d:%02d:%02d', $year, $month, $day, $hours, $minutes, $day_count_to_seconds);
+    }
+
 }
