@@ -52,11 +52,11 @@ class Time extends Ascii
 
         // We need to find 6 elements, year, month, day, hour, minutes, seconds.
         if (count(d) !== 6) {
-            $this->warning("Invalid datetime format for '$value'");
+            $this->warning("Invalid datetime format for '{value}'", ['value' => $value]);
         } else {
             for ($i = 0; $i < 6; $i ++) {
                 if (empty($d[$i])) {
-                    $this->warning("Invalid datetime '$value'");
+                    $this->warning("Invalid datetime '{value}'", ['value' => $value]);
                     break;
                 }
             }
