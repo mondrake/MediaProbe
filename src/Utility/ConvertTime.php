@@ -76,9 +76,9 @@ abstract class ConvertTime
      * @return int
      *            the Julian Day count.
      */
-    public static function unixToJulianDay(int $timestamp): int
+    public static function unixToJulianDay(int $timestamp): float
     {
-        return (int) (floor($timestamp / 86400) + 2440588);
+        return floor($timestamp / 86400) + 2440588;
     }
 
     /**
@@ -91,7 +91,7 @@ abstract class ConvertTime
      *            the integer timestamp or false if the day count cannot be
      *            represented as a UNIX timestamp.
      */
-    public static function julianDayToUnix(int $jd)
+    public static function julianDayToUnix(float $jd)
     {
         if ($jd > 0) {
             $timestamp = ($jd - 2440588) * 86400;
