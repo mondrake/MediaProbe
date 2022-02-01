@@ -146,7 +146,7 @@ class Time extends Ascii
      */
     public function getValue(array $options = [])
     {
-        return rtrim($this->value, "\x00");
+        return rtrim($this->value->getBytes(), "\x00");
 /*        $format = $options['format'] ?? null;
         $type = $options['type'] ?? self::EXIF_STRING;
 
@@ -203,11 +203,4 @@ class Time extends Ascii
         return rtrim($this->getValue($options), "\x00");
     }*/
 
-    /**
-     * {@inheritdoc}
-     */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        return $this->value[0];
-    }
 }

@@ -77,17 +77,6 @@ class Ascii extends EntryBase
     /**
      * {@inheritdoc}
      */
-/*    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        if ($this->value === null || $this->value === '') {
-            return "\x0";
-        }
-        return substr($this->value, -1) === "\x0" ? $this->value : $this->value . "\x0";
-    }*/
-
-    /**
-     * {@inheritdoc}
-     */
     public function toString(array $options = []): string
     {
         $first_zero_pos = strpos($this->value->getBytes(), "\x0");
