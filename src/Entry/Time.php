@@ -51,7 +51,7 @@ class Time extends Ascii
         $d = preg_split('/[^0-9]+/', $value);
 
         // We need to find 6 elements, year, month, day, hour, minutes, seconds.
-        if (count(d) !== 6) {
+        if (count($d) !== 6) {
             $this->warning("Invalid datetime format for '{value}'", ['value' => $value]);
         } else {
             for ($i = 0; $i < 6; $i ++) {
