@@ -37,26 +37,13 @@ class Ascii extends EntryBase
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
-    protected function validateDataElement(): bool
+    protected function validateDataElement(): void
     {
         // Check the last byte is NUL.
         if (substr($this->value->getBytes(), -1) !== "\x0") {
             $this->notice('Ascii entry missing final NUL character.');
+            $this->valid = false;
         }
-
-        return true;
-
-//        $this->setDataElement([$bytes]);
-
-//        $str = isset($data[0]) ? $data[0] : '';
-
-//        $this->value = $str;
-//        if ($this->value === null || $this->value === '') {
-//            $this->components = 1;
-//        } else {
-//            $this->components = substr($this->value, -1) === "\x0" ? strlen($str) : strlen($str) + 1;
-//        }
-
     }
 
     /**

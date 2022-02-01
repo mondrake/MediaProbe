@@ -202,28 +202,28 @@ class SpecTest extends MediaProbeTestCaseBase
                 '-0.5', 'FileEye\MediaProbe\Entry\ExifExposureBiasValue', 'Tiff\IfdExif', 'ExposureCompensation', [[-5, 10]],
             ],
             'Exif/ExifVersion - short' => [
-                '2.2', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'ExifVersion', ['0220'], true,
+                '2.2', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'ExifVersion', new DataString('0220'), true,
             ],
             'Exif/FlashPixVersion - short' => [
-                '2.5', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FlashpixVersion', ['0250'], true,
+                '2.5', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FlashpixVersion', new DataString('0250'), true,
             ],
             'Interoperability/InteropVersion - short' => [
-                '1.0', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdInteroperability', 'InteropVersion', ['0100'], true,
+                '1.0', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdInteroperability', 'InteropVersion', new DataString('0100'), true,
             ],
             'Exif/ComponentsConfiguration' => [
-                'Y, Cb, Cr, -', 'FileEye\MediaProbe\Entry\ExifComponentsConfiguration', 'Tiff\IfdExif', 'ComponentsConfiguration', ["\x01\x02\x03\0"],
+                'Y, Cb, Cr, -', 'FileEye\MediaProbe\Entry\ExifComponentsConfiguration', 'Tiff\IfdExif', 'ComponentsConfiguration', new DataString("\x01\x02\x03\x00"),
             ],
             'Exif/FileSource' => [
-                'Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', ["\x03"],
+                'Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', new DataString("\x03"),
             ],
             'Exif/FileSource - unmatched' => [
-                '1 byte(s) of data', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', ["\x07"],
+                '1 byte(s) of data', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', new DataString("\x07"),
             ],
-//            'Exif/FileSource - Sigma Digital Camera' => [
-//                'Sigma Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', ["\x03\x00\x00\x00"],
-//            ],
+            'Exif/FileSource - Sigma Digital Camera' => [
+                'Sigma Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', new DataString("\x03\x00\x00\x00"),
+            ],
             'Exif/SceneType' => [
-                'Directly photographed', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'SceneType', ["\x01"],
+                'Directly photographed', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'SceneType', new DataString("\x01"),
             ],
         ];
     }

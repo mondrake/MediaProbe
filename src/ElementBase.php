@@ -45,6 +45,13 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected $parsed = false;
 
     /**
+     * Whether this element was successfully validated.
+     *
+     * @var bool
+     */
+    protected $valid = true;
+
+    /**
      * Constructs an Element object.
      *
      * @param string $dom_node_name
