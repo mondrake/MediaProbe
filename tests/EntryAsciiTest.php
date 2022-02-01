@@ -7,6 +7,7 @@ use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\Entry\IfdCopyright;
 use FileEye\MediaProbe\Entry\Time;
 use FileEye\MediaProbe\Collection;
+use FileEye\MediaProbe\Utility\ConvertTime;
 
 class EntryAsciiTest extends EntryTestBase
 {
@@ -56,8 +57,9 @@ class EntryAsciiTest extends EntryTestBase
 
         // Check day roll-over for SF bug #1699489.
         $entry->setDataElement(new DataString('2007:04:23 23:30:00' . chr(0)));
-        $t = $entry->getValue(['type' => Time::UNIX_TIMESTAMP]);
-        $entry->setDataElement([$t + 3600, Time::UNIX_TIMESTAMP]);
+        $t = $entry->getValue(['type' => Time::UNIX_TIMESTAMP]) + 3600;
+        $t_string = ConvertTime::julianDayToGregorian(ConvertTime::unixToJulianDay($t));
+        $entry->setDataElement(new DataString($t_string . chr(0)));
         $this->assertEquals('2007:04:24 00:30:00', $entry->getValue());
         $this->assertEquals('2007:04:24 00:30:00' . chr(0), $entry->toBytes());
     }

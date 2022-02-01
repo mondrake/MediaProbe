@@ -27,7 +27,7 @@ abstract class ConvertTime
      * @return int
      *            the Julian Day count.
      */
-    public static function gregorianToJulianDay($year, $month, $day)
+    public static function gregorianToJulianDay(int $year, int $month, int $day): int
     {
         // Special case mapping 0/0/0 -> 0
         if ($year == 0 || $month == 0 || $day == 0) {
@@ -48,7 +48,7 @@ abstract class ConvertTime
      * @return array
      *            array with three entries: year, month, day.
      */
-    public static function julianDayToGregorian($jd)
+    public static function julianDayToGregorian(int $jd): array
     {
         // Special case mapping 0 -> 0/0/0
         if ($jd == 0) {
@@ -76,7 +76,7 @@ abstract class ConvertTime
      * @return int
      *            the Julian Day count.
      */
-    public static function unixToJulianDay($timestamp)
+    public static function unixToJulianDay(int $timestamp): int
     {
         return (int) (floor($timestamp / 86400) + 2440588);
     }
@@ -91,7 +91,7 @@ abstract class ConvertTime
      *            the integer timestamp or false if the day count cannot be
      *            represented as a UNIX timestamp.
      */
-    public static function julianDayToUnix($jd)
+    public static function julianDayToUnix(int $jd)
     {
         if ($jd > 0) {
             $timestamp = ($jd - 2440588) * 86400;
