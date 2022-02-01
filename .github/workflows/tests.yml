@@ -58,8 +58,8 @@ jobs:
         php bin/fileeye-mediaprobe compile
         # php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
 
-    - name: Image file dumps
-      run: |
+#    - name: Image file dumps
+#      run: |
         #php examples/dump-media.php -d -w tests/media-samples/image/broken/canon-eos-650d.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/broken/canon-eos-650d.jpg-rewrite.img
         #php examples/dump-media.php -d -w tests/media-samples/image/exiftool/Canon1DmkIII.jpg
@@ -101,7 +101,7 @@ jobs:
         #php examples/dump-media.php -d    tests/media-samples/image/no-exif.jpg-rewrite.img
         #php examples/dump-media.php -d -s tests/media-samples/image/sample-1.tiff
         #php examples/dump-media.php -d -w tests/media-samples/image/broken/pel-156.jpg
-        php examples/dump-media.php -d -s tests/media-samples/image/pel-157.tiff
+        #php examples/dump-media.php -d -s tests/media-samples/image/pel-157.tiff
         #php examples/dump-media.php -d    tests/media-samples/image/pel-157.tiff-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/broken/gh-11.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/camera/olympus-c765uz.jpg
