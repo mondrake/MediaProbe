@@ -40,7 +40,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned short.
      */
-    public static function fromShort(int $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($byte_order === static::LITTLE_ENDIAN) {
             return chr($value) . chr($value >> 8);
@@ -60,7 +60,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned short.
      */
-    public static function fromShortRev(int $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromShortRev(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($byte_order == static::LITTLE_ENDIAN) {
             return chr($value >> 8) . chr($value);
@@ -80,7 +80,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the signed short.
      */
-    public static function fromSignedShort(int $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromSignedShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         // We can just use fromShort, since signed shorts fits well
         // within the 32 bit signed integers used in PHP.
@@ -106,7 +106,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned long.
      */
-    public static function fromLong(int $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         // We cannot convert the number to bytes in the normal way (using shifts
         // and modulo calculations) because the PHP operator >> and function
@@ -135,7 +135,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the signed long.
      */
-    public static function fromSignedLong(int $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromSignedLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         // We can convert the number into bytes in the normal way using shifts
         // and modulo calculations here (in contrast with fromLong) because
@@ -150,7 +150,7 @@ class ConvertBytes
     /**
      * Convert a rational into eight bytes.
      */
-    public static function fromRational(array $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromRational(array $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (count($value) !== 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -162,7 +162,7 @@ class ConvertBytes
     /**
      * Convert a signed rational into eight bytes.
      */
-    public static function fromSignedRational(array $value, int $byte_order = static::BIG_ENDIAN): string
+    public static function fromSignedRational(array $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (count($value) !== 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -219,7 +219,7 @@ class ConvertBytes
      *            the unsigned short found at the first position of the string,
      *            in the range 0 to 65535.
      */
-    public static function toShort(string $bytes, int $byte_order = static::BIG_ENDIAN): int
+    public static function toShort(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -243,7 +243,7 @@ class ConvertBytes
      *            the unsigned short found at the first position of the string,
      *            in the range 0 to 65535.
      */
-    public static function toShortRev(string $bytes, int $byte_order = static::BIG_ENDIAN): int
+    public static function toShortRev(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -267,7 +267,7 @@ class ConvertBytes
      *            the signed short found at the first position of the string, in
      *            the range -32768 to 32767.
      */
-    public static function toSignedShort(string $bytes, int $byte_order = static::BIG_ENDIAN): int
+    public static function toSignedShort(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
         if (!is_string($bytes) || strlen($bytes) < 2) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -288,7 +288,7 @@ class ConvertBytes
      *            the unsigned long found at the first position of the string,
      *            in the range 0 to 4294967295.
      */
-    public static function toLong(string $bytes, int $byte_order = static::BIG_ENDIAN): int
+    public static function toLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
         if (!is_string($bytes) || strlen($bytes) < 4) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -312,7 +312,7 @@ class ConvertBytes
      *            the signed long found at the first position of the string,
      *            in the range -2147483648 to 2147483647.
      */
-    public static function toSignedLong(string $bytes, int $byte_order = static::BIG_ENDIAN): int
+    public static function toSignedLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
         if (!is_string($bytes) || strlen($bytes) < 4) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -333,7 +333,7 @@ class ConvertBytes
      *            the unsigned rational found at offset, an array with two
      *            integers in the range 0 to 4294967295.
      */
-    public static function toRational(string $bytes, int $byte_order = static::BIG_ENDIAN): array
+    public static function toRational(string $bytes, int $byte_order = self::BIG_ENDIAN): array
     {
         if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -356,7 +356,7 @@ class ConvertBytes
      *            the signed rational found at offset, an array with two
      *            integers in the range -2147483648 to 2147483647.
      */
-    public static function toSignedRational(string $bytes, int $byte_order = static::BIG_ENDIAN): array
+    public static function toSignedRational(string $bytes, int $byte_order = self::BIG_ENDIAN): array
     {
         if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
