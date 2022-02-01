@@ -193,7 +193,7 @@ class Time extends Ascii
                 return sprintf('%04d:%02d:%02d %02d:%02d:%02d', $year, $month, $day, $hours, $minutes, $day_count_to_seconds);
             case self::JULIAN_DAY_COUNT:
                 return $day_count + $seconds_count / 86400;
-        }*/
+        }
     }
 
     /**
