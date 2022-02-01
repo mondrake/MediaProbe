@@ -89,7 +89,7 @@ class Tag extends BlockBase
      */
     public function toString(array $options = []): string
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->toString($options) : null;
+        return $this->getElement("entry") ? $this->getElement("entry")->toString($options) : '';
     }
 
     /**
@@ -97,7 +97,7 @@ class Tag extends BlockBase
      */
     public function toBytes($order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : null;
+        return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : '';
     }
 
     /**
