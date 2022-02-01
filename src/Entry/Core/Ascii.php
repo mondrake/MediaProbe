@@ -38,12 +38,12 @@ class Ascii extends EntryBase
 
     protected function validateDataElement(): bool
     {
-//        $bytes = $data_element->getBytes();
-
-        // Check the last byte is NULL.
+        // Check the last byte is NUL.
         if (substr($this->value->getBytes(), -1) !== "\x0") {
             $this->notice('Ascii entry missing final NUL character.');
         }
+
+        return true;
 
 //        $this->setDataElement([$bytes]);
 
