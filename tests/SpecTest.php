@@ -88,7 +88,7 @@ class SpecTest extends MediaProbeTestCaseBase
      *
      * @dataProvider getTagTextProvider
      */
-    public function testGetTagText($expected_text, $expected_class, $parent_collection_id, $tag_name, array $args, $brief = false)
+    public function testGetTagText($expected_text, $expected_class, $parent_collection_id, $tag_name, $args, $brief = false)
     {
         $ifd = $this->getMockBuilder(Ifd::class)
                     ->disableOriginalConstructor()
