@@ -156,7 +156,7 @@ class ConvertBytes
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
 
-        return static::fromLong($value[0], $byte_order) . static::fromLong($value[1], $byte_order),
+        return static::fromLong($value[0], $byte_order) . static::fromLong($value[1], $byte_order);
     }
 
     /**
@@ -168,7 +168,7 @@ class ConvertBytes
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
 
-        return static::fromSignedLong($value[0], $byte_order) . static::fromSignedLong($value[1], $byte_order),
+        return static::fromSignedLong($value[0], $byte_order) . static::fromSignedLong($value[1], $byte_order);
     }
 
     /**
