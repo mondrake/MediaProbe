@@ -23,23 +23,29 @@ class Ascii extends EntryBase
      */
     protected $formatName = 'Ascii';
 
-//        $bytes = $data_element->getBytes();
-
-        // Check the last byte is NULL.
-//        if (substr($bytes, -1) !== "\x0") {
-//            $this->notice('Ascii entry missing final NUL character.');
-//        }
-
-//        $this->setDataElement([$bytes]);
-
     /**
      * {@inheritdoc}
      */
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
+        $this->validateDataElement();
 
         $this->components = $data->getSize();
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    protected function validateDataElement(): bool
+    {
+//        $bytes = $data_element->getBytes();
+
+        // Check the last byte is NULL.
+        if (substr($this->value->getBytes(), -1) !== "\x0") {
+            $this->notice('Ascii entry missing final NUL character.');
+        }
+
+//        $this->setDataElement([$bytes]);
 
 //        $str = isset($data[0]) ? $data[0] : '';
 
@@ -50,7 +56,6 @@ class Ascii extends EntryBase
 //            $this->components = substr($this->value, -1) === "\x0" ? strlen($str) : strlen($str) + 1;
 //        }
 
-        $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
     /**
