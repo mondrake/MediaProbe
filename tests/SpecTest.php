@@ -132,7 +132,7 @@ class SpecTest extends MediaProbeTestCaseBase
                 'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493),
             ],
             'CanonCameraSettings/LensType - value 493.1' => [
-                'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', [493.1],
+                'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493.1),
             ],
             'IFD0/YCbCrSubSampling - value 2, 1' => [
                 'YCbCr4:2:2', 'FileEye\MediaProbe\Entry\IfdYCbCrSubSampling', 'Tiff\Ifd0', 'YCbCrSubSampling', ConvertBytes::fromShort(2) . ConvertBytes::fromShort(1),
@@ -186,10 +186,10 @@ class SpecTest extends MediaProbeTestCaseBase
                 '1/2 sec.', 'FileEye\MediaProbe\Entry\ExifExposureTime', 'Tiff\IfdExif', 'ExposureTime', ConvertBytes::fromRational([5, 10]),
             ],
             'GPS/GPSLongitude' => [
-                '30° 45\' 28" (30.76°)', 'FileEye\MediaProbe\Entry\GPSDegrees', 'Tiff\IfdGps', 'GPSLongitude', [[30, 1], [45, 1], [28, 1]],
+                '30° 45\' 28" (30.76°)', 'FileEye\MediaProbe\Entry\GPSDegrees', 'Tiff\IfdGps', 'GPSLongitude', ConvertBytes::fromRational([30, 1]) . ConvertBytes::fromRational([45, 1]) . ConvertBytes::fromRational([28, 1]),
             ],
             'GPS/GPSLatitude' => [
-                '50° 33\' 12" (50.55°)', 'FileEye\MediaProbe\Entry\GPSDegrees', 'Tiff\IfdGps', 'GPSLatitude', [[50, 1], [33, 1], [12, 1]],
+                '50° 33\' 12" (50.55°)', 'FileEye\MediaProbe\Entry\GPSDegrees', 'Tiff\IfdGps', 'GPSLatitude', ConvertBytes::fromRational([50, 1]) . ConvertBytes::fromRational([33, 1]) . ConvertBytes::fromRational([12, 1]),
             ],
             'Exif/ShutterSpeedValue - value 5, 10' => [
                 '5/10 sec. (APEX: 1)', 'FileEye\MediaProbe\Entry\ExifShutterSpeedValue', 'Tiff\IfdExif', 'ShutterSpeedValue', ConvertBytes::fromSignedRational([5, 10]),
