@@ -40,9 +40,9 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned short.
      */
-    public static function fromShort($value, $byte_order)
+    public static function fromShort(int $value, int $byte_order): string
     {
-        if ($byte_order == static::LITTLE_ENDIAN) {
+        if ($byte_order === static::LITTLE_ENDIAN) {
             return chr($value) . chr($value >> 8);
         } else {
             return chr($value >> 8) . chr($value);
@@ -60,7 +60,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the unsigned short.
      */
-    public static function fromShortRev($value, $byte_order)
+    public static function fromShortRev(int $value, int $byte_order): string
     {
         if ($byte_order == static::LITTLE_ENDIAN) {
             return chr($value >> 8) . chr($value);
@@ -80,7 +80,7 @@ class ConvertBytes
      *
      * @return string the bytes representing the signed short.
      */
-    public static function fromSignedShort($value, $byte_order)
+    public static function fromSignedShort(int $value, int $byte_order): string
     {
         // We can just use fromShort, since signed shorts fits well
         // within the 32 bit signed integers used in PHP.
