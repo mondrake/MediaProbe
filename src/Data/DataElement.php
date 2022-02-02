@@ -336,7 +336,7 @@ abstract class DataElement
      */
     public function getRationalFloat(int $offset = 0): float
     {
-        [$numerator, $denominator] = ConvertBytes::toRational($this->getBytes($offset, 8), $this->getByteOrder());
+        [$numerator, $denominator] = $this->getRational($offset);
         return $numerator / $denominator;
     }
 
@@ -356,7 +356,7 @@ abstract class DataElement
      */
     public function getSignedRationalFloat(int $offset = 0): float
     {
-        [$numerator, $denominator] = ConvertBytes::toSignedRational($this->getBytes($offset, 8), $this->getByteOrder());
+        [$numerator, $denominator] = $this->getSignedRational($offset);
         return $numerator / $denominator;
     }
 }
