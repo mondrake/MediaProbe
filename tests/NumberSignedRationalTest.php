@@ -24,7 +24,7 @@ class NumberSignedRationalTest extends NumberTestCase
         $this->assertSame([-1, 2], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame(-0.5, $this->num->getValue());
 
-        $this->num->setDataElement([[3, 4], [0, 2147483647]]);
+        $this->num->setDataElement($this->toDataString([[3, 4], [0, 2147483647]]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame([[3, 4], [0, 2147483647]], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame([0.75, 0], $this->num->getValue());
@@ -56,22 +56,17 @@ class NumberSignedRationalTest extends NumberTestCase
 
     public function testReturnValues()
     {
-        $this->num->setDataElement([]);
-        $this->assertNull($this->num->getValue(['format' => 'parsed']));
-        $this->assertNull($this->num->getValue());
-        $this->assertSame('', $this->num->toString());
-
-        $this->num->setDataElement([[-1, 2], [3, 4], [5, -6]]);
+        $this->num->setDataElement($this->toDataString([[-1, 2], [3, 4], [5, -6]]));
         $this->assertSame([[-1, 2], [3, 4], [5, -6]], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame([-0.5, 0.75, 5 / -6], $this->num->getValue());
         $this->assertSame('-0.5 0.75 ' . (string) (5 / -6), $this->num->toString());
 
-        $this->num->setDataElement([[-7, -8]]);
+        $this->num->setDataElement($this->toDataString([[-7, -8]]));
         $this->assertSame([-7, -8], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame(-7 / -8, $this->num->getValue());
         $this->assertSame((string) (-7 / -8), $this->num->toString());
 
-        $this->num->setDataElement([[0, 2147483647]]);
+        $this->num->setDataElement($this->toDataString([[0, 2147483647]]));
         $this->assertSame([0, 2147483647], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame(0, $this->num->getValue());
         $this->assertSame('0', $this->num->toString());
