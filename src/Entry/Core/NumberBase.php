@@ -105,24 +105,6 @@ abstract class NumberBase extends EntryBase
     abstract protected function numberToBytes($number, $order);
 
     /**
-     * {@inheritdoc}
-     */
-/*    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        $bytes = '';
-        for ($i = 0; $i < $this->components; $i ++) {
-            if ($this->dimension == 1) {
-                $bytes .= $this->numberToBytes($this->value[$i], $byte_order);
-            } else {
-                for ($j = 0; $j < $this->dimension; $j ++) {
-                    $bytes .= $this->numberToBytes($this->value[$i][$j], $byte_order);
-                }
-            }
-        }
-        return $bytes;
-    }*/
-
-    /**
      * Formats a number.
      *
      * Xxx update : This method is called by ::getText to format numbers. Subclasses should
