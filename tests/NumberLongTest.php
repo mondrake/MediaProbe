@@ -7,9 +7,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class NumberLongTest extends NumberTestCase
 {
-    /**
-     * {@inheritdoc}
-     */
     public function fcSetUp()
     {
         parent::fcSetUp();

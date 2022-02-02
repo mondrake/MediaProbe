@@ -8,54 +8,67 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class NumberRationalTest extends NumberTestCase
 {
+    public function fcSetUp()
+    {
+        parent::fcSetUp();
+        $this->num = new Rational($this->mockParentElement, $this->mockDataElement);
+        $this->min = 0;
+        $this->max = 4294967295;
+    }
+
+    public function testBase()
+    {
+        $this->num->setDataElement($this->toDataString([[1, 2]]));
+        $this->assertTrue($this->num->isParsed());
+        $this->assertSame([1, 2], $this->num->getValue(['format' => 'parsed']));
+        $this->assertSame(0.5, $this->num->getValue());
+
+        $this->num->setDataElement($this->toDataString([[3, 4], [0, 4294967295]]));
+        $this->assertTrue($this->num->isParsed());
+        $this->assertSame([[3, 4], [0, 4294967295]], $this->num->getValue(['format' => 'parsed']));
+        $this->assertSame([0.75, 0], $this->num->getValue());
+    }
+
+    public function testUnderflow()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([[-1, 2]));
+    }
+
+    public function testUnderflowMultiComponent()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([[3, 4], [-1, 2], [7, 8]]));
+    }
+
     public function testOverflow()
     {
-        $entry = new Rational($this->mockParentElement, $this->mockDataElement);
-        
-        $entry->setDataElement($this->toDataString([[1, 2]]));
-        $this->assertTrue($entry->isParsed());
-        $this->assertSame([1, 2], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame(0.5, $entry->getValue());
+        $this->num->setDataElement($this->toDataString([[3, 4], [4294967296, 1]]));
+        $this->expectException(DataException::class);
+    }
 
-        $entry->setDataElement($this->toDataString([[3, 4], [-1, 2], [7, 8]]));
-        $this->assertFalse($entry->isParsed());
-        $this->assertSame([[3, 4], [0, 2], [7, 8]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.75, 0, 7 / 8], $entry->getValue());
-
-        $entry->setDataElement($this->toDataString([[3, 4], [1, 4294967296]]));
-        $this->assertFalse($entry->isParsed());
-        $this->assertSame([[3, 4], [1, 0]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.75, 0], $entry->getValue());
-
-        $entry->setDataElement($this->toDataString([[3, 4], [4294967296, 1]]));
-        $this->assertFalse($entry->isParsed());
-        $this->assertSame([[3, 4], [0, 1]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.75, 0], $entry->getValue());
-
-        $entry->setDataElement($this->toDataString([[3, 4], [0, 4294967295]]));
-        $this->assertTrue($entry->isParsed());
-        $this->assertSame([[3, 4], [0, 4294967295]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.75, 0], $entry->getValue());
+    public function testOverflowMultiComponent()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([[3, 4], [1, 4294967296]]));
     }
 
     public function testReturnValues()
     {
-        $entry = new Rational($this->mockParentElement, $this->mockDataElement);
+        $this->num->setDataElement($this->toDataString([[1, 2], [3, 4], [5, 6]]));
+        $this->assertSame([[1, 2], [3, 4], [5, 6]], $this->num->getValue(['format' => 'parsed']));
+        $this->assertSame([0.5, 0.75, 5 / 6], $this->num->getValue());
+        $this->assertSame('0.5 0.75 ' . (string) (5 / 6), $this->num->toString());
 
-        $entry->setDataElement($this->toDataString([[1, 2], [3, 4], [5, 6]]));
-        $this->assertSame([[1, 2], [3, 4], [5, 6]], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame([0.5, 0.75, 5 / 6], $entry->getValue());
-        $this->assertSame('0.5 0.75 ' . (string) (5 / 6), $entry->toString());
+        $this->num->setDataElement($this->toDataString([[7, 8]]));
+        $this->assertSame([7, 8], $this->num->getValue(['format' => 'parsed']));
+        $this->assertSame(7 / 8, $this->num->getValue());
+        $this->assertSame((string) (7 / 8), $this->num->toString());
 
-        $entry->setDataElement($this->toDataString([[7, 8]]));
-        $this->assertSame([7, 8], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame(7 / 8, $entry->getValue());
-        $this->assertSame((string) (7 / 8), $entry->toString());
-
-        $entry->setDataElement($this->toDataString([[0, 4294967295]]));
-        $this->assertSame([0, 4294967295], $entry->getValue(['format' => 'parsed']));
-        $this->assertSame(0, $entry->getValue());
-        $this->assertSame('0', $entry->toString());
+        $this->num->setDataElement($this->toDataString([[0, 4294967295]]));
+        $this->assertSame([0, 4294967295], $this->num->getValue(['format' => 'parsed']));
+        $this->assertSame(0, $this->num->getValue());
+        $this->assertSame('0', $this->num->toString());
     }
 
     protected function convertValueToBytes(array $value): string
@@ -63,8 +76,3 @@ class NumberRationalTest extends NumberTestCase
         return ConvertBytes::fromRational($value);
     }
 }
-/*        $entry->setDataElement([]);
-        $this->assertNull($entry->getValue(['format' => 'parsed']));
-        $this->assertNull($entry->getValue());
-        $this->assertSame('', $entry->toString());
-*/

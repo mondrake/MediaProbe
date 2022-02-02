@@ -78,9 +78,11 @@ class ConvertBytes
             throw new DataException('Value %d is invalid for signed short int', $value);
         }
 
-        // We can just use fromShort, since signed shorts fits well
-        // within the 32 bit signed integers used in PHP.
-        return static::fromShort($value, $byte_order);
+        if ($byte_order === static::LITTLE_ENDIAN) {
+            return chr($value) . chr($value >> 8);
+        } else {
+            return chr($value >> 8) . chr($value);
+        }
     }
 
     /**
