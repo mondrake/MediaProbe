@@ -4,12 +4,15 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Entry\Core\SignedRational;
 use FileEye\MediaProbe\Entry\Exception\OverflowException;
+use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class NumberSignedRationalTest extends NumberTestCase
 {
     public function testOverflow()
     {
-        $entry = new SignedRational($this->mockParentElement, [[-1, 2]]);
+        $entry = new SignedRational($this->mockParentElement, $this->mockDataElement);
+        
+        // [[-1, 2]]);
         $this->assertTrue($entry->isParsed());
         $this->assertSame([-1, 2], $entry->getValue(['format' => 'parsed']));
         $this->assertSame(-0.5, $entry->getValue());
@@ -37,7 +40,7 @@ class NumberSignedRationalTest extends NumberTestCase
 
     public function testReturnValues()
     {
-        $entry = new SignedRational($this->mockParentElement);
+        $entry = new SignedRational($this->mockParentElement, $this->mockDataElement);
 
         $entry->setDataElement([]);
         $this->assertNull($entry->getValue(['format' => 'parsed']));
