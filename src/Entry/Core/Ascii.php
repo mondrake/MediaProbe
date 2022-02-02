@@ -28,8 +28,7 @@ class Ascii extends EntryBase
      */
     public function setDataElement(DataElement $data): void
     {
-        $this->parsed = true;
-        $this->value = $data;
+        parent::setDataElement($data);
         $this->validateDataElement();
 
         $this->components = $data->getSize();

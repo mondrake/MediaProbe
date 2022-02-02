@@ -57,8 +57,40 @@ abstract class NumberBase extends EntryBase
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
+        $this->validateDataElement();
+
         $this->components = $data->getSize() / $this->formatSize;
         $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    protected function validateDataElement(): void
+    {
+        // Check that the number given is within the min-max range given, inclusive.
+        if ($this->dimension == 1) {
+            if ($n < $this->min || $n > $this->max) {
+                $this->error('Value {value} out of range [{min},{max}]', [
+                    'value' => $n,
+                    'min' => $this->min,
+                    'max' => $this->max,
+                ]);
+                $n = 0;
+                $this->valid = false;
+                $this->parsed = false;
+            }
+        } else {
+            for ($i = 0; $i < $this->dimension; $i ++) {
+                if ($n[$i] < $this->min || $n[$i] > $this->max) {
+                    $this->error('Value {value} out of range [{min},{max}]', [
+                        'value' => $n[$i],
+                        'min' => $this->min,
+                        'max' => $this->max,
+                    ]);
+                    $n[$i] = 0;
+                    $this->valid = false;
+                    $this->parsed = false;
+                }
+            }
+        }
     }
 
     /**
@@ -79,43 +111,6 @@ abstract class NumberBase extends EntryBase
         return $ret;
     }
 */
-    /**
-     * Validate a number.
-     *
-     * This method will check that the number given is within the range given
-     * by ::getMin() and ::getMax(), inclusive.
-     *
-     * @param int|array $n
-     *            the number in question.
-     *
-     * @return void
-     */
-    public function validateNumber(&$n)
-    {
-        if ($this->dimension == 1) {
-            if ($n < $this->min || $n > $this->max) {
-                $this->error('Value {value} out of range [{min},{max}]', [
-                    'value' => $n,
-                    'min' => $this->min,
-                    'max' => $this->max,
-                ]);
-                $n = 0;
-                $this->parsed = false;
-            }
-        } else {
-            for ($i = 0; $i < $this->dimension; $i ++) {
-                if ($n[$i] < $this->min || $n[$i] > $this->max) {
-                    $this->error('Value {value} out of range [{min},{max}]', [
-                        'value' => $n[$i],
-                        'min' => $this->min,
-                        'max' => $this->max,
-                    ]);
-                    $n[$i] = 0;
-                    $this->parsed = false;
-                }
-            }
-        }
-    }
 
     /**
      * Add a number.
@@ -128,7 +123,6 @@ abstract class NumberBase extends EntryBase
      */
     public function addNumber($n)
     {
-        $this->validateNumber($n);
         $this->value[] = $n;
         $this->components ++;
     }
