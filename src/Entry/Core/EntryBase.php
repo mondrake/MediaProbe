@@ -74,8 +74,14 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     public function setDataElement(DataElement $data): void
     {
         $this->parsed = true;
+        $this->valid = true;
         $this->value = $data;
     }
+
+    /**
+     * Checks validity of the data.
+     */
+    abstract protected function validateDataElement(): void;
 
     /**
      * {@inheritdoc}
