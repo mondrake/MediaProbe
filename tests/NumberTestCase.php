@@ -2,8 +2,8 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Data\DataException;
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\MediaProbe;
 
 abstract class NumberTestCase extends EntryTestBase
@@ -27,6 +27,7 @@ abstract class NumberTestCase extends EntryTestBase
     {
         $this->expectException(DataException::class);
         $this->num->setDataElement($this->toDataString([$this->min - 1]));
+        dump($this->num);
     }
 
     public function testUnderflowMultiComponent()
