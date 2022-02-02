@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Test;
 
+use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Entry\Core\Rational;
 use FileEye\MediaProbe\Entry\Exception\OverflowException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
