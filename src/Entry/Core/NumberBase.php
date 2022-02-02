@@ -107,7 +107,7 @@ abstract class NumberBase extends EntryBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
+/*    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
         $bytes = '';
         for ($i = 0; $i < $this->components; $i ++) {
@@ -120,7 +120,7 @@ abstract class NumberBase extends EntryBase
             }
         }
         return $bytes;
-    }
+    }*/
 
     /**
      * Formats a number.
