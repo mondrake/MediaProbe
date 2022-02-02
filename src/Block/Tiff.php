@@ -44,6 +44,7 @@ class Tiff extends BlockBase
     public function setByteOrder(int $byteOrder): self
     {
         $this->byteOrder = $byteOrder;
+        return $this;
     }
 
     public function getByteOrder(): int
