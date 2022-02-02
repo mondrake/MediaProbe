@@ -13,51 +13,51 @@ abstract class NumberTestCase extends EntryTestBase
 
     public function testOverflow()
     {
-        $this->num->setDataElement($this->toBytes([0]));
+        $this->num->setDataElement($this->toDataString([0]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());
 
-        $this->num->setDataElement($this->toBytes([$this->min - 1]));
+        $this->num->setDataElement($this->toDataString([$this->min - 1]));
         $this->assertFalse($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());
 
-        $this->num->setDataElement($this->toBytes([$this->max + 1]));
+        $this->num->setDataElement($this->toDataString([$this->max + 1]));
         $this->assertFalse($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());
 
-        $this->num->setDataElement($this->toBytes([0, $this->max + 1]));
+        $this->num->setDataElement($this->toDataString([0, $this->max + 1]));
         $this->assertFalse($this->num->isParsed());
         $this->assertSame([0, 0], $this->num->getValue());
 
-        $this->num->setDataElement($this->toBytes([0, $this->min - 1]));
+        $this->num->setDataElement($this->toDataString([0, $this->min - 1]));
         $this->assertFalse($this->num->isParsed());
         $this->assertSame([0, 0], $this->num->getValue());
 
-        $this->num->setDataElement($this->toBytes([$this->min, $this->max]));
+        $this->num->setDataElement($this->toDataString([$this->min, $this->max]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame([$this->min, $this->max], $this->num->getValue());
     }
 
     public function testReturnValues()
     {
-        $this->num->setDataElement($this->toBytes([1, 2, 3]));
+        $this->num->setDataElement($this->toDataString([1, 2, 3]));
         $this->assertSame([1, 2, 3], $this->num->getValue());
         $this->assertSame('1 2 3', $this->num->toString());
 
-        $this->num->setDataElement($this->toBytes([1]));
+        $this->num->setDataElement($this->toDataString([1]));
         $this->assertSame(1, $this->num->getValue());
         $this->assertSame('1', $this->num->toString());
 
-        $this->num->setDataElement($this->toBytes([$this->max]));
+        $this->num->setDataElement($this->toDataString([$this->max]));
         $this->assertSame($this->max, $this->num->getValue());
         $this->assertSame((string) $this->max, $this->num->toString());
 
-        $this->num->setDataElement($this->toBytes([$this->min]));
+        $this->num->setDataElement($this->toDataString([$this->min]));
         $this->assertSame($this->min, $this->num->getValue());
         $this->assertSame((string) $this->min, $this->num->toString());
     }
 
-    protected function toBytes(array $values): string
+    protected function toDataString(array $values): DataString
     {
         $ret = '';
         foreach ($values as $value) {
