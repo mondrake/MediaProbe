@@ -32,7 +32,7 @@ class NumberRationalTest extends NumberTestCase
     public function testUnderflow()
     {
         $this->expectException(DataException::class);
-        $this->num->setDataElement($this->toDataString([[-1, 2]));
+        $this->num->setDataElement($this->toDataString([[-1, 2]]));
     }
 
     public function testUnderflowMultiComponent()
