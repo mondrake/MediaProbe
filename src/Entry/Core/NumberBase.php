@@ -51,7 +51,6 @@ abstract class NumberBase extends EntryBase
         // Check that the numbers given are within the min-max range given, inclusive.
         for ($i = 0; $i < $this->components; $i++) {
           $n = $this->getNumberFromDataElement($i * $this->formatSize);
-dump('n ' . $i, $n);
           if ($this->dimension == 1) {
               if ($n < static::MIN || $n > static::MAX) {
                   $this->error('Value {value} out of range [{min},{max}]', [
