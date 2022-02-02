@@ -20,7 +20,6 @@ class NumberLongTest extends NumberTestCase
 
     protected function convertValueToBytes(int $value): string
     {
-dump(['convertValueToBytes', $value, ConvertBytes::fromLong($value)]);
         return ConvertBytes::fromLong($value);
     }
 }

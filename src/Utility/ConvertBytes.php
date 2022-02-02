@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Utility;
 
+use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Entry\Core\Byte;
 use FileEye\MediaProbe\Entry\Core\Long;
 use FileEye\MediaProbe\Entry\Core\Short;
@@ -42,7 +43,7 @@ class ConvertBytes
     public static function fromShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < Short::MIN || $value > Short::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for short int', $value);
+            throw new DataException('Value %d is invalid for short int', $value);
         }
 
         if ($byte_order === static::LITTLE_ENDIAN) {
@@ -58,7 +59,7 @@ class ConvertBytes
     public static function fromShortRev(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < Short::MIN || $value > Short::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for short int', $value);
+            throw new DataException('Value %d is invalid for short int', $value);
         }
 
         if ($byte_order == static::LITTLE_ENDIAN) {
@@ -74,7 +75,7 @@ class ConvertBytes
     public static function fromSignedShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < SignedShort::MIN || $value > SignedShort::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for signed short int', $value);
+            throw new DataException('Value %d is invalid for signed short int', $value);
         }
 
         // We can just use fromShort, since signed shorts fits well
@@ -93,7 +94,7 @@ class ConvertBytes
     public static function fromLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < Long::MIN || $value > Long::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for long int', $value);
+            throw new DataException('Value %d is invalid for long int', $value);
         }
 
         // We cannot convert the number to bytes in the normal way (using shifts
@@ -117,7 +118,7 @@ class ConvertBytes
     public static function fromSignedLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < SignedLong::MIN || $value > SignedLong::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for signed long int', $value);
+            throw new DataException('Value %d is invalid for signed long int', $value);
         }
 
         // We can convert the number into bytes in the normal way using shifts
@@ -136,11 +137,11 @@ class ConvertBytes
     public static function fromRational(array $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (count($value) !== 2) {
-            throw new ConvertBytesException('A rational float must be expressed as an array [numerator, denominator]');
+            throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
         if ($value[0] < Long::MIN || $value[0] > Long::MAX || $value[1] < Long::MIN || $value[1] > Long::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for long int in a rational float', $value);
+            throw new DataException('Value %d is invalid for long int in a rational float', $value);
         }
 
         return static::fromLong($value[0], $byte_order) . static::fromLong($value[1], $byte_order);
@@ -152,11 +153,11 @@ class ConvertBytes
     public static function fromSignedRational(array $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (count($value) !== 2) {
-            throw new ConvertBytesException('A rational float must be expressed as an array [numerator, denominator]');
+            throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
         if ($value[0] < SignedLong::MIN || $value[0] > SignedLong::MAX || $value[1] < SignedLong::MIN || $value[1] > SignedLong::MAX) {
-            throw new ConvertBytesException('Value %d is invalid for signed long int in a signed rational float', $value);
+            throw new DataException('Value %d is invalid for signed long int in a signed rational float', $value);
         }
 
         return static::fromSignedLong($value[0], $byte_order) . static::fromSignedLong($value[1], $byte_order);
