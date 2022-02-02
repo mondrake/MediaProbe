@@ -24,15 +24,8 @@ class SignedByte extends NumberBase
      */
     protected $formatName = 'SignedByte';
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $min = -128;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $max = 127;
+    const MIN = -128;
+    const MAX = 127;
 
     protected function getNumberFromDataElement(int $offset): int
     {

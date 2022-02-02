@@ -30,20 +30,6 @@ abstract class NumberBase extends EntryBase
      */
     protected $dimension = 1;
 
-    /**
-     * The minimum allowed value.
-     *
-     * @var int
-     */
-    protected $min;
-
-    /**
-     * The maximum allowed value.
-     *
-     * @var int
-     */
-    protected $max;
-
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
@@ -67,22 +53,22 @@ abstract class NumberBase extends EntryBase
           $n = $this->getNumberFromDataElement($i * $this->formatSize);
 dump('n ' . $i, $n);
           if ($this->dimension == 1) {
-              if ($n < $this->min || $n > $this->max) {
+              if ($n < static::MIN || $n > static::MAX) {
                   $this->error('Value {value} out of range [{min},{max}]', [
                       'value' => $n,
-                      'min' => $this->min,
-                      'max' => $this->max,
+                      'min' => static::MIN,
+                      'max' => static::MAX,
                   ]);
                   $this->valid = false;
                   $this->parsed = false;
               }
           } else {
               for ($i = 0; $i < $this->dimension; $i ++) {
-                  if ($n[$i] < $this->min || $n[$i] > $this->max) {
+                  if ($n[$i] < static::MIN || $n[$i] > static::MAX) {
                       $this->error('Value {value} out of range [{min},{max}]', [
                           'value' => $n[$i],
-                          'min' => $this->min,
-                          'max' => $this->max,
+                          'min' => static::MIN,
+                          'max' => static::MAX,
                       ]);
                       $this->valid = false;
                       $this->parsed = false;

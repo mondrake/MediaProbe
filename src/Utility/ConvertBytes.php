@@ -2,6 +2,9 @@
 
 namespace FileEye\MediaProbe\Utility;
 
+use FileEye\MediaProbe\Entry\Core\Long;
+use FileEye\MediaProbe\Entry\Core\Short;
+
 /**
  * Conversion functions to and from bytes and numerals.
  *
@@ -34,6 +37,10 @@ class ConvertBytes
      */
     public static function fromShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
+        if ($value < Short::MIN || $value > Short::MAX) {
+            throw new ConvertBytesException('Value %d is invalid for short int', $value);
+        }
+
         if ($byte_order === static::LITTLE_ENDIAN) {
             return chr($value) . chr($value >> 8);
         } else {
@@ -73,6 +80,10 @@ class ConvertBytes
      */
     public static function fromLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
+        if ($value < Long::MIN || $value > Long::MAX) {
+            throw new ConvertBytesException('Value %d is invalid for long int', $value);
+        }
+
         // We cannot convert the number to bytes in the normal way (using shifts
         // and modulo calculations) because the PHP operator >> and function
         // chr() clip their arguments to 2^31-1, which is the largest signed

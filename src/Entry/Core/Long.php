@@ -29,15 +29,8 @@ class Long extends NumberBase
      */
     protected $formatSize = 4;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $min = 0;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $max = 4294967295;
+    const MIN = 0;
+    const MAX = 4294967295;
 
     protected function getNumberFromDataElement(int $offset): int
     {

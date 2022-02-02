@@ -23,15 +23,8 @@ class Byte extends NumberBase
      */
     protected $formatName = 'Byte';
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $min = 0;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $max = 255;
+    const MIN = 0;
+    const MAX = 255;
 
     protected function getNumberFromDataElement(int $offset): int
     {

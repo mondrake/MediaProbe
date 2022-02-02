@@ -31,15 +31,8 @@ class Short extends NumberBase
      */
     protected $formatSize = 2;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $min = 0;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $max = 65535;
+    const MIN = 0;
+    const MAX = 65535;
 
     protected function getNumberFromDataElement(int $offset): int
     {

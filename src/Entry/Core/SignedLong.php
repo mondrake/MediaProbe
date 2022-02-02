@@ -30,15 +30,8 @@ class SignedLong extends NumberBase
      */
     protected $formatSize = 4;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected $min = -2147483648;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $max = 2147483647;
+    const MIN = -2147483648;
+    const MAX = 2147483647;
 
     protected function getNumberFromDataElement(int $offset): int
     {
