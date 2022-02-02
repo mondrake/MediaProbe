@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Data\DataString;
+use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\MediaProbe;
 
 abstract class NumberTestCase extends EntryTestBase
@@ -11,31 +12,39 @@ abstract class NumberTestCase extends EntryTestBase
     protected $max;
     protected $num;
 
-    public function testOverflow()
+    public function testBase()
     {
         $this->num->setDataElement($this->toDataString([0]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());
 
-        $this->num->setDataElement($this->toDataString([$this->min - 1]));
-        $this->assertFalse($this->num->isParsed());
-        $this->assertSame(0, $this->num->getValue());
-
-        $this->num->setDataElement($this->toDataString([$this->max + 1]));
-        $this->assertFalse($this->num->isParsed());
-        $this->assertSame(0, $this->num->getValue());
-
-        $this->num->setDataElement($this->toDataString([0, $this->max + 1]));
-        $this->assertFalse($this->num->isParsed());
-        $this->assertSame([0, 0], $this->num->getValue());
-
-        $this->num->setDataElement($this->toDataString([0, $this->min - 1]));
-        $this->assertFalse($this->num->isParsed());
-        $this->assertSame([0, 0], $this->num->getValue());
-
         $this->num->setDataElement($this->toDataString([$this->min, $this->max]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame([$this->min, $this->max], $this->num->getValue());
+    }
+
+    public function testUnderflow()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([$this->min - 1]));
+    }
+
+    public function testUnderflowMultiComponent()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([0, $this->min - 1]));
+    }
+
+    public function testOverflow()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([$this->max + 1]));
+    }
+
+    public function testOverflowMultiComponent()
+    {
+        $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([0, $this->max + 1]));
     }
 
     public function testReturnValues()
