@@ -44,8 +44,8 @@ class NumberRationalTest extends NumberTestCase
 
     public function testOverflow()
     {
-        $this->num->setDataElement($this->toDataString([[3, 4], [4294967296, 1]]));
         $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([[3, 4], [4294967296, 1]]));
     }
 
     public function testOverflowMultiComponent()

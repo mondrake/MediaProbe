@@ -44,8 +44,8 @@ class NumberSignedRationalTest extends NumberTestCase
 
     public function testOverflow()
     {
-        $this->num->setDataElement($this->toDataString([[1, 2147483648]]));
         $this->expectException(DataException::class);
+        $this->num->setDataElement($this->toDataString([[1, 2147483648]]));
     }
 
     public function testOverflowMultiComponent()
@@ -75,5 +75,10 @@ class NumberSignedRationalTest extends NumberTestCase
         $this->assertSame([0, 2147483647], $this->num->getValue(['format' => 'parsed']));
         $this->assertSame(0, $this->num->getValue());
         $this->assertSame('0', $this->num->toString());
+    }
+
+    protected function convertValueToBytes(array $value): string
+    {
+        return ConvertBytes::fromSignedRational($value);
     }
 }
