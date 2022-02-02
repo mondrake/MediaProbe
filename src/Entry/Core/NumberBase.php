@@ -46,9 +46,11 @@ abstract class NumberBase extends EntryBase
 
     public function setDataElement(DataElement $data): void
     {
+dump('data', $data);
         parent::setDataElement($data);
         $this->components = (int) ($data->getSize() / $this->formatSize);
         $this->validateDataElement();
+dump('this', $this);
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
@@ -65,6 +67,7 @@ abstract class NumberBase extends EntryBase
         // Check that the numbers given are within the min-max range given, inclusive.
         for ($i = 0; $i < $this->components; $i++) {
           $n = $this->getNumberFromDataElement($i * $this->formatSize);
+dump('n ' . $i, $n);
           if ($this->dimension == 1) {
               if ($n < $this->min || $n > $this->max) {
                   $this->error('Value {value} out of range [{min},{max}]', [
