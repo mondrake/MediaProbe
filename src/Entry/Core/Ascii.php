@@ -23,15 +23,11 @@ class Ascii extends EntryBase
      */
     protected $formatName = 'Ascii';
 
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
-        $this->validateDataElement();
-
         $this->components = $data->getSize();
+        $this->validateDataElement();
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }

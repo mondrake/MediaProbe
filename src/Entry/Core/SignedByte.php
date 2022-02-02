@@ -34,6 +34,11 @@ class SignedByte extends NumberBase
      */
     protected $max = 127;
 
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getSignedByte($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

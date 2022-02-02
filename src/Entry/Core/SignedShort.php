@@ -40,6 +40,11 @@ class SignedShort extends NumberBase
      */
     protected $max = 32767;
 
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getSignedShort($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

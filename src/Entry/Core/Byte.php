@@ -33,6 +33,11 @@ class Byte extends NumberBase
      */
     protected $max = 255;
 
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getByte($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

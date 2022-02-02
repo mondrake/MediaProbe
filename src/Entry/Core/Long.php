@@ -39,6 +39,11 @@ class Long extends NumberBase
      */
     protected $max = 4294967295;
 
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getLong($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

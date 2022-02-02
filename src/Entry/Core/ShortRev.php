@@ -41,6 +41,11 @@ class ShortRev extends NumberBase
      */
     protected $max = 65535;
 
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getShortRev($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

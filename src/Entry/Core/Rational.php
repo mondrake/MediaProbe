@@ -49,6 +49,11 @@ class Rational extends NumberBase
      */
     protected $max = 4294967295;
 
+    protected function getNumberFromDataElement(int $offset): array
+    {
+        return $this->value->getRational($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

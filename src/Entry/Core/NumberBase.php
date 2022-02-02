@@ -44,54 +44,57 @@ abstract class NumberBase extends EntryBase
      */
     protected $max;
 
-//        foreach ($data as &$v) {
-//            $this->validateNumber($v);
-//        }
-
-//        $this->components = count($data);
-//        $this->value = empty($data) ? null : $data;
-
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
+        $this->components = (int) ($data->getSize() / $this->formatSize);
         $this->validateDataElement();
 
-        $this->components = $data->getSize() / $this->formatSize;
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
     protected function validateDataElement(): void
     {
-        // Check that the number given is within the min-max range given, inclusive.
-        if ($this->dimension == 1) {
-            if ($n < $this->min || $n > $this->max) {
-                $this->error('Value {value} out of range [{min},{max}]', [
-                    'value' => $n,
-                    'min' => $this->min,
-                    'max' => $this->max,
-                ]);
-                $n = 0;
-                $this->valid = false;
-                $this->parsed = false;
-            }
-        } else {
-            for ($i = 0; $i < $this->dimension; $i ++) {
-                if ($n[$i] < $this->min || $n[$i] > $this->max) {
-                    $this->error('Value {value} out of range [{min},{max}]', [
-                        'value' => $n[$i],
-                        'min' => $this->min,
-                        'max' => $this->max,
-                    ]);
-                    $n[$i] = 0;
-                    $this->valid = false;
-                    $this->parsed = false;
-                }
-            }
+        // Check that the data size is consistent.
+        if ($this->components * $this->formatSize !== $this->value->getSize()) {
+            $this->error('Invalid data size.');
+            $this->parsed = false;
+            $this->valid = false;
+        }
+
+        // Check that the numbers given are within the min-max range given, inclusive.
+        for ($i = 0; $i < $this->components; $i++) {
+          $n = $this->getNumberFromData($i * $this->formatSize);
+          if ($this->dimension == 1) {
+              if ($n < $this->min || $n > $this->max) {
+                  $this->error('Value {value} out of range [{min},{max}]', [
+                      'value' => $n,
+                      'min' => $this->min,
+                      'max' => $this->max,
+                  ]);
+                  $this->valid = false;
+                  $this->parsed = false;
+              }
+          } else {
+              for ($i = 0; $i < $this->dimension; $i ++) {
+                  if ($n[$i] < $this->min || $n[$i] > $this->max) {
+                      $this->error('Value {value} out of range [{min},{max}]', [
+                          'value' => $n[$i],
+                          'min' => $this->min,
+                          'max' => $this->max,
+                      ]);
+                      $this->valid = false;
+                      $this->parsed = false;
+                  }
+              }
+          }
         }
     }
+
+    /**
+     * Return a number from the data element at specified offset.
+     */
+    abstract protected function getNumberFromDataElement(int $offset);
 
     /**
      * {@inheritdoc}
@@ -111,21 +114,6 @@ abstract class NumberBase extends EntryBase
         return $ret;
     }
 */
-
-    /**
-     * Add a number.
-     *
-     * This appends a number to the numbers already held by this entry, thereby
-     * increasing the number of components by one.
-     *
-     * @param int $n
-     *            the number to be added.
-     */
-    public function addNumber($n)
-    {
-        $this->value[] = $n;
-        $this->components ++;
-    }
 
     /**
      * Convert a number into bytes.

@@ -50,6 +50,11 @@ class SignedRational extends NumberBase
      */
     protected $max = 2147483647;
 
+    protected function getNumberFromDataElement(int $offset): array
+    {
+        return $this->value->getSignedRational($offset);
+    }
+
     /**
      * {@inheritdoc}
      */

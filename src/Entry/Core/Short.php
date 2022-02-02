@@ -41,11 +41,10 @@ class Short extends NumberBase
      */
     protected $max = 65535;
 
-/*        $args = [];
-        for ($i = 0; $i < $item_definition->getValuesCount(); $i ++) {
-            $args[] = $data_element->getShort($i * 2);
-        }
-        $this->setDataElement($args);*/
+    protected function getNumberFromDataElement(int $offset): int
+    {
+        return $this->value->getShort($offset);
+    }
 
     /**
      * {@inheritdoc}
