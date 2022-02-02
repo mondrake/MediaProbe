@@ -31,14 +31,6 @@ class ConvertBytes
 
     /**
      * Convert an unsigned short into two bytes.
-     *
-     * @param int $value
-     *            the unsigned short that will be converted. The lower two bytes
-     *            will be extracted regardless of the actual size passed.
-     * @param int $byte_order
-     *            one of {@link LITTLE_ENDIAN} and {@link BIG_ENDIAN}.
-     *
-     * @return string the bytes representing the unsigned short.
      */
     public static function fromShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -51,14 +43,6 @@ class ConvertBytes
 
     /**
      * Convert an unsigned short into two bytes, reversed byte order.
-     *
-     * @param int $value
-     *            the unsigned short that will be converted. The lower two bytes
-     *            will be extracted regardless of the actual size passed.
-     * @param int $byte_order
-     *            one of {@link LITTLE_ENDIAN} and {@link BIG_ENDIAN}.
-     *
-     * @return string the bytes representing the unsigned short.
      */
     public static function fromShortRev(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -71,14 +55,6 @@ class ConvertBytes
 
     /**
      * Convert a signed short into two bytes.
-     *
-     * @param int $value
-     *            the signed short that will be converted. The lower two bytes
-     *            will be extracted regardless of the actual size passed.
-     * @param int $byte_order
-     *            one of {@link LITTLE_ENDIAN} and {@link BIG_ENDIAN}.
-     *
-     * @return string the bytes representing the signed short.
      */
     public static function fromSignedShort(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -94,17 +70,6 @@ class ConvertBytes
      * really have an unsigned integer in PHP. But integers larger than 2^31-1
      * will be promoted to 64 bit signed floating point numbers, and so such
      * large numbers can be handled too.
-     *
-     * @param int $value
-     *            the unsigned long that will be converted. The argument will be
-     *            treated as an unsigned 32 bit integer and the lower four bytes
-     *            will be extracted. Treating the argument as an unsigned
-     *            integer means that the absolute value will be used. Use
-     *            {@link fromSignedLong} to convert signed integers.
-     * @param int $byte_order
-     *            one of {@link LITTLE_ENDIAN} and {@link BIG_ENDIAN}.
-     *
-     * @return string the bytes representing the unsigned long.
      */
     public static function fromLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -125,15 +90,6 @@ class ConvertBytes
 
     /**
      * Convert a signed long into four bytes.
-     *
-     * @param int $value
-     *            the signed long that will be converted. The argument will be
-     *            treated as a signed 32 bit integer, from which the lower four
-     *            bytes will be extracted.
-     * @param int $byte_order
-     *            one of {@link LITTLE_ENDIAN} and {@link BIG_ENDIAN}.
-     *
-     * @return string the bytes representing the signed long.
      */
     public static function fromSignedLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -173,12 +129,6 @@ class ConvertBytes
 
     /**
      * Extract an unsigned byte from a string of bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     *
-     * @return int
-     *            the unsigned byte found at the first position of the string.
      */
     public static function toByte(string $bytes): int
     {
@@ -190,13 +140,6 @@ class ConvertBytes
 
     /**
      * Extract a signed byte from a string bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     *
-     * @return int
-     *            the signed byte found at the first position of the string, in
-     *            the range -128 to 127.
      */
     public static function toSignedByte(string $bytes): int
     {
@@ -209,15 +152,6 @@ class ConvertBytes
 
     /**
      * Extract an unsigned short from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return int
-     *            the unsigned short found at the first position of the string,
-     *            in the range 0 to 65535.
      */
     public static function toShort(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
@@ -233,15 +167,6 @@ class ConvertBytes
 
     /**
      * Extract an unsigned short from bytes, reversed byte order.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return int
-     *            the unsigned short found at the first position of the string,
-     *            in the range 0 to 65535.
      */
     public static function toShortRev(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
@@ -257,15 +182,6 @@ class ConvertBytes
 
     /**
      * Extract a signed short from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return int
-     *            the signed short found at the first position of the string, in
-     *            the range -32768 to 32767.
      */
     public static function toSignedShort(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
@@ -278,15 +194,6 @@ class ConvertBytes
 
     /**
      * Extract an unsigned long from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return int
-     *            the unsigned long found at the first position of the string,
-     *            in the range 0 to 4294967295.
      */
     public static function toLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
@@ -302,15 +209,6 @@ class ConvertBytes
 
     /**
      * Extract a signed long from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return int
-     *            the signed long found at the first position of the string,
-     *            in the range -2147483648 to 2147483647.
      */
     public static function toSignedLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
     {
@@ -323,15 +221,6 @@ class ConvertBytes
 
     /**
      * Extract an unsigned rational from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return array
-     *            the unsigned rational found at offset, an array with two
-     *            integers in the range 0 to 4294967295.
      */
     public static function toRational(string $bytes, int $byte_order = self::BIG_ENDIAN): array
     {
@@ -346,15 +235,6 @@ class ConvertBytes
 
     /**
      * Extract a signed rational from bytes.
-     *
-     * @param string $bytes
-     *            the bytes.
-     * @param int $byte_order
-     *            one of ::LITTLE_ENDIAN or ::BIG_ENDIAN.
-     *
-     * @return array
-     *            the signed rational found at offset, an array with two
-     *            integers in the range -2147483648 to 2147483647.
      */
     public static function toSignedRational(string $bytes, int $byte_order = self::BIG_ENDIAN): array
     {
