@@ -16,7 +16,7 @@ abstract class NumberTestCase extends EntryTestBase
         $this->num->setDataElement($this->toDataString([0]));
         $this->assertTrue($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());
-
+dump($this->toDataString([$this->min - 1]));
         $this->num->setDataElement($this->toDataString([$this->min - 1]));
         $this->assertFalse($this->num->isParsed());
         $this->assertSame(0, $this->num->getValue());

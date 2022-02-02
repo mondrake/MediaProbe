@@ -46,11 +46,9 @@ abstract class NumberBase extends EntryBase
 
     public function setDataElement(DataElement $data): void
     {
-dump('data', $data);
         parent::setDataElement($data);
         $this->components = (int) ($data->getSize() / $this->formatSize);
         $this->validateDataElement();
-dump('this', $this);
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
