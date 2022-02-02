@@ -140,8 +140,11 @@ class ConvertBytes
             throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
-        if ($value[0] < Long::MIN || $value[0] > Long::MAX || $value[1] < Long::MIN || $value[1] > Long::MAX) {
-            throw new DataException('Value %d is invalid for long int in a rational float', $value);
+        if ($value[0] < Long::MIN || $value[0] > Long::MAX ) {
+            throw new DataException('Numerator value %d is invalid for long int in a rational float', $value[0]);
+        }
+        if ($value[1] < Long::MIN || $value[1] > Long::MAX) {
+            throw new DataException('Denominator value %d is invalid for long int in a rational float', $value[1]);
         }
 
         return static::fromLong($value[0], $byte_order) . static::fromLong($value[1], $byte_order);
@@ -156,8 +159,11 @@ class ConvertBytes
             throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
-        if ($value[0] < SignedLong::MIN || $value[0] > SignedLong::MAX || $value[1] < SignedLong::MIN || $value[1] > SignedLong::MAX) {
-            throw new DataException('Value %d is invalid for signed long int in a signed rational float', $value);
+        if ($value[0] < SignedLong::MIN || $value[0] > SignedLong::MAX ) {
+            throw new DataException('Numerator value %d is invalid for signed long int in a signed rational float', $value[0]);
+        }
+        if ($value[1] < SignedLong::MIN || $value[1] > SignedLong::MAX) {
+            throw new DataException('Denominator value %d is invalid for signed long int in a signed rational float', $value[1]);
         }
 
         return static::fromSignedLong($value[0], $byte_order) . static::fromSignedLong($value[1], $byte_order);
