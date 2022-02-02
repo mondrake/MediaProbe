@@ -38,6 +38,30 @@ class ConvertBytes
     const BIG_ENDIAN = 0;
 
     /**
+     * Convert a number into a byte.
+     */
+    public static function fromByte(int $value): string
+    {
+        if ($value < Byte::MIN || $value > Byte::MAX) {
+            throw new DataException('Value %d is invalid for byte int', $value);
+        }
+
+        return chr($value);
+    }
+
+    /**
+     * Convert a signed number into a byte.
+     */
+    public static function fromSignedByte(int $value): string
+    {
+        if ($value < SignedByte::MIN || $value > SignedByte::MAX) {
+            throw new DataException('Value %d is invalid for signed byte int', $value);
+        }
+
+        return chr($value);
+    }
+
+    /**
      * Convert an unsigned short into two bytes.
      */
     public static function fromShort(int $value, int $byte_order = self::BIG_ENDIAN): string

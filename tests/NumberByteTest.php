@@ -20,6 +20,6 @@ class NumberByteTest extends NumberTestCase
 
     protected function convertValueToBytes(int $value): string
     {
-        return chr($value);
+        return ConvertBytes::fromByte($value);
     }
 }
