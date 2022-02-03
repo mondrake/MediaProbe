@@ -17,15 +17,12 @@ class ExifComponentsConfiguration extends Undefined
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            $v = '';
+            $v = [];
             for ($i = 0; $i < 4; $i ++) {
-                $v .= ord($this->value->getByte($i));
-                if ($i < 3) {
-                    $v .= ' ';
-                }
+                $v[] = ord($this->value->getByte($i));
             }
 dump([$this->value->getBytes(), $v]);
-            return $v;
+            return implode('', $v);
         }
         return parent::getValue($options);
     }
