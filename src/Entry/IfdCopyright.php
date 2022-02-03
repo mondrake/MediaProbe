@@ -14,7 +14,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  *
  * The Exif standard specifies a certain format for copyright information
  * where the COPYRIGHT tag holds both the photographer and editor copyrights,
- * separated by a NULL character.
+ * separated by a NUL character.
  */
 class IfdCopyright extends Ascii
 {
@@ -22,18 +22,6 @@ class IfdCopyright extends Ascii
         $v[1] = isset($v[1]) ? $v[1] : '';
         $this->setDataElement($v);*/
 
-    /**
-     * Update the copyright information.
-     *
-     * @param array $data
-     *            key 0 - the photographer copyright. Use the empty string if
-     *            there is no photographer copyright.
-     *            key 1 - the editor copyright. Use the empty string if there
-     *            is no editor copyright.
-     */
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
 /*        $this->parsed = true;
 
         $this->value = array_replace(['', ''], $data);
@@ -44,8 +32,6 @@ class IfdCopyright extends Ascii
             $this->components = strlen($this->value[0]) + 1 + strlen($this->value[1]) + 1;
         }
 */
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
 
     /**
      * {@inheritdoc}
@@ -63,18 +49,6 @@ class IfdCopyright extends Ascii
                 return explode("\0", rtrim($this->toBytes(), "\x00"));
         }
     }
-
-    /**
-     * {@inheritdoc}
-     */
- /*   public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        if ($this->value[1] === '') {
-            return $this->value[0] .  chr(0x00);
-        } else {
-            return $this->value[0] .  chr(0x00) . $this->value[1] .  chr(0x00);
-        }
-    }*/
 
     /**
      * Return a text string with the copyright information.
