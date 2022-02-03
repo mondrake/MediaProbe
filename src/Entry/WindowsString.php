@@ -29,6 +29,11 @@ class WindowsString extends EntryBase
      */
     protected $name = 'WindowsString';
 
+    /**
+     * {@inheritdoc}
+     */
+    protected $formatName = 'Byte';
+
 /*        $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
         // Remove any question marks that have been introduced because of illegal characters.
         $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
