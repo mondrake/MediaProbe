@@ -42,9 +42,10 @@ class WindowsString extends EntryBase
     public function setDataElement(DataElement $data): void
     {
         parent::setDataElement($data);
-        $php_string = rtrim($data->getBytes(), "\0");
+        $this->components = $data->getSize();
+/*        $php_string = rtrim($data->getBytes(), "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
-        $this->components = strlen($windows_string) + 2;
+        $this->components = strlen($windows_string) + 2;*/
         $this->validateDataElement();
 
         $this->debug("text: {text}", ['text' => $this->toString()]);
