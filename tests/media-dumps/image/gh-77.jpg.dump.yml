@@ -1165,6 +1165,9 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensSerialNumber:42037/entry'
             message: 'Ascii entry missing final NUL character.'
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensSerialNumber:42037/entry'
+            message: 'Ascii entry missing final NUL character.'
 gdInfo:
     0: 1280
     1: 850

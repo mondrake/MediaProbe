@@ -3095,7 +3095,7 @@ elements:
                                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                             parsed: true
                                                                             format: Ascii
-                                                                            components: 75
+                                                                            components: 74
                                                                             bytesHash: 3951b09275dbf8d119f1b9ec892e05abb189eb990529b769d34271018be8053d
                                                                             text: 'EF-S18-135mm f/3.5-5.6 IS STM'
                                                                 -
