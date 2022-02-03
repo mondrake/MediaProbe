@@ -99,7 +99,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 6
+                                                            components: 5
                                                             bytesHash: b5edee73f941eea170ee29869f58904d00d5f0cc7bf17fba04fb1ed50e5c48e0
                                                             text: Canon
                                                 -
@@ -117,7 +117,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 13
+                                                            components: 12
                                                             bytesHash: 8445169452403cc3f1c461decfeb56229b6238bc1af7b893394b544409e9d4b8
                                                             text: 'Canon EOS 6D'
                                                 -
@@ -189,7 +189,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 48
+                                                            components: 47
                                                             bytesHash: 50a2817f8a058f714b33af1a5e0b92cfd3093e571301a05754d69dd846e8ecba
                                                             text: 'Adobe Photoshop Lightroom Classic 9.3 (Windows)'
                                                 -
