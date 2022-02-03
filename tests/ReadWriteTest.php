@@ -171,7 +171,6 @@ class ReadWriteTest extends MediaProbeTestCaseBase
                     [0xF405, Long::class, 4, ConvertBytes::fromLong(4294967294), 4294967294],
                     [0xF406, Long::class, 4, ConvertBytes::fromLong(4294967295), 4294967295],
                     [0xF407, Long::class, 4, ConvertBytes::fromLong(0) . ConvertBytes::fromLong(1) . ConvertBytes::fromLong(4294967295), [0, 1, 4294967295]],
-                    [0xF408, Long::class, 4, [], null],
                 ],
             ],
             'SignedLong Read/Write Tests' => [
@@ -190,7 +189,9 @@ class ReadWriteTest extends MediaProbeTestCaseBase
                 [
                     [0xF602, Ascii::class, 2, '' . chr(0), ''],
                     [0xF603, Ascii::class, 2, 'Hello World!' . chr(0), 'Hello World!'],
-                    [0xF604, Ascii::class, 2, "\x00\x01\x02...\xFD\xFE\xFF\x00", "\x00\x01\x02...\xFD\xFE\xFF"],
+                    // The first byte being 0x00 means the output is empty string.
+                    // @todo xxx potentially revisit when decoupling
+                    [0xF604, Ascii::class, 2, "\x00\x01\x02...\xFD\xFE\xFF\x00", ""],
                 ],
             ],
         ];
