@@ -853,7 +853,7 @@ elements:
                                             path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:BrightnessValue:37379/entry'
                                             class: FileEye\MediaProbe\Entry\Core\Rational
                                             parsed: true
-                                            format: SignedRational
+                                            format: Rational
                                             components: 1
                                             bytesHash: 0cb3901526ff798747baa640e5d3ac3ea34b1e8c24410ab0fbdb5bd69f99b81d
                                             text: '9.79'

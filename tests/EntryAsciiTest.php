@@ -65,7 +65,7 @@ class EntryAsciiTest extends EntryTestBase
 
     public function testCopyright()
     {
-        $entry = new IfdCopyright($this->mockParentElement, new DataString(''));
+        $entry = new IfdCopyright($this->mockParentElement, new DataString(chr(0)));
 
         $value = $entry->getValue();
         $this->assertEquals('', $value[0]);
@@ -74,7 +74,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('', $entry->toString(['short' => false]));
         $this->assertEquals('', $entry->toString(['short' => true]));
 
-        $entry->setDataElement(['A']);
+        $entry->setDataElement(new DataString('A' . chr(0)));
         $value = $entry->getValue();
         $this->assertEquals('A', $value[0]);
         $this->assertEquals('', $value[1]);
@@ -82,7 +82,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('A', $entry->toString(['short' => true]));
         $this->assertEquals('A' . chr(0), $entry->toBytes());
 
-        $entry->setDataElement(['', 'B']);
+        $entry->setDataElement(new DataString(chr(0) . 'B' . chr(0)));
         $value = $entry->getValue();
         $this->assertEquals('', $value[0]);
         $this->assertEquals('B', $value[1]);
@@ -90,7 +90,7 @@ class EntryAsciiTest extends EntryTestBase
         $this->assertEquals('B', $entry->toString(['short' => true]));
         $this->assertEquals(chr(0) . 'B' . chr(0), $entry->toBytes());
 
-        $entry->setDataElement(['A', 'B']);
+        $entry->setDataElement(new DataString('A' . chr(0) . 'B' . chr(0)));
         $value = $entry->getValue();
         $this->assertEquals('A', $value[0]);
         $this->assertEquals('B', $value[1]);
