@@ -117,7 +117,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 53
+                                                            components: 52
                                                             bytesHash: 8eaa7e95bf622b1e6457616aa7aea3788f26f0fd5be63b6a4b2e80f4bd2ed7ee
                                                             text: 'Manhattan Skyline from Brooklyn Bridge Park Greenway'
                                                 -
@@ -135,7 +135,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 6
+                                                            components: 5
                                                             bytesHash: b5edee73f941eea170ee29869f58904d00d5f0cc7bf17fba04fb1ed50e5c48e0
                                                             text: Canon
                                                 -
@@ -153,7 +153,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 22
+                                                            components: 21
                                                             bytesHash: f95d875a5d986e41523cbd66f05f001dd73610ce133df9c4f561970fc1d9cf3e
                                                             text: 'Canon EOS 5D Mark III'
                                                 -
@@ -225,7 +225,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 40
+                                                            components: 39
                                                             bytesHash: ac0c61c7910b99097d1b9a16dabf4a9193edba6e0bab3c7cdf956db8ae2d59bb
                                                             text: 'Adobe Photoshop Lightroom 6.7 (Windows)'
                                                 -
@@ -261,7 +261,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 24
+                                                            components: 23
                                                             bytesHash: ea6ca82b26ad01443b36e5ec650e44cf6a702a098112703557055163f7e0e8b4
                                                             text: 'Phil Steels Photography'
                                                 -
@@ -279,7 +279,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\IfdCopyright
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 15
+                                                            components: 14
                                                             bytesHash: 30f2c4692d8f1e46d4b653cfc10d0a39f6658174cc3fa4e3b162d415ba19ffc7
                                                             text: 'Copyright 2016 (Photographer)'
                                                 -
@@ -594,7 +594,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 3
+                                                                    components: 2
                                                                     bytesHash: f5ee942324833efddd0f0195902096c696632e1941e50041c1ed5d325768a921
                                                                     text: '00'
                                                         -
@@ -756,7 +756,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 12
+                                                                    components: 11
                                                                     bytesHash: 83d29510ecf32d6e0edaa1aaf0f8e264131ed99ecde327c5ddf69d8d0fe4296c
                                                                     text: 'Phil Steels'
                                                         -
@@ -774,7 +774,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 13
+                                                                    components: 12
                                                                     bytesHash: a4ba92733c0670ed1cc8514a6a317ef717ebdd05d8e0749e24546971051ffe0d
                                                                     text: '063024025776'
                                                         -
@@ -810,7 +810,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 23
+                                                                    components: 22
                                                                     bytesHash: c647da780869ebe6634bc4888030a7f6e410335d09b4e9b248a78cc34135b915
                                                                     text: 'EF24-105mm f/4L IS USM'
                                                         -
@@ -828,7 +828,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 11
+                                                                    components: 10
                                                                     bytesHash: d5660788177345678602cd1c4a00d7080de03166b5fc6a989563094758759a66
                                                                     text: 0000b39b49
                                         -
