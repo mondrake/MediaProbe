@@ -49,7 +49,7 @@ abstract class NumberBase extends EntryBase
             $this->valid = false;
         }
 
-        // Check that the numbers given are within the min-max range given, inclusive.
+        // Check that the numbers given are within the min-max range allowed.
         for ($i = 0; $i < $this->components; $i++) {
             try {
                 $this->getNumberFromDataElement($i * $this->formatSize);
