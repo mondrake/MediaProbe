@@ -1719,6 +1719,18 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
             message: 'No specification for item UnknownTag in ''Apple'''
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
+            message: 'No specification for item UnknownTag in ''Apple'''
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
+            message: 'No specification for item UnknownTag in ''Apple'''
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
+            message: 'No specification for item UnknownTag in ''Apple'''
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
+            message: 'No specification for item UnknownTag in ''Apple'''
 gdInfo:
     0: 4032
     1: 3024
