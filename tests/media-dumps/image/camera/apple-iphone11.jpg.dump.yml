@@ -663,7 +663,7 @@ elements:
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                                     parsed: true
                                                                                     format: Ascii
-                                                                                    components: 2
+                                                                                    components: 1
                                                                                     bytesHash: e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079
                                                                                     text: Valid
                                                                         -
@@ -681,7 +681,7 @@ elements:
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                                     parsed: true
                                                                                     format: Ascii
-                                                                                    components: 16
+                                                                                    components: 15
                                                                                     bytesHash: 5e529e83e1bb56a27f9f24cce2787122bcffbf7827642a1e31c6e86ce945eff5
                                                                                     text: '222814068412041'
                                                                         -
@@ -699,7 +699,7 @@ elements:
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                                     parsed: true
                                                                                     format: Ascii
-                                                                                    components: 11
+                                                                                    components: 10
                                                                                     bytesHash: 5e46bbecccef0ddcb3cae03ba8feb33056115d4459b84a12b2dae2fa0f3bd69f
                                                                                     text: '1000000000'
                                                                         -
@@ -717,7 +717,7 @@ elements:
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                                     parsed: true
                                                                                     format: Ascii
-                                                                                    components: 2
+                                                                                    components: 1
                                                                                     bytesHash: e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95
                                                                                     text: '0'
                                                                 -
