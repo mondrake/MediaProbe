@@ -851,7 +851,7 @@ elements:
                                         -
                                             node: entry
                                             path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:BrightnessValue:37379/entry'
-                                            class: FileEye\MediaProbe\Entry\ExifBrightnessValue
+                                            class: FileEye\MediaProbe\Entry\Core\SignedRational
                                             parsed: true
                                             format: SignedRational
                                             components: 1
@@ -1328,7 +1328,7 @@ elements:
                                 -
                                     node: entry
                                     path: '/media/tiff/ifd:IFD0:0/tag:BrightnessValue:37379/entry'
-                                    class: FileEye\MediaProbe\Entry\ExifBrightnessValue
+                                    class: FileEye\MediaProbe\Entry\Core\SignedRational
                                     parsed: true
                                     format: SignedRational
                                     components: 1
