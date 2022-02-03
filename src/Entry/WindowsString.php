@@ -73,7 +73,7 @@ class WindowsString extends EntryBase
     public function toString(array $options = []): string
     {
         $type = $options['type'] ?? 'php';
-        switch ($format) {
+        switch ($type) {
             case 'php':
                 $php_string = rtrim($this->value->getBytes(), "\0");
                 return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
