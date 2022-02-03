@@ -15,7 +15,7 @@ class ExifComponentsConfiguration extends Undefined
      */
     public function getValue(array $options = [])
     {
-dump($this->value);
+dump($this->value->getBytes());
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
             $v = '';
