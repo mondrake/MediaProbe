@@ -15,16 +15,16 @@ class ExifComponentsConfiguration extends Undefined
      */
     public function getValue(array $options = [])
     {
-dump($this->value->getBytes());
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
             $v = '';
             for ($i = 0; $i < 4; $i ++) {
-                $v .= ord($this->value->getByte($i)) - 48;
+                $v .= ord($this->value->getByte($i));
                 if ($i < 3) {
                     $v .= ' ';
                 }
             }
+dump([$this->value->getBytes(), $v]);
             return $v;
         }
         return parent::getValue($options);

@@ -48,7 +48,7 @@ class Undefined extends EntryBase
     {
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
-            $val = str_split($this->value);
+            $val = str_split($this->value->getBytes());
             array_walk($val, function (&$value) {
                 $value = ord($value);
             });
