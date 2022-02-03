@@ -81,7 +81,7 @@ class IfdCopyright extends Ascii
         $value = $this->getValue();
 
         if ($value[0] !== '' && $value[1] !== '') {
-            return $value[0] . $p . ' - ' . $this->value[1] . $e;
+            return $value[0] . $p . ' - ' . $value[1] . $e;
         } elseif ($value[0] != '') {
             return $value[0] . $p;
         } elseif ($value[1] != '') {
