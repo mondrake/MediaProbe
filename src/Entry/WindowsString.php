@@ -62,7 +62,8 @@ class WindowsString extends EntryBase
                 return mb_convert_encoding($this->value->getBytes(), '8bit');
             case 'exiftool':
             default:
-                return $this->toString();
+                $type = $options['type'] ?? 'php';
+                return $this->toString($options);
         }
     }
 
@@ -71,7 +72,13 @@ class WindowsString extends EntryBase
      */
     public function toString(array $options = []): string
     {
-        $php_string = rtrim($this->value->getBytes(), "\0");
-        return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
+        $type = $options['type'] ?? 'php';
+        switch ($format) {
+            case 'php':
+                $php_string = rtrim($this->value->getBytes(), "\0");
+                return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
+            default:
+                return $this->value->getBytes();
+        }
     }
 }
