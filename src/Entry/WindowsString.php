@@ -49,38 +49,15 @@ class WindowsString extends EntryBase
     {
     }
 
-    /**
-     * {@inheritdoc}
-     */
-/*    public function setDataElement(DataElement $data): void
-    {
-        $php_string = rtrim($data[0], "\0");
-        $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
-        $this->components = strlen($windows_string) + 2;
-        $this->value = [$php_string, $windows_string];
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-
-        $this->parsed = true;
-    }*/
-
-    /**
-     * Returns the value of the string.
-     *
-     * @return array
-     *            key 0 - the string in PHP format.
-     *            key 1 - the string in Windows format (UCS-2LE).
-     */
     public function getValue(array $options = [])
     {
         $format = $options['format'] ?? null;
         switch ($format) {
-            case 'exiftool':
-                return $this->toString();
             case 'phpExif':
-                return mb_convert_encoding($this->value[0], '8bit');
+                return mb_convert_encoding($this->value->getBytes(), '8bit');
+            case 'exiftool':
             default:
-                return $this->value;
+                return $this->toString();
         }
     }
 
@@ -89,6 +66,7 @@ class WindowsString extends EntryBase
      */
     public function toString(array $options = []): string
     {
-        return $this->getValue()[0];
+        $php_string = rtrim($this->value->getBytes(), "\0");
+        return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
     }
 }
