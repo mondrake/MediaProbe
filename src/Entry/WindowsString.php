@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Entry;
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Entry\Core\Byte;
+use FileEye\MediaProbe\Entry\Core\EntryBase;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -20,7 +20,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * The data is written in a non-standard format and can thus not be loaded
  * directly --- this class is needed to translate it into normal PHP strings.
  */
-class WindowsString extends Byte
+class WindowsString extends EntryBase
 {
       // xx @todo to be cleaned up as when back to byest is not identical
 
@@ -34,10 +34,25 @@ class WindowsString extends Byte
         $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
         $this->setDataElement([$value]);*/
 
+    public function setDataElement(DataElement $data): void
+    {
+        parent::setDataElement($data);
+        $php_string = rtrim($data->getBytes(), "\0");
+        $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
+        $this->components = strlen($windows_string) + 2;
+        $this->validateDataElement();
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
+    }
+
+    protected function validateDataElement(): void
+    {
+    }
+
     /**
      * {@inheritdoc}
      */
-    public function setDataElement(DataElement $data): void
+/*    public function setDataElement(DataElement $data): void
     {
         $php_string = rtrim($data[0], "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
@@ -47,7 +62,7 @@ class WindowsString extends Byte
         $this->debug("text: {text}", ['text' => $this->toString()]);
 
         $this->parsed = true;
-    }
+    }*/
 
     /**
      * Returns the value of the string.
@@ -67,14 +82,6 @@ class WindowsString extends Byte
             default:
                 return $this->value;
         }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        return $this->getValue()[1] . "\x0\x0";
     }
 
     /**
