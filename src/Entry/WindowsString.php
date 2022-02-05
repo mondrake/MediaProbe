@@ -45,7 +45,7 @@ class WindowsString extends EntryBase
         $type = $options['type'] ?? 'php';
         switch ($format) {
             case 'phpExif':
-dump(['getValue' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(mb_convert_encoding($this->value->getBytes(), '8bit'))]]);
+dump(['getValue' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(mb_convert_encoding(substr($this->value->getBytes(), 0, -2), '8bit'))]]);
                 return mb_convert_encoding($this->value->getBytes(), '8bit');
             case 'exiftool':
                 return $this->toString($options);
