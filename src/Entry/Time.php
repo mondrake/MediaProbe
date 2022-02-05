@@ -136,13 +136,4 @@ class Time extends Ascii
                 return $day_count + $seconds_count / 86400;
         }
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function toString(array $options = []): string
-    {
-        return $this->getValue(['type' => self::EXIF_STRING]);
-    }
-
 }
