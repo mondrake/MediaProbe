@@ -47,9 +47,9 @@ class WindowsString extends EntryBase
             case 'phpExif':
                 return mb_convert_encoding($this->value->getBytes(), '8bit');
             case 'exiftool':
-            default:
-                $type = $options['type'] ?? 'php';
                 return $this->toString($options);
+            default:
+                return $this->toString($options) . chr(0);
         }
     }
 
