@@ -76,7 +76,7 @@ dump(['validate' => $this->value->getBytes()]);
         switch ($type) {
             case 'php':
                 $php_string = rtrim($this->value->getBytes(), "\0");
-dump(['toString' => [$php_string, mb_convert_encoding($php_string, 'UCS-2LE', 'auto')]]);
+dump(['toString' => [$this->value->getBytes(), mb_convert_encoding($this->value->getBytes(), 'UCS-2LE', 'auto')]]);
                 return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
             default:
                 return $this->value->getBytes();
