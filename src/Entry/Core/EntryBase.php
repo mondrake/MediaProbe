@@ -34,6 +34,13 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     protected $format;
 
     /**
+     * The size, in bytes, of each component held.
+     *
+     * @var int
+     */
+    protected $formatSize = 1;
+
+    /**
      * The number of components of this entry.
      *
      * @var int
@@ -76,7 +83,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         $this->parsed = true;
         $this->valid = true;
         $this->value = $data;
-        $this->components = $this->value->getSize();
+        $this->components = (int) ($data->getSize() / $this->formatSize);
         $this->validateDataElement();
     }
 

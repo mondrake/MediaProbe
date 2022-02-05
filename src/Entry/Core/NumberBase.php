@@ -16,13 +16,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class NumberBase extends EntryBase
 {
     /**
-     * The size, in bytes, of the number held.
-     *
-     * @var int
-     */
-    protected $formatSize = 1;
-
-    /**
      * The dimension of the number held.
      *
      * Normal numbers have a dimension of one, fractions like Rational have a dimension of two.
@@ -33,8 +26,6 @@ abstract class NumberBase extends EntryBase
 
     protected function validateDataElement(): void
     {
-        $this->components = (int) ($data->getSize() / $this->formatSize);
-
         // Check that the data size is consistent.
         if ($this->components * $this->formatSize !== $this->value->getSize()) {
             $this->error('Invalid data size.');
