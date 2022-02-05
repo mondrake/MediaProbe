@@ -34,23 +34,8 @@ class WindowsString extends EntryBase
      */
     protected $formatName = 'Byte';
 
-/*        $bytes = $data_element->getBytes(0, min($data_element->getSize(), $item_definition->getValuesCount()));
-        // Remove any question marks that have been introduced because of illegal characters.
-        $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
-        $this->setDataElement([$value]);*/
-
-/*    public function (DataElement $data): void
-    {
-        parent::setDataElement($data);
-/*        $php_string = rtrim($data->getBytes(), "\0");
-        $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
-        $this->components = strlen($windows_string) + 2;*/
-/*        $this->validateDataElement();
-}*/
-
     protected function validateDataElement(): void
     {
-dump(['validate' => $this->value->getBytes()]);
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
@@ -75,9 +60,10 @@ dump(['validate' => $this->value->getBytes()]);
         $type = $options['type'] ?? 'php';
         switch ($type) {
             case 'php':
-                $php_string = rtrim($this->value->getBytes(), "\0");
-dump(['toString' => [$this->value->getBytes(), mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE')]]);
-                return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
+                // Remove any question marks that have been introduced because of illegal characters.
+                $decoded = mb_convert_encoding(this->value->getBytes(), 'UTF-8', 'UCS-2LE');
+                $decoded = rtrim($decoded, "\0");
+                return str_replace('?', '', $decoded);
             default:
                 return $this->value->getBytes();
         }
