@@ -36,6 +36,7 @@ class WindowsString extends EntryBase
 
     protected function validateDataElement(): void
     {
+dump(['validate' => $this->value->getBytes()]);
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
@@ -63,6 +64,7 @@ class WindowsString extends EntryBase
                 // Remove any question marks that have been introduced because of illegal characters.
                 $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
                 $decoded = rtrim($decoded, "\0");
+dump(['toString' => [$this->value->getBytes(), $decoded, str_replace('?', '', $decoded)]]);
                 return str_replace('?', '', $decoded);
             default:
                 return $this->value->getBytes();
