@@ -36,7 +36,6 @@ class WindowsString extends EntryBase
 
     protected function validateDataElement(): void
     {
-//dump(['validate' => MediaProbe::dumpHexFormatted($this->value->getBytes())]);
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
@@ -46,6 +45,7 @@ class WindowsString extends EntryBase
         $type = $options['type'] ?? 'php';
         switch ($format) {
             case 'phpExif':
+dump(['getValue' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(mb_convert_encoding($this->value->getBytes(), '8bit'))]]);
                 return mb_convert_encoding($this->value->getBytes(), '8bit');
             case 'exiftool':
                 return $this->toString($options);
@@ -69,7 +69,6 @@ class WindowsString extends EntryBase
             case 'php':
                 $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
                 $decoded = rtrim($decoded, "\0");
-//dump(['toString' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(str_replace('?', '', $decoded))]]);
                 // Remove any question marks that have been introduced because of illegal characters.
                 return str_replace('?', '', $decoded);
             default:
