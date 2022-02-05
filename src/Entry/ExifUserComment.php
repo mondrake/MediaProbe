@@ -19,39 +19,30 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * The string can be encoded with a different encoding, and if so, the encoding
  * must be given using the second argument. The Exif standard specifies three
  * known encodings: 'ASCII', 'JIS', and 'Unicode'. If the user comment is
- * encoded using a character encoding different from the tree known encodings,
+ * encoded using a character encoding different from the three known encodings,
  * then the empty string should be passed as encoding, thereby specifying that
  * the encoding is undefined.
  */
 class ExifUserComment extends Undefined
 {
-    /**
-     * Set the user comment.
-     *
-     * @param array $data
-     *            key 0 - holds the comment.
-     *            key 1 - holds a string with the encoding of the comment. This
-     *            should be either 'ASCII', 'JIS', 'Unicode', or the empty
-     *            string specifying an unknown encoding.
-     */
-    public function setDataElement(DataElement $data): void
+    protected function validateDataElement(): void
     {
-        parent::setDataElement($data);
+        $value = $this->value->getBytes();
 
-/*        if (strlen($this->value) < 8) {
+        if (strlen($value) < 8) {
             $this->parsed = false;
+            $this->valid = false;
         } else {
-            $encoding = strtoupper(rtrim(substr($this->value, 0, 8), "\x00"));
-            if (in_array($encoding, ['', 'ASCII', 'JIS', 'UNICODE'])) {
-                $this->parsed = true;
+            $encoding = strtoupper(rtrim(substr($value, 0, 8), "\x00"));
+            if (!in_array($encoding, ['', 'ASCII', 'JIS', 'UNICODE'])) {
+                $this->parsed = false;
+                $this->valid = false;
             }
         }
 
-        if (!$this->parsed) {
+        if (!$this->valid) {
             $this->error('Invalid EXIF text encoding for UserComment.');
-        }*/
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
+        }
     }
 
     /**
