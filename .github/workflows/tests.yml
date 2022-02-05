@@ -81,7 +81,7 @@ jobs:
         #php examples/dump-media.php -d    tests/media-samples/image/camera/nikon-e5000.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/camera/pentax-istDS.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/camera/pentax-istDS.jpg-rewrite.img
-        php examples/dump-media.php -d    tests/media-samples/image/broken/pel-141.jpg
+        #php examples/dump-media.php -d    tests/media-samples/image/broken/pel-141.jpg
         #php examples/dump-media.php -d -w tests/media-samples/image/broken/pel-152.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/broken/pel-152.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/broken/gh-10-a.jpg
@@ -97,9 +97,9 @@ jobs:
         #php examples/dump-media.php -d    tests/media-samples/image/gh-21.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/gh-77.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/gh-77.jpg-rewrite.img
-        #php examples/dump-media.php -d -w tests/media-samples/image/test-tags-1.jpg
+        php examples/dump-media.php -d -w tests/media-samples/image/test-tags-1.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/test-tags-1.jpg-rewrite.img
-        #php examples/dump-media.php -d -w tests/media-samples/image/no-exif.jpg
+        php examples/dump-media.php -d -w tests/media-samples/image/no-exif.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/no-exif.jpg-rewrite.img
         #php examples/dump-media.php -d -s tests/media-samples/image/sample-1.tiff
         #php examples/dump-media.php -d -w tests/media-samples/image/broken/pel-156.jpg
