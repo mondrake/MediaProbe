@@ -96,8 +96,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         foreach ($entries as $entry_name => $entry) {
             $tagEntry = $ifd->getElement('tag[@id="' . (int) $entry[0] . '"]/entry');
             $this->assertEquals($tagEntry->toBytes(), $entry[3]);
-dump([$tagEntry->toString(), $entry[4]]);
-            $this->assertEquals($tagEntry->toString(), $entry[4]);
+            $this->assertEquals($tagEntry->toString(), is_array($entry[4]) ? implode(' ', $entry[4]) : $entry[4]);
         }
     }
 

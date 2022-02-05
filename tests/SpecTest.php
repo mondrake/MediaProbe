@@ -131,9 +131,6 @@ class SpecTest extends MediaProbeTestCaseBase
             'CanonCameraSettings/LensType - value 493' => [
                 'Canon EF 500mm f/4L IS II USM or EF 24-105mm f4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493),
             ],
-            'CanonCameraSettings/LensType - value 493.1' => [
-                'Canon EF 24-105mm f/4L IS USM', 'FileEye\MediaProbe\Entry\Core\Short', 'ExifMakerNotes\\Canon\\CameraSettings', 'LensType', ConvertBytes::fromShort(493.1),
-            ],
             'IFD0/YCbCrSubSampling - value 2, 1' => [
                 'YCbCr4:2:2', 'FileEye\MediaProbe\Entry\IfdYCbCrSubSampling', 'Tiff\Ifd0', 'YCbCrSubSampling', ConvertBytes::fromShort(2) . ConvertBytes::fromShort(1),
             ],
