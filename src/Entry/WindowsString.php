@@ -61,7 +61,7 @@ class WindowsString extends EntryBase
         switch ($type) {
             case 'php':
                 // Remove any question marks that have been introduced because of illegal characters.
-                $decoded = mb_convert_encoding(this->value->getBytes(), 'UTF-8', 'UCS-2LE');
+                $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
                 $decoded = rtrim($decoded, "\0");
                 return str_replace('?', '', $decoded);
             default:
