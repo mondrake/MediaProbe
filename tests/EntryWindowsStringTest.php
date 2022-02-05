@@ -16,7 +16,7 @@ class EntryWindowsStringTest extends EntryTestBase
 
         $entry = new WindowsString($this->mockParentElement, new DataString($test_str_ucs2));
         $this->assertSame(10, $entry->getComponents());
-        $this->assertSame($test_str, $entry->getValue(['type' => 'php']));
+        $this->assertEquals($test_str, $entry->getValue(['type' => 'php']));
         $this->assertSame($test_str_ucs2, $entry->getValue(['type' => 'windows']));
         $this->assertSame($test_str_ucs2, $entry->toBytes());
 
@@ -25,7 +25,7 @@ class EntryWindowsStringTest extends EntryTestBase
 
         $entry = new WindowsString($this->mockParentElement, new DataString($test_str_ucs2));
         $this->assertSame(32, $entry->getComponents());
-        $this->assertSame($test_str, $entry->getValue(['type' => 'php']));
+        $this->assertEquals($test_str, $entry->getValue(['type' => 'php']));
         $this->assertSame($test_str_ucs2, $entry->getValue(['type' => 'windows']));
         $this->assertSame($test_str_ucs2, $entry->toBytes());
     }
