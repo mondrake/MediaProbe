@@ -95,21 +95,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
 
         foreach ($entries as $entry_name => $entry) {
             $tagEntry = $ifd->getElement('tag[@id="' . (int) $entry[0] . '"]/entry');
-            if ($tagEntry->getFormat() == ItemFormat::ASCII) {
-                $ifdValue = $tagEntry->getValue();
-                $entryValue = $entry[4];
-                // cut off after the first nul byte
-                // since $ifdValue comes from parsed ifd,
-                // it is already cut off
-                $canonicalEntry = strstr($entryValue, "\0", true);
-                // if no nul byte found, use original value
-                if ($canonicalEntry === false) {
-                    $canonicalEntry = $entryValue;
-                }
-                $this->assertEquals($ifdValue, $canonicalEntry);
-            } else {
-                $this->assertEquals($tagEntry->getValue(), $entry[4]);
-            }
+            $this->assertEquals($tagEntry->getValue(), $entry[4]);
         }
     }
 

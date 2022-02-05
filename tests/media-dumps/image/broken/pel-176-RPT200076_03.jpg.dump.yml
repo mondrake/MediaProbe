@@ -225,7 +225,7 @@ elements:
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             parsed: true
                                                             format: Ascii
-                                                            components: 29
+                                                            components: 28
                                                             bytesHash: 0377e10d36e974625658994a452abc06b5de9604fa8f678c047ce263d1d91dec
                                                             text: 'ALL RIGHTS TO MATT BEVINGTON'
                                                 -
@@ -414,7 +414,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 7
+                                                                    components: 6
                                                                     bytesHash: 2f70fea04c81042292de26d254326840318b1dfdd23d7a4dbb5763fa44c13cc6
                                                                     text: '+01:00'
                                                         -
@@ -558,7 +558,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 3
+                                                                    components: 2
                                                                     bytesHash: 4c79e3c8cb9863a8216a6c0741dfc0e9178cbea6fb3ee05ac0799c9ad9bdf1c3
                                                                     text: '02'
                                                         -
@@ -576,7 +576,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 3
+                                                                    components: 2
                                                                     bytesHash: 4c79e3c8cb9863a8216a6c0741dfc0e9178cbea6fb3ee05ac0799c9ad9bdf1c3
                                                                     text: '02'
                                                         -
@@ -738,7 +738,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 13
+                                                                    components: 12
                                                                     bytesHash: ab48240ecc1c78550afdcfd1f29aa51351a2690a04d1faf9c7088bb761bdc88a
                                                                     text: '142053002191'
                                                         -
@@ -774,7 +774,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 19
+                                                                    components: 18
                                                                     bytesHash: e2ef64ace331f7e6954a6d5fd2c1ae009472b5963a7c5f6cba9027269b55f20d
                                                                     text: 'EF17-40mm f/4L USM'
                                                         -
@@ -792,7 +792,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     parsed: true
                                                                     format: Ascii
-                                                                    components: 11
+                                                                    components: 10
                                                                     bytesHash: 17144e120725704bdc2f351d3df79344240fbed50cd513bc1dc054c797064804
                                                                     text: '0000000000'
                                         -
