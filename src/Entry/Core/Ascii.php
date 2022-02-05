@@ -25,7 +25,7 @@ class Ascii extends EntryBase
 
     protected function validateDataElement(): void
     {
-        $this->components = $data->getSize();
+        $this->components = $this->value->getSize();
 
         // Check the last byte is NUL.
         if (substr($this->value->getBytes(), -1) !== "\x0") {
