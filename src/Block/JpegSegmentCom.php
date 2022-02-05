@@ -18,7 +18,7 @@ class JpegSegmentCom extends JpegSegmentBase
     protected function doParseData(DataElement $data): void
     {
         // Adds the segment data as an Ascii entry.
-        new Ascii($this, new DataWindow($data, 3));
+        new Ascii($this, new DataWindow($data, 4));
     }
 
     /**

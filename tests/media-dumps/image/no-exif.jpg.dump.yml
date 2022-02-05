@@ -67,7 +67,7 @@ elements:
                             class: FileEye\MediaProbe\Entry\Core\Ascii
                             parsed: true
                             format: Ascii
-                            components: 46
+                            components: 45
                             bytesHash: f7b9fa83d64fb6ba90dc3b31a86b05596c234a068d0dd27620655869d8e470a9
                             text: 'Test image for PEL, with no EXIF information.'
                 -
