@@ -198,7 +198,6 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     } else {
                         $expected_tag_value = $this->testDump['exifReadData'][$tag[0]][$tag[1]];
                     }
-if (strpos($element->getContextPath(), 'XPSubject') !== false) dump([MediaProbe::dumpHexFormatted($expected_tag_value), MediaProbe::dumpHexFormatted($element->getValue(['format' => 'phpExif']))]);
                     $this->assertSame($expected_tag_value, $element->getValue(['format' => 'phpExif']), $element->getContextPath());
                 }
             }
