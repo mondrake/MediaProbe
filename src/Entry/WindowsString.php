@@ -43,13 +43,19 @@ class WindowsString extends EntryBase
     public function getValue(array $options = [])
     {
         $format = $options['format'] ?? null;
+        $type = $options['type'] ?? 'php';
         switch ($format) {
             case 'phpExif':
                 return mb_convert_encoding($this->value->getBytes(), '8bit');
             case 'exiftool':
                 return $this->toString($options);
             default:
-                return $this->toString($options) . chr(0);
+                switch ($type) {
+                    case 'php':
+                        return $this->toString($options) . chr(0);
+                    default:
+                        return $this->toString($options);
+                }
         }
     }
 
