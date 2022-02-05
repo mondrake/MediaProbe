@@ -58,6 +58,10 @@ jobs:
         php bin/fileeye-mediaprobe compile
         # php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
 
+    - name: Image file dumps
+      continue-on-error: true
+      run: php examples/dump-media.php -d -w tests/media-samples/image/broken/canon-eos-650d.jpg
+
     - name: Run test suite
       run: vendor/bin/phpunit ./tests
 #      run: vendor/bin/phpunit ./tests/NumberLongTest.php
