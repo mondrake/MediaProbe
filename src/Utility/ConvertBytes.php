@@ -269,9 +269,9 @@ class ConvertBytes
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
         if ($byte_order == static::LITTLE_ENDIAN) {
-            return (ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
+            return (int) (ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
         } else {
-            return (ord($bytes[0]) * 16777216 + ord($bytes[1]) * 65536 + ord($bytes[2]) * 256 + ord($bytes[3]));
+            return (int) (ord($bytes[0]) * 16777216 + ord($bytes[1]) * 65536 + ord($bytes[2]) * 256 + ord($bytes[3]));
         }
     }
 
