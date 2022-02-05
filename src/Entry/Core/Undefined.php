@@ -24,7 +24,7 @@ class Undefined extends EntryBase
 
     protected function validateDataElement(): void
     {
-        $this->components = $data->getSize();
+        $this->components = $this->value->getSize();
 
         if ($this->hasMappedText()) {
             $this->debug("text: {text}", ['text' => $this->toString()]);
