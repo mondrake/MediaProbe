@@ -50,6 +50,7 @@ class WindowsString extends EntryBase
 
     protected function validateDataElement(): void
     {
+dump(['validate' => $this->value->getBytes()]);
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
@@ -75,6 +76,7 @@ class WindowsString extends EntryBase
         switch ($type) {
             case 'php':
                 $php_string = rtrim($this->value->getBytes(), "\0");
+dump(['toString' => [$php_string, mb_convert_encoding($php_string, 'UCS-2LE', 'auto')]]);
                 return mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
             default:
                 return $this->value->getBytes();
