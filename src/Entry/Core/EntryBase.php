@@ -76,6 +76,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         $this->parsed = true;
         $this->valid = true;
         $this->value = $data;
+        $this->components = $this->value->getSize();
         $this->validateDataElement();
     }
 

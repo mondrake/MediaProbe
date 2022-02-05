@@ -50,8 +50,6 @@ class WindowsString extends EntryBase
 
     protected function validateDataElement(): void
     {
-        $this->components = $data->getSize();
-
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
