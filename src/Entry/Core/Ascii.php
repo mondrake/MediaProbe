@@ -23,22 +23,17 @@ class Ascii extends EntryBase
      */
     protected $formatName = 'Ascii';
 
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-        $this->components = $data->getSize();
-        $this->validateDataElement();
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
-
     protected function validateDataElement(): void
     {
+        $this->components = $data->getSize();
+
         // Check the last byte is NUL.
         if (substr($this->value->getBytes(), -1) !== "\x0") {
             $this->notice('Ascii entry missing final NUL character.');
             $this->valid = false;
         }
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
     /**

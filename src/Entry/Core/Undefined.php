@@ -22,23 +22,14 @@ class Undefined extends EntryBase
      */
     protected $formatName = 'Undefined';
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setDataElement(DataElement $data): void
+    protected function validateDataElement(): void
     {
-        parent::setDataElement($data);
         $this->components = $data->getSize();
-        $this->validateDataElement();
 
         if ($this->hasMappedText()) {
             $this->debug("text: {text}", ['text' => $this->toString()]);
         }
         $this->debug("data: {data}", ['data' => MediaProbe::dumpHex($this->toBytes(), 12)]);
-    }
-
-    protected function validateDataElement(): void
-    {
     }
 
     /**

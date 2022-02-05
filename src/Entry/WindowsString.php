@@ -39,20 +39,20 @@ class WindowsString extends EntryBase
         $value = str_replace('?', '', mb_convert_encoding($bytes, 'UTF-8', 'UCS-2LE'));
         $this->setDataElement([$value]);*/
 
-    public function setDataElement(DataElement $data): void
+/*    public function (DataElement $data): void
     {
         parent::setDataElement($data);
-        $this->components = $data->getSize();
 /*        $php_string = rtrim($data->getBytes(), "\0");
         $windows_string = mb_convert_encoding($php_string, 'UCS-2LE', 'auto');
         $this->components = strlen($windows_string) + 2;*/
-        $this->validateDataElement();
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
+/*        $this->validateDataElement();
+}*/
 
     protected function validateDataElement(): void
     {
+        $this->components = $data->getSize();
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
     public function getValue(array $options = [])

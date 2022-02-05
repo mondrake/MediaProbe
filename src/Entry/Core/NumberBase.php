@@ -31,17 +31,10 @@ abstract class NumberBase extends EntryBase
      */
     protected $dimension = 1;
 
-    public function setDataElement(DataElement $data): void
-    {
-        parent::setDataElement($data);
-        $this->components = (int) ($data->getSize() / $this->formatSize);
-        $this->validateDataElement();
-
-        $this->debug("text: {text}", ['text' => $this->toString()]);
-    }
-
     protected function validateDataElement(): void
     {
+        $this->components = (int) ($data->getSize() / $this->formatSize);
+
         // Check that the data size is consistent.
         if ($this->components * $this->formatSize !== $this->value->getSize()) {
             $this->error('Invalid data size.');
@@ -59,6 +52,8 @@ abstract class NumberBase extends EntryBase
                 $this->parsed = false;
             }
         }
+
+        $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
     /**
