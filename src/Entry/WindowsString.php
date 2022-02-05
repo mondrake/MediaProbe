@@ -36,7 +36,7 @@ class WindowsString extends EntryBase
 
     protected function validateDataElement(): void
     {
-dump(['validate' => $this->value->getBytes()]);
+dump(['validate' => MediaProbe::dumpHexFormatted($this->value->getBytes())]);
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
