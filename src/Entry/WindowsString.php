@@ -61,7 +61,7 @@ dump(['validate' => MediaProbe::dumpHexFormatted($this->value->getBytes())]);
         $type = $options['type'] ?? 'php';
         switch ($type) {
             case 'php':
-                $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
+                $decoded = mb_convert_encoding($this->value->getBytes(), 'ASCII', 'UCS-2LE');
                 $decoded = rtrim($decoded, "\0");
 dump(['toString' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(str_replace('?', '', $decoded))]]);
                 // Remove any question marks that have been introduced because of illegal characters.
