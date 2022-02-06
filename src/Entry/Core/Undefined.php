@@ -52,8 +52,8 @@ class Undefined extends EntryBase
     public function toString(array $options = []): string
     {
         if ($this->hasMappedText()) {
-            $value = unpack('C', $this->value->getBytes())[1]; // xx note that we may want to have alternative check for string... if the collection has a string index. see ifdExif/FileSource
-            $text = $this->resolveText($value, true);
+//            $value = unpack('C', $this->value->getBytes())[1]; // xx note that we may want to have alternative check for string... if the collection has a string index. see ifdExif/FileSource
+            $text = $this->resolveText($this->value->getByte(), true);
         }
         return $text ?? $this->components . ' byte(s) of data';
     }
