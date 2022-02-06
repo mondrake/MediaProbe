@@ -215,9 +215,9 @@ class SpecTest extends MediaProbeTestCaseBase
             'Exif/FileSource - unmatched' => [
                 '1 byte(s) of data', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', "\x07",
             ],
-            'Exif/FileSource - Sigma Digital Camera' => [
-                'Sigma Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', "\x03\x00\x00\x00",
-            ],
+//            'Exif/FileSource - Sigma Digital Camera' => [
+//                'Sigma Digital Camera', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'FileSource', "\x03\x00\x00\x00",
+//            ],
             'Exif/SceneType' => [
                 'Directly photographed', 'FileEye\MediaProbe\Entry\Core\Undefined', 'Tiff\IfdExif', 'SceneType', "\x01",
             ],
