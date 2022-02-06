@@ -192,11 +192,18 @@ class Ifd extends ListBase
                 continue;
             }
 
-            $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
-            $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
-            $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
-
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
+
+            $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
+dump([$this->getAttribute('name'), $sub_block->getCollection()]);
+            if ($sub_block->getCollection()->getId() === 'MakerNote') {
+                $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
+                $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
+            } else {
+                $bytes .= ConvertBytes::fromShort(ItemFormat::UNDEFINED, $byte_order);
+                $bytes .= ConvertBytes::fromLong(count($data), $byte_order);
+            }
+
             $s = strlen($data);
             if ($s > 4) {
                 $bytes .= ConvertBytes::fromLong($data_area_offset, $byte_order);
@@ -364,7 +371,7 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = $maker_note_tag->getElement("entry")->getDataElement();
-dump(MediaProbe::dumpHexFormatted($data->getBytes()));
+// dump(MediaProbe::dumpHexFormatted($data->getBytes()));
         // @todo the netting of the dataOffset is a Canon only thing, move to vendor
         // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
         $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->getDataOffset());
