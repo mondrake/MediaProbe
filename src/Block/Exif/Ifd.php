@@ -239,6 +239,8 @@ dump(['toBytes', $this->getAttribute('name'), $tag, $sub_block->getAttribute('na
         // Append data area.
         $bytes .= $data_area_bytes;
 
+if ($this->getAttribute('name') === 'Canon') dump(['out', MediaProbe::dumpHexFormatted($bytes)]);
+
         return $bytes;
     }
 
