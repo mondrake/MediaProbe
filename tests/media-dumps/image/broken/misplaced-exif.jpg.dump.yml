@@ -124,7 +124,7 @@ elements:
                                                             format: Byte
                                                             components: 1
                                                             bytesHash: 6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
-                                                            text: ''
+                                                            text: '?'
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageDescription:270'
