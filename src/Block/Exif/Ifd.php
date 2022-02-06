@@ -175,7 +175,6 @@ class Ifd extends ListBase
 
         // Number of sub-elements. 2 bytes running.
         $n = count($this->getMultipleElements('*'));
-dump(['toBytes', $this->getAttribute('name'), $n]);
         if ($thumbnail = $this->getElement('thumbnail')) {
             $n += 1;
         }
@@ -189,7 +188,6 @@ dump(['toBytes', $this->getAttribute('name'), $n]);
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
-dump(['toBytes', $this->getAttribute('name'), $tag, $sub_block->getAttribute('name')]);
             if ($sub_block->getCollection()->getId() === 'Thumbnail') {
                 continue;
             }
@@ -238,8 +236,6 @@ dump(['toBytes', $this->getAttribute('name'), $tag, $sub_block->getAttribute('na
 
         // Append data area.
         $bytes .= $data_area_bytes;
-
-if ($this->getAttribute('name') === 'Canon') dump(['out', MediaProbe::dumpHexFormatted($bytes)]);
 
         return $bytes;
     }
