@@ -2018,7 +2018,7 @@ elements:
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
                                                                     class: FileEye\MediaProbe\Block\Tag
-                                                                    parsed: true
+                                                                    parsed: false
                                                                     id: '0'
                                                                     collection: UnknownTag
                                                                     elements:
@@ -2026,7 +2026,7 @@ elements:
                                                                             node: entry
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0/entry'
                                                                             class: FileEye\MediaProbe\Entry\Core\Short
-                                                                            parsed: true
+                                                                            parsed: false
                                                                             format: Short
                                                                             components: 6
                                                                             bytesHash: 15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b
