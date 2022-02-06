@@ -195,8 +195,7 @@ class Ifd extends ListBase
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
 
             $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
-dump([$this->getAttribute('name'), $sub_block->getCollection()->getId(), $sub_block->getAttributes()]);
-            if ($sub_block->getCollection()->getId() === 'MakerNote') {
+            if ((int) $sub_block->getAttribute('id') === 37500) {
                 $bytes .= ConvertBytes::fromShort(ItemFormat::UNDEFINED, $byte_order);
                 $bytes .= ConvertBytes::fromLong(strlen($data), $byte_order);
             } else {
