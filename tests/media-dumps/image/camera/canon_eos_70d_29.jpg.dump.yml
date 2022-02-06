@@ -2319,7 +2319,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: ef2e1c865e6fa335ddc97a89a7e22ff1401192bc35a0c28c9be127b45210a543
-                                                                            text: 'EOS 70D'
+                                                                            text: 'Unknown (0x80000325)'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'
@@ -3096,7 +3096,7 @@ elements:
                                                                             parsed: true
                                                                             format: Ascii
                                                                             components: 74
-                                                                            bytesHash: 3951b09275dbf8d119f1b9ec892e05abb189eb990529b769d34271018be8053d
+                                                                            bytesHash: 8ddc031a153dbbf8d851419bc04d3a4a5d69fde11c847d0ad867ed78a1c0254c
                                                                             text: 'EF-S18-135mm f/3.5-5.6 IS STM'
                                                                 -
                                                                     node: tag
@@ -6592,7 +6592,7 @@ elements:
                                                                             format: Long
                                                                             components: 6
                                                                             bytesHash: dc841d3f9b87ed868e200487dc09f3aeff20771cd8e5f01c14a8344a13b8855f
-                                                                            text: '24 524546 2969567282 134217728 13684944 66816'
+                                                                            text: '24 524546 -1325400014 134217728 13684944 66816'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510'
@@ -7288,7 +7288,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: canon_eos_70d_29.jpg
-    FileDateTime: 1639748137
+    FileDateTime: 1644099377
     FileSize: 7643244
     FileType: 2
     MimeType: image/jpeg

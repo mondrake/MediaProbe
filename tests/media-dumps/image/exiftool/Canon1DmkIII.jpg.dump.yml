@@ -2328,7 +2328,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 3fe1a18dc76c747f818e6fb3cd5ae6fc457e3ce83dae611839dcb0783cd7e60f
-                                                                            text: 'EOS-1D Mark III'
+                                                                            text: 'Unknown (0x80000169)'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'
@@ -2364,7 +2364,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 21a8390b66a1380dca0cccd5b7f534f7080f1d0c020f5001e40b607c1f463659
-                                                                            text: 'Format 2'
+                                                                            text: '-1610612736'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
@@ -6003,7 +6003,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon1DmkIII.jpg
-    FileDateTime: 1639748137
+    FileDateTime: 1644099377
     FileSize: 8337
     FileType: 2
     MimeType: image/jpeg

@@ -2126,7 +2126,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 514dbe30be13c58300858acaab2a7c900d0ff0c385b175ea1c9a0a7eb8991db9
-                                                                            text: 'Format 1'
+                                                                            text: '-1879048192'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:FileNumber:8'
@@ -2180,7 +2180,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 580976cac5566b4140e698a54caed19c7da349a747d9e90dd1d66519c6b03d2e
-                                                                            text: 'EOS Digital Rebel / 300D / Kiss Digital'
+                                                                            text: 'Unknown (0x80000170)'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFileLength:14'
@@ -3364,7 +3364,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon.jpg
-    FileDateTime: 1639748137
+    FileDateTime: 1644099377
     FileSize: 2697
     FileType: 2
     MimeType: image/jpeg
