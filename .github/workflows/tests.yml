@@ -61,7 +61,7 @@ jobs:
     - name: Image file dumps
       continue-on-error: true
       run: php examples/dump-media.php -d -w tests/media-samples/image/broken/canon-eos-650d.jpg
-      
+
  #     run: |
   #      php examples/dump-media.php -d -w tests/media-samples/image/broken/canon-eos-650d.jpg
         #php examples/dump-media.php -d    tests/media-samples/image/broken/canon-eos-650d.jpg-rewrite.img
@@ -116,8 +116,8 @@ jobs:
         #php examples/dump-media.php -d    tests/media-samples/image/camera/canon_eos_850d_08.jpg-rewrite.img
         #php examples/dump-media.php -d    tests/media-samples/image/broken/pel-176-RPT200076_03.jpg
 
-    - name: Run test suite
-      run: vendor/bin/phpunit ./tests
+#    - name: Run test suite
+#      run: vendor/bin/phpunit ./tests
 #      run: vendor/bin/phpunit ./tests/NumberLongTest.php
 
     - name: Code style test

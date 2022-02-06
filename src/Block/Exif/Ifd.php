@@ -115,6 +115,7 @@ class Ifd extends ListBase
      */
     protected function getItemDefinitionFromData(int $seq, DataElement $data_element, int $offset, int $data_offset_shift = 0, string $fallback_collection_id = null): ItemDefinition
     {
+dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
         $id = $data_element->getShort($offset);
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
@@ -365,7 +366,7 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = $maker_note_tag->getElement("entry")->getDataElement();
-dump([$model, $data->getStart()]);        
+dump([$model, $data->getStart()]);
         $ifd->parseData($data, 0, null, - $data->getStart() + 30);  // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
 
         // Remove the MakerNote tag that has been converted to IFD.
