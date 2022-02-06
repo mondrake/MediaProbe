@@ -50,7 +50,7 @@ class Map extends Index
         // Preserve the entire map as a raw data block.
         $mapdata = new ItemDefinition(Collection::get('RawData', ['name' => 'mapdata']));
         $this->addBlock($mapdata)->parseData($data);
-dump(['doParseData', $this->getAttribute('name'), MediaProbe::dumpHexFormatted($data->getBytes())]);
+// dump(['doParseData', $this->getAttribute('name'), MediaProbe::dumpHexFormatted($data->getBytes())]);
 
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
@@ -93,7 +93,7 @@ dump(['doParseData', $this->getAttribute('name'), MediaProbe::dumpHexFormatted($
         }
         $mapDataBytes = $mapDataElement->toBytes();
 //if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
-dump(['toBytes', $this->getAttribute('name'), MediaProbe::dumpHexFormatted($mapDataBytes)]);
+//dump(['toBytes', $this->getAttribute('name'), MediaProbe::dumpHexFormatted($mapDataBytes)]);
 
         // Dump each tag at the position in the map specified by the item id.
         foreach ($this->getMultipleElements('*[not(self::rawData)]') as $sub_id => $sub) {

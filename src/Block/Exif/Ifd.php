@@ -364,6 +364,7 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = $maker_note_tag->getElement("entry")->getDataElement();
+dump(MediaProbe::dumpHexFormatted($data->getBytes()));
         // @todo the netting of the dataOffset is a Canon only thing, move to vendor
         // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
         $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->getDataOffset());
