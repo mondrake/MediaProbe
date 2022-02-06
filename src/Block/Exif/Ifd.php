@@ -115,7 +115,7 @@ class Ifd extends ListBase
      */
     protected function getItemDefinitionFromData(int $seq, DataElement $data_element, int $offset, int $data_offset_shift = 0, string $fallback_collection_id = null): ItemDefinition
     {
-dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
+// dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
         $id = $data_element->getShort($offset);
         $format = $data_element->getShort($offset + 2);
         $components = $data_element->getLong($offset + 4);
@@ -197,7 +197,6 @@ dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
             $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
 
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
-//if ($sub_block->getAttribute('name') === 'CanonCameraInfo') dump('IFD entry', $sub_block->getAttribute('id'), $sub_block->getFormat(), $sub_block->getComponents(), MediaProbe::dumpHexFormatted($data));
             $s = strlen($data);
             if ($s > 4) {
                 $bytes .= ConvertBytes::fromLong($data_area_offset, $byte_order);
@@ -208,7 +207,6 @@ dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
                 // fill out the four bytes available.
                 $bytes .= $data . str_repeat(chr(0), 4 - $s);
             }
-//if ($sub_block->getAttribute('name') === 'CanonFilterInfo') dump('IFD data', $data_area_offset, MediaProbe::dumpHexFormatted($bytes), MediaProbe::dumpHexFormatted($data_area_bytes));
         }
 
         // Thumbnail.
@@ -366,7 +364,7 @@ dump([$seq, $offset, $data_offset_shift, $fallback_collection_id]);
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = $maker_note_tag->getElement("entry")->getDataElement();
-dump([$model, $data->getStart()]);
+dump([$model, MediaProbe::dumpHexFormatted($data->getBytes())]);
         $ifd->parseData($data, 0, null, - $data->getStart() + 30);  // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
 
         // Remove the MakerNote tag that has been converted to IFD.
