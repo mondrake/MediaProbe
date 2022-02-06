@@ -365,7 +365,7 @@ class Ifd extends ListBase
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
         $data = new DataWindow($d, $maker_note_tag->getElement("entry")->getValue()[1]);
-dump([$model, $maker_note_tag->getElement("entry")->getValue()]);
+dump([$model, $maker_note_tag->getElement("entry")->getValue()[1]);
         $ifd->parseData($data, $maker_note_tag->getElement("entry")->getValue()[1], null, -$maker_note_tag->getElement("entry")->getValue()[1]);
 
         // Remove the MakerNote tag that has been converted to IFD.
