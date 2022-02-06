@@ -206,7 +206,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      */
     public function isValid()
     {
-        return $this->parsed;
+        return $this->valid;
     }
 
     /**
