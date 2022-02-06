@@ -6099,7 +6099,7 @@ elements:
                                                                             format: Long
                                                                             components: 5
                                                                             bytesHash: 02779405f3c9bdc44af957738c2a19cb6228344cbd62747dd13679c928930d4a
-                                                                            text: '20 329220 -2030043096 117440512 3158064'
+                                                                            text: '20 329220 2264924200 117440512 3158064'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510'

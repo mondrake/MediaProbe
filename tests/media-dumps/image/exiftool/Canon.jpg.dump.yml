@@ -2180,7 +2180,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 580976cac5566b4140e698a54caed19c7da349a747d9e90dd1d66519c6b03d2e
-                                                                            text: 'Unknown (0x80000170)'
+                                                                            text: 'EOS Digital Rebel / 300D / Kiss Digital'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFileLength:14'

@@ -6592,7 +6592,7 @@ elements:
                                                                             format: Long
                                                                             components: 6
                                                                             bytesHash: dc841d3f9b87ed868e200487dc09f3aeff20771cd8e5f01c14a8344a13b8855f
-                                                                            text: '24 524546 -1325400014 134217728 13684944 66816'
+                                                                            text: '24 524546 2969567282 134217728 13684944 66816'
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510'
