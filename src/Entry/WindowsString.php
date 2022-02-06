@@ -45,7 +45,6 @@ class WindowsString extends EntryBase
         $type = $options['type'] ?? 'php';
         switch ($format) {
             case 'phpExif':
-//dump(['getValue' => [MediaProbe::dumpHexFormatted($this->value->getBytes()), MediaProbe::dumpHexFormatted(mb_convert_encoding(substr($this->value->getBytes(), 0, -2), '8bit', 'UCS-2LE')), MediaProbe::dumpHexFormatted(mb_convert_encoding($this->value->getBytes(), '8bit', 'UCS-2LE'))]]);
                 return rtrim(mb_convert_encoding($this->value->getBytes(), '8bit', 'UCS-2LE'), "\0");
             case 'exiftool':
                 return $this->toString($options);
@@ -70,8 +69,9 @@ class WindowsString extends EntryBase
             case 'php':
                 $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
                 $trimmed = rtrim($decoded, "\0");
-                // For exiftool remove any question marks that have been introduced because of illegal characters.
-                return $format === 'exiftool' ? str_replace('?', '', $trimmed) : $trimmed;
+                // As of PHP 8.1, illegal characters are replaced with a '?' character. For exiftool and BC
+                // with earlier PHP versions we remove them.
+                return str_replace('?', '', $trimmed);
             default:
                 return $this->value->getBytes();
         }
