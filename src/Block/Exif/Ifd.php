@@ -189,7 +189,7 @@ dump(['toBytes', $this->getAttribute('name'), $n]);
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
-dump(['toBytes', $tag]);
+dump(['toBytes', $this->getAttribute('name'), $tag, $sub_block->getAttribute('name')]);
             if ($sub_block->getCollection()->getId() === 'Thumbnail') {
                 continue;
             }
