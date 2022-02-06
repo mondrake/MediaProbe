@@ -86,7 +86,12 @@ class Map extends Index
      */
     public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0, $has_next_ifd = false): string
     {
-        $data_bytes = $this->getElement("rawData[@name='mapdata']/entry")->getValue();
+        $mapdata = $this->getElement("rawData[@name='mapdata']/entry");
+        if ($mapdata === null) {
+            return '';
+        }
+
+        $data_bytes = $mapdata->toBytes();
 //if ($this->getAttribute('name') === 'CanonFilterInfo') dump($offset, MediaProbe::dumpHexFormatted($data_element->getBytes($offset - 1024, 10000)));
 //dump($this->getAttribute('name'), MediaProbe::dumpHexFormatted($data_bytes));
 
