@@ -58,8 +58,6 @@ class Ifd extends ListBase
             }
         }
 
-        $this->parsed = true;
-
         // Invoke post-load callbacks.
         $this->executePostParseCallbacks($data_element);
     }
@@ -275,7 +273,6 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'length' => $length,
             ]);
-            $ifd->parsed = false;
             return;
         }
 
@@ -284,7 +281,6 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'size' => $data_element->getSize(),
             ]);
-            $ifd->parsed = false;
             return;
         }
 

@@ -178,7 +178,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->assertInstanceOf($expected['class'], $element, $expected['path']);
         $this->assertSame($expected['path'], $element->getContextPath());
         if (!$rewritten) {
-            $this->assertSame($expected['parsed'], $element->isParsed(), $element->getContextPath());
+            $this->assertSame($expected['valid'], $element->isValid(), $element->getContextPath());
         }
 
         // Check entry.
