@@ -64,14 +64,14 @@ class WindowsString extends EntryBase
      */
     public function toString(array $options = []): string
     {
+        $format = $options['format'] ?? null;
         $type = $options['type'] ?? 'php';
         switch ($type) {
             case 'php':
                 $decoded = mb_convert_encoding($this->value->getBytes(), 'UTF-8', 'UCS-2LE');
-                return rtrim($decoded, "\0");
-//dump([$this->value->getBytes(), $decoded]);
-                // Remove any question marks that have been introduced because of illegal characters.
-//                return str_replace('?', '', $decoded);
+                $trimmed = rtrim($decoded, "\0");
+                // For exiftool remove any question marks that have been introduced because of illegal characters.
+                return $format === 'exiftool' ? str_replace('?', '', $trimmed) : $trimmed;
             default:
                 return $this->value->getBytes();
         }
