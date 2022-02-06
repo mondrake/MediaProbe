@@ -2429,7 +2429,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 1dea7b712329091c6e5a3f54ecb699639be2971a58542144301bb357540cd46d
-                                                                            text: 'Unknown (0x80000301)'
+                                                                            text: 'EOS Rebel T4i / 650D / Kiss X6i'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'

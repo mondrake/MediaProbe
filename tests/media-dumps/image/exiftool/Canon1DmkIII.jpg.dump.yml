@@ -2328,7 +2328,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 3fe1a18dc76c747f818e6fb3cd5ae6fc457e3ce83dae611839dcb0783cd7e60f
-                                                                            text: 'Unknown (0x80000169)'
+                                                                            text: 'EOS-1D Mark III'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'

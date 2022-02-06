@@ -2319,7 +2319,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: ef2e1c865e6fa335ddc97a89a7e22ff1401192bc35a0c28c9be127b45210a543
-                                                                            text: 'Unknown (0x80000325)'
+                                                                            text: 'EOS 70D'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'
