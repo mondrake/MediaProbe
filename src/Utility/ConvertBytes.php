@@ -166,7 +166,7 @@ class ConvertBytes
             throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
-        if ($value[0] < Long::MIN || $value[0] > Long::MAX ) {
+        if ($value[0] < Long::MIN || $value[0] > Long::MAX) {
             throw new DataException('Numerator value %d is invalid for long int in a rational float', $value[0]);
         }
         if ($value[1] < Long::MIN || $value[1] > Long::MAX) {
@@ -185,7 +185,7 @@ class ConvertBytes
             throw new DataException('A rational float must be expressed as an array [numerator, denominator]');
         }
 
-        if ($value[0] < SignedLong::MIN || $value[0] > SignedLong::MAX ) {
+        if ($value[0] < SignedLong::MIN || $value[0] > SignedLong::MAX) {
             throw new DataException('Numerator value %d is invalid for signed long int in a signed rational float', $value[0]);
         }
         if ($value[1] < SignedLong::MIN || $value[1] > SignedLong::MAX) {

@@ -115,5 +115,4 @@ abstract class ConvertTime
         $day_count_to_seconds = $seconds_count % 60;
         return sprintf('%04d:%02d:%02d %02d:%02d:%02d', $year, $month, $day, $hours, $minutes, $day_count_to_seconds);
     }
-
 }

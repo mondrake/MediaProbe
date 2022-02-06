@@ -74,5 +74,4 @@ abstract class NumberTestCase extends EntryTestBase
         }
         return new DataString($ret);
     }
-
 }

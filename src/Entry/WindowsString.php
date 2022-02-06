@@ -45,7 +45,11 @@ class WindowsString extends EntryBase
         $type = $options['type'] ?? 'php';
         switch ($format) {
             case 'phpExif':
-                return rtrim(mb_convert_encoding($this->value->getBytes(), '8bit', 'UCS-2LE'), "\0");
+                $decoded = mb_convert_encoding($this->value->getBytes(), '8bit', 'UCS-2LE');
+                $trimmed = rtrim($decoded, "\0");
+                // As of PHP 8.1, illegal characters are replaced with a '?' character. For exiftool and BC
+                // with earlier PHP versions we remove them.
+                return str_replace('?', '', $trimmed);
             case 'exiftool':
                 return $this->toString($options);
             default:
