@@ -175,6 +175,7 @@ class Ifd extends ListBase
 
         // Number of sub-elements. 2 bytes running.
         $n = count($this->getMultipleElements('*'));
+dump(['toBytes', $this->getAttribute('name'), $n]);
         if ($thumbnail = $this->getElement('thumbnail')) {
             $n += 1;
         }
@@ -188,6 +189,7 @@ class Ifd extends ListBase
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
+dump(['toBytes', $tag]);
             if ($sub_block->getCollection()->getId() === 'Thumbnail') {
                 continue;
             }
