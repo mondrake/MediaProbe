@@ -195,13 +195,13 @@ class Ifd extends ListBase
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
 
             $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
-dump([$this->getAttribute('name'), $sub_block->getCollection()]);
+dump([$this->getAttribute('name'), $sub_block->getCollection(), $sub_block->getCollection()->getId()]);
             if ($sub_block->getCollection()->getId() === 'MakerNote') {
+                $bytes .= ConvertBytes::fromShort(ItemFormat::UNDEFINED, $byte_order);
+                $bytes .= ConvertBytes::fromLong(strlen($data), $byte_order);
+            } else {
                 $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
                 $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
-            } else {
-                $bytes .= ConvertBytes::fromShort(ItemFormat::UNDEFINED, $byte_order);
-                $bytes .= ConvertBytes::fromLong(count($data), $byte_order);
             }
 
             $s = strlen($data);
