@@ -2337,7 +2337,7 @@ elements:
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                                     parsed: true
                                                                                     format: Ascii
-                                                                                    components: 7
+                                                                                    components: 6
                                                                                     bytesHash: a74a702253b88cd88c5d6d816bea6feef49037fadf1af9dbf81dffed266c1d45
                                                                                     text: ''
                                                                         -
@@ -3205,7 +3205,7 @@ elements:
                                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                             parsed: true
                                                                             format: Ascii
-                                                                            components: 75
+                                                                            components: 74
                                                                             bytesHash: 68c2837c3dd9ecfe515889b40a3379b03d7b32419493f8ae6eda6310eeee6563
                                                                             text: 'TAMRON SP 150-600mm F/5-6.3 Di VC USD G2 A022'
                                                                 -
