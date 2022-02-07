@@ -273,6 +273,7 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'length' => $length,
             ]);
+            $ifd->valid = false;
             return;
         }
 
@@ -281,6 +282,7 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'size' => $data_element->getSize(),
             ]);
+            $ifd->valid = false;
             return;
         }
 
