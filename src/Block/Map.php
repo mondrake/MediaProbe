@@ -55,13 +55,13 @@ class Map extends Index
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
             // Adds a 'tag'.
+            $n = $item * ItemFormat::getSize($this->getFormat());
+            $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
+            $block = $this->addBlock($item_definition);
             try {
-                $n = $item * ItemFormat::getSize($this->getFormat());
-                $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
-                $block = $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
+                $block->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
-                $this->error($e->getMessage());
-                //$block->valid = false;
+                $block->error($e->getMessage());
             }
             $i++;
         }
