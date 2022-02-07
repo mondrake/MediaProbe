@@ -2335,7 +2335,7 @@ elements:
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraInfo:13/tag:FirmwareVersion:544/entry'
                                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                                    valid: true
+                                                                                    valid: false
                                                                                     format: Ascii
                                                                                     components: 6
                                                                                     bytesHash: b2d9eba1ebd667a1d36f90c9f74f360879d156305aac05f164af03f09a5b7467
@@ -3203,7 +3203,7 @@ elements:
                                                                             node: entry
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:LensModel:149/entry'
                                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                            valid: true
+                                                                            valid: false
                                                                             format: Ascii
                                                                             components: 74
                                                                             bytesHash: c4f3b03bb28b573fc1fd2885613e57559a41bdf2beebb3b7c667543f76ebc496
