@@ -185,7 +185,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         if ($element instanceof EntryInterface) {
             // No sub elements in the element being tested.
             $this->assertNull($element->getElement('*'));
-            $this->assertSame($expected['format'], ItemFormat::getName($element->getFormat()), $element->getContextPath());
+            $format_name = ItemFormat::getName($element->getFormat());
+            $this->assertNotNull($format_name, $element->getContextPath());
+            $this->assertSame($expected['format'], $format_name, $element->getContextPath());
             $this->assertSame($expected['components'], $element->getComponents(), $element->getContextPath());
 
             // Check PHP Exif tag equivalence.
