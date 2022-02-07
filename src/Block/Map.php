@@ -60,8 +60,8 @@ class Map extends Index
                 $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
                 $block = $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
-                $block->error($e->getMessage());
-                $block->valid = false;
+                $this->error($e->getMessage());
+                //$block->valid = false;
             }
             $i++;
         }
