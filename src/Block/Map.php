@@ -62,6 +62,7 @@ class Map extends Index
                 $block->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
                 $block->error($e->getMessage());
+                $block->valid = false;
             }
             $i++;
         }
