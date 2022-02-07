@@ -3093,7 +3093,7 @@ elements:
                                                                             node: entry
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:LensModel:149/entry'
                                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                            valid: true
+                                                                            valid: false
                                                                             format: Ascii
                                                                             components: 74
                                                                             bytesHash: 8ddc031a153dbbf8d851419bc04d3a4a5d69fde11c847d0ad867ed78a1c0254c
@@ -5591,7 +5591,7 @@ elements:
                                                                                     format: Long
                                                                                     components: 4
                                                                                     bytesHash: f0d941a124e6e71a41268390fa7fda84dac0b08151547b4a93abaf61d30b860d
-                                                                                    text: '-20162 -8910 -12159 -23146'
+                                                                                    text: '176446 122162 118913 42390'
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385/tag:PerChannelBlackLevel:504'
@@ -7288,7 +7288,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: canon_eos_70d_29.jpg
-    FileDateTime: 1644099377
+    FileDateTime: 1644226017
     FileSize: 7643244
     FileType: 2
     MimeType: image/jpeg

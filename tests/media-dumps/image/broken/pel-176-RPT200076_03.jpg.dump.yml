@@ -97,7 +97,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 5
                                                             bytesHash: 7780172200243361b7df50624840b088e1a043688ca3c74e4b6c44a644667276
@@ -115,7 +115,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 12
                                                             bytesHash: 6a45dbb81cb425c72ee340fafbfecca9a2ba7ba5311ef1348ad5266b33bb2ebe
@@ -187,7 +187,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Software:305/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 47
                                                             bytesHash: fc1b1e4d365d4645f4ec1b316170241e96cf282aa5c093b14a504fbaff0ed631
@@ -205,7 +205,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
                                                             class: FileEye\MediaProbe\Entry\Time
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 19
                                                             bytesHash: bdcd839dfb617ab9346e4add28ce9e97e30d3b0f1cc5866d1844333f2197f6cb
@@ -223,7 +223,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Artist:315/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 28
                                                             bytesHash: 803520c2476c6cec020bb4f2413bdfe5339dde9e44a3a263be53e5289478a086
@@ -376,7 +376,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867/entry'
                                                                     class: FileEye\MediaProbe\Entry\Time
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 19
                                                                     bytesHash: 49f5d1555bf651872644b29b28ab099196e67fc1193f7686be3fadce29f8accf
@@ -394,7 +394,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868/entry'
                                                                     class: FileEye\MediaProbe\Entry\Time
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 19
                                                                     bytesHash: 49f5d1555bf651872644b29b28ab099196e67fc1193f7686be3fadce29f8accf
@@ -412,7 +412,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 6
                                                                     bytesHash: 68c78424059fb82fc48ebf67ba1049abfaede0c10e1e3d3f5b26ac2f4a3959e3
@@ -556,7 +556,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTimeOriginal:37521/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 2
                                                                     bytesHash: a953f09a1b6b6725b81956e9ad0b1eb49e3ad40004c04307ef8af6246a054116
@@ -574,7 +574,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTimeDigitized:37522/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 2
                                                                     bytesHash: a953f09a1b6b6725b81956e9ad0b1eb49e3ad40004c04307ef8af6246a054116
@@ -736,7 +736,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SerialNumber:42033/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 12
                                                                     bytesHash: 96cd55ad9e578181713975dd4e4d0f5f6797ac3255cf38a33a50c69d448fec2d
@@ -772,7 +772,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensModel:42036/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 18
                                                                     bytesHash: e5f783dde134c0ce1048cb9a754069ef82a432b1cfef9586af6634d566d5f119
@@ -790,7 +790,7 @@ elements:
                                                                     node: entry
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensSerialNumber:42037/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
+                                                                    valid: false
                                                                     format: Ascii
                                                                     components: 10
                                                                     bytesHash: 84d9c4b849506b6d8f8075a9000e7e0a254be71060ea889fad3c88395988f4fc
@@ -979,7 +979,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: pel-176-RPT200076_03.jpg
-    FileDateTime: 1644099377
+    FileDateTime: 1644226017
     FileSize: 53475
     FileType: 2
     MimeType: image/jpeg
