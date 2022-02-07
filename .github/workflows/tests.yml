@@ -59,10 +59,9 @@ jobs:
     - name: Image file dumps
       continue-on-error: true
       run: |
-        php examples/dump-media.php -d -w tests/media-samples/image/broken/canon-eos-650d.jpg
-        php examples/dump-media.php -d    tests/media-samples/image/broken/canon-eos-650d.jpg-rewrite.img
-        #php examples/dump-media.php -d -w tests/media-samples/image/broken/gh-10-b.jpg
-        #php examples/dump-media.php -d    tests/media-samples/image/broken/gh-10-b.jpg-rewrite.img
+        php examples/dump-media.php -d tests/media-samples/image/broken/gh-10-b.jpg
+        php examples/dump-media.php -d tests/media-samples/image/exiftool/Canon.jpg
+        php examples/dump-media.php -d tests/media-samples/image/exiftool/Canon1DmkIII.jpg
 
     - name: Run test suite
       continue-on-error: true
@@ -74,11 +73,11 @@ jobs:
 
 # Remove the comment to the lines below during development, to refresh the
 # media file dumps.
-    - name: Update media dumps
-      run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
-
-    - name: Upload media dumps
-      uses: actions/upload-artifact@v2
-      with:
-        name: media-dumps
-        path: tests/media-dumps
+#    - name: Update media dumps
+#      run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
+#
+#    - name: Upload media dumps
+#      uses: actions/upload-artifact@v2
+#      with:
+#       name: media-dumps
+#        path: tests/media-dumps
