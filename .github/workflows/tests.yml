@@ -125,3 +125,12 @@ jobs:
     - name: Code style test
       if: ${{ matrix.php-version == 7.4 }}
       run: ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit 1
+
+    - name: Update media dumps
+      run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
+
+    - name: Upload media dumps
+      uses: actions/upload-artifact@v2
+      with:
+        name: media-dumps
+        path: tests/media-dumps
