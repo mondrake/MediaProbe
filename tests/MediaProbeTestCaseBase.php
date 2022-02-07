@@ -13,6 +13,8 @@ require_once __DIR__ . '/MediaProbePhpUnit8Trait.php';
 
 class MediaProbeTestCaseBase extends TestCase
 {
+    protected $tempWorkDirectory;
+
     use PhpUnitTrait;
 
     public function fcExpectException($exception, $message = null)
