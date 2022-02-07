@@ -115,6 +115,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
+        $this->fileSystem->mkdir($this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath());
         $rewriteFile = $this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'] . '-rewrite-gd.img';
 
         $original_media = Media::loadFromFile($testFile);
@@ -151,6 +152,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
+        $this->fileSystem->mkdir($this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath());
         $rewriteFile = $this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'] . '-rewrite-gd.img';
         $exiftoolDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool.xml';
         $exiftoolRawDumpFile = dirname(__FILE__) . '/media-dumps/image/' . $mediaDumpFile->getRelativePath() . '/' . str_replace('.dump.yml', '', $mediaDumpFile->getFileName()) . '.exiftool-raw.xml';

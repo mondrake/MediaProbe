@@ -10,8 +10,8 @@ trait PhpUnitTrait
     {
         parent::setUp();
         $this->tempWorkDirectory = dirname(__FILE__) . '/workdir-test';
-        $filesystem = new Filesystem();
-        $filesystem->mkdir($this->tempWorkDirectory);
+        $this->filesystem = new Filesystem();
+        $this->filesystem->mkdir($this->tempWorkDirectory);
         if (method_exists($this, 'fcSetUp')) {
             $this->fcSetUp();
         }
