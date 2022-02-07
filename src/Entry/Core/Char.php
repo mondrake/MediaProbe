@@ -22,6 +22,6 @@ class Char extends EntryBase
 
     public function toString(array $options = []): string
     {
-        return $this->getValue();
+        return $this->resolveText($this->getValue());
     }
 }
