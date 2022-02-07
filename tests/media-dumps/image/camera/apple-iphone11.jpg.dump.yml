@@ -660,9 +660,9 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/plist:AppleRuntime:3/tag:RunTimeFlags:flags/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Ascii
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Char
                                                                                     valid: true
-                                                                                    format: Ascii
+                                                                                    format: Char
                                                                                     components: 1
                                                                                     bytesHash: 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
                                                                                     text: Valid
@@ -678,9 +678,9 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/plist:AppleRuntime:3/tag:RunTimeValue:value/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Ascii
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Char
                                                                                     valid: true
-                                                                                    format: Ascii
+                                                                                    format: Char
                                                                                     components: 15
                                                                                     bytesHash: ad06c18acc94443f20cde7de94d80ea6bbe354b6b317123084d95af7ebd3b52b
                                                                                     text: '222814068412041'
@@ -696,9 +696,9 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/plist:AppleRuntime:3/tag:RunTimeScale:timescale/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Ascii
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Char
                                                                                     valid: true
-                                                                                    format: Ascii
+                                                                                    format: Char
                                                                                     components: 10
                                                                                     bytesHash: 52a5d4a071d82caea87329868d22f6b8390ac3d227c6fde0d4525e69510ec479
                                                                                     text: '1000000000'
@@ -714,9 +714,9 @@ elements:
                                                                                 -
                                                                                     node: entry
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/plist:AppleRuntime:3/tag:RunTimeEpoch:epoch/entry'
-                                                                                    class: FileEye\MediaProbe\Entry\Core\Ascii
+                                                                                    class: FileEye\MediaProbe\Entry\Core\Char
                                                                                     valid: true
-                                                                                    format: Ascii
+                                                                                    format: Char
                                                                                     components: 1
                                                                                     bytesHash: 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
                                                                                     text: '0'
