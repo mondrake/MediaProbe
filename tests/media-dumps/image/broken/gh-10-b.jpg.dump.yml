@@ -437,7 +437,7 @@ elements:
                                                     node: ifd
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     class: FileEye\MediaProbe\Block\Exif\Ifd
-                                                    valid: true
+                                                    valid: false
                                                     name: ExifIFD
                                                     id: '34665'
                                                     collection: Tiff\IfdExif
@@ -1680,78 +1680,6 @@ elements:
                                                                     components: 1
                                                                     bytesHash: 888cfd4f76ade851ae4c39fd472473338ae797318d824546855c6fa60543b08a
                                                                     text: '1704'
-                                                        -
-                                                            node: tag
-                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneXResolution:41486'
-                                                            class: FileEye\MediaProbe\Block\Tag
-                                                            valid: true
-                                                            name: FocalPlaneXResolution
-                                                            id: '41486'
-                                                            collection: Tag
-                                                            elements:
-                                                                -
-                                                                    node: entry
-                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneXResolution:41486/entry'
-                                                                    class: FileEye\MediaProbe\Entry\Core\Rational
-                                                                    valid: true
-                                                                    format: Rational
-                                                                    components: 1
-                                                                    bytesHash: 60d918f709e14ad55deefc0be73d6f4b8a41531c775f639e2526e18207368259
-                                                                    text: '8114.2857142857'
-                                                        -
-                                                            node: tag
-                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneYResolution:41487'
-                                                            class: FileEye\MediaProbe\Block\Tag
-                                                            valid: true
-                                                            name: FocalPlaneYResolution
-                                                            id: '41487'
-                                                            collection: Tag
-                                                            elements:
-                                                                -
-                                                                    node: entry
-                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneYResolution:41487/entry'
-                                                                    class: FileEye\MediaProbe\Entry\Core\Rational
-                                                                    valid: true
-                                                                    format: Rational
-                                                                    components: 1
-                                                                    bytesHash: 2dc6dfd952ad4ca9f47a7ae0cd546ea34b532d3e5bbe23f3308b0c06d2352337
-                                                                    text: '8114.2857142857'
-                                                        -
-                                                            node: tag
-                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneResolutionUnit:41488'
-                                                            class: FileEye\MediaProbe\Block\Tag
-                                                            valid: true
-                                                            name: FocalPlaneResolutionUnit
-                                                            id: '41488'
-                                                            collection: Tag
-                                                            elements:
-                                                                -
-                                                                    node: entry
-                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneResolutionUnit:41488/entry'
-                                                                    class: FileEye\MediaProbe\Entry\Core\Short
-                                                                    valid: true
-                                                                    format: Short
-                                                                    components: 1
-                                                                    bytesHash: 99be5efb88ca2013bd8e4eb035fd42d5245468fe9afa70d8ba9c1c419a48c4e8
-                                                                    text: inches
-                                                        -
-                                                            node: tag
-                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FileSource:41728'
-                                                            class: FileEye\MediaProbe\Block\Tag
-                                                            valid: true
-                                                            name: FileSource
-                                                            id: '41728'
-                                                            collection: Tag
-                                                            elements:
-                                                                -
-                                                                    node: entry
-                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FileSource:41728/entry'
-                                                                    class: FileEye\MediaProbe\Entry\Core\Undefined
-                                                                    valid: true
-                                                                    format: Undefined
-                                                                    components: 1
-                                                                    bytesHash: 084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5
-                                                                    text: 'Digital Camera'
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DQT:219'
@@ -1917,8 +1845,11 @@ elements:
 log:
     ERROR:
         -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifImageHeight:40963'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
             message: 'Offset out of bounds - rel 1564 [0, 1554], abs 1594 [30, 1584]'
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SRAWQuality:46'
+            message: 'Excessive size for DataWindow'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4'
             message: 'Excessive size for DataWindow'
@@ -1952,9 +1883,6 @@ log:
             message: 'Size mismatch between IFD and index header'
     NOTICE:
         -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
-            message: 'Excessive size for DataWindow'
-        -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
             message: 'No specification for item UnknownTag in ''Canon'''
         -
@@ -1970,7 +1898,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: gh-10-b.jpg
-    FileDateTime: 1644099378
+    FileDateTime: 1644251684
     FileSize: 12043
     FileType: 2
     MimeType: image/jpeg
