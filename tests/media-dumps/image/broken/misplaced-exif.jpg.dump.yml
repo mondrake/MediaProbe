@@ -156,7 +156,7 @@ elements:
                                                             node: entry
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
                                                             class: FileEye\MediaProbe\Entry\Time
-                                                            valid: true
+                                                            valid: false
                                                             format: Ascii
                                                             components: 11
                                                             bytesHash: 8082e900bcd25e2f020ec7473bdc84b09feba7c72eba59119286e9bb8efb2dfc
