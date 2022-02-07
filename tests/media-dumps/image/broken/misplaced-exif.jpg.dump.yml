@@ -288,9 +288,9 @@ elements:
                         -
                             node: entry
                             path: '/media/jpeg/jpegSegment:COM:254/entry'
-                            class: FileEye\MediaProbe\Entry\Core\Ascii
+                            class: FileEye\MediaProbe\Entry\Core\Char
                             valid: true
-                            format: Ascii
+                            format: Char
                             components: 17
                             bytesHash: 31af3a71e475036fc7427bee0a875861b66aae02154d4d28048187025673510a
                             text: 'Created with GIMP'
@@ -435,10 +435,6 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
             message: 'Found Byte data format, expected Undefined'
-    NOTICE:
-        -
-            path: '/media/jpeg/jpegSegment:COM:254/entry'
-            message: 'Ascii entry missing final NUL character.'
 gdInfo:
     0: 320
     1: 200

@@ -114,9 +114,9 @@ elements:
                         -
                             node: entry
                             path: '/media/jpeg/jpegSegment:COM:254/entry'
-                            class: FileEye\MediaProbe\Entry\Core\Ascii
+                            class: FileEye\MediaProbe\Entry\Core\Char
                             valid: true
-                            format: Ascii
+                            format: Char
                             components: 17
                             bytesHash: 31af3a71e475036fc7427bee0a875861b66aae02154d4d28048187025673510a
                             text: 'Created with GIMP'
@@ -282,11 +282,6 @@ elements:
                             components: 2
                             bytesHash: cde66e78e5419dea74df7cf43d9aa876b8c669d40067992e719cef90ac5f3fe0
                             text: '2 byte(s) of data'
-log:
-    NOTICE:
-        -
-            path: '/media/jpeg/jpegSegment:COM:254/entry'
-            message: 'Ascii entry missing final NUL character.'
 gdInfo:
     0: 600
     1: 600
