@@ -59,7 +59,7 @@ class ItemFormat
      */
     public static function getSize(int $id): int
     {
-        return (int) Collection::get('Format')->getItemCollection($id)$collection->getPropertyValue('length');
+        return (int) Collection::get('Format')->getItemCollection($id)->getPropertyValue('length');
     }
 
     /**
