@@ -108,11 +108,14 @@ abstract class Collection
      *
      * @return Collection
      *   The collection object.
+     *
+     * @throws MediaProbeException
+     *   When the collection does not exist.
      */
     public static function getByName(string $collection_name): Collection
     {
         if (!isset(static::getMap()['collectionsByName'][$collection_name])) {
-            return null;
+            throw new MediaProbeException('Missing collection \'%s\'', $collection_name);
         }
         return static::get(static::getMap()['collectionsByName'][$collection_name]);
     }
@@ -254,12 +257,13 @@ abstract class Collection
      * @return Collection
      *   The item collection object.
      *
-     * @todo throw Exception if missing, do not return null
+     * @throws MediaProbeException
+     *   When item is not in collection.
      */
     public function getItemCollectionByName(string $item_name, $index = 0): Collection
     {
         if (!isset(static::$map['itemsByName'][$item_name][$index])) {
-            return null;
+            throw new MediaProbeException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
         }
         return $this->getItemCollection(static::$map['itemsByName'][$item_name][$index]);
     }

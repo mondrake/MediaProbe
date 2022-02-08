@@ -31,12 +31,11 @@ class ItemFormat
      *
      * @param integer $id
      *
-     * @return string|null
+     * @return string
      */
-    public static function getName(int $id): ?string
+    public static function getName(int $id): string
     {
-        $collection = Collection::get('Format')->getItemCollection($id);
-        return $collection ? $collection->getPropertyValue('name') : null;
+        return Collection::get('Format')->getItemCollection($id)->getPropertyValue('name');
     }
 
     /**
@@ -44,13 +43,11 @@ class ItemFormat
      *
      * @param string $name
      *
-     * @return int|null
+     * @return int
      */
-    public static function getFromName(string $name): ?int
+    public static function getFromName(string $name): int
     {
-        $collection = Collection::get('Format')->getItemCollectionByName($name);
-        $id = $collection ? $collection->getPropertyValue('item') : null;
-        return $id !== null ? (int) $id : null;
+        return (int) Collection::get('Format')->getItemCollectionByName($name)->getPropertyValue('item');
     }
 
     /**
@@ -58,13 +55,11 @@ class ItemFormat
      *
      * @param integer $id
      *
-     * @return int|null
+     * @return int
      */
-    public static function getSize(int $id): ?int
+    public static function getSize(int $id): int
     {
-        $collection = Collection::get('Format')->getItemCollection($id);
-        $size = $collection ? $collection->getPropertyValue('length') : null;
-        return $size !== null ? (int) $size : null;
+        return (int) Collection::get('Format')->getItemCollection($id)$collection->getPropertyValue('length');
     }
 
     /**
@@ -72,11 +67,10 @@ class ItemFormat
      *
      * @param integer $id
      *
-     * @return string|null
+     * @return string
      */
-    public static function getClass(int $id): ?string
+    public static function getClass(int $id): string
     {
-        $collection = Collection::get('Format')->getItemCollection($id);
-        return $collection ? $collection->getPropertyValue('class') : null;
+        return Collection::get('Format')->getItemCollection($id)->getPropertyValue('class');
     }
 }
