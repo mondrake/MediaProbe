@@ -48,7 +48,7 @@ abstract class Collection
      * @return array
      *   The MediaProbe specification map.
      */
-    protected static function getMap()
+    protected static function getMap(): array
     {
         if (!isset(static::$mapperClass)) {
             static::setMapperClass(null);
@@ -63,7 +63,7 @@ abstract class Collection
      * @param string $class
      *   The file containing the MediaProbe specification map.
      */
-    public static function setMapperClass($class)
+    public static function setMapperClass(string $class): void
     {
         if ($class === null) {
             static::$mapperClass = static::DEFAULT_COLLECTION_NAMESPACE . '\\Core';
@@ -78,7 +78,7 @@ abstract class Collection
      * @return array
      *   A simple array, with the list of the collection ids.
      */
-    public static function listIds()
+    public static function listIds(): array
     {
         return array_keys(static::getMap()['collections']);
     }
@@ -94,7 +94,7 @@ abstract class Collection
      * @return Collection
      *   A simple array, with the specification collections.
      */
-    public static function get($id, array $overrides = [])
+    public static function get(string $id, array $overrides = []): Collection
     {
         $class = static::DEFAULT_COLLECTION_NAMESPACE . '\\' . $id;
         return new $class($id, $overrides);
@@ -106,10 +106,10 @@ abstract class Collection
      * @param string $collection_name
      *   The collection name.
      *
-     * @return Collection|null
-     *   The collection object or null if non existent.
+     * @return Collection
+     *   The collection object.
      */
-    public static function getByName($collection_name)
+    public static function getByName(string $collection_name): Collection
     {
         if (!isset(static::getMap()['collectionsByName'][$collection_name])) {
             return null;
@@ -125,7 +125,7 @@ abstract class Collection
      * @param array $overrides
      *   (Optional) If defined, overrides properties defined in the collection.
      */
-    public function __construct($id, array $overrides = [])
+    public function __construct(string $id, array $overrides = [])
     {
         $this->id = $id;
         $this->overrides = $overrides;
@@ -134,10 +134,10 @@ abstract class Collection
     /**
      * Returns the id of the collection.
      *
-     * @return mixed
+     * @return string
      *   The id of the collection.
      */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
@@ -151,7 +151,7 @@ abstract class Collection
      * @return bool
      *   TRUE if the property exists, FALSE otherwise.
      */
-    public function hasProperty($property)
+    public function hasProperty(string $property): bool
     {
         if (array_key_exists($property, $this->overrides)) {
             return true;
@@ -165,10 +165,10 @@ abstract class Collection
      * @param string $property
      *   The property.
      *
-     * @return mixed|null
+     * @return mixed
      *   The value of the property.
      */
-    public function getPropertyValue($property)
+    public function getPropertyValue(string $property)
     {
         if (array_key_exists($property, $this->overrides)) {
             return $this->overrides[$property];
@@ -182,7 +182,7 @@ abstract class Collection
      * @return array
      *   A simple array, with values the items ids included in the collection.
      */
-    public function listItemIds()
+    public function listItemIds(): array
     {
         return array_keys(static::$map['items'] ?? []);
     }
@@ -251,12 +251,12 @@ abstract class Collection
      * @param mixed $index
      *   The item name index.
      *
-     * @return Collection|null
-     *   The item collection object, or null if missing.
+     * @return Collection
+     *   The item collection object.
      *
      * @todo throw Exception if missing, do not return null
      */
-    public function getItemCollectionByName(string $item_name, $index = 0): ?Collection
+    public function getItemCollectionByName(string $item_name, $index = 0): Collection
     {
         if (!isset(static::$map['itemsByName'][$item_name][$index])) {
             return null;
