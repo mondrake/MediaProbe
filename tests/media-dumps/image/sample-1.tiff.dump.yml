@@ -313,7 +313,7 @@ elements:
                                 -
                                     node: entry
                                     path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700/entry'
-                                    class: class: FileEye\MediaProbe\Entry\IfdApplicationNotes
+                                    class: FileEye\MediaProbe\Entry\IfdApplicationNotes
                                     valid: true
                                     format: Char
                                     components: 323
