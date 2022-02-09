@@ -2,6 +2,8 @@
 
 namespace FileEye\MediaProbe;
 
+use FileEye\MediaProbe\Data\DataFormat;
+
 /**
  * A value object defining a ListBase item.
  */
