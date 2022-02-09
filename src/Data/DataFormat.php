@@ -1,13 +1,13 @@
 <?php
 
-namespace FileEye\MediaProbe;
+namespace FileEye\MediaProbe\Data;
 
 use FileEye\MediaProbe\Collection;
 
 /**
- * Class to retrieve item format information.
+ * Class to retrieve data format information.
  */
-class ItemFormat
+abstract class DataFormat
 {
     const BYTE = 1;
     const ASCII = 2;

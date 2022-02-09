@@ -2,38 +2,38 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\ItemFormat;
+use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\CollectionException;
 
 class DataFormatTest extends MediaProbeTestCaseBase
 {
     public function testGetName()
     {
-        $this->assertSame('Ascii', ItemFormat::getName(ItemFormat::ASCII));
-        $this->assertSame('Float', ItemFormat::getName(ItemFormat::FLOAT));
-        $this->assertSame('Undefined', ItemFormat::getName(ItemFormat::UNDEFINED));
+        $this->assertSame('Ascii', DataFormat::getName(DataFormat::ASCII));
+        $this->assertSame('Float', DataFormat::getName(DataFormat::FLOAT));
+        $this->assertSame('Undefined', DataFormat::getName(DataFormat::UNDEFINED));
         $this->expectException(CollectionException::class);
         $this->expectExceptionMessage('Missing collection for item \'100\' in \'Format\'');
-        $format = ItemFormat::getName(100);
+        $format = DataFormat::getName(100);
     }
 
     public function testGetIdFromName()
     {
-        $this->assertSame(ItemFormat::ASCII, ItemFormat::getFromName('Ascii'));
-        $this->assertSame(ItemFormat::FLOAT, ItemFormat::getFromName('Float'));
-        $this->assertSame(ItemFormat::UNDEFINED, ItemFormat::getFromName('Undefined'));
+        $this->assertSame(DataFormat::ASCII, DataFormat::getFromName('Ascii'));
+        $this->assertSame(DataFormat::FLOAT, DataFormat::getFromName('Float'));
+        $this->assertSame(DataFormat::UNDEFINED, DataFormat::getFromName('Undefined'));
         $this->expectException(CollectionException::class);
         $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
-        $format = ItemFormat::getFromName('UnexistingFormat');
+        $format = DataFormat::getFromName('UnexistingFormat');
     }
 
     public function testGetSize()
     {
-        $this->assertSame(1, ItemFormat::getSize(ItemFormat::ASCII));
-        $this->assertSame(4, ItemFormat::getSize(ItemFormat::FLOAT));
-        $this->assertSame(1, ItemFormat::getSize(ItemFormat::UNDEFINED));
+        $this->assertSame(1, DataFormat::getSize(DataFormat::ASCII));
+        $this->assertSame(4, DataFormat::getSize(DataFormat::FLOAT));
+        $this->assertSame(1, DataFormat::getSize(DataFormat::UNDEFINED));
         $this->expectException(CollectionException::class);
         $this->expectExceptionMessage('Missing collection for item \'100\' in \'Format\'');
-        $format = ItemFormat::getSize(100);
+        $format = DataFormat::getSize(100);
     }
 }
