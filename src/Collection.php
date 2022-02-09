@@ -5,8 +5,6 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
-use FileEye\MediaProbe\MediaProbe;
-use FileEye\MediaProbe\MediaProbeException;
 
 /**
  * Class to retrieve IFD and TAG information from YAML specs.
@@ -61,7 +59,7 @@ abstract class Collection
      * Sets the compiled MediaProbe collection mapper class.
      *
      * @param string $class
-     *   The file containing the MediaProbe specification map.
+     *   The class containing the MediaProbe specification map.
      */
     public static function setMapperClass(string $class): void
     {
@@ -92,7 +90,7 @@ abstract class Collection
      *   (Optional) If defined, overrides properties defined in the collection.
      *
      * @return Collection
-     *   A simple array, with the specification collections.
+     *   The collection.
      */
     public static function get(string $id, array $overrides = []): Collection
     {
@@ -109,13 +107,13 @@ abstract class Collection
      * @return Collection
      *   The collection object.
      *
-     * @throws MediaProbeException
+     * @throws CollectionException
      *   When the collection does not exist.
      */
     public static function getByName(string $collection_name): Collection
     {
         if (!isset(static::getMap()['collectionsByName'][$collection_name])) {
-            throw new MediaProbeException('Missing collection \'%s\'', $collection_name);
+            throw new CollectionException('Missing collection \'%s\'', $collection_name);
         }
         return static::get(static::getMap()['collectionsByName'][$collection_name]);
     }
@@ -221,7 +219,7 @@ abstract class Collection
      * @return Collection
      *   The item collection object.
      *
-     * @throws MediaProbeException
+     * @throws CollectionException
      *   When item is not in collection and no default given.
      */
     public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], int $components_count = null, ElementInterface $context = null): Collection
@@ -238,7 +236,7 @@ abstract class Collection
             if (isset($default_id)) {
                 return static::get($default_id, $default_properties);
             }
-            throw new MediaProbeException('Missing collection for item \'%s\' in \'%s\'', $item, $this->getId());
+            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item, $this->getId());
         }
         $item_properties = static::$map['items'][$item][$index];
         unset($item_properties['collection']);
@@ -257,13 +255,13 @@ abstract class Collection
      * @return Collection
      *   The item collection object.
      *
-     * @throws MediaProbeException
+     * @throws CollectionException
      *   When item is not in collection.
      */
     public function getItemCollectionByName(string $item_name, $index = 0): Collection
     {
         if (!isset(static::$map['itemsByName'][$item_name][$index])) {
-            throw new MediaProbeException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
+            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
         }
         return $this->getItemCollection(static::$map['itemsByName'][$item_name][$index]);
     }
