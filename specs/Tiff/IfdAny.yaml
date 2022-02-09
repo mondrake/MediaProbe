@@ -1371,7 +1371,8 @@ items:
                 desc: 'Strip Row Counts'
     700:
         __todo: 'add ifd for XMP tags'
-        format: Char
+        entryClass: FileEye\MediaProbe\Entry\IfdApplicationNotes
+        format: Byte
         exifReadData:
             key: ExtensibleMetadataPlatform
         exiftool:
