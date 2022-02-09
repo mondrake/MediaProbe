@@ -48,7 +48,7 @@ class Tag extends BlockBase
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
-            $this->warning("Found {format_name} data format, expected {expected_format_names} for item {item} in '{parent}'", [
+            $this->warning("Found {format_name} data format, expected {expected_format_names} for item '{item}' in '{parent}'", [
                 'format_name' => DataFormat::getName($this->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
@@ -59,7 +59,7 @@ class Tag extends BlockBase
         // Warn if components are not as expected.
         $expected_components = $this->getCollection()->getPropertyValue('components');
         if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
-            $this->warning("Found {components} data components, expected {expected_components} for item {item} in '{parent}'", [
+            $this->warning("Found {components} data components, expected {expected_components} for item '{item}' in '{parent}'", [
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',

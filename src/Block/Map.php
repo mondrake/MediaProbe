@@ -77,13 +77,13 @@ class Map extends Index
                 continue;
             }
 
-            // Adds a 'tag' to the DOM.
-            $block = $this->addBlock($item_definition);
+            // Adds the item to the DOM.
+            $item = $this->addBlock($item_definition);
             try {
-                $block->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
+                $item->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
             } catch (DataException $e) {
-                $block->error($e->getMessage());
-                $block->valid = false;
+                $item->error($e->getMessage());
+                $item->valid = false;
             }
 
             $i++;

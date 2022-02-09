@@ -41,6 +41,19 @@ class Ifd extends ListBase
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData($i, $data_element, $i_offset, $xxx, 'Tiff\IfdAny');
+
+            // Check data is accessible, warn otherwise.
+            if ($item_definition->getDataOffset() >= $data_element->getSize()) {
+                $this->warning(
+                    'Could not access value for item \'{item}\' in \'{map}\', overflow', [
+                        'item' => $item_definition->getCollection()->getPropertyValue('name'),
+                        'map' => $this->getAttribute('name'),
+                    ]
+                );
+//                continue;
+            }
+
+            // Adds the item to the DOM.
             $item_class = $item_definition->getCollection()->getPropertyValue('class');
             $item = new $item_class($item_definition, $this);
             try {
@@ -54,7 +67,6 @@ class Ifd extends ListBase
                     $item->parseData($data_element, $item_definition->getDataOffset(), $item_data_window_size);
                 }
             } catch (DataException $e) {
-dump('xxx');
                 $item->error($e->getMessage());
                 $item->valid = false;
             }
