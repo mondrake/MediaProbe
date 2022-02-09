@@ -13,7 +13,7 @@ class DataFormatTest extends MediaProbeTestCaseBase
         $this->assertSame('Float', ItemFormat::getName(ItemFormat::FLOAT));
         $this->assertSame('Undefined', ItemFormat::getName(ItemFormat::UNDEFINED));
         $this->expectException(CollectionException::class);
-        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $this->expectExceptionMessage('Missing collection for item \'100\' in \'Format\'');
         $format = ItemFormat::getName(100);
     }
 
@@ -33,7 +33,7 @@ class DataFormatTest extends MediaProbeTestCaseBase
         $this->assertSame(4, ItemFormat::getSize(ItemFormat::FLOAT));
         $this->assertSame(1, ItemFormat::getSize(ItemFormat::UNDEFINED));
         $this->expectException(CollectionException::class);
-        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $this->expectExceptionMessage('Missing collection for item \'100\' in \'Format\'');
         $format = ItemFormat::getSize(100);
     }
 }

@@ -236,7 +236,7 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertEquals(0xD9, $collection->getItemCollectionByName('EOI')->getPropertyValue('item'));
         $this->assertEquals(0xDA, $collection->getItemCollectionByName('SOS')->getPropertyValue('item'));
         $this->expectException(CollectionException::class);
-        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $this->expectExceptionMessage('Missing collection for item \'missing\' in \'Jpeg\Jpeg\'');
         $item_collection = $collection->getItemCollectionByName('missing');
     }
 
@@ -248,7 +248,7 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertEquals('APP3', $collection->getItemCollection(0xE3)->getPropertyValue('name'));
         $this->assertEquals('JPG11', $collection->getItemCollection(0xFB)->getPropertyValue('name'));
         $this->expectException(CollectionException::class);
-        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $this->expectExceptionMessage('Missing collection for item \'100\' in \'Jpeg\Jpeg\'');
         $item_collection = $collection->getItemCollection(100);
     }
 
