@@ -46,7 +46,16 @@ class Ifd extends ListBase
             if ($item_definition->getDataOffset() >= $data_element->getSize()) {
                 $this->warning(
                     'Could not access value for item {item} in \'{ifd}\', overflow', [
-                        'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name')),
+                        'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name') ?? 'n/a'),
+                        'ifd' => $this->getAttribute('name'),
+                    ]
+                );
+                continue;
+            }
+            if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data->getSize()) {
+                $this->warning(
+                    'Could not get value for item \'{item}\' in \'{ifd}\', not enough data', [
+                        'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name') ?? 'n/a'),
                         'ifd' => $this->getAttribute('name'),
                     ]
                 );
