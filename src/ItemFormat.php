@@ -29,9 +29,7 @@ class ItemFormat
     /**
      * Returns the name of a format like 'Ascii' for the ASCII format.
      *
-     * @param integer $id
-     *
-     * @return string
+     * @throws CollectionException
      */
     public static function getName(int $id): string
     {
@@ -41,9 +39,7 @@ class ItemFormat
     /**
      * Returns the id of a format from its name.
      *
-     * @param string $name
-     *
-     * @return int
+     * @throws CollectionException
      */
     public static function getFromName(string $name): int
     {
@@ -53,9 +49,7 @@ class ItemFormat
     /**
      * Returns the size, in bytes, of a component in a given format.
      *
-     * @param integer $id
-     *
-     * @return int
+     * @throws CollectionException
      */
     public static function getSize(int $id): int
     {
@@ -65,9 +59,7 @@ class ItemFormat
     /**
      * Returns the handling class of a format.
      *
-     * @param integer $id
-     *
-     * @return string
+     * @throws CollectionException
      */
     public static function getClass(int $id): string
     {

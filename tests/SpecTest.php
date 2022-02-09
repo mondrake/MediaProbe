@@ -8,6 +8,7 @@ use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Collection;
+use FileEye\MediaProbe\CollectionException;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\ExifUserComment;
 use FileEye\MediaProbe\Entry\Time;
@@ -234,7 +235,9 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertEquals(0xD8, $collection->getItemCollectionByName('SOI')->getPropertyValue('item'));
         $this->assertEquals(0xD9, $collection->getItemCollectionByName('EOI')->getPropertyValue('item'));
         $this->assertEquals(0xDA, $collection->getItemCollectionByName('SOS')->getPropertyValue('item'));
-        $this->assertNull($collection->getItemCollectionByName('missing'));
+        $this->expectException(CollectionException::class);
+        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $item_collection = $collection->getItemCollectionByName('missing');
     }
 
     public function testJpegSegmentNames()
@@ -244,8 +247,9 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertEquals('RST3', $collection->getItemCollection(0xD3)->getPropertyValue('name'));
         $this->assertEquals('APP3', $collection->getItemCollection(0xE3)->getPropertyValue('name'));
         $this->assertEquals('JPG11', $collection->getItemCollection(0xFB)->getPropertyValue('name'));
-        $this->expectException(MediaProbeException::class);
-        $this->assertNull($collection->getItemCollection(100));
+        $this->expectException(CollectionException::class);
+        $this->expectExceptionMessage('Missing collection for item \'UnexistingFormat\' in \'Format\'');
+        $item_collection = $collection->getItemCollection(100);
     }
 
     public function testJpegSegmentTitles()
