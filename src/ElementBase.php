@@ -255,7 +255,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $root_element = $this->getRootElement();
 
         if (method_exists($root_element, 'getStopwatch')) {
-            $message = (string) $root_element->getStopwatch->getEvent() . ' ' . $message;
+            $message = (string) $root_element->getStopwatch()->getEvent() . ' ' . $message;
         }
 
         if (property_exists($root_element, 'logger')) {  // xx should be logging anyway
