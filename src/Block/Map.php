@@ -54,9 +54,10 @@ class Map extends Index
         // Build the map items.
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
-            // Adds a 'tag'.
             $n = $item * DataFormat::getSize($this->getFormat());
             $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
+
+            // Check data is accessible, warn otherwise.
             if ($item_definition->getDataOffset() >= $data->getSize()) {
                 $this->warning(
                     'Could not access value for item \'{item}\' in \'{map}\', overflow', [
@@ -73,9 +74,10 @@ class Map extends Index
                         'map' => $this->getAttribute('name'),
                     ]
                 );
-                $this->warning('Size! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
                 continue;
             }
+
+            // Adds a 'tag' to the DOM.
             $block = $this->addBlock($item_definition);
             try {
                 $block->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());
@@ -83,6 +85,7 @@ class Map extends Index
                 $block->error($e->getMessage());
                 $block->valid = false;
             }
+
             $i++;
         }
     }
