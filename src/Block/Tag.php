@@ -34,32 +34,37 @@ class Tag extends BlockBase
     {
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
-            $this->notice("Unknown item {item} in '{ifd}'", [
+            $this->notice("Unknown item {item} in '{parent}'", [
                 'item' => MediaProbe::dumpIntHex($this->getAttribute('id')),
-                'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
-        } else {
-            // Warn if format is not as expected.
-            $expected_format = $this->getCollection()->getPropertyValue('format');
-            if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
-                $expected_format_names = [];
-                foreach ($expected_format as $expected_format_id) {
-                    $expected_format_names[] = DataFormat::getName($expected_format_id);
-                }
-                $this->warning("Found {format_name} data format, expected {expected_format_names}", [
-                    'format_name' => DataFormat::getName($this->getFormat()),
-                    'expected_format_names' => implode(', ', $expected_format_names),
-                ]);
-            }
+            return;
+        }
 
-            // Warn if components are not as expected.
-            $expected_components = $this->getCollection()->getPropertyValue('components');
-            if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
-                $this->warning("Found {components} data components, expected {expected_components}", [
-                    'components' => $this->getComponents(),
-                    'expected_components' => $expected_components,
-                ]);
+        // Warn if format is not as expected.
+        $expected_format = $this->getCollection()->getPropertyValue('format');
+        if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
+            $expected_format_names = [];
+            foreach ($expected_format as $expected_format_id) {
+                $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
+            $this->warning("Found {format_name} data format, expected {expected_format_names} for item {item} in '{parent}'", [
+                'format_name' => DataFormat::getName($this->getFormat()),
+                'expected_format_names' => implode(', ', $expected_format_names),
+                'item' => $this->getAttribute('name') ?? 'n/a',
+                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+            ]);
+        }
+
+        // Warn if components are not as expected.
+        $expected_components = $this->getCollection()->getPropertyValue('components');
+        if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
+            $this->warning("Found {components} data components, expected {expected_components} for item {item} in '{parent}'", [
+                'components' => $this->getComponents(),
+                'expected_components' => $expected_components,
+                'item' => $this->getAttribute('name') ?? 'n/a',
+                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+            ]);
         }
     }
 
