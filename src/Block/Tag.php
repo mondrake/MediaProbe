@@ -32,10 +32,10 @@ class Tag extends BlockBase
      */
     public function validate()
     {
-        // Check if MediaProbe has a definition for this TAG.
+        // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
-            $this->notice("Unknown item '{item}' in '{ifd}'", [
 dump($this->getCollection());
+            $this->notice("Unknown item '{item}' in '{ifd}'", [
                 'item' => $this->getCollection()->getId(),
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
