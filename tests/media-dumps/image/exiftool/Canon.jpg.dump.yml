@@ -3243,22 +3243,22 @@ log:
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 0/0x0 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:192'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 192/0xC0 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:193'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 193/0xC1 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:168'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 168/0xA8 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:181'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 181/0xB5 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 0/0x0 in ''Canon'''
 gdInfo:
     0: 8
     1: 8
@@ -3269,7 +3269,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon.jpg
-    FileDateTime: 1644430552
+    FileDateTime: 1644443574
     FileSize: 2697
     FileType: 2
     MimeType: image/jpeg

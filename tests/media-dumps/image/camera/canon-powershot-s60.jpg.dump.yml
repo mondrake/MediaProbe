@@ -2786,19 +2786,19 @@ log:
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 0/0x0 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 0/0x0 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 0/0x0 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:24'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 24/0x18 in ''Canon'''
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
-            message: 'No specification for item UnknownTag in ''Canon'''
+            message: 'Unknown item 25/0x19 in ''Canon'''
 gdInfo:
     0: 640
     1: 480
@@ -2809,7 +2809,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: canon-powershot-s60.jpg
-    FileDateTime: 1644430552
+    FileDateTime: 1644443574
     FileSize: 42616
     FileType: 2
     MimeType: image/jpeg
