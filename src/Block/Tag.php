@@ -34,7 +34,8 @@ class Tag extends BlockBase
     {
         // Check if MediaProbe has a definition for this TAG.
         if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
-            $this->notice("No specification for item {item} in '{ifd}'", [
+            $this->notice("Unknown item '{item}' in '{ifd}'", [
+dump($this->getCollection());
                 'item' => $this->getCollection()->getId(),
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
