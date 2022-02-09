@@ -58,10 +58,11 @@ abstract class Collection
     /**
      * Sets the compiled MediaProbe collection mapper class.
      *
-     * @param string $class
-     *   The class containing the MediaProbe specification map.
+     * @param string|null $class
+     *   The class containing the MediaProbe specification map. If null, the
+     *   default one will be used.
      */
-    public static function setMapperClass(string $class): void
+    public static function setMapperClass(?string $class): void
     {
         if ($class === null) {
             static::$mapperClass = static::DEFAULT_COLLECTION_NAMESPACE . '\\Core';
