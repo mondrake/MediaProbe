@@ -54,6 +54,7 @@ class Ifd extends ListBase
                     $item->parseData($data_element, $item_definition->getDataOffset(), $item_data_window_size);
                 }
             } catch (DataException $e) {
+dump('xxx');
                 $item->error($e->getMessage());
                 $item->valid = false;
             }
