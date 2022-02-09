@@ -243,7 +243,7 @@ class Media extends BlockBase
     }
 
     /**
-     * @todo
+     * Returns the stopwatch.
      */
     public function getStopwatch(): Stopwatch
     {
