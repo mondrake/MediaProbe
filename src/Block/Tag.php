@@ -145,27 +145,21 @@ dump($this->getCollection());
         if ($name ==! null) {
             $msg .= ':{name}';
         }
-//$title = $this->getCollection()->getPropertyValue('title');
-//if ($title ==! null) {
-//    $msg .= ' ({title})';
-//}
         $item = $this->getAttribute('id');
         if ($item ==! null) {
             $msg .= ' ({item})';
         }
-        if (is_numeric($item)) {
-            $item = $item . '/0x' . strtoupper(dechex($item));
-        }
+        $item .= MediaProbe::dumpIntHex($item);
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} s {size}';
-            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+            $offset = MediaProbe::dumpIntHex($data_element->getAbsoluteOffset());
         } else {
             $msg .= ' size {size} byte(s)';
         }
         $msg .= ', f {format}, c {components}';
         $this->debug($msg, [
             'seq' => $seq,
-            'ifdoffset' => $item_definition_offset . '/0x' . strtoupper(dechex($item_definition_offset)),
+            'ifdoffset' => MediaProbe::dumpIntHex($item_definition_offset),
             'format' => DataFormat::getName($this->getDefinition()->getFormat()),
             'components' => $this->getDefinition()->getValuesCount(),
             'node' => $node,
