@@ -736,7 +736,6 @@ items:
     700:
         __todo: 'add ifd for XMP tags'
         entryClass: FileEye\MediaProbe\Entry\IfdApplicationNotes
-        format: Byte
         exifReadData:
             key: 'THUMBNAIL::ExtensibleMetadataPlatform'
         exiftool:
