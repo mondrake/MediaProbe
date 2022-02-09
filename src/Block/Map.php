@@ -59,16 +59,20 @@ class Map extends Index
             $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
             if ($item_definition->getDataOffset() >= $data->getSize()) {
                 $this->warning(
-                    'Could not access value for item \'{item}\' in \'{map}\', not enough data', [
-                        'item' => 'xxx',
+                    'Could not access value for item \'{item}\' in \'{map}\', overflow', [
+                        'item' => $item_definition->getCollection()->getPropertyValue('name'),
                         'map' => $this->getAttribute('name'),
                     ]
                 );
-dump($item_definition);
-                $this->warning('Offset! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
                 continue;
             }
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data->getSize()) {
+                $this->warning(
+                    'Could not get value for item \'{item}\' in \'{map}\', not enough data', [
+                        'item' => $item_definition->getCollection()->getPropertyValue('name'),
+                        'map' => $this->getAttribute('name'),
+                    ]
+                );
                 $this->warning('Size! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
                 continue;
             }
