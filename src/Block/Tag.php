@@ -35,7 +35,7 @@ class Tag extends BlockBase
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
             $this->notice("Unknown item {item} in '{ifd}'", [
-                'item' => $this->getAttribute('id'),
+                'item' => MediaProbe::dumpIntHex($this->getAttribute('id')),
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
         } else {
