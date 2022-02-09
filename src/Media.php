@@ -108,20 +108,16 @@ class Media extends BlockBase
      */
     public static function parse(DataElement $data_element, ?LoggerInterface $external_logger = null, ?string $fail_level = null): Media
     {
-        $this->getStopwatch()->start('media-parsing');
-
         // Determine the media format.
-        $media_format_collection = static::getMatchingMediaCollection($data_element);
+        $media_format = new ItemDefinition(static::getMatchingMediaCollection($data_element));
 
         // Build the Media object and its immediate child, that represents the
         // media format. Then parse the media according to the media format.
         $media = new static($external_logger, $fail_level);
+        $media->getStopwatch()->start('media-parsing');
         $media->debugBlockInfo($data_element);
-
-        $media_format = new ItemDefinition($media_format_collection);
         $media->addBlock($media_format)->parseData($data_element);
-
-        $this->getStopwatch()->stop('media-parsing');
+        $media->getStopwatch()->stop('media-parsing');
 
         return $media;
     }
