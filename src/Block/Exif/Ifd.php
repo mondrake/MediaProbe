@@ -45,12 +45,12 @@ class Ifd extends ListBase
             // Check data is accessible, warn otherwise.
             if ($item_definition->getDataOffset() >= $data_element->getSize()) {
                 $this->warning(
-                    'Could not access value for item \'{item}\' in \'{map}\', overflow', [
-                        'item' => $item_definition->getCollection()->getPropertyValue('name'),
-                        'map' => $this->getAttribute('name'),
+                    'Could not access value for item {item} in \'{ifd}\', overflow', [
+                        'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name')),
+                        'ifd' => $this->getAttribute('name'),
                     ]
                 );
-//                continue;
+                continue;
             }
 
             // Adds the item to the DOM.
