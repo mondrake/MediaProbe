@@ -58,12 +58,19 @@ class Map extends Index
             $n = $item * DataFormat::getSize($this->getFormat());
             $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
             if ($item_definition->getDataOffset() >= $data->getSize()) {
+                $this->warning(
+                    'Could not access value for item \'{item}\' in \'{map}\', not enough data', [
+                        'item' => 'xxx',
+                        'map' => $this->getAttribute('name'),
+                    ]
+                );
+dump($item_definition);
                 $this->warning('Offset! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
-//                continue;
+                continue;
             }
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data->getSize()) {
                 $this->warning('Size! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
-//                continue;
+                continue;
             }
             $block = $this->addBlock($item_definition);
             try {
