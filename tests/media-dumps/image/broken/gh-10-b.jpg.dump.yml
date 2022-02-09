@@ -1377,14 +1377,6 @@ elements:
                                                                                     components: 1
                                                                                     bytesHash: 96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
                                                                                     text: Normal
-                                                                        -
-                                                                            node: tag
-                                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SRAWQuality:46'
-                                                                            class: FileEye\MediaProbe\Block\Tag
-                                                                            valid: false
-                                                                            name: SRAWQuality
-                                                                            id: '46'
-                                                                            collection: Tag
                                                                 -
                                                                     node: index
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2'
@@ -1848,9 +1840,6 @@ log:
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
             message: 'Offset out of bounds - rel 1564 [0, 1554], abs 1594 [30, 1584]'
         -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SRAWQuality:46'
-            message: 'Excessive size for DataWindow'
-        -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4'
             message: 'Excessive size for DataWindow'
         -
@@ -1881,6 +1870,9 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
             message: 'Size mismatch between IFD and index header'
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
+            message: 'Could not access value for item ''SRAWQuality'' in ''CanonCameraSettings'', overflow'
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
@@ -1898,7 +1890,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: gh-10-b.jpg
-    FileDateTime: 1644251684
+    FileDateTime: 1644430552
     FileSize: 12043
     FileType: 2
     MimeType: image/jpeg
