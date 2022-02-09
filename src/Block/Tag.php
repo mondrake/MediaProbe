@@ -34,9 +34,8 @@ class Tag extends BlockBase
     {
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getId(), ['VoidCollection', 'UnknownTag'])) {
-dump($this->getCollection());
-            $this->notice("Unknown item '{item}' in '{ifd}'", [
-                'item' => $this->getCollection()->getId(),
+            $this->notice("Unknown item {item} in '{ifd}'", [
+                'item' => $this->getAttribute('id'),
                 'ifd' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
         } else {
@@ -149,7 +148,7 @@ dump($this->getCollection());
         if ($item ==! null) {
             $msg .= ' ({item})';
         }
-        $item .= MediaProbe::dumpIntHex($item);
+        $item = MediaProbe::dumpIntHex($item);
         if ($data_element instanceof DataWindow) {
             $msg .= ' @{offset} s {size}';
             $offset = MediaProbe::dumpIntHex($data_element->getAbsoluteOffset());
