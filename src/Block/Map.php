@@ -57,7 +57,7 @@ class Map extends Index
             // Adds a 'tag'.
             $n = $item * DataFormat::getSize($this->getFormat());
             $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
-            if ($item_definition->getDataOffset() > $data->getSize()) {
+            if ($item_definition->getDataOffset() >= $data->getSize()) {
                 $this->warning('Offset! ' . $data->getSize() . ' -> ' . $item_definition->getDataOffset() . ' ' . $item_definition->getSize());
 //                continue;
             }
