@@ -63,8 +63,8 @@ jobs:
         php examples/dump-media.php -d tests/media-samples/image/broken/gh-10-b.jpg
 
     - name: Run test suite
-      continue-on-error: true
       run: vendor/bin/phpunit ./tests
+#      continue-on-error: true
 
     - name: Code style test
       if: ${{ matrix.php-version == 7.4 }}
@@ -72,11 +72,11 @@ jobs:
 
 # Remove the comment to the lines below during development, to refresh the
 # media file dumps.
-    - name: Update media dumps
-      run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
+#    - name: Update media dumps
+#      run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
 
-    - name: Upload media dumps
-      uses: actions/upload-artifact@v2
-      with:
-        name: media-dumps
-        path: tests/media-dumps
+#    - name: Upload media dumps
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: media-dumps
+#        path: tests/media-dumps
