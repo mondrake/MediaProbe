@@ -52,8 +52,10 @@ class Ifd extends ListBase
                 continue;
             }
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data_element->getSize()) {
-                $xxxa = $data_element->getLong($i_offset);
+                $xxxa = $data_element->getLong($i_offset + 8);
+dump(MediaProbe::dumpIntHex($xxxa));
                 $xxxb = $data_element->getShort($xxxa);
+dump(MediaProbe::dumpIntHex($xxxb));
                 $this->debug(
                     'Item Offset {o} Components {c} Format {f} Formatsize {fs} Size {s} DataElement Size {des}', [
                         'o' => MediaProbe::dumpIntHex($data_element->getAbsoluteOffset($item_definition->getDataOffset())),
