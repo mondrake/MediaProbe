@@ -58,7 +58,7 @@ class Ifd extends ListBase
                         'o' => MediaProbe::dumpIntHex($data_element->getAbsoluteOffset($item_definition->getDataOffset())),
                         'c' => $item_definition->getValuesCount(),
                         'f' => $item_definition->getFormat(),
-                        'fs' => DataFormat::getSize($item_definition->getFormat());
+                        'fs' => DataFormat::getSize($item_definition->getFormat()),
                         's' => MediaProbe::dumpIntHex($item_definition->getSize()),
                         'des' => MediaProbe::dumpIntHex($data_element->getSize()),
                     ]
