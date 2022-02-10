@@ -9,6 +9,7 @@ use FileEye\MediaProbe\Block\Thumbnail;
 use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
+use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ElementInterface;
@@ -53,8 +54,11 @@ class Ifd extends ListBase
             }
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data_element->getSize()) {
                 $this->debug(
-                    'Item Offset {o} Size {s} DataElement Size {des}', [
+                    'Item Offset {o} Components {c} Format {f} Formatsize {fs} Size {s} DataElement Size {des}', [
                         'o' => MediaProbe::dumpIntHex($data_element->getAbsoluteOffset($item_definition->getDataOffset())),
+                        'c' => $item_definition->getValuesCount();
+                        'f' => $item_definition->getFormat();
+                        'fs' => DataFormat::getSize($item_definition->getFormat());
                         's' => MediaProbe::dumpIntHex($item_definition->getSize()),
                         'des' => MediaProbe::dumpIntHex($data_element->getSize()),
                     ]
