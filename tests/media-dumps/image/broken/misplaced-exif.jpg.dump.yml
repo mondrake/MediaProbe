@@ -458,7 +458,7 @@ exifReadData:
         ByteOrderMotorola: 0
         Thumbnail.FileType: 2
         Thumbnail.MimeType: image/jpeg
-    Title: '?'
+    Title: ''
     ImageDescription: Test1
     DateTime: '1509749992'
     GPS_IFD_Pointer: 91
