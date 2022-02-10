@@ -63,7 +63,7 @@ class Tag extends BlockBase
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $this->getParentElement() ? $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a' : 'n/a',
             ]);
         }
     }
