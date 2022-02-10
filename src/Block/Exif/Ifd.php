@@ -30,7 +30,6 @@ class Ifd extends ListBase
      */
     public function parseData(DataElement $data_element, int $start = 0, ?int $size = null, $xxx = 0): void
     {
-        //$ifd_data = new DataWindow($data_element, $start, $size);
         $offset = $this->getDefinition()->getDataOffset();
 
         // Get the number of entries.
@@ -55,13 +54,13 @@ class Ifd extends ListBase
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data_element->getSize()) {
                 $this->debug(
                     'Item Offset {o} Size {s} DataElement Size {des}', [
-                        'o' => $item_definition->getDataOffset(),
+                        'o' => MediaProbe::dumpIntHex($item_definition->getDataOffset()),
                         's' => $item_definition->getSize(),
                         'des' => $data_element->getSize(),
                     ]
                 );
                 $this->warning(
-                    'Could not get value for item \'{item}\' in \'{ifd}\', not enough data', [
+                    'Could not get value for item {item} in \'{ifd}\', not enough data', [
                         'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name') ?? 'n/a'),
                         'ifd' => $this->getAttribute('name'),
                     ]
