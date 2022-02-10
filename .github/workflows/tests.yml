@@ -64,7 +64,7 @@ jobs:
 
     - name: Run test suite
       run: vendor/bin/phpunit ./tests
-      continue-on-error: true
+#      continue-on-error: true
 
     - name: Code style test
       if: ${{ matrix.php-version == 7.4 }}
