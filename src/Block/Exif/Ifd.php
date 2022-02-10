@@ -52,7 +52,7 @@ class Ifd extends ListBase
                 );
                 continue;
             }
-            $this->debug(
+/*            $this->debug(
                 'Item Offset {o} Components {c} Format {f} Formatsize {fs} Size {s} DataElement Size {des}', [
                     'o' => MediaProbe::dumpIntHex($data_element->getAbsoluteOffset($item_definition->getDataOffset())),
                     'c' => $item_definition->getValuesCount(),
@@ -61,7 +61,7 @@ class Ifd extends ListBase
                     's' => MediaProbe::dumpIntHex($item_definition->getSize()),
                     'des' => MediaProbe::dumpIntHex($data_element->getSize()),
                 ]
-            );
+            );*/
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data_element->getSize()) {
                 $this->warning(
                     'Could not get value for item {item} in \'{ifd}\', not enough data', [
@@ -69,7 +69,7 @@ class Ifd extends ListBase
                         'ifd' => $this->getAttribute('name'),
                     ]
                 );
-//                continue;
+                continue;
             }
 
             // Adds the item to the DOM.
