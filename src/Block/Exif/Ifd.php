@@ -54,7 +54,7 @@ class Ifd extends ListBase
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $data_element->getSize()) {
                 $this->debug(
                     'Item Offset {o} Size {s} DataElement Size {des}', [
-                        'o' => MediaProbe::dumpIntHex($item_definition->getDataOffset()),
+                        'o' => MediaProbe::dumpIntHex($data_element->getAbsoluteOffset($item_definition->getDataOffset())),
                         's' => MediaProbe::dumpIntHex($item_definition->getSize()),
                         'des' => MediaProbe::dumpIntHex($data_element->getSize()),
                     ]
