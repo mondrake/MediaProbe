@@ -1477,14 +1477,6 @@ elements:
                                                                             bytesHash: 10f8d94bbf47c09472dbc948640fe8abb24dce82f232d7990f91727a26dfddca
                                                                             text: '384 384 384 384'
                                                                 -
-                                                                    node: map
-                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4'
-                                                                    class: FileEye\MediaProbe\Block\Map
-                                                                    valid: false
-                                                                    name: CanonShotInfo
-                                                                    id: '4'
-                                                                    collection: ExifMakerNotes\Canon\ShotInfo
-                                                                -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:FileNumber:8'
                                                                     class: FileEye\MediaProbe\Block\Tag
@@ -1776,17 +1768,17 @@ log:
     ERROR:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
-            message: 'Offset out of bounds - rel 1564 [0, 1554], abs 1594 [30, 1584]'
+            message: 'Offset out of bounds - rel 1572 [0, 1554], abs 1602 [30, 1584]'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
             message: 'Size mismatch between IFD and index header'
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4'
-            message: 'DataWindow (offset: 555 size: 68) out of bounds of DataElement (size: 606)'
     WARNING:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
             message: 'Could not access value for item ''SRAWQuality'' in ''CanonCameraSettings'', overflow'
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
+            message: 'Could not get value for item ''CanonShotInfo'' in ''Canon'', not enough data'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
             message: 'Could not access value for item ''n/a'' in ''Canon'', overflow'
@@ -1821,7 +1813,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: gh-10-b.jpg
-    FileDateTime: 1644443574
+    FileDateTime: 1644525798
     FileSize: 12043
     FileType: 2
     MimeType: image/jpeg
