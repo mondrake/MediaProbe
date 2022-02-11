@@ -82,11 +82,6 @@ class Tiff extends BlockBase
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
         for ($i = 0; $i <= 2; $i++) {
-            // IFD1 shouldn't link further.
-            if ($i === 2) {
-                $this->error('IFD1 should not link to another IFD');
-                continue;
-            }
 
             // Check data is accessible, warn otherwise.
             if ($ifd_offset >= $data_element->getSize() || $ifd_offset + 4 > $data_element->getSize()) {
@@ -131,6 +126,12 @@ class Tiff extends BlockBase
             // If next IFD offset is 0 we are finished.
             if ($ifd_offset === 0) {
                 break;
+            }
+
+            // IFD1 shouldn't link further.
+            if ($i === 1) {
+                $this->error('IFD1 should not link to another IFD');
+                continue;
             }
         }
     }
