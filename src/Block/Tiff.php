@@ -81,7 +81,7 @@ class Tiff extends BlockBase
         }
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
-        for ($i = 0; $i <= 2; $i++) {
+        for ($i = 0; $i <= 1; $i++) {
 
             // Check data is accessible, warn otherwise.
             if ($ifd_offset >= $data_element->getSize() || $ifd_offset + 4 > $data_element->getSize()) {
