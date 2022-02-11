@@ -131,7 +131,7 @@ class Tiff extends BlockBase
             // IFD1 shouldn't link further.
             if ($i === 1) {
                 $this->error('IFD1 should not link to another IFD');
-                continue;
+                break;
             }
         }
     }
