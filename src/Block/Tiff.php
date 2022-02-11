@@ -89,25 +89,44 @@ class Tiff extends BlockBase
                 break;
             }
 
-            try {
-                // Create and load the IFDs. Note that the data element cannot
-                // be split in windows since any pointer will refer to the
-                // entire segment space.
-                $ifd_class = $this->getCollection()->getItemCollection($i)->getPropertyValue('class');
-                $ifd_tags_count = $data->getShort($ifd_offset);
-                $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), DataFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
-                $ifd = new $ifd_class($ifd_item, $this);
-                $ifd->parseData($data);
+            // Create and load the IFDs. Note that the data element cannot
+            // be split in windows since any pointer will refer to the
+            // entire segment space.
+            $ifd_class = $this->getCollection()->getItemCollection($i)->getPropertyValue('class');
+            $ifd_tags_count = $data->getShort($ifd_offset);
+            $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), DataFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
 
-                // Offset to next IFD.
-                $ifd_offset = $data->getLong($ifd_offset + $ifd_tags_count * 12 + 2);
+            // Check data is accessible, warn otherwise.
+            if ($ifd_item->getDataOffset() >= $data->getSize()) {
+                $this->warning(
+                    'Could not access data for {item}, overflow', [
+                        'item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
+                    ]
+                );
+                continue;
+            }
+            if ($ifd_item->getDataOffset() +  $ifd_item->getSize() > $data_element->getSize()) {
+                $this->warning(
+                    'Not enough data for {item}', [
+                        'item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
+                    ]
+                );
+                continue;
+            }
+
+            $ifd = new $ifd_class($ifd_item, $this);
+            try {
+                $ifd->parseData($data);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
                     'msg' => $e->getMessage(),
                 ]);
-                break;
+                continue;
             }
+
+            // Offset to next IFD.
+            $ifd_offset = $data->getLong($ifd_offset + $ifd_tags_count * 12 + 2);
 
             // If next IFD offset is 0 we are finished.
             if ($ifd_offset === 0) {
