@@ -862,14 +862,13 @@ elements:
                             bytesHash: e10c8cb376b41e426480944fa8de7a0e6796b32fbfb77e6c016529cb3a20e1f6
                             text: '3504 byte(s) of data'
 log:
-    ERROR:
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
-            message: 'Incorrect version data.'
+    WARNING:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
             message: 'Invalid EXIF text encoding for UserComment.'
-    WARNING:
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
+            message: 'Incorrect version data.'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864'
             message: 'Found Byte data format, expected Undefined for item ''ExifVersion'' in ''IFD0'''
