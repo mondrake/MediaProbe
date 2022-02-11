@@ -105,7 +105,7 @@ class Tiff extends BlockBase
                 );
                 continue;
             }
-            if ($ifd_item->getDataOffset() +  $ifd_item->getSize() > $data_element->getSize()) {
+            if ($ifd_item->getDataOffset() +  $ifd_item->getSize() > $data->getSize()) {
                 $this->warning(
                     'Not enough data for {item}', [
                         'item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
