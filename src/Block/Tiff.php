@@ -82,13 +82,11 @@ class Tiff extends BlockBase
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
         for ($i = 0; $i <= 1; $i++) {
-
             // Check data is accessible, warn otherwise.
             if ($ifd_offset >= $data_element->getSize() || $ifd_offset + 4 > $data_element->getSize()) {
                 $this->warning(
-                    'Could not determine number of entries for {item}, overflow', [
-                        'item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
-                    ]
+                    'Could not determine number of entries for {item}, overflow',
+                    ['item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name')]
                 );
                 continue;
             }
@@ -97,9 +95,8 @@ class Tiff extends BlockBase
             $ifd_tags_count = $data_element->getShort($ifd_offset);
             if ($ifd_offset + $ifd_tags_count * 4 > $data_element->getSize()) {
                 $this->warning(
-                    'Invalid data for {item}', [
-                        'item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
-                    ]
+                    'Invalid data for {item}',
+                    ['item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name')]
                 );
                 continue;
             }
