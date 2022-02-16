@@ -1,9 +1,10 @@
 <?php
 
-namespace FileEye\MediaProbe;
+namespace FileEye\MediaProbe\Collection;
 
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Tag;
+use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
 
 /**
