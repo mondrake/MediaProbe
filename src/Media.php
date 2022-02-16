@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tiff;
+use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Data\DataString;
@@ -136,7 +137,7 @@ class Media extends BlockBase
      */
     protected static function getMatchingMediaCollection(DataElement $data_element): Collection
     {
-        $media_collection = Collection::get('Media');
+        $media_collection = CollectionFactory::get('Media');
         // Loop through the 'Media' collection items, each of which defines a
         // media format collection, and checks if the media matches the format.
         // When a match is found, return the media format collection.
@@ -162,7 +163,7 @@ class Media extends BlockBase
      */
     public function __construct(?LoggerInterface $external_logger, ?string $fail_level)
     {
-        $media = new ItemDefinition(Collection::get('Media'));
+        $media = new ItemDefinition(CollectionFactory::get('Media'));
         parent::__construct($media);
         $this->logger = (new Logger('mediaprobe'))
           ->pushHandler(new TestHandler(Logger::INFO))
