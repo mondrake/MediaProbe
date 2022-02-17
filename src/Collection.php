@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe;
 
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Tag;
+use FileEye\MediaProbe\Collection\CollectionException;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
 
