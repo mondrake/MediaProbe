@@ -30,14 +30,6 @@ abstract class CollectionBase implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function getId(): string
-    {
-        return $this->getPropertyValue('id');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getProperties(): array
     {
         return static::$map;
@@ -109,7 +101,7 @@ abstract class CollectionBase implements CollectionInterface
             if (isset($default_id)) {
                 return CollectionFactory::get($default_id, $default_properties);
             }
-            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item, $this->getId());
+            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item, $this->getPropertyValue('id'));
         }
         $item_properties = $this->getPropertyValue('items')[$item][$index];
         unset($item_properties['collection']);
@@ -123,7 +115,7 @@ abstract class CollectionBase implements CollectionInterface
     public function getItemCollectionByName(string $item_name, $index = 0): CollectionInterface
     {
         if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
-            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
+            throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getPropertyValue('id'));
         }
         return $this->getItemCollection($this->getPropertyValue('itemsByName')[$item_name][$index]);
     }
