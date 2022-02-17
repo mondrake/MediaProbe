@@ -35,7 +35,7 @@ abstract class CollectionBase implements CollectionInterface
     {
         $this->id = $id;
         $this->overrides = $overrides;
-dump([$id, $this->getProperties()]);
+dump([$id, $this->getPropertyValue('id'), $id != $this->getPropertyValue('id') ? '************************' : '']);
     }
 
     /**
