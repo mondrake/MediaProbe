@@ -133,7 +133,7 @@ abstract class CollectionBase
      * @throws CollectionException
      *   When item is not in collection and no default given.
      */
-    public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], int $components_count = null, ElementInterface $context = null): Collection
+    public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], int $components_count = null, ElementInterface $context = null): CollectionBase
     {
         if ($index === null) {
             if ($context === null) {
@@ -169,7 +169,7 @@ abstract class CollectionBase
      * @throws CollectionException
      *   When item is not in collection.
      */
-    public function getItemCollectionByName(string $item_name, $index = 0): Collection
+    public function getItemCollectionByName(string $item_name, $index = 0): CollectionBase
     {
         if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
             throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
