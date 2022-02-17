@@ -20,13 +20,6 @@ abstract class CollectionFactory
     protected static $collectionIndex;
 
     /**
-     * Default namespace for concrete Collection classes.
-     *
-     * @var string
-     */
-    protected static $defaultNamespace = __NAMESPACE__;
-
-    /**
      * Sets the compiled MediaProbe collection mapper class.
      *
      * @param string|null $class
@@ -34,7 +27,7 @@ abstract class CollectionFactory
      */
     public static function setCollectionIndex(?string $class): void
     {
-        static::$collectionIndex = $class === null ? new Core('CollectionIndex') : new $class('CollectionIndex');
+        static::$collectionIndex = $class === null ? new CollectionIndex('CollectionIndex') : new $class('CollectionIndex');
     }
 
     /**
@@ -80,7 +73,7 @@ abstract class CollectionFactory
         if (!isset(static::getCollectionIndex()->getPropertyValue('collections')[$id])) {
             throw new CollectionException('Missing collection \'%s\' from the index', $id);
         }
-        $class = static::$defaultNamespace . '\\' . $id;
+        $class = static::getCollectionIndex()->getNamespace() . '\\' . $id;
         return new $class($id, $overrides);
     }
 

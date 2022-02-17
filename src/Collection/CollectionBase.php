@@ -1,17 +1,11 @@
 <?php
 
-namespace FileEye\MediaProbe;
-
-use FileEye\MediaProbe\Block\BlockBase;
-use FileEye\MediaProbe\Block\Tag;
-use FileEye\MediaProbe\Collection\CollectionException;
-use FileEye\MediaProbe\Collection\CollectionFactory;
-use FileEye\MediaProbe\Entry\Core\EntryInterface;
+namespace FileEye\MediaProbe\Collection;
 
 /**
  * Class to retrieve IFD and TAG information from YAML specs.
  */
-abstract class Collection
+abstract class CollectionBase
 {
     /**
      * The collection id.
