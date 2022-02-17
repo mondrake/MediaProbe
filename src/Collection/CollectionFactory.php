@@ -56,17 +56,12 @@ abstract class CollectionFactory
 
     /**
      * Returns a collection's specification map.
-     *
-     * @param string $map
-     *   The class containing the MediaProbe specification map.
-     *
-     * @return array
-     *   The MediaProbe specification map.
      */
-    public static function getCollectionMap(string $map): array
+    public static function getCollectionProperties(string $id): array
     {
         $class = static::getMapperClass();
-        return $class::$map;
+dump($id, $class);
+        return $class::$id;
     }
 
     /**

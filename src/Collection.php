@@ -52,6 +52,14 @@ abstract class Collection
     }
 
     /**
+     * Returns the static properties of the collection.
+     */
+    public function getProperties(): array
+    {
+        return CollectionFactory::getCollectionProperties($this->id);
+    }
+
+    /**
      * Determines if a property exists.
      *
      * @param string $property
