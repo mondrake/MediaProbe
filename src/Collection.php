@@ -56,7 +56,7 @@ abstract class Collection
      */
     public function getProperties(): array
     {
-        return CollectionFactory::getCollectionProperties($this->id);
+        return static::$map;
     }
 
     /**

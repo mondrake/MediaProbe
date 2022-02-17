@@ -41,7 +41,7 @@ class SpecCompilerTest extends MediaProbeTestCaseBase
     public function tearDown(): void
     {
         $this->fs->remove($this->testResourceDirectory);
-        CollectionFactory::setMapperClass(null);
+        CollectionFactory::setIndex(null);
         parent::tearDown();
     }
 
@@ -67,8 +67,8 @@ class SpecCompilerTest extends MediaProbeTestCaseBase
     {
         $compiler = new SpecCompiler();
         $compiler->compile(__DIR__ . '/fixtures/spec/valid_stub', $this->testResourceDirectory, 'FileEye\MediaProbe\Test\TestClasses');
-        CollectionFactory::setMapperClass(Core::class);
-        $this->assertCount(4, CollectionFactory::listIds());
+        CollectionFactory::setIndex(Core::class);
+        $this->assertCount(4, CollectionFactory::listCollections());
 
         $tiff_mock = $this->getMockBuilder(Tiff::class)
             ->disableOriginalConstructor()

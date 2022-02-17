@@ -13,55 +13,41 @@ use FileEye\MediaProbe\Entry\Core\EntryInterface;
 abstract class CollectionFactory
 {
     /**
-     * Default namespace for concrete Collection classes.
+     * The collections' index.
+     *
+     * @var Collection
      */
-    const DEFAULT_COLLECTION_NAMESPACE = 'FileEye\\MediaProbe\\Collection';
+    protected static $collectionIndex;
 
     /**
-     * The collection mapper class.
+     * Default namespace for concrete Collection classes.
      *
      * @var string
      */
-    protected static $mapperClass;
+    protected static $defaultNamespace = __NAMESPACE__;
 
     /**
      * Sets the compiled MediaProbe collection mapper class.
      *
      * @param string|null $class
-     *   The class containing the MediaProbe specification map. If null, the
-     *   default one will be used.
+     *   The FQCN of the class containing the MediaProbe specification mapper. If null, the default one will be used.
      */
-    public static function setMapperClass(?string $class): void
+    public static function setIndex(?string $class): void
     {
-        if ($class === null) {
-            static::$mapperClass = Core::class;
-        } else {
-            static::$mapperClass = $class;
-        }
+        static::$collectionIndex = $class === null ? new Core() : new $class();
     }
 
     /**
      * Gets the compiled MediaProbe collection mapper class.
      *
-     * In case the map is not yet initialized, defaults to the pre-compiled
-     * one.
+     * In case the map is not yet initialized, defaults to the pre-compiled one.
      */
-    protected static function getMapperClass(): string
+    protected static function getIndex(): Collection
     {
-        if (!isset(static::$mapperClass)) {
-            static::setMapperClass(null);
+        if (!isset(static::$collectionIndex)) {
+            static::setIndex(null);
         }
-        return static::$mapperClass;
-    }
-
-    /**
-     * Returns a collection's specification map.
-     */
-    public static function getCollectionProperties(string $id): array
-    {
-        $class = static::getMapperClass();
-dump($id, $class);
-        return $class::$id;
+        return static::$collectionIndex;
     }
 
     /**
@@ -70,9 +56,9 @@ dump($id, $class);
      * @return array
      *   A simple array, with the list of the collection ids.
      */
-    public static function listIds(): array
+    public static function listCollections(): array
     {
-        return array_keys(static::getMapperClass()['collections']);
+        return array_keys(static::getIndex()->getPropertyValue('collections'));
     }
 
     /**
@@ -85,10 +71,16 @@ dump($id, $class);
      *
      * @return Collection
      *   The collection.
+     *
+     * @throws CollectionException
+     *   When the collection does not exist.
      */
     public static function get(string $id, array $overrides = []): Collection
     {
-        $class = static::DEFAULT_COLLECTION_NAMESPACE . '\\' . $id;
+        if (!isset(static::getIndex()->hasProperty('collections')[$id])) {
+            throw new CollectionException('Missing collection \'%s\'', $id);
+        }
+        $class = static::$defaultNamespace . '\\' . $id;
         return new $class($id, $overrides);
     }
 
@@ -106,9 +98,9 @@ dump($id, $class);
      */
     public static function getByName(string $collection_name): Collection
     {
-        if (!isset(static::getMapperClass()['collectionsByName'][$collection_name])) {
+        if (!isset(static::getIndex()->hasProperty('collectionsByName')[$collection_name])) {
             throw new CollectionException('Missing collection \'%s\'', $collection_name);
         }
-        return static::get(static::getMapperClass()['collectionsByName'][$collection_name]);
+        return static::get(static::getIndex()->getPropertyValue('collectionsByName')[$collection_name]);
     }
 }
