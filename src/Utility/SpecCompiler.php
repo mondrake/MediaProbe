@@ -96,6 +96,8 @@ class SpecCompiler
         $collection_namespace = $collection_namespace ?: static::DEFAULT_COLLECTION_NAMESPACE;
 //        $this->fs->remove($this->finder->files()->in($collection_path));
 
+        $this->map['id'] = 'CollectionIndex';
+
         // Get formats.
         $formats_yaml = Yaml::parse(file_get_contents($yamlDirectory . DIRECTORY_SEPARATOR . 'Format.yaml'));
         foreach ($formats_yaml['items'] as $id => $item) {
