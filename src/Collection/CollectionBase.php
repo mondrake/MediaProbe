@@ -2,8 +2,10 @@
 
 namespace FileEye\MediaProbe\Collection;
 
+use FileEye\MediaProbe\ElementInterface;
+
 /**
- * Class to retrieve IFD and TAG information from YAML specs.
+ * Class holding metadata specification information as a collection of properties.
  */
 abstract class CollectionBase
 {
@@ -115,7 +117,6 @@ abstract class CollectionBase
     private function getItemCollectionIndex(string $item_id, ?int $components_count, ElementInterface $context)
     {
         $entry_class = $this->getPropertyValue('items')[$item_id][0]['entryClass'] ?? null;
-
         return $entry_class ? $entry_class::resolveItemCollectionIndex($components_count, $context) : 0;
     }
 
