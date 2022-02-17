@@ -69,7 +69,7 @@ class ItemDefinition
     /**
      * @todo
      */
-    public function getCollection(): Collection
+    public function getCollection(): CollectionBase
     {
         return $this->collection;
     }

@@ -90,7 +90,7 @@ abstract class BlockBase extends ElementBase
      *
      * @return \FileEye\MediaProbe\Collection
      */
-    public function getCollection(): Collection
+    public function getCollection(): CollectionBase
     {
         return $this->getDefinition()->getCollection();
     }

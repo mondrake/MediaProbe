@@ -135,7 +135,7 @@ class Media extends BlockBase
      * @throws InvalidFileException
      *            On failure.
      */
-    protected static function getMatchingMediaCollection(DataElement $data_element): Collection
+    protected static function getMatchingMediaCollection(DataElement $data_element): CollectionBase
     {
         $media_collection = CollectionFactory::get('Media');
         // Loop through the 'Media' collection items, each of which defines a
