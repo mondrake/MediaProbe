@@ -77,8 +77,7 @@ abstract class CollectionFactory
      */
     public static function get(string $id, array $overrides = []): Collection
     {
-dump(static::getCollectionIndex()->hasProperty('collections'));
-        if (!isset(static::getCollectionIndex()->hasProperty('collections')[$id])) {
+        if (!static::getCollectionIndex()->hasProperty('collections')[$id]) {
             throw new CollectionException('Missing collection \'%s\' from the index', $id);
         }
         $class = static::$defaultNamespace . '\\' . $id;
@@ -99,7 +98,7 @@ dump(static::getCollectionIndex()->hasProperty('collections'));
      */
     public static function getByName(string $collection_name): Collection
     {
-        if (!isset(static::getCollectionIndex()->hasProperty('collectionsByName')[$collection_name])) {
+        if (!static::getCollectionIndex()->hasProperty('collectionsByName')[$collection_name]) {
             throw new CollectionException('Missing collection \'%s\' from the index', $collection_name);
         }
         return static::get(static::getCollectionIndex()->getPropertyValue('collectionsByName')[$collection_name]);
