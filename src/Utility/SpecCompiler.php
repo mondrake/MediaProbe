@@ -94,7 +94,7 @@ class SpecCompiler
 
         $collection_path = $collection_path ?: __DIR__ . static::DEFAULT_COLLECTION_PATH;
         $collection_namespace = $collection_namespace ?: static::DEFAULT_COLLECTION_NAMESPACE;
-        $this->fs->remove($this->finder->files()->in($collection_path));
+//        $this->fs->remove($this->finder->files()->in($collection_path));
 
         // Get formats.
         $formats_yaml = Yaml::parse(file_get_contents($yamlDirectory . DIRECTORY_SEPARATOR . 'Format.yaml'));
@@ -138,7 +138,7 @@ class CollectionIndex extends CollectionBase {
       return __NAMESPACE__;
   }
 
-  public static \$map = 
+  public static \$map =
 DATA;
         $data .= ' ';
         $data .= preg_replace('/\s+$/m', '', var_export($this->map, true)) . ';';
@@ -333,7 +333,7 @@ use FileEye\MediaProbe\Collection\CollectionBase;
 
 class $class_name extends CollectionBase {
 
-  protected static \$map = 
+  protected static \$map =
 DATA;
 
         $data .= ' ';
