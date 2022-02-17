@@ -34,7 +34,7 @@ abstract class CollectionFactory
      */
     public static function setCollectionIndex(?string $class): void
     {
-        static::$collectionIndex = $class === null ? new Core() : new $class();
+        static::$collectionIndex = $class === null ? new Core('CollectionIndex') : new $class('CollectionIndex');
     }
 
     /**
