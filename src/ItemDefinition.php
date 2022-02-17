@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe;
 
+use FileEye\MediaProbe\Collection\CollectionBase;
 use FileEye\MediaProbe\Data\DataFormat;
 
 /**
@@ -56,7 +57,7 @@ class ItemDefinition
      *
      * @todo xxx
      */
-    public function __construct(Collection $collection, int $format = DataFormat::BYTE, int $values_count = 1, int $data_offset = 0, int $item_definition_offset = 0, int $sequence = 0)
+    public function __construct(CollectionBase $collection, int $format = DataFormat::BYTE, int $values_count = 1, int $data_offset = 0, int $item_definition_offset = 0, int $sequence = 0)
     {
         $this->collection = $collection;
         $this->format = $format;

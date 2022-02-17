@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tiff;
+use FileEye\MediaProbe\Collection\CollectionBase;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
