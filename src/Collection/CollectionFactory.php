@@ -25,24 +25,6 @@ abstract class CollectionFactory
     protected static $mapperClass;
 
     /**
-     * Returns the compiled MediaProbe specification map.
-     *
-     * In case the map is not yet initialized, defaults to the pre-compiled
-     * one.
-     *
-     * @return array
-     *   The MediaProbe specification map.
-     */
-    protected static function getMap(): array
-    {
-        if (!isset(static::$mapperClass)) {
-            static::setMapperClass(null);
-        }
-        $class = static::$mapperClass;
-        return $class::$map;
-    }
-
-    /**
      * Sets the compiled MediaProbe collection mapper class.
      *
      * @param string|null $class
@@ -52,10 +34,39 @@ abstract class CollectionFactory
     public static function setMapperClass(?string $class): void
     {
         if ($class === null) {
-            static::$mapperClass = static::DEFAULT_COLLECTION_NAMESPACE . '\\Core';
+            static::$mapperClass = Core::class;
         } else {
             static::$mapperClass = $class;
         }
+    }
+
+    /**
+     * Gets the compiled MediaProbe collection mapper class.
+     *
+     * In case the map is not yet initialized, defaults to the pre-compiled
+     * one.
+     */
+    protected static function getMapperClass(): string
+    {
+        if (!isset(static::$mapperClass)) {
+            static::setMapperClass(null);
+        }
+        return static::$mapperClass;
+    }
+
+    /**
+     * Returns a collection's specification map.
+     *
+     * @param string $map
+     *   The class containing the MediaProbe specification map.
+     *
+     * @return array
+     *   The MediaProbe specification map.
+     */
+    public static function getCollectionMap(string $map): array
+    {
+        $class = static::getMapperClass();
+        return $class::$map;
     }
 
     /**
@@ -66,7 +77,7 @@ abstract class CollectionFactory
      */
     public static function listIds(): array
     {
-        return array_keys(static::getMap()['collections']);
+        return array_keys(static::getMapperClass()['collections']);
     }
 
     /**
@@ -100,9 +111,9 @@ abstract class CollectionFactory
      */
     public static function getByName(string $collection_name): Collection
     {
-        if (!isset(static::getMap()['collectionsByName'][$collection_name])) {
+        if (!isset(static::getMapperClass()['collectionsByName'][$collection_name])) {
             throw new CollectionException('Missing collection \'%s\'', $collection_name);
         }
-        return static::get(static::getMap()['collectionsByName'][$collection_name]);
+        return static::get(static::getMapperClass()['collectionsByName'][$collection_name]);
     }
 }

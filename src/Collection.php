@@ -20,7 +20,7 @@ abstract class Collection
     protected $id;
 
     /**
-     * The overridden properties with their values.
+     * The overridden properties with their overriden values.
      *
      * @var array
      */
@@ -65,7 +65,7 @@ abstract class Collection
         if (array_key_exists($property, $this->overrides)) {
             return true;
         }
-        return array_key_exists($property, CollectionFactory::getMap());
+        return array_key_exists($property, $this->getProperties());
     }
 
     /**
@@ -82,7 +82,7 @@ abstract class Collection
         if (array_key_exists($property, $this->overrides)) {
             return $this->overrides[$property];
         }
-        return CollectionFactory::getMap()[$property] ?? null;
+        return $this->getProperties()[$property] ?? null;
     }
 
     /**
@@ -93,7 +93,7 @@ abstract class Collection
      */
     public function listItemIds(): array
     {
-        return array_keys(CollectionFactory::getMap()['items'] ?? []);
+        return array_keys($this->getPropertyValue('items') ?? []);
     }
 
     /**
@@ -111,7 +111,7 @@ abstract class Collection
      */
     private function getItemCollectionIndex(string $item_id, ?int $components_count, ElementInterface $context)
     {
-        $entry_class = CollectionFactory::getMap()['items'][$item_id][0]['entryClass'] ?? null;
+        $entry_class = $this->getPropertyValue('items')[$item_id][0]['entryClass'] ?? null;
 
         return $entry_class ? $entry_class::resolveItemCollectionIndex($components_count, $context) : 0;
     }
@@ -140,16 +140,16 @@ abstract class Collection
             }
         }
 
-        if (!isset(CollectionFactory::getMap()['items'][$item][$index]['collection'])) {
+        if (!isset($this->getPropertyValue('items')[$item][$index]['collection'])) {
             if (isset($default_id)) {
                 return CollectionFactory::get($default_id, $default_properties);
             }
             throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item, $this->getId());
         }
-        $item_properties = CollectionFactory::getMap()['items'][$item][$index];
+        $item_properties = $this->getPropertyValue('items')[$item][$index];
         unset($item_properties['collection']);
         $item_properties['item'] = $item;
-        return CollectionFactory::get(CollectionFactory::getMap()['items'][$item][$index]['collection'], $item_properties);
+        return CollectionFactory::get($this->getPropertyValue('items')[$item][$index]['collection'], $item_properties);
     }
 
     /**
@@ -168,9 +168,9 @@ abstract class Collection
      */
     public function getItemCollectionByName(string $item_name, $index = 0): Collection
     {
-        if (!isset(CollectionFactory::getMap()['itemsByName'][$item_name][$index])) {
+        if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
             throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());
         }
-        return $this->getItemCollection(CollectionFactory::getMap()['itemsByName'][$item_name][$index]);
+        return $this->getItemCollection($this->getPropertyValue('itemsByName')[$item_name][$index]);
     }
 }
