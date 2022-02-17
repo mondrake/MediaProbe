@@ -111,7 +111,7 @@ to be used with the following code:
 
 ```php
 ...
-use FileEye\MediaProbe\Collection;
+use FileEye\MediaProbe\Collection\CollectionBase;
 ...
 
 class MyClass

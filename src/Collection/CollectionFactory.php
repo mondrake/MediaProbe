@@ -4,11 +4,10 @@ namespace FileEye\MediaProbe\Collection;
 
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Tag;
-use FileEye\MediaProbe\Collection;
 use FileEye\MediaProbe\Entry\Core\EntryInterface;
 
 /**
- * Class to retrieve IFD and TAG information from YAML specs.
+ * Class to retrieve metadata specification information from collections.
  */
 abstract class CollectionFactory
 {
@@ -35,7 +34,7 @@ abstract class CollectionFactory
      *
      * In case the map is not yet initialized, defaults to the pre-compiled one.
      */
-    protected static function getCollectionIndex(): Collection
+    protected static function getCollectionIndex(): CollectionIndex
     {
         if (!isset(static::$collectionIndex)) {
             static::setCollectionIndex(null);
@@ -68,7 +67,7 @@ abstract class CollectionFactory
      * @throws CollectionException
      *   When the collection does not exist.
      */
-    public static function get(string $id, array $overrides = []): Collection
+    public static function get(string $id, array $overrides = []): CollectionBase
     {
         if (!isset(static::getCollectionIndex()->getPropertyValue('collections')[$id])) {
             throw new CollectionException('Missing collection \'%s\' from the index', $id);
@@ -89,7 +88,7 @@ abstract class CollectionFactory
      * @throws CollectionException
      *   When the collection does not exist.
      */
-    public static function getByName(string $collection_name): Collection
+    public static function getByName(string $collection_name): CollectionBase
     {
         if (!isset(static::getCollectionIndex()->getPropertyValue('collectionsByName')[$collection_name])) {
             throw new CollectionException('Missing collection \'%s\' from the index', $collection_name);
