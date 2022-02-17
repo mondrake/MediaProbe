@@ -32,7 +32,7 @@ abstract class CollectionFactory
      * @param string|null $class
      *   The FQCN of the class containing the MediaProbe specification mapper. If null, the default one will be used.
      */
-    public static function setIndex(?string $class): void
+    public static function setCollectionIndex(?string $class): void
     {
         static::$collectionIndex = $class === null ? new Core() : new $class();
     }
@@ -42,10 +42,10 @@ abstract class CollectionFactory
      *
      * In case the map is not yet initialized, defaults to the pre-compiled one.
      */
-    protected static function getIndex(): Collection
+    protected static function getCollectionIndex(): Collection
     {
         if (!isset(static::$collectionIndex)) {
-            static::setIndex(null);
+            static::setCollectionIndex(null);
         }
         return static::$collectionIndex;
     }
@@ -58,7 +58,7 @@ abstract class CollectionFactory
      */
     public static function listCollections(): array
     {
-        return array_keys(static::getIndex()->getPropertyValue('collections'));
+        return array_keys(static::getCollectionIndex()->getPropertyValue('collections'));
     }
 
     /**
@@ -77,7 +77,7 @@ abstract class CollectionFactory
      */
     public static function get(string $id, array $overrides = []): Collection
     {
-        if (!isset(static::getIndex()->hasProperty('collections')[$id])) {
+        if (!isset(static::getCollectionIndex()->hasProperty('collections')[$id])) {
             throw new CollectionException('Missing collection \'%s\'', $id);
         }
         $class = static::$defaultNamespace . '\\' . $id;
@@ -98,9 +98,9 @@ abstract class CollectionFactory
      */
     public static function getByName(string $collection_name): Collection
     {
-        if (!isset(static::getIndex()->hasProperty('collectionsByName')[$collection_name])) {
+        if (!isset(static::getCollectionIndex()->hasProperty('collectionsByName')[$collection_name])) {
             throw new CollectionException('Missing collection \'%s\'', $collection_name);
         }
-        return static::get(static::getIndex()->getPropertyValue('collectionsByName')[$collection_name]);
+        return static::get(static::getCollectionIndex()->getPropertyValue('collectionsByName')[$collection_name]);
     }
 }

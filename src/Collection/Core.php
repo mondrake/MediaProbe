@@ -1,13 +1,15 @@
 <?php
 namespace FileEye\MediaProbe\Collection;
 
+use FileEye\MediaProbe\Collection;
+
 /**
  * This file is generated automatically by executing the 'fileeye-mediaprobe compile' command.
  *
  * DO NOT CHANGE MANUALLY.
  */
 // phpcs:disable
-abstract class Core {
+class Core extends Collection {
   public static $map = array (
   'collections' =>
   array (
