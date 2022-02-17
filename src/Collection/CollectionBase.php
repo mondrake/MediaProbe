@@ -10,13 +10,6 @@ use FileEye\MediaProbe\ElementInterface;
 abstract class CollectionBase implements CollectionInterface
 {
     /**
-     * The collection id.
-     *
-     * @var string
-     */
-    protected $id;
-
-    /**
      * The overridden properties with their overriden values.
      *
      * @var array
@@ -26,16 +19,12 @@ abstract class CollectionBase implements CollectionInterface
     /**
      * Constructs a Collection object.
      *
-     * @param string $id
-     *   The id of the collection.
      * @param array $overrides
      *   (Optional) If defined, overrides properties defined in the collection.
      */
-    public function __construct(string $id, array $overrides = [])
+    public function __construct(array $overrides = [])
     {
-        $this->id = $id;
         $this->overrides = $overrides;
-dump([$id, $this->getPropertyValue('id'), $id != $this->getPropertyValue('id') ? '************************' : '']);
     }
 
     /**
@@ -43,7 +32,7 @@ dump([$id, $this->getPropertyValue('id'), $id != $this->getPropertyValue('id') ?
      */
     public function getId(): string
     {
-        return $this->id;
+        return $this->getPropertyValue('id');
     }
 
     /**
