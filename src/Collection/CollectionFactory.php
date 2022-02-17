@@ -67,7 +67,7 @@ abstract class CollectionFactory
      * @throws CollectionException
      *   When the collection does not exist.
      */
-    public static function get(string $id, array $overrides = []): CollectionBase
+    public static function get(string $id, array $overrides = []): CollectionInterface
     {
         if (!isset(static::getCollectionIndex()->getPropertyValue('collections')[$id])) {
             throw new CollectionException('Missing collection \'%s\' from the index', $id);
@@ -88,7 +88,7 @@ abstract class CollectionFactory
      * @throws CollectionException
      *   When the collection does not exist.
      */
-    public static function getByName(string $collection_name): CollectionBase
+    public static function getByName(string $collection_name): CollectionInterface
     {
         if (!isset(static::getCollectionIndex()->getPropertyValue('collectionsByName')[$collection_name])) {
             throw new CollectionException('Missing collection \'%s\' from the index', $collection_name);

@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Block\BlockBase;
 use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tiff;
-use FileEye\MediaProbe\Collection\CollectionBase;
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -136,7 +136,7 @@ class Media extends BlockBase
      * @throws InvalidFileException
      *            On failure.
      */
-    protected static function getMatchingMediaCollection(DataElement $data_element): CollectionBase
+    protected static function getMatchingMediaCollection(DataElement $data_element): CollectionInterface
     {
         $media_collection = CollectionFactory::get('Media');
         // Loop through the 'Media' collection items, each of which defines a

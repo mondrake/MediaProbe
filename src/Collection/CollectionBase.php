@@ -7,7 +7,7 @@ use FileEye\MediaProbe\ElementInterface;
 /**
  * Class holding metadata specification information as a collection of properties.
  */
-abstract class CollectionBase
+abstract class CollectionBase implements CollectionInterface
 {
     /**
      * The collection id.
@@ -38,10 +38,7 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the id of the collection.
-     *
-     * @return string
-     *   The id of the collection.
+     * {@inheritdoc}
      */
     public function getId(): string
     {
@@ -49,7 +46,7 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the static properties of the collection.
+     * {@inheritdoc}
      */
     public function getProperties(): array
     {
@@ -57,13 +54,7 @@ abstract class CollectionBase
     }
 
     /**
-     * Determines if a property exists.
-     *
-     * @param string $property
-     *   The property.
-     *
-     * @return bool
-     *   TRUE if the property exists, FALSE otherwise.
+     * {@inheritdoc}
      */
     public function hasProperty(string $property): bool
     {
@@ -74,13 +65,7 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the value a property.
-     *
-     * @param string $property
-     *   The property.
-     *
-     * @return mixed
-     *   The value of the property.
+     * {@inheritdoc}
      */
     public function getPropertyValue(string $property)
     {
@@ -91,10 +76,7 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the collection items' ids.
-     *
-     * @return array
-     *   A simple array, with values the items ids included in the collection.
+     * {@inheritdoc}
      */
     public function listItemIds(): array
     {
@@ -121,20 +103,9 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the Collection object of an item.
-     *
-     * @param string $item
-     *   The item id.
-     * @param mixed $index
-     *   The item id index.
-     *
-     * @return Collection
-     *   The item collection object.
-     *
-     * @throws CollectionException
-     *   When item is not in collection and no default given.
+     * {@inheritdoc}
      */
-    public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], int $components_count = null, ElementInterface $context = null): CollectionBase
+    public function getItemCollection(string $item, $index = 0, string $default_id = null, array $default_properties = [], int $components_count = null, ElementInterface $context = null): CollectionInterface
     {
         if ($index === null) {
             if ($context === null) {
@@ -157,20 +128,9 @@ abstract class CollectionBase
     }
 
     /**
-     * Returns the Collection object of an item given its name.
-     *
-     * @param string $item_name
-     *   The item name.
-     * @param mixed $index
-     *   The item name index.
-     *
-     * @return Collection
-     *   The item collection object.
-     *
-     * @throws CollectionException
-     *   When item is not in collection.
+     * {@inheritdoc}
      */
-    public function getItemCollectionByName(string $item_name, $index = 0): CollectionBase
+    public function getItemCollectionByName(string $item_name, $index = 0): CollectionInterface
     {
         if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
             throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getId());

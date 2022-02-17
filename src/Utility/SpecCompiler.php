@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Utility;
 
-use FileEye\MediaProbe\Collection\CollectionBase;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
@@ -323,7 +322,7 @@ DATA;
 
 namespace $namespace;
 
-use FileEye\\MediaProbe\\Collection;
+use FileEye\\MediaProbe\\Collection\\CollectionBase;
 
 class $class_name extends CollectionBase {
 
