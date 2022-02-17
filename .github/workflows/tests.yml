@@ -55,10 +55,10 @@ jobs:
         # Remove the comment to the lines below during development, to let
         # re-compile the specification PHP file from the YAML files.
         php bin/fileeye-mediaprobe compile
-        git config user.email "a@a.com"
-        git config user.name "Aa Aa"
-        git add .
-        git diff --cached
+#        git config user.email "a@a.com"
+#        git config user.name "Aa Aa"
+#        git add .
+#        git diff --cached
 
     - name: Image file dumps
       continue-on-error: true
@@ -67,8 +67,8 @@ jobs:
         php examples/dump-media.php -d tests/media-samples/image/broken/gh-11.jpg
         php examples/dump-media.php -d tests/media-samples/image/broken/pel-176-RPT200076_03.jpg
 
-#    - name: Run test suite
-#      run: vendor/bin/phpunit ./tests
+    - name: Run test suite
+      run: vendor/bin/phpunit ./tests
 #      continue-on-error: true
 
     - name: Code style test
