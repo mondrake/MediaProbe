@@ -131,8 +131,14 @@ namespace $namespace;
  * DO NOT CHANGE MANUALLY.
  */
 // phpcs:disable
-abstract class Core {
-  public static \$map =
+class CollectionIndex extends CollectionBase {
+
+  public function getNamespace(): string
+  {
+      return __NAMESPACE__;
+  }
+
+  public static \$map = 
 DATA;
         $data .= ' ';
         $data .= preg_replace('/\s+$/m', '', var_export($this->map, true)) . ';';
@@ -141,7 +147,7 @@ DATA;
 }
 
 DATA;
-        $this->fs->dumpFile($resourcesDirectory . '/Core.php', $data);
+        $this->fs->dumpFile($resourcesDirectory . '/CollectionIndex.php', $data);
     }
 
     /**
@@ -167,7 +173,7 @@ DATA;
             $input['format'] = $this->format2Id($input['format'], 'base', $name, $file);
         }
 
-        // Main index entries.
+        // Add the collection to the index.
         // 'collections' entry.
         $this->map['collections'][$input['collection']] = $input['collection'];
         // 'collectionsByName' entry.
@@ -182,6 +188,7 @@ DATA;
         $tmp = $input;
         unset($tmp['collection'], $tmp['items'], $tmp['compiler']);
         $map = $tmp;
+        $map['id'] = $input['collection'];
 
         // Collection items entries.
         foreach ($input['items'] as $id => $item) {
@@ -322,11 +329,11 @@ DATA;
 
 namespace $namespace;
 
-use FileEye\\MediaProbe\\Collection\\CollectionBase;
+use FileEye\MediaProbe\Collection\CollectionBase;
 
 class $class_name extends CollectionBase {
 
-  protected static \$map =
+  protected static \$map = 
 DATA;
 
         $data .= ' ';
