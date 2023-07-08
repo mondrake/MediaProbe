@@ -140,7 +140,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function setAttribute(string $name, string $value): void
+    public function setAttribute(string $name, string $value): \DOMAttr|bool
     {
         return $this->DOMNode->setAttribute($name, $value);
     }
@@ -160,7 +160,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function getAttribute(string $name): ?string
+    public function getAttribute(string $name): string
     {
         return $this->DOMNode->getAttribute($name);
     }

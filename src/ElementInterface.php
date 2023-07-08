@@ -75,7 +75,7 @@ interface ElementInterface
      * @return string|null
      *            the DOM attribute value, or null if the attribute is not existing.
      */
-    public function getAttribute(string $name): ?string;
+    public function getAttribute(string $name): string;
 
     /**
      * Sets the value of a DOM attribute associated to this element.
@@ -85,7 +85,7 @@ interface ElementInterface
      * @param string $value
      *            the value of the DOM attribute.
      */
-    public function setAttribute(string $name, string $value): void;
+    public function setAttribute(string $name, string $value): \DOMAttr|bool;
 
     /**
      * Returns a context path for this element.
