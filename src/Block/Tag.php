@@ -125,7 +125,7 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    protected function getContextPathSegmentPattern()
+    protected function getContextPathSegmentPattern(): string
     {
         if ($this->getAttribute('name') !== '') {
             return '/{DOMNode}:{name}:{id}';

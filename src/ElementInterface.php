@@ -20,7 +20,7 @@ interface ElementInterface
     /**
      * Gets the parent element of this element.
      */
-    public function getParentElement(): ElementInterface;
+    public function getParentElement(): ?ElementInterface;
 
     /**
      * Gets multiple children elements of this element.

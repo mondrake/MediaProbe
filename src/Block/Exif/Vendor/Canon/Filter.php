@@ -112,7 +112,7 @@ class Filter extends ListBase
     /**
      * {@inheritdoc}
      */
-    protected function getContextPathSegmentPattern()
+    protected function getContextPathSegmentPattern(): string
     {
         return '/{DOMNode}:{id}';
     }

@@ -35,7 +35,7 @@ abstract class ListBase extends BlockBase
     /**
      * {@inheritdoc}
      */
-    protected function getContextPathSegmentPattern()
+    protected function getContextPathSegmentPattern(): string
     {
         return '/{DOMNode}:{name}:{id}';
     }
