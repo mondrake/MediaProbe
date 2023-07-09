@@ -50,7 +50,7 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function numberToBytes($number, $order)
+    public function numberToBytes(int $number, int $order): string
     {
         return chr($number);
     }

@@ -67,7 +67,7 @@ class FilterInfoIndex extends Index
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         // Components to be passed to the parent IFD are the number of
         // signed longs in the segment, so determine it from the actual

@@ -27,7 +27,7 @@ abstract class ListBase extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return count($this->getMultipleElements('*[not(self::rawData)]'));
     }

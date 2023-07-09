@@ -96,7 +96,7 @@ abstract class BlockBase extends ElementBase
     }
 
     // xx
-    public function getFormat()
+    public function getFormat(): int
     {
         return $this->getDefinition()->getFormat();
     }

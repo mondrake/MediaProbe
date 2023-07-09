@@ -109,7 +109,7 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function getFormat()
+    public function getFormat(): int
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : $this->getDefinition()->getFormat();
     }
@@ -117,7 +117,7 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getComponents() : $this->getDefinition()->getValuesCount();
     }

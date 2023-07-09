@@ -190,7 +190,7 @@ class Index extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         $components = 0;
         foreach ($this->getMultipleElements('tag') as $sub) {

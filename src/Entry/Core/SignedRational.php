@@ -66,7 +66,7 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected function formatNumber($number, array $options = [])
+    protected function formatNumber(int|float|array $number, array $options = []): int|float
     {
         $format = $options['format'] ?? null;
         switch ($format) {
@@ -97,7 +97,7 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function numberToBytes($number, $order)
+    public function numberToBytes(int $number, int $order): string
     {
         return ConvertBytes::fromLong($number, $order);
     }

@@ -113,7 +113,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function getFormat()
+    public function getFormat(): int
     {
         return $this->format;
     }
@@ -121,7 +121,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function getOutputFormat()
+    public function getOutputFormat(): int
     {
         if (!$this->getParentElement()) {
             return $this->format;
@@ -135,7 +135,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return $this->components;
     }
@@ -157,7 +157,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    protected function getMappedText($value)
+    protected function getMappedText(mixed $value): string
     {
         $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
@@ -191,7 +191,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText($value, bool $null_on_missing = false)
+    public function resolveText(mixed $value, bool $null_on_missing = false): ?string
     {
         if (!$this->getParentElement()) {
             return is_array($value) ? implode(' ', $value) : $value;

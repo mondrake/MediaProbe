@@ -57,7 +57,7 @@ class Short extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function numberToBytes($number, $order)
+    public function numberToBytes(int $number, int $order): string
     {
         return ConvertBytes::fromShort($number, $order);
     }

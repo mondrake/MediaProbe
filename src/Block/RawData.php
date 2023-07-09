@@ -22,7 +22,7 @@ class RawData extends BlockBase
     /**
      * xxx
      */
-    public function getFormat()
+    public function getFormat(): int
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : DataFormat::UNDEFINED;
     }
@@ -32,7 +32,7 @@ class RawData extends BlockBase
      *
      * @return int
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return $this->components; // xxx ???
     }

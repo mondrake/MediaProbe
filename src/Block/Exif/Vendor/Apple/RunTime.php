@@ -57,7 +57,7 @@ class RunTime extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return strlen($this->toBytes());
     }

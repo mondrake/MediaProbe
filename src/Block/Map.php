@@ -95,7 +95,7 @@ class Map extends Index
     /**
      * {@inheritdoc}
      */
-    public function getFormat()
+    public function getFormat(): int
     {
         return $this->format;
     }
@@ -103,7 +103,7 @@ class Map extends Index
     /**
      * {@inheritdoc}
      */
-    public function getComponents()
+    public function getComponents(): int
     {
         return $this->components;
     }
