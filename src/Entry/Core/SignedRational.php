@@ -66,7 +66,7 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected function formatNumber(int|float|array $number, array $options = []): int|float
+    protected function formatNumber(int|float|array $number, array $options = []): int|float|array|string
     {
         $format = $options['format'] ?? null;
         switch ($format) {
