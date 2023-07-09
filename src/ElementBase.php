@@ -6,6 +6,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\DOMElement;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Utilty\ConvertBytes;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;
@@ -53,7 +54,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the image structure.
-        if (!$parent || !is_object($parent->DOMNode)) {
+        if (!isset($parent) || !is_object($parent->DOMNode)) {
             $doc = new \DOMDocument();
             $doc->registerNodeClass('DOMElement', DOMElement::class);
             $this->XPath = new \DOMXPath($doc);
