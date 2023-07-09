@@ -41,7 +41,7 @@ interface ElementInterface
      * @throws MediaProbeException
      *            when multiple elements fulfil the XPath expression.
      */
-    public function getElement(string $expression): ElementInterface;
+    public function getElement(string $expression): ?ElementInterface;
 
     /**
      * Removes a single child element of this element.

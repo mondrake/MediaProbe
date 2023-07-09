@@ -107,7 +107,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function getElement(string $expression): ElementInterface
+    public function getElement(string $expression): ?ElementInterface
     {
         $ret = $this->getMultipleElements($expression);
         switch (count($ret)) {
