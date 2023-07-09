@@ -111,7 +111,7 @@ interface ElementInterface
      * @throws MediaProbeException
      *            when the element does not support returning a value.
      */
-    public function getValue(array $options = []): mixed: mixed;
+    public function getValue(array $options = []): mixed;
 
     /**
      * Gets the value of this element as text.
