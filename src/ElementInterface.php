@@ -134,14 +134,14 @@ interface ElementInterface
      * The returned value may be a PHP string in case of a single sequence of
      * bytes, or an array in case multiple sequences are needed.
      *
-     * @param bool $byte_order
+     * @param int $byte_order
      *            (Optional) the byte order to use for numeric values, which
      *            must be either ConvertBytes::LITTLE_ENDIAN or
      *            ConvertBytes::BIG_ENDIAN.
      * @param int $offset
      *            (Optional) the offset at which the bytes will be appended.
      */
-    public function toBytes(bool $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
+    public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
     /**
      * Returns a dump of the element in an array.

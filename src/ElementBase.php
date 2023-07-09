@@ -224,7 +224,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         throw new MediaProbeException("%s does not implement the %s method.", static::class, __FUNCTION__);
     }
 
-    abstract public function toBytes(bool $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
+    abstract public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
     /**
      * {@inheritdoc}

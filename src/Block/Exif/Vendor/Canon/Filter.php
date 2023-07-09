@@ -64,7 +64,7 @@ class Filter extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes(bool $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
+    public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
     {
         $bytes = '';
 

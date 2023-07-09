@@ -61,7 +61,7 @@ abstract class NumberBase extends EntryBase
      * @param int $number
      *            the number that should be converted.
      *
-     * @param bool $byte_order
+     * @param int $byte_order
      *            one of ConvertBytes::LITTLE_ENDIAN or ConvertBytes::BIG_ENDIAN,
      *            specifying the target byte order.
      *

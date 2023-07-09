@@ -236,7 +236,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function toBytes(bool $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
+    public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
     {
         return $this->dataElement->getBytes();
     }
