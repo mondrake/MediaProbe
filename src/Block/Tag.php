@@ -85,7 +85,7 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getValue($options) : null;
     }

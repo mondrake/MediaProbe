@@ -15,7 +15,7 @@ class Char extends EntryBase
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         return $this->dataElement->getBytes();
     }

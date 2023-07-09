@@ -39,7 +39,7 @@ class WindowsString extends EntryBase
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         $format = $options['format'] ?? null;
         $type = $options['type'] ?? 'php';

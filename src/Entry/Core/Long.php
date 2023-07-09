@@ -40,7 +40,7 @@ class Long extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         if ($this->components == 1) {
             return $this->dataElement->getLong();

@@ -27,7 +27,7 @@ class ApertureRange extends SignedLong
     /**
      * {@inheritdoc}
      */
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         if (($options['format'] ?? null) === 'exiftool') {
             $v = [];

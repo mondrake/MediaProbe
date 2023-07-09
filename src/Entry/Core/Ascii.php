@@ -21,7 +21,7 @@ class Ascii extends EntryBase
         $this->debug("text: {text}", ['text' => $this->toString()]);
     }
 
-    public function getValue(array $options = [])
+    public function getValue(array $options = []): mixed
     {
         $format = $options['format'] ?? null;
         $val = rtrim($this->dataElement->getBytes(), "\x0");

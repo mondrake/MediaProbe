@@ -168,7 +168,7 @@ abstract class BlockBase extends ElementBase
     /**
      * {@inheritdoc}
      */
-    public function toBytes($byte_order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
+    public function toBytes(bool $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
     {
         $bytes = '';
         foreach ($this->getMultipleElements("*") as $sub) {
@@ -180,7 +180,7 @@ abstract class BlockBase extends ElementBase
     /**
      * {@inheritdoc}
      */
-    public function toDumpArray()
+    public function toDumpArray(): array
     {
         $attributes = [];
         if ($this->getAttribute('name') !== '') {
