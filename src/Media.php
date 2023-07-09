@@ -39,7 +39,7 @@ class Media extends BlockBase
      * defining the minimum log level at which the parsing process will break
      * and throw an InvalidFileException.
      */
-    protected int $failLevel;
+    protected ?int $failLevel;
 
     /**
      * An XML prettify formatter.
