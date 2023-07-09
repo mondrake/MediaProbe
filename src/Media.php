@@ -33,10 +33,6 @@ class Media extends BlockBase
 
     /**
      * A PSR-3 compliant logger callback.
-     *
-     * Consuming code can have higher level logging facilities in place. Any
-     * entry sent to the internal logger will also be sent to the callback, if
-     * specified.
      */
     protected LoggerInterface $externalLogger;
 
@@ -146,20 +142,25 @@ class Media extends BlockBase
     /**
      * Constructs a Media object.
      *
-     * @param \Psr\Log\LoggerInterface|null $external_logger
+     * @param \Psr\Log\LoggerInterface|null $externalLogger
      *            (Optional) a PSR-3 compliant logger callback.
+     *            Consuming code can have higher level logging facilities in place.
+     *            Any entry sent to the internal logger will also be sent to the
+     *            callback, if specified.
      * @param string|null $fail_level
      *            (Optional) a PSR-3 compliant log level. Any log entry at this
      *            level or above will force media parsing to stop.
      */
-    public function __construct(?LoggerInterface $external_logger, ?string $fail_level)
+    public function __construct(
+        protected ?LoggerInterface $externalLogger,
+        ?string $fail_level,
+    )
     {
         $media = new ItemDefinition(CollectionFactory::get('Media'));
         parent::__construct($media);
         $this->logger = (new Logger('mediaprobe'))
           ->pushHandler(new TestHandler(Logger::INFO))
           ->pushProcessor(new PsrLogMessageProcessor());
-        $this->externalLogger = $external_logger;
         $this->failLevel = $fail_level ? Logger::toMonologLevel($fail_level) : null;
         $this->stopWatch = new Stopwatch();
     }
