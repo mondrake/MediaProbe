@@ -13,6 +13,7 @@ use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use Monolog\Handler\TestHandler;
+use Monolog\Level;
 use Monolog\Processor\PsrLogMessageProcessor;
 use PrettyXml\Formatter;
 use Psr\Log\LoggerInterface;
@@ -39,7 +40,7 @@ class Media extends BlockBase
      * defining the minimum log level at which the parsing process will break
      * and throw an InvalidFileException.
      */
-    protected ?int $failLevel;
+    protected ?Level $failLevel;
 
     /**
      * An XML prettify formatter.
