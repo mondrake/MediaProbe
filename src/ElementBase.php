@@ -54,7 +54,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the image structure.
-        if (!isset($parent) || (isset($parent) && !is_object($parent->DOMNode))) {
+        if (!isset($parent) || !isset($parent->DOMNode)) {
             $doc = new \DOMDocument();
             $doc->registerNodeClass('DOMElement', DOMElement::class);
             $this->XPath = new \DOMXPath($doc);
