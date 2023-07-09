@@ -32,11 +32,6 @@ class Media extends BlockBase
     protected Logger $logger;
 
     /**
-     * A PSR-3 compliant logger callback.
-     */
-    protected LoggerInterface $externalLogger;
-
-    /**
      * The minimum log level for failure.
      *
      * MediaProbe normally intercepts and logs media parsing issues without
