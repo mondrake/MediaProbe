@@ -157,7 +157,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    protected function getMappedText(mixed $value): string
+    protected function getMappedText(mixed $value): ?string
     {
         $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
