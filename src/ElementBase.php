@@ -6,7 +6,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\DOMElement;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Utilty\ConvertBytes;
+use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;
