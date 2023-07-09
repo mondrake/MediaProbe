@@ -27,11 +27,9 @@ use Symfony\Component\Stopwatch\Stopwatch;
 class Media extends BlockBase
 {
     /**
-     * The internal logger instance for this Media object.
-     *
-     * @var \Monolog\Logger
+     * The internal Monolog logger instance for this Media object.
      */
-    protected $logger;
+    protected Logger $logger;
 
     /**
      * A PSR-3 compliant logger callback.
@@ -39,10 +37,8 @@ class Media extends BlockBase
      * Consuming code can have higher level logging facilities in place. Any
      * entry sent to the internal logger will also be sent to the callback, if
      * specified.
-     *
-     * @var \Psr\Log\LoggerInterface
      */
-    protected $externalLogger;
+    protected LoggerInterface $externalLogger;
 
     /**
      * The minimum log level for failure.
@@ -51,24 +47,18 @@ class Media extends BlockBase
      * breaking the flow. However it is possible to enable hard failures by
      * defining the minimum log level at which the parsing process will break
      * and throw an InvalidFileException.
-     *
-     * @var int
      */
-    protected $failLevel;
+    protected int $failLevel;
 
     /**
      * An XML prettify formatter.
-     *
-     * @var \PrettyXml\Formatter
      */
-    protected $xmlFormatter;
+    protected Formatter $xmlFormatter;
 
     /**
      * A Symfony stopwatch.
-     *
-     * @var \Symfony\Component\Stopwatch\Stopwatch
      */
-    private $stopWatch;
+    private Stopwatch $stopWatch;
 
     /**
      * Creates a Media object from a file.
