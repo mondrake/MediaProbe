@@ -102,7 +102,7 @@ class Filter extends ListBase
         $this->debug($msg, [
             'seq' => $seq,
             'offset' => $offset,
-            'parms' => $this->paramsCount,
+            'parms' => $this->paramsCount ?? 'n/a',
             'size' => $this->getDefinition()->getSize(),
         ]);
     }
