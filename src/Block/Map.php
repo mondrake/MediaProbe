@@ -23,12 +23,12 @@ class Map extends Index
     /**
      * The format of map data.
      */
-    protected $format;
+    protected int $format;
 
     /**
      * The amount of components in the map.
      */
-    protected $components;
+    protected int $components;
 
     /**
      * {@inheritdoc}

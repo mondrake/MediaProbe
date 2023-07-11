@@ -22,22 +22,22 @@ class Rational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Rational';
+    protected int $name = 'Rational';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Rational';
+    protected int $formatName = 'Rational';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 8;
+    protected int $formatSize = 8;
 
     /**
      * {@inheritdoc}
      */
-    protected $dimension = 2;
+    protected int $dimension = 2;
 
     const MIN = 0;
     const MAX = 4294967295;

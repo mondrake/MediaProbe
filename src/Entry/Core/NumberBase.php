@@ -19,10 +19,8 @@ abstract class NumberBase extends EntryBase
      * The dimension of the number held.
      *
      * Normal numbers have a dimension of one, fractions like Rational have a dimension of two.
-     *
-     * @var int
      */
-    protected $dimension = 1;
+    protected int $dimension = 1;
 
     protected function validateDataElement(): void
     {

@@ -17,12 +17,12 @@ class SignedByte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'SignedByte';
+    protected int $name = 'SignedByte';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'SignedByte';
+    protected int $formatName = 'SignedByte';
 
     const MIN = -128;
     const MAX = 127;

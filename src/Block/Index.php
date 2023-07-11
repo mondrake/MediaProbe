@@ -106,7 +106,7 @@ class Index extends ListBase
     /**
      * @todo xxx
      */
-    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1)
+    protected function getValueFromData(DataElement $data_element, int &$offset, int $format, int $count = 1): mixed
     {
         $dataWindow = $this->getDataWindowFromData($data_element, $offset, $format, $count);
         switch ($format) {
@@ -207,7 +207,7 @@ class Index extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0): void
     {
         $msg = '#{seq} {node}:{name}';
         $seq = $this->getDefinition()->getSequence() + 1;

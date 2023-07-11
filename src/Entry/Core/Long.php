@@ -17,17 +17,17 @@ class Long extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Long';
+    protected int $name = 'Long';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Long';
+    protected int $formatName = 'Long';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 4;
+    protected int $formatSize = 4;
 
     const MIN = 0;
     const MAX = 4294967295;

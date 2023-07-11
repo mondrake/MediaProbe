@@ -23,22 +23,22 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'SignedRational';
+    protected int $name = 'SignedRational';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'SignedRational';
+    protected int $formatName = 'SignedRational';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 8;
+    protected int $formatSize = 8;
 
     /**
      * {@inheritdoc}
      */
-    protected $dimension = 2;
+    protected int $dimension = 2;
 
     const MIN = -2147483648;
     const MAX = 2147483647;

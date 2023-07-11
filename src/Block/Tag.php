@@ -29,7 +29,7 @@ class Tag extends BlockBase
     /**
      * Validates against the specification, if defined.
      */
-    public function validate()
+    public function validate(): void
     {
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'UnknownTag'])) {
@@ -136,7 +136,7 @@ class Tag extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function debugBlockInfo(?DataElement $data_element = null)
+    public function debugBlockInfo(?DataElement $data_element = null): void
     {
         $msg = '#{seq} @{ifdoffset} {node}';
         $seq = $this->getDefinition()->getSequence() + 1;

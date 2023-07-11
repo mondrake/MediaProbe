@@ -27,10 +27,8 @@ class Filter extends ListBase
 {
     /**
      * The number of parameters for this filter.
-     *
-     * @var int
      */
-    protected $paramsCount;
+    protected int $paramsCount;
 
     /**
      * {@inheritdoc}
@@ -95,7 +93,7 @@ class Filter extends ListBase
     /**
      * {@inheritdoc}
      */
-    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0)
+    public function debugBlockInfo(?DataElement $data_element = null, int $items_count = 0): void
     {
         $msg = 'filter#{seq} ';
         $seq = $this->getDefinition()->getSequence() + 1;

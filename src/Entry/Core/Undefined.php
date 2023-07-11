@@ -15,12 +15,12 @@ class Undefined extends EntryBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Undefined';
+    protected int $name = 'Undefined';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Undefined';
+    protected int $formatName = 'Undefined';
 
     protected function validateDataElement(): void
     {

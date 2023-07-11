@@ -19,17 +19,17 @@ class ShortRev extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'ShortRev';
+    protected int $name = 'ShortRev';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'ShortRev';
+    protected int $formatName = 'ShortRev';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 2;
+    protected int $formatSize = 2;
 
     const MIN = 0;
     const MAX = 65535;

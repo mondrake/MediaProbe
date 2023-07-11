@@ -19,17 +19,17 @@ class Short extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Short';
+    protected int $name = 'Short';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Short';
+    protected int $formatName = 'Short';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 2;
+    protected int $formatSize = 2;
 
     const MIN = 0;
     const MAX = 65535;

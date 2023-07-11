@@ -18,17 +18,17 @@ class SignedShort extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'SignedShort';
+    protected int $name = 'SignedShort';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'SignedShort';
+    protected int $formatName = 'SignedShort';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatSize = 2;
+    protected int $formatSize = 2;
 
     const MIN = -32768;
     const MAX = 32767;

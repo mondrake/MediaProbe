@@ -22,17 +22,13 @@ abstract class BlockBase extends ElementBase
 {
     /**
      * The Definition of this Block.
-     *
-     * @var \FileEye\MediaProbe\ItemDefinition
      */
-    protected $definition;
+    protected ItemDefinition $definition;
 
     /**
      * The size of this Block in bytes.
-     *
-     * @var \FileEye\MediaProbe\Collection
      */
-    protected $size;
+    protected int $size;
 
     /**
      * Constructs a Block object.
@@ -70,7 +66,7 @@ abstract class BlockBase extends ElementBase
      * @return mixed
      *   The item collection index.
      */
-    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context)
+    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context): mixed
     {
         return 0;
     }
@@ -135,7 +131,7 @@ abstract class BlockBase extends ElementBase
      * @param \FileEye\MediaProbe\Data\DataElement $data_element
      *   @todo
      */
-    protected function executePostParseCallbacks(DataElement $data_element)
+    protected function executePostParseCallbacks(DataElement $data_element): static
     {
         $post_load_callbacks = $this->getCollection()->getPropertyValue('postParse');
         if (!empty($post_load_callbacks)) {
@@ -160,7 +156,7 @@ abstract class BlockBase extends ElementBase
      *
      * @return int
      */
-    public function getSize()
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -200,7 +196,7 @@ abstract class BlockBase extends ElementBase
     /**
      * {@inheritdoc}
      */
-    public function debugBlockInfo(?DataElement $data_element = null)
+    public function debugBlockInfo(?DataElement $data_element = null): void
     {
         $msg = '{node}';
         $node = $this->DOMNode->nodeName;

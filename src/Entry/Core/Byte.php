@@ -16,12 +16,12 @@ class Byte extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Byte';
+    protected string $name = 'Byte';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Byte';
+    protected string $formatName = 'Byte';
 
     const MIN = 0;
     const MAX = 255;

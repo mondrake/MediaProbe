@@ -27,12 +27,12 @@ class WindowsString extends EntryBase
     /**
      * {@inheritdoc}
      */
-    protected $name = 'WindowsString';
+    protected string $name = 'WindowsString';
 
     /**
      * {@inheritdoc}
      */
-    protected $formatName = 'Byte';
+    protected string $formatName = 'Byte';
 
     protected function validateDataElement(): void
     {

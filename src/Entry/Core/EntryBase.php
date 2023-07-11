@@ -27,31 +27,23 @@ abstract class EntryBase extends ElementBase implements EntryInterface
 
     /**
      * The format of this entry.
-     *
-     * @var int
      */
-    protected $format;
+    protected int $format;
 
     /**
      * The size, in bytes, of each component held.
-     *
-     * @var int
      */
-    protected $formatSize = 1;
+    protected int $formatSize = 1;
 
     /**
      * The number of components of this entry.
-     *
-     * @var int
      */
-    protected $components;
+    protected int $components;
 
     /**
      * The data element held by this entry.
-     *
-     * @var DataElement
      */
-    protected $dataElement;
+    protected DataElement $dataElement;
 
     /**
      * Constructs an EntryInterface object.
@@ -105,7 +97,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      * @return mixed
      *   The item collection index.
      */
-    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context)
+    public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context): mixed
     {
         return 0;
     }

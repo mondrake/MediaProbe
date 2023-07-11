@@ -18,7 +18,7 @@ class Version extends Undefined
     /**
      * {@inheritdoc}
      */
-    protected $name = 'Version';
+    protected string $name = 'Version';
 
     protected function validateDataElement(): void
     {

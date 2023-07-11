@@ -17,7 +17,7 @@ class RawData extends BlockBase
     /**
      * The data length.
      */
-    protected $components;
+    protected int $components;
 
     /**
      * xxx

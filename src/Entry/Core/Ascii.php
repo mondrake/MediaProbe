@@ -7,8 +7,8 @@ namespace FileEye\MediaProbe\Entry\Core;
  */
 class Ascii extends EntryBase
 {
-    protected $name = 'Ascii';
-    protected $formatName = 'Ascii';
+    protected string $name = 'Ascii';
+    protected string $formatName = 'Ascii';
 
     protected function validateDataElement(): void
     {
