@@ -16,9 +16,9 @@ use Symfony\Component\Yaml\Yaml;
  */
 class MediaFilesTest extends MediaProbeTestCaseBase
 {
-    protected array $testDump;
-    protected \DOMDocument $exiftoolDump;
-    protected \DOMDocument $exiftoolRawDump;
+    protected ?array $testDump;
+    protected ?\DOMDocument $exiftoolDump;
+    protected ?\DOMDocument $exiftoolRawDump;
 
     /**
      * {@inheritdoc}
