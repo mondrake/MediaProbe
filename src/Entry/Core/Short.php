@@ -19,12 +19,12 @@ class Short extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'Short';
+    protected string $name = 'Short';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'Short';
+    protected string $formatName = 'Short';
 
     /**
      * {@inheritdoc}

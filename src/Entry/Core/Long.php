@@ -17,12 +17,12 @@ class Long extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'Long';
+    protected string $name = 'Long';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'Long';
+    protected string $formatName = 'Long';
 
     /**
      * {@inheritdoc}

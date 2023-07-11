@@ -23,12 +23,12 @@ class SignedRational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'SignedRational';
+    protected string $name = 'SignedRational';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'SignedRational';
+    protected string $formatName = 'SignedRational';
 
     /**
      * {@inheritdoc}

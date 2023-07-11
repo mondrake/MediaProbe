@@ -22,12 +22,12 @@ class Rational extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'Rational';
+    protected string $name = 'Rational';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'Rational';
+    protected string $formatName = 'Rational';
 
     /**
      * {@inheritdoc}

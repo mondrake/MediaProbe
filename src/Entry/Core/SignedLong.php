@@ -18,12 +18,12 @@ class SignedLong extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'SignedLong';
+    protected string $name = 'SignedLong';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'SignedLong';
+    protected string $formatName = 'SignedLong';
 
     /**
      * {@inheritdoc}

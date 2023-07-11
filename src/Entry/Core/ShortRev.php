@@ -19,12 +19,12 @@ class ShortRev extends NumberBase
     /**
      * {@inheritdoc}
      */
-    protected int $name = 'ShortRev';
+    protected string $name = 'ShortRev';
 
     /**
      * {@inheritdoc}
      */
-    protected int $formatName = 'ShortRev';
+    protected string $formatName = 'ShortRev';
 
     /**
      * {@inheritdoc}
