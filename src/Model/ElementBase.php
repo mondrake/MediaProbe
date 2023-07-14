@@ -77,6 +77,25 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     }
 
     /**
+     * Add the Element object to the MediaProbe DOM.
+     *
+     * @param string $dom_node_name
+     *            The name of the DOM node associated to this element.
+     */
+    protected function setDOMRoot(string $dom_node_name): void
+    {
+        $doc = new \DOMDocument();
+        $doc->registerNodeClass('DOMElement', DOMElement::class);
+        $this->XPath = new \DOMXPath($doc);
+        $parent_node = $doc;
+
+        $this->DOMNode = $doc->createElement($dom_node_name);
+
+        // Assign this Element as the payload of the DOM node.
+        $this->DOMNode->setMediaProbeElement($this);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getRootElement(): ElementInterface
