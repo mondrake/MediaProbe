@@ -40,23 +40,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected bool $valid = true;
 
     /**
-     * Constructs an Element object.
-     *
-     * @param string $dom_node_name
-     *            The name of the DOM node associated to this element.
-     * @param ElementInterface|null $parent
-     *            (Optional) the parent element of this element.
-     * @param ElementInterface|null $reference
-     *            (Optional) if specified, the new element will be inserted
-     *            before the reference element.
-     */
-    public function __construct(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null)
-    {
-        $this->addToDOM($dom_node_name, $parent, $reference);
-    }
-
-    /**
-     * Constructs an Element object.
+     * Add the Element object to the MediaProbe DOM.
      *
      * @param string $dom_node_name
      *            The name of the DOM node associated to this element.
