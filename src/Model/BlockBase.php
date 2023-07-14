@@ -45,7 +45,7 @@ abstract class BlockBase extends ElementBase
     {
         $this->definition = $definition;
 
-        parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
+        $this->addToDOM($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
 
         if ($this->getCollection()->hasProperty('item')) {
             $this->setAttribute('id', $this->getCollection()->getPropertyValue('item'));
