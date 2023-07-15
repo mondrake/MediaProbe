@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Collection\CollectionFactory;
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\Core\Ascii;
@@ -32,16 +31,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
             // branding is an original)
 
             if ($exif === null) {
-                $collection = $this->getMockBuilder(CollectionInterface::class)
-                    ->disableOriginalConstructor()
-                    ->method('getPropertyValue')->with('DOMNode')->willReturn('StubRoot')
-                    ->getMock();
-                $itemDefinition = $this->getMockBuilder(ItemDefinition::class)
-                    ->disableOriginalConstructor()
-                    ->method('getCollection')->willReturn($collection)
-                    ->getMock();
-
-                $app1_segment_mock = new StubRootBlock($itemDefinition);
+                $app1_segment_mock = getStubRoot();
                 $exif_definition = new ItemDefinition(CollectionFactory::get('Exif\Exif'));
                 $exif = new Exif($exif_definition, $app1_segment_mock);
                 $tiff_definition = new ItemDefinition(CollectionFactory::get('Tiff\Tiff'));
