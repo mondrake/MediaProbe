@@ -5,6 +5,6 @@ namespace FileEye\MediaProbe\Debug;
 /**
  * The default element debug visitor.
  */
-class DefaultDebug implements DebugVisitorInterface
+class DefaultDumper implements DebugVisitorInterface
 {
 }
