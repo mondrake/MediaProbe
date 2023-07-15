@@ -92,7 +92,10 @@ class SpecTest extends MediaProbeTestCaseBase
      */
     public function testGetTagText($expected_text, $expected_class, $parent_collection_id, $tag_name, string $args, $brief = false)
     {
-        $ifd = $this->getMockBuilder(Ifd::class)
+        $stubRoot = $this->getStubRoot();
+        $ifd = new Ifd(new ItemDefinition(CollectionFactory::get($parent_collection_id)), $stubRoot);
+
+/*        $ifd = $this->getMockBuilder(Ifd::class)
                     ->disableOriginalConstructor()
                     ->setMethods(['getCollection'])
                     ->getMock();
@@ -100,7 +103,7 @@ class SpecTest extends MediaProbeTestCaseBase
         $parent_collection = CollectionFactory::get($parent_collection_id);
         $ifd->expects($this->any())
           ->method('getCollection')
-          ->will($this->returnValue($parent_collection));
+          ->will($this->returnValue($parent_collection));*/
 
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);
         $item_format = $item_collection->getPropertyValue('format')[0];

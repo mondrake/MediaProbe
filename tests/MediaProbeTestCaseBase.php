@@ -25,6 +25,9 @@ class MediaProbeTestCaseBase extends TestCase
         $this->fileSystem->mkdir($this->tempWorkDirectory);
     }
 
+    /**
+     * Returns a stub RootBlock that can be used to append test structures.
+     */
     protected function getStubRoot(string $DOMName = 'StubRoot'): StubRootBlock
     {
         $collection = $this->getMockBuilder(CollectionInterface::class)
