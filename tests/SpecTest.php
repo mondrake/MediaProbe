@@ -95,16 +95,6 @@ class SpecTest extends MediaProbeTestCaseBase
         $stubRoot = $this->getStubRoot();
         $ifd = new Ifd(new ItemDefinition(CollectionFactory::get($parent_collection_id)), $stubRoot);
 
-/*        $ifd = $this->getMockBuilder(Ifd::class)
-                    ->disableOriginalConstructor()
-                    ->setMethods(['getCollection'])
-                    ->getMock();
-
-        $parent_collection = CollectionFactory::get($parent_collection_id);
-        $ifd->expects($this->any())
-          ->method('getCollection')
-          ->will($this->returnValue($parent_collection));*/
-
         $parent_collection = CollectionFactory::get($parent_collection_id);
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);
         $item_format = $item_collection->getPropertyValue('format')[0];
