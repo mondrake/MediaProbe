@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace FileEye\MediaProbe\Debug;
+namespace FileEye\MediaProbe\Dumper;
 
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Model\BlockBase;
@@ -8,9 +8,9 @@ use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
 
 /**
- * The default element debug visitor.
+ * The element default dumper visitor.
  */
-class DefaultDumper implements DebugVisitorInterface
+class DefaultDumper implements DumperInterface
 {
     public function dumpElement(ElementInterface $element): array
     {

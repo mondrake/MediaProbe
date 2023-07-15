@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Model;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\Debug\DebugVisitorInterface;
+use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\Model\ElementBase;
 use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -255,8 +255,8 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         return is_null($text) ? null : (string) $text;
     }
 
-    public function asArray(DebugVisitorInterface $visitor): array
+    public function asArray(DumperInterface $dumper): array
     {
-        return $visitor->dumpEntry($this);
+        return $dumper->dumpEntry($this);
     }
 }

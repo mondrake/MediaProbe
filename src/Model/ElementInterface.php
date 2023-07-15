@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Debug\DebugVisitorInterface;
+use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -152,5 +152,5 @@ interface ElementInterface
     /**
      * Returns the element as an array.
      */
-    public function asArray(DebugVisitorInterface $visitor): array;
+    public function asArray(DumperInterface $dumper): array;
 }

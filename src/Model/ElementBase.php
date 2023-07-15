@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Debug\DebugVisitorInterface;
+use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\DOMElement;
@@ -217,9 +217,9 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     abstract public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
-    public function asArray(DebugVisitorInterface $visitor): array
+    public function asArray(DumperInterface $dumper): array
     {
-        return $visitor->dumpElement($this);
+        return $dumper->dumpElement($this);
     }
 
     /**

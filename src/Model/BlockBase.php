@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Model;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\Debug\DebugVisitorInterface;
+use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Model\ElementBase;
@@ -174,9 +174,9 @@ abstract class BlockBase extends ElementBase
         return $bytes;
     }
 
-    public function asArray(DebugVisitorInterface $visitor): array
+    public function asArray(DumperInterface $dumper): array
     {
-        return $visitor->dumpBlock($this);
+        return $dumper->dumpBlock($this);
     }
 
     /**

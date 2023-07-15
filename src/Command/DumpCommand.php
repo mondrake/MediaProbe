@@ -7,7 +7,7 @@ use FileEye\MediaProbe\Block\Exif\Ifd;
 use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tag;
 use FileEye\MediaProbe\Block\Tiff;
-use FileEye\MediaProbe\Debug\DefaultDumper;
+use FileEye\MediaProbe\Dumper\DefaultDumper;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Model\BlockBase;

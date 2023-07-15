@@ -4,7 +4,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\Debug\DefaultDumper;
+use FileEye\MediaProbe\Dumper\DefaultDumper;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Model\ElementInterface;
