@@ -183,7 +183,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText(mixed $value, bool $null_on_missing = false): string|int|array|null
+    public function resolveText(mixed $value, bool $null_on_missing = false): string|int|float|array|null
     {
         if (!$this->getParentElement()) {
             return is_array($value) ? implode(' ', $value) : $value;
