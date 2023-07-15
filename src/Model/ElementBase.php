@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
@@ -48,7 +48,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      *            (Optional) if specified, the new element will be inserted
      *            before the reference element.
      */
-    public function __construct(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null): void
+    public function __construct(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null)
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the image structure.
