@@ -5,11 +5,7 @@ namespace FileEye\MediaProbe\Model;
 use FileEye\MediaProbe\ItemDefinition;
 
 /**
- * Base class for MediaProbe blocks.
- *
- * As this class is abstract you cannot instantiate objects from it. It only
- * serves as a common ancestor to define the methods common to all MediaProbe
- * Block objects.
+ * Base class for MediaProbe root block.
  */
 abstract class RootBlockBase extends BlockBase
 {
