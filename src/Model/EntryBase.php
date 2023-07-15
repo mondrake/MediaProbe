@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe\Model;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Debug\DebugVisitorInterface;
 use FileEye\MediaProbe\Model\ElementBase;
 use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -257,7 +258,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * {@inheritdoc}
      */
-    public function toDumpArray(): array
+    public function toDumpArray(DebugVisitorInterface $visitor): array
     {
         $dump = [
             'format' => DataFormat::getName($this->getFormat()),
@@ -265,6 +266,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
             'bytesHash' => hash('sha256', $this->toBytes()),
             'text' => $this->toString(),
         ];
-        return array_merge(parent::toDumpArray(), $dump);
+        return array_merge(parent::toDumpArray($visitor), $dump);
     }
 }

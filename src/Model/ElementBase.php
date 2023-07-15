@@ -3,9 +3,10 @@
 namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Model\DOMElement;
+use FileEye\MediaProbe\Debug\DebugVisitorInterface;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\DOMElement;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
@@ -220,7 +221,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function toDumpArray(): array
+    public function toDumpArray(DebugVisitorInterface $visitor): array
     {
         return [
             'node' => $this->DOMNode->nodeName,
