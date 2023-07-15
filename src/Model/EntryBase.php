@@ -173,7 +173,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    protected function resolveValuePlaceholder(string $value, string $source): string
+    protected function resolveValuePlaceholder(string $value, string $source): string|int
     {
         $tmp = str_replace('{value}', $value, $source);
         $tmp = str_replace('{valuehex}', dechex((int) $value), $tmp);
@@ -183,7 +183,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    public function resolveText(mixed $value, bool $null_on_missing = false): string|array|null
+    public function resolveText(mixed $value, bool $null_on_missing = false): string|int|array|null
     {
         if (!$this->getParentElement()) {
             return is_array($value) ? implode(' ', $value) : $value;
