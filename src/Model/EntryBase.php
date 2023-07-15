@@ -173,7 +173,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     /**
      * @todo xxx
      */
-    protected function resolveValuePlaceholder(string $value, string $source): string|int
+    protected function resolveValuePlaceholder(string|int $value, string $source): string
     {
         $tmp = str_replace('{value}', $value, $source);
         $tmp = str_replace('{valuehex}', dechex((int) $value), $tmp);
