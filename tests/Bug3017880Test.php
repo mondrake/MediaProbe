@@ -41,7 +41,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
             $tiff = $exif->getElement("tiff");
             $ifd0 = $exif->getElement("tiff/ifd[@name='IFD0']");
             if ($ifd0 === null) {
-                $ifd0 = new Ifd(new ItemDefinition(CollectionFactory::get('Tiff\Ifd0'), DataFormat::LONG));
+                $ifd0 = new Ifd(new ItemDefinition(CollectionFactory::get('Tiff\Ifd0'), DataFormat::LONG), $tiff);
             }
 
             $software_name = 'Example V2';
