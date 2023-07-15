@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Debug;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\ElementInterface;
-use FileEye\MediaProbe\Model\EntryBase;
+use FileEye\MediaProbe\Model\EntryInterface;
 
 /**
  * The default element debug visitor.
