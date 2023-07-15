@@ -15,7 +15,7 @@ class DefaultDumper implements DebugVisitorInterface
     public function dumpElement(ElementInterface $element): array
     {
         return [
-            'node' => $element->DOMNode->nodeName,
+            'node' => $element->getNodeName(),
             'path' => $element->getContextPath(),
             'class' => get_class($element),
             'valid' => $element->isValid(),
