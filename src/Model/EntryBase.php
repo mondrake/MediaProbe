@@ -58,7 +58,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function __construct(ElementInterface $parent, DataElement $dataElement, ElementInterface $reference = null)
     {
-        $this->addToDOM(static::DOM_NODE_NAME, $parent, $reference);
+        parent::__construct(static::DOM_NODE_NAME, $parent, $reference);
         $this->setDataElement($dataElement);
         $this->format = DataFormat::getFromName($this->formatName);
     }

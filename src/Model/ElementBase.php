@@ -40,8 +40,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected bool $valid = true;
 
     /**
-     * Add the Element object to the MediaProbe DOM.
-     *
      * @param string $dom_node_name
      *            The name of the DOM node associated to this element.
      * @param ElementInterface|null $parent
@@ -50,7 +48,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      *            (Optional) if specified, the new element will be inserted
      *            before the reference element.
      */
-    protected function addToDOM(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null): void
+    public function __construct(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null): void
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the image structure.
@@ -71,25 +69,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         } else {
             $parent_node->appendChild($this->DOMNode);
         }
-
-        // Assign this Element as the payload of the DOM node.
-        $this->DOMNode->setMediaProbeElement($this);
-    }
-
-    /**
-     * Add the Element object to the MediaProbe DOM.
-     *
-     * @param string $dom_node_name
-     *            The name of the DOM node associated to this element.
-     */
-    protected function setDOMRoot(string $dom_node_name): void
-    {
-        $doc = new \DOMDocument();
-        $doc->registerNodeClass('DOMElement', DOMElement::class);
-        $this->XPath = new \DOMXPath($doc);
-        $parent_node = $doc;
-
-        $this->DOMNode = $doc->createElement($dom_node_name);
 
         // Assign this Element as the payload of the DOM node.
         $this->DOMNode->setMediaProbeElement($this);
