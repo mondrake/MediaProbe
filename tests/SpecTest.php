@@ -105,6 +105,7 @@ class SpecTest extends MediaProbeTestCaseBase
           ->method('getCollection')
           ->will($this->returnValue($parent_collection));*/
 
+        $parent_collection = CollectionFactory::get($parent_collection_id);
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);
         $item_format = $item_collection->getPropertyValue('format')[0];
         $item_definition = new ItemDefinition($item_collection, $item_format);
