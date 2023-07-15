@@ -124,7 +124,7 @@ class DumpCommand extends Command
         $yaml['fileName'] = $file->getBaseName();
         $yaml['mimeType'] = $media->getMimeType();
         $yaml['fileContentHash'] = hash('sha256', $file->getContents());
-        $yaml['elements'] = $media->toDumpArray(new DefaultDumper());
+        $yaml['elements'] = $media->asArray(new DefaultDumper());
         $yaml['log'] = [];
         foreach (['ERROR', 'WARNING', 'NOTICE'] as $level) {
             foreach ($media->dumpLog($level) as $record) {

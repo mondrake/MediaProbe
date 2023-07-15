@@ -255,17 +255,8 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         return is_null($text) ? null : (string) $text;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function toDumpArray(DebugVisitorInterface $visitor): array
+    public function asArray(DebugVisitorInterface $visitor): array
     {
-        $dump = [
-            'format' => DataFormat::getName($this->getFormat()),
-            'components' => $this->getComponents(),
-            'bytesHash' => hash('sha256', $this->toBytes()),
-            'text' => $this->toString(),
-        ];
-        return array_merge(parent::toDumpArray($visitor), $dump);
+        return $visitor->dumpEntry($this);
     }
 }

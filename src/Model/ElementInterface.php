@@ -145,7 +145,7 @@ interface ElementInterface
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
     /**
-     * Returns a dump of the element in an array.
+     * Returns the element as an array.
      */
-    public function toDumpArray(DebugVisitorInterface $visitor): array;
+    public function asArray(DebugVisitorInterface $visitor): array;
 }

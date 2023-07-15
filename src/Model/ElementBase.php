@@ -218,17 +218,9 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     abstract public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function toDumpArray(DebugVisitorInterface $visitor): array
+    public function asArray(DebugVisitorInterface $visitor): array
     {
-        return [
-            'node' => $this->DOMNode->nodeName,
-            'path' => $this->getContextPath(),
-            'class' => get_class($this),
-            'valid' => $this->isValid(),
-        ];
+        return $visitor->dumpElement($this);
     }
 
     /**

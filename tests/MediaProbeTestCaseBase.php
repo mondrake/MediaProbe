@@ -44,7 +44,7 @@ class MediaProbeTestCaseBase extends TestCase
 
     public function dumpElement(ElementInterface $element)
     {
-        dump($element->toDumpArray(new DefaultDumper()));
+        dump($element->asArray(new DefaultDumper()));
 /*        if ($element instanceof EntryInterface) {
             $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
             $tag_title = $element->getParentElement()->getCollection()->getPropertyValue('title') ?? '*na*';

@@ -174,24 +174,9 @@ abstract class BlockBase extends ElementBase
         return $bytes;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function toDumpArray(DebugVisitorInterface $visitor): array
+    public function asArray(DebugVisitorInterface $visitor): array
     {
-        $attributes = [];
-        if ($this->getAttribute('name') !== '') {
-            $attributes['name'] = $this->getAttribute('name');
-        }
-        if ($this->getAttribute('id') !== '') {
-            $attributes['id'] = $this->getAttribute('id');
-        }
-        $dump = array_merge(parent::toDumpArray($visitor), $attributes, ['collection' => $this->getCollection()->getPropertyValue('id')]);
-        // xx todo restore $dump = array_merge(parent::toDumpArray(), $this->getAttributes(), ['collection' => $this->getCollection()->getPropertyValue('id')]);
-        foreach ($this->getMultipleElements("*") as $sub_element) {
-            $dump['elements'][] = $sub_element->toDumpArray($visitor);
-        }
-        return $dump;
+        return $visitor->dumpBlock($this);
     }
 
     /**
