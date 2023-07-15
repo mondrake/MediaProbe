@@ -51,7 +51,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     public function __construct(string $dom_node_name, ElementInterface $parent = null, ElementInterface $reference = null)
     {
         // If $parent is null, this Element is the root of the DOM document that
-        // stores the image structure.
+        // stores the media structure.
         if (!isset($parent) || !isset($parent->DOMNode)) {
             $doc = new \DOMDocument();
             $doc->registerNodeClass('DOMElement', DOMElement::class);
