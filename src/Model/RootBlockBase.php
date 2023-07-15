@@ -2,14 +2,7 @@
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\Model\ElementBase;
-use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\MediaProbe;
-use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Base class for MediaProbe blocks.
@@ -21,13 +14,17 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class RootBlockBase extends BlockBase
 {
     /**
-     * Constructs a Block object.
-     *
+     * The Xpath object must be associated to the root element.
+     */
+    protected \DOMXpath $XPath;
+
+    /**
      * @param \FileEye\MediaProbe\ItemDefinition $definition
-     *            The Item Definition of this Block.
+     *   The Item Definition of this Block.
      */
     public function __construct(ItemDefinition $definition)
     {
         parent::__construct($definition);
+        $this->XPath = new \DOMXPath($this->DOMNode->ownerDocument);
     }
 }
