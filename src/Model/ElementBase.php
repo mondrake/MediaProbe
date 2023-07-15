@@ -28,13 +28,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected \DOMNode $DOMNode;
 
     /**
-     * The Xpath object associated to the root element.
-     *
-     * @todo xx only the root should have it
-     */
-    protected ?\DOMXpath $XPath;
-
-    /**
      * Whether this element was successfully validated.
      */
     protected bool $valid = true;
@@ -55,7 +48,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         if (!isset($parent) || !isset($parent->DOMNode)) {
             $doc = new \DOMDocument();
             $doc->registerNodeClass('DOMElement', DOMElement::class);
-            $this->XPath = new \DOMXPath($doc);
             $parent_node = $doc;
         } else {
             $doc = $parent->DOMNode->ownerDocument;
