@@ -153,4 +153,9 @@ interface ElementInterface
      * Returns the element as an array.
      */
     public function asArray(DumperInterface $dumper): array;
+
+    /**
+     * Logs a debug entry with element information.
+     */
+    public function debugInfo(DumperInterface $dumper): true;
 }
