@@ -42,6 +42,6 @@ class DebugDumper implements DumperInterface
             'title' => $title,
             'offset' => $offset ?? null,
             'size' => $data_element ? $data_element->getSize() : null,
-        ]);
+        ];
     }
 }
