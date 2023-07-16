@@ -156,6 +156,8 @@ interface ElementInterface
 
     /**
      * Logs a debug entry with element information.
+     *
+     * @return true
      */
-    public function debugInfo(DumperInterface $dumper): true;
+    public function debugInfo(DumperInterface $dumper): bool;
 }

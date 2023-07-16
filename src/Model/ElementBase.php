@@ -222,7 +222,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $dumper->dumpElement($this);
     }
 
-    public function debugInfo(DumperInterface $dumper): true
+    public function debugInfo(DumperInterface $dumper): bool
     {
         $debugInfo = $this->asArray($this->getRootElement()->debugDumper);
         $msg = $debugInfo['_msg'] ?? static::class;
