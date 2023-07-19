@@ -228,6 +228,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $msg = $debugInfo['_msg'] ?? static::class;
         unset($debugInfo['_msg']);
         $this->debug($msg, $debugInfo);
+        return true;
     }
 
     /**
