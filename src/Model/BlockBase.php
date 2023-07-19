@@ -178,4 +178,30 @@ abstract class BlockBase extends ElementBase
     {
         return $dumper->dumpBlock($this, $context);
     }
+
+    public function collectInfo(array $context = []): array
+    {
+        $msg = '{node}';
+        $name = $this->getAttribute('name');
+        if ($name ==! null) {
+            $msg .= ':{name}';
+        }
+        $title = $this->getCollection()->getPropertyValue('title');
+        if ($title ==! null) {
+            $msg .= ' ({title})';
+        }
+        if ($context['dataElement'] instanceof DataWindow) {
+            $msg .= ' @{offset} size {size}';
+            $offset = $context['dataElement']->getAbsoluteOffset() . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset()));
+        } else {
+            $msg .= ' size {size} byte(s)';
+        }
+        return array_merge(parent::collectInfo($context), [
+            '_msg' => $msg,
+            'name' => $name,
+            'title' => $title,
+            'offset' => $offset ?? null,
+            'size' => $context['dataElement'] ? $context['dataElement']->getSize() : null,
+        ]);
+    }
 }

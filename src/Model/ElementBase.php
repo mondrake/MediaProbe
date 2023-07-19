@@ -222,6 +222,13 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $dumper->dumpElement($this, $context);
     }
 
+    public function collectInfo(array $context = []): array
+    {
+        return [
+            'node' => $this->getNodeName(),
+        ];
+    }
+
     public function debugInfo(array $context = []): bool
     {
         $debugInfo = $this->asArray($this->getRootElement()->debugDumper, $context);

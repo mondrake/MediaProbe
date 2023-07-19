@@ -24,29 +24,6 @@ class DebugDumper implements DumperInterface
 
     public function dumpBlock(BlockBase $block, array $context = []): array
     {
-        $msg = '{node}';
-        $node = $block->getNodeName();
-        $name = $block->getAttribute('name');
-        if ($name ==! null) {
-            $msg .= ':{name}';
-        }
-        $title = $block->getCollection()->getPropertyValue('title');
-        if ($title ==! null) {
-            $msg .= ' ({title})';
-        }
-        if ($context['dataElement'] instanceof DataWindow) {
-            $msg .= ' @{offset} size {size}';
-            $offset = $context['dataElement']->getAbsoluteOffset() . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset()));
-        } else {
-            $msg .= ' size {size} byte(s)';
-        }
-        return [
-            '_msg' => $msg,
-            'node' => $node,
-            'name' => $name,
-            'title' => $title,
-            'offset' => $offset ?? null,
-            'size' => $context['dataElement'] ? $context['dataElement']->getSize() : null,
-        ];
+        return $block->collectInfo($context);
     }
 }

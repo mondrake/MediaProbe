@@ -158,6 +158,16 @@ interface ElementInterface
     public function asArray(DumperInterface $dumper, array $context = []): array;
 
     /**
+     * Returns an array of information about the element.
+     *
+     * @param array<string,mixed>
+     *   (Optional) Context variables.
+     *
+     * @return array<string,mixed>
+     */
+    public function collectInfo(array $context = []): array;
+
+    /**
      * Logs a debug entry with element information.
      *
      * @param array<string,mixed>
