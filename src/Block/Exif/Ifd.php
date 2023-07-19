@@ -35,7 +35,7 @@ class Ifd extends ListBase
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($data_element, $offset);
-        $this->debugBlockInfo($data_element, $n);
+        assert($this->debugInfo(['dataElement' => $data_element, 'sequence' => $n]));
 
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
