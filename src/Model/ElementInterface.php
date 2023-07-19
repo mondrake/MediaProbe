@@ -151,13 +151,19 @@ interface ElementInterface
 
     /**
      * Returns the element as an array.
+     *
+     * @param array<string,mixed>
+     *   (Optional) Context variables.
      */
-    public function asArray(DumperInterface $dumper): array;
+    public function asArray(DumperInterface $dumper, array $context = []): array;
 
     /**
      * Logs a debug entry with element information.
      *
+     * @param array<string,mixed>
+     *   (Optional) Context variables.
+     *
      * @return true
      */
-    public function debugInfo(DumperInterface $dumper): bool;
+    public function debugInfo(array $context = []): bool;
 }

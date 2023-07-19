@@ -217,14 +217,14 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     abstract public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string;
 
-    public function asArray(DumperInterface $dumper): array
+    public function asArray(DumperInterface $dumper, array $context = []): array
     {
-        return $dumper->dumpElement($this);
+        return $dumper->dumpElement($this, $context);
     }
 
-    public function debugInfo(DumperInterface $dumper): bool
+    public function debugInfo(array $context = []): bool
     {
-        $debugInfo = $this->asArray($this->getRootElement()->debugDumper);
+        $debugInfo = $this->asArray($this->getRootElement()->debugDumper, $context);
         $msg = $debugInfo['_msg'] ?? static::class;
         unset($debugInfo['_msg']);
         $this->debug($msg, $debugInfo);

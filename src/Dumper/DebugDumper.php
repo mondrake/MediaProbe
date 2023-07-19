@@ -7,17 +7,17 @@ namespace FileEye\MediaProbe\Dumper;
  */
 class DebugDumper implements DumperInterface
 {
-    public function dumpElement(ElementInterface $element): array
+    public function dumpElement(ElementInterface $element, array $context = []): array
     {
         return [];
     }
 
-    public function dumpEntry(EntryInterface $entry): array
+    public function dumpEntry(EntryInterface $entry, array $context = []): array
     {
         return [];
     }
 
-    public function dumpBlock(BlockBase $block): array
+    public function dumpBlock(BlockBase $block, array $context = []): array
     {
         $msg = '{node}';
         $node = $block->getNodeName();

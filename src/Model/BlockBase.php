@@ -108,7 +108,7 @@ abstract class BlockBase extends ElementBase
     {
         $data = new DataWindow($data_element, $start, $size);
         $this->size = $data->getSize();
-        $this->debugBlockInfo($data);
+        assert($this->debugInfo(['dataElement' => $data]));
         $this->doParseData($data);
 
         // Invoke post-parse callbacks.
@@ -174,15 +174,8 @@ abstract class BlockBase extends ElementBase
         return $bytes;
     }
 
-    public function asArray(DumperInterface $dumper): array
+    public function asArray(DumperInterface $dumper, array $context = []): array
     {
-        return $dumper->dumpBlock($this);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function debugBlockInfo(?DataElement $data_element = null): void
-    {
+        return $dumper->dumpBlock($this, $context);
     }
 }
