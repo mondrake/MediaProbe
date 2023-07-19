@@ -2,6 +2,11 @@
 
 namespace FileEye\MediaProbe\Dumper;
 
+use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\ElementInterface;
+use FileEye\MediaProbe\Model\EntryInterface;
+
 /**
  * The element debug dumper visitor.
  */
@@ -29,9 +34,9 @@ class DebugDumper implements DumperInterface
         if ($title ==! null) {
             $msg .= ' ({title})';
         }
-        if ($data_element instanceof DataWindow) {
+        if ($context['dataElement'] instanceof DataWindow) {
             $msg .= ' @{offset} size {size}';
-            $offset = $data_element->getAbsoluteOffset() . '/0x' . strtoupper(dechex($data_element->getAbsoluteOffset()));
+            $offset = $context['dataElement']->getAbsoluteOffset() . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset()));
         } else {
             $msg .= ' size {size} byte(s)';
         }
@@ -41,7 +46,7 @@ class DebugDumper implements DumperInterface
             'name' => $name,
             'title' => $title,
             'offset' => $offset ?? null,
-            'size' => $data_element ? $data_element->getSize() : null,
+            'size' => $context['dataElement'] ? $context['dataElement']->getSize() : null,
         ];
     }
 }
