@@ -451,8 +451,12 @@ class Ifd extends ListBase
         }
         $info['item'] = is_numeric($item) ? $item . '/0x' . strtoupper(dechex($item)) : $item;
 
-        $info['tags'] = $context['itemsCount'];
-        $msg .= isset($parentInfo['offset']) ? ' @{offset}, {tags} entries' : ' {tags} entries';
+        if (isset($context['dataElement']) && $context['dataElement'] instanceof DataWindow) {
+            $info['offset'] = $context['dataElement']->getAbsoluteOffset($this->getDefinition()->getDataOffset()) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($this->getDefinition()->getDataOffset())));
+        }
+
+        $info['tags'] = $context['itemsCount'] ?? 'n/a';
+        $msg .= isset($info['offset']) ? ' @{offset}, {tags} entries' : ' {tags} entries';
 
         $info['_msg'] = $msg;
 
