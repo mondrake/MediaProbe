@@ -159,6 +159,7 @@ class Tag extends BlockBase
         if (isset($parentInfo['size'])) {
             $msg .= isset($parentInfo['offset']) ? ' @{offset} size {size}' : ' size {size} byte(s)';
         }
+
         $info['format'] = DataFormat::getName($this->getDefinition()->getFormat());
         $info['components'] = $this->getDefinition()->getValuesCount();
         $msg .= ', format {format}, components {components}';
