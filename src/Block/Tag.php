@@ -139,7 +139,6 @@ class Tag extends BlockBase
         $info = [];
 
         $parentInfo = parent::collectInfo($context);
-dump([__METHOD__, $parentInfo]);
 
         $msg = '#{seq} @{ifdoffset} {node}';
 
@@ -148,15 +147,15 @@ dump([__METHOD__, $parentInfo]);
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
         $info['ifdoffset'] = MediaProbe::dumpIntHex($this->getDefinition()->getItemDefinitionOffset());
-dump([__METHOD__, $this->getAttributes()]);
-        if (isset($parentInfo['name'])) {
-            $msg .= ':{name}';
-        }
+
+        $msg .= $parentInfo['name'] ? ':{name}' : '';
+
         $item = $this->getAttribute('id');
         if ($item ==! null) {
             $msg .= ' ({item})';
         }
         $info['item'] = MediaProbe::dumpIntHex($item);
+
         if (isset($parentInfo['size'])) {
             $msg .= isset($parentInfo['offset']) ? ' @{offset} size {size}' : ' size {size} byte(s)';
         }

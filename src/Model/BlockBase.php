@@ -185,12 +185,11 @@ abstract class BlockBase extends ElementBase
 
         $msg = '{node}';
 
-dump([__METHOD__, $this->getAttributes()]);
-        if ($name = $this->getAttribute('name') ==! null) {
+        if (($name = $this->getAttribute('name')) ==! null) {
             $info['name'] = $name;
             $msg .= ':{name}';
         }
-        if ($title = $this->getCollection()->getPropertyValue('title') ==! null) {
+        if (($title = $this->getCollection()->getPropertyValue('title')) ==! null) {
             $info['title'] = $title;
             $msg .= ' ({title})';
         }
