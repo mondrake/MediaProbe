@@ -147,7 +147,7 @@ class Tag extends BlockBase
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
         $info['ifdoffset'] = MediaProbe::dumpIntHex($this->getDefinition()->getItemDefinitionOffset());
-        if ($parentInfo['name'] ==! null) {
+        if (isset($parentInfo['name'])) {
             $msg .= ':{name}';
         }
         $item = $this->getAttribute('id');
