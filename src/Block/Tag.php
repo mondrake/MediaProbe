@@ -139,6 +139,7 @@ class Tag extends BlockBase
         $info = [];
 
         $parentInfo = parent::collectInfo($context);
+dump([__METHOD__, $parentInfo]);
 
         $msg = '#{seq} @{ifdoffset} {node}';
 
