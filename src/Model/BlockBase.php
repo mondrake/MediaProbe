@@ -181,27 +181,32 @@ abstract class BlockBase extends ElementBase
 
     public function collectInfo(array $context = []): array
     {
+        $info = [];
+
         $msg = '{node}';
-        $name = $this->getAttribute('name');
-        if ($name ==! null) {
+
+        if ($name = $this->getAttribute('name') ==! null) {
+            $info['name'] = $name;
             $msg .= ':{name}';
         }
-        $title = $this->getCollection()->getPropertyValue('title');
-        if ($title ==! null) {
+        if ($title = $this->getCollection()->getPropertyValue('title') ==! null) {
+            $info['title'] = $title;
             $msg .= ' ({title})';
         }
-        if ($context['dataElement'] instanceof DataWindow) {
-            $msg .= ' @{offset} size {size}';
-            $offset = $context['dataElement']->getAbsoluteOffset() . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset()));
-        } else {
-            $msg .= ' size {size} byte(s)';
+
+        if (isset($context['dataElement'])) {
+            $info['size'] = $context['dataElement']->getSize();
+            if ($context['dataElement'] instanceof DataWindow) {
+                $msg .= ' @{offset} size {size}';
+                $info['offset'] = $context['dataElement']->getAbsoluteOffset() . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset()));
+// @todo $offset = MediaProbe::dumpIntHex($context['dataElement']->getAbsoluteOffset());
+            } else {
+                $msg .= ' size {size} byte(s)';
+            }
         }
-        return array_merge(parent::collectInfo($context), [
-            '_msg' => $msg,
-            'name' => $name,
-            'title' => $title,
-            'offset' => $offset ?? null,
-            'size' => $context['dataElement'] ? $context['dataElement']->getSize() : null,
-        ]);
+
+        $info['_msg'] = $msg;
+
+        return array_merge(parent::collectInfo($context), $info);
     }
 }
