@@ -39,6 +39,8 @@ class FilterInfoIndex extends Index
      */
     protected function doParseData(DataElement $data): void
     {
+        assert($this->debugInfo(['dataElement' => $data]));
+
         $offset = 0;
 
         // The first 4 bytes is a marker (?), store as RawData.

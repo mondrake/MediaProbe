@@ -117,10 +117,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      * @param DataElement $data_element
      *   The data element that will provide the data.
      */
-    protected function doParseData(DataElement $data): void
-    {
-        throw new MediaProbeException("%s does not implement the %s method.", get_called_class(), __FUNCTION__);
-    }
+    abstract protected function doParseData(DataElement $data);
 
     /**
      * Invoke post-parse callbacks.

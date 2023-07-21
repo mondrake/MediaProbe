@@ -50,6 +50,7 @@ class Index extends ListBase
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);
+        assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled

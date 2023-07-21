@@ -47,6 +47,7 @@ class Map extends Index
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);
+        assert($this->debugInfo(['dataElement' => $data]));
 
         // Preserve the entire map as a raw data block.
         $mapdata = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'mapdata']));

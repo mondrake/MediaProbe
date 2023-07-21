@@ -21,6 +21,7 @@ class AFInfoIndex extends Index
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);
+        assert($this->debugInfo(['dataElement' => $data]));
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled

@@ -35,6 +35,8 @@ class Filter extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
+        assert($this->debugInfo(['dataElement' => $data]));
+
         $offset = 0;
 
         // The id of the filter is at offset 0.
