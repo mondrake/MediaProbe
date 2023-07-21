@@ -73,6 +73,7 @@ class Tag extends BlockBase
      */
     protected function doParseData(DataElement $data): void
     {
+        assert($this->debugInfo(['dataElement' => $data]));
         try {
             $class = $this->getDefinition()->getEntryClass();
             $entry = new $class($this, $data);
@@ -140,7 +141,7 @@ class Tag extends BlockBase
 
         $parentInfo = parent::collectInfo($context);
 
-        $msg = '#{seq} @{ifdoffset} {node}';
+        $msg = '#{seq} ifd@{ifdoffset} {node}';
 
         $info['seq'] = $this->getDefinition()->getSequence() + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
@@ -161,7 +162,7 @@ class Tag extends BlockBase
 
         $info['format'] = DataFormat::getName($this->getDefinition()->getFormat());
         $info['components'] = $this->getDefinition()->getValuesCount();
-        $msg .= ', format {format}, components {components}';
+        $msg .= ' format {format} count {components}';
 
         $info['_msg'] = $msg;
 
