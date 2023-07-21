@@ -62,10 +62,7 @@ class Tiff extends BlockBase
         $this->setByteOrder(self::getTiffSegmentByteOrder($data_element));
         $data_element->setByteOrder($this->getByteOrder());
 
-        $this->debug('byte order: {byte_order} ({byte_order_description})', [
-            'byte_order' => $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM',
-            'byte_order_description' => $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian',
-        ]);
+        assert($this->debugInfo(['dataElement' => $data]));
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for header).
         $ifd_offset = $data_element->getLong(4);
@@ -230,5 +227,18 @@ class Tiff extends BlockBase
         }
 
         return $order;
+    }
+
+    public function collectInfo(array $context = []): array
+    {
+        $info = [];
+
+        $parentInfo = parent::collectInfo($context);
+
+        $info['_msg'] = $parentInfo['_msg'] . ' byte order {byteOrder} ({byteOrderDescription})';
+        $info['byteOrder'] = $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM';
+        $info['byteOrderDescription'] = $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian';
+
+        return array_merge($parentInfo, $info);
     }
 }

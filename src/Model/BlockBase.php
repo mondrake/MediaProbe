@@ -204,6 +204,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
 
         $info['_msg'] = $msg;
 
-        return array_merge(parent::collectInfo($context), $info);
+        return array_merge($parentInfo, $info);
     }
 }
