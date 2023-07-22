@@ -56,14 +56,14 @@ class Filter extends ListBase
 
         // Loop and parse through the parameters.
         for ($p = 0; $p < $this->paramsCount; $p++) {
-            $id = $data->getLong($offset);
+            $id = (string) $data->getLong($offset);
             $val_count = $data->getLong($offset + 4);
             $offset += 8;
 
             // The items are defined in the collection of the parent element.
             $this
                 ->addBlock(new ItemDefinition(
-                    (string) $this->getParentElement()->getCollection()->getItemCollection($id),
+                    $this->getParentElement()->getCollection()->getItemCollection($id),
                     DataFormat::SIGNED_LONG,
                     $val_count,
                     0,
