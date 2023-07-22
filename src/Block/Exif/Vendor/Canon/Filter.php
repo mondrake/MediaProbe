@@ -30,12 +30,18 @@ class Filter extends ListBase
      */
     protected int $paramsCount;
 
+    public function __construct(ItemDefinition $definition, BlockInterface $parent = null, BlockInterface $reference = null)
+    {
+dump($definition);
+        parent::__construct($definition, $parent, $reference);
+    }
+
     /**
      * {@inheritdoc}
      */
     protected function doParseData(DataElement $data): void
     {
-dump([$this->getAttribute('name'), $this->getParentElement()->getAttribute('name'), $this->getParentElement()->getParentElement()->getAttribute('name')]);
+//dump([$this->getAttribute('name'), $this->getParentElement()->getAttribute('name'), $this->getParentElement()->getParentElement()->getAttribute('name')]);
         $offset = 0;
 
         // The id of the filter is at offset 0.
