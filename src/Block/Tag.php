@@ -19,15 +19,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class Tag extends BlockBase
 {
     /**
-     * Constructs a Tag block object.
-     */
-    public function __construct(ItemDefinition $definition, BlockBase $parent = null, ElementInterface $reference = null)
-    {
-        parent::__construct($definition, $parent, $reference);
-        $this->validate();
-    }
-
-    /**
      * Validates against the specification, if defined.
      */
     public function validate(): void
@@ -73,6 +64,7 @@ class Tag extends BlockBase
      */
     protected function doParseData(DataElement $data): void
     {
+        $this->validate();
         assert($this->debugInfo(['dataElement' => $data]));
         try {
             $class = $this->getDefinition()->getEntryClass();
@@ -148,7 +140,7 @@ class Tag extends BlockBase
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
 
-dump($this->getDefinition());
+//dump($this->getDefinition());
         $info['relativeOffset'] = MediaProbe::dumpIntHex($this->getDefinition()->getItemDefinitionOffset());
 
         $msg .= isset($parentInfo['name']) ? ':{name}' : '';
