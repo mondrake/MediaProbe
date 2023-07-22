@@ -42,7 +42,6 @@ class Filter extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
-//dump([$this->getAttribute('name'), $this->getParentElement()->getAttribute('name'), $this->getParentElement()->getParentElement()->getAttribute('name')]);
         $offset = 0;
 
         // The id of the filter is at offset 0.
@@ -88,7 +87,7 @@ class Filter extends ListBase
         $bytes = '';
 
         // The id of the filter.
-        $bytes .= ConvertBytes::fromLong($this->getAttribute('id'), $byte_order);
+        $bytes .= ConvertBytes::fromLong((int) $this->getAttribute('id'), $byte_order);
 
         // Build the parameters.
         $params = $this->getMultipleElements('*');
