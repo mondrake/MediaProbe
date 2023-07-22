@@ -35,6 +35,7 @@ class Filter extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
+dump([$this, $this->getParentElement()]);
         $offset = 0;
 
         // The id of the filter is at offset 0.
@@ -106,7 +107,7 @@ class Filter extends ListBase
     public function collectInfo(array $context = []): array
     {
         return array_merge(parent::collectInfo($context), [
-            '_msg' =>'#{seq}.{name}.filter @{offset}, {parmetersCount} parameter(s), size {size} bytes',
+            '_msg' =>'{node}.{name}#{seq} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
             'seq' => $this->getDefinition()->getSequence() + 1,
             'parmetersCount' => $this->paramsCount,
         ]);
