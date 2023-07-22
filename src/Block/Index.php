@@ -50,16 +50,15 @@ class Index extends ListBase
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);
-        assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
-        $index_components = $this->getDefinition()->getValuesCount();
-        assert($this->debugInfo(['dataElement' => $data, 'itemsCount' => $index_components]));
+        $this->components = $this->getDefinition()->getValuesCount();
+        assert($this->debugInfo(['dataElement' => $data]));
 
-        for ($i = 0; $i < $index_components; $i++) {
+        for ($i = 0; $i < $this->components; $i++) {
             $item_definition = $this->getItemDefinitionFromData($i, $i, $data, $offset);
 
             // Check if this tag should be skipped.
@@ -68,7 +67,7 @@ class Index extends ListBase
                 continue;
             };
 
-            $index_components -= ($item_definition->getValuesCount() - 1);
+            $this->components -= ($item_definition->getValuesCount() - 1);
 
             // Adds the 'tag'.
             $this->addBlock($item_definition)->parseData($data, $item_definition->getDataOffset(), $item_definition->getSize());

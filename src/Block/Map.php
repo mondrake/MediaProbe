@@ -27,11 +27,6 @@ class Map extends Index
     protected int $format;
 
     /**
-     * The amount of components in the map.
-     */
-    protected int $components;
-
-    /**
      * {@inheritdoc}
      */
     public function __construct(ItemDefinition $definition, BlockBase $parent = null, BlockBase $reference = null)

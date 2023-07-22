@@ -35,11 +35,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class FilterInfoIndex extends Index
 {
     /**
-     * The count of filters.
-     */
-    protected int $indexComponents;
-
-    /**
      * {@inheritdoc}
      */
     protected function doParseData(DataElement $data): void
@@ -47,7 +42,7 @@ class FilterInfoIndex extends Index
         $offset = 0;
 
         // The count of filters is at offset 4.
-        $this->indexComponents = $data->getLong($offset + 4);
+        $this->components = $data->getLong($offset + 4);
 
         assert($this->debugInfo(['dataElement' => $data]));
 
@@ -58,7 +53,7 @@ class FilterInfoIndex extends Index
         $offset += 8;
 
         // Loop and parse through the filters.
-        for ($i = 0; $i < $this->indexComponents; $i++) {
+        for ($i = 0; $i < $this->components; $i++) {
             $filter_size = $data->getLong($offset + 4);
             $this
                 ->addBlock(
@@ -113,7 +108,7 @@ class FilterInfoIndex extends Index
     {
         $info = [];
         $parentInfo = parent::collectInfo($context);
-        $info['tags'] = $this->indexComponents;
+        $info['tags'] = $this->components;
         return array_merge($parentInfo, $info);
     }
 }
