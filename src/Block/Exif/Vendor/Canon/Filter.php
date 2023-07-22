@@ -33,8 +33,8 @@ class Filter extends ListBase
 
     public function __construct(ItemDefinition $definition, BlockInterface $parent = null, BlockInterface $reference = null)
     {
-dump($definition);
         parent::__construct($definition, $parent, $reference);
+        $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $definition->getSequence());
     }
 
     /**
@@ -46,7 +46,7 @@ dump($definition);
         $offset = 0;
 
         // The id of the filter is at offset 0.
-        $this->setAttribute('id', $data->getLong($offset));
+        $this->setAttribute('id', (string) $data->getLong($offset));
 
         // The count of filter parameters is at offset 8.
         $this->paramsCount = $data->getLong($offset + 8);
@@ -114,7 +114,7 @@ dump($definition);
     public function collectInfo(array $context = []): array
     {
         return array_merge(parent::collectInfo($context), [
-            '_msg' =>'{node}.{name}#{seq} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
+            '_msg' =>'#{seq}.{node}.{name} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
             'seq' => $this->getDefinition()->getSequence() + 1,
             'parmetersCount' => $this->paramsCount,
         ]);
