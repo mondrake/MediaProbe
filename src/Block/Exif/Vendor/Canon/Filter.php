@@ -35,8 +35,6 @@ class Filter extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
-        assert($this->debugInfo(['dataElement' => $data]));
-
         $offset = 0;
 
         // The id of the filter is at offset 0.
@@ -45,6 +43,8 @@ class Filter extends ListBase
         // The count of filter parameters is at offset 8.
         $this->paramsCount = $data->getLong($offset + 8);
         $offset += 12;
+
+        assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop and parse through the parameters.
         for ($p = 0; $p < $this->paramsCount; $p++) {
@@ -59,10 +59,14 @@ class Filter extends ListBase
                     DataFormat::SIGNED_LONG,
                     $val_count,
                     0,
-                    999,
+                    $offset,
                     $p,
                 ))
-                ->parseData(new DataWindow($data, $offset, $val_count * DataFormat::getSize(DataFormat::SIGNED_LONG)));
+                ->parseData(new DataWindow(
+                    $data,
+                    $offset,
+                    $val_count * DataFormat::getSize(DataFormat::SIGNED_LONG)
+                ));
 
             $offset += 4 * $val_count;
         }
@@ -102,9 +106,9 @@ class Filter extends ListBase
     public function collectInfo(array $context = []): array
     {
         return array_merge(parent::collectInfo($context), [
-            '_msg' =>'filter#{seq} @{offset}, {parms} parameter(s), size {size} bytes',
+//            '_msg' =>'filter#{seq} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
             'seq' => $this->getDefinition()->getSequence() + 1,
-            'parms' => $this->paramsCount ?? 'n/a',
+            'parmetersCount' => $this->paramsCount,
         ]);
     }
 
