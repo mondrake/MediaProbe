@@ -106,7 +106,7 @@ class Filter extends ListBase
     public function collectInfo(array $context = []): array
     {
         return array_merge(parent::collectInfo($context), [
-//            '_msg' =>'filter#{seq} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
+            '_msg' =>'#{seq}.{name}.filter @{offset}, {parmetersCount} parameter(s), size {size} bytes',
             'seq' => $this->getDefinition()->getSequence() + 1,
             'parmetersCount' => $this->paramsCount,
         ]);
