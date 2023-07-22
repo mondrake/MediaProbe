@@ -63,7 +63,7 @@ class Filter extends ListBase
             // The items are defined in the collection of the parent element.
             $this
                 ->addBlock(new ItemDefinition(
-                    $this->getParentElement()->getCollection()->getItemCollection($id),
+                    (string) $this->getParentElement()->getCollection()->getItemCollection($id),
                     DataFormat::SIGNED_LONG,
                     $val_count,
                     0,
@@ -114,7 +114,7 @@ class Filter extends ListBase
     public function collectInfo(array $context = []): array
     {
         return array_merge(parent::collectInfo($context), [
-            '_msg' =>'#{seq}.{node}.{name} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
+            '_msg' =>'#{seq}.{name} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
             'seq' => $this->getDefinition()->getSequence() + 1,
             'parmetersCount' => $this->paramsCount,
         ]);
