@@ -93,7 +93,7 @@ class Filter extends ListBase
         $params = $this->getMultipleElements('*');
         $data_area_bytes = '';
         foreach ($params as $param) {
-            $data_area_bytes .= ConvertBytes::fromLong($param->getAttribute('id'), $byte_order);
+            $data_area_bytes .= ConvertBytes::fromLong((int)  $param->getAttribute('id'), $byte_order);
             $data_area_bytes .= ConvertBytes::fromLong($param->getComponents(), $byte_order);
             $data_area_bytes .= $param->toBytes($byte_order);
         }
