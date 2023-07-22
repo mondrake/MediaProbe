@@ -62,7 +62,7 @@ jobs:
 #        php examples/dump-media.php -d tests/media-samples/image/broken/pel-176-RPT200076_03.jpg
 
     - name: Run test suite
-#      continue-on-error: true
+      continue-on-error: true
       run: vendor/bin/phpunit ./tests
 
 #    - name: Code style test
