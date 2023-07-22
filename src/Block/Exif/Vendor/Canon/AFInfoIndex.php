@@ -27,7 +27,7 @@ class AFInfoIndex extends Index
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
         $this->components = $this->getDefinition()->getValuesCount();
-        assert($this->debugInfo(['dataElement' => $data]);
+        assert($this->debugInfo(['dataElement' => $data]));
 
         for ($i = 0; $i < $this->components; $i++) {
             $item_definition = $this->getItemDefinitionFromData($i, $i, $data, $offset);
