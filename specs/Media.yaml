@@ -1,4 +1,4 @@
-collection: media
+collection: Media
 class: FileEye\MediaProbe\Media
 DOMNode: media
 items: {}
