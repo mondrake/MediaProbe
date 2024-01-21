@@ -2,18 +2,18 @@
 
 namespace FileEye\MediaProbe;
 
-use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Block\Jpeg;
 use FileEye\MediaProbe\Block\Tiff;
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Collection\CollectionFactory;
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Data\DataString;
+use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
-use Monolog\Logger;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
+use Monolog\Logger;
 use Monolog\Processor\PsrLogMessageProcessor;
 use PrettyXml\Formatter;
 use Psr\Log\LoggerInterface;
@@ -56,24 +56,23 @@ class Media extends RootBlockBase
      * Constructs a Media object.
      *
      * @param ?LoggerInterface $externalLogger
-     *            (Optional) a PSR-3 compliant logger callback.
-     *            Consuming code can have higher level logging facilities in place.
-     *            Any entry sent to the internal logger will also be sent to the
-     *            callback, if specified.
+     *   (Optional) a PSR-3 compliant logger callback. Consuming code can have higher level
+     *   logging facilities in place. Any entry sent to the internal logger will also be sent to
+     *   the callback, if specified.
      * @param ?string $failLevel
-     *            (Optional) a PSR-3 compliant log level. Any log entry at this
-     *            level or above will force media parsing to stop.
+     *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
+     *   media parsing to stop.
      */
     public function __construct(
         protected ?LoggerInterface $externalLogger,
         ?string $failLevel,
     )
     {
-        $media = new ItemDefinition(CollectionFactory::get('MediaType'));
+        $media = new ItemDefinition(CollectionFactory::get('Media'));
         parent::__construct($media);
         $this->logger = (new Logger('mediaprobe'))
-          ->pushHandler(new TestHandler(Logger::INFO))
-          ->pushProcessor(new PsrLogMessageProcessor());
+            ->pushHandler(new TestHandler(Logger::INFO))
+            ->pushProcessor(new PsrLogMessageProcessor());
         $this->failLevel = $failLevel ? Logger::toMonologLevel($failLevel) : null;
         $this->stopWatch = new Stopwatch();
     }

@@ -1,5 +1,4 @@
 collection: MediaType
-class: FileEye\MediaProbe\MediaType
 items:
     image/jpeg:
         collection: Jpeg\Jpeg

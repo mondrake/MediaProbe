@@ -1,0 +1,4 @@
+collection: media
+class: FileEye\MediaProbe\Media
+DOMNode: media
+items: {}
