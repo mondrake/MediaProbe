@@ -153,7 +153,7 @@ class Media extends RootBlockBase
      */
     protected static function getMatchingMediaCollection(DataElement $dataElement): CollectionInterface
     {
-        $media_collection = CollectionFactory::get('Media');
+        $media_collection = CollectionFactory::get('MediaType');
         // Loop through the 'Media' collection items, each of which defines a
         // media format collection, and checks if the media matches the format.
         // When a match is found, return the media format collection.
