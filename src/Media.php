@@ -38,7 +38,7 @@ class Media extends RootBlockBase
      * MediaProbe normally intercepts and logs media parsing issues without
      * breaking the flow. However it is possible to enable hard failures by
      * defining the minimum log level at which the parsing process will break
-     * and throw an InvalidFileException.
+     * and throw an MediaProbeException.
      */
     protected ?Level $failLevel;
 
@@ -81,18 +81,14 @@ class Media extends RootBlockBase
      * Creates a Media object from a file.
      *
      * @param string $path
-     *            The path to a media file on the file system.
-     * @param \Psr\Log\LoggerInterface|null $externalLogger
-     *            (Optional) a PSR-3 compliant logger callback.
-     * @param string|null $failLevel
-     *            (Optional) a PSR-3 compliant log level. Any log entry at this
-     *            level or above will force media parsing to stop.
+     *   The path to a media file on the file system.
+     * @param ?LoggerInterface $externalLogger
+     *   (Optional) a PSR-3 compliant logger callback.
+     * @param ?string $failLevel
+     *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
+     *   media parsing to stop.
      *
-     * @return Media
-     *            The Media object.
-     *
-     * @throws InvalidFileException
-     *            On failure.
+     * @throws MediaProbeException
      */
     public static function parseFromFile(string $path, ?LoggerInterface $externalLogger = null, ?string $failLevel = null): Media
     {
@@ -105,20 +101,19 @@ class Media extends RootBlockBase
      * Creates a Media object from data.
      *
      * @param DataElement $dataElement
-     *            The data element providing the data.
-     * @param \Psr\Log\LoggerInterface|null $externalLogger
-     *            (Optional) a PSR-3 compliant logger callback.
-     * @param string|null $failLevel
-     *            (Optional) a PSR-3 compliant log level. Any log entry at this
-     *            level or above will force media parsing to stop.
+     *   The data element providing the data.
+     * @param ?LoggerInterface $externalLogger
+     *   (Optional) a PSR-3 compliant logger callback.
+     * @param ?string $failLevel
+     *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
+     *   media parsing to stop.
      *
-     * @return Media
-     *            The Media object.
+     * @throws MediaProbeException
      */
     public static function parse(DataElement $dataElement, ?LoggerInterface $externalLogger = null, ?string $failLevel = null): Media
     {
         // Determine the media format.
-        $mediaType = new ItemDefinition(static::getMatchingMediaCollection($dataElement));
+        $mediaType = new ItemDefinition(MediaTypeResolver::getMediaTypeCollection($dataElement));
 
         // Build the Media object and its immediate child, that represents the
         // media format. Then parse the media according to the media format.
@@ -139,38 +134,7 @@ class Media extends RootBlockBase
     }
 
     /**
-     * Determines the media format collection of the media data.
-     *
-     * @param DataElement $dataElement
-     *            the data element that will provide the data.
-     *
-     * @return Collection
-     *            The media format collection.
-     *
-     * @throws InvalidFileException
-     *            On failure.
-     */
-    protected static function getMatchingMediaCollection(DataElement $dataElement): CollectionInterface
-    {
-        $media_collection = CollectionFactory::get('MediaType');
-        // Loop through the 'Media' collection items, each of which defines a
-        // media format collection, and checks if the media matches the format.
-        // When a match is found, return the media format collection.
-        foreach ($media_collection->listItemIds() as $media_format_collection_id) {
-            $format_collection = $media_collection->getItemCollection($media_format_collection_id);
-            $format_class = $format_collection->getPropertyValue('class');
-            if ($format_class::isDataMatchingFormat($dataElement)) {
-                return $format_collection;
-            }
-        }
-
-        throw new InvalidFileException('Media format not managed by MediaProbe');
-    }
-
-    /**
      * Determines the MIME type of the media.
-     *
-     * @return string
      */
     public function getMimeType(): string
     {
@@ -181,19 +145,18 @@ class Media extends RootBlockBase
      * Save the Media object as a file.
      *
      * @param string $path
-     *            The path to the media file on the file system.
+     *   The path to the media file on the file system.
      *
      * @return int
-     *            The number of bytes that were written to the file.
+     *   The number of bytes that were written to the file.
      *
-     * @throws InvalidFileException
-     *            On failure.
+     * @throws MediaProbeException
      */
     public function saveToFile(string $path): int
     {
         $size = file_put_contents($path, $this->toBytes());
         if ($size === false) {
-            throw new InvalidFileException('File save failed');
+            throw new MediaProbeException('File save failed');
         }
         return $size;
     }
@@ -202,9 +165,7 @@ class Media extends RootBlockBase
      * Returns the DOM structure of the Media object as an XML string.
      *
      * @param bool $pretty
-     *            TRUE if the XML should be prettified.
-     *
-     * @return string
+     *   TRUE if the XML should be prettified.
      */
     public function toXml(bool $pretty = false): string
     {
@@ -219,11 +180,10 @@ class Media extends RootBlockBase
      * Returns the log entries of the Media object.
      *
      * @param string $level_name
-     *            (Optional) If specified, filters only the entries of the
-     *            specified severity level.
+     *   (Optional) If specified, filters only the entries of the specified severity level.
      *
      * @return array
-     *            An array of Monolog entries.
+     *   An array of Monolog entries.
      */
     public function dumpLog(?string $level_name = null): array
     {
@@ -237,9 +197,6 @@ class Media extends RootBlockBase
         return $ret;
     }
 
-    /**
-     * Returns the stopwatch.
-     */
     public function getStopwatch(): Stopwatch
     {
         return $this->stopWatch;
