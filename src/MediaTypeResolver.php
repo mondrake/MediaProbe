@@ -22,7 +22,7 @@ class MediaTypeResolver
      *
      * @throws MediaProbeException
      */
-    public static function getMediaTypeCollection(DataElement $dataElement): CollectionInterface
+    public static function fromDataElement(DataElement $dataElement): CollectionInterface
     {
         $mediaCollection = CollectionFactory::get('MediaType');
         // Loop through the 'Media' collection items, each of which defines a media format

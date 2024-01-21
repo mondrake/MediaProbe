@@ -113,7 +113,7 @@ class Media extends RootBlockBase
     public static function parse(DataElement $dataElement, ?LoggerInterface $externalLogger = null, ?string $failLevel = null): Media
     {
         // Determine the media format.
-        $mediaType = new ItemDefinition(MediaTypeResolver::getMediaTypeCollection($dataElement));
+        $mediaType = new ItemDefinition(MediaTypeResolver::fromDataElement($dataElement));
 
         // Build the Media object and its immediate child, that represents the
         // media format. Then parse the media according to the media format.
