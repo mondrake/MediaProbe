@@ -98,14 +98,20 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     /**
      * Parse data into a MediaProbe block.
      *
-     * @param DataElement $data_element
+     * @param DataElement $dataElement
      *   The data element that will provide the data.
      */
-    public function parseData(DataElement $data_element, int $start = 0, ?int $size = null): void
+    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
-        $data = new DataWindow($data_element, $start, $size);
+        $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
-        $this->doParseData($data);
+        if ($this->getCollection()->hasProperty('parser')) {
+            $parserClass = $this->getCollection()->getProperty('parser');
+            $parser = new $parserClass();
+            $parser->parseData($data);
+        } else {
+            $this->doParseData($data);
+        }
 
         // Invoke post-parse callbacks.
         $this->executePostParseCallbacks($data);
@@ -114,7 +120,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     /**
      * Parse data into a MediaProbe block.
      *
-     * @param DataElement $data_element
+     * @param DataElement $dataElement
      *   The data element that will provide the data.
      */
     abstract protected function doParseData(DataElement $data);
@@ -122,15 +128,15 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     /**
      * Invoke post-parse callbacks.
      *
-     * @param \FileEye\MediaProbe\Data\DataElement $data_element
+     * @param \FileEye\MediaProbe\Data\DataElement $dataElement
      *   @todo
      */
-    protected function executePostParseCallbacks(DataElement $data_element): static
+    protected function executePostParseCallbacks(DataElement $dataElement): static
     {
         $post_load_callbacks = $this->getCollection()->getPropertyValue('postParse');
         if (!empty($post_load_callbacks)) {
             foreach ($post_load_callbacks as $callback) {
-                call_user_func($callback, $data_element, $this);
+                call_user_func($callback, $dataElement, $this);
             }
         }
         return $this;
@@ -141,7 +147,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
-dump($item_definition->getCollection());
         $class = $item_definition->getCollection()->getPropertyValue('class');
         return new $class($item_definition, $parent ?? $this, $reference);
     }

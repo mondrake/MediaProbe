@@ -16,22 +16,9 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 /**
  * Class for handling a JPEG image data.
  */
-class Jpeg extends BlockBase
+class Jpeg
 {
-    /**
-     * JPEG delimiter.
-     */
-    const JPEG_DELIMITER = 0xFF;
-
-    /**
-     * JPEG header.
-     */
-    const JPEG_HEADER = "\xFF\xD8\xFF";
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function doParseData(DataElement $data): void
+    public function parseData(DataElement $data): void
     {
         assert($this->debugInfo(['dataElement' => $data]));
 
@@ -152,16 +139,6 @@ class Jpeg extends BlockBase
             }
         }
         throw new DataException('JPEG marker not found @%d', $data_element->getAbsoluteOffset($offset));
-    }
-
-    /**
-     * Returns the MIME type of the image.
-     *
-     * @returns string
-     */
-    public function getMimeType(): string
-    {
-        return 'image/jpeg';
     }
 
     /**

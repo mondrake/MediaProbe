@@ -16,28 +16,8 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 /**
  * Class for handling TIFF data.
  */
-class Tiff extends BlockBase
+class Tiff
 {
-    /**
-     * TIFF header.
-     *
-     * This must follow after the two bytes indicating the byte order.
-     */
-    const TIFF_HEADER = 0x002A;
-
-    /**
-     * The byte order of this TIFF segment.
-     */
-    protected int $byteOrder;
-
-    /**
-     * Returns the MIME type of the image.
-     */
-    public function getMimeType(): string
-    {
-        return 'image/tiff';
-    }
-
     public function setByteOrder(int $byteOrder): self
     {
         $this->byteOrder = $byteOrder;
@@ -49,10 +29,7 @@ class Tiff extends BlockBase
         return $this->byteOrder;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function doParseData(DataElement $data): void
+    public function parseData(DataElement $data): void
     {
         // Determine the byte order of the TIFF data.
         $this->setByteOrder(self::getTiffSegmentByteOrder($data));
@@ -225,16 +202,4 @@ class Tiff extends BlockBase
         return $order;
     }
 
-    public function collectInfo(array $context = []): array
-    {
-        $info = [];
-
-        $parentInfo = parent::collectInfo($context);
-
-        $info['_msg'] = $parentInfo['_msg'] . ' byte order {byteOrder} ({byteOrderDescription})';
-        $info['byteOrder'] = $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'II' : 'MM';
-        $info['byteOrderDescription'] = $this->getByteOrder() === ConvertBytes::LITTLE_ENDIAN ? 'Little Endian' : 'Big Endian';
-
-        return array_merge($parentInfo, $info);
-    }
 }
