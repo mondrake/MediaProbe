@@ -141,6 +141,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
+dump($item_definition->getCollection());
         $class = $item_definition->getCollection()->getPropertyValue('class');
         return new $class($item_definition, $parent ?? $this, $reference);
     }
