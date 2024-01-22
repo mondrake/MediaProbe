@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Parser;
 
-use FileEye\MediaProbe\Parser\BlockInterface;
+use FileEye\MediaProbe\Model\BlockInterface;
 
 class ParserBase
 {
