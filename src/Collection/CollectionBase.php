@@ -64,6 +64,14 @@ abstract class CollectionBase implements CollectionInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getItems(): array
+    {
+        return $this->getPropertyValue('items') ?? [];
+    }
+
+    /**
      * Returns the collection index of an item, resolved in relation to the context.
      *
      * @param string $item_id

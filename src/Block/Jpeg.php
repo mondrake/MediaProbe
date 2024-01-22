@@ -173,7 +173,7 @@ class Jpeg extends BlockBase
      * @return bool
      *   TRUE if the data element is a JPEG image.
      */
-    public static function isDataMatchingFormat(DataElement $data_element): bool
+    public static function isDataMatchingMediaType(DataElement $data_element): bool
     {
         return $data_element->getBytes(0, 3) === static::JPEG_HEADER;
     }

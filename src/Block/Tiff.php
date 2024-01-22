@@ -189,7 +189,7 @@ class Tiff extends BlockBase
      *
      * @return bool
      */
-    public static function isDataMatchingFormat(DataElement $data_element): bool
+    public static function isDataMatchingMediaType(DataElement $data_element): bool
     {
         return static::getTiffSegmentByteOrder($data_element) !== null;
     }

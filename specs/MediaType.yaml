@@ -2,5 +2,9 @@ collection: MediaType
 items:
     image/jpeg:
         collection: Jpeg\Jpeg
+        parser: FileEye\MediaProbe\Parser\Jpeg\Jpeg
+        writer: FileEye\MediaProbe\Writer\Jpeg\Jpeg
     image/tiff:
         collection: Tiff\Tiff
+        parser: FileEye\MediaProbe\Parser\Tiff\Tiff
+        writer: FileEye\MediaProbe\Writer\Tiff\Tiff
