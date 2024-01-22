@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block;
+namespace FileEye\MediaProbe\Parser\Jpeg;
 
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
