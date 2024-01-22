@@ -62,7 +62,7 @@ class Jpeg extends ParserBase
             $segment_id = $data->getByte($offset + 1);
 
             // Warn if an unidentified segment is detected.
-            if (!in_array($segment_id, $this->getCollection()->listItemIds())) {
+            if (!in_array($segment_id, $this->block->getCollection()->listItemIds())) {
                 $this->warning('Invalid JPEG marker {id}/{hexid} found @ offset {offset}', [
                     'id' => $segment_id,
                     'hexid' => '0x' . strtoupper(dechex($segment_id)),
@@ -71,7 +71,7 @@ class Jpeg extends ParserBase
             }
 
             // Get the JPEG segment size.
-            $segment_collection = $this->getCollection()->getItemCollection($segment_id);
+            $segment_collection = $this->block->getCollection()->getItemCollection($segment_id);
             switch ($segment_collection->getPropertyValue('payload')) {
                 case 'none':
                     // The data window size is the JPEG delimiter byte and the
@@ -98,7 +98,7 @@ class Jpeg extends ParserBase
 
             // Parse the MediaProbe JPEG segment data.
             $segment_definition = new ItemDefinition($segment_collection);
-            $segment = $this->addBlock($segment_definition);
+            $segment = $this->block->addBlock($segment_definition);
             $segment->parseData($data, $offset, $segment_size);
 
             // Position to end of the segment.
