@@ -181,54 +181,6 @@ class Tiff extends BlockBase
         return $bytes;
     }
 
-    /**
-     * Determines if the data is a TIFF image.
-     *
-     * @param DataElement $data_element
-     *   The data element to be checked.
-     *
-     * @return bool
-     */
-    public static function isDataMatchingMediaType(DataElement $data_element): bool
-    {
-        return static::getTiffSegmentByteOrder($data_element) !== null;
-    }
-
-    /**
-     * Returns the byte order of a TIFF segment.
-     *
-     * @return int|null
-     *   The byte order of the TIFF segment in case data is a TIFF block, null
-     *   otherwise.
-     */
-    public static function getTiffSegmentByteOrder(DataElement $data_element, int $offset = 0): ?int
-    {
-        // There must be at least 8 bytes available: 2 bytes for the byte
-        // order, 2 bytes for the TIFF header, and 4 bytes for the offset to
-        // the first IFD.
-        if ($data_element->getSize() - $offset < 8) {
-            return null;
-        }
-
-        // Byte order.
-        $order_string = $data_element->getBytes($offset, 2);
-        if ($order_string === 'II') {
-            $order = ConvertBytes::LITTLE_ENDIAN;
-        } elseif ($order_string === 'MM') {
-            $order = ConvertBytes::BIG_ENDIAN;
-        } else {
-            return null;
-        }
-
-        // Verify the TIFF header.
-        $magic_string = $data_element->getBytes($offset + 2, 2);
-        if (ConvertBytes::toShort($magic_string, $order) !== self::TIFF_HEADER) {
-            return null;
-        }
-
-        return $order;
-    }
-
     public function collectInfo(array $context = []): array
     {
         $info = [];

@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Parser\Jpeg;
 
+use FileEye\MediaProbe\Block\Jpeg as JpegBlock;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -134,7 +135,7 @@ class Jpeg
     protected function getJpegSegmentIdOffset(DataElement $data_element, int $offset): int
     {
         for ($i = $offset; $i < $offset + 128; $i++) {
-            if ($data_element->getByte($i) === Jpeg::JPEG_DELIMITER && $data_element->getByte($i + 1) !== Jpeg::JPEG_DELIMITER) {
+            if ($data_element->getByte($i) === JpegBlock::JPEG_DELIMITER && $data_element->getByte($i + 1) !== JpegBlock::JPEG_DELIMITER) {
                 return $i;
             }
         }
@@ -152,6 +153,6 @@ class Jpeg
      */
     public static function isDataMatchingMediaType(DataElement $data_element): bool
     {
-        return $data_element->getBytes(0, 3) === static::JPEG_HEADER;
+        return $data_element->getBytes(0, 3) === JpegBlock::JPEG_HEADER;
     }
 }
