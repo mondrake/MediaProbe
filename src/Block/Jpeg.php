@@ -28,13 +28,7 @@ class Jpeg extends BlockBase
      */
     const JPEG_HEADER = "\xFF\xD8\xFF";
 
-    /**
-     * Returns the MIME type of the image.
-     *
-     * @returns string
-     */
-    public function getMimeType(): string
+    protected function doParseData(DataElement $data): void
     {
-        return 'image/jpeg';
     }
 }
