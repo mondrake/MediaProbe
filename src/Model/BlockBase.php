@@ -106,7 +106,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
         if ($this->getCollection()->hasProperty('parser')) {
-            $parserClass = $this->getCollection()->getProperty('parser');
+            $parserClass = $this->getCollection()->getPropertyValue('parser');
             $parser = new $parserClass();
             $parser->parseData($data);
         } else {
