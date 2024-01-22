@@ -12,16 +12,17 @@ use FileEye\MediaProbe\Entry\Core\Undefined;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Parser\ParserBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Class for handling a JPEG image data.
  */
-class Jpeg
+class Jpeg extends ParserBase
 {
     public function parseData(DataElement $data): void
     {
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->block->debugInfo(['dataElement' => $data]));
 
         // JPEG data is stored in big-endian format.
         $data->setByteOrder(ConvertBytes::BIG_ENDIAN);
