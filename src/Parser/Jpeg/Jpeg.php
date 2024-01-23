@@ -72,29 +72,21 @@ class Jpeg extends ParserBase
 
             // Get the JPEG segment size.
             $segment_collection = $this->block->getCollection()->getItemCollection($segment_id);
-            switch ($segment_collection->getPropertyValue('payload')) {
-                case 'none':
-                    // The data window size is the JPEG delimiter byte and the
-                    // segment identifier byte.
-                    $segment_size = 2;
-                    break;
-                case 'variable':
-                    // Read the length of the segment. The data window size
-                    // includes the JPEG delimiter byte, the segment identifier
-                    // byte and two bytes used to store the segment length.
-                    $segment_size = $data->getShort($offset + 2) + 2;
-                    break;
-                case 'fixed':
-                    // The data window size includes the JPEG delimiter byte
-                    // and the segment identifier byte.
-                    $segment_size = $segment_collection->getPropertyValue('components') + 2;
-                    break;
-                case 'scan':
-                    // In case of image scan segment, the window is to the end
-                    // of the data.
-                    $segment_size = null;
-                    break;
-            }
+            $segment_size = match ($segment_collection->getPropertyValue('payload')) {
+                // The data window size is the JPEG delimiter byte and the
+                // segment identifier byte.
+                'none': 2,
+                // Read the length of the segment. The data window size
+                // includes the JPEG delimiter byte, the segment identifier
+                // byte and two bytes used to store the segment length.
+                'variable': $data->getShort($offset + 2) + 2,
+                // The data window size includes the JPEG delimiter byte
+                // and the segment identifier byte.
+                'fixed': $segment_collection->getPropertyValue('components') + 2,
+                // In case of image scan segment, the window is to the end
+                // of the data.
+                'scan': null,
+            };
 
             // Parse the MediaProbe JPEG segment data.
             $segment_definition = new ItemDefinition($segment_collection);
@@ -106,13 +98,13 @@ class Jpeg extends ParserBase
         }
 
         // Fail if SOS is missing.
-        if (!$this->getElement("jpegSegment[@name='SOS']")) {
-            $this->error('Missing SOS (Start Of Scan) JPEG marker');
+        if (!$this->block->getElement("jpegSegment[@name='SOS']")) {
+            $this->block->error('Missing SOS (Start Of Scan) JPEG marker');
         }
 
         // Fail if EOI is missing.
-        if (!$this->getElement("jpegSegment[@name='EOI']")) {
-            $this->error('Missing EOI (End Of Image) JPEG marker');
+        if (!$this->block->getElement("jpegSegment[@name='EOI']")) {
+            $this->block->error('Missing EOI (End Of Image) JPEG marker');
         }
     }
 
