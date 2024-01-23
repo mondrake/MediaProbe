@@ -130,13 +130,6 @@ class Media extends RootBlockBase
     }
 
     /**
-     * @todo remove, replace by parser
-     */
-    protected function doParseData(DataElement $data): void
-    {
-    }
-
-    /**
      * Determines the MIME type of the media.
      */
     public function getMimeType(): string

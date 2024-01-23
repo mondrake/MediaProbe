@@ -34,13 +34,6 @@ interface CollectionInterface
     public function listItemIds(): array;
 
     /**
-     * Returns the collection's items.
-     *
-     * @return array
-     */
-    public function getItems(): array;
-
-    /**
      * Returns the Collection object of an item.
      *
      * @param string $item

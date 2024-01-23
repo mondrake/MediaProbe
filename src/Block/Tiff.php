@@ -44,13 +44,6 @@ class Tiff extends BlockBase
     /**
      * {@inheritdoc}
      */
-    protected function doParseData(DataElement $data): void
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes($order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
         // TIFF byte order. 2 bytes running.

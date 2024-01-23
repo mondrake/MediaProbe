@@ -27,8 +27,4 @@ class Jpeg extends BlockBase
      * JPEG header.
      */
     const JPEG_HEADER = "\xFF\xD8\xFF";
-
-    protected function doParseData(DataElement $data): void
-    {
-    }
 }

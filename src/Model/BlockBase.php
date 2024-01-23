@@ -118,14 +118,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * Parse data into a MediaProbe block.
-     *
-     * @param DataElement $dataElement
-     *   The data element that will provide the data.
-     */
-    abstract protected function doParseData(DataElement $data);
-
-    /**
      * Invoke post-parse callbacks.
      *
      * @param \FileEye\MediaProbe\Data\DataElement $dataElement
