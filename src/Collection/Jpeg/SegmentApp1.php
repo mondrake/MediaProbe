@@ -16,7 +16,7 @@ class SegmentApp1 extends CollectionBase {
   'name' => 'APP1',
   'title' => 'JPEG Application segment 1',
   'payload' => 'variable',
-  'class' => 'FileEye\\MediaProbe\\Block\\JpegSegmentApp1',
+  'class' => 'FileEye\\MediaProbe\\Block\\Jpeg\\SegmentApp1',
   'DOMNode' => 'jpegSegment',
   'id' => 'Jpeg\\SegmentApp1',
   'items' =>
