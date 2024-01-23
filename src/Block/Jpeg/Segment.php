@@ -3,7 +3,6 @@
 namespace FileEye\MediaProbe\Block\Jpeg;
 
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
 
 /**
