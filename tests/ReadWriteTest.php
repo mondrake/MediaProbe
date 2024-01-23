@@ -49,7 +49,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
 
         // Insert the APP1 segment before the COM one.
         $app1_segment_definition = new ItemDefinition($jpeg->getCollection()->getItemCollectionByName('APP1'));
-        $app1_segment = new JpegSegmentApp1($app1_segment_definition, $jpeg, $com_segment);
+        $app1_segment = new SegmentApp1($app1_segment_definition, $jpeg, $com_segment);
 
         $exif = new Exif(new ItemDefinition($app1_segment->getCollection()->getItemCollection('Exif')), $app1_segment);
         $this->assertNotNull($jpeg->getElement("jpegSegment/exif"));
