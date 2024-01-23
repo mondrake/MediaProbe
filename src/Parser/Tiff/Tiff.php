@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Parser\Tiff;
 
+use FileEye\MediaProbe\Block\Tiff as TiffBlock;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -18,24 +19,13 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Tiff
 {
-    public function setByteOrder(int $byteOrder): self
-    {
-        $this->byteOrder = $byteOrder;
-        return $this;
-    }
-
-    public function getByteOrder(): int
-    {
-        return $this->byteOrder;
-    }
-
     public function parseData(DataElement $data): void
     {
         // Determine the byte order of the TIFF data.
         $this->setByteOrder(self::getTiffSegmentByteOrder($data));
-        $data->setByteOrder($this->getByteOrder());
+        $data->setByteOrder($this->block->getByteOrder());
 
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->block->debugInfo(['dataElement' => $data]));
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for header).
         $ifd_offset = $data->getLong(4);
@@ -48,7 +38,7 @@ class Tiff
                 DataFormat::BYTE,
                 $ifd_offset - 8
             );
-            $this->addBlock($scan)->parseData($data, 8, $ifd_offset - 8);
+            $this->block->addBlock($scan)->parseData($data, 8, $ifd_offset - 8);
         }
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
@@ -117,7 +107,7 @@ class Tiff
         }
 
         // TIFF magic number --- fixed value. 4 bytes running.
-        $bytes .= ConvertBytes::fromShort(self::TIFF_HEADER, $this->getByteOrder());
+        $bytes .= ConvertBytes::fromShort(TiffBlock::TIFF_HEADER, $this->getByteOrder());
 
         // Check if we have a image scan before first IFD.
         $scan = $this->getElement("rawData");
@@ -195,7 +185,7 @@ class Tiff
 
         // Verify the TIFF header.
         $magic_string = $data_element->getBytes($offset + 2, 2);
-        if (ConvertBytes::toShort($magic_string, $order) !== self::TIFF_HEADER) {
+        if (ConvertBytes::toShort($magic_string, $order) !== TiffBlock::TIFF_HEADER) {
             return null;
         }
 
