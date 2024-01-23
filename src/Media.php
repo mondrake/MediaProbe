@@ -116,6 +116,7 @@ class Media extends RootBlockBase
         $mediaType = new ItemDefinition(
             collection: MediaTypeResolver::fromDataElement($dataElement),
         );
+        $this->setAttribute('mimeType', (string) $mediaType->getPropertyValue('item'));
 
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
@@ -140,7 +141,7 @@ class Media extends RootBlockBase
      */
     public function getMimeType(): string
     {
-        return $this->getElement('*')->getMimeType();
+        return $this->getAttribute('mimeType');
     }
 
     /**

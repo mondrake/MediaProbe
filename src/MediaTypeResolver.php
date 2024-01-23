@@ -30,7 +30,6 @@ class MediaTypeResolver
         // the media format collection.
         foreach ($mediaTypes->listItemIds() as $id) {
             $type = $mediaTypes->getItemCollection($id);
-dump($type);
             $parser = $type->getPropertyValue('parser');
             if ($parser::isDataMatchingMediaType($dataElement)) {
                 return $type;

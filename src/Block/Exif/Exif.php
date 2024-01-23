@@ -33,9 +33,11 @@ class Exif extends BlockBase
      */
     protected function doParseData(DataElement $data): void
     {
+        $tiff = new ItemDefinition(CollectionFactory::get('Tiff\Tiff'));
+        $parser = $tiff->getPropertyValue('parser');
+
         assert($this->debugInfo(['dataElement' => $data]));
-        if (Tiff::getTiffSegmentByteOrder($data, strlen(self::EXIF_HEADER)) !== null) {
-            $tiff = new ItemDefinition(CollectionFactory::get('Tiff\Tiff'));
+        if ($parser::getTiffSegmentByteOrder($data, strlen(self::EXIF_HEADER)) !== null) {
             $this->addBlock($tiff)->parseData($data, strlen(self::EXIF_HEADER), $data->getSize() - strlen(self::EXIF_HEADER));
         } else {
             // We store the data as normal JPEG content if it could not be
