@@ -60,15 +60,15 @@ class Exif extends BlockBase
     /**
      * Determines if the data is an EXIF segment.
      */
-    public static function isExifSegment(DataElement $data_element, $offset = 0): bool
+    public static function isExifSegment(DataElement $dataElement, $offset = 0): bool
     {
         // There must be at least 6 bytes for the Exif header.
-        if ($data_element->getSize() - $offset < strlen(self::EXIF_HEADER)) {
+        if ($dataElement->getSize() - $offset < strlen(self::EXIF_HEADER)) {
             return false;
         }
 
         // Verify the Exif header.
-        if ($data_element->getBytes($offset, strlen(self::EXIF_HEADER)) === self::EXIF_HEADER) {
+        if ($dataElement->getBytes($offset, strlen(self::EXIF_HEADER)) === self::EXIF_HEADER) {
             return true;
         }
 

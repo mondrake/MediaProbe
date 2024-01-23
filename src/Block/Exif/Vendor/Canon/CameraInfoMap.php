@@ -20,9 +20,9 @@ class CameraInfoMap extends Map
     /**
      * {@inheritdoc}
      */
-    protected function validate(DataElement $data_element): void
+    protected function validate(DataElement $dataElement): void
     {
-        parent::validate($data_element);
+        parent::validate($dataElement);
 
         // Gets the Model from IFD0.
         $model_entry = $this->getRootElement()->getElement("//ifd[@name='IFD0']/tag[@name='Model']/entry");
