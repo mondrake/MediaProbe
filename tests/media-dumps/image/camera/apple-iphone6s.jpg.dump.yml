@@ -11,15 +11,15 @@ elements:
         -
             node: jpeg
             path: /media/jpeg
-            class: FileEye\MediaProbe\Block\Jpeg
+            class: FileEye\MediaProbe\Block\Jpeg\Jpeg
             valid: true
-            id: Jpeg
+            id: image/jpeg
             collection: Jpeg\Jpeg
             elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOI:216'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOI
                     id: '216'
@@ -37,7 +37,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP1:225'
-                    class: FileEye\MediaProbe\Block\JpegSegmentApp1
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
                     valid: true
                     name: APP1
                     id: '225'
@@ -53,7 +53,7 @@ elements:
                                 -
                                     node: tiff
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
-                                    class: FileEye\MediaProbe\Block\Tiff
+                                    class: FileEye\MediaProbe\Block\Tiff\Tiff
                                     valid: true
                                     collection: Tiff\Tiff
                                     elements:
@@ -1521,7 +1521,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DQT:219'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
                     id: '219'
@@ -1539,7 +1539,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DRI:221'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DRI
                     id: '221'
@@ -1557,7 +1557,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOF0:192'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOF0
                     id: '192'
@@ -1575,7 +1575,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -1593,7 +1593,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOS:218'
-                    class: FileEye\MediaProbe\Block\JpegSegmentSos
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentSos
                     valid: true
                     name: SOS
                     id: '218'
@@ -1611,7 +1611,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:EOI:217'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: EOI
                     id: '217'
@@ -1630,40 +1630,40 @@ log:
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:1'
-            message: 'Unknown item 1/0x1 in ''Apple'''
+            message: "Unknown item 1/0x1 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:2'
-            message: 'Unknown item 2/0x2 in ''Apple'''
+            message: "Unknown item 2/0x2 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:4'
-            message: 'Unknown item 4/0x4 in ''Apple'''
+            message: "Unknown item 4/0x4 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:5'
-            message: 'Unknown item 5/0x5 in ''Apple'''
+            message: "Unknown item 5/0x5 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:6'
-            message: 'Unknown item 6/0x6 in ''Apple'''
+            message: "Unknown item 6/0x6 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:7'
-            message: 'Unknown item 7/0x7 in ''Apple'''
+            message: "Unknown item 7/0x7 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:9'
-            message: 'Unknown item 9/0x9 in ''Apple'''
+            message: "Unknown item 9/0x9 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:14'
-            message: 'Unknown item 14/0xE in ''Apple'''
+            message: "Unknown item 14/0xE in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:20'
-            message: 'Unknown item 20/0x14 in ''Apple'''
+            message: "Unknown item 20/0x14 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:23'
-            message: 'Unknown item 23/0x17 in ''Apple'''
+            message: "Unknown item 23/0x17 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:25'
-            message: 'Unknown item 25/0x19 in ''Apple'''
+            message: "Unknown item 25/0x19 in 'Apple'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:31'
-            message: 'Unknown item 31/0x1F in ''Apple'''
+            message: "Unknown item 31/0x1F in 'Apple'"
 gdInfo:
     0: 4032
     1: 3024
@@ -1674,7 +1674,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: apple-iphone6s.jpg
-    FileDateTime: 1644443574
+    FileDateTime: 1644099377
     FileSize: 1812177
     FileType: 2
     MimeType: image/jpeg

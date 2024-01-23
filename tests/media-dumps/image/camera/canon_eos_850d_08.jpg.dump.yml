@@ -121,15 +121,15 @@ elements:
         -
             node: jpeg
             path: /media/jpeg
-            class: FileEye\MediaProbe\Block\Jpeg
+            class: FileEye\MediaProbe\Block\Jpeg\Jpeg
             valid: true
-            id: Jpeg
+            id: image/jpeg
             collection: Jpeg\Jpeg
             elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOI:216'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOI
                     id: '216'
@@ -147,7 +147,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP1:225'
-                    class: FileEye\MediaProbe\Block\JpegSegmentApp1
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
                     valid: true
                     name: APP1
                     id: '225'
@@ -163,7 +163,7 @@ elements:
                                 -
                                     node: tiff
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
-                                    class: FileEye\MediaProbe\Block\Tiff
+                                    class: FileEye\MediaProbe\Block\Tiff\Tiff
                                     valid: true
                                     collection: Tiff\Tiff
                                     elements:
@@ -2653,7 +2653,7 @@ elements:
                                                                             format: Long
                                                                             components: 4
                                                                             bytesHash: 1f1a2dbbc4f2ad6e2bc1ca7d6dfb3852604a45bec1acdb7c2408f3fb83ddfc8c
-                                                                            text: '39422842 3057910990 2027523218 1021399208'
+                                                                            text: '39422842 -1237056306 2027523218 1021399208'
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonTimeInfo:53'
@@ -7278,7 +7278,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP1:225'
-                    class: FileEye\MediaProbe\Block\JpegSegmentApp1
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
                     valid: true
                     name: APP1
                     id: '225'
@@ -7296,7 +7296,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP13:237'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: APP13
                     id: '237'
@@ -7314,7 +7314,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP2:226'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: APP2
                     id: '226'
@@ -7332,7 +7332,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DQT:219'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
                     id: '219'
@@ -7350,7 +7350,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOF0:192'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOF0
                     id: '192'
@@ -7368,7 +7368,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -7386,7 +7386,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOS:218'
-                    class: FileEye\MediaProbe\Block\JpegSegmentSos
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentSos
                     valid: true
                     name: SOS
                     id: '218'
@@ -7404,7 +7404,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:EOI:217'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: EOI
                     id: '217'
@@ -7510,7 +7510,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: canon_eos_850d_08.jpg
-    FileDateTime: 1690031131
+    FileDateTime: 1644099377
     FileSize: 8746090
     FileType: 2
     MimeType: image/jpeg

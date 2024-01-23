@@ -16,15 +16,15 @@ elements:
         -
             node: jpeg
             path: /media/jpeg
-            class: FileEye\MediaProbe\Block\Jpeg
+            class: FileEye\MediaProbe\Block\Jpeg\Jpeg
             valid: true
-            id: Jpeg
+            id: image/jpeg
             collection: Jpeg\Jpeg
             elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOI:216'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOI
                     id: '216'
@@ -42,7 +42,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:APP1:225'
-                    class: FileEye\MediaProbe\Block\JpegSegmentApp1
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
                     valid: true
                     name: APP1
                     id: '225'
@@ -58,7 +58,7 @@ elements:
                                 -
                                     node: tiff
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
-                                    class: FileEye\MediaProbe\Block\Tiff
+                                    class: FileEye\MediaProbe\Block\Tiff\Tiff
                                     valid: true
                                     collection: Tiff\Tiff
                                     elements:
@@ -668,7 +668,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DQT:219'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
                     id: '219'
@@ -686,7 +686,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DQT:219'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
                     id: '219'
@@ -704,7 +704,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOF0:192'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOF0
                     id: '192'
@@ -722,7 +722,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -740,7 +740,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -758,7 +758,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -776,7 +776,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
                     id: '196'
@@ -794,7 +794,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:DRI:221'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DRI
                     id: '221'
@@ -812,7 +812,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:SOS:218'
-                    class: FileEye\MediaProbe\Block\JpegSegmentSos
+                    class: FileEye\MediaProbe\Block\Jpeg\SegmentSos
                     valid: true
                     name: SOS
                     id: '218'
@@ -830,7 +830,7 @@ elements:
                 -
                     node: jpegSegment
                     path: '/media/jpeg/jpegSegment:EOI:217'
-                    class: FileEye\MediaProbe\Block\JpegSegment
+                    class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: EOI
                     id: '217'
@@ -865,31 +865,31 @@ log:
     WARNING:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864'
-            message: 'Found Byte data format, expected Undefined for item ''ExifVersion'' in ''IFD0'''
+            message: "Found Byte data format, expected Undefined for item 'ExifVersion' in 'IFD0'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
             message: 'Incorrect version data.'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureTime:33434'
-            message: 'Found SignedRational data format, expected Rational for item ''ExposureTime'' in ''IFD0'''
+            message: "Found SignedRational data format, expected Rational for item 'ExposureTime' in 'IFD0'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121'
-            message: 'Found Byte data format, expected Undefined for item ''ComponentsConfiguration'' in ''IFD0'''
+            message: "Found Byte data format, expected Undefined for item 'ComponentsConfiguration' in 'IFD0'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FNumber:33437'
-            message: 'Found SignedRational data format, expected Rational for item ''FNumber'' in ''IFD0'''
+            message: "Found SignedRational data format, expected Rational for item 'FNumber' in 'IFD0'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510'
-            message: 'Found Ascii data format, expected Undefined for item ''UserComment'' in ''IFD0'''
+            message: "Found Ascii data format, expected Undefined for item 'UserComment' in 'IFD0'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
             message: 'Invalid EXIF text encoding for UserComment.'
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'
-            message: 'Found Long data format, expected Undefined for item ''OtherImageStart'' in ''ExifIFD'''
+            message: "Found Long data format, expected Undefined for item 'OtherImageStart' in 'ExifIFD'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
-            message: 'Found Long data format, expected Undefined for item ''OtherImageLength'' in ''ExifIFD'''
+            message: "Found Long data format, expected Undefined for item 'OtherImageLength' in 'ExifIFD'"
         -
             path: '/media/jpeg/jpegSegment:SOS:218'
             message: 'Found trailing content after EOI: 3504 bytes'
@@ -903,7 +903,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: pel-141.jpg
-    FileDateTime: 1644612165
+    FileDateTime: 1644099378
     FileSize: 1167394
     FileType: 2
     MimeType: image/jpeg
