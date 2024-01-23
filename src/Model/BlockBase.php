@@ -110,6 +110,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
             $parser = new $parserClass($this);
             $parser->parseData($data);
         } else {
+            // @todo remove this when full parser model in place.
             $this->doParseData($data);
         }
 
