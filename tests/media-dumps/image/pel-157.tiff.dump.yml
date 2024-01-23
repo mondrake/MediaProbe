@@ -468,7 +468,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20507'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -485,7 +485,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20512'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -502,7 +502,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20513'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -519,7 +519,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20515'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -536,7 +536,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20521'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -553,7 +553,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20525'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -570,7 +570,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20526'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -587,7 +587,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20528'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -604,7 +604,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20624'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry
@@ -621,7 +621,7 @@ elements:
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             id: '20625'
-                            collection: UnknownTag
+                            collection: Tiff\UnknownTag
                             elements:
                                 -
                                     node: entry

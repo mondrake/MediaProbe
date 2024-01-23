@@ -557,7 +557,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '1'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -574,7 +574,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '2'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -672,7 +672,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '4'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -689,7 +689,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '5'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -706,7 +706,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '6'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -723,7 +723,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '7'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -758,7 +758,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '9'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -775,7 +775,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '14'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -810,7 +810,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '20'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -827,7 +827,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '23'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -844,7 +844,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '25'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -861,7 +861,7 @@ elements:
                                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '31'
-                                                                    collection: UnknownTag
+                                                                    collection: Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             node: entry

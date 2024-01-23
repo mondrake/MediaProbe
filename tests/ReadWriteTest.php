@@ -62,7 +62,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
 
         $ifd = new Ifd(new ItemDefinition($tiff->getCollection()->getItemCollection('0'), DataFormat::LONG), $tiff);
         foreach ($entries as $entry) {
-            $item_collection = $ifd->getCollection()->getItemCollection($entry[0], 0, 'UnknownTag', [
+            $item_collection = $ifd->getCollection()->getItemCollection($entry[0], 0, 'Tiff\UnknownTag', [
                 'item' => $entry[0],
                 'DOMNode' => 'tag',
             ]);

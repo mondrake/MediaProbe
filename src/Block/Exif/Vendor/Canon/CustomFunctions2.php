@@ -45,7 +45,7 @@ class CustomFunctions2 extends ListBase
                 $item_collection = $this->getCollection()->getItemCollection(
                     $id,
                     null,
-                    'UnknownTag',
+                    'Tiff\UnknownTag',
                     ['item' => $id, 'DOMNode' => 'tag'],
                     $num,
                     $this->getRootElement()
