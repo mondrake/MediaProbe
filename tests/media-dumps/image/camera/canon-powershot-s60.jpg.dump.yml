@@ -79,7 +79,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Make
                                                     id: '271'
@@ -97,7 +97,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Model
                                                     id: '272'
@@ -115,7 +115,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Orientation:274'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Orientation
                                                     id: '274'
@@ -133,7 +133,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: XResolution
                                                     id: '282'
@@ -151,7 +151,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YResolution
                                                     id: '283'
@@ -169,7 +169,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ResolutionUnit
                                                     id: '296'
@@ -187,7 +187,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ModifyDate
                                                     id: '306'
@@ -205,7 +205,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrPositioning:531'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YCbCrPositioning
                                                     id: '531'
@@ -232,7 +232,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureTime:33434'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureTime
                                                             id: '33434'
@@ -250,7 +250,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FNumber:33437'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FNumber
                                                             id: '33437'
@@ -268,7 +268,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExifVersion
                                                             id: '36864'
@@ -286,7 +286,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: DateTimeOriginal
                                                             id: '36867'
@@ -304,7 +304,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: CreateDate
                                                             id: '36868'
@@ -322,7 +322,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ComponentsConfiguration:37121'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ComponentsConfiguration
                                                             id: '37121'
@@ -340,7 +340,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CompressedBitsPerPixel:37122'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: CompressedBitsPerPixel
                                                             id: '37122'
@@ -358,7 +358,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ShutterSpeedValue:37377'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ShutterSpeedValue
                                                             id: '37377'
@@ -376,7 +376,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ApertureValue:37378'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ApertureValue
                                                             id: '37378'
@@ -394,7 +394,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureCompensation:37380'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureCompensation
                                                             id: '37380'
@@ -412,7 +412,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: MaxApertureValue
                                                             id: '37381'
@@ -430,7 +430,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MeteringMode:37383'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: MeteringMode
                                                             id: '37383'
@@ -448,7 +448,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:Flash:37385'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: Flash
                                                             id: '37385'
@@ -466,7 +466,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalLength:37386'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalLength
                                                             id: '37386'
@@ -519,7 +519,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MacroMode:1'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MacroMode
                                                                             id: '1'
@@ -537,7 +537,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SelfTimer:2'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: SelfTimer
                                                                             id: '2'
@@ -555,7 +555,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Quality:3'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: Quality
                                                                             id: '3'
@@ -573,7 +573,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonFlashMode:4'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CanonFlashMode
                                                                             id: '4'
@@ -591,7 +591,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ContinuousDrive:5'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ContinuousDrive
                                                                             id: '5'
@@ -609,7 +609,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusMode:7'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocusMode
                                                                             id: '7'
@@ -627,7 +627,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:RecordMode:9'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: RecordMode
                                                                             id: '9'
@@ -645,7 +645,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonImageSize:10'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CanonImageSize
                                                                             id: '10'
@@ -663,7 +663,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:EasyMode:11'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: EasyMode
                                                                             id: '11'
@@ -681,7 +681,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:DigitalZoom:12'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: DigitalZoom
                                                                             id: '12'
@@ -699,7 +699,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Contrast:13'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: Contrast
                                                                             id: '13'
@@ -717,7 +717,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Saturation:14'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: Saturation
                                                                             id: '14'
@@ -735,7 +735,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Sharpness:15'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: Sharpness
                                                                             id: '15'
@@ -753,7 +753,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CameraISO:16'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CameraISO
                                                                             id: '16'
@@ -771,7 +771,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MeteringMode:17'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MeteringMode
                                                                             id: '17'
@@ -789,7 +789,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusRange:18'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocusRange
                                                                             id: '18'
@@ -807,7 +807,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:AFPoint:19'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFPoint
                                                                             id: '19'
@@ -825,7 +825,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonExposureMode:20'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CanonExposureMode
                                                                             id: '20'
@@ -843,7 +843,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:LensType:22'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: LensType
                                                                             id: '22'
@@ -861,7 +861,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MaxFocalLength:23'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MaxFocalLength
                                                                             id: '23'
@@ -879,7 +879,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MinFocalLength:24'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MinFocalLength
                                                                             id: '24'
@@ -897,7 +897,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocalUnits:25'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocalUnits
                                                                             id: '25'
@@ -915,7 +915,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MaxAperture:26'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MaxAperture
                                                                             id: '26'
@@ -933,7 +933,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MinAperture:27'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MinAperture
                                                                             id: '27'
@@ -951,7 +951,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashActivity:28'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FlashActivity
                                                                             id: '28'
@@ -969,7 +969,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashBits:29'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FlashBits
                                                                             id: '29'
@@ -987,7 +987,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusContinuous:32'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocusContinuous
                                                                             id: '32'
@@ -1005,7 +1005,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:AESetting:33'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AESetting
                                                                             id: '33'
@@ -1023,7 +1023,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ImageStabilization:34'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ImageStabilization
                                                                             id: '34'
@@ -1041,7 +1041,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:DisplayAperture:35'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: DisplayAperture
                                                                             id: '35'
@@ -1059,7 +1059,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ZoomSourceWidth:36'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ZoomSourceWidth
                                                                             id: '36'
@@ -1077,7 +1077,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ZoomTargetWidth:37'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ZoomTargetWidth
                                                                             id: '37'
@@ -1095,7 +1095,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SpotMeteringMode:39'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: SpotMeteringMode
                                                                             id: '39'
@@ -1113,7 +1113,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:PhotoEffect:40'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: PhotoEffect
                                                                             id: '40'
@@ -1131,7 +1131,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ManualFlashOutput:41'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ManualFlashOutput
                                                                             id: '41'
@@ -1149,7 +1149,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ColorTone:42'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ColorTone
                                                                             id: '42'
@@ -1176,7 +1176,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalType:0'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocalType
                                                                             id: '0'
@@ -1194,7 +1194,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalLength:1'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocalLength
                                                                             id: '1'
@@ -1212,7 +1212,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalPlaneXSize:2'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocalPlaneXSize
                                                                             id: '2'
@@ -1230,7 +1230,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalPlaneYSize:3'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocalPlaneYSize
                                                                             id: '3'
@@ -1248,7 +1248,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFlashInfo:3'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: CanonFlashInfo
                                                                     id: '3'
@@ -1292,7 +1292,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoISO:1'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AutoISO
                                                                             id: '1'
@@ -1310,7 +1310,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:BaseISO:2'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: BaseISO
                                                                             id: '2'
@@ -1328,7 +1328,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV:3'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MeasuredEV
                                                                             id: '3'
@@ -1346,7 +1346,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:TargetAperture:4'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: TargetAperture
                                                                             id: '4'
@@ -1364,7 +1364,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:TargetExposureTime:5'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: TargetExposureTime
                                                                             id: '5'
@@ -1382,7 +1382,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ExposureCompensation:6'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ExposureCompensation
                                                                             id: '6'
@@ -1400,7 +1400,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:WhiteBalance:7'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: WhiteBalance
                                                                             id: '7'
@@ -1418,7 +1418,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SlowShutter:8'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: SlowShutter
                                                                             id: '8'
@@ -1436,7 +1436,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SequenceNumber:9'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: SequenceNumber
                                                                             id: '9'
@@ -1454,7 +1454,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:OpticalZoomCode:10'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: OpticalZoomCode
                                                                             id: '10'
@@ -1472,7 +1472,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:CameraTemperature:12'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CameraTemperature
                                                                             id: '12'
@@ -1490,7 +1490,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashGuideNumber:13'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FlashGuideNumber
                                                                             id: '13'
@@ -1508,7 +1508,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AFPointsInFocus:14'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFPointsInFocus
                                                                             id: '14'
@@ -1526,7 +1526,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashExposureComp:15'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FlashExposureComp
                                                                             id: '15'
@@ -1544,7 +1544,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoExposureBracketing:16'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AutoExposureBracketing
                                                                             id: '16'
@@ -1562,7 +1562,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AEBBracketValue:17'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AEBBracketValue
                                                                             id: '17'
@@ -1580,7 +1580,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ControlMode:18'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ControlMode
                                                                             id: '18'
@@ -1598,7 +1598,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FocusDistanceUpper:19'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocusDistanceUpper
                                                                             id: '19'
@@ -1616,7 +1616,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FocusDistanceLower:20'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FocusDistanceLower
                                                                             id: '20'
@@ -1634,7 +1634,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FNumber:21'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FNumber
                                                                             id: '21'
@@ -1652,7 +1652,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ExposureTime:22'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ExposureTime
                                                                             id: '22'
@@ -1670,7 +1670,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV2:23'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: MeasuredEV2
                                                                             id: '23'
@@ -1688,7 +1688,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:BulbDuration:24'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: BulbDuration
                                                                             id: '24'
@@ -1706,7 +1706,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:CameraType:26'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CameraType
                                                                             id: '26'
@@ -1724,7 +1724,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoRotate:27'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AutoRotate
                                                                             id: '27'
@@ -1742,7 +1742,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:NDFilter:28'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: NDFilter
                                                                             id: '28'
@@ -1760,7 +1760,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SelfTimer2:29'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: SelfTimer2
                                                                             id: '29'
@@ -1778,7 +1778,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashOutput:33'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: FlashOutput
                                                                             id: '33'
@@ -1796,7 +1796,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '0'
                                                                     collection: UnknownTag
@@ -1813,7 +1813,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '0'
                                                                     collection: UnknownTag
@@ -1839,7 +1839,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:NumAFPoints:0'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: NumAFPoints
                                                                             id: '0'
@@ -1857,7 +1857,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:ValidAFPoints:1'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: ValidAFPoints
                                                                             id: '1'
@@ -1875,7 +1875,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:CanonImageWidth:2'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CanonImageWidth
                                                                             id: '2'
@@ -1893,7 +1893,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:CanonImageHeight:3'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: CanonImageHeight
                                                                             id: '3'
@@ -1911,7 +1911,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFImageWidth:4'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFImageWidth
                                                                             id: '4'
@@ -1929,7 +1929,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFImageHeight:5'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFImageHeight
                                                                             id: '5'
@@ -1947,7 +1947,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaWidth:6'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFAreaWidth
                                                                             id: '6'
@@ -1965,7 +1965,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaHeight:7'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFAreaHeight
                                                                             id: '7'
@@ -1983,7 +1983,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaXPositions:8'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFAreaXPositions
                                                                             id: '8'
@@ -2001,7 +2001,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaYPositions:9'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFAreaYPositions
                                                                             id: '9'
@@ -2019,7 +2019,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFPointsInFocus:10'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: AFPointsInFocus
                                                                             id: '10'
@@ -2037,7 +2037,7 @@ elements:
                                                                         -
                                                                             node: tag
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:PrimaryAFPoint:11'
-                                                                            class: FileEye\MediaProbe\Block\Tag
+                                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                             valid: true
                                                                             name: PrimaryAFPoint
                                                                             id: '11'
@@ -2055,7 +2055,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: ThumbnailImageValidArea
                                                                     id: '19'
@@ -2073,7 +2073,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonImageType:6'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: CanonImageType
                                                                     id: '6'
@@ -2091,7 +2091,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFirmwareVersion:7'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: CanonFirmwareVersion
                                                                     id: '7'
@@ -2109,7 +2109,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:FileNumber:8'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: FileNumber
                                                                     id: '8'
@@ -2127,7 +2127,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:OwnerName:9'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: OwnerName
                                                                     id: '9'
@@ -2145,7 +2145,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonModelID:16'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: CanonModelID
                                                                     id: '16'
@@ -2163,7 +2163,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '0'
                                                                     collection: UnknownTag
@@ -2180,7 +2180,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:24'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '24'
                                                                     collection: UnknownTag
@@ -2197,7 +2197,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     id: '25'
                                                                     collection: UnknownTag
@@ -2240,7 +2240,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: UserComment
                                                             id: '37510'
@@ -2258,7 +2258,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FlashpixVersion:40960'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FlashpixVersion
                                                             id: '40960'
@@ -2276,7 +2276,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ColorSpace:40961'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ColorSpace
                                                             id: '40961'
@@ -2294,7 +2294,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifImageWidth:40962'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExifImageWidth
                                                             id: '40962'
@@ -2312,7 +2312,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifImageHeight:40963'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExifImageHeight
                                                             id: '40963'
@@ -2339,7 +2339,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:InteropIndex:1'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: InteropIndex
                                                                     id: '1'
@@ -2357,7 +2357,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:InteropVersion:2'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: InteropVersion
                                                                     id: '2'
@@ -2375,7 +2375,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:RelatedImageWidth:4097'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: RelatedImageWidth
                                                                     id: '4097'
@@ -2393,7 +2393,7 @@ elements:
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:RelatedImageHeight:4098'
-                                                                    class: FileEye\MediaProbe\Block\Tag
+                                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                                     valid: true
                                                                     name: RelatedImageHeight
                                                                     id: '4098'
@@ -2411,7 +2411,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneXResolution:41486'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneXResolution
                                                             id: '41486'
@@ -2429,7 +2429,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneYResolution:41487'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneYResolution
                                                             id: '41487'
@@ -2447,7 +2447,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneResolutionUnit:41488'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneResolutionUnit
                                                             id: '41488'
@@ -2465,7 +2465,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SensingMethod:41495'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: SensingMethod
                                                             id: '41495'
@@ -2483,7 +2483,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FileSource:41728'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FileSource
                                                             id: '41728'
@@ -2501,7 +2501,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CustomRendered:41985'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: CustomRendered
                                                             id: '41985'
@@ -2519,7 +2519,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureMode:41986'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureMode
                                                             id: '41986'
@@ -2537,7 +2537,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:WhiteBalance:41987'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: WhiteBalance
                                                             id: '41987'
@@ -2555,7 +2555,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DigitalZoomRatio:41988'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: DigitalZoomRatio
                                                             id: '41988'
@@ -2573,7 +2573,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SceneCaptureType:41990'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: SceneCaptureType
                                                             id: '41990'
@@ -2600,7 +2600,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:Compression:259'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Compression
                                                     id: '259'
@@ -2618,7 +2618,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:XResolution:282'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: XResolution
                                                     id: '282'
@@ -2636,7 +2636,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:YResolution:283'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YResolution
                                                     id: '283'
@@ -2654,7 +2654,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:ResolutionUnit:296'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ResolutionUnit
                                                     id: '296'

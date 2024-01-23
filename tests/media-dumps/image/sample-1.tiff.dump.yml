@@ -52,7 +52,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ImageWidth:256'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ImageWidth
                             id: '256'
@@ -70,7 +70,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ImageHeight:257'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ImageHeight
                             id: '257'
@@ -88,7 +88,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:BitsPerSample:258'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: BitsPerSample
                             id: '258'
@@ -106,7 +106,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:Compression:259'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Compression
                             id: '259'
@@ -124,7 +124,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PhotometricInterpretation
                             id: '262'
@@ -142,7 +142,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageStart:273'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PreviewImageStart
                             id: '273'
@@ -160,7 +160,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:Orientation:274'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Orientation
                             id: '274'
@@ -178,7 +178,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:SamplesPerPixel:277'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: SamplesPerPixel
                             id: '277'
@@ -196,7 +196,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:RowsPerStrip:278'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: RowsPerStrip
                             id: '278'
@@ -214,7 +214,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageLength:279'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PreviewImageLength
                             id: '279'
@@ -232,7 +232,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:PlanarConfiguration:284'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PlanarConfiguration
                             id: '284'
@@ -250,7 +250,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:Predictor:317'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Predictor
                             id: '317'
@@ -268,7 +268,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ExtraSamples
                             id: '338'
@@ -286,7 +286,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: SampleFormat
                             id: '339'
@@ -304,7 +304,7 @@ elements:
                         -
                             node: tag
                             path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700'
-                            class: FileEye\MediaProbe\Block\Tag
+                            class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ApplicationNotes
                             id: '700'

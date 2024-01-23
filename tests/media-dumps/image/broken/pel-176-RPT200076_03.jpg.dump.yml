@@ -87,7 +87,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: Make
                                                     id: '271'
@@ -105,7 +105,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: Model
                                                     id: '272'
@@ -123,7 +123,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: XResolution
                                                     id: '282'
@@ -141,7 +141,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YResolution
                                                     id: '283'
@@ -159,7 +159,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ResolutionUnit
                                                     id: '296'
@@ -177,7 +177,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Software:305'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: Software
                                                     id: '305'
@@ -195,7 +195,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: ModifyDate
                                                     id: '306'
@@ -213,7 +213,7 @@ elements:
                                                 -
                                                     node: tag
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Artist:315'
-                                                    class: FileEye\MediaProbe\Block\Tag
+                                                    class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: Artist
                                                     id: '315'
@@ -240,7 +240,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureTime:33434'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureTime
                                                             id: '33434'
@@ -258,7 +258,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FNumber:33437'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FNumber
                                                             id: '33437'
@@ -276,7 +276,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureProgram:34850'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureProgram
                                                             id: '34850'
@@ -294,7 +294,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ISO:34855'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ISO
                                                             id: '34855'
@@ -312,7 +312,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SensitivityType:34864'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: SensitivityType
                                                             id: '34864'
@@ -330,7 +330,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:RecommendedExposureIndex:34866'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: RecommendedExposureIndex
                                                             id: '34866'
@@ -348,7 +348,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExifVersion
                                                             id: '36864'
@@ -366,7 +366,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: DateTimeOriginal
                                                             id: '36867'
@@ -384,7 +384,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: CreateDate
                                                             id: '36868'
@@ -402,7 +402,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: OffsetTime
                                                             id: '36880'
@@ -420,7 +420,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ShutterSpeedValue:37377'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ShutterSpeedValue
                                                             id: '37377'
@@ -438,7 +438,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ApertureValue:37378'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ApertureValue
                                                             id: '37378'
@@ -456,7 +456,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureCompensation:37380'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureCompensation
                                                             id: '37380'
@@ -474,7 +474,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: MaxApertureValue
                                                             id: '37381'
@@ -492,7 +492,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MeteringMode:37383'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: MeteringMode
                                                             id: '37383'
@@ -510,7 +510,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:Flash:37385'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: Flash
                                                             id: '37385'
@@ -528,7 +528,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalLength:37386'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalLength
                                                             id: '37386'
@@ -546,7 +546,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTimeOriginal:37521'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: SubSecTimeOriginal
                                                             id: '37521'
@@ -564,7 +564,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTimeDigitized:37522'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: SubSecTimeDigitized
                                                             id: '37522'
@@ -582,7 +582,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ColorSpace:40961'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ColorSpace
                                                             id: '40961'
@@ -600,7 +600,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneXResolution:41486'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneXResolution
                                                             id: '41486'
@@ -618,7 +618,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneYResolution:41487'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneYResolution
                                                             id: '41487'
@@ -636,7 +636,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneResolutionUnit:41488'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: FocalPlaneResolutionUnit
                                                             id: '41488'
@@ -654,7 +654,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CustomRendered:41985'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: CustomRendered
                                                             id: '41985'
@@ -672,7 +672,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureMode:41986'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: ExposureMode
                                                             id: '41986'
@@ -690,7 +690,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:WhiteBalance:41987'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: WhiteBalance
                                                             id: '41987'
@@ -708,7 +708,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SceneCaptureType:41990'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: SceneCaptureType
                                                             id: '41990'
@@ -726,7 +726,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SerialNumber:42033'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: SerialNumber
                                                             id: '42033'
@@ -744,7 +744,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensInfo:42034'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: LensInfo
                                                             id: '42034'
@@ -762,7 +762,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensModel:42036'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: LensModel
                                                             id: '42036'
@@ -780,7 +780,7 @@ elements:
                                                         -
                                                             node: tag
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:LensSerialNumber:42037'
-                                                            class: FileEye\MediaProbe\Block\Tag
+                                                            class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: false
                                                             name: LensSerialNumber
                                                             id: '42037'
