@@ -2653,7 +2653,7 @@ elements:
                                                                             format: Long
                                                                             components: 4
                                                                             bytesHash: 1f1a2dbbc4f2ad6e2bc1ca7d6dfb3852604a45bec1acdb7c2408f3fb83ddfc8c
-                                                                            text: '39422842 -1237056306 2027523218 1021399208'
+                                                                            text: '39422842 3057910990 2027523218 1021399208'
                                                                 -
                                                                     node: map
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonTimeInfo:53'
