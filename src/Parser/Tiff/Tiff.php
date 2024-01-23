@@ -12,12 +12,13 @@ use FileEye\MediaProbe\Image;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Parser\ParserBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Class for handling TIFF data.
  */
-class Tiff
+class Tiff extends ParserBase
 {
     public function parseData(DataElement $data): void
     {
