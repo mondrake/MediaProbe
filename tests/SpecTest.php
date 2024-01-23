@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Block\Exif\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Tag;
@@ -46,8 +46,8 @@ class SpecTest extends MediaProbeTestCaseBase
 
         // Test retrieving IFD post-load callbacks.
         $this->assertEquals([
-            'FileEye\MediaProbe\Block\Exif\Ifd::thumbnailToBlock',
-            'FileEye\MediaProbe\Block\Exif\Ifd::makerNoteToBlock',
+            'FileEye\MediaProbe\Block\Tiff\Ifd::thumbnailToBlock',
+            'FileEye\MediaProbe\Block\Tiff\Ifd::makerNoteToBlock',
         ], $ifd_0->getCollection()->getPropertyValue('postParse'));
         $this->assertNull($ifd_canon_camera_settings->getCollection()->getPropertyValue('postParse'));
 

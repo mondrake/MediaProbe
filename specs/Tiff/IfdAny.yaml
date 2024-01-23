@@ -1,6 +1,6 @@
 collection: Tiff\IfdAny
 title: 'A catchall generic IFD definition, used as a fallback to describe tags that are not expected in a specific IFD.'
-class: FileEye\MediaProbe\Block\Exif\Ifd
+class: FileEye\MediaProbe\Block\Tiff\Ifd
 defaultItemCollection: Tag
 compiler:
     exiftool:

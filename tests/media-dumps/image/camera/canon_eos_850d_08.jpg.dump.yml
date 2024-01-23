@@ -170,7 +170,7 @@ elements:
                                         -
                                             node: ifd
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
-                                            class: FileEye\MediaProbe\Block\Exif\Ifd
+                                            class: FileEye\MediaProbe\Block\Tiff\Ifd
                                             valid: true
                                             name: IFD0
                                             id: '0'
@@ -323,7 +323,7 @@ elements:
                                                 -
                                                     node: ifd
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
-                                                    class: FileEye\MediaProbe\Block\Exif\Ifd
+                                                    class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                     valid: true
                                                     name: ExifIFD
                                                     id: '34665'
@@ -692,7 +692,7 @@ elements:
                                                         -
                                                             node: makerNote
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
-                                                            class: FileEye\MediaProbe\Block\Exif\Ifd
+                                                            class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                             valid: true
                                                             name: Canon
                                                             id: '37500'
@@ -6893,7 +6893,7 @@ elements:
                                                         -
                                                             node: ifd
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965'
-                                                            class: FileEye\MediaProbe\Block\Exif\Ifd
+                                                            class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                             valid: true
                                                             name: InteropIFD
                                                             id: '40965'
@@ -7154,7 +7154,7 @@ elements:
                                                 -
                                                     node: ifd
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853'
-                                                    class: FileEye\MediaProbe\Block\Exif\Ifd
+                                                    class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                     valid: true
                                                     name: GPS
                                                     id: '34853'
@@ -7181,7 +7181,7 @@ elements:
                                         -
                                             node: ifd
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
-                                            class: FileEye\MediaProbe\Block\Exif\Ifd
+                                            class: FileEye\MediaProbe\Block\Tiff\Ifd
                                             valid: true
                                             name: IFD1
                                             id: '1'

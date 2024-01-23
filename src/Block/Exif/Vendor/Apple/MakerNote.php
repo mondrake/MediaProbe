@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Apple;
 
-use FileEye\MediaProbe\Block\Exif\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Ifd;
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Block\Tag;

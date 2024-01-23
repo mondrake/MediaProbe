@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Exif\Exif;
-use FileEye\MediaProbe\Block\Exif\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Jpeg\Jpeg;
 use FileEye\MediaProbe\Block\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Block\Tag;
@@ -90,7 +90,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $this->assertCount(1, $tiff->getMultipleElements("ifd"));
 
         $ifd = $tiff->getElement("ifd[@name='IFD0']");
-        $this->assertInstanceOf('FileEye\MediaProbe\Block\Exif\Ifd', $ifd);
+        $this->assertInstanceOf('FileEye\MediaProbe\Block\Tiff\Ifd', $ifd);
         $this->assertEquals($ifd->getAttribute('name'), 'IFD0');
 
         foreach ($entries as $entry_name => $entry) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Exif;
+namespace FileEye\MediaProbe\Block\Tiff;
 
 use FileEye\MediaProbe\Block\Jpeg\Jpeg;
 use FileEye\MediaProbe\Block\ListBase;
