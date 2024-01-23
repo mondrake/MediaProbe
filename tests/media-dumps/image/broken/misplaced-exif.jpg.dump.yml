@@ -114,7 +114,7 @@ elements:
                                                     valid: true
                                                     name: XPTitle
                                                     id: '40091'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -132,7 +132,7 @@ elements:
                                                     valid: true
                                                     name: ImageDescription
                                                     id: '270'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -150,7 +150,7 @@ elements:
                                                     valid: false
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -177,7 +177,7 @@ elements:
                                                             valid: true
                                                             name: GPSVersionID
                                                             id: '0'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -204,7 +204,7 @@ elements:
                                                             valid: false
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -222,7 +222,7 @@ elements:
                                                             valid: true
                                                             name: SubSecTime
                                                             id: '37520'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -240,7 +240,7 @@ elements:
                                                             valid: true
                                                             name: OffsetTime
                                                             id: '36880'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry

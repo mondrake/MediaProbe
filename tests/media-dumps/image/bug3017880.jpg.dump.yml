@@ -91,7 +91,7 @@ elements:
                                                     valid: true
                                                     name: Software
                                                     id: '305'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry

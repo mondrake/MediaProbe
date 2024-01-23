@@ -8,13 +8,13 @@ alias:
   - 'Main'
 items:
     0x0100:
-        collection: tag
+        collection: Tiff\Tag
         name: ImageWidth
         title: 'Image Width'
         components: 1
         format: [Short, Long]
     0x0101:
-        collection: tag
+        collection: Tiff\Tag
         name: ImageLength
         title: 'Image Length'
         components: 1

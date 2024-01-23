@@ -188,7 +188,7 @@ elements:
                                                     valid: true
                                                     name: Make
                                                     id: '271'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -206,7 +206,7 @@ elements:
                                                     valid: true
                                                     name: Model
                                                     id: '272'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -224,7 +224,7 @@ elements:
                                                     valid: true
                                                     name: Orientation
                                                     id: '274'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -242,7 +242,7 @@ elements:
                                                     valid: true
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -260,7 +260,7 @@ elements:
                                                     valid: true
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -278,7 +278,7 @@ elements:
                                                     valid: true
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -296,7 +296,7 @@ elements:
                                                     valid: true
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -314,7 +314,7 @@ elements:
                                                     valid: true
                                                     name: YCbCrPositioning
                                                     id: '531'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -332,7 +332,7 @@ elements:
                                                     valid: true
                                                     name: SensingMethod
                                                     id: '41495'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -350,7 +350,7 @@ elements:
                                                     valid: true
                                                     name: CustomRendered
                                                     id: '41985'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -368,7 +368,7 @@ elements:
                                                     valid: true
                                                     name: ExposureMode
                                                     id: '41986'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -386,7 +386,7 @@ elements:
                                                     valid: true
                                                     name: WhiteBalance
                                                     id: '41987'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -404,7 +404,7 @@ elements:
                                                     valid: true
                                                     name: DigitalZoomRatio
                                                     id: '41988'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -422,7 +422,7 @@ elements:
                                                     valid: true
                                                     name: SceneCaptureType
                                                     id: '41990'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -449,7 +449,7 @@ elements:
                                                             valid: true
                                                             name: ExposureTime
                                                             id: '33434'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -467,7 +467,7 @@ elements:
                                                             valid: true
                                                             name: FNumber
                                                             id: '33437'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -485,7 +485,7 @@ elements:
                                                             valid: true
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -503,7 +503,7 @@ elements:
                                                             valid: true
                                                             name: DateTimeOriginal
                                                             id: '36867'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -521,7 +521,7 @@ elements:
                                                             valid: true
                                                             name: CreateDate
                                                             id: '36868'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -539,7 +539,7 @@ elements:
                                                             valid: true
                                                             name: ComponentsConfiguration
                                                             id: '37121'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -557,7 +557,7 @@ elements:
                                                             valid: true
                                                             name: CompressedBitsPerPixel
                                                             id: '37122'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -575,7 +575,7 @@ elements:
                                                             valid: true
                                                             name: ShutterSpeedValue
                                                             id: '37377'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -593,7 +593,7 @@ elements:
                                                             valid: true
                                                             name: ApertureValue
                                                             id: '37378'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -611,7 +611,7 @@ elements:
                                                             valid: true
                                                             name: ExposureCompensation
                                                             id: '37380'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -629,7 +629,7 @@ elements:
                                                             valid: true
                                                             name: MaxApertureValue
                                                             id: '37381'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -647,7 +647,7 @@ elements:
                                                             valid: true
                                                             name: MeteringMode
                                                             id: '37383'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -665,7 +665,7 @@ elements:
                                                             valid: true
                                                             name: Flash
                                                             id: '37385'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -683,7 +683,7 @@ elements:
                                                             valid: true
                                                             name: FocalLength
                                                             id: '37386'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -736,7 +736,7 @@ elements:
                                                                             valid: true
                                                                             name: MacroMode
                                                                             id: '1'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -754,7 +754,7 @@ elements:
                                                                             valid: true
                                                                             name: SelfTimer
                                                                             id: '2'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -772,7 +772,7 @@ elements:
                                                                             valid: true
                                                                             name: Quality
                                                                             id: '3'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -790,7 +790,7 @@ elements:
                                                                             valid: true
                                                                             name: CanonFlashMode
                                                                             id: '4'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -808,7 +808,7 @@ elements:
                                                                             valid: true
                                                                             name: ContinuousDrive
                                                                             id: '5'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -826,7 +826,7 @@ elements:
                                                                             valid: true
                                                                             name: FocusMode
                                                                             id: '7'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -844,7 +844,7 @@ elements:
                                                                             valid: true
                                                                             name: RecordMode
                                                                             id: '9'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -862,7 +862,7 @@ elements:
                                                                             valid: true
                                                                             name: CanonImageSize
                                                                             id: '10'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -880,7 +880,7 @@ elements:
                                                                             valid: true
                                                                             name: EasyMode
                                                                             id: '11'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -898,7 +898,7 @@ elements:
                                                                             valid: true
                                                                             name: DigitalZoom
                                                                             id: '12'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -916,7 +916,7 @@ elements:
                                                                             valid: true
                                                                             name: Contrast
                                                                             id: '13'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -934,7 +934,7 @@ elements:
                                                                             valid: true
                                                                             name: Saturation
                                                                             id: '14'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -952,7 +952,7 @@ elements:
                                                                             valid: true
                                                                             name: Sharpness
                                                                             id: '15'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -970,7 +970,7 @@ elements:
                                                                             valid: true
                                                                             name: CameraISO
                                                                             id: '16'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -988,7 +988,7 @@ elements:
                                                                             valid: true
                                                                             name: MeteringMode
                                                                             id: '17'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1006,7 +1006,7 @@ elements:
                                                                             valid: true
                                                                             name: FocusRange
                                                                             id: '18'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1024,7 +1024,7 @@ elements:
                                                                             valid: true
                                                                             name: AFPoint
                                                                             id: '19'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1042,7 +1042,7 @@ elements:
                                                                             valid: true
                                                                             name: CanonExposureMode
                                                                             id: '20'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1060,7 +1060,7 @@ elements:
                                                                             valid: true
                                                                             name: LensType
                                                                             id: '22'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1078,7 +1078,7 @@ elements:
                                                                             valid: true
                                                                             name: MaxFocalLength
                                                                             id: '23'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1096,7 +1096,7 @@ elements:
                                                                             valid: true
                                                                             name: MinFocalLength
                                                                             id: '24'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1114,7 +1114,7 @@ elements:
                                                                             valid: true
                                                                             name: FocalUnits
                                                                             id: '25'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1132,7 +1132,7 @@ elements:
                                                                             valid: true
                                                                             name: MaxAperture
                                                                             id: '26'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1150,7 +1150,7 @@ elements:
                                                                             valid: true
                                                                             name: MinAperture
                                                                             id: '27'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1168,7 +1168,7 @@ elements:
                                                                             valid: true
                                                                             name: FlashActivity
                                                                             id: '28'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1186,7 +1186,7 @@ elements:
                                                                             valid: true
                                                                             name: FlashBits
                                                                             id: '29'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1204,7 +1204,7 @@ elements:
                                                                             valid: true
                                                                             name: FocusContinuous
                                                                             id: '32'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1222,7 +1222,7 @@ elements:
                                                                             valid: true
                                                                             name: AESetting
                                                                             id: '33'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1240,7 +1240,7 @@ elements:
                                                                             valid: true
                                                                             name: ImageStabilization
                                                                             id: '34'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1258,7 +1258,7 @@ elements:
                                                                             valid: true
                                                                             name: DisplayAperture
                                                                             id: '35'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1276,7 +1276,7 @@ elements:
                                                                             valid: true
                                                                             name: ZoomSourceWidth
                                                                             id: '36'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1294,7 +1294,7 @@ elements:
                                                                             valid: true
                                                                             name: ZoomTargetWidth
                                                                             id: '37'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1312,7 +1312,7 @@ elements:
                                                                             valid: true
                                                                             name: SpotMeteringMode
                                                                             id: '39'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1330,7 +1330,7 @@ elements:
                                                                             valid: true
                                                                             name: PhotoEffect
                                                                             id: '40'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1348,7 +1348,7 @@ elements:
                                                                             valid: true
                                                                             name: ManualFlashOutput
                                                                             id: '41'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1366,7 +1366,7 @@ elements:
                                                                             valid: true
                                                                             name: ColorTone
                                                                             id: '42'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1393,7 +1393,7 @@ elements:
                                                                             valid: true
                                                                             name: FocalType
                                                                             id: '0'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1411,7 +1411,7 @@ elements:
                                                                             valid: true
                                                                             name: FocalLength
                                                                             id: '1'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1429,7 +1429,7 @@ elements:
                                                                             valid: true
                                                                             name: FocalPlaneXSize
                                                                             id: '2'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1447,7 +1447,7 @@ elements:
                                                                             valid: true
                                                                             name: FocalPlaneYSize
                                                                             id: '3'
-                                                                            collection: Tag
+                                                                            collection: Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     node: entry
@@ -1465,7 +1465,7 @@ elements:
                                                                     valid: true
                                                                     name: CanonFlashInfo
                                                                     id: '3'
-                                                                    collection: Tag
+                                                                    collection: Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -1483,7 +1483,7 @@ elements:
                                                                     valid: true
                                                                     name: FileNumber
                                                                     id: '8'
-                                                                    collection: Tag
+                                                                    collection: Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -1501,7 +1501,7 @@ elements:
                                                                     valid: true
                                                                     name: CanonModelID
                                                                     id: '16'
-                                                                    collection: Tag
+                                                                    collection: Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             node: entry
@@ -1519,7 +1519,7 @@ elements:
                                                             valid: true
                                                             name: UserComment
                                                             id: '37510'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -1537,7 +1537,7 @@ elements:
                                                             valid: true
                                                             name: FlashpixVersion
                                                             id: '40960'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -1555,7 +1555,7 @@ elements:
                                                             valid: true
                                                             name: ColorSpace
                                                             id: '40961'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -1573,7 +1573,7 @@ elements:
                                                             valid: true
                                                             name: ExifImageWidth
                                                             id: '40962'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -1591,7 +1591,7 @@ elements:
                                                             valid: true
                                                             name: ExifImageHeight
                                                             id: '40963'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry

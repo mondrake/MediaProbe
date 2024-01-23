@@ -5,7 +5,7 @@ class: FileEye\MediaProbe\Block\Tiff\Ifd
 DOMNode: ifd
 alias:
     - Interop
-defaultItemCollection: Tag
+defaultItemCollection: Tiff\Tag
 compiler:
     exiftool:
         xpath: '//table[@name=''Exif::Main'']/tag[@g1=''InteropIFD'']'

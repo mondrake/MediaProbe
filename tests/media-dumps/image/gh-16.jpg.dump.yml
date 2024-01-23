@@ -91,7 +91,7 @@ elements:
                                                     valid: true
                                                     name: XPSubject
                                                     id: '40095'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry

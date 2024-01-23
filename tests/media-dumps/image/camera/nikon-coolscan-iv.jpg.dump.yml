@@ -91,7 +91,7 @@ elements:
                                                     valid: true
                                                     name: Make
                                                     id: '271'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -109,7 +109,7 @@ elements:
                                                     valid: true
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -127,7 +127,7 @@ elements:
                                                     valid: true
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -145,7 +145,7 @@ elements:
                                                     valid: true
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -163,7 +163,7 @@ elements:
                                                     valid: true
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -181,7 +181,7 @@ elements:
                                                     valid: true
                                                     name: YCbCrPositioning
                                                     id: '531'
-                                                    collection: Tag
+                                                    collection: Tiff\Tag
                                                     elements:
                                                         -
                                                             node: entry
@@ -208,7 +208,7 @@ elements:
                                                             valid: true
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -226,7 +226,7 @@ elements:
                                                             valid: true
                                                             name: ComponentsConfiguration
                                                             id: '37121'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -244,7 +244,7 @@ elements:
                                                             valid: true
                                                             name: MakerNote
                                                             id: '37500'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -262,7 +262,7 @@ elements:
                                                             valid: true
                                                             name: FlashpixVersion
                                                             id: '40960'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -280,7 +280,7 @@ elements:
                                                             valid: true
                                                             name: ColorSpace
                                                             id: '40961'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -298,7 +298,7 @@ elements:
                                                             valid: true
                                                             name: ExifImageWidth
                                                             id: '40962'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
@@ -316,7 +316,7 @@ elements:
                                                             valid: true
                                                             name: ExifImageHeight
                                                             id: '40963'
-                                                            collection: Tag
+                                                            collection: Tiff\Tag
                                                             elements:
                                                                 -
                                                                     node: entry
