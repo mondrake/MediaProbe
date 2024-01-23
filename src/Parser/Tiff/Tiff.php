@@ -22,8 +22,9 @@ class Tiff
     public function parseData(DataElement $data): void
     {
         // Determine the byte order of the TIFF data.
-        $this->setByteOrder(self::getTiffSegmentByteOrder($data));
-        $data->setByteOrder($this->block->getByteOrder());
+        $byteOrder = self::getTiffSegmentByteOrder($data);
+        $this->block->setByteOrder($byteOrder);
+        $data->setByteOrder($byteOrder);
 
         assert($this->block->debugInfo(['dataElement' => $data]));
 
@@ -34,9 +35,9 @@ class Tiff
         // image scan (TIFF) in between. Store that in a RawData block.
         if ($ifd_offset > 8) {
             $scan = new ItemDefinition(
-                CollectionFactory::get('RawData', ['name' => 'scan']),
-                DataFormat::BYTE,
-                $ifd_offset - 8
+                collection:  CollectionFactory::get('RawData', ['name' => 'scan']),
+                format:      DataFormat::BYTE,
+                valuesCount: $ifd_offset - 8,
             );
             $this->block->addBlock($scan)->parseData($data, 8, $ifd_offset - 8);
         }
@@ -45,9 +46,9 @@ class Tiff
         for ($i = 0; $i <= 1; $i++) {
             // Check data is accessible, warn otherwise.
             if ($ifd_offset >= $data->getSize() || $ifd_offset + 4 > $data->getSize()) {
-                $this->warning(
+                $this->block->warning(
                     'Could not determine number of entries for {item}, overflow',
-                    ['item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name')]
+                    ['item' => $this->block->getCollection()->getItemCollection($i)->getPropertyValue('name')]
                 );
                 continue;
             }
@@ -55,9 +56,9 @@ class Tiff
             // Find number of tags in IFD and warn if not enough data to read them.
             $ifd_tags_count = $data->getShort($ifd_offset);
             if ($ifd_offset + $ifd_tags_count * 4 > $data->getSize()) {
-                $this->warning(
+                $this->block->warning(
                     'Invalid data for {item}',
-                    ['item' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name')]
+                    ['item' => $this->block->getCollection()->getItemCollection($i)->getPropertyValue('name')]
                 );
                 continue;
             }
@@ -65,14 +66,14 @@ class Tiff
             // Create and load the IFDs. Note that the data element cannot
             // be split in windows since any pointer will refer to the
             // entire segment space.
-            $ifd_class = $this->getCollection()->getItemCollection($i)->getPropertyValue('class');
-            $ifd_item = new ItemDefinition($this->getCollection()->getItemCollection($i), DataFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
-            $ifd = new $ifd_class($ifd_item, $this);
+            $ifd_class = $this->block->getCollection()->getItemCollection($i)->getPropertyValue('class');
+            $ifd_item = new ItemDefinition($this->block->getCollection()->getItemCollection($i), DataFormat::LONG, $ifd_tags_count, $ifd_offset, 0, $i);
+            $ifd = new $ifd_class($ifd_item, $this->block);
             try {
                 $ifd->parseData($data);
             } catch (DataException $e) {
-                $this->error('Error processing {ifd_name}: {msg}.', [
-                    'ifd_name' => $this->getCollection()->getItemCollection($i)->getPropertyValue('name'),
+                $this->block->error('Error processing {ifd_name}: {msg}.', [
+                    'ifd_name' => $this->block->getCollection()->getItemCollection($i)->getPropertyValue('name'),
                     'msg' => $e->getMessage(),
                 ]);
                 continue;
@@ -88,7 +89,7 @@ class Tiff
 
             // IFD1 shouldn't link further.
             if ($i === 1) {
-                $this->error('IFD1 should not link to another IFD');
+                $this->block->error('IFD1 should not link to another IFD');
                 break;
             }
         }
