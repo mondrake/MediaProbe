@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Parser\Tiff;
 
-use FileEye\MediaProbe\Block\Tiff as TiffBlock;
+use FileEye\MediaProbe\Block\Tiff\Tiff as TiffBlock;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;

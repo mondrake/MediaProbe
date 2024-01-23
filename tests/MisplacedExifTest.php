@@ -4,7 +4,7 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Exif\Exif;
 use FileEye\MediaProbe\Block\Jpeg\Jpeg;
-use FileEye\MediaProbe\Block\JpegSegmentApp1;
+use FileEye\MediaProbe\Block\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;

@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block;
+namespace FileEye\MediaProbe\Block\Jpeg;
 
 use FileEye\MediaProbe\Block\Exif\Exif;
 use FileEye\MediaProbe\Collection\CollectionFactory;
@@ -14,7 +14,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 /**
  * Class representing a JPEG APP1 segment.
  */
-class JpegSegmentApp1 extends JpegSegmentBase
+class SegmentApp1 extends SegmentBase
 {
     /**
      * {@inheritdoc}
