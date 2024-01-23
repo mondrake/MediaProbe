@@ -2,8 +2,6 @@
 
 namespace FileEye\MediaProbe;
 
-use FileEye\MediaProbe\Block\Jpeg;
-use FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;

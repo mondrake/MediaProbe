@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Test;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Block\Exif\Ifd;
-use FileEye\MediaProbe\Block\Jpeg;
+use FileEye\MediaProbe\Block\Jpeg\Jpeg;
 
 class Tags1Test extends MediaProbeTestCaseBase
 {
@@ -15,7 +15,7 @@ class Tags1Test extends MediaProbeTestCaseBase
         $jpeg = $media->getElement("jpeg");
 
         $this->assertInstanceOf('FileEye\MediaProbe\Block\Exif\Exif', $jpeg->getElement("jpegSegment/exif"));
-        $this->assertInstanceOf('FileEye\MediaProbe\Block\Tiff', $jpeg->getElement("jpegSegment/exif/tiff"));
+        $this->assertInstanceOf('FileEye\MediaProbe\Block\Tiff\Tiff', $jpeg->getElement("jpegSegment/exif/tiff"));
 
         $ifd0 = $jpeg->getElement("jpegSegment/exif/tiff/ifd[@name='IFD0']");
         $this->assertInstanceOf('FileEye\MediaProbe\Block\Exif\Ifd', $ifd0);

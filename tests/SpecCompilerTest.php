@@ -6,7 +6,7 @@ use FileEye\MediaProbe\Test\TestClasses\Core;
 use FileEye\MediaProbe\Block\Exif\Ifd;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Block\Tiff;
+use FileEye\MediaProbe\Block\Tiff\Tiff;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Utility\SpecCompiler;
 use Symfony\Component\Filesystem\Filesystem;

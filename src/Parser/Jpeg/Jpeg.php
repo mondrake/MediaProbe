@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Parser\Jpeg;
 
-use FileEye\MediaProbe\Block\Jpeg as JpegBlock;
+use FileEye\MediaProbe\Block\Jpeg\Jpeg as JpegBlock;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
