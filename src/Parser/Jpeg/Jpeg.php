@@ -73,19 +73,17 @@ class Jpeg extends ParserBase
             // Get the JPEG segment size.
             $segment_collection = $this->block->getCollection()->getItemCollection($segment_id);
             $segment_size = match ($segment_collection->getPropertyValue('payload')) {
-                // The data window size is the JPEG delimiter byte and the
-                // segment identifier byte.
-                'none': 2,
-                // Read the length of the segment. The data window size
-                // includes the JPEG delimiter byte, the segment identifier
-                // byte and two bytes used to store the segment length.
-                'variable': $data->getShort($offset + 2) + 2,
-                // The data window size includes the JPEG delimiter byte
-                // and the segment identifier byte.
-                'fixed': $segment_collection->getPropertyValue('components') + 2,
-                // In case of image scan segment, the window is to the end
-                // of the data.
-                'scan': null,
+                // The data window size is the JPEG delimiter byte and the segment identifier byte.
+                'none' => 2,
+                // Read the length of the segment. The data window size includes the JPEG delimiter
+                // byte, the segment identifier byte and two bytes used to store the segment
+                // length.
+                'variable' => $data->getShort($offset + 2) + 2,
+                // The data window size includes the JPEG delimiter byte and the segment identifier
+                // byte.
+                'fixed' => $segment_collection->getPropertyValue('components') + 2,
+                // In case of image scan segment, the window is to the end of the data.
+                'scan' => null,
             };
 
             // Parse the MediaProbe JPEG segment data.
