@@ -39,7 +39,7 @@ class Jpeg extends ParserBase
                 if ($new_offset !== $offset) {
                     // Add any trailing data from previous segment in a
                     // RawData block.
-                    $this->error('Unexpected data found at end of JPEG segment {id}/{hexid} @ offset {offset}, size {size}', [
+                    $this->block->error('Unexpected data found at end of JPEG segment {id}/{hexid} @ offset {offset}, size {size}', [
                         'id' => $segment_id,
                         'hexid' => '0x' . strtoupper(dechex($segment_id)),
                         'offset' => $data->getAbsoluteOffset($offset),
@@ -50,11 +50,11 @@ class Jpeg extends ParserBase
                         DataFormat::BYTE,
                         $offset
                     );
-                    $this->addBlock($trail)->parseData($data, $offset, $new_offset - $offset);
+                    $this->block->addBlock($trail)->parseData($data, $offset, $new_offset - $offset);
                 }
                 $offset = $new_offset;
             } catch (DataException $e) {
-                $this->error($e->getMessage());
+                $this->block->error($e->getMessage());
                 return;
             }
 
@@ -63,7 +63,7 @@ class Jpeg extends ParserBase
 
             // Warn if an unidentified segment is detected.
             if (!in_array($segment_id, $this->block->getCollection()->listItemIds())) {
-                $this->warning('Invalid JPEG marker {id}/{hexid} found @ offset {offset}', [
+                $this->block->warning('Invalid JPEG marker {id}/{hexid} found @ offset {offset}', [
                     'id' => $segment_id,
                     'hexid' => '0x' . strtoupper(dechex($segment_id)),
                     'offset' => $data->getAbsoluteOffset($offset),
