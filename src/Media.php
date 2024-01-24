@@ -117,7 +117,7 @@ class Media extends RootBlockBase
 
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
-        $media = new static($externalLogger, $failLevel);
+        $media = new Media($externalLogger, $failLevel);
         $media->setAttribute('mimeType', (string) $mediaType->collection->getPropertyValue('item'));
         $media->getStopwatch()->start('media-parsing');
         assert($media->debugInfo(['dataElement' => $dataElement]));

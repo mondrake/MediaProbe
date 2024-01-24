@@ -3,7 +3,7 @@ title: 'TIFF image data'
 class: FileEye\MediaProbe\Block\Tiff\Tiff
 parser: FileEye\MediaProbe\Parser\Tiff\Tiff
 writer: FileEye\MediaProbe\Writer\Tiff\Tiff
-DOMNode: tiff
+DOMNode: image-tiff
 items:
     0:
         collection: Tiff\Ifd0

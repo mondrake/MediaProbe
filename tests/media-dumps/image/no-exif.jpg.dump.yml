@@ -9,8 +9,8 @@ elements:
     collection: Media
     elements:
         -
-            node: jpeg
-            path: /media/jpeg
+            node: image-jpeg
+            path: /media/image-jpeg
             class: FileEye\MediaProbe\Block\Jpeg\Jpeg
             valid: true
             id: image/jpeg
@@ -18,7 +18,7 @@ elements:
             elements:
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:SOI:216'
+                    path: '/media/image-jpeg/jpegSegment:SOI:216'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOI
@@ -27,7 +27,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:SOI:216/entry'
+                            path: '/media/image-jpeg/jpegSegment:SOI:216/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -36,7 +36,7 @@ elements:
                             text: '2 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:APP0:224'
+                    path: '/media/image-jpeg/jpegSegment:APP0:224'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: APP0
@@ -45,7 +45,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:APP0:224/entry'
+                            path: '/media/image-jpeg/jpegSegment:APP0:224/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -54,7 +54,7 @@ elements:
                             text: '18 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:COM:254'
+                    path: '/media/image-jpeg/jpegSegment:COM:254'
                     class: FileEye\MediaProbe\Block\Jpeg\SegmentCom
                     valid: true
                     name: COM
@@ -63,7 +63,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:COM:254/entry'
+                            path: '/media/image-jpeg/jpegSegment:COM:254/entry'
                             class: FileEye\MediaProbe\Entry\Core\Char
                             valid: true
                             format: Char
@@ -72,7 +72,7 @@ elements:
                             text: 'Test image for PEL, with no EXIF information.'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DQT:219'
+                    path: '/media/image-jpeg/jpegSegment:DQT:219'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
@@ -81,7 +81,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DQT:219/entry'
+                            path: '/media/image-jpeg/jpegSegment:DQT:219/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -90,7 +90,7 @@ elements:
                             text: '69 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DQT:219'
+                    path: '/media/image-jpeg/jpegSegment:DQT:219'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
@@ -99,7 +99,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DQT:219/entry'
+                            path: '/media/image-jpeg/jpegSegment:DQT:219/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -108,7 +108,7 @@ elements:
                             text: '69 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:SOF0:192'
+                    path: '/media/image-jpeg/jpegSegment:SOF0:192'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOF0
@@ -117,7 +117,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:SOF0:192/entry'
+                            path: '/media/image-jpeg/jpegSegment:SOF0:192/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -126,7 +126,7 @@ elements:
                             text: '19 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DHT:196'
+                    path: '/media/image-jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -135,7 +135,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -144,7 +144,7 @@ elements:
                             text: '30 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DHT:196'
+                    path: '/media/image-jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -153,7 +153,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -162,7 +162,7 @@ elements:
                             text: '44 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DHT:196'
+                    path: '/media/image-jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -171,7 +171,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -180,7 +180,7 @@ elements:
                             text: '30 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:DHT:196'
+                    path: '/media/image-jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -189,7 +189,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -198,7 +198,7 @@ elements:
                             text: '42 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:SOS:218'
+                    path: '/media/image-jpeg/jpegSegment:SOS:218'
                     class: FileEye\MediaProbe\Block\Jpeg\SegmentSos
                     valid: true
                     name: SOS
@@ -207,7 +207,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:SOS:218/entry'
+                            path: '/media/image-jpeg/jpegSegment:SOS:218/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -216,7 +216,7 @@ elements:
                             text: '3974 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/jpeg/jpegSegment:EOI:217'
+                    path: '/media/image-jpeg/jpegSegment:EOI:217'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: EOI
@@ -225,7 +225,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/jpeg/jpegSegment:EOI:217/entry'
+                            path: '/media/image-jpeg/jpegSegment:EOI:217/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
