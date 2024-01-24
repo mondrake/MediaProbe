@@ -83,7 +83,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $r_media = Media::parseFromFile(dirname(__FILE__) . '/test-output.jpg', null, 'error');
         $r_jpeg = $r_media->getElement("jpeg");
 
-        $this->assertInstanceOf('FileEye\MediaProbe\Block\Exif\Exif', $r_jpeg->getElement("jpegSegment/exif"));
+        $this->assertInstanceOf('FileEye\MediaProbe\Block\Jpeg\Exif', $r_jpeg->getElement("jpegSegment/exif"));
 
         $tiff = $r_jpeg->getElement("jpegSegment/exif/tiff");
         $this->assertInstanceOf('FileEye\MediaProbe\Block\Tiff\Tiff', $tiff);

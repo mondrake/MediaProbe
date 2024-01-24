@@ -125,9 +125,9 @@ elements:
                         -
                             node: exif
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
-                            class: FileEye\MediaProbe\Block\Exif\Exif
+                            class: FileEye\MediaProbe\Block\Jpeg\Exif
                             valid: true
-                            collection: Exif\Exif
+                            collection: Jpeg\Exif
                             elements:
                                 -
                                     node: tiff

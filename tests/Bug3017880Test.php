@@ -32,7 +32,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
 
             if ($exif === null) {
                 $app1_segment_mock = $this->getStubRoot();
-                $exif_definition = new ItemDefinition(CollectionFactory::get('Exif\Exif'));
+                $exif_definition = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
                 $exif = new Exif($exif_definition, $app1_segment_mock);
                 $tiff_definition = new ItemDefinition(CollectionFactory::get('Tiff\Tiff'));
                 new Tiff($tiff_definition, $exif);

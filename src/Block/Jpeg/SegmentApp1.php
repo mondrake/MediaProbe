@@ -22,7 +22,7 @@ class SegmentApp1 extends SegmentBase
         assert($this->debugInfo(['dataElement' => $data]));
         // If we have an Exif table, parse it.
         if (Exif::isExifSegment($data, 4)) {
-            $exif = new ItemDefinition(CollectionFactory::get('Exif\Exif'));
+            $exif = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
             $this->addBlock($exif)->parseData($data, 4, $data->getSize() - 4);
         } else {
             // We store the data as normal JPEG content if it could not be

@@ -14,7 +14,7 @@ class Tags1Test extends MediaProbeTestCaseBase
         $media = Media::parseFromFile(dirname(__FILE__) . '/media-samples/image/test-tags-1.jpg', null, 'error');
         $jpeg = $media->getElement("jpeg");
 
-        $this->assertInstanceOf('FileEye\MediaProbe\Block\Exif\Exif', $jpeg->getElement("jpegSegment/exif"));
+        $this->assertInstanceOf('FileEye\MediaProbe\Block\Jpeg\Exif', $jpeg->getElement("jpegSegment/exif"));
         $this->assertInstanceOf('FileEye\MediaProbe\Block\Tiff\Tiff', $jpeg->getElement("jpegSegment/exif/tiff"));
 
         $ifd0 = $jpeg->getElement("jpegSegment/exif/tiff/ifd[@name='IFD0']");

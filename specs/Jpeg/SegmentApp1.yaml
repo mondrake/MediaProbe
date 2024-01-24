@@ -6,4 +6,4 @@ class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
 DOMNode: jpegSegment
 items:
     Exif:
-        collection: Exif\Exif
+        collection: Jpeg\Exif

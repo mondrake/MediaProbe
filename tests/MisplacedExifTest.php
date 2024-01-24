@@ -28,7 +28,7 @@ class MisplacedExifTest extends MediaProbeTestCaseBase
         // Add a new APP1 segment.
         $app1_segment_definition = new ItemDefinition(CollectionFactory::get('Jpeg\SegmentApp1'));
         $app1_segment = new SegmentApp1($app1_segment_definition, $jpeg);
-        $exif_definition = new ItemDefinition(CollectionFactory::get('Exif\Exif'));
+        $exif_definition = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
         $newExif = new Exif($exif_definition, $app1_segment);
 
         // Ensure new APP1 segment is set to correct position among segments.
