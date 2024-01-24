@@ -17,7 +17,7 @@ class Jpeg extends CollectionBase {
   'class' => 'FileEye\\MediaProbe\\Block\\Jpeg\\Jpeg',
   'parser' => 'FileEye\\MediaProbe\\Parser\\Jpeg\\Jpeg',
   'writer' => 'FileEye\\MediaProbe\\Writer\\Jpeg\\Jpeg',
-  'DOMNode' => 'image-jpeg',
+  'DOMNode' => 'jpeg',
   'id' => 'Jpeg\\Jpeg',
   'itemsByName' =>
   array (

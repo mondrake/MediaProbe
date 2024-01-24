@@ -16,8 +16,8 @@ elements:
     collection: Media
     elements:
         -
-            node: image-tiff
-            path: /media/image-tiff
+            node: tiff
+            path: /media/tiff
             class: FileEye\MediaProbe\Block\Tiff\Tiff
             valid: true
             id: image/tiff
@@ -25,7 +25,7 @@ elements:
             elements:
                 -
                     node: rawData
-                    path: '/media/image-tiff/rawData:scan'
+                    path: '/media/tiff/rawData:scan'
                     class: FileEye\MediaProbe\Block\RawData
                     valid: true
                     name: scan
@@ -33,7 +33,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-tiff/rawData:scan/entry'
+                            path: '/media/tiff/rawData:scan/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -42,7 +42,7 @@ elements:
                             text: '6392 byte(s) of data'
                 -
                     node: ifd
-                    path: '/media/image-tiff/ifd:IFD0:0'
+                    path: '/media/tiff/ifd:IFD0:0'
                     class: FileEye\MediaProbe\Block\Tiff\Ifd
                     valid: true
                     name: IFD0
@@ -51,7 +51,7 @@ elements:
                     elements:
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:ImageWidth:256'
+                            path: '/media/tiff/ifd:IFD0:0/tag:ImageWidth:256'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ImageWidth
@@ -60,7 +60,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:ImageWidth:256/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:ImageWidth:256/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -69,7 +69,7 @@ elements:
                                     text: '174'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:ImageHeight:257'
+                            path: '/media/tiff/ifd:IFD0:0/tag:ImageHeight:257'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ImageHeight
@@ -78,7 +78,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:ImageHeight:257/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:ImageHeight:257/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -87,7 +87,7 @@ elements:
                                     text: '38'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:BitsPerSample:258'
+                            path: '/media/tiff/ifd:IFD0:0/tag:BitsPerSample:258'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: BitsPerSample
@@ -96,7 +96,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:BitsPerSample:258/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:BitsPerSample:258/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -105,7 +105,7 @@ elements:
                                     text: '8 8 8 8'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:Compression:259'
+                            path: '/media/tiff/ifd:IFD0:0/tag:Compression:259'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Compression
@@ -114,7 +114,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:Compression:259/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:Compression:259/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -123,7 +123,7 @@ elements:
                                     text: LZW
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262'
+                            path: '/media/tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PhotometricInterpretation
@@ -132,7 +132,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -141,7 +141,7 @@ elements:
                                     text: RGB
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:PreviewImageStart:273'
+                            path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageStart:273'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PreviewImageStart
@@ -150,7 +150,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:PreviewImageStart:273/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageStart:273/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Long
                                     valid: true
                                     format: Long
@@ -159,7 +159,7 @@ elements:
                                     text: '8'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:Orientation:274'
+                            path: '/media/tiff/ifd:IFD0:0/tag:Orientation:274'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Orientation
@@ -168,7 +168,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:Orientation:274/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:Orientation:274/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -177,7 +177,7 @@ elements:
                                     text: 'Horizontal (normal)'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:SamplesPerPixel:277'
+                            path: '/media/tiff/ifd:IFD0:0/tag:SamplesPerPixel:277'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: SamplesPerPixel
@@ -186,7 +186,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:SamplesPerPixel:277/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:SamplesPerPixel:277/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -195,7 +195,7 @@ elements:
                                     text: '4'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:RowsPerStrip:278'
+                            path: '/media/tiff/ifd:IFD0:0/tag:RowsPerStrip:278'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: RowsPerStrip
@@ -204,7 +204,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:RowsPerStrip:278/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:RowsPerStrip:278/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -213,7 +213,7 @@ elements:
                                     text: '38'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:PreviewImageLength:279'
+                            path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageLength:279'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PreviewImageLength
@@ -222,7 +222,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:PreviewImageLength:279/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageLength:279/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Long
                                     valid: true
                                     format: Long
@@ -231,7 +231,7 @@ elements:
                                     text: '6391'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:PlanarConfiguration:284'
+                            path: '/media/tiff/ifd:IFD0:0/tag:PlanarConfiguration:284'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: PlanarConfiguration
@@ -240,7 +240,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:PlanarConfiguration:284/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:PlanarConfiguration:284/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -249,7 +249,7 @@ elements:
                                     text: Chunky
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:Predictor:317'
+                            path: '/media/tiff/ifd:IFD0:0/tag:Predictor:317'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: Predictor
@@ -258,7 +258,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:Predictor:317/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:Predictor:317/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -267,7 +267,7 @@ elements:
                                     text: 'Horizontal differencing'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:ExtraSamples:338'
+                            path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ExtraSamples
@@ -276,7 +276,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:ExtraSamples:338/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -285,7 +285,7 @@ elements:
                                     text: 'Associated Alpha'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:SampleFormat:339'
+                            path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: SampleFormat
@@ -294,7 +294,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:SampleFormat:339/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339/entry'
                                     class: FileEye\MediaProbe\Entry\Core\Short
                                     valid: true
                                     format: Short
@@ -303,7 +303,7 @@ elements:
                                     text: 'Unsigned, Unsigned, Unsigned, Unsigned'
                         -
                             node: tag
-                            path: '/media/image-tiff/ifd:IFD0:0/tag:ApplicationNotes:700'
+                            path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700'
                             class: FileEye\MediaProbe\Block\Tiff\Tag
                             valid: true
                             name: ApplicationNotes
@@ -312,7 +312,7 @@ elements:
                             elements:
                                 -
                                     node: entry
-                                    path: '/media/image-tiff/ifd:IFD0:0/tag:ApplicationNotes:700/entry'
+                                    path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700/entry'
                                     class: FileEye\MediaProbe\Entry\IfdApplicationNotes
                                     valid: true
                                     format: Char
@@ -322,10 +322,10 @@ elements:
 log:
     WARNING:
         -
-            path: '/media/image-tiff/ifd:IFD0:0/tag:ExtraSamples:338'
+            path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338'
             message: "Found Short data format, expected Undefined for item 'ExtraSamples' in 'IFD0'"
         -
-            path: '/media/image-tiff/ifd:IFD0:0/tag:SampleFormat:339'
+            path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339'
             message: "Found Short data format, expected Undefined for item 'SampleFormat' in 'IFD0'"
 gdInfo:
     0: 174

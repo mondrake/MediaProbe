@@ -14,8 +14,8 @@ elements:
     collection: Media
     elements:
         -
-            node: image-jpeg
-            path: /media/image-jpeg
+            node: jpeg
+            path: /media/jpeg
             class: FileEye\MediaProbe\Block\Jpeg\Jpeg
             valid: true
             id: image/jpeg
@@ -23,7 +23,7 @@ elements:
             elements:
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:SOI:216'
+                    path: '/media/jpeg/jpegSegment:SOI:216'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOI
@@ -32,7 +32,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:SOI:216/entry'
+                            path: '/media/jpeg/jpegSegment:SOI:216/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -41,7 +41,7 @@ elements:
                             text: '2 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:APP1:225'
+                    path: '/media/jpeg/jpegSegment:APP1:225'
                     class: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
                     valid: true
                     name: APP1
@@ -50,21 +50,21 @@ elements:
                     elements:
                         -
                             node: exif
-                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif'
+                            path: '/media/jpeg/jpegSegment:APP1:225/exif'
                             class: FileEye\MediaProbe\Block\Exif\Exif
                             valid: true
                             collection: Exif\Exif
                             elements:
                                 -
-                                    node: image-tiff
-                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff'
+                                    node: tiff
+                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
                                     class: FileEye\MediaProbe\Block\Tiff\Tiff
                                     valid: true
                                     collection: Tiff\Tiff
                                     elements:
                                         -
                                             node: ifd
-                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0'
+                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
                                             class: FileEye\MediaProbe\Block\Tiff\Ifd
                                             valid: true
                                             name: IFD0
@@ -73,7 +73,7 @@ elements:
                                             elements:
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Orientation:274'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Orientation:274'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Orientation
@@ -82,7 +82,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Orientation:274/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Orientation:274/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -91,7 +91,7 @@ elements:
                                                             text: 'Horizontal (normal)'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:CreateDate:36868'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:CreateDate:36868'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: CreateDate
@@ -100,7 +100,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:CreateDate:36868/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:CreateDate:36868/entry'
                                                             class: FileEye\MediaProbe\Entry\Time
                                                             valid: true
                                                             format: Ascii
@@ -109,7 +109,7 @@ elements:
                                                             text: '2014:10:03 14:47:22'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Model:272'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Model
@@ -118,7 +118,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Model:272/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             valid: true
                                                             format: Ascii
@@ -127,7 +127,7 @@ elements:
                                                             text: GT-I8190
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:DateTimeOriginal:36867'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:DateTimeOriginal:36867'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: DateTimeOriginal
@@ -136,7 +136,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:DateTimeOriginal:36867/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:DateTimeOriginal:36867/entry'
                                                             class: FileEye\MediaProbe\Entry\Time
                                                             valid: true
                                                             format: Ascii
@@ -145,7 +145,7 @@ elements:
                                                             text: '2014:10:03 14:47:22'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExifVersion:36864'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: ExifVersion
@@ -154,7 +154,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
                                                             class: FileEye\MediaProbe\Entry\Version
                                                             valid: false
                                                             format: Undefined
@@ -163,7 +163,7 @@ elements:
                                                             text: '0.0'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:YResolution:283'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YResolution
@@ -172,7 +172,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:YResolution:283/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Rational
                                                             valid: true
                                                             format: Rational
@@ -181,7 +181,7 @@ elements:
                                                             text: '72'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:XResolution:282'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: XResolution
@@ -190,7 +190,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:XResolution:282/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Rational
                                                             valid: true
                                                             format: Rational
@@ -199,7 +199,7 @@ elements:
                                                             text: '72'
                                                 -
                                                     node: ifd
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:GPS:34853'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853'
                                                     class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                     valid: true
                                                     name: GPS
@@ -208,7 +208,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: tag
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirection:17'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirection:17'
                                                             class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: GPSImgDirection
@@ -217,7 +217,7 @@ elements:
                                                             elements:
                                                                 -
                                                                     node: entry
-                                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirection:17/entry'
+                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirection:17/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Rational
                                                                     valid: true
                                                                     format: Rational
@@ -226,7 +226,7 @@ elements:
                                                                     text: '354'
                                                         -
                                                             node: tag
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirectionRef:16'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirectionRef:16'
                                                             class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: GPSImgDirectionRef
@@ -235,7 +235,7 @@ elements:
                                                             elements:
                                                                 -
                                                                     node: entry
-                                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirectionRef:16/entry'
+                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirectionRef:16/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Ascii
                                                                     valid: true
                                                                     format: Ascii
@@ -244,7 +244,7 @@ elements:
                                                                     text: 'Magnetic North'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureTime:33434'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureTime:33434'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ExposureTime
@@ -253,7 +253,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureTime:33434/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureTime:33434/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifExposureTime
                                                             valid: true
                                                             format: Rational
@@ -262,7 +262,7 @@ elements:
                                                             text: '1/1631 sec.'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ImageWidth:256'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageWidth:256'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ImageWidth
@@ -271,7 +271,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ImageWidth:256/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageWidth:256/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -280,7 +280,7 @@ elements:
                                                             text: '2560'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ImageHeight:257'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageHeight:257'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ImageHeight
@@ -289,7 +289,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ImageHeight:257/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageHeight:257/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -298,7 +298,7 @@ elements:
                                                             text: '1920'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ComponentsConfiguration
@@ -307,7 +307,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifComponentsConfiguration
                                                             valid: true
                                                             format: Undefined
@@ -316,7 +316,7 @@ elements:
                                                             text: 'Err (206), R, -, -'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:FNumber:33437'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FNumber:33437'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: FNumber
@@ -325,7 +325,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:FNumber:33437/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FNumber:33437/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifFNumber
                                                             valid: true
                                                             format: Rational
@@ -334,7 +334,7 @@ elements:
                                                             text: f/2.6
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Make:271'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Make
@@ -343,7 +343,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Make:271/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             valid: true
                                                             format: Ascii
@@ -352,7 +352,7 @@ elements:
                                                             text: SAMSUNG
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Software:305'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Software:305'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Software
@@ -361,7 +361,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Software:305/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Software:305/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Ascii
                                                             valid: true
                                                             format: Ascii
@@ -370,7 +370,7 @@ elements:
                                                             text: d72ff736f2
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ModifyDate:306'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ModifyDate
@@ -379,7 +379,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
                                                             class: FileEye\MediaProbe\Entry\Time
                                                             valid: true
                                                             format: Ascii
@@ -388,7 +388,7 @@ elements:
                                                             text: '1970:01:01 01:00:00'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ColorSpace:40961'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ColorSpace:40961'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ColorSpace
@@ -397,7 +397,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ColorSpace:40961/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ColorSpace:40961/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -406,7 +406,7 @@ elements:
                                                             text: sRGB
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:MeteringMode:37383'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:MeteringMode:37383'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: MeteringMode
@@ -415,7 +415,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:MeteringMode:37383/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:MeteringMode:37383/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -424,7 +424,7 @@ elements:
                                                             text: 'Center-weighted average'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureCompensation:37380'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureCompensation:37380'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ExposureCompensation
@@ -433,7 +433,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureCompensation:37380/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureCompensation:37380/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifExposureBiasValue
                                                             valid: true
                                                             format: SignedRational
@@ -442,7 +442,7 @@ elements:
                                                             text: '0'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:MaxApertureValue:37381'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:MaxApertureValue:37381'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: MaxApertureValue
@@ -451,7 +451,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:MaxApertureValue:37381/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:MaxApertureValue:37381/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifApertureValue
                                                             valid: true
                                                             format: Rational
@@ -460,7 +460,7 @@ elements:
                                                             text: '2.6'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:FocalLength:37386'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FocalLength:37386'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: FocalLength
@@ -469,7 +469,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:FocalLength:37386/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FocalLength:37386/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifFocalLength
                                                             valid: true
                                                             format: Rational
@@ -478,7 +478,7 @@ elements:
                                                             text: '3.5 mm'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:SceneCaptureType:41990'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:SceneCaptureType:41990'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: SceneCaptureType
@@ -487,7 +487,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:SceneCaptureType:41990/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:SceneCaptureType:41990/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -496,7 +496,7 @@ elements:
                                                             text: Standard
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Flash:37385'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Flash:37385'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: Flash
@@ -505,7 +505,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:Flash:37385/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Flash:37385/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -514,7 +514,7 @@ elements:
                                                             text: 'No Flash'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:CustomRendered:41985'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:CustomRendered:41985'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: CustomRendered
@@ -523,7 +523,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:CustomRendered:41985/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:CustomRendered:41985/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -532,7 +532,7 @@ elements:
                                                             text: Normal
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:UserComment:37510'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: false
                                                     name: UserComment
@@ -541,7 +541,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
                                                             class: FileEye\MediaProbe\Entry\ExifUserComment
                                                             valid: false
                                                             format: Undefined
@@ -550,7 +550,7 @@ elements:
                                                             text: ''
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:WhiteBalance:41987'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:WhiteBalance:41987'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: WhiteBalance
@@ -559,7 +559,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:WhiteBalance:41987/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:WhiteBalance:41987/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -568,7 +568,7 @@ elements:
                                                             text: Auto
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureMode:41986'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureMode:41986'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ExposureMode
@@ -577,7 +577,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureMode:41986/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureMode:41986/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -586,7 +586,7 @@ elements:
                                                             text: Auto
                                                 -
                                                     node: ifd
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     class: FileEye\MediaProbe\Block\Tiff\Ifd
                                                     valid: true
                                                     name: ExifIFD
@@ -595,7 +595,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: tag
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'
                                                             class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: OtherImageStart
@@ -604,7 +604,7 @@ elements:
                                                             elements:
                                                                 -
                                                                     node: entry
-                                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513/entry'
+                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Long
                                                                     valid: true
                                                                     format: Long
@@ -613,7 +613,7 @@ elements:
                                                                     text: '600'
                                                         -
                                                             node: tag
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
                                                             class: FileEye\MediaProbe\Block\Tiff\Tag
                                                             valid: true
                                                             name: OtherImageLength
@@ -622,7 +622,7 @@ elements:
                                                             elements:
                                                                 -
                                                                     node: entry
-                                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514/entry'
+                                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514/entry'
                                                                     class: FileEye\MediaProbe\Entry\Core\Long
                                                                     valid: true
                                                                     format: Long
@@ -631,7 +631,7 @@ elements:
                                                                     text: '11368'
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:YCbCrPositioning:531'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrPositioning:531'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: YCbCrPositioning
@@ -640,7 +640,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:YCbCrPositioning:531/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrPositioning:531/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -649,7 +649,7 @@ elements:
                                                             text: Co-sited
                                                 -
                                                     node: tag
-                                                    path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ResolutionUnit:296'
+                                                    path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296'
                                                     class: FileEye\MediaProbe\Block\Tiff\Tag
                                                     valid: true
                                                     name: ResolutionUnit
@@ -658,7 +658,7 @@ elements:
                                                     elements:
                                                         -
                                                             node: entry
-                                                            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ResolutionUnit:296/entry'
+                                                            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296/entry'
                                                             class: FileEye\MediaProbe\Entry\Core\Short
                                                             valid: true
                                                             format: Short
@@ -667,7 +667,7 @@ elements:
                                                             text: inches
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DQT:219'
+                    path: '/media/jpeg/jpegSegment:DQT:219'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
@@ -676,7 +676,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DQT:219/entry'
+                            path: '/media/jpeg/jpegSegment:DQT:219/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -685,7 +685,7 @@ elements:
                             text: '69 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DQT:219'
+                    path: '/media/jpeg/jpegSegment:DQT:219'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DQT
@@ -694,7 +694,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DQT:219/entry'
+                            path: '/media/jpeg/jpegSegment:DQT:219/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -703,7 +703,7 @@ elements:
                             text: '69 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:SOF0:192'
+                    path: '/media/jpeg/jpegSegment:SOF0:192'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: SOF0
@@ -712,7 +712,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:SOF0:192/entry'
+                            path: '/media/jpeg/jpegSegment:SOF0:192/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -721,7 +721,7 @@ elements:
                             text: '19 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DHT:196'
+                    path: '/media/jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -730,7 +730,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -739,7 +739,7 @@ elements:
                             text: '33 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DHT:196'
+                    path: '/media/jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -748,7 +748,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -757,7 +757,7 @@ elements:
                             text: '183 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DHT:196'
+                    path: '/media/jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -766,7 +766,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -775,7 +775,7 @@ elements:
                             text: '33 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DHT:196'
+                    path: '/media/jpeg/jpegSegment:DHT:196'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DHT
@@ -784,7 +784,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DHT:196/entry'
+                            path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -793,7 +793,7 @@ elements:
                             text: '183 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:DRI:221'
+                    path: '/media/jpeg/jpegSegment:DRI:221'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: DRI
@@ -802,7 +802,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:DRI:221/entry'
+                            path: '/media/jpeg/jpegSegment:DRI:221/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -811,7 +811,7 @@ elements:
                             text: '6 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:SOS:218'
+                    path: '/media/jpeg/jpegSegment:SOS:218'
                     class: FileEye\MediaProbe\Block\Jpeg\SegmentSos
                     valid: true
                     name: SOS
@@ -820,7 +820,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:SOS:218/entry'
+                            path: '/media/jpeg/jpegSegment:SOS:218/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -829,7 +829,7 @@ elements:
                             text: '1162679 byte(s) of data'
                 -
                     node: jpegSegment
-                    path: '/media/image-jpeg/jpegSegment:EOI:217'
+                    path: '/media/jpeg/jpegSegment:EOI:217'
                     class: FileEye\MediaProbe\Block\Jpeg\Segment
                     valid: true
                     name: EOI
@@ -838,7 +838,7 @@ elements:
                     elements:
                         -
                             node: entry
-                            path: '/media/image-jpeg/jpegSegment:EOI:217/entry'
+                            path: '/media/jpeg/jpegSegment:EOI:217/entry'
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -847,14 +847,14 @@ elements:
                             text: '2 byte(s) of data'
                 -
                     node: rawData
-                    path: /media/image-jpeg/rawData
+                    path: /media/jpeg/rawData
                     class: FileEye\MediaProbe\Block\RawData
                     valid: true
                     collection: RawData
                     elements:
                         -
                             node: entry
-                            path: /media/image-jpeg/rawData/entry
+                            path: /media/jpeg/rawData/entry
                             class: FileEye\MediaProbe\Entry\Core\Undefined
                             valid: true
                             format: Undefined
@@ -864,34 +864,34 @@ elements:
 log:
     WARNING:
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExifVersion:36864'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864'
             message: "Found Byte data format, expected Undefined for item 'ExifVersion' in 'IFD0'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExifVersion:36864/entry'
             message: 'Incorrect version data.'
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ExposureTime:33434'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ExposureTime:33434'
             message: "Found SignedRational data format, expected Rational for item 'ExposureTime' in 'IFD0'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ComponentsConfiguration:37121'
             message: "Found Byte data format, expected Undefined for item 'ComponentsConfiguration' in 'IFD0'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:FNumber:33437'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:FNumber:33437'
             message: "Found SignedRational data format, expected Rational for item 'FNumber' in 'IFD0'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:UserComment:37510'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510'
             message: "Found Ascii data format, expected Undefined for item 'UserComment' in 'IFD0'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:UserComment:37510/entry'
             message: 'Invalid EXIF text encoding for UserComment.'
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'
             message: "Found Long data format, expected Undefined for item 'OtherImageStart' in 'ExifIFD'"
         -
-            path: '/media/image-jpeg/jpegSegment:APP1:225/exif/image-tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
             message: "Found Long data format, expected Undefined for item 'OtherImageLength' in 'ExifIFD'"
         -
-            path: '/media/image-jpeg/jpegSegment:SOS:218'
+            path: '/media/jpeg/jpegSegment:SOS:218'
             message: 'Found trailing content after EOI: 3504 bytes'
 gdInfo:
     0: 2560

@@ -17,7 +17,7 @@ class Tiff extends CollectionBase {
   'class' => 'FileEye\\MediaProbe\\Block\\Tiff\\Tiff',
   'parser' => 'FileEye\\MediaProbe\\Parser\\Tiff\\Tiff',
   'writer' => 'FileEye\\MediaProbe\\Writer\\Tiff\\Tiff',
-  'DOMNode' => 'image-tiff',
+  'DOMNode' => 'tiff',
   'id' => 'Tiff\\Tiff',
   'items' =>
   array (

@@ -195,4 +195,11 @@ class Media extends RootBlockBase
     {
         return $this->stopWatch;
     }
+
+    public function debugInfo(array $context = []): bool
+    {
+        parent::debugInfo($context);
+        $this->debug('Media MIME type: ' . $this->getAttribute('mimeType'));
+        return true;
+    }
 }
