@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Jpeg;
 
-use FileEye\MediaProbe\Block\Exif\Exif;
+use FileEye\MediaProbe\Block\Jpeg\Exif;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Entry\Core\Undefined;

@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Exif;
+namespace FileEye\MediaProbe\Block\Jpeg;
 
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Collection\CollectionFactory;
