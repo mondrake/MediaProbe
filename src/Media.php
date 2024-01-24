@@ -201,7 +201,7 @@ class Media extends RootBlockBase
         $info = parent::collectInfo($context);
 
         $info['mimeType'] = $this->getAttribute('mimeType');
-        $info['_msg'] .= ' MIME type: ';
+        $info['_msg'] .= ' MIME type: {mimeType}';
 
         return $info;
     }
