@@ -2364,7 +2364,7 @@ elements:
                                                                             format: Long
                                                                             components: 1
                                                                             bytesHash: 21a8390b66a1380dca0cccd5b7f534f7080f1d0c020f5001e40b607c1f463659
-                                                                            text: '-1610612736'
+                                                                            text: 'Format 2'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
@@ -5114,7 +5114,7 @@ elements:
                                                                                     format: Long
                                                                                     components: 4
                                                                                     bytesHash: 178c22fd3b5a204079ac4acbea2077ea4894f7430abefc0fe33fe77439eea16a
-                                                                                    text: '294111 -2996 464315 279659'
+                                                                                    text: '294111 455756 464315 279659'
                                                                 -
                                                                     node: tag
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:PictureStyleUserDef:16392'
@@ -5899,7 +5899,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon1DmkIII.jpg
-    FileDateTime: 1644099377
+    FileDateTime: 1639835048
     FileSize: 8337
     FileType: 2
     MimeType: image/jpeg

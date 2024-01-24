@@ -243,7 +243,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: no-exif.jpg
-    FileDateTime: 1644099377
+    FileDateTime: 1639835048
     FileSize: 4348
     FileType: 2
     MimeType: image/jpeg
