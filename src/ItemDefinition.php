@@ -31,8 +31,7 @@ class ItemDefinition
         protected int $dataOffset = 0,
         protected int $itemDefinitionOffset = 0,
         protected int $sequence = 0,
-    )
-    {
+    ) {
     }
 
     public function getCollection(): CollectionInterface

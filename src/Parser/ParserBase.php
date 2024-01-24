@@ -8,7 +8,6 @@ class ParserBase
 {
     public function __construct(
         protected readonly BlockInterface $block,
-    )
-    {
+    ) {
     }
 }
