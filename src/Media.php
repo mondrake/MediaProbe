@@ -196,10 +196,13 @@ class Media extends RootBlockBase
         return $this->stopWatch;
     }
 
-    public function debugInfo(array $context = []): bool
+    public function collectInfo(array $context = []): array
     {
-        parent::debugInfo($context);
-        $this->debug('Media MIME type: ' . $this->getAttribute('mimeType'));
-        return true;
+        $info = parent::collectInfo($context);
+
+        $info['mimeType'] = $this->getAttribute('mimeType');
+        $info['_msg'] .= ' MIME type: ';
+
+        return $info;
     }
 }
