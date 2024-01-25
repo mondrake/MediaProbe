@@ -2,11 +2,14 @@
 
 namespace FileEye\MediaProbe\Parser\Tiff;
 
+use FileEye\MediaProbe\Block\Jpeg\Jpeg as JpegBlock;
+use FileEye\MediaProbe\Block\Tiff\Ifd as IfdBlock;
 use FileEye\MediaProbe\Block\Tiff\Tiff as TiffBlock;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Parser\ParserBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -16,13 +19,13 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Ifd extends ParserBase
 {
-    public function parseData(DataElement $data, int $start = 0, ?int $size = null, $xxx = 0): void
+    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null, $xxx = 0): void
     {
-        $offset = $this->getDefinition()->getDataOffset();
+        $offset = $this->block->getDefinition()->getDataOffset();
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($dataElement, $offset);
-        assert($this->debugInfo(['dataElement' => $dataElement, 'itemsCount' => $n]));
+        assert($this->block->debugInfo(['dataElement' => $dataElement, 'itemsCount' => $n]));
 
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
@@ -32,16 +35,16 @@ class Ifd extends ParserBase
 
             // Check data is accessible, warn otherwise.
             if ($item_definition->getDataOffset() >= $dataElement->getSize()) {
-                $this->warning(
+                $this->block->warning(
                     'Could not access value for item {item} in \'{ifd}\', overflow',
                     [
                         'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name') ?? 'n/a'),
-                        'ifd' => $this->getAttribute('name'),
+                        'ifd' => $this->block->getAttribute('name'),
                     ]
                 );
                 continue;
             }
-/*            $this->debug(
+            /*            $this->debug(
                 'Item Offset {o} Components {c} Format {f} Formatsize {fs} Size {s} DataElement Size {des}', [
                     'o' => MediaProbe::dumpIntHex($dataElement->getAbsoluteOffset($item_definition->getDataOffset())),
                     'c' => $item_definition->getValuesCount(),
@@ -52,18 +55,18 @@ class Ifd extends ParserBase
                 ]
             );*/
             if ($item_definition->getDataOffset() +  $item_definition->getSize() > $dataElement->getSize()) {
-                $this->warning(
+                $this->block->warning(
                     'Could not get value for item {item} in \'{ifd}\', not enough data',
                     [
                         'item' => MediaProbe::dumpIntHex($item_definition->getCollection()->getPropertyValue('name') ?? 'n/a'),
-                        'ifd' => $this->getAttribute('name'),
+                        'ifd' => $this->block->getAttribute('name'),
                     ]
                 );
                 continue;
             }
 
             // Adds the item to the DOM.
-            $item = new $item_class($item_definition, $this);
+            $item = new $item_class($item_definition, $this->block);
             try {
                 if (is_a($item_class, Ifd::class, true)) {
                     $item->parseData($dataElement);
@@ -76,7 +79,7 @@ class Ifd extends ParserBase
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
-                $item->valid = false;
+                $item->setValid(false);
             }
         }
 
@@ -106,8 +109,8 @@ class Ifd extends ParserBase
         // Check if we have enough data.
         if (2 + 12 * $entries_count > $dataElement->getSize()) {
             $entries_count = floor(($offset - $dataElement->getSize()) / 12);
-            $this->warning('Wrong number of IFD entries in ifd {ifdname}, adjusted to {tags}', [
-                'ifdname' => $this->getAttribute('name'),
+            $this->block->warning('Wrong number of IFD entries in ifd {ifdname}, adjusted to {tags}', [
+                'ifdname' => $this->block->getAttribute('name'),
                 'tags' => $entries_count,
             ]);
         }
@@ -141,7 +144,7 @@ class Ifd extends ParserBase
         // Fall back to the generic IFD collection if the item is missing from
         // the appropriate one.
         try {
-            $item_collection = $this->getCollection()->getItemCollection($id);
+            $item_collection = $this->block->getCollection()->getItemCollection($id);
         } catch (MediaProbeException $e) {
             if ($fallback_collection_id !== null) {
                 $item_collection = CollectionFactory::get($fallback_collection_id)->getItemCollection($id, 0, 'Tiff\UnknownTag', [
@@ -149,7 +152,7 @@ class Ifd extends ParserBase
                     'DOMNode' => 'tag',
                 ]);
             } else {
-                $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Tiff\UnknownTag', [
+                $item_collection = $this->block->getCollection()->getItemCollection($id, 0, 'Tiff\UnknownTag', [
                     'item' => $id,
                     'DOMNode' => 'tag',
                 ]);
@@ -188,7 +191,7 @@ class Ifd extends ParserBase
      *            the data from which the thumbnail will be
      *            extracted.
      */
-    public static function thumbnailToBlock(DataElement $dataElement, Ifd $ifd): void
+    public static function thumbnailToBlock(DataElement $dataElement, IfdBlock $ifd): void
     {
         if (!$ifd->getElement("tag[@name='ThumbnailOffset']") || !$ifd->getElement("tag[@name='ThumbnailLength']")) {
             return;
@@ -220,7 +223,7 @@ class Ifd extends ParserBase
                 'offset' => $offset,
                 'size' => $dataElement->getSize(),
             ]);
-            $ifd->valid = false;
+            $ifd->setValid(false);
             return;
         }
 
@@ -241,7 +244,7 @@ class Ifd extends ParserBase
             $size = $dataxx->getSize();
 
             // Now move backwards until we find the EOI JPEG marker.
-            while ($dataxx->getByte($size - 2) !== Jpeg::JPEG_DELIMITER || $dataxx->getByte($size - 1) != CollectionFactory::get('Jpeg\Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
+            while ($dataxx->getByte($size - 2) !== JpegBlock::JPEG_DELIMITER || $dataxx->getByte($size - 1) != CollectionFactory::get('Jpeg\Jpeg')->getItemCollectionByName('EOI')->getPropertyValue('item')) {
                 $size --;
             }
             if ($size != $dataxx->getSize()) {
@@ -267,7 +270,7 @@ class Ifd extends ParserBase
      * @param Ifd $ifd
      *            the root Ifd object.
      */
-    public static function makerNoteToBlock(DataElement $d, Ifd $ifd): void
+    public static function makerNoteToBlock(DataElement $d, IfdBlock $ifd): void
     {
         // Get the Exif subIfd if existing.
         if (!$exif_ifd = $ifd->getElement("ifd[@name='ExifIFD']")) {

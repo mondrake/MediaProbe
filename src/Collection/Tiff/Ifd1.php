@@ -16,6 +16,8 @@ class Ifd1 extends CollectionBase {
   'name' => 'IFD1',
   'title' => 'IFD1',
   'class' => 'FileEye\\MediaProbe\\Block\\Tiff\\Ifd',
+  'parser' => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd',
+  'writer' => 'FileEye\\MediaProbe\\Writer\\Tiff\\Ifd',
   'DOMNode' => 'ifd',
   'defaultItemCollection' => 'Tiff\\Tag',
   'alias' =>
@@ -25,7 +27,7 @@ class Ifd1 extends CollectionBase {
   ),
   'postParse' =>
   array (
-    0 => 'FileEye\\MediaProbe\\Block\\Tiff\\Ifd::thumbnailToBlock',
+    0 => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd::thumbnailToBlock',
   ),
   'id' => 'Tiff\\Ifd1',
   'itemsByName' =>

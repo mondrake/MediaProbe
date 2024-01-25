@@ -10,7 +10,7 @@ alias:
     - '1'
     - Thumbnail
 postParse:
-    - 'FileEye\MediaProbe\Block\Tiff\Ifd::thumbnailToBlock'
+    - 'FileEye\MediaProbe\Parser\Tiff\Ifd::thumbnailToBlock'
 compiler:
     exiftool:
         g1: IFD1
