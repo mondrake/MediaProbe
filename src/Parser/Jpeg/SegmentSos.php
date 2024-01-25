@@ -14,7 +14,7 @@ use FileEye\MediaProbe\Parser\ParserBase;
 use FileEye\MediaProbe\Data\DataFormat;
 
 /**
- * Class representing a JPEG SOS segment.
+ * Class for parsing a JPEG SOS segment.
  */
 class SegmentSos extends ParserBase
 {
