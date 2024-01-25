@@ -2,6 +2,8 @@ collection: Tiff\Ifd0
 name: IFD0
 title: IFD0
 class: FileEye\MediaProbe\Block\Tiff\Ifd
+parser: FileEye\MediaProbe\Parser\Tiff\Ifd
+writer: FileEye\MediaProbe\Writer\Tiff\Ifd
 DOMNode: ifd
 defaultItemCollection: Tiff\Tag
 alias:
