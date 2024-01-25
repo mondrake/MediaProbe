@@ -27,7 +27,7 @@ class Exif extends ParserBase
         $tiffParser = $tiff->collection->getPropertyValue('parser');
 
         if ($tiffParser::getTiffSegmentByteOrder($data, strlen(ExifBlock::EXIF_HEADER)) !== null) {
-            $this->block->addBlock($tiff)->parseData($data, strlen(ExifBlock::EXIF_HEADER), $data->getSize() - strlen(self::EXIF_HEADER));
+            $this->block->addBlock($tiff)->parseData($data, strlen(ExifBlock::EXIF_HEADER), $data->getSize() - strlen(ExifBlock::EXIF_HEADER));
         } else {
             // We store the data as normal JPEG content if it could not be
             // parsed as Tiff data.
