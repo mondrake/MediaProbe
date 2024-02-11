@@ -25,11 +25,6 @@ class Ifd0 extends CollectionBase {
     0 => '0',
     1 => 'Main',
   ),
-  'postParse' =>
-  array (
-    0 => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd::thumbnailToBlock',
-    1 => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd::makerNoteToBlock',
-  ),
   'id' => 'Tiff\\Ifd0',
   'itemsByName' =>
   array (

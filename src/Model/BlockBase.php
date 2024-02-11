@@ -113,23 +113,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
             // @todo remove this when full parser model in place.
             $this->doParseData($data);
         }
-
-        // Invoke post-parse callbacks.
-        $this->executePostParseCallbacks($data);
-    }
-
-    /**
-     * @deprecated
-     */
-    protected function executePostParseCallbacks(DataElement $dataElement): static
-    {
-        $post_load_callbacks = $this->getCollection()->getPropertyValue('postParse');
-        if (!empty($post_load_callbacks)) {
-            foreach ($post_load_callbacks as $callback) {
-                call_user_func($callback, $dataElement, $this);
-            }
-        }
-        return $this;
     }
 
     /**

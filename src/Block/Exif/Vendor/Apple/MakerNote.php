@@ -56,9 +56,6 @@ class MakerNote extends Ifd
                 $item->error($e->getMessage());
             }
         }
-
-        // Invoke post-load callbacks.
-        $this->executePostParseCallbacks($dataElement);
     }
 
     /**

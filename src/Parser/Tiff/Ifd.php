@@ -5,7 +5,9 @@ namespace FileEye\MediaProbe\Parser\Tiff;
 use FileEye\MediaProbe\Block\Jpeg\Jpeg as JpegBlock;
 use FileEye\MediaProbe\Block\Tiff\Ifd as IfdBlock;
 use FileEye\MediaProbe\Block\Tiff\Tiff as TiffBlock;
+use FileEye\MediaProbe\Collection\CollectionException;
 use FileEye\MediaProbe\Collection\CollectionFactory;
+use FileEye\MediaProbe\Collection\Tiff\Ifd0;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -83,8 +85,13 @@ class Ifd extends ParserBase
             }
         }
 
-        // Invoke post-load callbacks.
-        $this->executePostParseCallbacks($dataElement);
+        // Parse thumbnail if it exists.
+        //static::thumbnailToBlock($dataElement, $this->block);
+
+        // Parse Maker notes if they exist.
+        if ($this->block->getDefinition()->collection instanceof Ifd0) {
+            static::makerNoteToBlock($dataElement, $this->block);
+        }
     }
 
     /**
@@ -145,7 +152,7 @@ class Ifd extends ParserBase
         // the appropriate one.
         try {
             $item_collection = $this->block->getCollection()->getItemCollection($id);
-        } catch (MediaProbeException $e) {
+        } catch (CollectionException $e) {
             if ($fallback_collection_id !== null) {
                 $item_collection = CollectionFactory::get($fallback_collection_id)->getItemCollection($id, 0, 'Tiff\UnknownTag', [
                     'item' => $id,
@@ -276,20 +283,24 @@ class Ifd extends ParserBase
         if (!$exif_ifd = $ifd->getElement("ifd[@name='ExifIFD']")) {
             return;
         }
+dump('A');
 
         // Get MakerNote tag from Exif IFD.
         if (!$maker_note_tag = $exif_ifd->getElement("tag[@name='MakerNote']")) {
             return;
         }
+dump('B');
 
         // Get Make tag from IFD0.
         if (!$make_tag = $ifd->getElement("tag[@name='Make']")) {
             return;
         }
+dump('C');
 
         // Get Model tag from IFD0.
         $model_tag = $ifd->getElement("tag[@name='Model']");
         $model = $model_tag && $model_tag->getElement("entry") ? $model_tag->getElement("entry")->getValue() : 'na';  // xx modelTag should always have an entry, so the check is irrelevant but a test fails
+dump($model);
 
         // Get maker note collection.
         if (!$maker_note_collection = static::getMakerNoteCollection($make_tag->getElement("entry")->getValue(), $model)) {

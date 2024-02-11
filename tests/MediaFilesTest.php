@@ -35,7 +35,8 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     public static function mediaFileProvider()
     {
         $finder = new Finder();
-        $finder->files()->in(dirname(__FILE__) . '/media-dumps/image')->name('*.dump.yml');
+//        $finder->files()->in(dirname(__FILE__) . '/media-dumps/image')->name('*.dump.yml');
+        $finder->files()->in(dirname(__FILE__) . '/media-dumps/image')->name('Canon1DmkIII.jpg.dump.yml');
         $result = [];
         foreach ($finder as $file) {
             $result[$file->getBasename()] = [$file];

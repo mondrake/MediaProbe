@@ -9,9 +9,6 @@ defaultItemCollection: Tiff\Tag
 alias:
     - '0'
     - Main
-postParse:
-    - 'FileEye\MediaProbe\Parser\Tiff\Ifd::thumbnailToBlock'
-    - 'FileEye\MediaProbe\Parser\Tiff\Ifd::makerNoteToBlock'
 compiler:
     exiftool:
         g1: IFD0
