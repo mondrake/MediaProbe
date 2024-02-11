@@ -16,8 +16,6 @@ class IfdInteroperability extends CollectionBase {
   'name' => 'InteropIFD',
   'title' => 'Interoperability IFD',
   'class' => 'FileEye\\MediaProbe\\Block\\Tiff\\Ifd',
-  'parser' => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd',
-  'writer' => 'FileEye\\MediaProbe\\Writer\\Tiff\\Ifd',
   'DOMNode' => 'ifd',
   'alias' =>
   array (

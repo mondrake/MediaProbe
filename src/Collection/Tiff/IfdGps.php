@@ -16,8 +16,6 @@ class IfdGps extends CollectionBase {
   'name' => 'GPS',
   'title' => 'GPS IFD',
   'class' => 'FileEye\\MediaProbe\\Block\\Tiff\\Ifd',
-  'parser' => 'FileEye\\MediaProbe\\Parser\\Tiff\\Ifd',
-  'writer' => 'FileEye\\MediaProbe\\Writer\\Tiff\\Ifd',
   'DOMNode' => 'ifd',
   'defaultItemCollection' => 'Tiff\\Tag',
   'id' => 'Tiff\\IfdGps',

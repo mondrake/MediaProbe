@@ -166,11 +166,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $this->valid;
     }
 
-    public function setValid(bool $valid): void
-    {
-        $this->valid = $valid;
-    }
-
     /**
      * @todo
      */

@@ -119,7 +119,10 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * @deprecated
+     * Invoke post-parse callbacks.
+     *
+     * @param \FileEye\MediaProbe\Data\DataElement $dataElement
+     *   @todo
      */
     protected function executePostParseCallbacks(DataElement $dataElement): static
     {
