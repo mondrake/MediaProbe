@@ -64,7 +64,7 @@ class FilterInfoIndex extends Index
                     0,
                     $i
                 )
-                );
+            );
             assert($filter instanceof Filter);
             $filter->parseData(new DataWindow($data, $offset, $filter_size + 4));
             $offset += 4 + $filter_size;
