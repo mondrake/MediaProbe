@@ -55,7 +55,7 @@ class Filter extends ListBase
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop and parse through the parameters.
-        assert($this->getParentElement() instanceof CustomFunctions2, get_class($this->getParentElement()));
+        assert($this->getParentElement() instanceof FilterInfoIndex, get_class($this->getParentElement()));
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = (string) $data->getLong($offset);
             $val_count = $data->getLong($offset + 4);
@@ -92,7 +92,7 @@ class Filter extends ListBase
         $params = $this->getMultipleElements('*');
         $data_area_bytes = '';
         foreach ($params as $param) {
-            assert($param instanceof CustomFunctions2, get_class($group));
+            assert($param instanceof FilterInfoIndex, get_class($group));
             $data_area_bytes .= ConvertBytes::fromLong((int)  $param->getAttribute('id'), $byte_order);
             $data_area_bytes .= ConvertBytes::fromLong($param->getComponents(), $byte_order);
             $data_area_bytes .= $param->toBytes($byte_order);
