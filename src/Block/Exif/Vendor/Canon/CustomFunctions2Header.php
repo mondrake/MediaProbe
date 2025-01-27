@@ -115,6 +115,7 @@ class CustomFunctions2Header extends ListBase
             // size of the group, 1 long to represent the number of tags.
             $components += (1 + 1 + 1);
             foreach ($group->getMultipleElements('tag') as $tag) {
+                assert($tag instanceof Tag, get_class($tag));
                 // For each tag, 1 long for the ID, 1 long to represent the
                 // number of tag values, then as many longs as the number of
                 // values.

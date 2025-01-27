@@ -33,7 +33,7 @@ class Filter extends ListBase
 
     public function __construct(
         ItemDefinition $definition, 
-        ?BlockInterface $parent = null, 
+        FilterInfoIndex $parent, 
         ?BlockInterface $reference = null,
     )
     {
@@ -55,27 +55,26 @@ class Filter extends ListBase
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop and parse through the parameters.
-        assert($this->getParentElement() instanceof FilterInfoIndex, get_class($this->getParentElement()));
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = (string) $data->getLong($offset);
             $val_count = $data->getLong($offset + 4);
             $offset += 8;
 
             // The items are defined in the collection of the parent element.
-            $this
-                ->addBlock(new ItemDefinition(
-                    $this->getParentElement()->getCollection()->getItemCollection($id),
-                    DataFormat::SIGNED_LONG,
-                    $val_count,
-                    0,
-                    $offset,
-                    $p,
-                ))
-                ->parseData(new DataWindow(
-                    $data,
-                    $offset,
-                    $val_count * DataFormat::getSize(DataFormat::SIGNED_LONG)
-                ));
+            $tag = $this->addBlock(new ItemDefinition(
+                $this->getParentElement()->getCollection()->getItemCollection($id),
+                DataFormat::SIGNED_LONG,
+                $val_count,
+                0,
+                $offset,
+                $p,
+            ));
+            assert($tag instanceof Tag, get_class($tag));
+            $tag->parseData(new DataWindow(
+                $data,
+                $offset,
+                $val_count * DataFormat::getSize(DataFormat::SIGNED_LONG),
+            ));
 
             $offset += 4 * $val_count;
         }
