@@ -28,7 +28,7 @@ class CustomFunctions2 extends ListBase
         assert($this->debugInfo(['dataElement' => $data]));
 
         $rec_pos = 0;
-        for ($n = 0; $n < $this->getDefinition()->getValuesCount(); $n++) {
+        for ($n = 0; $n < $this->getDefinition()->valuesCount; $n++) {
             $id = $data->getLong($rec_pos);
             $num = $data->getLong($rec_pos + 4);
             $this->debug("#{seq}, tag {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
@@ -51,9 +51,9 @@ class CustomFunctions2 extends ListBase
                     $this->getRootElement()
                 );
                 $item_definition = new ItemDefinition($item_collection, DataFormat::SIGNED_LONG, $num, $rec_pos);
-                $class = $item_definition->getCollection()->getPropertyValue('handler');
+                $class = $item_definition->collection->getPropertyValue('handler');
                 $tag = new $class($item_definition, $this);
-                $tag_data_window = new DataWindow($data, $item_definition->getDataOffset(), $item_definition->getSize());
+                $tag_data_window = new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize());
                 $tag->parseData($tag_data_window);
             } catch (DataException $e) {
                 $tag->error($e->getMessage());
