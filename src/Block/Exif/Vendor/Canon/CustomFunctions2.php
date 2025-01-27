@@ -53,7 +53,7 @@ class CustomFunctions2 extends ListBase
                 $tag_data_window = new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize());
                 $tag->parseData($tag_data_window);
             } catch (DataException $e) {
-                if ($tag) {
+                if (isset($tag)) {
                     $tag->error($e->getMessage());
                 } else {
                     throw $e;
