@@ -10,6 +10,7 @@ use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\ItemDefinition;
@@ -53,7 +54,11 @@ class MakerNote extends Ifd
                     $item->parseData($item_data_window);
                 }
             } catch (DataException $e) {
-                $item->error($e->getMessage());
+                if (isset($item)) {
+                    $item->error($e->getMessage());
+                } else {
+                    throw $e;
+                }
             }
         }
 
@@ -80,6 +85,8 @@ class MakerNote extends Ifd
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
+            assert($sub_block instanceof BlockInterface);
+
             if ($sub_block->getCollection()->getPropertyValue('id') === 'RawData') {
                 continue;
             }

@@ -75,21 +75,11 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return 0;
     }
 
-    /**
-     * Gets the Definition of this Block.
-     *
-     * @return \FileEye\MediaProbe\ItemDefinition
-     */
     public function getDefinition(): ItemDefinition
     {
         return $this->definition;
     }
 
-    /**
-     * Gets the Collection of this Block.
-     *
-     * @return \FileEye\MediaProbe\Collection
-     */
     public function getCollection(): CollectionInterface
     {
         return $this->getDefinition()->getCollection();
