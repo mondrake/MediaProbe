@@ -5820,8 +5820,15 @@ log:
             message: 'Offset out of bounds - rel -1 [0, 27], abs 8059 [8060, 8087]'
     WARNING:
         -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:AutoFocusDrive:3/tag:ContinuousShootingSpeed:1552'
+            message: "Found 3 data components, expected 6 for item 'ContinuousShootingSpeed' in 'AutoFocusDrive'"
+    NOTICE:
+        -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
             message: "Could not access value for item 'Clarity' in 'CanonCameraSettings', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
+            message: "Unknown item 25/0x19 in 'Canon'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonFileInfo:147'
             message: "Could not access value for item 'ShutterMode' in 'CanonFileInfo', overflow"
@@ -5834,46 +5841,6 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonFileInfo:147'
             message: "Could not access value for item 'RFLensType' in 'CanonFileInfo', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonCustomFunctions2Header:153/index:AutoFocusDrive:3/tag:ContinuousShootingSpeed:1552'
-            message: "Found 3 data components, expected 6 for item 'ContinuousShootingSpeed' in 'AutoFocusDrive'"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'PerChannelBlackLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'PerChannelBlackLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
-            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
-    NOTICE:
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:25'
-            message: "Unknown item 25/0x19 in 'Canon'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonMeasuredColor:170/tag:2'
             message: "Unknown item 2/0x2 in 'CanonMeasuredColor'"
@@ -5895,6 +5862,39 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonSensorInfo:224/tag:16'
             message: "Unknown item 16/0x10 in 'CanonSensorInfo'"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'PerChannelBlackLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'PerChannelBlackLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'NormalWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'SpecularWhiteLevel' in 'CanonColorData', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonColorData:16385'
+            message: "Could not access value for item 'LinearityUpperMargin' in 'CanonColorData', overflow"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:16401'
             message: "Unknown item 16401/0x4011 in 'Canon'"

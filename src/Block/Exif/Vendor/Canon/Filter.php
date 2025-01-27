@@ -32,8 +32,8 @@ class Filter extends ListBase
     protected int $paramsCount;
 
     public function __construct(
-        ItemDefinition $definition, 
-        FilterInfoIndex $parent, 
+        ItemDefinition $definition,
+        FilterInfoIndex $parent,
         ?BlockInterface $reference = null,
     )
     {
@@ -121,5 +121,10 @@ class Filter extends ListBase
     protected function getContextPathSegmentPattern(): string
     {
         return '/{DOMNode}:{id}';
+    }
+
+    public function getParentElement(): FilterInfoIndex
+    {
+        return parent::getParentElement();
     }
 }

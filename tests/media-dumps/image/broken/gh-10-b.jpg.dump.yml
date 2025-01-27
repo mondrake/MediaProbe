@@ -1774,12 +1774,6 @@ log:
             message: 'Size mismatch between IFD and index header'
     WARNING:
         -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
-            message: "Could not access value for item 'SRAWQuality' in 'CanonCameraSettings', overflow"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
-            message: "Could not access value for item 'Clarity' in 'CanonCameraSettings', overflow"
-        -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
             message: "Could not get value for item 'CanonShotInfo' in 'Canon', not enough data"
         -
@@ -1806,6 +1800,13 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
             message: "Could not access value for item 'CanonCameraInfo' in 'Canon', overflow"
+    NOTICE:
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
+            message: "Could not access value for item 'SRAWQuality' in 'CanonCameraSettings', overflow"
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
+            message: "Could not access value for item 'Clarity' in 'CanonCameraSettings', overflow"
 gdInfo:
     0: 150
     1: 150

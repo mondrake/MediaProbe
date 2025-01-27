@@ -66,20 +66,13 @@ class MediaProbe
      * @return string the translated string, or the original string if
      *         no translation could be found.
      */
-    public static function fmt(string $format): string
+    public static function fmt(string $format, mixed ...$args): string
     {
-        $args = func_get_args();
-        $str = array_shift($args);
-        return vsprintf($str, $args);
+        return vsprintf($format, $args);
     }
 
     /**
      * Dumps a string of bytes in a human readable sequence of hex couples.
-     *
-     * @param string $input
-     * @param int @dump_length
-     *
-     * @return string
      */
     public static function dumpHex(string $input, ?int $dump_length = null): ?string
     {

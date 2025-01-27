@@ -88,7 +88,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     // xx
     public function getFormat(): int
     {
-        return $this->getDefinition()->getFormat();
+        return $this->getDefinition()->format;
     }
 
     /**
@@ -136,7 +136,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
-        $handler = $item_definition->getCollection()->getPropertyValue('handler');
+        $handler = $item_definition->collection->getPropertyValue('handler');
         return new $handler($item_definition, $parent ?? $this, $reference);
     }
 

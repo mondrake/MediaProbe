@@ -14,7 +14,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
- * Class representing an Exif TAG as an MediaProbe block.
+ * Class representing an Exif TAG as a MediaProbe block.
  */
 class Tag extends BlockBase
 {
@@ -105,7 +105,7 @@ class Tag extends BlockBase
      */
     public function getFormat(): int
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : $this->getDefinition()->getFormat();
+        return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : $this->getDefinition()->format;
     }
 
     /**
@@ -113,7 +113,7 @@ class Tag extends BlockBase
      */
     public function getComponents(): int
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->getComponents() : $this->getDefinition()->getValuesCount();
+        return $this->getElement("entry") ? $this->getElement("entry")->getComponents() : $this->getDefinition()->valuesCount;
     }
 
     /**
@@ -135,7 +135,7 @@ class Tag extends BlockBase
 
         $msg = '#{seq} rel@{relativeOffset} {node}';
 
-        $info['seq'] = $this->getDefinition()->getSequence() + 1;
+        $info['seq'] = $this->getDefinition()->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -153,8 +153,8 @@ class Tag extends BlockBase
             $msg .= isset($parentInfo['offset']) ? ' @{offset} size {size}' : ' size {size} byte(s)';
         }
 
-        $info['format'] = DataFormat::getName($this->getDefinition()->getFormat());
-        $info['components'] = $this->getDefinition()->getValuesCount();
+        $info['format'] = DataFormat::getName($this->getDefinition()->format);
+        $info['components'] = $this->getDefinition()->valuesCount;
         $msg .= ' format {format} count {components}';
 
         $info['_msg'] = $msg;
