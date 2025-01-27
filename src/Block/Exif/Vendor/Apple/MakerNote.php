@@ -79,11 +79,11 @@ class MakerNote extends Ifd
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
-            assert($sub_block instanceof Tag || $sub_block instanceof ListBase, get_class($sub_block));
-
             if ($sub_block->getCollection()->getPropertyValue('id') === 'RawData') {
                 continue;
             }
+
+            assert($sub_block instanceof Tag || $sub_block instanceof ListBase, get_class($sub_block));
 
             $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
             $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
