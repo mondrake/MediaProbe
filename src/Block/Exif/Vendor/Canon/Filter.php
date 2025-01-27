@@ -55,7 +55,7 @@ class Filter extends ListBase
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Loop and parse through the parameters.
-        assert($this->getParentElement() instanceof CustomFunctions2, get_class($group));
+        assert($this->getParentElement() instanceof CustomFunctions2, get_class($this->getParentElement()));
         for ($p = 0; $p < $this->paramsCount; $p++) {
             $id = (string) $data->getLong($offset);
             $val_count = $data->getLong($offset + 4);
