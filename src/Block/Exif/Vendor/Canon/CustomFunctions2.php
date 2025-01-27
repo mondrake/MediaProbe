@@ -20,9 +20,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class CustomFunctions2 extends ListBase
 {
-    /**
-     * {@inheritdoc}
-     */
     protected function doParseData(DataElement $data): void
     {
         assert($this->debugInfo(['dataElement' => $data]));
@@ -56,21 +53,23 @@ class CustomFunctions2 extends ListBase
                 $tag_data_window = new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize());
                 $tag->parseData($tag_data_window);
             } catch (DataException $e) {
-                $tag->error($e->getMessage());
+                if ($tag) {
+                    $tag->error($e->getMessage());
+                } else {
+                    throw $e;
+                }
             }
             $rec_pos += ($num * 4);
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
     {
         $bytes = '';
 
         // Fill in the TAG entries.
         foreach ($this->getMultipleElements('*') as $element) {
+            assert($element instanceof Tag);
             // Tag ID.
             $bytes .= ConvertBytes::fromLong($element->getAttribute('id'), $byte_order);
             // Number of value items for the tag.
