@@ -1800,13 +1800,13 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
             message: "Could not access value for item 'CanonCameraInfo' in 'Canon', overflow"
-    NOTICE:
+    INFO:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
-            message: "Could not access value for item 'SRAWQuality' in 'CanonCameraSettings', overflow"
+            message: "Could not access value for 'SRAWQuality' in map 'CanonCameraSettings', overflow"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1'
-            message: "Could not access value for item 'Clarity' in 'CanonCameraSettings', overflow"
+            message: "Could not access value for 'Clarity' in map 'CanonCameraSettings', overflow"
 gdInfo:
     0: 150
     1: 150
