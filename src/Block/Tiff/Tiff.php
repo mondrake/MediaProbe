@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Tiff;
 
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -60,7 +61,7 @@ class Tiff extends BlockBase implements MediaTypeBlockInterface
                 valuesCount: $ifdOffset - 8,
             );
             $ifd = $this->addBlock($scan);
-            assert($ifd instanceof Ifd);
+            assert($ifd instanceof RawData);
             $ifd->parseData($data, 8, $ifdOffset - 8);
         }
 
