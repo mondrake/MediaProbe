@@ -59,7 +59,9 @@ class Tiff extends BlockBase implements MediaTypeBlockInterface
                 format:      DataFormat::BYTE,
                 valuesCount: $ifdOffset - 8,
             );
-            $this->addBlock($scan)->parseData($data, 8, $ifdOffset - 8);
+            $ifd = $this->addBlock($scan);
+            assert($ifd instanceof Ifd);
+            $ifd->parseData($data, 8, $ifdOffset - 8);
         }
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
@@ -156,9 +158,11 @@ class Tiff extends BlockBase implements MediaTypeBlockInterface
 
         // Dumps IFD0 and IFD1.
         if ($ifd0) {
+            assert($ifd0 instanceof Ifd);
             $bytes .= $ifd0->toBytes($this->getByteOrder(), strlen($bytes), (bool) $ifd1);
         }
         if ($ifd1) {
+            assert($ifd1 instanceof Ifd);
             $bytes .= $ifd1->toBytes($this->getByteOrder(), strlen($bytes), false);
         }
 
