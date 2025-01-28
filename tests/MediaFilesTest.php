@@ -193,7 +193,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             $this->assertSame($expected['components'], $element->getComponents(), $element->getContextPath());
 
             // Check PHP Exif tag equivalence.
-            if ($php_exif_tag = $element->getParentElement()->getCollection()->getPropertyValue('phpExifTag')) {
+            $parentElement = $element->getParentElement();
+            $this->assertInstanceOf(BlockInterface::class, $parentElement);
+            if ($php_exif_tag = $parentElement->getCollection()->getPropertyValue('phpExifTag')) {
                 $php_exif_skip = $this->testDump['skip']['phpExif'] ?? [];
                 if (!in_array($php_exif_tag, $php_exif_skip)) {
                     $tag = explode('::', $php_exif_tag);
@@ -207,12 +209,12 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             }
 
             // Check Exiftool RAW tag equivalence.
-            if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
+            if ($exiftool_node = $parentElement->getCollection()->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {
                     [$g1, $tag] = explode(':', $exiftool_node);
                     if ($g1 === '*') {
-                        $ifd = $element->getParentElement()->getParentElement()->getAttribute('name');
+                        $ifd = $parentElement->getParentElement()->getAttribute('name');
                         $exiftool_node = implode(':', [$ifd, $tag]);
                     }
                     $xml_nodes = $this->exiftoolRawDump->getElementsByTagName('*');
@@ -225,20 +227,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                     $this->assertNotNull($n, 'Exiftool raw missing: ' . $exiftool_node);
                     $valx = rtrim($n->textContent, " ");
                     $vala = $element->getValue(['format' => 'exiftool']);
-//if (($expected['class'] ?? null) === 'FileEye\MediaProbe\Entry\Time') {
-/*if ($element->getParentElement() && in_array($element->getParentElement()->getAttribute('name'), ['Copyright'])) {
-  dump([
-    'element_' => $element->getParentElement()->getAttribute('name'),
-    'expected' => MediaProbe::dumpHexFormatted($valx),
-    'actual__' => MediaProbe::dumpHexFormatted($vala),
-  ]);
-}*/
                     if ($element->getOutputFormat() === DataFormat::ASCII) {
                         $this->assertSame($valx, $vala, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());
                     } else {
-/*if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
-    dump([$valx, $vala, $this->tokenizeExiftoolString($valx), $element->getValue()])  ;
-}*/
                         $tokenized_expected = $this->tokenizeExiftoolString($valx);
                         if (count($tokenized_expected) === 1) {
                             $this->assertEqualsWithDelta($valx, $vala, 0.01, "Exiftool RAW (expected): '$valx' (actual): '$vala' " . $element->getContextPath());

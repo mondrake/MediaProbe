@@ -58,9 +58,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         $this->format = DataFormat::getFromName($this->formatName);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setDataElement(DataElement $dataElement): void
     {
         $this->dataElement = $dataElement;

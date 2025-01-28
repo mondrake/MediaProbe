@@ -418,5 +418,6 @@ DATA;
             }
             return [$this->formats[$format_name]];
         }
+        throw new SpecCompilerException($file->getFileName() . ": invalid '" . $type . "' type specified");
     }
 }
