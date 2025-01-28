@@ -3,11 +3,12 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Jpeg\Jpeg;
-use FileEye\MediaProbe\Data\DataString;
-use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\MediaProbe;
+use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\EntryInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;
@@ -266,12 +267,14 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             }
 
             // Check Exiftool TEXT tag equivalence.
-            if ($exiftool_node = $element->getParentElement()->getCollection()->getPropertyValue('exiftoolDOMNode')) {
+            $parentElement = $element->getParentElement();
+            $this->assertInstanceOf(BlockInterface::class, $parentElement);
+            if ($exiftool_node = $parentElement->getCollection()->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {
                     [$g1, $tag] = explode(':', $exiftool_node);
                     if ($g1 === '*') {
-                        $ifd = $element->getParentElement()->getParentElement()->getAttribute('name');
+                        $ifd = $parentElement->getParentElement()->getAttribute('name');
                         $exiftool_node = implode(':', [$ifd, $tag]);
                     }
                     $xml_nodes = $this->exiftoolDump->getElementsByTagName('*');
