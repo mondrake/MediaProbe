@@ -23,6 +23,8 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     const DOM_NODE_NAME = 'entry';
 
+    protected string $formatName;
+
     /**
      * The format of this entry.
      */
