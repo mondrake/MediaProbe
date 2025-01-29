@@ -172,7 +172,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             return;
         }
 
-        $this->assertInstanceOf($expected['class'], $element, $expected['path']);
+        $this->assertInstanceOf($expected['handlerClass'], $element, $expected['path']);
         $this->assertSame($expected['path'], $element->getContextPath());
         if (!$rewritten) {
             $this->assertSame($expected['valid'], $element->isValid(), $element->getContextPath());
