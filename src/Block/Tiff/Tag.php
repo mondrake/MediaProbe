@@ -97,9 +97,9 @@ class Tag extends BlockBase
     {
         $entry = $this->getElement("entry");
         if (!$entry) {
-            $this->getDefinition()->valuesCount;
+            return $this->getDefinition()->valuesCount;
         }
-        assert($entry instanceof EntryInterface);
+        assert($entry instanceof EntryInterface, get_class($entry));
         return $entry->getComponents();
     }
 

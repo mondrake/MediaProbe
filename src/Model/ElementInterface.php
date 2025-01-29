@@ -17,12 +17,12 @@ interface ElementInterface
     /**
      * Gets the root ancestor element of this element.
      */
-    public function getRootElement(): ElementInterface;
+    public function getRootElement(): \DOMNode|ElementInterface;
 
     /**
      * Gets the parent element of this element.
      */
-    public function getParentElement(): ?ElementInterface;
+    public function getParentElement(): \DOMNode|ElementInterface|null;
 
     /**
      * Gets multiple children elements of this element.
@@ -43,7 +43,7 @@ interface ElementInterface
      * @throws MediaProbeException
      *   When multiple elements fulfil the XPath expression.
      */
-    public function getElement(string $expression): ?ElementInterface;
+    public function getElement(string $expression): \DOMNode|ElementInterface|null;
 
     /**
      * Removes a single child element of this element.
