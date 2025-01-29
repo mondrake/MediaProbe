@@ -38,6 +38,8 @@ class MediaProbe
      *
      * @return string the translated string, or the original string if
      *         no translation could be found.
+     * 
+     * @deprecated
      */
     public static function tra(string $str): string
     {
