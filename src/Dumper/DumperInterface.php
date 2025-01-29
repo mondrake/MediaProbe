@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Dumper;
 
@@ -7,4 +9,9 @@ namespace FileEye\MediaProbe\Dumper;
  */
 interface DumperInterface
 {
+    public function dumpElement(ElementInterface $element, array $context = []): array;
+
+    public function dumpEntry(EntryInterface $entry, array $context = []): array;
+
+    public function dumpBlock(BlockBase $block, array $context = []): array;
 }

@@ -241,16 +241,12 @@ class MediaFilesTest extends MediaProbeTestCaseBase
                                 $x = is_numeric($v) ? round($v, 2) : $v;
                                 $valx_aa[] = $x;
                             }
-    //                        $vala_a = explode(', ', $vala);
                             $vala_a = is_array($vala) ? $vala : explode(' ', $vala);
                             $vala_aa = [];
                             foreach ($vala_a as $v) {
                                 $x = is_numeric($v) ? round($v, 2) : $v;
                                 $vala_aa[] = $x;
                             }
-/*if (stripos($element->getContextPath(), 'tag:GPSVersionID') !== false) {
-    dump([$valx, $vala, $valx_aa, $vala_aa])  ;
-}*/
                             $this->assertEqualsWithDelta($valx_aa, $vala_aa, 0.001, 'Exiftool raw: ' . $element->getContextPath());
                         }
                     }

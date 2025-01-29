@@ -107,10 +107,12 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function getOutputFormat(): int
     {
-        if (!$this->getParentElement()) {
+        $parentElement = $this->getParentElement();
+        if (!$parentElement) {
             return $this->format;
         }
-        if ($output_format = $this->getParentElement()->getCollection()->getPropertyValue('outputFormat')) {
+        assert($parentElement instanceof BlockInterface);
+        if ($output_format = $parentElement->getCollection()->getPropertyValue('outputFormat')) {
             return $output_format;
         }
         return $this->format;
@@ -129,10 +131,12 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     protected function hasMappedText(): bool
     {
-        if (!$this->getParentElement()) {
+        $parentElement = $this->getParentElement();
+        if (!$parentElement) {
             return false;
         }
-        if (!$text_config = $this->getParentElement()->getCollection()->getPropertyValue('text')) {
+        assert($parentElement instanceof BlockInterface);
+        if (!$text_config = $parentElement->getCollection()->getPropertyValue('text')) {
             return false;
         }
         return isset($text_config['mapping']);
@@ -143,7 +147,9 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     protected function getMappedText(mixed $value): ?string
     {
-        $text_config = $this->getParentElement()->getCollection()->getPropertyValue('text');
+        $parentElement = $this->getParentElement();
+        assert($parentElement instanceof BlockInterface);
+        $text_config = $parentElement->getCollection()->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
         return $text_config['mapping'][$id] ?? null;
     }
@@ -153,10 +159,12 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     protected function hasDefaultText(): bool
     {
-        if (!$this->getParentElement()) {
+        $parentElement = $this->getParentElement();
+        if (!$parentElement) {
             return false;
         }
-        if (!$text_config = $this->getParentElement()->getCollection()->getPropertyValue('text')) {
+        assert($parentElement instanceof BlockInterface);
+        if (!$text_config = $parentElement->getCollection()->getPropertyValue('text')) {
             return false;
         }
         return isset($text_config['default']);
@@ -177,18 +185,20 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     public function resolveText(mixed $value, bool $null_on_missing = false): string|int|float|array|null
     {
-        if (!$this->getParentElement()) {
+        $parentElement = $this->getParentElement();
+        if (!$parentElement) {
             return is_array($value) ? implode(' ', $value) : $value;
         }
+        assert($parentElement instanceof BlockInterface);
 
         if (is_array($value)) {
             $tmp = [];
             foreach ($value as $v) {
                 $id = is_int($v) ? $v : (string) $v;
                 if ($this->hasMappedText()) {
-                    $tmp[] = $this->resolveValuePlaceholder($v, $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? (string) $v);
+                    $tmp[] = $this->resolveValuePlaceholder($v, $parentElement->getCollection()->getPropertyValue('text')['mapping'][$id] ?? (string) $v);
                 } elseif ($this->hasDefaultText()) {
-                    $tmp[] = $this->resolveValuePlaceholder($v, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
+                    $tmp[] = $this->resolveValuePlaceholder($v, $parentElement->getCollection()->getPropertyValue('text')['default']);
                 } else {
                     $tmp[] = $v;
                 }
@@ -199,13 +209,13 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         $text = null;
         if ($this->hasMappedText()) {
             $id = is_int($value) ? $value : (string) $value;
-            $raw = $this->getParentElement()->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
+            $raw = $parentElement->getCollection()->getPropertyValue('text')['mapping'][$id] ?? null;
             if (!is_null($raw)) {
                 $text = $this->resolveValuePlaceholder($value, $raw);
             }
         }
         if (is_null($text) && $this->hasDefaultText()) {
-            $text = $this->resolveValuePlaceholder($value, $this->getParentElement()->getCollection()->getPropertyValue('text')['default']);
+            $text = $this->resolveValuePlaceholder($value, $parentElement->getCollection()->getPropertyValue('text')['default']);
         }
         if (is_null($text) && $null_on_missing) {
             return null;
