@@ -82,7 +82,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
 
     public function getCollection(): CollectionInterface
     {
-        return $this->getDefinition()->getCollection();
+        return $this->getDefinition()->collection;
     }
 
     // xx

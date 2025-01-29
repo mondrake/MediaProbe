@@ -72,7 +72,7 @@ class Media extends RootBlockBase
         $media = new ItemDefinition(CollectionFactory::get('Media'));
         parent::__construct($media);
         $this->logger = (new Logger('mediaprobe'))
-            ->pushHandler(new TestHandler(Logger::INFO))
+            ->pushHandler(new TestHandler(Level::Info))
             ->pushProcessor(new PsrLogMessageProcessor());
         $this->failLevel = $failLevel ? Logger::toMonologLevel($failLevel) : null;
         $this->stopWatch = new Stopwatch();
