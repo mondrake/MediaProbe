@@ -44,7 +44,6 @@ class MediaProbeTestCaseBase extends TestCase
         $itemDefinition = $this->getMockBuilder(ItemDefinition::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $itemDefinition->method('getCollection')->willReturn($collection);
         return new StubRootBlock($itemDefinition);
     }
 
