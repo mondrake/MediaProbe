@@ -15,15 +15,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 interface ElementInterface
 {
     /**
-     * Returns the name of the DOM node of this element.
-     *
-     * @todo remove and leave as a key in collectInfo
-     * 
-     * @deprecated
-     */
-    public function getNodeName(): string;
-
-    /**
      * Gets the root ancestor element of this element.
      */
     public function getRootElement(): ElementInterface;

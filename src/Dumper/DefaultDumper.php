@@ -15,9 +15,8 @@ class DefaultDumper implements DumperInterface
     public function dumpElement(ElementInterface $element, array $context = []): array
     {
         return [
-            'node' => $element->getNodeName(),
             'path' => $element->getContextPath(),
-            'class' => get_class($element),
+            'handlerClass' => get_class($element),
             'valid' => $element->isValid(),
         ];
     }

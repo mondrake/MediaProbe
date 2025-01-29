@@ -68,11 +68,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $this->DOMNode->setMediaProbeElement($this);
     }
 
-    public function getNodeName(): string
-    {
-        return $this->DOMNode->nodeName;
-    }
-
     public function getRootElement(): ElementInterface
     {
         return $this->DOMNode->ownerDocument->documentElement->getMediaProbeElement();
@@ -196,7 +191,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     public function collectInfo(array $context = []): array
     {
         $info = [];
-        $info['node'] = $this->getNodeName();
+        $info['node'] = $this->DOMNode->nodeName;
         if (($name = $this->getAttribute('name')) !== null) {
             $info['name'] = $name;
         }
