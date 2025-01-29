@@ -53,8 +53,8 @@ class IfdCopyright extends Ascii
             $p = '';
             $e = '';
         } else {
-            $p = ' ' . MediaProbe::tra('(Photographer)');
-            $e = ' ' . MediaProbe::tra('(Editor)');
+            $p = ' ' . '(Photographer)';
+            $e = ' ' . '(Editor)';
         }
 
         $value = $this->getValue();

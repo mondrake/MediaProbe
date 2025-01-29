@@ -59,9 +59,6 @@ class Tag extends BlockBase
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function doParseData(DataElement $data): void
     {
         $this->validate();
@@ -76,49 +73,36 @@ class Tag extends BlockBase
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getValue(array $options = []): mixed
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getValue($options) : null;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toString(array $options = []): string
     {
         return $this->getElement("entry") ? $this->getElement("entry")->toString($options) : '';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes($order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
     {
         return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : '';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getFormat(): int
     {
         return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : $this->getDefinition()->format;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getComponents(): int
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->getComponents() : $this->getDefinition()->valuesCount;
+        $entry = $this->getElement("entry");
+        if (!$entry) {
+            $this->getDefinition()->valuesCount;
+        }
+        assert($entry instanceof EntryInterface);
+        return $entry->getComponents();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function getContextPathSegmentPattern(): string
     {
         if ($this->getAttribute('name') !== '') {

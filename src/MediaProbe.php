@@ -29,24 +29,6 @@ class MediaProbe
     }
 
     /**
-     * Translate a string.
-     *
-     * @todo
-     *
-     * @param string $str
-     *            the string that should be translated.
-     *
-     * @return string the translated string, or the original string if
-     *         no translation could be found.
-     * 
-     * @deprecated
-     */
-    public static function tra(string $str): string
-    {
-        return $str;
-    }
-
-    /**
      * Translate and format a string.
      *
      * This static function will first use Gettext to translate a format
