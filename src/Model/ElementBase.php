@@ -29,7 +29,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     /**
      * The DOM node associated to this element.
      */
-    protected \DOMNode|ElementInterface $DOMNode;
+    protected DOMElement $DOMNode;
 
     /**
      * Whether this element was successfully validated.
@@ -59,9 +59,9 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         }
 
         $this->DOMNode = $doc->createElement($dom_node_name);
-        assert($this->DOMNode instanceof DOMElement);
 
         if ($reference) {
+            assert($reference instanceof ElementBase);
             $parent_node->insertBefore($this->DOMNode, $reference->DOMNode);
         } else {
             $parent_node->appendChild($this->DOMNode);
@@ -71,14 +71,14 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $this->DOMNode->setMediaProbeElement($this);
     }
 
-    public function getRootElement(): \DOMNode|ElementInterface
+    public function getRootElement(): ElementInterface
     {
         $doc = $this->DOMNode->ownerDocument->documentElement;
         assert($doc instanceof DOMElement);
         return $doc->getMediaProbeElement();
     }
 
-    public function getParentElement(): \DOMNode|ElementInterface|null
+    public function getParentElement(): ?ElementInterface
     {
         $domNode = $this->DOMNode;
         assert($domNode instanceof DOMElement);
@@ -103,7 +103,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $ret;
     }
 
-    public function getElement(string $expression): \DOMNode|ElementInterface|null
+    public function getElement(string $expression): ?ElementInterface
     {
         $ret = $this->getMultipleElements($expression);
         switch (count($ret)) {
@@ -123,6 +123,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             case 0:
                 return false;
             case 1:
+                assert($ret[0] instanceof ElementBase);
                 $ret[0]->DOMNode->parentNode->removeChild($ret[0]->DOMNode);
                 return true;
             default:
