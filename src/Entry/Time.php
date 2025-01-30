@@ -6,6 +6,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\MediaProbe;
+use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\ConvertTime;
 

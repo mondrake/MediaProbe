@@ -2,10 +2,10 @@
 
 namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif\Functions2;
 
-use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Entry\Core\SignedLong;
 use FileEye\MediaProbe\Entry\ExifTrait;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ElementInterface;
 
 /**
  * Handler for CanonCustom tags representing Shutter speed range.

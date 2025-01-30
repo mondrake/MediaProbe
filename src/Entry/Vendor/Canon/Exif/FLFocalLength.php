@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Entry\Vendor\Canon\Exif;
 
 use FileEye\MediaProbe\Entry\Core\Short;
 use FileEye\MediaProbe\MediaProbe;
+use FileEye\MediaProbe\MediaProbeException;
 
 /**
  * Handler for Canon Focal Length tags.
