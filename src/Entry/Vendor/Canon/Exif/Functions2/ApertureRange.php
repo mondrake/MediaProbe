@@ -15,13 +15,11 @@ class ApertureRange extends SignedLong
      */
     public static function resolveItemCollectionIndex(?int $components_count, ElementInterface $context): mixed
     {
-        switch ($components_count) {
-            case 3:
-                return 0;
-
-            case 4:
-                return 1;
-        }
+        return match ($components_count) {
+            3 => 0,
+            4 => 1,
+            default => throw new MediaProbeException('Invalid number of components'),
+        };
     }
 
     /**
