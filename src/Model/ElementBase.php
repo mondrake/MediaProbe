@@ -45,7 +45,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      *            (Optional) if specified, the new element will be inserted
      *            before the reference element.
      */
-    public function __construct(string $dom_node_name, \DOMNode|ElementInterface $parent = null, \DOMNode|ElementInterface $reference = null)
+    public function __construct(string $dom_node_name, ?ElementInterface $parent = null, ?ElementInterface $reference = null)
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the media structure.

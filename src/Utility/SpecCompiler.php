@@ -76,7 +76,7 @@ class SpecCompiler
      * @param Finder $finder
      * @param Filesystem $fs
      */
-    public function __construct(Finder $finder = null, Filesystem $fs = null)
+    public function __construct(?Finder $finder = null, ?Filesystem $fs = null)
     {
         $this->finder = $finder ? $finder : new Finder();
         $this->fs = $fs ? $fs : new Filesystem();
