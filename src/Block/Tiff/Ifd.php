@@ -4,8 +4,8 @@ namespace FileEye\MediaProbe\Block\Tiff;
 
 use FileEye\MediaProbe\Block\Jpeg\Jpeg;
 use FileEye\MediaProbe\Block\ListBase;
-use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Block\Thumbnail;
+use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
@@ -13,12 +13,13 @@ use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\Model\ElementInterface;
-use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Entry\Core\Undefined;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\ElementInterface;
+use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -230,9 +231,11 @@ class Ifd extends ListBase
 
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
-            if ($sub_block->getCollection()->getPropertyValue('id') === 'Thumbnail') {
+            if ($sub_block instanceof Thumbnail) {
                 continue;
             }
+
+            assert($sub_block instanceof Tag || $sub_block instanceof ListBase, get_class($sub_block));
 
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
 
@@ -260,6 +263,7 @@ class Ifd extends ListBase
         // Thumbnail.
         if ($thumbnail) {
             $thumbnail_entry = $thumbnail->getElement('entry');
+            assert($thumbnail_entry instanceof EntryInterface);
             // Add offset.
             $bytes .= ConvertBytes::fromShort($this->getCollection()->getItemCollectionByName('ThumbnailOffset')->getPropertyValue('item'), $byte_order);
             $bytes .= ConvertBytes::fromShort(DataFormat::LONG, $byte_order);
@@ -304,7 +308,9 @@ class Ifd extends ListBase
 
         // Get Thumbnail's offset and size.
         $offset = $ifd->getElement("tag[@name='ThumbnailOffset']/entry")->getValue();
+        assert(is_int($offset));
         $length = $ifd->getElement("tag[@name='ThumbnailLength']/entry")->getValue();
+        assert(is_int($length));
 
         // Remove the tags that describe the Thumbnail.
         $ifd->removeElement("tag[@name='ThumbnailOffset']");
@@ -379,11 +385,13 @@ class Ifd extends ListBase
         if (!$exif_ifd = $ifd->getElement("ifd[@name='ExifIFD']")) {
             return;
         }
+        assert($exif_ifd instanceof Ifd);
 
         // Get MakerNote tag from Exif IFD.
         if (!$maker_note_tag = $exif_ifd->getElement("tag[@name='MakerNote']")) {
             return;
         }
+        assert($maker_note_tag instanceof Tag);
 
         // Get Make tag from IFD0.
         if (!$make_tag = $ifd->getElement("tag[@name='Make']")) {
@@ -411,8 +419,9 @@ class Ifd extends ListBase
         // xxx
         $ifd->setAttribute('id', 37500);
         $ifd->setAttribute('name', $maker_note_ifd_name);
-        $data = $maker_note_tag->getElement("entry")->getDataElement();
-// dump(MediaProbe::dumpHexFormatted($data->getBytes()));
+        $entry = $maker_note_tag->getElement("entry");
+        assert($entry instanceof EntryInterface);
+        $data = $entry->getDataElement();
         // @todo the netting of the dataOffset is a Canon only thing, move to vendor
         // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
         $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->dataOffset);

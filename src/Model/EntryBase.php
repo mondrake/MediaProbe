@@ -72,9 +72,6 @@ abstract class EntryBase extends ElementBase implements EntryInterface
      */
     abstract protected function validateDataElement(): void;
 
-    /**
-     * {@inheritdoc}
-     */
     public function getDataElement(): DataElement
     {
         return $this->dataElement;

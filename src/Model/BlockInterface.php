@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Collection\CollectionInterface;
+use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\ItemDefinition;
 
 /**
@@ -19,4 +20,6 @@ interface BlockInterface extends ElementInterface
      * Gets the Collection of this Block.
      */
     public function getCollection(): CollectionInterface;
+
+    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void;
 }

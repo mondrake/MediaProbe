@@ -1,6 +1,12 @@
 parameters:
 	ignoreErrors:
 		-
+			message: '#^Call to an undefined method FileEye\\MediaProbe\\Model\\ElementInterface\:\:getCollection\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: examples/dump-media.php
+
+		-
 			message: '#^Variable \$curr_memory might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1

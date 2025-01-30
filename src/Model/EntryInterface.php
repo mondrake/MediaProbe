@@ -22,4 +22,6 @@ interface EntryInterface extends ElementInterface
     public function getOutputFormat(): int;
 
     public function setDataElement(DataElement $dataElement): void;
+
+    public function getDataElement(): DataElement;
 }

@@ -179,14 +179,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $this->valid;
     }
 
-    /**
-     * @todo
-     */
-    public function getDataElement(): DataElement
-    {
-        throw new MediaProbeException("%s does not implement the %s method.", static::class, __FUNCTION__);
-    }
-
     public function getValue(array $options = []): mixed
     {
         throw new MediaProbeException("%s does not implement the %s method.", static::class, __FUNCTION__);

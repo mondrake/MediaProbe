@@ -114,6 +114,8 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         $this->executePostParseCallbacks($data);
     }
 
+    abstract protected function doParseData(DataElement $data): void;
+
     /**
      * Invoke post-parse callbacks.
      *

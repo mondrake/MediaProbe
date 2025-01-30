@@ -5,10 +5,12 @@ namespace FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\MediaProbe;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -23,11 +25,14 @@ class Tag extends BlockBase
      */
     public function validate(): void
     {
+        $parentElement = $this->getParentElement();
+        assert($parentElement instanceof BlockInterface);
+
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Tiff\UnknownTag'])) {
             $this->notice("Unknown item {item} in '{parent}'", [
                 'item' => MediaProbe::dumpIntHex($this->getAttribute('id')),
-                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
             return;
         }
@@ -43,7 +48,7 @@ class Tag extends BlockBase
                 'format_name' => DataFormat::getName($this->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
         }
 
@@ -54,7 +59,7 @@ class Tag extends BlockBase
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $this->getParentElement() ? $this->getParentElement()->getCollection()->getPropertyValue('name') ?? 'n/a' : 'n/a',
+                'parent' => $parentElement ? $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a' : 'n/a',
             ]);
         }
     }
@@ -90,7 +95,12 @@ class Tag extends BlockBase
 
     public function getFormat(): int
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->getFormat() : $this->getDefinition()->format;
+        $entry = $this->getElement("entry");
+        if (!$entry) {
+            return $this->getDefinition()->format;
+        }
+        assert($entry instanceof EntryInterface, get_class($entry));
+        return $entry->getFormat();
     }
 
     public function getComponents(): int
