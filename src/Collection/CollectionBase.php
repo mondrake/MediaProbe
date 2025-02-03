@@ -103,6 +103,9 @@ abstract class CollectionBase implements CollectionInterface
         return CollectionFactory::get($this->getPropertyValue('items')[$item][$index]['collection'], $item_properties);
     }
 
+    /**
+     * @deprecated
+     */
     public function getItemCollectionByName(string $item_name, mixed $index = 0): CollectionInterface
     {
         if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
