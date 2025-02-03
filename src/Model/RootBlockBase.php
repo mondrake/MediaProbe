@@ -38,7 +38,7 @@ abstract class RootBlockBase extends BlockBase
      * defining the minimum log level at which the parsing process will break
      * and throw an MediaProbeException.
      */
-    protected ?Level $failLevel;
+    //protected ?Level $failLevel;
 
     /**
      * A Symfony stopwatch.
@@ -49,7 +49,11 @@ abstract class RootBlockBase extends BlockBase
      * @param \FileEye\MediaProbe\ItemDefinition $definition
      *   The Item Definition of this Block.
      */
-    public function __construct(ItemDefinition $definition)
+    public function __construct(
+        ItemDefinition $definition,
+        protected ?Level $failLevel,
+        protected ?LoggerInterface $externalLogger,
+    )
     {
         parent::__construct($definition);
         $this->XPath = new \DOMXPath($this->DOMNode->ownerDocument);

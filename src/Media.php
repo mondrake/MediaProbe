@@ -41,15 +41,14 @@ class Media extends RootBlockBase
      *   media parsing to stop.
      */
     public function __construct(
-        protected ?LoggerInterface $externalLogger,
+        ?LoggerInterface $externalLogger,
         ?string $failLevel,
     ) {
         $media = new ItemDefinition(CollectionFactory::get('Media'));
-        parent::__construct($media);
+        parent::__construct($media, $failLevel ? Logger::toMonologLevel($failLevel) : null, $externalLogger);
         $this->logger = (new Logger('mediaprobe'))
             ->pushHandler(new TestHandler(Level::Info))
             ->pushProcessor(new PsrLogMessageProcessor());
-        $this->failLevel = $failLevel ? Logger::toMonologLevel($failLevel) : null;
         $this->stopWatch = new Stopwatch();
     }
 
