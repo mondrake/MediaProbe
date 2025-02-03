@@ -229,7 +229,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
             $message = (string) $root_element->getStopwatch()->getEvent('media-parsing') . ' ' . $message;
         }*/
 
-        if (property_exists($root_element, 'logger')) {  // xx should be logging anyway
+        if (property_exists($root_element, 'logger') && isset($root_element->logger)) {  // xx should be logging anyway
             assert($root_element instanceof RootBlockBase);
             $root_element->logger->log($level, $message, $context);
             if ($root_element->externalLogger) {  // xx should be logging anyway
