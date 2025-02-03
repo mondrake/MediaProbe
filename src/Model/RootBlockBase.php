@@ -8,6 +8,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 /**
