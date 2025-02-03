@@ -38,9 +38,9 @@ class ExifShutterSpeedValue extends SignedRational
             $val = $this->dataElement->getSignedRationalFloat();
             $val = abs($val) < 100 ? pow(2, -$val) : 0;
             if ($val < 0.25001 && $val > 0) {
-                return spintf("1/%d", (int) (0.5 + 1 / $val));
+                return sprintf("1/%d", (int) (0.5 + 1 / $val));
             } else {
-                $val = spintf("%.1f", $val);
+                $val = sprintf("%.1f", $val);
                 return preg_replace('/\.0$/', '', $val);
             }
         } else {
