@@ -64,6 +64,8 @@ interface CollectionInterface
      *
      * @throws CollectionException
      *   When item is not in collection.
+     * 
+     * @deprecated
      */
     public function getItemCollectionByName(string $item_name, mixed $index = 0): CollectionInterface;
 }
