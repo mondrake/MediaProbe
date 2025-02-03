@@ -51,8 +51,8 @@ abstract class RootBlockBase extends BlockBase
      */
     public function __construct(
         ItemDefinition $definition,
-        protected ?Level $failLevel,
-        protected ?LoggerInterface $externalLogger,
+        protected ?Level $failLevel = null,
+        protected ?LoggerInterface $externalLogger = null,
     )
     {
         parent::__construct($definition);
