@@ -47,30 +47,26 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the media structure.
-        if (!isset($parent) || !isset($parent->DOMNode)) {
-            $doc = new \DOMDocument();
-            $doc->registerNodeClass('DOMElement', DOMElement::class);
-            $parent_node = $doc;
-        } else {
+        if (isset($parent) && isset($parent->DOMNode)) {
             $doc = $parent->DOMNode->ownerDocument;
             $parent_node = $parent->DOMNode;
+            $this->DOMNode = $doc->createElement($dom_node_name);
+            if ($reference) {
+                assert($reference instanceof ElementBase);
+                $parent_node->insertBefore($this->DOMNode, $reference->DOMNode);
+            } else {
+                $parent_node->appendChild($this->DOMNode);
+            }
+            // Assign this Element as the payload of the DOM node.
+            $this->DOMNode->setMediaProbeElement($this);
         }
-
-        $this->DOMNode = $doc->createElement($dom_node_name);
-
-        if ($reference) {
-            assert($reference instanceof ElementBase);
-            $parent_node->insertBefore($this->DOMNode, $reference->DOMNode);
-        } else {
-            $parent_node->appendChild($this->DOMNode);
-        }
-
-        // Assign this Element as the payload of the DOM node.
-        $this->DOMNode->setMediaProbeElement($this);
     }
 
     public function getRootElement(): ElementInterface
     {
+        if (!isset($this->DOMNode)) {
+            return $this;
+        }
         $doc = $this->DOMNode->ownerDocument->documentElement;
         assert($doc instanceof DOMElement);
         return $doc->getMediaProbeElement();
@@ -78,6 +74,9 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     public function getParentElement(): ?ElementInterface
     {
+        if (!isset($this->DOMNode)) {
+            return null;
+        }
         $domNode = $this->DOMNode;
         assert($domNode instanceof DOMElement);
         if ($domNode->getMediaProbeElement() !== $this->getRootElement()) {
@@ -158,6 +157,10 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     public function getContextPath(): string
     {
+        if (!isset($this->DOMNode)) {
+            return '';
+        }
+
         // Get the path before this element.
         $parent_path = $this->getParentElement() ? $this->getParentElement()->getContextPath() : '';
 

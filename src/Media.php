@@ -41,12 +41,14 @@ class Media extends RootBlockBase
         ?LoggerInterface $externalLogger,
         ?string $failLevel,
     ) {
-        $media = new ItemDefinition(CollectionFactory::get('Media'));
-        parent::__construct($media, $failLevel ? Logger::toMonologLevel($failLevel) : null, $externalLogger);
-        $this->logger = (new Logger('mediaprobe'))
-            ->pushHandler(new TestHandler(Level::Info))
-            ->pushProcessor(new PsrLogMessageProcessor());
-        $this->stopWatch = new Stopwatch();
+        parent::__construct(
+            definition: new ItemDefinition(CollectionFactory::get('Media')),
+            failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
+            logger: (new Logger('mediaprobe'))
+                ->pushHandler(new TestHandler(Level::Info))
+                ->pushProcessor(new PsrLogMessageProcessor()),
+            externalLogger: $externalLogger,
+        );
     }
 
     /**
