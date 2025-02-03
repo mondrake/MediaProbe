@@ -32,6 +32,8 @@ class Media extends RootBlockBase
 {
     /**
      * The internal Monolog logger instance for this Media object.
+     * 
+     * @deprecated
      */
     protected Logger $logger;
 
@@ -42,16 +44,22 @@ class Media extends RootBlockBase
      * breaking the flow. However it is possible to enable hard failures by
      * defining the minimum log level at which the parsing process will break
      * and throw an MediaProbeException.
+     * 
+     * @deprecated
      */
     protected ?Level $failLevel;
 
     /**
      * An XML prettify formatter.
+     * 
+     * @deprecated
      */
     protected Formatter $xmlFormatter;
 
     /**
      * A Symfony stopwatch.
+     * 
+     * @deprecated
      */
     private Stopwatch $stopWatch;
 
@@ -199,6 +207,8 @@ class Media extends RootBlockBase
      *
      * @param bool $pretty
      *   TRUE if the XML should be prettified.
+     * 
+     * @deprecated
      */
     public function toXml(bool $pretty = false): string
     {
@@ -217,6 +227,8 @@ class Media extends RootBlockBase
      *
      * @return array
      *   An array of Monolog entries.
+     * 
+     * @deprecated
      */
     public function dumpLog(?string $level_name = null): array
     {
@@ -231,6 +243,9 @@ class Media extends RootBlockBase
         return $ret;
     }
 
+    /**
+     * @deprecated
+     */
     public function getStopwatch(): Stopwatch
     {
         return $this->stopWatch;

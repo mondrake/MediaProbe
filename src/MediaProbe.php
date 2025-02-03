@@ -49,6 +49,8 @@ class MediaProbe
      *
      * @return string the translated string, or the original string if
      *         no translation could be found.
+     * 
+     * @deprecated
      */
     public static function fmt(string $format, mixed ...$args): string
     {
