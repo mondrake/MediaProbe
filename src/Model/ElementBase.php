@@ -9,6 +9,7 @@ use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use Monolog\Level;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;
@@ -31,8 +32,15 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     /**
      * Whether this element was successfully validated.
+     * 
+     * @deprecated
      */
     protected bool $valid = true;
+
+    /**
+     * Validation level of this element.
+     */
+    protected ?Level $level = null;
 
     /**
      * @param string $dom_node_name
@@ -177,7 +185,12 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     public function isValid(): bool
     {
-        return $this->valid;
+        return $this->level === Level::Debug;
+    }
+
+    public function level(): ?Level
+    {
+        return $this->level;
     }
 
     public function getValue(array $options = []): mixed
@@ -225,10 +238,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         $context['path'] = $this->getContextPath();
         $root_element = $this->getRootElement();
-
-/*        if (method_exists($root_element, 'getStopwatch')) {
-            $message = (string) $root_element->getStopwatch()->getEvent('media-parsing') . ' ' . $message;
-        }*/
 
         if (property_exists($root_element, 'logger') && isset($root_element->logger)) {  // xx should be logging anyway
             assert($root_element instanceof RootBlockBase);

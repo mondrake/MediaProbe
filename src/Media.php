@@ -113,9 +113,15 @@ class Media extends RootBlockBase
         $media->getStopwatch()->start('media-parsing');
 
         // Determine the media type. Throws MediaProbeException if not determinable.
-        $mediaType = new ItemDefinition(
-            collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
-        );
+        try {
+            $mediaType = new ItemDefinition(
+                collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
+            );
+        } catch (MediaProbeException $e) {
+            $media->error($e->getMessage());
+            $media->level = Level::Error;
+            return $media;
+        }
 
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
@@ -124,6 +130,7 @@ class Media extends RootBlockBase
         $mediaTypeBlock = $media->addBlock($mediaType);
         assert($mediaTypeBlock instanceof BlockInterface);
         $mediaTypeBlock->parseData($dataElement);
+        $media->level = $mediaTypeBlock->level();
         $media->getStopwatch()->stop('media-parsing');
 
         return $media;
