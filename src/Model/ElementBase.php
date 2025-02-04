@@ -185,7 +185,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     public function isValid(): bool
     {
-        return $this->level->value < Level::Warning->value;
+        return is_null($this->level) || ($this->level->value < Level::Warning->value);
     }
 
     public function level(): ?Level
