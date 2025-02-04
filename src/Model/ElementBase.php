@@ -32,7 +32,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     /**
      * Whether this element was successfully validated.
-     * 
+     *
      * @deprecated
      */
     protected bool $valid = true;

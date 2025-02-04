@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe\Model;
 use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use Monolog\Level;
 
 /**
  * Interface for Element objects.
