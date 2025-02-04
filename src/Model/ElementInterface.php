@@ -102,6 +102,11 @@ interface ElementInterface
     public function isValid(): bool;
 
     /**
+     * Returns the validation level of this element.
+     */
+    public function level(): ?Level;
+
+    /**
      * Returns the value of this element, if the element supports it.
      *
      * For a formatted version of the value, use ::toString() instead.

@@ -185,7 +185,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
 
     public function isValid(): bool
     {
-        return $this->level === Level::Debug;
+        return $this->level->value < Level::Warning->value;
     }
 
     public function level(): ?Level
@@ -238,6 +238,10 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         $context['path'] = $this->getContextPath();
         $root_element = $this->getRootElement();
+        
+        if (!isset($this->level) || Logger::toMonologLevel($level)->value > $this->level->value) {
+            $this->level = Logger::toMonologLevel($level);
+        }
 
         if (property_exists($root_element, 'logger') && isset($root_element->logger)) {  // xx should be logging anyway
             assert($root_element instanceof RootBlockBase);

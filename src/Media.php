@@ -119,7 +119,7 @@ class Media extends RootBlockBase
             );
         } catch (MediaProbeException $e) {
             $media->error($e->getMessage());
-            $media->level = Level::Error;
+            $media->getStopwatch()->stop('media-parsing');
             return $media;
         }
 

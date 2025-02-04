@@ -86,7 +86,6 @@ class Ifd extends ListBase
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
-                $item->valid = false;
             }
         }
 
@@ -318,7 +317,6 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'length' => $length,
             ]);
-            $ifd->valid = false;
             return;
         }
 
@@ -327,7 +325,6 @@ class Ifd extends ListBase
                 'offset' => $offset,
                 'size' => $dataElement->getSize(),
             ]);
-            $ifd->valid = false;
             return;
         }
 

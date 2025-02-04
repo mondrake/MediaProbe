@@ -70,7 +70,6 @@ class Tag extends BlockBase
             $this->valid = $entry->isValid();
         } catch (DataException $e) {
             $this->error($e->getMessage());
-            $this->valid = false;
         }
     }
 
