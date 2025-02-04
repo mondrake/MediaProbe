@@ -186,6 +186,14 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $this->level;
     }
 
+    public function validationLevel(): string
+    {
+        return match ($this->level()) {
+            null, Level::Debug => 'OK',
+            default => ucfirst($this->level()->toPsrLogLevel()),
+        };
+    }
+
     public function getValue(array $options = []): mixed
     {
         throw new MediaProbeException("%s does not implement the %s method.", static::class, __FUNCTION__);
@@ -231,7 +239,7 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     {
         $context['path'] = $this->getContextPath();
         $root_element = $this->getRootElement();
-        
+
         if (!isset($this->level) || Logger::toMonologLevel($level)->value > $this->level->value) {
             $this->level = Logger::toMonologLevel($level);
         }

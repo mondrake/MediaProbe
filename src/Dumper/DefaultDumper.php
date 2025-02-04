@@ -8,6 +8,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\ElementInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
+use Monolog\Level;
 
 /**
  * The element default dumper visitor.
@@ -20,6 +21,7 @@ class DefaultDumper implements DumperInterface
             'path' => $element->getContextPath(),
             'handlerClass' => get_class($element),
             'valid' => $element->isValid(),
+            'validationLevel' => $element->validationLevel(),
         ];
     }
 
