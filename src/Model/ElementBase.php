@@ -31,13 +31,6 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     protected DOMElement $DOMNode;
 
     /**
-     * Whether this element was successfully validated.
-     *
-     * @deprecated
-     */
-    protected bool $valid = true;
-
-    /**
      * Validation level of this element.
      */
     protected ?Level $level = null;

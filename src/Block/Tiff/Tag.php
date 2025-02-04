@@ -67,7 +67,7 @@ class Tag extends BlockBase
         try {
             $class = $this->getDefinition()->getEntryClass();
             $entry = new $class($this, $data);
-            $this->valid = $entry->isValid();
+            $this->level = $entry->level();
         } catch (DataException $e) {
             $this->error($e->getMessage());
         }
