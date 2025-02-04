@@ -16,6 +16,8 @@ class MediaProbe
 
     /**
      * Dumps a string of bytes in a human readable sequence of hex couples.
+     *
+     * @deprecated
      */
     public static function dumpHex(string $input, ?int $dump_length = null): ?string
     {
@@ -56,6 +58,9 @@ class MediaProbe
         return $ret;
     }
 
+    /**
+     * @deprecated
+     */
     public static function dumpHexFormatted(string $data, string $newline = "\n")
     {
         static $from = '';
@@ -87,6 +92,9 @@ class MediaProbe
         return $ret;
     }
 
+    /**
+     * @deprecated
+     */
     public static function dumpIntHex(mixed $data): string
     {
         if (is_numeric($data)) {

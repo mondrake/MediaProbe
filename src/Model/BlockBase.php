@@ -49,6 +49,10 @@ abstract class BlockBase extends ElementBase implements BlockInterface
 
         parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference);
 
+        if (!isset($this->DOMNode)) {
+            return;
+        }
+        
         if ($this->getCollection()->hasProperty('item')) {
             $this->setAttribute('id', (string) $this->getCollection()->getPropertyValue('item'));
         }

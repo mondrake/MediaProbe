@@ -16,7 +16,6 @@ use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Stopwatch\Stopwatch;
 
 /**
  * Class to handle media data.
