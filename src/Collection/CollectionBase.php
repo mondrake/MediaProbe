@@ -103,12 +103,13 @@ abstract class CollectionBase implements CollectionInterface
         $item_properties = $this->getPropertyValue('items')[$item][$index];
         unset($item_properties['collection']);
         $item_properties['item'] = $item;
-        $item_properties['id'] = $item;
         return CollectionFactory::get($this->getPropertyValue('items')[$item][$index]['collection'], $item_properties);
     }
 
-    public function getItemCollectionByName(string $item_name, mixed $index = 0): CollectionInterface
-    {
+    public function getItemCollectionByName(
+        string $item_name,
+        mixed $index = 0,
+    ): CollectionInterface {
         if (!isset($this->getPropertyValue('itemsByName')[$item_name][$index])) {
             throw new CollectionException('Missing collection for item \'%s\' in \'%s\'', $item_name, $this->getPropertyValue('id'));
         }
