@@ -86,7 +86,7 @@ class Media extends RootBlockBase
         // Determine the media type.
         try {
             $mediaType = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
-            $media->mimeType = (string) $mediaType->getPropertyValue('id');
+            $media->mimeType = (string) $mediaType->getPropertyValue('item');
         } catch (MediaProbeException $e) {
             $exceptionMessage = $e->getMessage();
         }
