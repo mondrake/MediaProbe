@@ -110,7 +110,7 @@ interface ElementInterface
     /**
      * Returns the validation level of this element as a string for dumps.
      */
-    public function validationLevel(): string
+    public function validationLevel(): string;
 
     /**
      * Returns the value of this element, if the element supports it.
