@@ -9,8 +9,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\RootBlockBase;
-use FileEye\MimeMap\Extension;
-use FileEye\MimeMap\MappingException;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger;
@@ -68,24 +66,9 @@ class Media extends RootBlockBase
         ?LoggerInterface $externalLogger = null,
         ?string $failLevel = null,
     ): Media {
-        // Find the most likely MIME type given the file extension.
-        $extension = '';
-        $typeHints = [];
-        $fileParts = explode('.', basename($path));
-        while (array_shift($fileParts) !== null) {
-            $extension = strtolower(implode('.', $fileParts));
-            $mimeMapExtension = new Extension($extension);
-            try {
-                $typeHints = $mimeMapExtension->getTypes();
-                break;
-            } catch (MappingException $e) {
-                continue;
-            }
-        }
-
         // @todo lock file while reading, capture fstats to prevent overwrites.
         $dataFile = new DataFile($path);
-        return static::parse($dataFile, $typeHints, $externalLogger, $failLevel);
+        return static::parse($dataFile, $dataFile->typeHints, $externalLogger, $failLevel);
     }
 
     /**
