@@ -60,7 +60,7 @@ class GH21Test extends MediaProbeTestCaseBase
         imagejpeg($scaled, null);
         $scaled_bytes = ob_get_clean();
 
-        $out_media = Media::parse(new DataString($scaled_bytes));
+        $out_media = Media::createFromDataElement(new DataString($scaled_bytes));
         $out_jpeg = $out_media->getElement("jpeg");
         $this->assertInstanceOf(Jpeg::class, $out_jpeg);
 

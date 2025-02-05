@@ -27,28 +27,21 @@ abstract class RootBlockBase extends BlockBase
     protected DumperInterface $debugDumper;
 
     /**
-     * The internal Monolog logger instance for this Media object.
-     */
-    //protected Logger $logger;
-
-    /**
-     * The minimum log level for failure.
-     *
-     * MediaProbe normally intercepts and logs media parsing issues without
-     * breaking the flow. However it is possible to enable hard failures by
-     * defining the minimum log level at which the parsing process will break
-     * and throw an MediaProbeException.
-     */
-    //protected ?Level $failLevel;
-
-    /**
-     * A Symfony stopwatch.
-     */
-    //protected Stopwatch $stopWatch;
-
-    /**
-     * @param \FileEye\MediaProbe\ItemDefinition $definition
+     * @param ItemDefinition $definition
      *   The Item Definition of this Block.
+     * @param Logger $logger
+     *   The internal Monolog logger instance for this Media object.
+     * @param ?Level $failLevel
+     *   (Optional) The minimum log level for failure.
+     *   MediaProbe normally intercepts and logs media parsing issues without breaking the flow.
+     *   However it is possible to enable hard failures by defining the minimum log level at
+     *   which the parsing process will break and throw a MediaProbeException.
+     * @param ?LoggerInterface $externalLogger
+     *   (Optional) a PSR-3 compliant logger callback. Consuming code can have higher level
+     *   logging facilities in place. Any entry sent to the internal logger will also be sent to
+     *   the callback, if specified.
+     * @param Stopwatch $stopWatch
+     *   (Optional) A Symfony stopwatch.
      */
     public function __construct(
         ItemDefinition $definition,

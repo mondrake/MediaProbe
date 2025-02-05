@@ -23,24 +23,15 @@ use Psr\Log\LoggerInterface;
  */
 class Media extends RootBlockBase
 {
-    /**
-     * Constructs a Media object.
-     *
-     * @param ?LoggerInterface $externalLogger
-     *   (Optional) a PSR-3 compliant logger callback. Consuming code can have higher level
-     *   logging facilities in place. Any entry sent to the internal logger will also be sent to
-     *   the callback, if specified.
-     * @param ?string $failLevel
-     *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
-     *   media parsing to stop.
-     */
+    public readonly string $mimeType;
+    
     public function __construct(
         ?LoggerInterface $externalLogger,
-        ?string $failLevel,
+        ?Level $failLevel,
     ) {
         parent::__construct(
             definition: new ItemDefinition(CollectionFactory::get('Media')),
-            failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
+            failLevel: $failLevel,
             logger: (new Logger('mediaprobe'))
                 ->pushHandler(new TestHandler(Level::Info))
                 ->pushProcessor(new PsrLogMessageProcessor()),
@@ -58,8 +49,6 @@ class Media extends RootBlockBase
      * @param ?string $failLevel
      *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
      *   media parsing to stop.
-     *
-     * @throws MediaProbeException
      */
     public static function createFromFile(
         string $path,
@@ -67,7 +56,7 @@ class Media extends RootBlockBase
         ?string $failLevel = null,
     ): Media {
         $dataFile = new DataFile($path);
-        return static::parse($dataFile, $dataFile->typeHints, $externalLogger, $failLevel);
+        return static::createFromDataElement($dataFile, $dataFile->typeHints, $externalLogger, $failLevel);
     }
 
     /**
@@ -82,16 +71,17 @@ class Media extends RootBlockBase
      * @param ?string $failLevel
      *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
      *   media parsing to stop.
-     *
-     * @throws MediaProbeException
      */
-    public static function parse(
+    public static function createFromDataElement(
         DataElement $dataElement,
         array $typeHints = [],
         ?LoggerInterface $externalLogger = null,
         ?string $failLevel = null,
     ): Media {
-        $media = new Media($externalLogger, $failLevel);
+        $media = new Media(
+            externalLogger: $externalLogger, 
+            failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
+        );
         $media->getStopwatch()->start('media-parsing');
         assert($media->debugInfo(['dataElement' => $dataElement]));
 
@@ -108,6 +98,7 @@ class Media extends RootBlockBase
 
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
+        $media->mimeType = (string) $mediaType->collection->getPropertyValue('item');
         $media->setAttribute('mimeType', (string) $mediaType->collection->getPropertyValue('item'));
         $mediaTypeBlock = $media->addBlock($mediaType);
         assert($mediaTypeBlock instanceof BlockInterface);
