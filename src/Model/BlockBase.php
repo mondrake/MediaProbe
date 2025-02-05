@@ -104,6 +104,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     {
         $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
+        // @phpstan-ignore method.notFound
         $this->doParseData($data);
 
         // Invoke post-parse callbacks.

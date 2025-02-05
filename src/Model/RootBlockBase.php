@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
+use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Data\DataFile;
+use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Dumper\DebugDumper;
 use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\ItemDefinition;
@@ -32,7 +35,7 @@ abstract class RootBlockBase extends BlockBase
      * The MIME type.
      */
     protected string $mimeType;
-    
+
     /**
      * @param ItemDefinition $definition
      *   The Item Definition of this Block.
@@ -102,13 +105,24 @@ abstract class RootBlockBase extends BlockBase
 
     public function collectInfo(array $context = []): array
     {
-        $info = parent::collectInfo($context);
+        $info = [];
+        $msg = '';
+
+        if (isset($context['dataElement'])) {
+            if ($context['dataElement'] instanceof DataFile) {
+                $msg .= 'file: ' . basename($context['dataElement']->filePath) . ' ';
+            }
+            $msg .= 'size: {size} byte(s)';
+            $info['size'] = $context['dataElement']->getSize();
+        }
 
         $info['mimeType'] = $this->getMimeType();
 
         if ($info['mimeType']) {
-            $info['_msg'] .= ' MIME type: {mimeType}';
+            $msg .= ' MIME type: {mimeType}';
         }
+
+        $info['_msg'] = $msg;
 
         return $info;
     }

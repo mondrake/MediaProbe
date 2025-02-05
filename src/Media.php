@@ -77,7 +77,7 @@ class Media extends RootBlockBase
         ?string $failLevel = null,
     ): Media {
         $media = new Media(
-            externalLogger: $externalLogger, 
+            externalLogger: $externalLogger,
             failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
         );
 
@@ -90,8 +90,11 @@ class Media extends RootBlockBase
             assert($media->debugInfo(['dataElement' => $dataElement]));
             // Build the Media immediate child object, that represents the actual media. Then
             // parse the media according to the media format.
-            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaTypeCollection));
-            assert($mediaTypeBlock instanceof BlockInterface);
+            $mediaTypeHandler = $mediaTypeCollection->getHandler();
+            $mediaTypeBlock = new $mediaTypeHandler(new ItemDefinition($mediaTypeCollection), $media);
+#            dump($mediaTypeBlock);
+#            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaTypeCollection));
+#            assert($mediaTypeBlock instanceof BlockInterface);
             $mediaTypeBlock->parseData($dataElement);
             $media->level = $mediaTypeBlock->level();
         } catch (MediaProbeException $e) {

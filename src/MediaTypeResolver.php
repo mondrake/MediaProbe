@@ -57,6 +57,6 @@ class MediaTypeResolver
             }
         }
 
-        throw new MediaProbeException(sprintf("Media type '%s' not managed by MediaProbe", $typeHints !== [] ? implode("'|'", $typeHints) : 'unidentified'));
+        throw new MediaProbeException("Media type not managed by MediaProbe");
     }
 }
