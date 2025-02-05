@@ -55,7 +55,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolRawDump =new \DOMDocument();
         $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
-        $media = Media::parseFromFile($testFile);
+        $media = Media::createFromFile($testFile);
 
         $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
 
@@ -114,7 +114,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->fileSystem->mkdir($this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath());
         $rewriteFile = $this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'] . '-rewrite-gd.img';
 
-        $original_media = Media::parseFromFile($testFile);
+        $original_media = Media::createFromFile($testFile);
         $original_media->saveToFile($rewriteFile);
 
         // Test via getimagesize.
@@ -161,9 +161,9 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolRawDump =new \DOMDocument();
         $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
-        $original_media = Media::parseFromFile($testFile);
+        $original_media = Media::createFromFile($testFile);
         $original_media->saveToFile($rewriteFile);
-        $media = Media::parseFromFile($rewriteFile);
+        $media = Media::createFromFile($rewriteFile);
 
         $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
 

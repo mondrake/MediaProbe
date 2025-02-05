@@ -7,10 +7,4 @@ use FileEye\MediaProbe\Model\RootBlockBase;
 
 class StubRootBlock extends RootBlockBase
 {
-    /**
-     * @todo remove, replace by parser
-     */
-    protected function doParseData(DataElement $data): void
-    {
-    }
 }

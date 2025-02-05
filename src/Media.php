@@ -61,12 +61,11 @@ class Media extends RootBlockBase
      *
      * @throws MediaProbeException
      */
-    public static function parseFromFile(
+    public static function createFromFile(
         string $path,
         ?LoggerInterface $externalLogger = null,
         ?string $failLevel = null,
     ): Media {
-        // @todo lock file while reading, capture fstats to prevent overwrites.
         $dataFile = new DataFile($path);
         return static::parse($dataFile, $dataFile->typeHints, $externalLogger, $failLevel);
     }
@@ -94,6 +93,7 @@ class Media extends RootBlockBase
     ): Media {
         $media = new Media($externalLogger, $failLevel);
         $media->getStopwatch()->start('media-parsing');
+        assert($media->debugInfo(['dataElement' => $dataElement]));
 
         // Determine the media type. Stop immediately if not processable.
         try {
@@ -101,7 +101,6 @@ class Media extends RootBlockBase
                 collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
             );
         } catch (MediaProbeException $e) {
-            assert($media->debugInfo(['dataElement' => $dataElement]));
             $media->critical($e->getMessage());
             $media->getStopwatch()->stop('media-parsing');
             return $media;
@@ -110,7 +109,6 @@ class Media extends RootBlockBase
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
         $media->setAttribute('mimeType', (string) $mediaType->collection->getPropertyValue('item'));
-        assert($media->debugInfo(['dataElement' => $dataElement]));
         $mediaTypeBlock = $media->addBlock($mediaType);
         assert($mediaTypeBlock instanceof BlockInterface);
         $mediaTypeBlock->parseData($dataElement);
@@ -118,11 +116,6 @@ class Media extends RootBlockBase
         $media->getStopwatch()->stop('media-parsing');
 
         return $media;
-    }
-
-    protected function doParseData(DataElement $data): void
-    {
-        throw new \LogicException(__METHOD__ . '() is not implemented');
     }
 
     /**

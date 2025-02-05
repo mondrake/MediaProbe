@@ -25,6 +25,7 @@ final class DataFile extends DataElement
     public function __construct(
         public readonly string $filePath,
     ) {
+        // @todo lock file while reading, capture fstats to prevent overwrites.
         $this->fileHandle = new \SplFileObject($this->filePath, 'r');
         $this->start = 0;
         $this->size = $this->fileHandle->fstat()['size'];

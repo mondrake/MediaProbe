@@ -103,20 +103,11 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     {
         $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
-        if ($this->getCollection()->hasProperty('parser')) {
-            $parserClass = $this->getCollection()->getPropertyValue('parser');
-            $parser = new $parserClass($this);
-            $parser->parseData($data);
-        } else {
-            // @todo remove this when full parser model in place.
-            $this->doParseData($data);
-        }
+        $this->doParseData($data);
 
         // Invoke post-parse callbacks.
         $this->executePostParseCallbacks($data);
     }
-
-    abstract protected function doParseData(DataElement $data): void;
 
     /**
      * Invoke post-parse callbacks.
