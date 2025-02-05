@@ -108,6 +108,11 @@ interface ElementInterface
     public function level(): ?Level;
 
     /**
+     * Returns the validation level of this element as a string for dumps.
+     */
+    public function validationLevel(): string
+
+    /**
      * Returns the value of this element, if the element supports it.
      *
      * For a formatted version of the value, use ::toString() instead.

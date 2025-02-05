@@ -7,7 +7,6 @@ use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
-use Monolog\Level;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;

@@ -31,7 +31,6 @@ class ExifUserComment extends Undefined
                 $this->warning('Invalid EXIF text encoding for UserComment.');
             }
         }
-
     }
 
     public function getValue(array $options = []): mixed
