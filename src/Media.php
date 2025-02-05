@@ -95,12 +95,13 @@ class Media extends RootBlockBase
         $media = new Media($externalLogger, $failLevel);
         $media->getStopwatch()->start('media-parsing');
 
-        // Determine the media type. Throws MediaProbeException if not determinable.
+        // Determine the media type. Stop immediately if not processable.
         try {
             $mediaType = new ItemDefinition(
                 collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
             );
         } catch (MediaProbeException $e) {
+            assert($media->debugInfo(['dataElement' => $dataElement]));
             $media->critical($e->getMessage());
             $media->getStopwatch()->stop('media-parsing');
             return $media;
@@ -156,8 +157,15 @@ class Media extends RootBlockBase
     {
         $info = parent::collectInfo($context);
 
+        if ($context['dataElement'] instanceof DataFile) {
+            $info['_msg'] .= ' file: ' . basename($context['dataElement']->filePath);
+        }
+        
         $info['mimeType'] = $this->getAttribute('mimeType');
-        $info['_msg'] .= ' MIME type: {mimeType}';
+
+        if ($info['mimeType']) {
+            $info['_msg'] .= ' MIME type: {mimeType}';
+        }
 
         return $info;
     }
