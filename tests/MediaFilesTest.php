@@ -7,6 +7,7 @@ use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
+use Monolog\Level;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;
@@ -41,7 +42,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     }
 
     #[DataProvider('mediaFileProvider')]
-    public function testParseFromFile($mediaDumpFile)
+    public function testParseFromFile($mediaDumpFile): void
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
@@ -71,7 +72,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     }
 
     #[DataProvider('mediaFileProvider')]
-    public function testParse($mediaDumpFile)
+    public function testParse($mediaDumpFile): void
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
@@ -105,6 +106,10 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     public function testRewriteThroughGd($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
+
+        if ($this->testDump['elements']['validationLevel'] === 'Critical') {
+            $this->markTestSkipped($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
+        }
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
         $this->fileSystem->mkdir($this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath());
@@ -140,6 +145,10 @@ class MediaFilesTest extends MediaProbeTestCaseBase
     public function testRewrite($mediaDumpFile)
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
+
+        if ($this->testDump['elements']['validationLevel'] === 'Critical') {
+            $this->markTestSkipped($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
+        }
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
         $this->fileSystem->mkdir($this->tempWorkDirectory . '/media-samples/image/' . $mediaDumpFile->getRelativePath());

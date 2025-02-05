@@ -118,7 +118,7 @@ class Media extends RootBlockBase
                 collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
             );
         } catch (MediaProbeException $e) {
-            $media->error($e->getMessage());
+            $media->critical($e->getMessage());
             $media->getStopwatch()->stop('media-parsing');
             return $media;
         }

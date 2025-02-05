@@ -5,10 +5,10 @@ elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
     valid: false
-    validationLevel: Error
+    validationLevel: Critical
     collection: Media
 log:
-    ERROR:
+    CRITICAL:
         -
             path: /media
             message: 'Media type not managed by MediaProbe'
