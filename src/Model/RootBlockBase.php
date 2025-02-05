@@ -99,4 +99,17 @@ abstract class RootBlockBase extends BlockBase
     {
         return $this->stopWatch;
     }
+
+    public function collectInfo(array $context = []): array
+    {
+        $info = parent::collectInfo($context);
+
+        $info['mimeType'] = $this->getMimeType();
+
+        if ($info['mimeType']) {
+            $info['_msg'] .= ' MIME type: {mimeType}';
+        }
+
+        return $info;
+    }
 }

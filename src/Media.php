@@ -87,6 +87,7 @@ class Media extends RootBlockBase
             // Determine the media type.
             $mediaTypeCollection = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
             $media->mimeType = (string) $mediaTypeCollection->getPropertyValue('item');
+            assert($media->debugInfo(['dataElement' => $dataElement]));
             // Build the Media immediate child object, that represents the actual media. Then
             // parse the media according to the media format.
             $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaTypeCollection));
@@ -94,9 +95,9 @@ class Media extends RootBlockBase
             $mediaTypeBlock->parseData($dataElement);
             $media->level = $mediaTypeBlock->level();
         } catch (MediaProbeException $e) {
+            assert($media->debugInfo(['dataElement' => $dataElement]));
             $media->critical($e->getMessage());
         }
-        assert($media->debugInfo(['dataElement' => $dataElement]));
 
         $media->getStopwatch()->stop('media-parsing');
 
@@ -121,22 +122,5 @@ class Media extends RootBlockBase
             throw new MediaProbeException('File save failed');
         }
         return $size;
-    }
-
-    public function collectInfo(array $context = []): array
-    {
-        $info = parent::collectInfo($context);
-
-        if ($context['dataElement'] instanceof DataFile) {
-            $info['_msg'] .= ' file: ' . basename($context['dataElement']->filePath);
-        }
-        
-        $info['mimeType'] = $this->getAttribute('mimeType');
-
-        if ($info['mimeType']) {
-            $info['_msg'] .= ' MIME type: {mimeType}';
-        }
-
-        return $info;
     }
 }
