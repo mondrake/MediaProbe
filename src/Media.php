@@ -80,28 +80,29 @@ class Media extends RootBlockBase
             externalLogger: $externalLogger, 
             failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
         );
+
         $media->getStopwatch()->start('media-parsing');
+
+        // Determine the media type.
+        try {
+            $mediaType = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
+            $media->mimeType = (string) $mediaType->getPropertyValue('id');
+        } catch (MediaProbeException $e) {
+            $exceptionMessage = $e->getMessage();
+        }
         assert($media->debugInfo(['dataElement' => $dataElement]));
 
-        // Determine the media type. Stop immediately if not processable.
-        try {
-            $mediaType = new ItemDefinition(
-                collection: MediaTypeResolver::fromDataElement($dataElement, $typeHints),
-            );
-        } catch (MediaProbeException $e) {
-            $media->critical($e->getMessage());
-            $media->getStopwatch()->stop('media-parsing');
-            return $media;
+        if (isset($media->mimeType)) {
+            // Build the Media object and its immediate child, that represents the actual media. Then
+            // parse the media according to the media format.
+            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaType));
+            assert($mediaTypeBlock instanceof BlockInterface);
+            $mediaTypeBlock->parseData($dataElement);
+            $media->level = $mediaTypeBlock->level();
+        } else {
+            $media->critical($exceptionMessage);
         }
 
-        // Build the Media object and its immediate child, that represents the actual media. Then
-        // parse the media according to the media format.
-dump($mediaType->collection);
-        $media->mimeType = (string) $mediaType->collection->getPropertyValue('item');
-        $mediaTypeBlock = $media->addBlock($mediaType);
-        assert($mediaTypeBlock instanceof BlockInterface);
-        $mediaTypeBlock->parseData($dataElement);
-        $media->level = $mediaTypeBlock->level();
         $media->getStopwatch()->stop('media-parsing');
 
         return $media;

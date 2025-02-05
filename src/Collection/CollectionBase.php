@@ -103,6 +103,7 @@ abstract class CollectionBase implements CollectionInterface
         $item_properties = $this->getPropertyValue('items')[$item][$index];
         unset($item_properties['collection']);
         $item_properties['item'] = $item;
+        $item_properties['id'] = $item;
         return CollectionFactory::get($this->getPropertyValue('items')[$item][$index]['collection'], $item_properties);
     }
 
