@@ -50,11 +50,12 @@ final class DataFile extends DataElement
 
     /**
      * Find the most likely MIME type given the file extension.
-     * 
+     *
      * @return list<string>
      */
-    protected function determineMimeTypeHints(): array {
-        $fileParts = explode('.', basename($path));
+    protected function determineMimeTypeHints(): array
+    {
+        $fileParts = explode('.', basename($this->filePath));
         while (array_shift($fileParts) !== null) {
             $extension = strtolower(implode('.', $fileParts));
             $mimeMapExtension = new Extension($extension);
@@ -64,5 +65,6 @@ final class DataFile extends DataElement
                 continue;
             }
         }
+        return [];
     }
 }
