@@ -83,25 +83,20 @@ class Media extends RootBlockBase
 
         $media->getStopwatch()->start('media-parsing');
 
-        // Determine the media type.
         try {
-            $mediaType = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
-            $media->mimeType = (string) $mediaType->getPropertyValue('item');
-        } catch (MediaProbeException $e) {
-            $exceptionMessage = $e->getMessage();
-        }
-        assert($media->debugInfo(['dataElement' => $dataElement]));
-
-        if (isset($media->mimeType)) {
-            // Build the Media object and its immediate child, that represents the actual media. Then
+            // Determine the media type.
+            $mediaTypeCollection = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
+            $media->mimeType = (string) $mediaTypeCollection->getPropertyValue('item');
+            // Build the Media immediate child object, that represents the actual media. Then
             // parse the media according to the media format.
-            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaType));
+            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaTypeCollection));
             assert($mediaTypeBlock instanceof BlockInterface);
             $mediaTypeBlock->parseData($dataElement);
             $media->level = $mediaTypeBlock->level();
-        } else {
-            $media->critical($exceptionMessage);
+        } catch (MediaProbeException $e) {
+            $media->critical($e->getMessage());
         }
+        assert($media->debugInfo(['dataElement' => $dataElement]));
 
         $media->getStopwatch()->stop('media-parsing');
 
