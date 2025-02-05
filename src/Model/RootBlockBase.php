@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
@@ -26,6 +28,11 @@ abstract class RootBlockBase extends BlockBase
      */
     protected DumperInterface $debugDumper;
 
+    /**
+     * The MIME type.
+     */
+    protected string $mimeType;
+    
     /**
      * @param ItemDefinition $definition
      *   The Item Definition of this Block.
@@ -81,6 +88,11 @@ abstract class RootBlockBase extends BlockBase
             }
         }
         return $ret;
+    }
+
+    public function getMimeType(): string
+    {
+        return $this->mimeType;
     }
 
     public function getStopwatch(): Stopwatch

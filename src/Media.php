@@ -23,8 +23,6 @@ use Psr\Log\LoggerInterface;
  */
 class Media extends RootBlockBase
 {
-    public readonly string $mimeType;
-    
     public function __construct(
         ?LoggerInterface $externalLogger,
         ?Level $failLevel,
@@ -98,8 +96,8 @@ class Media extends RootBlockBase
 
         // Build the Media object and its immediate child, that represents the actual media. Then
         // parse the media according to the media format.
+dump($mediaType->collection);
         $media->mimeType = (string) $mediaType->collection->getPropertyValue('item');
-        $media->setAttribute('mimeType', (string) $mediaType->collection->getPropertyValue('item'));
         $mediaTypeBlock = $media->addBlock($mediaType);
         assert($mediaTypeBlock instanceof BlockInterface);
         $mediaTypeBlock->parseData($dataElement);
@@ -107,14 +105,6 @@ class Media extends RootBlockBase
         $media->getStopwatch()->stop('media-parsing');
 
         return $media;
-    }
-
-    /**
-     * Determines the MIME type of the media.
-     */
-    public function getMimeType(): string
-    {
-        return $this->getAttribute('mimeType');
     }
 
     /**
