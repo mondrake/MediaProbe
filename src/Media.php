@@ -7,7 +7,6 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
-use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;

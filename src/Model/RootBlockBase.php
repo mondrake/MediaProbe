@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
-use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Dumper\DebugDumper;
 use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\ItemDefinition;
