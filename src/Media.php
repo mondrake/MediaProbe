@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe;
 
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -68,7 +67,8 @@ class Media extends RootBlockBase
      * @param DataElement $dataElement
      *   The data element providing the data.
      */
-    public function fromDataElement(DataElement $dataElement): Media {
+    public function fromDataElement(DataElement $dataElement): Media
+    {
         $this->getStopwatch()->start('media-parsing');
 
         try {
