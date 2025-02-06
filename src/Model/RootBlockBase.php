@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Dumper\DebugDumper;
 use FileEye\MediaProbe\Dumper\DumperInterface;
@@ -35,8 +36,8 @@ abstract class RootBlockBase extends BlockBase
     protected string $mimeType;
 
     /**
-     * @param ItemDefinition $definition
-     *   The Item Definition of this Block.
+     * @param CollectionInterface $collection
+     *   The Collection of this Block.
      * @param Logger $logger
      *   The internal Monolog logger instance for this Media object.
      * @param ?Level $failLevel
@@ -52,7 +53,7 @@ abstract class RootBlockBase extends BlockBase
      *   (Optional) A Symfony stopwatch.
      */
     public function __construct(
-        ItemDefinition $definition,
+        CollectionInterface $collection,
         protected Logger $logger,
         protected ?Level $failLevel = null,
         protected ?LoggerInterface $externalLogger = null,
@@ -60,11 +61,11 @@ abstract class RootBlockBase extends BlockBase
     ) {
         $doc = new \DOMDocument();
         $doc->registerNodeClass(\DOMElement::class, DOMElement::class);
-        $this->DOMNode = $doc->createElement($definition->collection->getPropertyValue('DOMNode'));
+        $this->DOMNode = $doc->createElement($collection->getPropertyValue('DOMNode'));
         $doc->appendChild($this->DOMNode);
         $this->DOMNode->setMediaProbeElement($this);
         $this->XPath = new \DOMXPath($this->DOMNode->ownerDocument);
-        parent::__construct($definition);
+        parent::__construct(new ItemDefinition($collection));
 
         $this->debugDumper = new DebugDumper();
     }

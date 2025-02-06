@@ -86,7 +86,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->exiftoolRawDump->loadXML(file_get_contents($exiftoolRawDumpFile));
 
         $testDataElement = new DataString(file_get_contents($testFile));
-        $media = Media::createFromDataElement($testDataElement);
+        $media = (new Media())->fromDataElement($testDataElement);
 
         $this->assertEquals($this->testDump['mimeType'], $media->getMimeType());
 

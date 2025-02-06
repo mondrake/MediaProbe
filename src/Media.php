@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe;
 
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -23,11 +24,11 @@ use Psr\Log\LoggerInterface;
 class Media extends RootBlockBase
 {
     public function __construct(
-        ?LoggerInterface $externalLogger,
-        ?Level $failLevel,
+        ?Level $failLevel = null,
+        ?LoggerInterface $externalLogger = null,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(CollectionFactory::get('Media')),
+            collection: CollectionFactory::get('Media'),
             failLevel: $failLevel,
             logger: (new Logger('mediaprobe'))
                 ->pushHandler(new TestHandler(Level::Info))
@@ -39,7 +40,7 @@ class Media extends RootBlockBase
     /**
      * Creates a Media object from a file.
      *
-     * @param string $path
+     * @param string $filePath
      *   The path to a media file on the file system.
      * @param ?LoggerInterface $externalLogger
      *   (Optional) a PSR-3 compliant logger callback.
@@ -48,12 +49,17 @@ class Media extends RootBlockBase
      *   media parsing to stop.
      */
     public static function createFromFile(
-        string $path,
+        string $filePath,
         ?LoggerInterface $externalLogger = null,
         ?string $failLevel = null,
     ): Media {
-        $dataFile = new DataFile($path);
-        return static::createFromDataElement($dataFile, $dataFile->typeHints, $externalLogger, $failLevel);
+        $dataFile = new DataFile($filePath);
+        $media = new Media(
+            failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
+            externalLogger: $externalLogger,
+        );
+        $media->fromDataElement($dataFile);
+        return $media;
     }
 
     /**
@@ -61,55 +67,35 @@ class Media extends RootBlockBase
      *
      * @param DataElement $dataElement
      *   The data element providing the data.
-     * @param list<string> $typeHints
-     *   (Optional) a list of most likely MIME types.
-     * @param ?LoggerInterface $externalLogger
-     *   (Optional) a PSR-3 compliant logger callback.
-     * @param ?string $failLevel
-     *   (Optional) a PSR-3 compliant log level. Any log entry at this level or above will force
-     *   media parsing to stop.
      */
-    public static function createFromDataElement(
-        DataElement $dataElement,
-        array $typeHints = [],
-        ?LoggerInterface $externalLogger = null,
-        ?string $failLevel = null,
-    ): Media {
-        $media = new Media(
-            externalLogger: $externalLogger,
-            failLevel: $failLevel ? Logger::toMonologLevel($failLevel) : null,
-        );
-
-        $media->getStopwatch()->start('media-parsing');
+    public function fromDataElement(DataElement $dataElement): Media {
+        $this->getStopwatch()->start('media-parsing');
 
         try {
             // Determine the media type.
-            $mediaTypeCollection = MediaTypeResolver::fromDataElement($dataElement, $typeHints);
-            $media->mimeType = (string) $mediaTypeCollection->getPropertyValue('mimeType');
-            assert($media->debugInfo(['dataElement' => $dataElement]));
+            $mediaTypeCollection = MediaTypeResolver::fromDataElement($dataElement);
+            $this->mimeType = (string) $mediaTypeCollection->getPropertyValue('mimeType');
+            assert($this->debugInfo(['dataElement' => $dataElement]));
             // Build the Media immediate child object, that represents the actual media. Then
             // parse the media according to the media format.
             $mediaTypeHandler = $mediaTypeCollection->getHandler();
-            $mediaTypeBlock = new $mediaTypeHandler(new ItemDefinition($mediaTypeCollection), $media);
-#            dump($mediaTypeBlock);
-#            $mediaTypeBlock = $media->addBlock(new ItemDefinition($mediaTypeCollection));
-#            assert($mediaTypeBlock instanceof BlockInterface);
+            $mediaTypeBlock = new $mediaTypeHandler(new ItemDefinition($mediaTypeCollection), $this);
             $mediaTypeBlock->parseData($dataElement);
-            $media->level = $mediaTypeBlock->level();
+            $this->level = $mediaTypeBlock->level();
         } catch (MediaProbeException $e) {
-            assert($media->debugInfo(['dataElement' => $dataElement]));
-            $media->critical($e->getMessage());
+            assert($this->debugInfo(['dataElement' => $dataElement]));
+            $this->critical($e->getMessage());
         }
 
-        $media->getStopwatch()->stop('media-parsing');
+        $this->getStopwatch()->stop('media-parsing');
 
-        return $media;
+        return $this;
     }
 
     /**
      * Save the Media object as a file.
      *
-     * @param string $path
+     * @param string $filePath
      *   The path to the media file on the file system.
      *
      * @return int
@@ -117,9 +103,9 @@ class Media extends RootBlockBase
      *
      * @throws MediaProbeException
      */
-    public function saveToFile(string $path): int
+    public function saveToFile(string $filePath): int
     {
-        $size = file_put_contents($path, $this->toBytes());
+        $size = file_put_contents($filePath, $this->toBytes());
         if ($size === false) {
             throw new MediaProbeException('File save failed');
         }
