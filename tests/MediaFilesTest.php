@@ -107,7 +107,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         if ($this->testDump['elements']['validationLevel'] === 'Critical') {
-            $this->markTestSkipped($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
+            $this->markTestIncomplete($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
         }
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];
@@ -146,7 +146,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
 
         if ($this->testDump['elements']['validationLevel'] === 'Critical') {
-            $this->markTestSkipped($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
+            $this->markTestIncomplete($this->testDump['fileName'] . ' of MIME type \'' . $this->testDump['mimeType'] . '\' has validation level \'' . $this->testDump['elements']['validationLevel'] . '\' and can not be tested for rewriting.');
         }
 
         $testFile = dirname(__FILE__) . '/media-samples/image/' . $mediaDumpFile->getRelativePath() . '/' . $this->testDump['fileName'];

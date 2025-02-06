@@ -56,7 +56,7 @@ final class DataFile extends DataElement
      */
     protected function determineMimeTypeHints(): array
     {
-        $fileParts = explode('.', basename($this->filePath));
+        $fileParts = explode('.', $this->fileHandle->getFileName());
         while (array_shift($fileParts) !== null) {
             $extension = strtolower(implode('.', $fileParts));
             $mimeMapExtension = new Extension($extension);
