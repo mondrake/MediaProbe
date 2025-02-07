@@ -74,7 +74,7 @@ class Media extends RootBlockBase
             // parse the media according to the media format.
             $mediaTypeHandler = $mediaTypeCollection->getHandler();
             $mediaTypeBlock = new $mediaTypeHandler(
-                collection: $mediaTypeCollection, 
+                collection: $mediaTypeCollection,
                 parent: $this,
             );
             $mediaTypeBlock->fromDataElement($dataElement);
@@ -90,7 +90,7 @@ class Media extends RootBlockBase
         return $this;
     }
 
-    public function graftBlock($mediaTypeBlock): void 
+    public function graftBlock($mediaTypeBlock): void
     {
         $this->DOMNode->appendChild($mediaTypeBlock->DOMNode);
     }

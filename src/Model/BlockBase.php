@@ -10,6 +10,7 @@ use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -45,7 +46,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         ItemDefinition $definition,
         ?BlockInterface $parent = null,
         ?BlockInterface $reference = null,
-        bool $graft = TRUE,
+        bool $graft = true,
     ) {
         $this->definition = $definition;
 

@@ -45,10 +45,10 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
      *            before the reference element.
      */
     public function __construct(
-        string $dom_node_name, 
-        protected ?ElementInterface $parent = null, 
-        ?ElementInterface $reference = null, 
-        bool $graft = TRUE,
+        string $dom_node_name,
+        protected ?ElementInterface $parent = null,
+        ?ElementInterface $reference = null,
+        bool $graft = true,
     ) {
         // If $parent is null, this Element is the root of the DOM document that
         // stores the media structure.
@@ -87,9 +87,11 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         $domNode = $this->DOMNode;
         assert($domNode instanceof DOMElement);
         if ($domNode->getMediaProbeElement() !== $this->getRootElement()) {
-            $parentDomNode = $this->DOMNode->parentNode;
-            assert($parentDomNode instanceof DOMElement);
-            return $parentDomNode ? $parentDomNode->getMediaProbeElement() : $this->parent;
+            if ($parentDomNode = $this->DOMNode->parentNode) {
+                assert($parentDomNode instanceof DOMElement);
+                return $parentDomNode->getMediaProbeElement();
+            }
+            return $this->parent;
         }
         return null;
     }
