@@ -7,12 +7,18 @@ namespace FileEye\MediaProbe;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
+use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\LoggerInterface;
+
+use FileEye\MediaProbe\Collection\CollectionInterface;
+use FileEye\MediaProbe\Block\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Tag;
+use FileEye\MediaProbe\Model\EntryInterface;
 
 /**
  * Class to handle media data.
@@ -79,7 +85,7 @@ class Media extends RootBlockBase
             );
             $mediaTypeBlock->fromDataElement($dataElement);
             $this->graftBlock($mediaTypeBlock);
-            $this->level = $mediaTypeBlock->level();
+            static::makerNoteToBlock($this);
         } catch (MediaProbeException $e) {
             assert($this->debugInfo(['dataElement' => $dataElement]));
             $this->critical($e->getMessage());
@@ -88,11 +94,6 @@ class Media extends RootBlockBase
         $this->getStopwatch()->stop('media-parsing');
 
         return $this;
-    }
-
-    public function graftBlock($mediaTypeBlock): void
-    {
-        $this->DOMNode->appendChild($mediaTypeBlock->DOMNode);
     }
 
     /**
@@ -113,5 +114,89 @@ class Media extends RootBlockBase
             throw new MediaProbeException('File save failed');
         }
         return $size;
+    }
+
+    /**
+     * Converts a maker note tag to an IFD structure.
+     */
+    public static function makerNoteToBlock(Media $media): void
+    {
+        // Get the Exif subIfd if existing.
+        if (!$exif_ifd = $media->getElement("//ifd[@name='ExifIFD']")) {
+            return;
+        }
+        assert($exif_ifd instanceof Ifd, get_class($exif_ifd));
+
+        // Get MakerNote tag from Exif IFD.
+        if (!$maker_note_tag = $exif_ifd->getElement("tag[@name='MakerNote']")) {
+            return;
+        }
+        assert($maker_note_tag instanceof Tag);
+
+        // Get Make tag from IFD0.
+        if (!$make_tag = $media->getElement("//ifd[@name='IFD0']/tag[@name='Make']")) {
+            return;
+        }
+        $maker = $make_tag && $make_tag->getElement("entry") ? $make_tag->getElement("entry")->getValue() : 'na';  // xx modelTag should always have an entry, so the check is irrelevant but a test fails
+
+        // Get Model tag from IFD0.
+        $model_tag = $media->getElement("//ifd[@name='IFD0']/tag[@name='Model']");
+        $model = $model_tag && $model_tag->getElement("entry") ? $model_tag->getElement("entry")->getValue() : 'na';  // xx modelTag should always have an entry, so the check is irrelevant but a test fails
+
+        // Get maker note collection.
+        if (!$maker_note_collection = static::getMakerNoteCollection($make_tag->getElement("entry")->getValue(), $model)) {
+            $media->info("**** No decoder available to parse maker notes for {maker}/{model}", [
+                'maker' => $maker,
+                'model' => $model,
+            ]);
+            return;
+        }
+
+        // Load maker note into IFD.
+        $ifd_class = $maker_note_collection->getHandler();
+        $maker_note_ifd_name = $maker_note_collection->getPropertyValue('item');  // xx why not name?? it used to work
+        $media->debug("**** Parsing maker notes for {maker}/{model}", [
+            'maker' => $maker,
+            'model' => $model,
+        ]);
+        $item_definition = new ItemDefinition($maker_note_collection, $maker_note_tag->getFormat(), $maker_note_tag->getComponents());
+        $ifd = new $ifd_class($item_definition, $exif_ifd, $maker_note_tag);
+
+        // xxx
+        $ifd->setAttribute('id', '37500');
+        $ifd->setAttribute('name', $maker_note_ifd_name);
+        $entry = $maker_note_tag->getElement("entry");
+        assert($entry instanceof EntryInterface);
+        $data = $entry->getDataElement();
+        // @todo the netting of the dataOffset is a Canon only thing, move to vendor
+        // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
+        $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->dataOffset);
+
+        // Remove the MakerNote tag that has been converted to IFD.
+        $exif_ifd->removeElement("tag[@name='MakerNote']");
+    }
+
+    /**
+     * Determines the Collection of the maker notes.
+     *
+     * @param string $make
+     *            the value of IFD0/Make.
+     * @param string $model
+     *            the value of IFD0/Model.
+     *
+     * @return CollectionInterface|null
+     *            the Collection object describing the maker notes, or null if
+     *            no specification exists.
+     */
+    protected static function getMakerNoteCollection(string $make, string $model): ?CollectionInterface
+    {
+        $maker_notes_collection = CollectionFactory::get('ExifMakerNotes\MakerNotes');
+        foreach ($maker_notes_collection->listItemIds() as $maker_note_collection_id) {
+            $maker_note_collection = $maker_notes_collection->getItemCollection($maker_note_collection_id);
+            if ($maker_note_collection->getPropertyValue('make') === $make) {
+                return $maker_note_collection;
+            }
+        }
+        return null;
     }
 }

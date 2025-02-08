@@ -4,20 +4,17 @@ namespace FileEye\MediaProbe\Block\Jpeg;
 
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockBase;
-use FileEye\MediaProbe\Model\MediaTypeBlockInterface;
-use FileEye\MediaProbe\Model\RootBlockBase;
+use FileEye\MediaProbe\Model\MediaTypeBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Class for handling an image/jpeg MIME type data.
  */
-class Jpeg extends BlockBase implements MediaTypeBlockInterface
+class Jpeg extends MediaTypeBlockBase
 {
     /**
      * JPEG delimiter.
@@ -28,13 +25,6 @@ class Jpeg extends BlockBase implements MediaTypeBlockInterface
      * JPEG header.
      */
     const JPEG_HEADER = "\xFF\xD8\xFF";
-
-    public function __construct(
-        protected CollectionInterface $collection,
-        RootBlockBase $parent,
-    ) {
-        parent::__construct(new ItemDefinition($collection), $parent, null, false);
-    }
 
     public static function isDataMatchingMediaType(DataElement $dataElement): bool
     {

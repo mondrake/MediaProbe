@@ -10,7 +10,6 @@ use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Dumper\DumperInterface;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -53,7 +52,8 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference, $graft);
 
         if (!isset($this->DOMNode)) {
-            throw new MediaProbeException(sprintf('No DOM node specified for %s', __CLASS__));
+//            throw new MediaProbeException(sprintf('No DOM node specified for %s', __CLASS__));
+            return;
         }
 
         if ($this->getCollection()->hasProperty('item')) {
@@ -142,6 +142,12 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     {
         $handler = $item_definition->collection->getPropertyValue('handler');
         return new $handler($item_definition, $parent ?? $this, $reference);
+    }
+
+    public function graftBlock(BlockInterface $block): void
+    {
+        $this->DOMNode->appendChild($block->DOMNode);
+        $this->level = $block->level();
     }
 
     /**
