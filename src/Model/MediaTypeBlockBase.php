@@ -13,7 +13,7 @@ use FileEye\MediaProbe\ItemDefinition;
 abstract class MediaTypeBlockBase extends BlockBase implements MediaTypeBlockInterface
 {
     public function __construct(
-        protected CollectionInterface $collection,
+        CollectionInterface $collection,
         BlockBase $parent,
     ) {
         parent::__construct(new ItemDefinition($collection), $parent, null, false);

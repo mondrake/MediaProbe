@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe;
 
+use FileEye\MediaProbe\Block\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
-use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\LoggerInterface;
-
-use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\Block\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Tiff\Tag;
-use FileEye\MediaProbe\Model\EntryInterface;
 
 /**
  * Class to handle media data.

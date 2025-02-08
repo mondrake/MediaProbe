@@ -146,6 +146,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
 
     public function graftBlock(BlockInterface $block): void
     {
+        assert($block instanceof BlockBase);
         $this->DOMNode->appendChild($block->DOMNode);
         $this->level = $block->level();
     }

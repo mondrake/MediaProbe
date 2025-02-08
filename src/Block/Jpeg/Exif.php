@@ -7,7 +7,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
 use FileEye\MediaProbe\Model\BlockBase;
-use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
