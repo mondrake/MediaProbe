@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Block\Tiff;
 
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
+use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Thumbnail;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
@@ -14,20 +15,35 @@ use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
+use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
+use FileEye\MediaProbe\Collection\CollectionInterface;
 
 /**
  * Class representing an Image File Directory (IFD).
  */
 class Ifd extends ListBase
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null, $xxx = 0): void
+    public function __construct(
+        public readonly CollectionInterface $collection,
+        public readonly int $format,
+        public readonly int $tagsCount,
+        public readonly int $dataOffset,
+        public readonly int $ifdOffset,
+        public readonly int $sequence,
+        Tiff|Ifd|RootBlockBase $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition($this->collection, $this->format, $this->tagsCount, $this->dataOffset, $this->ifdOffset, $this->sequence),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
+    public function fromDataElement(DataElement $dataElement): static
     {
-        $offset = $this->getDefinition()->dataOffset;
+        $offset = $this->dataOffset;
 
         // Get the number of entries.
         $n = $this->getItemsCountFromData($dataElement, $offset);
@@ -36,8 +52,8 @@ class Ifd extends ListBase
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
-            $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, $xxx, 'Tiff\IfdAny');
-            $item_class = $item_definition->collection->getPropertyValue('handler');
+            $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, 0, 'Tiff\IfdAny');
+            $item_class = $item_definition->collection->getHandler();
 
             // Check data is accessible, warn otherwise.
             if ($item_definition->dataOffset >= $dataElement->getSize()) {
@@ -72,14 +88,24 @@ class Ifd extends ListBase
             }
 
             // Adds the item to the DOM.
-            $item = new $item_class($item_definition, $this);
             try {
                 if (is_a($item_class, Ifd::class, true)) {
-                    $item->parseData($dataElement);
+                    $item = new $item_class(
+                        collection: $item_definition->collection,
+                        format: $item_definition->format,
+                        tagsCount: $item_definition->valuesCount,
+                        dataOffset: $item_definition->dataOffset,
+                        ifdOffset: $item_definition->itemDefinitionOffset,
+                        sequence: $item_definition->sequence,
+                        parent: $this,
+                    );
+                    $item->fromDataElement($dataElement);
+                    $this->graftBlock($item);
                 } else {
                     // In case of an IFD terminator item entry, i.e. zero
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
+                    $item = new $item_class($item_definition, $this);
                     $item_data_window_size = $item_definition->valuesCount > 0 ? $item_definition->getSize() : 4;
                     $item->parseData($dataElement, $item_definition->dataOffset, $item_data_window_size);
                 }
@@ -90,6 +116,8 @@ class Ifd extends ListBase
 
         // Invoke post-load callbacks.
         $this->executePostParseCallbacks($dataElement);
+
+        return $this;
     }
 
     /**
@@ -363,7 +391,7 @@ class Ifd extends ListBase
 
         $msg = '#{seq} {node}:{name}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -374,7 +402,7 @@ class Ifd extends ListBase
         }
 
         if (isset($context['dataElement']) && $context['dataElement'] instanceof DataWindow) {
-            $info['offset'] = $context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset)));
+            $info['offset'] = $context['dataElement']->getAbsoluteOffset($this->dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($this->dataOffset)));
         }
 
         $info['tags'] = $context['itemsCount'] ?? 'n/a';
