@@ -147,8 +147,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     public function graftBlock(
         BlockInterface $block,
         ?BlockInterface $reference = null,
-    ): void
-    {
+    ): void {
         assert($block instanceof BlockBase);
         if ($reference) {
             assert($reference instanceof BlockBase);

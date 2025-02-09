@@ -2,10 +2,10 @@
 
 namespace FileEye\MediaProbe\Block\Jpeg;
 
-use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Block\Media\Jpeg;
+use FileEye\MediaProbe\Model\BlockBase;
 
 /**
  * Abstract class for JPEG data segments.
