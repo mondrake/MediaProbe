@@ -4,13 +4,13 @@ fileContentHash: b932dd63372af03aef507f06ffd8df1d8e6f031d71a572a0d975eee4df6380a
 elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
-    validationLevel: Warning
+    validationLevel: Error
     collection: Media
     elements:
         -
             path: /media/jpeg
             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg
-            validationLevel: Warning
+            validationLevel: Error
             id: image/jpeg
             collection: Media\Jpeg
             elements:
@@ -49,7 +49,7 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:APP1:225'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1
-                    validationLevel: Warning
+                    validationLevel: Error
                     name: APP1
                     id: '225'
                     collection: Media\Jpeg\SegmentApp1
@@ -57,14 +57,14 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
                             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\ExifApp
-                            validationLevel: Warning
+                            validationLevel: Error
                             id: ExifApp
                             collection: Media\Jpeg\ExifApp
                             elements:
                                 -
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff
-                                    validationLevel: Warning
+                                    validationLevel: Error
                                     collection: Media\Tiff
                                     elements:
                                         -
@@ -804,6 +804,10 @@ elements:
                             bytesHash: cde66e78e5419dea74df7cf43d9aa876b8c669d40067992e719cef90ac5f3fe0
                             text: '2 byte(s) of data'
 log:
+    ERROR:
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
+            message: 'Could not determine number of entries for IFD1, overflow'
     WARNING:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
@@ -817,9 +821,6 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880'
             message: "Found 6 data components, expected 7 for item 'OffsetTime' in 'ExifIFD'"
-        -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
-            message: 'Could not determine number of entries for IFD1, overflow'
     NOTICE:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271/entry'
