@@ -5,14 +5,14 @@ elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
     valid: true
-    validationLevel: Info
+    validationLevel: Notice
     collection: Media
     elements:
         -
             path: /media/jpeg
             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg
             valid: true
-            validationLevel: OK
+            validationLevel: Notice
             id: image/jpeg
             collection: Media\Jpeg
             elements:
@@ -867,8 +867,8 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOS:218'
                     handlerClass: FileEye\MediaProbe\Block\Jpeg\SegmentSos
-                    valid: false
-                    validationLevel: Warning
+                    valid: true
+                    validationLevel: OK
                     name: SOS
                     id: '218'
                     collection: Jpeg\SegmentSos
@@ -917,9 +917,9 @@ elements:
                             bytesHash: b77e7d4c8defaad2a51160073c8d12c9c929b61cffb11ba9d56de6703ae9a8d3
                             text: '1396 byte(s) of data'
 log:
-    WARNING:
+    NOTICE:
         -
-            path: '/media/jpeg/jpegSegment:SOS:218'
+            path: /media/jpeg
             message: 'Found trailing content after EOI: 1396 bytes'
     INFO:
         -

@@ -10,14 +10,14 @@ elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
     valid: true
-    validationLevel: OK
+    validationLevel: Notice
     collection: Media
     elements:
         -
             path: /media/jpeg
             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg
             valid: true
-            validationLevel: OK
+            validationLevel: Notice
             id: image/jpeg
             collection: Media\Jpeg
             elements:
@@ -812,8 +812,8 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOS:218'
                     handlerClass: FileEye\MediaProbe\Block\Jpeg\SegmentSos
-                    valid: false
-                    validationLevel: Warning
+                    valid: true
+                    validationLevel: OK
                     name: SOS
                     id: '218'
                     collection: Jpeg\SegmentSos
@@ -890,8 +890,9 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageLength:514'
             message: "Found Long data format, expected Undefined for item 'OtherImageLength' in 'ExifIFD'"
+    NOTICE:
         -
-            path: '/media/jpeg/jpegSegment:SOS:218'
+            path: /media/jpeg
             message: 'Found trailing content after EOI: 3504 bytes'
 gdInfo:
     0: 2560
