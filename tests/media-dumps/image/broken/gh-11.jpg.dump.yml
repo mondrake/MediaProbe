@@ -37,15 +37,15 @@ fileContentHash: 5818c6c496e7ea0b168334be7c7cec0db53404c9bc1c05a078096708b6d854f
 elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
-    valid: true
-    validationLevel: Info
+    valid: false
+    validationLevel: Warning
     collection: Media
     elements:
         -
             path: /media/jpeg
             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg
-            valid: true
-            validationLevel: OK
+            valid: false
+            validationLevel: Warning
             id: image/jpeg
             collection: Media\Jpeg
             elements:
@@ -88,8 +88,8 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:APP1:225'
                     handlerClass: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
-                    valid: true
-                    validationLevel: OK
+                    valid: false
+                    validationLevel: Warning
                     name: APP1
                     id: '225'
                     collection: Jpeg\SegmentApp1
