@@ -69,8 +69,8 @@ class GH21Test extends MediaProbeTestCaseBase
         $out_com_segment = $out_jpeg->getElement("jpegSegment[@name='COM']");
 
         // Insert the APP1 segment before the COM one.
-        $app1_segment_definition = new ItemDefinition($out_jpeg->getCollection()->getItemCollectionByName('APP1'));
-        $out_app1_segment = new SegmentApp1($app1_segment_definition, $out_jpeg, $out_com_segment);
+        $out_app1_segment = new SegmentApp1($out_jpeg->collection->getItemCollectionByName('APP1'), $out_jpeg);
+        $out_jpeg->graftBlock($out_app1_segment, $out_com_segment);
 
         // Add the EXIF block to the APP1 segment.
         $exif_definition = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));

@@ -3,15 +3,26 @@
 namespace FileEye\MediaProbe\Block\Jpeg;
 
 use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Collection\CollectionInterface;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Block\Media\Jpeg;
 
 /**
  * Abstract class for JPEG data segments.
  */
 abstract class SegmentBase extends BlockBase
 {
-    /**
-     * {@inheritdoc}
-     */
+    public function __construct(
+        public readonly CollectionInterface $collection,
+        Jpeg $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition($this->collection),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
     protected function getContextPathSegmentPattern(): string
     {
         return '/{DOMNode}:{name}:{id}';

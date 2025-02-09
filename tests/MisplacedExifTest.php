@@ -25,8 +25,8 @@ class MisplacedExifTest extends MediaProbeTestCaseBase
         $this->assertInstanceOf(Exif::class, $app1[1]->getElement("exif"));
 
         // Add a new APP1 segment.
-        $app1_segment_definition = new ItemDefinition(CollectionFactory::get('Jpeg\SegmentApp1'));
-        $app1_segment = new SegmentApp1($app1_segment_definition, $jpeg);
+        $app1_segment = new SegmentApp1(CollectionFactory::get('Jpeg\SegmentApp1'), $jpeg);
+        $jpeg->graftBlock($app1_segment);
         $exif_definition = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
         $newExif = new Exif($exif_definition, $app1_segment);
 

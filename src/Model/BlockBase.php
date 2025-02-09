@@ -144,12 +144,20 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return new $handler($item_definition, $parent ?? $this, $reference);
     }
 
-    public function graftBlock(BlockInterface $block): void
+    public function graftBlock(
+        BlockInterface $block,
+        ?BlockInterface $reference = null,
+    ): void
     {
         assert($block instanceof BlockBase);
-        $this->DOMNode->appendChild($block->DOMNode);
+        if ($reference) {
+            assert($reference instanceof BlockBase);
+            $this->DOMNode->insertBefore($block->DOMNode, $reference->DOMNode);
+        } else {
+            $this->DOMNode->appendChild($block->DOMNode);
+        }
 
-        if (!isset($this->level) || $block->level()->value > $this->level->value) {
+        if (!isset($this->level) || ($block->level() && $block->level()->value > $this->level->value)) {
             $this->level = $block->level();
         }
     }
