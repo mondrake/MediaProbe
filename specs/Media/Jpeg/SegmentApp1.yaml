@@ -3,5 +3,5 @@ title: 'JPEG Application segment 1'
 payload: variable
 DOMNode: jpegSegment
 items:
-    Exif:
+    ExifApp:
         collection: Media\Jpeg\ExifApp

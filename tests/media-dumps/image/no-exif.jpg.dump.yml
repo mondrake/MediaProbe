@@ -23,7 +23,7 @@ elements:
                     validationLevel: OK
                     name: SOI
                     id: '216'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOI:216/entry'
@@ -41,7 +41,7 @@ elements:
                     validationLevel: OK
                     name: APP0
                     id: '224'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP0:224/entry'
@@ -59,7 +59,7 @@ elements:
                     validationLevel: OK
                     name: COM
                     id: '254'
-                    collection: Jpeg\SegmentCom
+                    collection: Media\Jpeg\SegmentCom
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:COM:254/entry'
@@ -77,7 +77,7 @@ elements:
                     validationLevel: OK
                     name: DQT
                     id: '219'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DQT:219/entry'
@@ -95,7 +95,7 @@ elements:
                     validationLevel: OK
                     name: DQT
                     id: '219'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DQT:219/entry'
@@ -113,7 +113,7 @@ elements:
                     validationLevel: OK
                     name: SOF0
                     id: '192'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOF0:192/entry'
@@ -131,7 +131,7 @@ elements:
                     validationLevel: OK
                     name: DHT
                     id: '196'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
@@ -149,7 +149,7 @@ elements:
                     validationLevel: OK
                     name: DHT
                     id: '196'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
@@ -167,7 +167,7 @@ elements:
                     validationLevel: OK
                     name: DHT
                     id: '196'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
@@ -185,7 +185,7 @@ elements:
                     validationLevel: OK
                     name: DHT
                     id: '196'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
@@ -203,7 +203,7 @@ elements:
                     validationLevel: OK
                     name: SOS
                     id: '218'
-                    collection: Jpeg\SegmentSos
+                    collection: Media\Jpeg\SegmentSos
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOS:218/entry'
@@ -221,7 +221,7 @@ elements:
                     validationLevel: OK
                     name: EOI
                     id: '217'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:EOI:217/entry'

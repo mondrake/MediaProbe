@@ -23,7 +23,7 @@ elements:
                     validationLevel: OK
                     name: SOI
                     id: '216'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOI:216/entry'
@@ -41,14 +41,15 @@ elements:
                     validationLevel: OK
                     name: APP1
                     id: '225'
-                    collection: Jpeg\SegmentApp1
+                    collection: Media\Jpeg\SegmentApp1
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
-                            handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Exif
+                            handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\ExifApp
                             valid: true
                             validationLevel: OK
-                            collection: Jpeg\Exif
+                            id: ExifApp
+                            collection: Media\Jpeg\ExifApp
                             elements:
                                 -
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
@@ -730,7 +731,7 @@ elements:
                     validationLevel: OK
                     name: APP12
                     id: '236'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP12:236/entry'
@@ -748,7 +749,7 @@ elements:
                     validationLevel: OK
                     name: APP1
                     id: '225'
-                    collection: Jpeg\SegmentApp1
+                    collection: Media\Jpeg\SegmentApp1
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/entry'
@@ -766,7 +767,7 @@ elements:
                     validationLevel: OK
                     name: APP2
                     id: '226'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP2:226/entry'
@@ -784,7 +785,7 @@ elements:
                     validationLevel: OK
                     name: APP14
                     id: '238'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP14:238/entry'
@@ -802,7 +803,7 @@ elements:
                     validationLevel: OK
                     name: DQT
                     id: '219'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DQT:219/entry'
@@ -820,7 +821,7 @@ elements:
                     validationLevel: OK
                     name: SOF0
                     id: '192'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOF0:192/entry'
@@ -838,7 +839,7 @@ elements:
                     validationLevel: OK
                     name: DHT
                     id: '196'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
@@ -856,7 +857,7 @@ elements:
                     validationLevel: OK
                     name: SOS
                     id: '218'
-                    collection: Jpeg\SegmentSos
+                    collection: Media\Jpeg\SegmentSos
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOS:218/entry'
@@ -874,7 +875,7 @@ elements:
                     validationLevel: OK
                     name: EOI
                     id: '217'
-                    collection: Jpeg\Segment
+                    collection: Media\Jpeg\Segment
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:EOI:217/entry'

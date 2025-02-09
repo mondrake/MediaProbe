@@ -21,7 +21,7 @@ class SegmentApp1 extends CollectionBase {
   'handler' => 'FileEye\\MediaProbe\\Block\\Media\\Jpeg\\SegmentApp1',
   'items' =>
   array (
-    'Exif' =>
+    'ExifApp' =>
     array (
       0 =>
       array (

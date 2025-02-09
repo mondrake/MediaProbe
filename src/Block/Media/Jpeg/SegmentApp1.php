@@ -19,7 +19,7 @@ class SegmentApp1 extends SegmentBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
         // If we have an Exif table, parse it.
         if (ExifApp::isExifSegment($dataElement, 4)) {
-            $exifAppCollection = $this->collection->getItemCollection('Exif');
+            $exifAppCollection = $this->collection->getItemCollection('ExifApp');
             $exifAppHandler = $exifAppCollection->getHandler();
             $exifBlock = new $exifAppHandler(
                 collection: $exifAppCollection,
