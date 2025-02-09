@@ -8,6 +8,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Entry\Core\Undefined;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use FileEye\MediaProbe\Data\DataWindow;
 
 /**
  * Class representing a JPEG APP1 segment.
@@ -20,10 +21,15 @@ class SegmentApp1 extends SegmentBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
         // If we have an Exif table, parse it.
         if (Exif::isExifSegment($dataElement, 4)) {
-            $exif = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
-            $exifBlock = $this->addBlock($exif);
+            $exifAppCollection = CollectionFactory::get('Jpeg\Exif');
+            $exifAppHandler = $exifAppCollection->getHandler();
+            $exifBlock = new $exifAppHandler(
+                collection: $exifAppCollection,
+                parent: $this,
+            );
             assert($exifBlock instanceof Exif);
-            $exifBlock->parseData($dataElement, 4, $dataElement->getSize() - 4);
+            $exifBlock->fromDataElement(new DataWindow($dataElement, 4, $dataElement->getSize() - 4));
+            $this->graftBlock($exifBlock);
         } else {
             // We store the data as normal JPEG content if it could not be
             // parsed as Exif data.

@@ -73,12 +73,11 @@ class GH21Test extends MediaProbeTestCaseBase
         $out_jpeg->graftBlock($out_app1_segment, $out_com_segment);
 
         // Add the EXIF block to the APP1 segment.
-        $exif_definition = new ItemDefinition(CollectionFactory::get('Jpeg\Exif'));
-        $exif_block = new Exif($exif_definition, $out_app1_segment);
-        $exif_data = $input_exif->toBytes();
-        $data_string = new DataString($exif_data);
+        $exif_block = new Exif(CollectionFactory::get('Jpeg\Exif'), $out_app1_segment);
+        $data_string = new DataString($input_exif->toBytes());
         $data_string->setByteOrder(ConvertBytes::BIG_ENDIAN);
-        $exif_block->parseData($data_string);
+        $exif_block->fromDataElement($data_string);
+        $out_app1_segment->graftBlock($exif_block);
 
         $out_media->saveToFile($this->file);
 

@@ -48,7 +48,8 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $app1_segment = new SegmentApp1($app1_segment_collection, $jpeg);
         $jpeg->graftBlock($app1_segment, $com_segment);
 
-        $exif = new Exif(new ItemDefinition($app1_segment->getCollection()->getItemCollection('Exif')), $app1_segment);
+        $exif = new Exif($app1_segment->getCollection()->getItemCollection('Exif'), $app1_segment);
+        $app1_segment->graftBlock($exif);
         $this->assertNotNull($jpeg->getElement("jpegSegment/exif"));
         $this->assertNull($exif->getElement("tiff"));
 
