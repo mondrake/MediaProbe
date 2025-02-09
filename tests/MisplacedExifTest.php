@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Jpeg\Exif;
 use FileEye\MediaProbe\Block\Jpeg\SegmentApp1;
+use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
@@ -17,6 +18,7 @@ class MisplacedExifTest extends MediaProbeTestCaseBase
         // Image contains non-EXIF APP1 segment ahead of the EXIF one.
         $media = Media::createFromFile(dirname(__FILE__) . '/media-samples/image/broken/misplaced-exif.jpg');
         $jpeg = $media->getElement("jpeg");
+        $this->assertInstanceOf(Jpeg::class, $jpeg);
 
         // Assert we just have loaded correct file for the test.
         $app1 = $jpeg->getMultipleElements("jpegSegment[@name='APP1']");
