@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Jpeg;
+namespace FileEye\MediaProbe\Block\Media\Jpeg;
 
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Entry\Core\Undefined;

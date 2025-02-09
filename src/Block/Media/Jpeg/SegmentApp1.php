@@ -1,9 +1,8 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Jpeg;
+namespace FileEye\MediaProbe\Block\Media\Jpeg;
 
 use FileEye\MediaProbe\Block\Media\Jpeg;
-use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
@@ -19,14 +18,14 @@ class SegmentApp1 extends SegmentBase
         $this->size = $dataElement->getSize();
         assert($this->debugInfo(['dataElement' => $dataElement]));
         // If we have an Exif table, parse it.
-        if (Exif::isExifSegment($dataElement, 4)) {
-            $exifAppCollection = CollectionFactory::get('Jpeg\Exif');
+        if (ExifApp::isExifSegment($dataElement, 4)) {
+            $exifAppCollection = $this->collection->getItemCollection('Exif');
             $exifAppHandler = $exifAppCollection->getHandler();
             $exifBlock = new $exifAppHandler(
                 collection: $exifAppCollection,
                 parent: $this,
             );
-            assert($exifBlock instanceof Exif);
+            assert($exifBlock instanceof ExifApp);
             $exifBlock->fromDataElement(new DataWindow($dataElement, 4, $dataElement->getSize() - 4));
             $this->graftBlock($exifBlock);
         } else {

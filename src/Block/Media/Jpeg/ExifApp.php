@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Jpeg;
+namespace FileEye\MediaProbe\Block\Media\Jpeg;
 
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Collection\CollectionInterface;
@@ -18,7 +18,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  * This is found in a JPEG APP1 segment, and it is just an header for an entire
  * TIFF structure.
  */
-class Exif extends BlockBase
+class ExifApp extends BlockBase
 {
     /**
      * Exif header.

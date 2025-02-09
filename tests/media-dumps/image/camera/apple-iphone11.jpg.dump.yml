@@ -26,7 +26,7 @@ elements:
             elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOI:216'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: SOI
@@ -44,7 +44,7 @@ elements:
                             text: '2 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:APP1:225'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\SegmentApp1
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1
                     valid: true
                     validationLevel: OK
                     name: APP1
@@ -53,7 +53,7 @@ elements:
                     elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
-                            handlerClass: FileEye\MediaProbe\Block\Jpeg\Exif
+                            handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Exif
                             valid: true
                             validationLevel: OK
                             collection: Jpeg\Exif
@@ -1769,7 +1769,7 @@ elements:
                                                             text: '9068 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:APP2:226'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: APP2
@@ -1787,7 +1787,7 @@ elements:
                             text: '566 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:APP10:234'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: APP10
@@ -1805,7 +1805,7 @@ elements:
                             text: '766 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:DQT:219'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: DQT
@@ -1823,7 +1823,7 @@ elements:
                             text: '134 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:DRI:221'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: DRI
@@ -1841,7 +1841,7 @@ elements:
                             text: '6 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:SOF0:192'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: SOF0
@@ -1859,7 +1859,7 @@ elements:
                             text: '19 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:DHT:196'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: DHT
@@ -1877,7 +1877,7 @@ elements:
                             text: '420 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:SOS:218'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\SegmentSos
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentSos
                     valid: true
                     validationLevel: OK
                     name: SOS
@@ -1895,7 +1895,7 @@ elements:
                             text: '4220320 byte(s) of data'
                 -
                     path: '/media/jpeg/jpegSegment:EOI:217'
-                    handlerClass: FileEye\MediaProbe\Block\Jpeg\Segment
+                    handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
                     valid: true
                     validationLevel: OK
                     name: EOI

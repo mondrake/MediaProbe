@@ -2,9 +2,9 @@
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Block\Jpeg\Exif;
-use FileEye\MediaProbe\Block\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Block\Media\Jpeg;
+use FileEye\MediaProbe\Block\Media\Jpeg\ExifApp;
+use FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Dumper\DefaultDumper;
@@ -72,7 +72,7 @@ class GH21Test extends MediaProbeTestCaseBase
         $out_jpeg->graftBlock($out_app1_segment, $out_com_segment);
 
         // Add the EXIF block to the APP1 segment.
-        $exif_block = new Exif(CollectionFactory::get('Jpeg\Exif'), $out_app1_segment);
+        $exif_block = new ExifApp(CollectionFactory::get('Media\Jpeg\ExifApp'), $out_app1_segment);
         $data_string = new DataString($input_exif->toBytes());
         $data_string->setByteOrder(ConvertBytes::BIG_ENDIAN);
         $exif_block->fromDataElement($data_string);

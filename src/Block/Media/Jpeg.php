@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Media;
 
-use FileEye\MediaProbe\Block\Jpeg\SegmentBase;
+use FileEye\MediaProbe\Block\Media\Jpeg\SegmentBase;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
