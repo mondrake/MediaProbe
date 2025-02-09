@@ -6,7 +6,6 @@ use FileEye\MediaProbe\Block\Jpeg\Exif;
 use FileEye\MediaProbe\Block\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionFactory;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 
 class MisplacedExifTest extends MediaProbeTestCaseBase

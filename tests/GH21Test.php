@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Dumper\DefaultDumper;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
