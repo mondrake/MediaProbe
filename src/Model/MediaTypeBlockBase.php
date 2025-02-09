@@ -16,6 +16,10 @@ abstract class MediaTypeBlockBase extends BlockBase implements MediaTypeBlockInt
         CollectionInterface $collection,
         BlockBase $parent,
     ) {
-        parent::__construct(new ItemDefinition($collection), $parent, null, false);
+        parent::__construct(
+            definition: new ItemDefinition($collection),
+            parent: $parent,
+            graft: false,
+        );
     }
 }

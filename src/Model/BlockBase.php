@@ -148,7 +148,10 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     {
         assert($block instanceof BlockBase);
         $this->DOMNode->appendChild($block->DOMNode);
-        $this->level = $block->level();
+
+        if (!isset($this->level) || $block->level()->value > $this->level->value) {
+            $this->level = $block->level();
+        }
     }
 
     /**
