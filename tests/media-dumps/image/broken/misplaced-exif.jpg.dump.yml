@@ -10,14 +10,12 @@ fileContentHash: b14a62158bfab96530f8c257cb619371a39ca5d28c9e23a65e95e7b4ac4ba3b
 elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
-    valid: true
     validationLevel: OK
     collection: Media
     elements:
         -
             path: /media/jpeg
             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg
-            valid: true
             validationLevel: OK
             id: image/jpeg
             collection: Media\Jpeg
@@ -25,7 +23,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOI:216'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: SOI
                     id: '216'
@@ -34,7 +31,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOI:216/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 2
@@ -43,7 +39,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:APP0:224'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: APP0
                     id: '224'
@@ -52,7 +47,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP0:224/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 18
@@ -61,7 +55,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:APP1:225'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1
-                    valid: true
                     validationLevel: OK
                     name: APP1
                     id: '225'
@@ -70,7 +63,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 458
@@ -79,7 +71,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:APP1:225'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1
-                    valid: true
                     validationLevel: OK
                     name: APP1
                     id: '225'
@@ -88,7 +79,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:APP1:225/exif'
                             handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\ExifApp
-                            valid: true
                             validationLevel: OK
                             id: ExifApp
                             collection: Media\Jpeg\ExifApp
@@ -96,14 +86,12 @@ elements:
                                 -
                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff'
                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff
-                                    valid: true
                                     validationLevel: OK
                                     collection: Media\Tiff
                                     elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
-                                            valid: true
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
@@ -112,7 +100,6 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPTitle:40091'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    valid: true
                                                     validationLevel: OK
                                                     name: XPTitle
                                                     id: '40091'
@@ -121,7 +108,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPTitle:40091/entry'
                                                             handlerClass: FileEye\MediaProbe\Entry\WindowsString
-                                                            valid: true
                                                             validationLevel: OK
                                                             format: Byte
                                                             components: 1
@@ -130,7 +116,6 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageDescription:270'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    valid: true
                                                     validationLevel: OK
                                                     name: ImageDescription
                                                     id: '270'
@@ -139,7 +124,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageDescription:270/entry'
                                                             handlerClass: FileEye\MediaProbe\Entry\Core\Ascii
-                                                            valid: true
                                                             validationLevel: OK
                                                             format: Ascii
                                                             components: 6
@@ -148,7 +132,6 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    valid: false
                                                     validationLevel: Warning
                                                     name: ModifyDate
                                                     id: '306'
@@ -157,7 +140,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
                                                             handlerClass: FileEye\MediaProbe\Entry\Time
-                                                            valid: false
                                                             validationLevel: Warning
                                                             format: Ascii
                                                             components: 11
@@ -166,7 +148,6 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
-                                                    valid: true
                                                     validationLevel: OK
                                                     name: GPS
                                                     id: '34853'
@@ -175,7 +156,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSVersionID:0'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            valid: true
                                                             validationLevel: OK
                                                             name: GPSVersionID
                                                             id: '0'
@@ -184,7 +164,6 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSVersionID:0/entry'
                                                                     handlerClass: FileEye\MediaProbe\Entry\GPSVersionId
-                                                                    valid: true
                                                                     validationLevel: OK
                                                                     format: Byte
                                                                     components: 4
@@ -193,7 +172,6 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
-                                                    valid: true
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
@@ -202,7 +180,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            valid: false
                                                             validationLevel: Warning
                                                             name: ExifVersion
                                                             id: '36864'
@@ -211,7 +188,6 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864/entry'
                                                                     handlerClass: FileEye\MediaProbe\Entry\Version
-                                                                    valid: false
                                                                     validationLevel: Warning
                                                                     format: Undefined
                                                                     components: 4
@@ -220,7 +196,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTime:37520'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            valid: true
                                                             validationLevel: OK
                                                             name: SubSecTime
                                                             id: '37520'
@@ -229,7 +204,6 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTime:37520/entry'
                                                                     handlerClass: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
                                                                     validationLevel: OK
                                                                     format: Ascii
                                                                     components: 2
@@ -238,7 +212,6 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            valid: true
                                                             validationLevel: OK
                                                             name: OffsetTime
                                                             id: '36880'
@@ -247,7 +220,6 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880/entry'
                                                                     handlerClass: FileEye\MediaProbe\Entry\Core\Ascii
-                                                                    valid: true
                                                                     validationLevel: OK
                                                                     format: Ascii
                                                                     components: 7
@@ -256,7 +228,6 @@ elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
-                                            valid: true
                                             validationLevel: OK
                                             name: IFD1
                                             id: '1'
@@ -265,14 +236,12 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/thumbnail'
                                                     handlerClass: FileEye\MediaProbe\Block\Thumbnail
-                                                    valid: true
                                                     validationLevel: OK
                                                     collection: Thumbnail
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/thumbnail/entry'
                                                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                                                            valid: true
                                                             validationLevel: OK
                                                             format: Undefined
                                                             components: 1457
@@ -281,7 +250,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:COM:254'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentCom
-                    valid: true
                     validationLevel: OK
                     name: COM
                     id: '254'
@@ -290,7 +258,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:COM:254/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Char
-                            valid: true
                             validationLevel: OK
                             format: Char
                             components: 17
@@ -299,7 +266,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:DQT:219'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: DQT
                     id: '219'
@@ -308,7 +274,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:DQT:219/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 69
@@ -317,7 +282,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:DQT:219'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: DQT
                     id: '219'
@@ -326,7 +290,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:DQT:219/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 69
@@ -335,7 +298,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOF2:194'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: SOF2
                     id: '194'
@@ -344,7 +306,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOF2:194/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 19
@@ -353,7 +314,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:DHT:196'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: DHT
                     id: '196'
@@ -362,7 +322,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 28
@@ -371,7 +330,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:DHT:196'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: DHT
                     id: '196'
@@ -380,7 +338,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:DHT:196/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 22
@@ -389,7 +346,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:SOS:218'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\SegmentSos
-                    valid: true
                     validationLevel: OK
                     name: SOS
                     id: '218'
@@ -398,7 +354,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:SOS:218/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 2224
@@ -407,7 +362,6 @@ elements:
                 -
                     path: '/media/jpeg/jpegSegment:EOI:217'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment
-                    valid: true
                     validationLevel: OK
                     name: EOI
                     id: '217'
@@ -416,7 +370,6 @@ elements:
                         -
                             path: '/media/jpeg/jpegSegment:EOI:217/entry'
                             handlerClass: FileEye\MediaProbe\Entry\Core\Undefined
-                            valid: true
                             validationLevel: OK
                             format: Undefined
                             components: 2
