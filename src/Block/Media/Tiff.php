@@ -91,26 +91,26 @@ class Tiff extends MediaTypeBlockBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // Starting IFD will be at offset 4 (2 bytes for byte order + 2 for header).
-        $ifdOffset = $dataElement->getLong(4);
+        $dataOffset = $dataElement->getLong(4);
 
         // If the offset to first IFD is higher than 8, then there may be an
         // image scan (TIFF) in between. Store that in a RawData block.
-        if ($ifdOffset > 8) {
+        if ($dataOffset > 8) {
             $scan = new ItemDefinition(
                 collection:  CollectionFactory::get('RawData', ['name' => 'scan']),
                 format:      DataFormat::BYTE,
-                valuesCount: $ifdOffset - 8,
+                valuesCount: $dataOffset - 8,
             );
             $ifd = $this->addBlock($scan);
             assert($ifd instanceof RawData);
-            $ifd->parseData($dataElement, 8, $ifdOffset - 8);
+            $ifd->parseData($dataElement, 8, $dataOffset - 8);
         }
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.
         for ($i = 0; $i <= 1; $i++) {
             // Check data is accessible, warn otherwise.
-            if ($ifdOffset >= $dataElement->getSize() || $ifdOffset + 4 > $dataElement->getSize()) {
-                $this->warning(
+            if ($dataOffset >= $dataElement->getSize() || $dataOffset + 4 > $dataElement->getSize()) {
+                $this->error(
                     'Could not determine number of entries for {item}, overflow',
                     ['item' => $this->collection->getItemCollection($i)->getPropertyValue('name')]
                 );
@@ -118,10 +118,10 @@ class Tiff extends MediaTypeBlockBase
             }
 
             // Find number of tags in IFD and warn if not enough data to read them.
-            $ifdTagsCount = $dataElement->getShort($ifdOffset);
-            if ($ifdOffset + $ifdTagsCount * 4 > $dataElement->getSize()) {
-                $this->warning(
-                    'Invalid data for {item}',
+            $ifdTagsCount = $dataElement->getShort($dataOffset);
+            if ($dataOffset + $ifdTagsCount * 4 > $dataElement->getSize()) {
+                $this->error(
+                    'Not enough data to parse fully {item}',
                     ['item' => $this->collection->getItemCollection($i)->getPropertyValue('name')]
                 );
                 continue;
@@ -130,11 +130,20 @@ class Tiff extends MediaTypeBlockBase
             // Create and load the IFDs. Note that the data element cannot
             // be split in windows since any pointer will refer to the
             // entire segment space.
-            $ifdClass = $this->collection->getItemCollection($i)->getPropertyValue('handler');
-            $ifdItem = new ItemDefinition($this->collection->getItemCollection($i), DataFormat::LONG, $ifdTagsCount, $ifdOffset, 0, $i);
-            $ifd = new $ifdClass($ifdItem, $this);
+            $ifdCollection = $this->collection->getItemCollection($i);
+            $ifdHandler = $ifdCollection->getHandler();
+            $ifdBlock = new $ifdHandler(
+                collection: $ifdCollection,
+                format: DataFormat::LONG,
+                tagsCount: $ifdTagsCount,
+                dataOffset: $dataOffset,
+                ifdOffset: 0,
+                sequence: $i,
+                parent: $this,
+            );
             try {
-                $ifd->parseData($dataElement);
+                $ifdBlock->fromDataElement($dataElement);
+                $this->graftBlock($ifdBlock);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->collection->getItemCollection($i)->getPropertyValue('name'),
@@ -144,10 +153,10 @@ class Tiff extends MediaTypeBlockBase
             }
 
             // Offset to next IFD.
-            $ifdOffset = $dataElement->getLong($ifdOffset + $ifdTagsCount * 12 + 2);
+            $dataOffset = $dataElement->getLong($dataOffset + $ifdTagsCount * 12 + 2);
 
             // If next IFD offset is 0 we are finished.
-            if ($ifdOffset === 0) {
+            if ($dataOffset === 0) {
                 break;
             }
 

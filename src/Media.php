@@ -159,8 +159,16 @@ class Media extends RootBlockBase
             'maker' => $maker,
             'model' => $model,
         ]);
-        $item_definition = new ItemDefinition($maker_note_collection, $maker_note_tag->getFormat(), $maker_note_tag->getComponents());
-        $ifd = new $ifd_class($item_definition, $exif_ifd, $maker_note_tag);
+dump($maker_note_tag->getDefinition());
+        $ifd = new $ifd_class(
+            collection: $maker_note_collection,
+            format: $maker_note_tag->getFormat(),
+            tagsCount: $maker_note_tag->getComponents(),
+            dataOffset: 0,
+            ifdOffset: -$maker_note_tag->getDefinition()->dataOffset,
+            sequence: 0,
+            parent: $exif_ifd,
+        );
 
         // xxx
         $ifd->setAttribute('id', '37500');
@@ -170,7 +178,9 @@ class Media extends RootBlockBase
         $data = $entry->getDataElement();
         // @todo the netting of the dataOffset is a Canon only thing, move to vendor
         // @todo xxx this is incorrect, parsing should happen indepentently from add'l offset
-        $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->dataOffset);
+//        $ifd->parseData($data, 0, null, -$maker_note_tag->getDefinition()->dataOffset);
+        $ifd->fromDataElement($data);
+        $exif_ifd->graftBlock($ifd, $maker_note_tag);
 
         // Remove the MakerNote tag that has been converted to IFD.
         $exif_ifd->removeElement("tag[@name='MakerNote']");

@@ -28,8 +28,26 @@ class SpecTest extends MediaProbeTestCaseBase
     public function testDefaultSpec()
     {
         $tiff_mock = $this->createMock(Tiff::class);
-        $ifd_0 = new Ifd(new ItemDefinition(CollectionFactory::get('Tiff\Ifd0'), DataFormat::LONG), $tiff_mock);
-        $ifd_exif = new Ifd(new ItemDefinition($ifd_0->getCollection()->getItemCollection(0x8769), DataFormat::LONG), $ifd_0);
+        $ifd_0 = new Ifd(
+            collection: CollectionFactory::get('Tiff\Ifd0'),
+            format: DataFormat::LONG,
+            tagsCount: 1,
+            dataOffset: 0,
+            ifdOffset: 0,
+            sequence: 0,
+            parent: $tiff_mock,
+        );
+        $tiff_mock->graftBlock($ifd_0);
+        $ifd_exif = new Ifd(
+            collection: $ifd_0->collection->getItemCollection(0x8769),
+            format: DataFormat::LONG,
+            tagsCount: 1,
+            dataOffset: 0,
+            ifdOffset: 0,
+            sequence: 0,
+            parent: $ifd_0,
+        );
+        $tiff_mock->graftBlock($ifd_exif);
         $ifd_canon_camera_settings = new Index(new ItemDefinition(CollectionFactory::get('ExifMakerNotes\\Canon\\Main')->getItemCollection(1), DataFormat::LONG), $tiff_mock);
 
         // Test retrieving IFD id by name.
@@ -88,7 +106,16 @@ class SpecTest extends MediaProbeTestCaseBase
     public function testGetTagText($expected_text, $expected_class, $parent_collection_id, $tag_name, string $args, $brief = false)
     {
         $stubRoot = $this->getStubRoot();
-        $ifd = new Ifd(new ItemDefinition(CollectionFactory::get($parent_collection_id)), $stubRoot);
+        $ifd = new Ifd(
+            collection: CollectionFactory::get($parent_collection_id),
+            format: DataFormat::LONG,
+            tagsCount: 1,
+            dataOffset: 0,
+            ifdOffset: 0,
+            sequence: 0,
+            parent: $stubRoot,
+        );
+        $stubRoot->graftBlock($ifd);
 
         $parent_collection = CollectionFactory::get($parent_collection_id);
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);

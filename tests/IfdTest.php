@@ -16,7 +16,16 @@ class IfdTest extends MediaProbeTestCaseBase
     public function testIfd()
     {
         $tiff_mock = $this->getStubRoot('tiff');
-        $ifd = new Ifd(new ItemDefinition(CollectionFactory::get('Tiff\Ifd0'), DataFormat::LONG), $tiff_mock);
+        $ifd = new Ifd(
+            collection: CollectionFactory::get('Tiff\Ifd0'),
+            format: DataFormat::LONG,
+            tagsCount: 1,
+            dataOffset: 0,
+            ifdOffset: 0,
+            sequence: 0,
+            parent: $tiff_mock,
+        );
+        $tiff_mock->graftBlock($ifd);
 
         $this->assertCount(0, $ifd->getMultipleElements('tag'));
 
