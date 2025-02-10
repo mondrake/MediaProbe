@@ -164,7 +164,7 @@ class Media extends RootBlockBase
             format: $maker_note_tag->getFormat(),
             tagsCount: $maker_note_tag->getComponents(),
             dataOffset: 0,
-            ifdOffset: 0,
+            ifdOffset: -$maker_note_tag->getDefinition()->dataOffset,
             sequence: 0,
             parent: $exif_ifd,
         );
