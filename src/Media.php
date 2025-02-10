@@ -159,6 +159,7 @@ class Media extends RootBlockBase
             'maker' => $maker,
             'model' => $model,
         ]);
+dump($maker_note_tag->getDefinition());
         $ifd = new $ifd_class(
             collection: $maker_note_collection,
             format: $maker_note_tag->getFormat(),
