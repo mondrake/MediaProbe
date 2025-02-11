@@ -91,7 +91,11 @@ class Ifd extends ListBase
                         definition: $item_definition,
                         parent: $this,
                     );
-                    $item->parseData($dataElement);
+                    try {
+                        $item->parseData($dataElement);
+                    } catch (DataException $e) {
+                        $item->error($e->getMessage());
+                    }
                     $this->graftBlock($item);
                 } else {
                     // In case of an IFD terminator item entry, i.e. zero
