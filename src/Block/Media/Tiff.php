@@ -130,11 +130,17 @@ class Tiff extends MediaTypeBlockBase
             // Create and load the IFDs. Note that the data element cannot
             // be split in windows since any pointer will refer to the
             // entire segment space.
-            $ifdClass = $this->collection->getItemCollection($i)->getPropertyValue('handler');
-            $ifdItem = new ItemDefinition($this->collection->getItemCollection($i), DataFormat::LONG, $ifdTagsCount, $ifdOffset, 0, $i);
-            $ifd = new $ifdClass($ifdItem, $this);
+            $ifdCollection = $this->collection->getItemCollection($i);
+            $ifdClass = $ifdCollection->getHandler();
+            $ifdItem = new ItemDefinition($ifdCollection, DataFormat::LONG, $ifdTagsCount, $ifdOffset, 0, $i);
+            $ifd = new $ifdClass(
+                collection: $ifdCollection,
+                definition: $ifdItem,
+                parent: $this,
+            );
             try {
                 $ifd->parseData($dataElement);
+                $this->graftBlock($ifd);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->collection->getItemCollection($i)->getPropertyValue('name'),
