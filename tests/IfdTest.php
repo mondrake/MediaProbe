@@ -23,8 +23,6 @@ class IfdTest extends MediaProbeTestCaseBase
         );
         $tiff_mock->graftBlock($ifd);
 
-
-
         $this->assertCount(0, $ifd->getMultipleElements('tag'));
 
         $tag1 = new Tag(new ItemDefinition($ifd->getCollection()->getItemCollection(0x010E), DataFormat::ASCII), $ifd);

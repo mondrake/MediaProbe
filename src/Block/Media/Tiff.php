@@ -140,14 +140,13 @@ class Tiff extends MediaTypeBlockBase
             );
             try {
                 $ifd->parseData($dataElement);
-                $this->graftBlock($ifd);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->collection->getItemCollection($i)->getPropertyValue('name'),
                     'msg' => $e->getMessage(),
                 ]);
-                continue;
             }
+            $this->graftBlock($ifd);
 
             // Offset to next IFD.
             $ifdOffset = $dataElement->getLong($ifdOffset + $ifdTagsCount * 12 + 2);
