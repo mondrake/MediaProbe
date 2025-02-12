@@ -29,6 +29,7 @@ class Ifd extends ListBase
         public readonly CollectionInterface $collection,
         ItemDefinition $definition,
         Tiff|Ifd|RootBlockBase $parent,
+        protected readonly int $xxxx = 0,
     ) {
         parent::__construct(
             definition: $definition,
@@ -37,7 +38,7 @@ class Ifd extends ListBase
         );
     }
 
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null, $xxx = 0): void
+    public function fromDataElement(DataElement $dataElement): Ifd
     {
         $offset = $this->getDefinition()->dataOffset;
 
@@ -48,7 +49,7 @@ class Ifd extends ListBase
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
-            $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, $xxx, 'Tiff\IfdAny');
+            $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, $this->xxxx, 'Tiff\IfdAny');
             $item_class = $item_definition->collection->getPropertyValue('handler');
 
             // Check data is accessible, warn otherwise.
@@ -62,16 +63,6 @@ class Ifd extends ListBase
                 );
                 continue;
             }
-/*            $this->debug(
-                'Item Offset {o} Components {c} Format {f} Formatsize {fs} Size {s} DataElement Size {des}', [
-                    'o' => HexDump::dumpIntHex($dataElement->getAbsoluteOffset($item_definition->dataOffset)),
-                    'c' => $item_definition->valuesCount,
-                    'f' => $item_definition->format,
-                    'fs' => DataFormat::getSize($item_definition->format),
-                    's' => HexDump::dumpIntHex($item_definition->getSize()),
-                    'des' => HexDump::dumpIntHex($dataElement->getSize()),
-                ]
-            );*/
             if ($item_definition->dataOffset +  $item_definition->getSize() > $dataElement->getSize()) {
                 $this->warning(
                     'Could not get value for item {item} in \'{ifd}\', not enough data',
@@ -92,7 +83,7 @@ class Ifd extends ListBase
                         parent: $this,
                     );
                     try {
-                        $item->parseData($dataElement);
+                        $item->fromDataElement($dataElement);
                     } catch (DataException $e) {
                         $item->error($e->getMessage());
                     }
@@ -114,6 +105,8 @@ class Ifd extends ListBase
 
         // Invoke post-load callbacks.
         $this->executePostParseCallbacks($dataElement);
+
+        return $this;
     }
 
     /**

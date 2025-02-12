@@ -40,7 +40,7 @@ class SpecTest extends MediaProbeTestCaseBase
             parent: $ifd_0,
         );
         $ifd_0->graftBlock($ifd_exif);
-        $ifd_canon_camera_settings = new Index(new ItemDefinition(CollectionFactory::get('ExifMakerNotes\\Canon\\Main')->getItemCollection(1), DataFormat::LONG), $tiffStub);
+        $ifd_canon_camera_settings = new Index(new ItemDefinition(CollectionFactory::get('Maker\\Canon\\Exif\\MakerNote')->getItemCollection(1), DataFormat::LONG), $tiffStub);
 
         // Test retrieving IFD id by name.
         $this->assertEquals(CollectionFactory::getByName('IFD0'), CollectionFactory::getByName('0'));

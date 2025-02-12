@@ -139,7 +139,7 @@ class Tiff extends MediaTypeBlockBase
                 parent: $this,
             );
             try {
-                $ifd->parseData($dataElement);
+                $ifd->fromDataElement($dataElement);
             } catch (DataException $e) {
                 $this->error('Error processing {ifd_name}: {msg}.', [
                     'ifd_name' => $this->collection->getItemCollection($i)->getPropertyValue('name'),

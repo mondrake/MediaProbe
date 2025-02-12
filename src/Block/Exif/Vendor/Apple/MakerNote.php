@@ -16,7 +16,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class MakerNote extends Ifd
 {
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null, $xxx = 0): void
+    public function fromDataElement(DataElement $dataElement): MakerNote
     {
         $offset = $this->getDefinition()->dataOffset;
 
@@ -56,6 +56,8 @@ class MakerNote extends Ifd
 
         // Invoke post-load callbacks.
         $this->executePostParseCallbacks($dataElement);
+
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
