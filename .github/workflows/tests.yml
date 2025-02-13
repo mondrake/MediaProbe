@@ -83,7 +83,7 @@ jobs:
       run: php bin/fileeye-mediaprobe dump tests/media-samples tests/media-dumps
 
     - name: Upload media dumps
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: media-dumps
         path: tests/media-dumps/**/*.yml
