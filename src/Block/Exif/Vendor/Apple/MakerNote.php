@@ -43,7 +43,7 @@ class MakerNote extends MakerNoteBase
                     dataElement: $dataElement,
                     offset: $i_offset,
                 );
-                $item_class = $item_definition->collection->getPropertyValue('handler');
+                $item_class = $item_definition->collection->handler();
                 $item = new $item_class($item_definition, $this);
                 if (is_a($item_class, Ifd::class, true)) {
                     throw new MediaProbeException(sprintf('There should not be sub-IFDs in %s', __CLASS__));

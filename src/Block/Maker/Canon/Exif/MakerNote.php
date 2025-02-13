@@ -30,7 +30,7 @@ class MakerNote extends MakerNoteBase
                     offset: $i_offset,
                     dataDisplacement: $this->dataDisplacement,
                 );
-                $item_class = $item_definition->collection->getHandler();
+                $item_class = $item_definition->collection->handler();
 
                 // Check data is accessible, warn otherwise.
                 if ($item_definition->dataOffset >= $dataElement->getSize()) {

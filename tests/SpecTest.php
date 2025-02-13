@@ -48,8 +48,8 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertNotNull(CollectionFactory::getByName('Canon'));
 
         // Test retrieving IFD class.
-        $this->assertEquals(Ifd::class, $ifd_0->getCollection()->getPropertyValue('handler'));
-        $this->assertEquals(Map::class, $ifd_canon_camera_settings->getCollection()->getPropertyValue('handler'));
+        $this->assertEquals(Ifd::class, $ifd_0->getCollection()->handler());
+        $this->assertEquals(Map::class, $ifd_canon_camera_settings->getCollection()->handler());
 
         // Test retrieving IFD post-load callbacks.
         $this->assertEquals([

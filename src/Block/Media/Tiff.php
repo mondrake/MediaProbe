@@ -131,7 +131,7 @@ class Tiff extends MediaTypeBlockBase
             // be split in windows since any pointer will refer to the
             // entire segment space.
             $ifdCollection = $this->collection->getItemCollection($i);
-            $ifdClass = $ifdCollection->getHandler();
+            $ifdClass = $ifdCollection->handler();
             $ifdItem = new ItemDefinition($ifdCollection, DataFormat::LONG, $ifdTagsCount, $ifdOffset, 0, $i);
             $ifd = new $ifdClass(
                 collection: $ifdCollection,

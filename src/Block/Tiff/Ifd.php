@@ -54,7 +54,7 @@ class Ifd extends ListBase
                 offset: $i_offset,
                 fallbackCollectionId: 'Tiff\IfdAny',
             );
-            $item_class = $item_definition->collection->getPropertyValue('handler');
+            $item_class = $item_definition->collection->handler();
 
             // Check data is accessible, warn otherwise.
             if ($item_definition->dataOffset >= $dataElement->getSize()) {
@@ -192,7 +192,7 @@ class Ifd extends ListBase
             }
         }
 
-        if (is_a($item_collection->getHandler(), Ifd::class, true)) {
+        if (is_a($item_collection->handler(), Ifd::class, true)) {
             // If the item is an Ifd, recurse in loading the item at offset.
             $data_offset = $dataElement->getLong($offset + 8);
             $components = $dataElement->getShort($data_offset);
