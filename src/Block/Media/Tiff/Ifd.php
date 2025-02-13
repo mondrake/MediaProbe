@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Tiff;
+namespace FileEye\MediaProbe\Block\Media\Tiff;
 
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
@@ -52,7 +52,7 @@ class Ifd extends ListBase
                 seq: $i,
                 dataElement: $dataElement,
                 offset: $i_offset,
-                fallbackCollectionId: 'Tiff\IfdAny',
+                fallbackCollectionId: 'Media\\Tiff\\IfdAny',
             );
             $item_class = $item_definition->collection->handler();
 

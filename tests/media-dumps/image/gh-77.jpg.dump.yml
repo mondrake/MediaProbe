@@ -85,7 +85,7 @@ elements:
                                     elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
-                                            handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                            handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
@@ -253,7 +253,7 @@ elements:
                                                             text: 'Copyright 2016 (Photographer)'
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
-                                                    handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                                    handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
@@ -741,7 +741,7 @@ elements:
                                                                     text: 0000b39b49
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
-                                            handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                            handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                             validationLevel: Warning
                                             name: IFD1
                                             id: '1'

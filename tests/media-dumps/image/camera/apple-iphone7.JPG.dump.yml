@@ -74,7 +74,7 @@ elements:
                                     elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
-                                            handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                            handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
@@ -210,7 +210,7 @@ elements:
                                                             text: '2018:02:24 12:26:51'
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
-                                                    handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                                    handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
@@ -1093,7 +1093,7 @@ elements:
                                                                     text: 'iPhone 7 back camera 3.99mm f/1.8'
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853'
-                                                    handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                                                    handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                                                     validationLevel: OK
                                                     name: GPS
                                                     id: '34853'

@@ -39,7 +39,7 @@ elements:
                             text: '4211986 byte(s) of data'
                 -
                     path: '/media/tiff/ifd:IFD0:0'
-                    handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                    handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                     validationLevel: OK
                     name: IFD0
                     id: '0'
@@ -607,7 +607,7 @@ elements:
                                     text: f/1.9
                         -
                             path: '/media/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
-                            handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                            handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                             validationLevel: OK
                             name: ExifIFD
                             id: '34665'
@@ -951,7 +951,7 @@ elements:
                                     text: 'Program AE'
                         -
                             path: '/media/tiff/ifd:IFD0:0/ifd:GPS:34853'
-                            handlerClass: FileEye\MediaProbe\Block\Tiff\Ifd
+                            handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
                             validationLevel: OK
                             name: GPS
                             id: '34853'
