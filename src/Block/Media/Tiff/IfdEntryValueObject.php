@@ -8,7 +8,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 /**
  * A value object representing an IFD entry.
  */
-class IfdEntryValueObject
+final class IfdEntryValueObject
 {
     /**
      * True if the data of the entry is an offset to the actual entry data; False if the data is
@@ -32,7 +32,7 @@ class IfdEntryValueObject
         public readonly CollectionInterface $collection,
         public readonly int $dataFormat,
         public readonly int $countOfComponents,
-        public readonly int $data,
+        private readonly int $data = 0,
         public readonly int $sequence = 0,
     ) {
         $this->isOffset = $this->size() > 4;
