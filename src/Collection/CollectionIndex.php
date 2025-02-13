@@ -18,7 +18,6 @@ class CollectionIndex extends CollectionBase {
   'id' => 'CollectionIndex',
   'collections' =>
   array (
-    'ExifMakerNotes\\Apple\\Main' => 'ExifMakerNotes\\Apple\\Main',
     'ExifMakerNotes\\Apple\\RunTime' => 'ExifMakerNotes\\Apple\\RunTime',
     'ExifMakerNotes\\CanonCustom\\Functions2' => 'ExifMakerNotes\\CanonCustom\\Functions2',
     'ExifMakerNotes\\CanonCustom\\Functions2Header' => 'ExifMakerNotes\\CanonCustom\\Functions2Header',
@@ -112,6 +111,7 @@ class CollectionIndex extends CollectionBase {
     'ExifMakerNotes\\Canon\\VignettingCorrUnknown' => 'ExifMakerNotes\\Canon\\VignettingCorrUnknown',
     'ExifMakerNotes\\MakerNotes' => 'ExifMakerNotes\\MakerNotes',
     'Format' => 'Format',
+    'Maker\\Apple\\Exif\\MakerNote' => 'Maker\\Apple\\Exif\\MakerNote',
     'Maker\\Canon\\Exif\\MakerNote' => 'Maker\\Canon\\Exif\\MakerNote',
     'Media' => 'Media',
     'MediaType' => 'MediaType',
@@ -139,7 +139,7 @@ class CollectionIndex extends CollectionBase {
     0 => 'Tiff\\Ifd0',
     1 => 'Tiff\\Ifd1',
     'APP1' => 'Media\\Jpeg\\SegmentApp1',
-    'Apple' => 'ExifMakerNotes\\Apple\\Main',
+    'Apple' => 'Maker\\Apple\\Exif\\MakerNote',
     'AppleRuntime' => 'ExifMakerNotes\\Apple\\RunTime',
     'COM' => 'Media\\Jpeg\\SegmentCom',
     'Canon' => 'Maker\\Canon\\Exif\\MakerNote',
@@ -250,7 +250,7 @@ class CollectionIndex extends CollectionBase {
     'Media\\Tiff' => 'Media\\Tiff',
     'RawData' => 'RawData',
     'SOS' => 'Media\\Jpeg\\SegmentSos',
-    'Thumbnail' => 'Tiff\\Ifd1',
+    'Thumbnail' => 'Thumbnail',
     'Tiff\\IfdAny' => 'Tiff\\IfdAny',
     'Tiff\\Tag' => 'Tiff\\Tag',
     'Tiff\\UnknownTag' => 'Tiff\\UnknownTag',

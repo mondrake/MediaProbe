@@ -525,7 +525,7 @@ elements:
                                                                     text: 'Within rectangle (width 2002, height 1505) around (x,y) = (2213,1324)'
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500'
-                                                            handlerClass: FileEye\MediaProbe\Block\Exif\Vendor\Apple\MakerNote
+                                                            handlerClass: FileEye\MediaProbe\Block\Maker\Apple\Exif\MakerNote
                                                             validationLevel: OK
                                                             name: Apple
                                                             id: '37500'

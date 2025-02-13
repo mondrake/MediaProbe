@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Exif\Vendor\Apple;
+namespace FileEye\MediaProbe\Block\Maker\Apple\Exif;
 
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
