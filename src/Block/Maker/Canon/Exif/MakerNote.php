@@ -13,7 +13,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Utility\Hexdump;
+use FileEye\MediaProbe\Utility\HexDump;
 
 class MakerNote extends Ifd
 {
