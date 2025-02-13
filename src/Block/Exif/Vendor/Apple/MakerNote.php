@@ -13,12 +13,14 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 
-class MakerNote extends Ifd
+class MakerNote extends MakerNoteBase
 {
     public function fromDataElement(DataElement $dataElement): MakerNote
     {
-        $offset = $this->getDefinition()->dataOffset;
+        $offset = 0;
 
         // Load Apple's header as a raw data block.
         $header_data_definition = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'appleHeader']), DataFormat::BYTE, 14);
@@ -36,16 +38,18 @@ class MakerNote extends Ifd
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
             try {
-                $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset);
+                $item_definition = $this->getItemDefinitionFromData(
+                    seq: $i,
+                    dataElement: $dataElement, 
+                    offset: $i_offset,
+                );
                 $item_class = $item_definition->collection->getPropertyValue('handler');
                 $item = new $item_class($item_definition, $this);
                 if (is_a($item_class, Ifd::class, true)) {
-throw new \RuntimeException('There should not be sub Ifds in ' . __CLASS__);
-                    $item->parseData($dataElement);
-                } else {
-                    $item_data_window = new DataWindow($dataElement, $item_definition->dataOffset, $item_definition->getSize());
-                    $item->parseData($item_data_window);
+                    throw new MediaProbeException(sprintf('There should not be sub-IFDs in %s', __CLASS__));
                 }
+                $item_data_window = new DataWindow($dataElement, $item_definition->dataOffset, $item_definition->getSize());
+                $item->parseData($item_data_window);
             } catch (DataException $e) {
                 if (isset($item)) {
                     $item->error($e->getMessage());

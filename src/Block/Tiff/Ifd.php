@@ -29,7 +29,6 @@ class Ifd extends ListBase
         public readonly CollectionInterface $collection,
         ItemDefinition $definition,
         Tiff|Ifd|RootBlockBase $parent,
-        protected readonly int $xxxx = 0,
     ) {
         parent::__construct(
             definition: $definition,
@@ -49,7 +48,12 @@ class Ifd extends ListBase
         // Parse the items.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
-            $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, $this->xxxx, 'Tiff\IfdAny');
+            $item_definition = $this->getItemDefinitionFromData(
+                seq: $i,
+                dataElement: $dataElement, 
+                offset: $i_offset,
+                fallbackCollectionId: 'Tiff\IfdAny',
+            );
             $item_class = $item_definition->collection->getPropertyValue('handler');
 
             // Check data is accessible, warn otherwise.
@@ -77,6 +81,7 @@ class Ifd extends ListBase
             // Adds the item to the DOM.
             try {
                 if (is_a($item_class, Ifd::class, true)) {
+                    // This is a sub-IFD.
                     $item = new $item_class(
                         collection: $item_definition->collection,
                         definition: $item_definition,
@@ -89,6 +94,7 @@ class Ifd extends ListBase
                     }
                     $this->graftBlock($item);
                 } else {
+                    // This is a TAG.
                     // In case of an IFD terminator item entry, i.e. zero
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
@@ -150,7 +156,7 @@ class Ifd extends ListBase
      * @param int $offset
      *            the offset within the data element where the count can be
      *            found.
-     * @param int $data_offset_shift
+     * @param int $dataDisplacement
      *            (Optional) if specified, an additional shift to the offset
      *            where data can be found.
      * @todo xxx
@@ -162,8 +168,8 @@ class Ifd extends ListBase
         int $seq,
         DataElement $dataElement,
         int $offset,
-        int $data_offset_shift = 0,
-        ?string $fallback_collection_id = null,
+        int $dataDisplacement = 0,
+        ?string $fallbackCollectionId = null,
     ): ItemDefinition {
         $id = $dataElement->getShort($offset);
         $format = $dataElement->getShort($offset + 2);
@@ -173,8 +179,8 @@ class Ifd extends ListBase
         try {
             $item_collection = $this->getCollection()->getItemCollection($id);
         } catch (MediaProbeException $e) {
-            if ($fallback_collection_id !== null) {
-                $item_collection = CollectionFactory::get($fallback_collection_id)->getItemCollection($id, 0, 'Tiff\UnknownTag', [
+            if ($fallbackCollectionId !== null) {
+                $item_collection = CollectionFactory::get($fallbackCollectionId)->getItemCollection($id, 0, 'Tiff\UnknownTag', [
                     'item' => $id,
                     'DOMNode' => 'tag',
                 ]);
@@ -186,7 +192,7 @@ class Ifd extends ListBase
             }
         }
 
-        if (is_a($item_collection->getPropertyValue('handler'), Ifd::class, true)) {
+        if (is_a($item_collection->getHandler(), Ifd::class, true)) {
             // If the item is an Ifd, recurse in loading the item at offset.
             $data_offset = $dataElement->getLong($offset + 8);
             $components = $dataElement->getShort($data_offset);
@@ -203,7 +209,7 @@ class Ifd extends ListBase
             // element.
             $size = DataFormat::getSize($format) * $components;
             if ($size > 4) {
-                $data_offset = $dataElement->getLong($offset + 8) + $data_offset_shift;
+                $data_offset = $dataElement->getLong($offset + 8) - $dataDisplacement;
             } else {
                 $data_offset = $offset + 8;
             }
@@ -212,9 +218,6 @@ class Ifd extends ListBase
         return new ItemDefinition($item_collection, $format, $components, $data_offset, $dataElement->getStart() + $offset, $seq);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
     {
         $bytes = '';

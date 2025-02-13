@@ -166,8 +166,7 @@ class Media extends RootBlockBase
         $ifd = new $ifd_class(
             collection: $maker_note_collection,
             definition: $item_definition,
-            xxxx: -$maker_note_tag->getDefinition()->dataOffset,
-#            xxxx: 0,
+            dataDisplacement: $maker_note_tag->getDefinition()->dataOffset,
             parent: $exif_ifd,
         );
         $ifd->setAttribute('id', '37500');
