@@ -40,6 +40,7 @@ class MakerNote extends Ifd
                 $item_class = $item_definition->collection->getPropertyValue('handler');
                 $item = new $item_class($item_definition, $this);
                 if (is_a($item_class, Ifd::class, true)) {
+throw new \RuntimeException('There should not be sub Ifds in ' . __CLASS__);
                     $item->parseData($dataElement);
                 } else {
                     $item_data_window = new DataWindow($dataElement, $item_definition->dataOffset, $item_definition->getSize());

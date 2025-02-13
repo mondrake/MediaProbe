@@ -13,6 +13,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use FileEye\MediaProbe\Utility\Hexdump;
 
 class MakerNote extends Ifd
 {
@@ -33,8 +34,32 @@ class MakerNote extends Ifd
             try {
                 $item_definition = $this->getItemDefinitionFromData($i, $dataElement, $i_offset, $this->xxxx);
                 $item_class = $item_definition->collection->getHandler();
+
+                // Check data is accessible, warn otherwise.
+                if ($item_definition->dataOffset >= $dataElement->getSize()) {
+                    $this->warning(
+                        'Could not access value for item {item} in \'{ifd}\', overflow',
+                        [
+                            'item' => HexDump::dumpIntHex($item_definition->collection->getPropertyValue('name') ?? 'n/a'),
+                            'ifd' => $this->getAttribute('name'),
+                        ]
+                    );
+                    continue;
+                }
+                if ($item_definition->dataOffset +  $item_definition->getSize() > $dataElement->getSize()) {
+                    $this->warning(
+                        'Could not get value for item {item} in \'{ifd}\', not enough data',
+                        [
+                            'item' => HexDump::dumpIntHex($item_definition->collection->getPropertyValue('name') ?? 'n/a'),
+                            'ifd' => $this->getAttribute('name'),
+                        ]
+                    );
+                    continue;
+                }
+
                 $item = new $item_class($item_definition, $this);
                 if (is_a($item_class, Ifd::class, true)) {
+throw new \RuntimeException('There should not be sub Ifds in ' . __CLASS__);
                     $item->parseData($dataElement);
                 } else {
                     $item_data_window = new DataWindow($dataElement, $item_definition->dataOffset, $item_definition->getSize());
