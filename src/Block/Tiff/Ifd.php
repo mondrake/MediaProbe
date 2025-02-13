@@ -50,7 +50,7 @@ class Ifd extends ListBase
             $i_offset = $offset + 2 + 12 * $i;
             $item_definition = $this->getItemDefinitionFromData(
                 seq: $i,
-                dataElement: $dataElement, 
+                dataElement: $dataElement,
                 offset: $i_offset,
                 fallbackCollectionId: 'Tiff\IfdAny',
             );

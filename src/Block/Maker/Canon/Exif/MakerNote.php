@@ -2,20 +2,13 @@
 
 namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 
-use FileEye\MediaProbe\Block\ListBase;
-use FileEye\MediaProbe\Block\RawData;
+use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Tiff\Tag;
-use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
-use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Utility\HexDump;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
+use FileEye\MediaProbe\Utility\HexDump;
 
 class MakerNote extends MakerNoteBase
 {
@@ -33,7 +26,7 @@ class MakerNote extends MakerNoteBase
             try {
                 $item_definition = $this->getItemDefinitionFromData(
                     seq: $i,
-                    dataElement: $dataElement, 
+                    dataElement: $dataElement,
                     offset: $i_offset,
                     dataDisplacement: $this->dataDisplacement,
                 );

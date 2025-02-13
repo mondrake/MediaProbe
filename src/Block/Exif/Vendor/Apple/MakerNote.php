@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Apple;
 
 use FileEye\MediaProbe\Block\ListBase;
+use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Block\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Tiff\Tag;
@@ -12,9 +13,8 @@ use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
+use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class MakerNote extends MakerNoteBase
 {
@@ -40,7 +40,7 @@ class MakerNote extends MakerNoteBase
             try {
                 $item_definition = $this->getItemDefinitionFromData(
                     seq: $i,
-                    dataElement: $dataElement, 
+                    dataElement: $dataElement,
                     offset: $i_offset,
                 );
                 $item_class = $item_definition->collection->getPropertyValue('handler');
