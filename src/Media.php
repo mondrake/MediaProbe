@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace FileEye\MediaProbe;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Collection\CollectionInterface;
@@ -17,7 +18,6 @@ use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\LoggerInterface;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 /**
  * Class to handle media data.

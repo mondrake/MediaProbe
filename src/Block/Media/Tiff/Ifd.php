@@ -8,17 +8,16 @@ use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Thumbnail;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
-use FileEye\MediaProbe\ItemDefinition;
 
 /**
  * Class representing an Image File Directory (IFD).

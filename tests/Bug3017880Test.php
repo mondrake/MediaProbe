@@ -6,6 +6,7 @@ use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Block\Media\Jpeg\ExifApp;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -14,7 +15,6 @@ use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\EntryInterface;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class Bug3017880Test extends MediaProbeTestCaseBase
 {

@@ -7,6 +7,7 @@ use FileEye\MediaProbe\Block\Media\Jpeg\ExifApp;
 use FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
@@ -21,7 +22,6 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use PHPUnit\Framework\Attributes\DataProvider;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class ReadWriteTest extends MediaProbeTestCaseBase
 {

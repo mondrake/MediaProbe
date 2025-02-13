@@ -5,8 +5,6 @@ namespace FileEye\MediaProbe\Block\Maker;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
-use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\RootBlockBase;
 
 /**
