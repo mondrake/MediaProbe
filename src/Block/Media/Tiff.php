@@ -134,12 +134,12 @@ class Tiff extends MediaTypeBlockBase
             $ifdClass = $ifdCollection->handler();
             $ifdEntry = new IfdEntryValueObject(
                 sequence: $i,
-                dataFormat: DataFormat::LONG, 
-                countOfComponents: $ifdTagsCount, 
-                data: $ifdOffset, 
+                collection: $ifdCollection,
+                dataFormat: DataFormat::LONG,
+                countOfComponents: $ifdTagsCount,
+                data: $ifdOffset,
             );
             $ifd = new $ifdClass(
-                collection: $ifdCollection,
                 ifdEntry: $ifdEntry,
                 parent: $this,
             );

@@ -21,6 +21,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use PHPUnit\Framework\Attributes\DataProvider;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class ReadWriteTest extends MediaProbeTestCaseBase
 {
@@ -60,8 +61,12 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $this->assertNull($tiff->getElement("ifd[@name='IFD0']"));
 
         $ifd = new Ifd(
-            collection: $tiff->getCollection()->getItemCollection('0'),
-            definition: new ItemDefinition($tiff->getCollection()->getItemCollection('0'), DataFormat::LONG),
+            ifdEntry: new IfdEntryValueObject(
+                collection: $tiff->getCollection()->getItemCollection('0'),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+                data: 0,
+            ),
             parent: $tiff,
         );
         $tiff->graftBlock($ifd);

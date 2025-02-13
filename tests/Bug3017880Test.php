@@ -14,6 +14,7 @@ use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\EntryInterface;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class Bug3017880Test extends MediaProbeTestCaseBase
 {
@@ -43,8 +44,12 @@ class Bug3017880Test extends MediaProbeTestCaseBase
         $ifd0 = $exif->getElement("tiff/ifd[@name='IFD0']");
         if ($ifd0 === null) {
             $ifd0 = new Ifd(
-                collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
-                definition: new ItemDefinition(CollectionFactory::get('Media\\Tiff\\Ifd0'), DataFormat::LONG),
+                ifdEntry: new IfdEntryValueObject(
+                    collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
+                    dataFormat: DataFormat::LONG,
+                    countOfComponents: 1,
+                    data: 0,
+                ),
                 parent: $tiff,
             );
             $tiff->graftBlock($ifd0);

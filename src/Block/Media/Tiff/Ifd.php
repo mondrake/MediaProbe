@@ -29,12 +29,17 @@ use FileEye\MediaProbe\ItemDefinition;
 class Ifd extends ListBase
 {
     public function __construct(
-        public readonly CollectionInterface $collection,
-        IfdEntryValueObject $ifdEntry,
+        public readonly IfdEntryValueObject $ifdEntry,
         Tiff|Ifd|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            definition: new ItemDefinition(
+                collection: $ifdEntry->collection,
+                format: $ifdEntry->dataFormat,
+                valuesCount: $ifdEntry->countOfComponents,
+                dataOffset: $ifdEntry->data,
+                sequence: $ifdEntry->sequence,
+            ),
             parent: $parent,
             graft: false,
         );
@@ -42,7 +47,7 @@ class Ifd extends ListBase
 
     public function fromDataElement(DataElement $dataElement): Ifd
     {
-        $offset = 0;
+        $offset = $this->ifdEntry->data;
 
         // Get the number of entries.
         $n = $this->ifdEntriesCountFromDataElement($dataElement, $offset);
@@ -60,7 +65,7 @@ class Ifd extends ListBase
             $item_class = $ifdEntry->collection->handler();
 
             // Check data is accessible, warn otherwise.
-            if ($ifdEntry->dataOffset >= $dataElement->getSize()) {
+            if ($ifdEntry->data >= $dataElement->getSize()) {
                 $this->warning(
                     'Could not access value for item {item} in \'{ifd}\', overflow',
                     [
@@ -70,7 +75,7 @@ class Ifd extends ListBase
                 );
                 continue;
             }
-            if ($ifdEntry->dataOffset +  $ifdEntry->getSize() > $dataElement->getSize()) {
+            if ($ifdEntry->data +  $ifdEntry->size() > $dataElement->getSize()) {
                 $this->warning(
                     'Could not get value for item {item} in \'{ifd}\', not enough data',
                     [
@@ -86,8 +91,7 @@ class Ifd extends ListBase
                 if (is_a($item_class, Ifd::class, true)) {
                     // This is a sub-IFD.
                     $item = new $item_class(
-                        collection: $ifdEntry->collection,
-                        definition: $ifdEntry,
+                        ifdEntry: $ifdEntry,
                         parent: $this,
                     );
                     try {
@@ -101,9 +105,18 @@ class Ifd extends ListBase
                     // In case of an IFD terminator item entry, i.e. zero
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
-                    $item = new $item_class($ifdEntry, $this);
-                    $item_data_window_size = $ifdEntry->valuesCount > 0 ? $ifdEntry->getSize() : 4;
-                    $item->parseData($dataElement, $ifdEntry->dataOffset, $item_data_window_size);
+                    $item = new $item_class(
+                        new ItemDefinition(
+                            collection: $ifdEntry->collection,
+                            format: $ifdEntry->dataFormat,
+                            valuesCount: $ifdEntry->countOfComponents,
+                            dataOffset: $ifdEntry->data,
+                            sequence: $ifdEntry->sequence,
+                        ),
+                        $this,
+                    );
+                    $item_data_window_size = $ifdEntry->countOfComponents > 0 ? $ifdEntry->size() : 4;
+                    $item->parseData($dataElement, $ifdEntry->data, $item_data_window_size);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {
@@ -216,9 +229,10 @@ class Ifd extends ListBase
 
         return new IfdEntryValueObject(
             sequence: $seq,
-            dataFormat: $format, 
-            countIfComponents: $components, 
-            data: $data_offset, 
+            collection: $item_collection,
+            dataFormat: $format,
+            countOfComponents: $components,
+            data: $data_offset,
         );
     }
 

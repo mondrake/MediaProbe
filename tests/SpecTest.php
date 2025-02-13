@@ -16,6 +16,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use PHPUnit\Framework\Attributes\DataProvider;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 /**
  * Test the Spec class.
@@ -29,14 +30,22 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $tiffStub = new StubRootBlock(CollectionFactory::get('Media\Tiff'), $this->createMock(Logger::class));
         $ifd_0 = new Ifd(
-            collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
-            definition: new ItemDefinition(CollectionFactory::get('Media\\Tiff\\Ifd0'), DataFormat::LONG),
+            ifdEntry: new IfdEntryValueObject(
+                collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+                data: 0,
+            ),
             parent: $tiffStub,
         );
         $tiffStub->graftBlock($ifd_0);
         $ifd_exif = new Ifd(
-            collection: $ifd_0->collection->getItemCollection(0x8769),
-            definition: new ItemDefinition($ifd_0->getCollection()->getItemCollection(0x8769), DataFormat::LONG),
+            ifdEntry: new IfdEntryValueObject(
+                collection: $ifd_0->ifdEntry->collection->getItemCollection(0x8769),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+                data: 0,
+            ),
             parent: $ifd_0,
         );
         $ifd_0->graftBlock($ifd_exif);
@@ -99,8 +108,12 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $stubRoot = $this->getStubRoot();
         $ifd = new Ifd(
-            collection: CollectionFactory::get($parent_collection_id),
-            definition: new ItemDefinition(CollectionFactory::get($parent_collection_id)),
+            ifdEntry: new IfdEntryValueObject(
+                collection: CollectionFactory::get($parent_collection_id),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+                data: 0,
+            ),
             parent: $stubRoot,
         );
         $stubRoot->graftBlock($ifd);

@@ -10,6 +10,7 @@ use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\Core\Ascii;
 use FileEye\MediaProbe\Entry\Time;
 use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class IfdTest extends MediaProbeTestCaseBase
 {
@@ -17,8 +18,12 @@ class IfdTest extends MediaProbeTestCaseBase
     {
         $tiff_mock = $this->getStubRoot('tiff');
         $ifd = new Ifd(
-            collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
-            definition: new ItemDefinition(CollectionFactory::get('Media\\Tiff\Ifd0'), DataFormat::LONG),
+            ifdEntry: new IfdEntryValueObject(
+                collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+                data: 0,
+            ),
             parent: $tiff_mock,
         );
         $tiff_mock->graftBlock($ifd);
