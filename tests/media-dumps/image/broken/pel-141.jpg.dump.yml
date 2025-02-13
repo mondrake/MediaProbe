@@ -62,7 +62,7 @@ elements:
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
-                                            collection: Tiff\Ifd0
+                                            collection: Media\Tiff\Ifd0
                                             elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Orientation:274'
@@ -182,7 +182,7 @@ elements:
                                                     validationLevel: OK
                                                     name: GPS
                                                     id: '34853'
-                                                    collection: Tiff\IfdGps
+                                                    collection: Media\Tiff\IfdGps
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSImgDirection:17'
@@ -526,7 +526,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
-                                                    collection: Tiff\IfdExif
+                                                    collection: Media\Tiff\IfdExif
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OtherImageStart:513'

@@ -91,7 +91,7 @@ elements:
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
-                                            collection: Tiff\Ifd0
+                                            collection: Media\Tiff\Ifd0
                                             elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271'
@@ -227,7 +227,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
-                                                    collection: Tiff\IfdExif
+                                                    collection: Media\Tiff\IfdExif
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureTime:33434'
@@ -4838,7 +4838,7 @@ elements:
                                                             validationLevel: OK
                                                             name: InteropIFD
                                                             id: '40965'
-                                                            collection: Tiff\IfdInteroperability
+                                                            collection: Media\Tiff\IfdInteroperability
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:InteropIndex:1'
@@ -4990,7 +4990,7 @@ elements:
                                                     validationLevel: OK
                                                     name: GPS
                                                     id: '34853'
-                                                    collection: Tiff\IfdGps
+                                                    collection: Media\Tiff\IfdGps
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSVersionID:0'
@@ -5014,7 +5014,7 @@ elements:
                                             validationLevel: Error
                                             name: IFD1
                                             id: '1'
-                                            collection: Tiff\Ifd1
+                                            collection: Media\Tiff\Ifd1
                                             elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:Compression:259'
@@ -5213,7 +5213,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon1DmkIII.jpg
-    FileDateTime: 1739439764
+    FileDateTime: 1737909392
     FileSize: 8337
     FileType: 2
     MimeType: image/jpeg

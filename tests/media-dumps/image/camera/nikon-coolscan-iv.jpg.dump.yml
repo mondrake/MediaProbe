@@ -73,7 +73,7 @@ elements:
                                             validationLevel: OK
                                             name: IFD0
                                             id: '0'
-                                            collection: Tiff\Ifd0
+                                            collection: Media\Tiff\Ifd0
                                             elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271'
@@ -177,7 +177,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ExifIFD
                                                     id: '34665'
-                                                    collection: Tiff\IfdExif
+                                                    collection: Media\Tiff\IfdExif
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864'
@@ -297,7 +297,7 @@ elements:
                                                     validationLevel: OK
                                                     name: GPS
                                                     id: '34853'
-                                                    collection: Tiff\IfdGps
+                                                    collection: Media\Tiff\IfdGps
                 -
                     path: '/media/jpeg/jpegSegment:APP2:226'
                     handlerClass: FileEye\MediaProbe\Block\Media\Jpeg\Segment

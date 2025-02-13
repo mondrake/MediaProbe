@@ -42,7 +42,7 @@ elements:
                     validationLevel: OK
                     name: IFD0
                     id: '0'
-                    collection: Tiff\Ifd0
+                    collection: Media\Tiff\Ifd0
                     elements:
                         -
                             path: '/media/tiff/ifd:IFD0:0/tag:ImageWidth:256'
