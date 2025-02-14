@@ -32,25 +32,7 @@ class MakerNote extends MakerNoteBase
                     dataDisplacement: $this->dataDisplacement,
                 );
 
-                // Check data is accessible, error otherwise.
-                if ($ifdEntry->isOffset && $ifdEntry->dataOffset() >= $dataElement->getSize()) {
-                    $this->error(
-                        'Could not access value for item {item} in \'{ifd}\', overflow',
-                        [
-                            'item' => HexDump::dumpIntHex($ifdEntry->collection->getPropertyValue('name') ?? 'n/a'),
-                            'ifd' => $this->getAttribute('name'),
-                        ]
-                    );
-                    continue;
-                }
-                if ($ifdEntry->isOffset && $ifdEntry->dataOffset() +  $ifdEntry->size > $dataElement->getSize()) {
-                    $this->error(
-                        'Could not get value for item {item} in \'{ifd}\', not enough data',
-                        [
-                            'item' => HexDump::dumpIntHex($ifdEntry->collection->getPropertyValue('name') ?? 'n/a'),
-                            'ifd' => $this->getAttribute('name'),
-                        ]
-                    );
+                if ($ifdEntry === false) {
                     continue;
                 }
 

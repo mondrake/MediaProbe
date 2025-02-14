@@ -56,37 +56,20 @@ class Ifd extends ListBase
         // Parse the IFD entries.
         for ($i = 0; $i < $n; $i++) {
             $i_offset = $offset + 2 + 12 * $i;
+
             $ifdEntry = $this->ifdEntryFromDataElement(
                 seq: $i,
                 dataElement: $dataElement,
                 offset: $i_offset,
                 fallbackCollectionId: 'Media\\Tiff\\IfdAny',
             );
+
+            if ($ifdEntry === false) {
+                continue;
+            }
+
+            // Adds the IFD entry to the DOM.
             $item_class = $ifdEntry->collection->handler();
-
-            // Check data is accessible, warn otherwise.
-            if ($ifdEntry->isOffset && $ifdEntry->dataOffset() >= $dataElement->getSize()) {
-                $this->error(
-                    'Could not access value for item {item} in \'{ifd}\', overflow',
-                    [
-                        'item' => HexDump::dumpIntHex($ifdEntry->collection->getPropertyValue('name') ?? 'n/a'),
-                        'ifd' => $this->getAttribute('name'),
-                    ]
-                );
-                continue;
-            }
-            if ($ifdEntry->isOffset && $ifdEntry->dataOffset() +  $ifdEntry->size > $dataElement->getSize()) {
-                $this->error(
-                    'Could not get value for item {item} in \'{ifd}\', not enough data',
-                    [
-                        'item' => HexDump::dumpIntHex($ifdEntry->collection->getPropertyValue('name') ?? 'n/a'),
-                        'ifd' => $this->getAttribute('name'),
-                    ]
-                );
-                continue;
-            }
-
-            // Adds the item to the DOM.
             try {
                 if (is_a($item_class, Ifd::class, true)) {
                     // This is a sub-IFD.
@@ -186,7 +169,7 @@ class Ifd extends ListBase
         int $offset,
         int $dataDisplacement = 0,
         ?string $fallbackCollectionId = null,
-    ): IfdEntryValueObject {
+    ): IfdEntryValueObject|false {
         $id = $dataElement->getShort($offset);
         $format = $dataElement->getShort($offset + 2);
 
@@ -212,23 +195,44 @@ class Ifd extends ListBase
             // If the item is an Ifd, recurse in loading the item at offset.
             $data_offset = $dataElement->getLong($offset + 8);
             $components = $dataElement->getShort($data_offset);
-            // The first 2 bytes indicate the number of directory entries contained
-            // in the IFD. Then directory entries (12 bytes per entry) follow.
-            // After last directory entry, there are  4 bytes indicating the
-            // offset to next IFD.
+            // The first 2 bytes indicate the number of directory entries contained in the IFD.
+            // Then directory entries (12 bytes per entry) follow. After last directory entry,
+            // there are 4 bytes indicating the offset to next IFD.
             $size = 2 + $components * DataFormat::getSize($format) + 4;
         } else {
             // The data is a tag.
             $components = $dataElement->getLong($offset + 4);
-            // If the data size is bigger than 4 bytes, then actual data is not in
-            // the TAG's data element, but at the the offset stored in the data
-            // element.
+            // If the data size is bigger than 4 bytes, then actual data is not in the entry
+            // data, but at the the offset stored in the data.
             $size = DataFormat::getSize($format) * $components;
             if ($size > 4) {
                 $data_offset = $dataElement->getLong($offset + 8) - $dataDisplacement;
             } else {
                 $data_offset = $offset + 8;
             }
+        }
+        $isOffset = $size > 4;
+
+        // Check data is accessible, error otherwise.
+        if ($isOffset && $data_offset >= $dataElement->getSize()) {
+            $this->error(
+                'Could not access value for item {item} in \'{ifd}\', overflow',
+                [
+                    'item' => HexDump::dumpIntHex($item_collection->getPropertyValue('name') ?? 'n/a'),
+                    'ifd' => $this->getAttribute('name'),
+                ]
+            );
+            return false;
+        }
+        if ($isOffset && $data_offset +  $size > $dataElement->getSize()) {
+            $this->error(
+                'Could not get value for item {item} in \'{ifd}\', not enough data',
+                [
+                    'item' => HexDump::dumpIntHex($item_collection->getPropertyValue('name') ?? 'n/a'),
+                    'ifd' => $this->getAttribute('name'),
+                ]
+            );
+            return false;
         }
 
         return new IfdEntryValueObject(

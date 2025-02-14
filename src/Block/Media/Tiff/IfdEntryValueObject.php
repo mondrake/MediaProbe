@@ -50,8 +50,8 @@ final class IfdEntryValueObject
 
     /**
      * Return the offset at which data can be found.
-     * 
-     * @var positive-int
+     *
+     * @return positive-int
      */
     public function dataOffset(): int
     {
