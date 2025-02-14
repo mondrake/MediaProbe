@@ -75,7 +75,14 @@ class ReadWriteTest extends MediaProbeTestCaseBase
                 'item' => $entry[0],
                 'DOMNode' => 'tag',
             ]);
-            $tag = new Tag(new ItemDefinition($item_collection, $entry[2]), $ifd);
+            $tag = new Tag(
+                ifdEntry: new IfdEntryValueObject(
+                    collection: $item_collection,
+                    dataFormat: $entry[2],
+                ),
+                parent: $ifd,
+            );
+            $ifd->graftBlock($tag);
             new $entry[1]($tag, new DataString($entry[3]));
         }
         $this->assertNotNull($tiff->getElement("ifd[@name='IFD0']"));

@@ -47,8 +47,6 @@ class Bug3017880Test extends MediaProbeTestCaseBase
                 ifdEntry: new IfdEntryValueObject(
                     collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
                     dataFormat: DataFormat::LONG,
-                    countOfComponents: 1,
-                    data: 0,
                 ),
                 parent: $tiff,
             );
@@ -60,7 +58,14 @@ class Bug3017880Test extends MediaProbeTestCaseBase
         $software_tag = $ifd0->getElement("tag[@name='Software']");
 
         if ($software_tag === null) {
-            $tag = new Tag(new ItemDefinition($ifd0->getCollection()->getItemCollection(0x0131), DataFormat::ASCII), $ifd0);
+            $tag = new Tag(
+                ifdEntry: new IfdEntryValueObject(
+                    collection: $ifd0->getCollection()->getItemCollection(0x0131),
+                    dataFormat: DataFormat::ASCII,
+                ),
+                parent: $ifd0,
+            );
+            $ifd0->graftBlock($tag);
             new Ascii($tag, new DataString($software_name));
             $resave_file = 1;
         } else {
