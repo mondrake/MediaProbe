@@ -5,17 +5,39 @@ namespace FileEye\MediaProbe\Block\Tiff;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\LeafBlockBase;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Block\ListBase;
 
 /**
  * Class representing an Exif TAG as a MediaProbe block.
  */
-class Tag extends BlockBase
+class Tag extends LeafBlockBase
 {
+    public function __construct(
+        public readonly IfdEntryValueObject $ifdEntry,
+        ListBase|RootBlockBase $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $ifdEntry->collection,
+                format: $ifdEntry->dataFormat,
+                valuesCount: $ifdEntry->countOfComponents,
+                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
+                sequence: $ifdEntry->sequence,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
     /**
      * Validates against the specification, if defined.
      */
@@ -60,60 +82,53 @@ class Tag extends BlockBase
         }
     }
 
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): Tag
     {
         $this->validate();
-        assert($this->debugInfo(['dataElement' => $data]));
+        $this->debugInfo(['dataElement' => $dataElement]);
         try {
-            $class = $this->getDefinition()->getEntryClass();
-            $entry = new $class($this, $data);
-            $this->level = $entry->level();
+            $class = $this->getEntryClass();
+//            $this->debug(var_export($dataElement, true));
+            $entry = new $class($this, $dataElement);
         } catch (DataException $e) {
             $this->error($e->getMessage());
         }
+        return $this;
     }
 
-    public function getValue(array $options = []): mixed
+    public function getEntryClass(): string
     {
-        return $this->getElement("entry") ? $this->getElement("entry")->getValue($options) : null;
-    }
+        // Return the specific entry class if defined, or fall back to
+        // default class for the format.
+        if (!$entry_class = $this->ifdEntry->collection->getPropertyValue('entryClass')) {
+            if (empty($this->ifdEntry->dataFormat)) {
+                throw new MediaProbeException(
+                    'No format can be derived for item: %s (%s)',
+                    $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
+                    $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
+                );
+            }
 
-    public function toString(array $options = []): string
-    {
-        return $this->getElement("entry") ? $this->getElement("entry")->toString($options) : '';
-    }
-
-    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
-    {
-        return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : '';
-    }
-
-    public function getFormat(): int
-    {
-        $entry = $this->getElement("entry");
-        if (!$entry) {
-            return $this->getDefinition()->format;
+            if (!$entry_class = DataFormat::getClass($this->ifdEntry->dataFormat)) {
+                throw new MediaProbeException(
+                    'Unsupported format %d for item: %s (%s)',
+                    $this->ifdEntry->dataFormat,
+                    $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
+                    $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
+                );
+            }
         }
-        assert($entry instanceof EntryInterface, get_class($entry));
-        return $entry->getFormat();
+        return $entry_class;
     }
 
-    public function getComponents(): int
+    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
-        $entry = $this->getElement("entry");
-        if (!$entry) {
-            return $this->getDefinition()->valuesCount;
-        }
-        assert($entry instanceof EntryInterface, get_class($entry));
-        return $entry->getComponents();
+        throw new \LogicException('removing');
     }
-
-    protected function getContextPathSegmentPattern(): string
+    
+    protected function doParseData(DataElement $data): void
     {
-        if ($this->getAttribute('name') !== '') {
-            return '/{DOMNode}:{name}:{id}';
-        }
-        return '/{DOMNode}:{id}';
+        throw new \LogicException('removing');
     }
 
     public function collectInfo(array $context = []): array

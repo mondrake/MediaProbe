@@ -70,39 +70,30 @@ class Ifd extends ListBase
 
             // Adds the IFD entry to the DOM.
             $item_class = $ifdEntry->collection->handler();
+            $item = new $item_class(
+                ifdEntry: $ifdEntry,
+                parent: $this,
+            );
             try {
                 if (is_a($item_class, Ifd::class, true)) {
                     // This is a sub-IFD.
-                    $item = new $item_class(
-                        ifdEntry: $ifdEntry,
-                        parent: $this,
-                    );
                     try {
                         $item->fromDataElement($dataElement);
                     } catch (DataException $e) {
                         $item->error($e->getMessage());
                     }
-                    $this->graftBlock($item);
                 } else {
                     // This is a TAG.
                     // In case of an IFD terminator item entry, i.e. zero
                     // components, the data window size is still 4 bytes, from
                     // the IFD index area.
-                    $item = new $item_class(
-                        new ItemDefinition(
-                            collection: $ifdEntry->collection,
-                            format: $ifdEntry->dataFormat,
-                            valuesCount: $ifdEntry->countOfComponents,
-                            dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                            sequence: $ifdEntry->sequence,
-                        ),
-                        $this,
-                    );
-                    $item_data_window_size = $ifdEntry->countOfComponents > 0 ? $ifdEntry->size : 4;
-                    if ($ifdEntry->isOffset) {
-                        $item->parseData($dataElement, $ifdEntry->dataOffset(), $item_data_window_size);
-                    } else {
-                        $item->parseData($dataElement, $ifdEntry->dataValue(), $item_data_window_size);
+                    try {
+                        $item_data_window_offset = $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue();
+                        $item_data_window_size = $ifdEntry->countOfComponents > 0 ? $ifdEntry->size : 4;
+                        $tagDataWindow = new DataWindow($dataElement, $item_data_window_offset, $item_data_window_size);
+                        $item->fromDataElement($tagDataWindow);
+                    } catch (DataException $e) {
+                        $item->error($e->getMessage());
                     }
                 }
             } catch (DataException $e) {
@@ -110,6 +101,7 @@ class Ifd extends ListBase
                     $item->error($e->getMessage());
                 }
             }
+            $this->graftBlock($item);
         }
 
         // Invoke post-load callbacks.

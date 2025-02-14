@@ -52,7 +52,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference, $graft);
 
         if (!isset($this->DOMNode)) {
-//            throw new MediaProbeException(sprintf('No DOM node specified for %s', __CLASS__));
             return;
         }
 

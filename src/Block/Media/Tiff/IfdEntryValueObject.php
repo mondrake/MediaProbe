@@ -39,8 +39,8 @@ final class IfdEntryValueObject
      */
     public function __construct(
         public readonly CollectionInterface $collection,
-        public readonly int $dataFormat,
-        public readonly int $countOfComponents,
+        public readonly int $dataFormat = DataFormat::LONG,
+        public readonly int $countOfComponents = 1,
         private readonly int $data = 0,
         public readonly int $sequence = 0,
     ) {
