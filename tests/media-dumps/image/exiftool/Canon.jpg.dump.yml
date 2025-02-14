@@ -214,7 +214,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                                    validationLevel: OK
+                                                    validationLevel: Notice
                                                     name: ExifIFD
                                                     id: '34665'
                                                     collection: Media\Tiff\IfdExif
@@ -462,7 +462,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500'
                                                             handlerClass: FileEye\MediaProbe\Block\Maker\Canon\Exif\MakerNote
-                                                            validationLevel: OK
+                                                            validationLevel: Notice
                                                             name: Canon
                                                             id: '37500'
                                                             collection: Maker\Canon\Exif\MakerNote
@@ -1914,7 +1914,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '0'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -1929,7 +1929,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:192'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '192'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -1944,7 +1944,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:193'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '193'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -1999,7 +1999,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:168'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '168'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -2445,7 +2445,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:181'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '181'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -2460,7 +2460,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '0'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -2878,7 +2878,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: Canon.jpg
-    FileDateTime: 1737909392
+    FileDateTime: 1739563719
     FileSize: 2697
     FileType: 2
     MimeType: image/jpeg
