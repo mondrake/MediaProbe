@@ -9,7 +9,6 @@ use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Utility\HexDump;
 
 class MakerNote extends MakerNoteBase
 {
