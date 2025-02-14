@@ -118,7 +118,7 @@ elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
                                             handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                            validationLevel: OK
+                                            validationLevel: Warning
                                             name: IFD0
                                             id: '0'
                                             collection: Media\Tiff\Ifd0
@@ -190,7 +190,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    validationLevel: OK
+                                                    validationLevel: Warning
                                                     name: XResolution
                                                     id: '282'
                                                     collection: Tiff\Tag
@@ -206,7 +206,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    validationLevel: OK
+                                                    validationLevel: Warning
                                                     name: YResolution
                                                     id: '283'
                                                     collection: Tiff\Tag
@@ -238,7 +238,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306'
                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                    validationLevel: OK
+                                                    validationLevel: Warning
                                                     name: ModifyDate
                                                     id: '306'
                                                     collection: Tiff\Tag
@@ -270,7 +270,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                                    validationLevel: OK
+                                                    validationLevel: Warning
                                                     name: ExifIFD
                                                     id: '34665'
                                                     collection: Media\Tiff\IfdExif
@@ -278,7 +278,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureTime:33434'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: ExposureTime
                                                             id: '33434'
                                                             collection: Tiff\Tag
@@ -294,7 +294,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FNumber:33437'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: FNumber
                                                             id: '33437'
                                                             collection: Tiff\Tag
@@ -358,7 +358,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: DateTimeOriginal
                                                             id: '36867'
                                                             collection: Tiff\Tag
@@ -374,7 +374,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: CreateDate
                                                             id: '36868'
                                                             collection: Tiff\Tag
@@ -406,7 +406,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CompressedBitsPerPixel:37122'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: CompressedBitsPerPixel
                                                             id: '37122'
                                                             collection: Tiff\Tag
@@ -438,7 +438,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: MaxApertureValue
                                                             id: '37381'
                                                             collection: Tiff\Tag
@@ -502,7 +502,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalLength:37386'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: FocalLength
                                                             id: '37386'
                                                             collection: Tiff\Tag
@@ -598,7 +598,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965'
                                                             handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: InteropIFD
                                                             id: '40965'
                                                             collection: Media\Tiff\IfdInteroperability
@@ -606,7 +606,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:ExposureTime:33434'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: ExposureTime
                                                                     id: '33434'
                                                                     collection: Tiff\Tag
@@ -622,7 +622,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:FNumber:33437'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: FNumber
                                                                     id: '33437'
                                                                     collection: Tiff\Tag
@@ -686,7 +686,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:DateTimeOriginal:36867'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: DateTimeOriginal
                                                                     id: '36867'
                                                                     collection: Tiff\Tag
@@ -702,7 +702,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:CreateDate:36868'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: CreateDate
                                                                     id: '36868'
                                                                     collection: Tiff\Tag
@@ -734,7 +734,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:CompressedBitsPerPixel:37122'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: CompressedBitsPerPixel
                                                                     id: '37122'
                                                                     collection: Tiff\Tag
@@ -766,7 +766,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:MaxApertureValue:37381'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: MaxApertureValue
                                                                     id: '37381'
                                                                     collection: Tiff\Tag
@@ -830,7 +830,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:FocalLength:37386'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: FocalLength
                                                                     id: '37386'
                                                                     collection: Tiff\Tag
@@ -894,7 +894,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:ExifImageWidth:40962'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: ExifImageWidth
                                                                     id: '40962'
                                                                     collection: Tiff\Tag
@@ -910,7 +910,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:ExifImageHeight:40963'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: ExifImageHeight
                                                                     id: '40963'
                                                                     collection: Tiff\Tag
@@ -926,7 +926,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:40965'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '40965'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:

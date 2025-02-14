@@ -11,13 +11,13 @@ fileContentHash: 26f4b11c45ad3e56a530d03967ff4627892b3264183b85fefba194ff1fe3e08
 elements:
     path: /media
     handlerClass: FileEye\MediaProbe\Media
-    validationLevel: OK
+    validationLevel: Warning
     collection: Media
     elements:
         -
             path: /media/tiff
             handlerClass: FileEye\MediaProbe\Block\Media\Tiff
-            validationLevel: OK
+            validationLevel: Warning
             id: image/tiff
             collection: Media\Tiff
             elements:
@@ -39,7 +39,7 @@ elements:
                 -
                     path: '/media/tiff/ifd:IFD0:0'
                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                    validationLevel: OK
+                    validationLevel: Warning
                     name: IFD0
                     id: '0'
                     collection: Media\Tiff\Ifd0
@@ -239,7 +239,7 @@ elements:
                         -
                             path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338'
                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                            validationLevel: OK
+                            validationLevel: Warning
                             name: ExtraSamples
                             id: '338'
                             collection: Tiff\Tag
@@ -255,7 +255,7 @@ elements:
                         -
                             path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339'
                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                            validationLevel: OK
+                            validationLevel: Warning
                             name: SampleFormat
                             id: '339'
                             collection: Tiff\Tag

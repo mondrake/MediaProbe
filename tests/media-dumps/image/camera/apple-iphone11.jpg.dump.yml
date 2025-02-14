@@ -214,7 +214,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                                    validationLevel: OK
+                                                    validationLevel: Warning
                                                     name: ExifIFD
                                                     id: '34665'
                                                     collection: Media\Tiff\IfdExif
@@ -526,7 +526,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500'
                                                             handlerClass: FileEye\MediaProbe\Block\Maker\Apple\Exif\MakerNote
-                                                            validationLevel: OK
+                                                            validationLevel: Warning
                                                             name: Apple
                                                             id: '37500'
                                                             collection: Maker\Apple\Exif\MakerNote
@@ -749,7 +749,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:13'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '13'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -764,7 +764,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:14'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '14'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -779,7 +779,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:16'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '16'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -810,7 +810,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:22'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '22'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
@@ -825,7 +825,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:LivePhotoVideoIndex:23'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Warning
                                                                     name: LivePhotoVideoIndex
                                                                     id: '23'
                                                                     collection: Tiff\Tag
@@ -985,7 +985,7 @@ elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Apple:37500/tag:40'
                                                                     handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                                    validationLevel: OK
+                                                                    validationLevel: Notice
                                                                     id: '40'
                                                                     collection: Tiff\UnknownTag
                                                                     elements:
