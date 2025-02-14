@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -140,6 +142,19 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
         $handler = $item_definition->collection->handler();
+        if (is_a($handler, Tag::class, true)) {
+            $tag = new Tag(
+                ifdEntry: new IfdEntryValueObject(
+                    collection: $item_definition->collection,
+                    dataFormat: $item_definition->format,
+                    countOfComponents: $item_definition->valuesCount,
+                    data: $item_definition->dataOffset,
+                    sequence: $item_definition->sequence,
+                ),
+                parent: $parent ?? $this,
+            );
+            return $tag;
+        }
         return new $handler($item_definition, $parent ?? $this, $reference);
     }
 

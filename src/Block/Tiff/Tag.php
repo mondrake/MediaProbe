@@ -2,19 +2,16 @@
 
 namespace FileEye\MediaProbe\Block\Tiff;
 
+use FileEye\MediaProbe\Block\ListBase;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\Model\LeafBlockBase;
-use FileEye\MediaProbe\Model\BlockInterface;
-use FileEye\MediaProbe\Model\EntryInterface;
-use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Utility\HexDump;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
-use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Block\ListBase;
+use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\LeafBlockBase;
+use FileEye\MediaProbe\Utility\HexDump;
 
 /**
  * Class representing an Exif TAG as a MediaProbe block.

@@ -122,11 +122,11 @@ class SpecTest extends MediaProbeTestCaseBase
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);
         $item_format = $item_collection->getPropertyValue('format')[0];
         $ifdEntry = new IfdEntryValueObject(
-            collection: $item_collection, 
+            collection: $item_collection,
             dataFormat: $item_format
         );
         $tag = new Tag(
-            ifdEntry: $ifdEntry, 
+            ifdEntry: $ifdEntry,
             parent: $ifd
         );
         $entry_class_name = $tag->getEntryClass();

@@ -4,20 +4,9 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\Data\DataFile;
-use FileEye\MediaProbe\Dumper\DebugDumper;
-use FileEye\MediaProbe\Dumper\DumperInterface;
-use FileEye\MediaProbe\ItemDefinition;
-use Monolog\Handler\TestHandler;
-use Monolog\Level;
-use Monolog\Logger;
-use Psr\Log\LoggerInterface;
-use Symfony\Component\Stopwatch\Stopwatch;
-
 /**
  * Base class for a MediaProbe leaf block.
- * 
+ *
  * A leaf block only contains an Entry object.
  */
 abstract class LeafBlockBase extends BlockBase

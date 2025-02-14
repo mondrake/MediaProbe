@@ -71,7 +71,7 @@ class MakerNote extends MakerNoteBase
                         $this,
                     );
                     $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);    
+                    $item->parseData($item_data_window);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {

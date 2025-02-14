@@ -6,12 +6,11 @@ use CFPropertyList\CFDictionary;
 use CFPropertyList\CFNumber;
 use CFPropertyList\CFPropertyList;
 use FileEye\MediaProbe\Block\ListBase;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataString;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 class RunTime extends ListBase
 {

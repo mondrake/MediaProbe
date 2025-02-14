@@ -4,12 +4,12 @@ namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
+use FileEye\MediaProbe\Block\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Block\Tiff\Tag;
 
 class MakerNote extends MakerNoteBase
 {
@@ -60,7 +60,7 @@ class MakerNote extends MakerNoteBase
                         $this,
                     );
                     $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);    
+                    $item->parseData($item_data_window);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {
