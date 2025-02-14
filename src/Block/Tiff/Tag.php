@@ -11,6 +11,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\LeafBlockBase;
+use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\HexDump;
 
 /**
@@ -85,7 +86,6 @@ class Tag extends LeafBlockBase
         $this->debugInfo(['dataElement' => $dataElement]);
         try {
             $class = $this->getEntryClass();
-//            $this->debug(var_export($dataElement, true));
             $entry = new $class($this, $dataElement);
         } catch (DataException $e) {
             $this->error($e->getMessage());
@@ -122,7 +122,7 @@ class Tag extends LeafBlockBase
     {
         throw new \LogicException('removing');
     }
-    
+
     protected function doParseData(DataElement $data): void
     {
         throw new \LogicException('removing');

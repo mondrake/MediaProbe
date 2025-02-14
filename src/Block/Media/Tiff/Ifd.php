@@ -97,9 +97,7 @@ class Ifd extends ListBase
                     }
                 }
             } catch (DataException $e) {
-                if (isset($item)) {
-                    $item->error($e->getMessage());
-                }
+                $item->error($e->getMessage());
             }
             $this->graftBlock($item);
         }

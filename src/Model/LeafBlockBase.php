@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
+use FileEye\MediaProbe\Utility\ConvertBytes;
+
 /**
  * Base class for a MediaProbe leaf block.
  *
