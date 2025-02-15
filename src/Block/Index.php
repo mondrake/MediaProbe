@@ -27,7 +27,7 @@ class Index extends ListBase
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
-            $this->warning("Found {format_name} data format, expected {expected_format_names}", [
+            $this->notice("Found {format_name} data format, expected {expected_format_names}", [
                 'format_name' => DataFormat::getName($this->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
             ]);

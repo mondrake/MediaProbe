@@ -46,21 +46,21 @@ class Tag extends LeafBlockBase
 
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Tiff\UnknownTag'])) {
-            $this->notice("Unknown item {item} in '{parent}'", [
+            $this->info("Unknown tag {item} in '{parent}'", [
                 'item' => HexDump::dumpIntHex($this->getAttribute('id')),
                 'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
             ]);
             return;
         }
 
-        // Warn if format is not as expected.
+        // Notice if format is not as expected.
         $expected_format = $this->getCollection()->getPropertyValue('format');
         if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
-            $this->warning("Found {format_name} data format, expected {expected_format_names} for item '{item}' in '{parent}'", [
+            $this->notice("Found {format_name} data format, expected {expected_format_names} for tag '{item}' in '{parent}'", [
                 'format_name' => DataFormat::getName($this->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
@@ -68,10 +68,10 @@ class Tag extends LeafBlockBase
             ]);
         }
 
-        // Warn if components are not as expected.
+        // Notice if components are not as expected.
         $expected_components = $this->getCollection()->getPropertyValue('components');
         if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
-            $this->warning("Found {components} data components, expected {expected_components} for item '{item}' in '{parent}'", [
+            $this->notice("Found {components} data components, expected {expected_components} for tag '{item}' in '{parent}'", [
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',
@@ -100,7 +100,7 @@ class Tag extends LeafBlockBase
         if (!$entry_class = $this->ifdEntry->collection->getPropertyValue('entryClass')) {
             if (empty($this->ifdEntry->dataFormat)) {
                 throw new MediaProbeException(
-                    'No format can be derived for item: %s (%s)',
+                    'No format can be derived for TAG: %s (%s)',
                     $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
                     $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
                 );
@@ -108,7 +108,7 @@ class Tag extends LeafBlockBase
 
             if (!$entry_class = DataFormat::getClass($this->ifdEntry->dataFormat)) {
                 throw new MediaProbeException(
-                    'Unsupported format %d for item: %s (%s)',
+                    'Unsupported format %d for TAG: %s (%s)',
                     $this->ifdEntry->dataFormat,
                     $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
                     $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
@@ -119,11 +119,6 @@ class Tag extends LeafBlockBase
     }
 
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
-    {
-        throw new \LogicException('removing');
-    }
-
-    protected function doParseData(DataElement $data): void
     {
         throw new \LogicException('removing');
     }
