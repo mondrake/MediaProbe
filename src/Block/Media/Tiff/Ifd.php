@@ -174,7 +174,7 @@ class Ifd extends ListBase
             } else {
                 $this->error($message);
             }
-            $format = DataFormat::getfromName('SignedLong');
+            $format = DataFormat::SIGNED_LONG;
             $componentSize = DataFormat::getSize($format);
         }
 
