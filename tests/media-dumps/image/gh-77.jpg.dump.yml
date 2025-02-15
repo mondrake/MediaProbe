@@ -86,7 +86,7 @@ elements:
                                         -
                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0'
                                             handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                            validationLevel: Warning
+                                            validationLevel: Notice
                                             name: IFD0
                                             id: '0'
                                             collection: Media\Tiff\Ifd0
@@ -254,7 +254,7 @@ elements:
                                                 -
                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665'
                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Ifd
-                                                    validationLevel: Warning
+                                                    validationLevel: Notice
                                                     name: ExifIFD
                                                     id: '34665'
                                                     collection: Media\Tiff\IfdExif
@@ -342,7 +342,7 @@ elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:RecommendedExposureIndex:34866'
                                                             handlerClass: FileEye\MediaProbe\Block\Tiff\Tag
-                                                            validationLevel: Warning
+                                                            validationLevel: Notice
                                                             name: RecommendedExposureIndex
                                                             id: '34866'
                                                             collection: Tiff\Tag
@@ -1004,9 +1004,6 @@ elements:
 log:
     WARNING:
         -
-            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:RecommendedExposureIndex:34866'
-            message: "Found Short data format, expected Long for item 'RecommendedExposureIndex' in 'ExifIFD'"
-        -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1'
             message: 'Decrementing thumbnail size to 5315 bytes'
     NOTICE:
@@ -1028,6 +1025,9 @@ log:
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Copyright:33432/entry'
             message: 'Ascii entry missing final NUL character.'
+        -
+            path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:RecommendedExposureIndex:34866'
+            message: "Found Short data format, expected Long for tag 'RecommendedExposureIndex' in 'ExifIFD'"
         -
             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTimeOriginal:37521/entry'
             message: 'Ascii entry missing final NUL character.'
