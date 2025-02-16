@@ -10,7 +10,6 @@ skip:
         - 'Apple:SemanticStyleRenderingVer'
         - 'Apple:Apple_0x004e'
         - 'Apple:Apple_0x004f'
-        - '******Apple:LivePhotoVideoIndex'
         - 'Apple:SemanticStyle'
 fileName: apple-iphone14.jpg
 mimeType: image/jpeg
