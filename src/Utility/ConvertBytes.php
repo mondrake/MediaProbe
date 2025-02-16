@@ -114,10 +114,9 @@ class ConvertBytes
     /**
      * Convert an unsigned long into four bytes.
      *
-     * Because PHP limits the size of integers to 32 bit signed, one cannot
-     * really have an unsigned integer in PHP. But integers larger than 2^31-1
-     * will be promoted to 64 bit signed floating point numbers, and so such
-     * large numbers can be handled too.
+     * Because PHP limits the size of integers to 32 bit signed, one cannot really have an unsigned
+     * integer in PHP. But integers larger than 2^31-1 will be promoted to 64 bit signed floating
+     * point numbers, and so such large numbers can be handled too.
      */
     public static function fromLong(int $value, int $byte_order = self::BIG_ENDIAN): string
     {
@@ -155,6 +154,57 @@ class ConvertBytes
             return (chr($value) . chr($value >> 8) . chr($value >> 16) . chr($value >> 24));
         } else {
             return (chr($value >> 24) . chr($value >> 16) . chr($value >> 8) . chr($value));
+        }
+    }
+
+    /**
+     * Convert a 64-bit unsigned long into eight bytes.
+     */
+    public static function fromLong64(int|float $value, int $byte_order = self::BIG_ENDIAN): string
+    {
+        if ($value < Long64::MIN || $value > Long64::MAX) {
+            throw new DataException('Value %d is invalid for long 64-int', $value);
+        }
+
+        $hex = str_pad(base_convert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+        if ($byte_order == static::LITTLE_ENDIAN) {
+            return (
+                chr(hexdec($hex[14] . $hex[15])) .
+                chr(hexdec($hex[12] . $hex[13])) .
+                chr(hexdec($hex[10] . $hex[11])) .
+                chr(hexdec($hex[8] . $hex[9])) .
+                chr(hexdec($hex[6] . $hex[7])) .
+                chr(hexdec($hex[4] . $hex[5])) .
+                chr(hexdec($hex[2] . $hex[3])) .
+                chr(hexdec($hex[0] . $hex[1]))
+            );
+        } else {
+            return (
+                chr(hexdec($hex[0] . $hex[1])) .
+                chr(hexdec($hex[2] . $hex[3])) .
+                chr(hexdec($hex[4] . $hex[5])) .
+                chr(hexdec($hex[6] . $hex[7])) .
+                chr(hexdec($hex[8] . $hex[9])) .
+                chr(hexdec($hex[10] . $hex[11])) .
+                chr(hexdec($hex[12] . $hex[13])) .
+                chr(hexdec($hex[14] . $hex[15]))
+            );
+        }
+    }
+
+    /**
+     * Convert a 64-bit signed long into eight bytes.
+     */
+    public static function fromSignedLong64(int|float $value, int $byte_order = self::BIG_ENDIAN): string
+    {
+        if ($value < SignedLong64::MIN || $value > SignedLong64::MAX) {
+            throw new DataException('Value %d is invalid for signed long int', $value);
+        }
+
+        if ($byte_order == static::LITTLE_ENDIAN) {
+            return (chr($value) . chr($value >> 8) . chr($value >> 16) . chr($value >> 24) . chr($value >> 32) . chr($value >> 40) . chr($value >> 48) . chr($value >> 56));
+        } else {
+            return (chr($value >> 56) . chr($value >> 48) . chr($value >> 40) . chr($value >> 32) . chr($value >> 24) . chr($value >> 16) . chr($value >> 8) . chr($value));
         }
     }
 
@@ -277,6 +327,18 @@ class ConvertBytes
     }
 
     /**
+     * Extract a signed long from bytes.
+     */
+    public static function toSignedLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
+    {
+        if (!is_string($bytes) || strlen($bytes) < 4) {
+            throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
+        }
+        $n = static::toLong($bytes, $byte_order);
+        return $n > 2147483647 ? $n - 4294967296 : $n;
+    }
+
+    /**
      * Extract a 64-bit unsigned long from bytes.
      */
     public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): int|float
@@ -292,15 +354,15 @@ class ConvertBytes
     }
 
     /**
-     * Extract a signed long from bytes.
+     * Extract a 64-bit signed long from bytes.
      */
-    public static function toSignedLong(string $bytes, int $byte_order = self::BIG_ENDIAN): int
+    public static function toSignedLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): int|float
     {
-        if (!is_string($bytes) || strlen($bytes) < 4) {
+        if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
-        $n = static::toLong($bytes, $byte_order);
-        return $n > 2147483647 ? $n - 4294967296 : $n;
+        $n = static::toLong64($bytes, $byte_order);
+        return $n > 9223372036854775807 ? $n - 18446744073709551616 : $n;
     }
 
     /**

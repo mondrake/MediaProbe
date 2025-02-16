@@ -12,19 +12,8 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class SignedLong extends NumberBase
 {
-    /**
-     * {@inheritdoc}
-     */
     protected string $name = 'SignedLong';
-
-    /**
-     * {@inheritdoc}
-     */
     protected string $formatName = 'SignedLong';
-
-    /**
-     * {@inheritdoc}
-     */
     protected int $formatSize = 4;
 
     const MIN = -2147483648;
