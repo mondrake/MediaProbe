@@ -160,10 +160,11 @@ class ConvertBytes
     /**
      * Convert a 64-bit unsigned long into eight bytes.
      */
-    public static function fromLong64(int|float $value, int $byte_order = self::BIG_ENDIAN): string
+    public static function fromLong64($value, int $byte_order = self::BIG_ENDIAN): string
     {
-        if ($value < Long64::MIN || $value > Long64::MAX) {
-            throw new DataException('Value %d is invalid for long 64-int', $value);
+dump([__METHOD__, $value, HexDump::unfuckedBaseConvert($value, 10, 16)]);
+        if (bccomp($value, Long64::MIN) === -1 || bccomp($value, Long64::MAX) === 1) {
+            throw new DataException('Value %s is invalid for long 64-int', $value);
         }
 
         $hex = str_pad(base_convert($value, 10, 16), 16, '0', STR_PAD_LEFT);
@@ -195,7 +196,7 @@ class ConvertBytes
     /**
      * Convert a 64-bit signed long into eight bytes.
      */
-    public static function fromSignedLong64(int|float $value, int $byte_order = self::BIG_ENDIAN): string
+    public static function fromSignedLong64(Number $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if ($value < SignedLong64::MIN || $value > SignedLong64::MAX) {
             throw new DataException('Value %d is invalid for signed long int', $value);
@@ -341,7 +342,7 @@ class ConvertBytes
     /**
      * Extract a 64-bit unsigned long from bytes.
      */
-    public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): int|float
+    public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): string
     {
         if (!is_string($bytes) || strlen($bytes) < 4) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
@@ -356,7 +357,7 @@ class ConvertBytes
     /**
      * Extract a 64-bit signed long from bytes.
      */
-    public static function toSignedLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): int|float
+    public static function toSignedLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): string
     {
         if (!is_string($bytes) || strlen($bytes) < 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
