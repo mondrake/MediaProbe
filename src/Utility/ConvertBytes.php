@@ -5,9 +5,11 @@ namespace FileEye\MediaProbe\Utility;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Entry\Core\Byte;
 use FileEye\MediaProbe\Entry\Core\Long;
+use FileEye\MediaProbe\Entry\Core\Long64;
 use FileEye\MediaProbe\Entry\Core\Short;
 use FileEye\MediaProbe\Entry\Core\SignedByte;
 use FileEye\MediaProbe\Entry\Core\SignedLong;
+use FileEye\MediaProbe\Entry\Core\SignedLong64;
 use FileEye\MediaProbe\Entry\Core\SignedShort;
 
 /**
@@ -123,11 +125,10 @@ class ConvertBytes
             throw new DataException('Value %d is invalid for long int', $value);
         }
 
-        // We cannot convert the number to bytes in the normal way (using shifts
-        // and modulo calculations) because the PHP operator >> and function
-        // chr() clip their arguments to 2^31-1, which is the largest signed
-        // integer known to PHP. But luckily base_convert handles such big
-        // numbers.
+        // We cannot convert the number to bytes in the normal way (using shifts and modulo
+        // calculations) because the PHP operator >> and function chr() clip their arguments to
+        // 2^31-1, which is the largest signed integer known to PHP. But luckily base_convert
+        // handles such big numbers.
         $hex = str_pad(base_convert($value, 10, 16), 8, '0', STR_PAD_LEFT);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (chr(hexdec($hex[6] . $hex[7])) . chr(hexdec($hex[4] . $hex[5])) . chr(hexdec($hex[2] . $hex[3])) .
@@ -272,6 +273,21 @@ class ConvertBytes
             return (int) (ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
         } else {
             return (int) (ord($bytes[0]) * 16777216 + ord($bytes[1]) * 65536 + ord($bytes[2]) * 256 + ord($bytes[3]));
+        }
+    }
+
+    /**
+     * Extract a 64-bit unsigned long from bytes.
+     */
+    public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): int|float
+    {
+        if (!is_string($bytes) || strlen($bytes) < 4) {
+            throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
+        }
+        if ($byte_order == static::LITTLE_ENDIAN) {
+            return (ord($bytes[7]) * 281474976710656 + ord($bytes[6]) * 1099511627776 + ord($bytes[5]) * 1099511627776 + ord($bytes[4]) * 4294967296 + ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
+        } else {
+            return (ord($bytes[0]) * 281474976710656 + ord($bytes[1]) * 1099511627776 + ord($bytes[2]) * 1099511627776 + ord($bytes[3]) * 4294967296 + ord($bytes[4]) * 16777216 + ord($bytes[5]) * 65536 + ord($bytes[6]) * 256 + ord($bytes[7]));
         }
     }
 
