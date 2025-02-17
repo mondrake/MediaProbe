@@ -168,7 +168,7 @@ class ConvertBytes
 
         $hexString = str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
 
-dump([__METHOD__, $value,hex2bin($hexString), hex2bin(implode('', array_reverse(str_split($hexString, 2))))]);
+#dump([__METHOD__, $value,hex2bin($hexString), hex2bin(implode('', array_reverse(str_split($hexString, 2))))]);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return hex2bin(implode('', array_reverse(str_split($hexString, 2))));
         } else {
@@ -328,22 +328,17 @@ dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 1
      */
     public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): string
     {
-        if (!is_string($bytes) || strlen($bytes) < 4) {
+        if (!is_string($bytes) || strlen($bytes) !== 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
+
         if ($byte_order == static::LITTLE_ENDIAN) {
-            return (ord($bytes[7]) * 281474976710656 + ord($bytes[6]) * 1099511627776 + ord($bytes[5]) * 1099511627776 + ord($bytes[4]) * 4294967296 + ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
+            $hexString = implode('', array_reverse(str_split(bin2hex($bytes), 2)));
         } else {
-            $t = bcmul(ord($bytes[0]), '72057594037927936');
-            $t = bcadd($t, bcmul(ord($bytes[1]), '281474976710656'));
-            $t = bcadd($t, bcmul(ord($bytes[2]), '1099511627776'));
-            $t = bcadd($t, bcmul(ord($bytes[3]), '4294967296'));
-            $t = bcadd($t, bcmul(ord($bytes[4]), '16777216'));
-            $t = bcadd($t, bcmul(ord($bytes[5]), '65536'));
-            $t = bcadd($t, bcmul(ord($bytes[6]), '256'));
-            $t = bcadd($t, ord($bytes[7]));
-            return $t;
+            $hexString = bin2hex($bytes);
         }
+
+        return static::unfuckedBaseConvert($hexString, 16, 10);
     }
 
     /**
