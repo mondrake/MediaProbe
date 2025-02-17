@@ -21,7 +21,7 @@ class NumberLong64Test extends NumberTestCase
 
     protected function convertValueToBytes(int|string|array $value): string
     {
-        assert(is_string($value));
-        return ConvertBytes::fromLong64($value);
+        assert(is_string($value) || is_int($value));
+        return ConvertBytes::fromLong64((string) $value);
     }
 }
