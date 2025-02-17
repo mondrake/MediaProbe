@@ -19,6 +19,7 @@ class NumberSignedLong64Test extends NumberTestCase
 
     protected function convertValueToBytes(int|string|array $value): string
     {
+dump([__METHOD__, $value]);
         assert(is_string($value));
         return ConvertBytes::fromSignedLong64($value);
     }

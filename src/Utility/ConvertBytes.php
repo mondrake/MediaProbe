@@ -166,23 +166,13 @@ class ConvertBytes
             throw new DataException('Value %s is invalid for long 64-int', $value);
         }
 
-        $hex = str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+        $hexString = str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
 
-dump([__METHOD__, $value, $hex, hex2bin($hex)]);
-        #$hex = str_pad(base_convert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+dump([__METHOD__, $value,hex2bin($hexString), hex2bin(implode('', array_reverse(str_split($hexString, 2))))]);
         if ($byte_order == static::LITTLE_ENDIAN) {
-            return (
-                chr(hexdec($hex[14] . $hex[15])) .
-                chr(hexdec($hex[12] . $hex[13])) .
-                chr(hexdec($hex[10] . $hex[11])) .
-                chr(hexdec($hex[8] . $hex[9])) .
-                chr(hexdec($hex[6] . $hex[7])) .
-                chr(hexdec($hex[4] . $hex[5])) .
-                chr(hexdec($hex[2] . $hex[3])) .
-                chr(hexdec($hex[0] . $hex[1]))
-            );
+            return hex2bin(implode('', array_reverse(str_split($hexString, 2))));
         } else {
-            return hex2bin($hex);
+            return hex2bin($hexString);
         }
     }
 
