@@ -71,10 +71,10 @@ abstract class NumberTestCase extends EntryTestBase
     {
         $ret = '';
         foreach ($values as $value) {
-            $ret .= $this->convertValueToBytes((string) $value);
+            $ret .= $this->convertValueToBytes($value);
         }
         return new DataString($ret);
     }
 
-    abstract protected function convertValueToBytes(int|float|array $value): string;
+    abstract protected function convertValueToBytes(int|string|array $value): string;
 }

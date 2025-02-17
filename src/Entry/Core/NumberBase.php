@@ -41,7 +41,7 @@ abstract class NumberBase extends EntryBase
     /**
      * Return a number from the data element at specified offset.
      */
-    abstract protected function getNumberFromDataElement(int $offset): int|float|string|array;
+    abstract protected function getNumberFromDataElement(int $offset): int|string|array;
 
     /**
      * Convert a number into bytes.
@@ -60,7 +60,7 @@ abstract class NumberBase extends EntryBase
      *
      * @return string bytes representing the number given.
      */
-    abstract public function numberToBytes(int|float|string $number, int $order): string;
+    abstract public function numberToBytes(int|string $number, int $order): string;
 
     /**
      * Formats a number.
@@ -77,8 +77,9 @@ abstract class NumberBase extends EntryBase
      *
      * @return string the number formatted as a string suitable for display.
      */
-    protected function formatNumber(int|float|string|array $number, array $options = []): int|float|Number|array|string
+    protected function formatNumber(int|string|array $number, array $options = []): int|float|string|array
     {
+dump([__METHOD__, $number]);
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
             assert(!is_array($number));

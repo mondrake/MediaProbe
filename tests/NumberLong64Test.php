@@ -19,7 +19,7 @@ class NumberLong64Test extends NumberTestCase
         $this->max = '18446744073709551615';
     }
 
-    protected function convertValueToBytes(int|float|string|array $value): string
+    protected function convertValueToBytes(int|string|array $value): string
     {
         assert(is_string($value));
         return ConvertBytes::fromLong64($value);

@@ -42,7 +42,7 @@ class SignedLong extends NumberBase
     /**
      * {@inheritdoc}
      */
-    public function numberToBytes(int|float $number, int $order): string
+    public function numberToBytes(int|string $number, int $order): string
     {
         return ConvertBytes::fromSignedLong($number, $order);
     }

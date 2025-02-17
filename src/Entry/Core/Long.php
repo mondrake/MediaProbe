@@ -35,7 +35,7 @@ class Long extends NumberBase
         return $ret;
     }
 
-    public function numberToBytes(int|float|string $number, int $order): string
+    public function numberToBytes(int|string $number, int $order): string
     {
         return ConvertBytes::fromLong($number, $order);
     }

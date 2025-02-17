@@ -41,7 +41,7 @@ class Rational extends NumberBase
         return $ret;
     }
 
-    protected function formatNumber(int|float|array $number, array $options = []): int|float|array|string
+    protected function formatNumber(int|string|array $number, array $options = []): int|float|string|array
     {
         $format = $options['format'] ?? null;
         switch ($format) {
@@ -65,7 +65,7 @@ class Rational extends NumberBase
         }
     }
 
-    public function numberToBytes(int|float $number, int $order): string
+    public function numberToBytes(int|string $number, int $order): string
     {
         return ConvertBytes::fromLong($number, $order);
     }
