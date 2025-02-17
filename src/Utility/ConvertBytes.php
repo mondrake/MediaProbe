@@ -130,7 +130,7 @@ class ConvertBytes
         // calculations) because the PHP operator >> and function chr() clip their arguments to
         // 2^31-1, which is the largest signed integer known to PHP. But luckily base_convert
         // handles such big numbers.
-        $hex = str_pad(base_convert($value, 10, 16), 8, '0', STR_PAD_LEFT);
+        $hex = str_pad(base_convert((string) $value, 10, 16), 8, '0', STR_PAD_LEFT);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (chr(hexdec($hex[6] . $hex[7])) . chr(hexdec($hex[4] . $hex[5])) . chr(hexdec($hex[2] . $hex[3])) .
                  chr(hexdec($hex[0] . $hex[1])));
