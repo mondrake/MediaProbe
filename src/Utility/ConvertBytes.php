@@ -160,14 +160,16 @@ class ConvertBytes
     /**
      * Convert a 64-bit unsigned long into eight bytes.
      */
-    public static function fromLong64($value, int $byte_order = self::BIG_ENDIAN): string
+    public static function fromLong64(int|string $value, int $byte_order = self::BIG_ENDIAN): string
     {
-dump([__METHOD__, $value, HexDump::unfuckedBaseConvert($value, 10, 16)]);
         if (bccomp($value, Long64::MIN) === -1 || bccomp($value, Long64::MAX) === 1) {
             throw new DataException('Value %s is invalid for long 64-int', $value);
         }
 
-        $hex = str_pad(base_convert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+        $hex = str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+
+dump([__METHOD__, $value, $hex, hex2bin($hex)]);
+        #$hex = str_pad(base_convert($value, 10, 16), 16, '0', STR_PAD_LEFT);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (
                 chr(hexdec($hex[14] . $hex[15])) .
@@ -180,28 +182,20 @@ dump([__METHOD__, $value, HexDump::unfuckedBaseConvert($value, 10, 16)]);
                 chr(hexdec($hex[0] . $hex[1]))
             );
         } else {
-            return (
-                chr(hexdec($hex[0] . $hex[1])) .
-                chr(hexdec($hex[2] . $hex[3])) .
-                chr(hexdec($hex[4] . $hex[5])) .
-                chr(hexdec($hex[6] . $hex[7])) .
-                chr(hexdec($hex[8] . $hex[9])) .
-                chr(hexdec($hex[10] . $hex[11])) .
-                chr(hexdec($hex[12] . $hex[13])) .
-                chr(hexdec($hex[14] . $hex[15]))
-            );
+            return hex2bin($hex);
         }
     }
 
     /**
      * Convert a 64-bit signed long into eight bytes.
      */
-    public static function fromSignedLong64(Number $value, int $byte_order = self::BIG_ENDIAN): string
+    public static function fromSignedLong64(string $value, int $byte_order = self::BIG_ENDIAN): string
     {
-        if ($value < SignedLong64::MIN || $value > SignedLong64::MAX) {
+        if (bccomp($value, SignedLong64::MIN) === -1 || bccomp($value, SignedLong64::MAX) === 1) {
             throw new DataException('Value %d is invalid for signed long int', $value);
         }
 
+dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT)]);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (chr($value) . chr($value >> 8) . chr($value >> 16) . chr($value >> 24) . chr($value >> 32) . chr($value >> 40) . chr($value >> 48) . chr($value >> 56));
         } else {
@@ -350,7 +344,15 @@ dump([__METHOD__, $value, HexDump::unfuckedBaseConvert($value, 10, 16)]);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (ord($bytes[7]) * 281474976710656 + ord($bytes[6]) * 1099511627776 + ord($bytes[5]) * 1099511627776 + ord($bytes[4]) * 4294967296 + ord($bytes[3]) * 16777216 + ord($bytes[2]) * 65536 + ord($bytes[1]) * 256 + ord($bytes[0]));
         } else {
-            return (ord($bytes[0]) * 281474976710656 + ord($bytes[1]) * 1099511627776 + ord($bytes[2]) * 1099511627776 + ord($bytes[3]) * 4294967296 + ord($bytes[4]) * 16777216 + ord($bytes[5]) * 65536 + ord($bytes[6]) * 256 + ord($bytes[7]));
+            $t = bcmul(ord($bytes[0]), '72057594037927936');
+            $t = bcadd($t, bcmul(ord($bytes[1]), '281474976710656'));
+            $t = bcadd($t, bcmul(ord($bytes[2]), '1099511627776'));
+            $t = bcadd($t, bcmul(ord($bytes[3]), '4294967296'));
+            $t = bcadd($t, bcmul(ord($bytes[4]), '16777216'));
+            $t = bcadd($t, bcmul(ord($bytes[5]), '65536'));
+            $t = bcadd($t, bcmul(ord($bytes[6]), '256'));
+            $t = bcadd($t, ord($bytes[7]));
+            return $t;
         }
     }
 
@@ -392,5 +394,44 @@ dump([__METHOD__, $value, HexDump::unfuckedBaseConvert($value, 10, 16)]);
             static::toSignedLong($bytes, $byte_order),
             static::toSignedLong(substr($bytes, 4), $byte_order),
         ];
+    }
+
+    /* Follows the syntax of base_convert (http://www.php.net/base_convert)
+     * Created by Michael Renner @ http://www.php.net/base_convert 17-May-2006 03:24
+     * His comment is has since been deleted. The function will tell you why.
+     */
+    public static function unfuckedBaseConvert(string $numString, int $fromBase, int $toBase)
+    {
+
+        $chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+        $tostring = substr($chars, 0, $toBase);
+
+        $length = strlen($numString);
+        $result = '';
+        $number = [];
+        for ($i = 0; $i < $length; $i++)
+        {
+            $number[$i] = strpos($chars, $numString[$i]);
+        }
+        do
+        {
+            $divide = 0;
+            $newlen = 0;
+            for ($i = 0; $i < $length; $i++)
+            {
+                $divide = $divide * $fromBase + $number[$i];
+                if ($divide >= $toBase)
+                {
+                    $number[$newlen++] = (int) ($divide / $toBase);
+                    $divide = $divide % $toBase;
+                } elseif ($newlen > 0)
+                {
+                    $number[$newlen++] = 0;
+                }
+            }
+            $length = $newlen;
+            $result = $tostring[$divide] . $result;
+        } while ($newlen != 0);
+        return $result;
     }
 }
