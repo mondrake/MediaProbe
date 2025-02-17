@@ -186,7 +186,7 @@ class ConvertBytes
             throw new DataException('Value %d is invalid for 64-bit signed long', $value);
         }
 #8000000000000000
-#7fffffffffffffff        
+#7fffffffffffffff
         $sign = bccomp($value, 0);
         $tmp = bcmul($value, $sign);
 dump([__METHOD__, $value, $tmp, str_pad(static::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT)]);
@@ -354,7 +354,7 @@ dump([__METHOD__, $value, $tmp, str_pad(static::baseConvert($value, 10, 16), 16,
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
         $n = static::toLong64($bytes, $byte_order);
-        return $n > 9223372036854775807 ? $n - 18446744073709551616 : $n;
+        return bccomp($n, '9223372036854775807') === 1 ? bcsub($n, '18446744073709551616') : $n;
     }
 
     /**
