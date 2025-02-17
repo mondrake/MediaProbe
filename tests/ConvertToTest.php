@@ -118,7 +118,7 @@ class ConvertToTest extends MediaProbeTestCaseBase
         $this->assertSame('-1167088121787636991', ConvertBytes::toSignedLong64("\x01\x23\x45\x67\x89\xAB\xCD\xEF", ConvertBytes::LITTLE_ENDIAN));
         $this->assertSame(   '-4558937975732957', ConvertBytes::toSignedLong64("\x23\x45\x67\x89\xAB\xCD\xEF\xFF", ConvertBytes::LITTLE_ENDIAN));
         $this->assertSame(     '-17808351467707', ConvertBytes::toSignedLong64("\x45\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(  '-42914300449259521', ConvertBytes::toSignedLong64("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::BIG_ENDIAN));
+        $this->assertSame(     '-17808351467521', ConvertBytes::toSignedLong64("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
         try {
             ConvertBytes::toSignedLong64("\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN);
             $this->fail('Expected \\InvalidArgumentException');
