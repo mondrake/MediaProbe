@@ -6,12 +6,13 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataString;
+use FileEye\MediaProbe\Entry\Core\NumberBase;
 
 abstract class NumberTestCase extends EntryTestBase
 {
     protected string $min;
     protected string $max;
-    protected $num;
+    protected NumberBase $num;
 
     public function testBase()
     {

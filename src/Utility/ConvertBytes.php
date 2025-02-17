@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FileEye\MediaProbe\Utility;
 
 use FileEye\MediaProbe\Data\DataException;
@@ -163,12 +165,11 @@ class ConvertBytes
     public static function fromLong64(int|string $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (bccomp($value, Long64::MIN) === -1 || bccomp($value, Long64::MAX) === 1) {
-            throw new DataException('Value %s is invalid for long 64-int', $value);
+            throw new DataException('Value %s is invalid for 64-int long', $value);
         }
 
-        $hexString = str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+        $hexString = str_pad(static::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
 
-#dump([__METHOD__, $value,hex2bin($hexString), hex2bin(implode('', array_reverse(str_split($hexString, 2))))]);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return hex2bin(implode('', array_reverse(str_split($hexString, 2))));
         } else {
@@ -182,10 +183,13 @@ class ConvertBytes
     public static function fromSignedLong64(string $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (bccomp($value, SignedLong64::MIN) === -1 || bccomp($value, SignedLong64::MAX) === 1) {
-            throw new DataException('Value %d is invalid for signed long int', $value);
+            throw new DataException('Value %d is invalid for 64-bit signed long', $value);
         }
-
-dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT)]);
+#8000000000000000
+#7fffffffffffffff        
+        $sign = bccomp($value, 0);
+        $tmp = bcmul($value, $sign);
+dump([__METHOD__, $value, $tmp, str_pad(static::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT)]);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return (chr($value) . chr($value >> 8) . chr($value >> 16) . chr($value >> 24) . chr($value >> 32) . chr($value >> 40) . chr($value >> 48) . chr($value >> 56));
         } else {
@@ -328,7 +332,7 @@ dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 1
      */
     public static function toLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): string
     {
-        if (!is_string($bytes) || strlen($bytes) !== 8) {
+        if (strlen($bytes) !== 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
 
@@ -338,7 +342,7 @@ dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 1
             $hexString = bin2hex($bytes);
         }
 
-        return static::unfuckedBaseConvert($hexString, 16, 10);
+        return static::baseConvert($hexString, 16, 10);
     }
 
     /**
@@ -346,7 +350,7 @@ dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 1
      */
     public static function toSignedLong64(string $bytes, int $byte_order = self::BIG_ENDIAN): string
     {
-        if (!is_string($bytes) || strlen($bytes) < 8) {
+        if (strlen($bytes) !== 8) {
             throw new \InvalidArgumentException('Invalid input data for ' . __METHOD__);
         }
         $n = static::toLong64($bytes, $byte_order);
@@ -381,11 +385,11 @@ dump([__METHOD__, $value, str_pad(static::unfuckedBaseConvert($value, 10, 16), 1
         ];
     }
 
-    /* Follows the syntax of base_convert (http://www.php.net/base_convert)
+    /**
+     * Follows the syntax of base_convert (http://www.php.net/base_convert)
      * Created by Michael Renner @ http://www.php.net/base_convert 17-May-2006 03:24
-     * His comment is has since been deleted. The function will tell you why.
      */
-    public static function unfuckedBaseConvert(string $numString, int $fromBase, int $toBase)
+    private static function baseConvert(string $numString, int $fromBase, int $toBase)
     {
 
         $chars = "0123456789abcdefghijklmnopqrstuvwxyz";
