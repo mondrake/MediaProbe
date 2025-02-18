@@ -396,23 +396,18 @@ class ConvertBytes
         $length = strlen($numString);
         $result = '';
         $number = [];
-        for ($i = 0; $i < $length; $i++)
-        {
+        for ($i = 0; $i < $length; $i++) {
             $number[$i] = strpos($chars, $numString[$i]);
         }
-        do
-        {
+        do {
             $divide = 0;
             $newlen = 0;
-            for ($i = 0; $i < $length; $i++)
-            {
+            for ($i = 0; $i < $length; $i++) {
                 $divide = $divide * $fromBase + $number[$i];
-                if ($divide >= $toBase)
-                {
+                if ($divide >= $toBase) {
                     $number[$newlen++] = (int) ($divide / $toBase);
                     $divide = $divide % $toBase;
-                } elseif ($newlen > 0)
-                {
+                } elseif ($newlen > 0) {
                     $number[$newlen++] = 0;
                 }
             }
