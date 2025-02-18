@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
-class ConvertToTest extends MediaProbeTestCaseBase
+class ConvertBytesToNumberTest extends MediaProbeTestCaseBase
 {
     public function testLong64Little()
     {
@@ -81,7 +81,7 @@ class ConvertToTest extends MediaProbeTestCaseBase
         $this->assertSame( 4294967279, ConvertBytes::toLong("\xEF\xFF\xFF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
         $this->assertSame( 4294967295, ConvertBytes::toLong("\xFF\xFF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
         $this->expectException(\InvalidArgumentException::class);
-        ConvertBytes::toSignedLong("\xFF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN);
+        ConvertBytes::toLong("\xFF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN);
     }
 
     public function testLongBig()
@@ -100,7 +100,7 @@ class ConvertToTest extends MediaProbeTestCaseBase
         $this->assertSame( 4026531839, ConvertBytes::toLong("\xEF\xFF\xFF\xFF\xFF", ConvertBytes::BIG_ENDIAN));
         $this->assertSame( 4294967295, ConvertBytes::toLong("\xFF\xFF\xFF\xFF", ConvertBytes::BIG_ENDIAN));
         $this->expectException(\InvalidArgumentException::class);
-        ConvertBytes::toSignedLong("\xFF\xFF\xFF", ConvertBytes::BIG_ENDIAN);
+        ConvertBytes::toLong("\xFF\xFF\xFF", ConvertBytes::BIG_ENDIAN);
     }
 
     public function testSignedLong64Little()
