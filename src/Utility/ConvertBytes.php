@@ -168,7 +168,7 @@ class ConvertBytes
             throw new DataException('Value %s is invalid for 64-int long', $value);
         }
 
-        $hexString = str_pad(static::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
+        $hexString = str_pad(self::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT);
 
         if ($byte_order == static::LITTLE_ENDIAN) {
             return hex2bin(implode('', array_reverse(str_split($hexString, 2))));
@@ -187,7 +187,7 @@ class ConvertBytes
         }
 
         $mod = bccomp($value, '0') === -1 ? bcadd($value, '18446744073709551616') : $value;
-        $hex = str_pad(static::baseConvert($mod, 10, 16), 16, '0', STR_PAD_LEFT);
+        $hex = str_pad(self::baseConvert($mod, 10, 16), 16, '0', STR_PAD_LEFT);
         if ($byte_order == static::LITTLE_ENDIAN) {
             return hex2bin(implode('', array_reverse(str_split($hex, 2))));
         } else {
@@ -340,7 +340,7 @@ class ConvertBytes
             $hexString = bin2hex($bytes);
         }
 
-        return static::baseConvert($hexString, 16, 10);
+        return self::baseConvert($hexString, 16, 10);
     }
 
     /**
