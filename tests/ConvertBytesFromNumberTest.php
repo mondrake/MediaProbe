@@ -1,6 +1,8 @@
 <?php
 // @codingStandardsIgnoreFile
 
+declare(strict_types=1);
+
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -30,7 +32,7 @@ class ConvertBytesFromNumberTest extends MediaProbeTestCaseBase
             // Continue.
         }
         try {
-            ConvertBytes::fromLong64(bcadd('18446744073709551615', 1), ConvertBytes::LITTLE_ENDIAN);
+            ConvertBytes::fromLong64(bcadd('18446744073709551615', '1'), ConvertBytes::LITTLE_ENDIAN);
             $this->fail('Expected DataException');
         } catch (DataException) {
             // Continue.
@@ -59,7 +61,7 @@ class ConvertBytesFromNumberTest extends MediaProbeTestCaseBase
             // Continue.
         }
         try {
-            ConvertBytes::fromLong64(bcadd('18446744073709551615', 1), ConvertBytes::BIG_ENDIAN);
+            ConvertBytes::fromLong64(bcadd('18446744073709551615', '1'), ConvertBytes::BIG_ENDIAN);
             $this->fail('Expected DataException');
         } catch (DataException) {
             // Continue.
@@ -106,60 +108,60 @@ class ConvertBytesFromNumberTest extends MediaProbeTestCaseBase
 
     public function testSignedLong64Little()
     {
-        $this->assertSame(                   '0', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(   '72057594037927936', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x00\x01", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(                   '1', ConvertBytes::toSignedLong64("\x01\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame( '2522297266304188416', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x01\x23", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(                 '291', ConvertBytes::toSignedLong64("\x23\x01\x00\x00\x00\x00\x00\x00", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame( '4981826712313528320', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x01\x23\x45", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame( '7441392446501552128', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x01\x23\x45\x67", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame('-8545785751269277696', ConvertBytes::toSignedLong64("\x00\x00\x00\x01\x23\x45\x67\x89", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame('-6086219874776842240', ConvertBytes::toSignedLong64("\x00\x00\x01\x23\x45\x67\x89\xAB", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame('-3626653998282243840', ConvertBytes::toSignedLong64("\x00\x01\x23\x45\x67\x89\xAB\xCD", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame('-1167088121787636991', ConvertBytes::toSignedLong64("\x01\x23\x45\x67\x89\xAB\xCD\xEF", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(   '-4558937975732957', ConvertBytes::toSignedLong64("\x23\x45\x67\x89\xAB\xCD\xEF\xFF", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(     '-17808351467707', ConvertBytes::toSignedLong64("\x45\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
-        $this->assertSame(     '-17808351467521', ConvertBytes::toSignedLong64("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('0', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x00\x01", ConvertBytes::fromSignedLong64('72057594037927936', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x01\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('1', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x01\x23", ConvertBytes::fromSignedLong64('2522297266304188416', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x23\x01\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('291', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x01\x23\x45", ConvertBytes::fromSignedLong64('4981826712313528320', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x01\x23\x45\x67", ConvertBytes::fromSignedLong64('7441392446501552128', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x01\x23\x45\x67\x89", ConvertBytes::fromSignedLong64('-8545785751269277696', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x00\x01\x23\x45\x67\x89\xAB", ConvertBytes::fromSignedLong64('-6086219874776842240', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x00\x01\x23\x45\x67\x89\xAB\xCD", ConvertBytes::fromSignedLong64('-3626653998282243840', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x01\x23\x45\x67\x89\xAB\xCD\xEF", ConvertBytes::fromSignedLong64('-1167088121787636991', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x23\x45\x67\x89\xAB\xCD\xEF\xFF", ConvertBytes::fromSignedLong64('-4558937975732957', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\x45\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::fromSignedLong64('-17808351467707', ConvertBytes::LITTLE_ENDIAN));
+        $this->assertSame("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::fromSignedLong64('-17808351467521', ConvertBytes::LITTLE_ENDIAN));
         try {
-            ConvertBytes::toSignedLong64("\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::LITTLE_ENDIAN);
-            $this->fail('Expected \\InvalidArgumentException');
-        } catch (\InvalidArgumentException) {
+            ConvertBytes::fromSignedLong64(bcsub('-9223372036854775808', '1'), ConvertBytes::LITTLE_ENDIAN);
+            $this->fail('Expected DataException');
+        } catch (DataException) {
             // Continue.
         }
         try {
-            ConvertBytes::toSignedLong64("\x67\x89\xAB\xCD\xEF\xFF\xFF\xAA\x00", ConvertBytes::LITTLE_ENDIAN);
-            $this->fail('Expected \\InvalidArgumentException');
-        } catch (\InvalidArgumentException) {
+            ConvertBytes::fromSignedLong64(bcadd('9223372036854775807', '1'), ConvertBytes::LITTLE_ENDIAN);
+            $this->fail('Expected DataException');
+        } catch (DataException) {
             // Continue.
         }
     }
 
     public function testSignedLong64Big()
     {
-        $this->assertSame(                   '0', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(                   '1', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x00\x01", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(   '72057594037927936', ConvertBytes::toSignedLong64("\x01\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(                 '291', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x00\x01\x23", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame( '2522297266304188416', ConvertBytes::toSignedLong64("\x23\x01\x00\x00\x00\x00\x00\x00", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(               '74565', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x00\x01\x23\x45", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(            '19088743', ConvertBytes::toSignedLong64("\x00\x00\x00\x00\x01\x23\x45\x67", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(          '4886718345', ConvertBytes::toSignedLong64("\x00\x00\x00\x01\x23\x45\x67\x89", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(       '1250999896491', ConvertBytes::toSignedLong64("\x00\x00\x01\x23\x45\x67\x89\xAB", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(     '320255973501901', ConvertBytes::toSignedLong64("\x00\x01\x23\x45\x67\x89\xAB\xCD", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(   '81985529216486895', ConvertBytes::toSignedLong64("\x01\x23\x45\x67\x89\xAB\xCD\xEF", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame( '2541551405711093759', ConvertBytes::toSignedLong64("\x23\x45\x67\x89\xAB\xCD\xEF\xFF", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame( '5001117282205695999', ConvertBytes::toSignedLong64("\x45\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::BIG_ENDIAN));
-        $this->assertSame(  '-42914300449259521', ConvertBytes::toSignedLong64("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('0', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x00\x01", ConvertBytes::fromSignedLong64('1', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x01\x00\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('72057594037927936', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x00\x01\x23", ConvertBytes::fromSignedLong64('291', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x23\x01\x00\x00\x00\x00\x00\x00", ConvertBytes::fromSignedLong64('2522297266304188416', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x00\x01\x23\x45", ConvertBytes::fromSignedLong64('74565', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x00\x01\x23\x45\x67", ConvertBytes::fromSignedLong64('19088743', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x00\x01\x23\x45\x67\x89", ConvertBytes::fromSignedLong64('4886718345', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x00\x01\x23\x45\x67\x89\xAB", ConvertBytes::fromSignedLong64('1250999896491', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x00\x01\x23\x45\x67\x89\xAB\xCD", ConvertBytes::fromSignedLong64('320255973501901', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x01\x23\x45\x67\x89\xAB\xCD\xEF", ConvertBytes::fromSignedLong64('81985529216486895', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x23\x45\x67\x89\xAB\xCD\xEF\xFF", ConvertBytes::fromSignedLong64('2541551405711093759', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\x45\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::fromSignedLong64('5001117282205695999', ConvertBytes::BIG_ENDIAN));
+        $this->assertSame("\xFF\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::fromSignedLong64('-42914300449259521', ConvertBytes::BIG_ENDIAN));
         try {
-            ConvertBytes::toSignedLong64("\x67\x89\xAB\xCD\xEF\xFF\xFF", ConvertBytes::BIG_ENDIAN);
-            $this->fail('Expected \\InvalidArgumentException');
-        } catch (\InvalidArgumentException) {
+            ConvertBytes::fromSignedLong64(bcsub('-9223372036854775808', '1'), ConvertBytes::BIG_ENDIAN);
+            $this->fail('Expected DataException');
+        } catch (DataException) {
             // Continue.
         }
         try {
-            ConvertBytes::toSignedLong64("\x67\x89\xAB\xCD\xEF\xFF\xFF\xAA\x00", ConvertBytes::BIG_ENDIAN);
-            $this->fail('Expected \\InvalidArgumentException');
-        } catch (\InvalidArgumentException) {
+            ConvertBytes::fromSignedLong64(bcadd('9223372036854775807', '1'), ConvertBytes::BIG_ENDIAN);
+            $this->fail('Expected DataException');
+        } catch (DataException) {
             // Continue.
         }
     }

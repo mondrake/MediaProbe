@@ -81,7 +81,6 @@ abstract class NumberBase extends EntryBase
      */
     protected function formatNumber(int|string|array $number, array $options = []): int|float|string|array
     {
-dump([__METHOD__, $number]);
         $format = $options['format'] ?? null;
         if ($format === 'exiftool') {
             assert(!is_array($number));

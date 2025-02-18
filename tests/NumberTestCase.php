@@ -22,7 +22,6 @@ abstract class NumberTestCase extends EntryTestBase
 
         $this->num->setDataElement($this->toDataString([$this->min, $this->max]));
         $this->assertTrue($this->num->isValid());
-dump([__METHOD__, [$this->min, $this->max], $this->num->getValue()]);
         $this->assertEquals([$this->min, $this->max], $this->num->getValue());
     }
 

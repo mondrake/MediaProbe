@@ -183,17 +183,15 @@ class ConvertBytes
     public static function fromSignedLong64(string $value, int $byte_order = self::BIG_ENDIAN): string
     {
         if (bccomp($value, SignedLong64::MIN) === -1 || bccomp($value, SignedLong64::MAX) === 1) {
-            throw new DataException('Value %d is invalid for 64-bit signed long', $value);
+            throw new DataException('Value %s is invalid for 64-bit signed long', $value);
         }
-#8000000000000000
-#7fffffffffffffff
-        $sign = bccomp($value, 0);
-        $tmp = bcmul($value, $sign);
-dump([__METHOD__, $value, $tmp, str_pad(static::baseConvert($value, 10, 16), 16, '0', STR_PAD_LEFT)]);
+
+        $mod = bccomp($value, '0') === -1 ? bcadd($value, '18446744073709551616') : $value;
+        $hex = str_pad(static::baseConvert($mod, 10, 16), 16, '0', STR_PAD_LEFT);
         if ($byte_order == static::LITTLE_ENDIAN) {
-            return (chr($value) . chr($value >> 8) . chr($value >> 16) . chr($value >> 24) . chr($value >> 32) . chr($value >> 40) . chr($value >> 48) . chr($value >> 56));
+            return hex2bin(implode('', array_reverse(str_split($hex, 2))));
         } else {
-            return (chr($value >> 56) . chr($value >> 48) . chr($value >> 40) . chr($value >> 32) . chr($value >> 24) . chr($value >> 16) . chr($value >> 8) . chr($value));
+            return hex2bin($hex);
         }
     }
 

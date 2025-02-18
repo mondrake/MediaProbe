@@ -1,6 +1,8 @@
 <?php
 // @codingStandardsIgnoreFile
 
+declare(strict_types=1);
+
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Utility\ConvertBytes;
