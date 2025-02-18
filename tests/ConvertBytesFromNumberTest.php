@@ -1,12 +1,11 @@
 <?php
-// @codingStandardsIgnoreFile
 
 declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Test;
 
-use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Data\DataException;
+use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class ConvertBytesFromNumberTest extends MediaProbeTestCaseBase
 {

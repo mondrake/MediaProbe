@@ -340,9 +340,13 @@ class Ifd extends ListBase
         $ifd->debug("Processing Thumbnail");
 
         // Get Thumbnail's offset and size.
-        $offset = $ifd->getElement("tag[@name='ThumbnailOffset']/entry")->getValue();
+        $offsetTag = $ifd->getElement("tag[@name='ThumbnailOffset']");
+        assert($offsetTag instanceof Tag);
+        $offset = $offsetTag->getValue();
         assert(is_int($offset));
-        $length = $ifd->getElement("tag[@name='ThumbnailLength']/entry")->getValue();
+        $lengthTag = $ifd->getElement("tag[@name='ThumbnailLength']");
+        assert($lengthTag instanceof Tag);
+        $length = $lengthTag->getValue();
         assert(is_int($length));
 
         // Remove the tags that describe the Thumbnail.
