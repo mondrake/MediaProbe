@@ -168,12 +168,7 @@ class Ifd extends ListBase
         } catch (CollectionException $e) {
             // If the fromat is unknown, we can only take the entry data as a Long value, not an
             // offset; however we can only do so if only one component is in data.
-            $message = sprintf('Unknown data format for IFD entry %s: %s', HexDump::dumpIntHex($id), $e->getMessage());
-            if ($dataElement->getLong($offset + 4) === 1) {
-                $this->notice($message);
-            } else {
-                $this->error($message);
-            }
+            $this->critical(sprintf('Unknown data format for IFD entry %s: %s', HexDump::dumpIntHex($id), $e->getMessage()));
             $format = DataFormat::SIGNED_LONG;
             $componentSize = DataFormat::getSize($format);
         }
