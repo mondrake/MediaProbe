@@ -6,7 +6,7 @@ use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Thumbnail;
-use FileEye\MediaProbe\Block\Tiff\Tag;
+use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionException;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;

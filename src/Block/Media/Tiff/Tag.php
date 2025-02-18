@@ -1,6 +1,6 @@
 <?php
 
-namespace FileEye\MediaProbe\Block\Tiff;
+namespace FileEye\MediaProbe\Block\Media\Tiff;
 
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
