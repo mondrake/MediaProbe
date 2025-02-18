@@ -70,7 +70,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         );
         $tiff->graftBlock($ifd);
         foreach ($entries as $entry) {
-            $item_collection = $ifd->getCollection()->getItemCollection($entry[0], 0, 'Tiff\UnknownTag', [
+            $item_collection = $ifd->getCollection()->getItemCollection($entry[0], 0, 'Media\\Tiff\\UnknownTag', [
                 'item' => $entry[0],
                 'DOMNode' => 'tag',
             ]);
