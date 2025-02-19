@@ -397,10 +397,14 @@ class Ifd extends ListBase
                 ]);
             }
 
-            $thumbnail = new ItemDefinition(
-                CollectionFactory::get('Thumbnail')
+            $thumbnailCollection = CollectionFactory::get('Thumbnail');
+            $thumbnailHandler = $thumbnailCollection->handler();
+            $thumbnail = new $thumbnailHandler(
+                collection: $thumbnailCollection,
+                parent: $ifd,
             );
-            $ifd->addBlock($thumbnail)->parseData($dataxx, 0, $size);
+            $thumbnail->fromDataElement(new DataWindow($dataxx, 0, $size));
+            $ifd->graftBlock($thumbnail);
         } catch (DataException $e) {
             $ifd->error($e->getMessage());
         }

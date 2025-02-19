@@ -44,10 +44,15 @@ class Map extends Index
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Preserve the entire map as a raw data block.
-        $mapdata = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'mapdata']));
-        $mapdataBlock = $this->addBlock($mapdata);
-        assert($mapdataBlock instanceof RawData);
-        $mapdataBlock->parseData($data);
+        $mapdataCollection = CollectionFactory::get('RawData', ['name' => 'mapdata']);
+        $mapdataHandler = $mapdataCollection->handler();
+        $mapdata = new $mapdataHandler(
+            collection: $mapdataCollection,
+            countOfComponents: $data->getSize(),
+            parent: $this,
+        );
+        $mapdata->fromDataElement($data);
+        $this->graftBlock($mapdata);
 
         // Build the map items.
         $i = 0;

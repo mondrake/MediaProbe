@@ -18,7 +18,7 @@ class IfdTest extends MediaProbeTestCaseBase
         $tiff_mock = $this->getStubRoot('tiff');
         $ifd = new Ifd(
             ifdEntry: new IfdEntryValueObject(
-                collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
+                collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
                 data: 0,
