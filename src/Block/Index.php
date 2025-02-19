@@ -104,7 +104,7 @@ class Index extends ListBase
     {
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
-        $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Tiff\UnknownTag', [
+        $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
             'item' => $id,
             'DOMNode' => 'tag',
         ]);
