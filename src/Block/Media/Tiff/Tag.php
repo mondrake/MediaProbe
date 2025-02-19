@@ -45,7 +45,7 @@ class Tag extends LeafBlockBase
         assert($parentElement instanceof BlockInterface);
 
         // Check if MediaProbe has a definition for this tag.
-        if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Tiff\UnknownTag'])) {
+        if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
             $this->info("Unknown tag {item} in '{parent}'", [
                 'item' => HexDump::dumpIntHex($this->getAttribute('id')),
                 'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
