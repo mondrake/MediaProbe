@@ -102,6 +102,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      *
      * @param DataElement $dataElement
      *   The data element that will provide the data.
+     * @deprecated
      */
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
@@ -137,7 +138,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * @todo xxx
+     * @deprecated
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
