@@ -2,15 +2,14 @@
 
 namespace FileEye\MediaProbe\Block;
 
-use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Model\LeafBlockBase;
 
 /**
  * Class representing an index of values.

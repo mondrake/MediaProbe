@@ -4,7 +4,6 @@ namespace FileEye\MediaProbe\Block\Media\Tiff;
 
 use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
-use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\Thumbnail;
 use FileEye\MediaProbe\Collection\CollectionException;
@@ -13,10 +12,8 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
-use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
 
@@ -28,23 +25,6 @@ use FileEye\MediaProbe\Utility\HexDump;
  */
 class Ifd extends ListBase
 {
-    public function __construct(
-        public readonly IfdEntryValueObject $ifdEntry,
-        Tiff|Ifd|RootBlockBase $parent,
-    ) {
-        parent::__construct(
-            definition: new ItemDefinition(
-                collection: $ifdEntry->collection,
-                format: $ifdEntry->dataFormat,
-                valuesCount: $ifdEntry->countOfComponents,
-                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                sequence: $ifdEntry->sequence,
-            ),
-            parent: $parent,
-            graft: false,
-        );
-    }
-
     public function fromDataElement(DataElement $dataElement): Ifd
     {
         # @todo xxx should always be an offset?

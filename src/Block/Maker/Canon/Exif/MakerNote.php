@@ -4,12 +4,10 @@ namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 
 class MakerNote extends MakerNoteBase
@@ -49,7 +47,6 @@ class MakerNote extends MakerNoteBase
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
                 } else {
-dump(   $item_class);
                     $item = new $item_class(
                         ifdEntry: $ifdEntry,
                         parent: $this,

@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
-use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -98,24 +95,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return $this->getDefinition()->format;
     }
 
-    /**
-     * Parse data into a MediaProbe block.
-     *
-     * @param DataElement $dataElement
-     *   The data element that will provide the data.
-     * @deprecated
-     */
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
-    {
-        $data = new DataWindow($dataElement, $start, $size);
-        $this->size = $data->getSize();
-        // @phpstan-ignore method.notFound
-        $this->doParseData($data);
-
-        // Invoke post-parse callbacks.
-        $this->executePostParseCallbacks($data);
-    }
-
     public function fromDataElement(DataElement $dataElement): BlockInterface
     {
         throw new \LogicException(sprintf('%s does not implement %s()', get_class($this), 'fromDataElement'));
@@ -136,36 +115,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
             }
         }
         return $this;
-    }
-
-    /**
-     * @deprecated
-     */
-    public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
-    {
-        $handler = $item_definition->collection->handler();
-        if (is_a($handler, Tag::class, true)) {
-            $tag = new Tag(
-                ifdEntry: new IfdEntryValueObject(
-                    collection: $item_definition->collection,
-                    dataFormat: $item_definition->format,
-                    countOfComponents: $item_definition->valuesCount,
-                    data: $item_definition->dataOffset,
-                    sequence: $item_definition->sequence,
-                ),
-                parent: $parent ?? $this,
-            );
-            return $tag;
-        } elseif (is_a($handler, RawData::class, true)) {
-            $item = new $handler(
-                collection: $item_definition->collection,
-                dataFormat: $item_definition->format,
-                countOfComponents: $item_definition->valuesCount,
-                parent: $this,
-            );
-            return $item;
-        }
-        return new $handler($item_definition, $parent ?? $this, $reference);
     }
 
     public function graftBlock(

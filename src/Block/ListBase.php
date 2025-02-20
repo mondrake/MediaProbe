@@ -2,6 +2,8 @@
 
 namespace FileEye\MediaProbe\Block;
 
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 
 /**
@@ -16,9 +18,33 @@ use FileEye\MediaProbe\Model\BlockBase;
 abstract class ListBase extends BlockBase
 {
     /**
+     * The format of data.
+     */
+    protected int $format;
+
+    /**
      * The amount of components in the list.
      */
     protected int $components;
+
+    public function __construct(
+        public readonly IfdEntryValueObject $ifdEntry,
+        BlockBase $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $ifdEntry->collection,
+                format: $ifdEntry->dataFormat,
+                valuesCount: $ifdEntry->countOfComponents,
+                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
+                sequence: $ifdEntry->sequence,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+        $this->components = $ifdEntry->countOfComponents;
+        $this->format = $ifdEntry->dataFormat;
+    }
 
     public function getComponents(): int
     {

@@ -21,7 +21,5 @@ interface BlockInterface extends ElementInterface
      */
     public function getCollection(): CollectionInterface;
 
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void;
-
     public function fromDataElement(DataElement $dataElement): BlockInterface;
 }

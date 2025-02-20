@@ -3,17 +3,12 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockBase;
-use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 /**
  * Class representing a map of values.
@@ -23,30 +18,6 @@ use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
  */
 class Map extends Index
 {
-    /**
-     * The format of map data.
-     */
-    protected int $format;
-
-    public function __construct(
-        public readonly IfdEntryValueObject $ifdEntry,
-        Ifd|RootBlockBase $parent,
-    ) {
-        parent::__construct(
-            definition: new ItemDefinition(
-                collection: $ifdEntry->collection,
-                format: $ifdEntry->dataFormat,
-                valuesCount: $ifdEntry->countOfComponents,
-                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                sequence: $ifdEntry->sequence,
-            ),
-            parent: $parent,
-            graft: false,
-        );
-        $this->components = $ifdEntry->countOfComponents;
-        $this->format = $ifdEntry->dataFormat;
-    }
-
     public function fromDataElement(DataElement $data): Map
     {
         $this->validate($data);
