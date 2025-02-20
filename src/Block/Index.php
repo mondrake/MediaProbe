@@ -46,7 +46,7 @@ class Index extends ListBase
         }
     }
 
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $data): Index
     {
         $this->validate($data);
 
@@ -99,6 +99,8 @@ class Index extends ListBase
 
             $offset += $item_definition->getSize();
         }
+
+        return $this;
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -63,17 +64,26 @@ class Map extends Index
             }
 
             // Adds the item to the DOM.
-            $item = $this->addBlock($item_definition);
-            assert($item instanceof Tag || $item instanceof RawData, get_class($item));
+            $itemHandler = $item_definition->collection->handler();
             try {
-                if (is_a($item, Tag::class, true)) {
+                if (is_a($itemHandler, Tag::class, true)) {
+                    $item = new $itemHandler(
+                        ifdEntry: new IfdEntryValueObject(
+                            collection: $item_definition->collection,
+                            dataFormat: $item_definition->format,
+                            countOfComponents: $item_definition->valuesCount,
+                        ),
+                        parent: $this,
+                    );
                     $item_data_window_offset = $item->ifdEntry->isOffset ? $item->ifdEntry->dataOffset() : $item->ifdEntry->dataValue();
                     $item_data_window_size = $item->ifdEntry->countOfComponents > 0 ? $item->ifdEntry->size : 4;
                     $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
                 } else {
-                    $item->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
+                    $item = new $itemHandler($item_definition);
+                    $item->fromDataElement(new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize()));
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
