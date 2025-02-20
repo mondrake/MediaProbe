@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 
 class MakerNote extends MakerNoteBase
@@ -40,7 +39,6 @@ class MakerNote extends MakerNoteBase
                 if (is_a($item_class, Ifd::class, true)) {
                     throw new MediaProbeException(sprintf('There should not be sub-IFDs in %s', __CLASS__));
                 }
-                $this->debug($item_class);
                 if (is_a($item_class, Tag::class, true)) {
                     $item_data_window_offset = $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue();
                     $item_data_window_size = $ifdEntry->countOfComponents > 0 ? $ifdEntry->size : 4;
@@ -50,17 +48,12 @@ class MakerNote extends MakerNoteBase
                     $this->graftBlock($item);
                 } else {
                     $item = new $item_class(
-                        new ItemDefinition(
-                            collection: $ifdEntry->collection,
-                            format: $ifdEntry->dataFormat,
-                            valuesCount: $ifdEntry->countOfComponents,
-                            dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                            sequence: $ifdEntry->sequence,
-                        ),
-                        $this,
+                        ifdEntry: $ifdEntry,
+                        parent: $this,
                     );
                     $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);
+                    $item->fromDataElement($item_data_window);
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {

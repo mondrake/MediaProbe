@@ -3,13 +3,12 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -20,34 +19,21 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Map extends Index
 {
-    /**
-     * The format of map data.
-     */
-    protected int $format;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function __construct(
-        ItemDefinition $definition,
-        ?BlockBase $parent = null,
-        ?BlockBase $reference = null,
-    ) {
-        parent::__construct($definition, $parent, $reference);
-        $this->components = $definition->valuesCount;
-        $this->format = $definition->format;
-    }
-
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $data): Map
     {
         $this->validate($data);
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Preserve the entire map as a raw data block.
-        $mapdata = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'mapdata']));
-        $mapdataBlock = $this->addBlock($mapdata);
-        assert($mapdataBlock instanceof RawData);
-        $mapdataBlock->parseData($data);
+        $mapdataCollection = CollectionFactory::get('RawData', ['name' => 'mapdata']);
+        $mapdataHandler = $mapdataCollection->handler();
+        $mapdata = new $mapdataHandler(
+            collection: $mapdataCollection,
+            countOfComponents: $data->getSize(),
+            parent: $this,
+        );
+        $mapdata->fromDataElement($data);
+        $this->graftBlock($mapdata);
 
         // Build the map items.
         $i = 0;
@@ -78,17 +64,26 @@ class Map extends Index
             }
 
             // Adds the item to the DOM.
-            $item = $this->addBlock($item_definition);
-            assert($item instanceof Tag || $item instanceof RawData, get_class($item));
+            $itemHandler = $item_definition->collection->handler();
             try {
-                if (is_a($item, Tag::class, true)) {
+                if (is_a($itemHandler, Tag::class, true)) {
+                    $item = new $itemHandler(
+                        ifdEntry: new IfdEntryValueObject(
+                            collection: $item_definition->collection,
+                            dataFormat: $item_definition->format,
+                            countOfComponents: $item_definition->valuesCount,
+                        ),
+                        parent: $this,
+                    );
                     $item_data_window_offset = $item->ifdEntry->isOffset ? $item->ifdEntry->dataOffset() : $item->ifdEntry->dataValue();
                     $item_data_window_size = $item->ifdEntry->countOfComponents > 0 ? $item->ifdEntry->size : 4;
                     $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
                 } else {
-                    $item->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
+                    $item = new $itemHandler($item_definition);
+                    $item->fromDataElement(new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize()));
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());
@@ -96,6 +91,8 @@ class Map extends Index
 
             $i++;
         }
+
+        return $this;
     }
 
     public function getFormat(): int
