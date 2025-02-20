@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -10,7 +11,9 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 
 /**
  * Class representing a map of values.
@@ -25,20 +28,26 @@ class Map extends Index
      */
     protected int $format;
 
-    /**
-     * {@inheritdoc}
-     */
     public function __construct(
-        ItemDefinition $definition,
-        ?BlockBase $parent = null,
-        ?BlockBase $reference = null,
+        public readonly IfdEntryValueObject $ifdEntry,
+        Ifd|RootBlockBase $parent,
     ) {
-        parent::__construct($definition, $parent, $reference);
-        $this->components = $definition->valuesCount;
-        $this->format = $definition->format;
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $ifdEntry->collection,
+                format: $ifdEntry->dataFormat,
+                valuesCount: $ifdEntry->countOfComponents,
+                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
+                sequence: $ifdEntry->sequence,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+        $this->components = $ifdEntry->countOfComponents;
+        $this->format = $ifdEntry->dataFormat;
     }
 
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $data): Map
     {
         $this->validate($data);
         assert($this->debugInfo(['dataElement' => $data]));
@@ -101,6 +110,8 @@ class Map extends Index
 
             $i++;
         }
+
+        return $this;
     }
 
     public function getFormat(): int
