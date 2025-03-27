@@ -131,11 +131,15 @@ class Jpeg extends MediaTypeBlockBase
             $this->notice('Found trailing content after EOI: {size} bytes', ['size' => $raw_size]);
             // There is no JPEG marker for trailing garbage, so we just collect
             // the data in a RawData object.
-            $trail_definition = new ItemDefinition(CollectionFactory::get('RawData'), DataFormat::BYTE, $raw_size);
-            $trail_data_window = new DataWindow($dataElement, $offset, $raw_size);
-            $trail = new RawData($trail_definition, $this->getParentElement());
-            $trail->parseData($trail_data_window);
-            $this->graftBlock($trail);
+            $trailCollection = CollectionFactory::get('RawData');
+            $trailHandler = $trailCollection->handler();
+            $trailBlock = new $trailHandler(
+                collection: $trailCollection,
+                parent: $this,
+            );
+            assert($trailBlock instanceof SegmentBase, get_class($trailBlock));
+            $trailBlock->fromDataElement(new DataWindow($dataElement, $offset, $raw_size));
+            $this->graftBlock($trailBlock);
         }
 
         // @todo move below to grafting

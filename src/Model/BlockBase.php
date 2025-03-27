@@ -6,6 +6,7 @@ namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -156,6 +157,13 @@ abstract class BlockBase extends ElementBase implements BlockInterface
                 parent: $parent ?? $this,
             );
             return $tag;
+        }
+        if (is_a($handler, RawData::class, true)) {
+            $raw = new RawData(
+                collection: $item_definition->collection,
+                parent: $parent ?? $this,
+            );
+            return $raw;
         }
         return new $handler($item_definition, $parent ?? $this, $reference);
     }

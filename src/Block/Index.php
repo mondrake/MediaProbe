@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -76,6 +77,14 @@ class Index extends ListBase
                 $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
                 $tag->fromDataElement($tagDataWindow);
                 $this->graftBlock($tag);
+            } elseif (is_a($tag, RawData::class, true)) {
+                $item = new RawData(
+                    collection: $item_definition->collection,
+                    parent: $this,
+                );
+                assert($item instanceof RawData, get_class($item));
+                $item->fromDataElement(new DataWindow($data, $offset));
+                $this->graftBlock($item);
             } else {
                 $tag->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
             }

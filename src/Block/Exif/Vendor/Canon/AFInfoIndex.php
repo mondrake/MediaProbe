@@ -3,9 +3,11 @@
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
 use FileEye\MediaProbe\Block\Index;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\Data\DataWindow;
 
 /**
  * Class representing an index of values, for Canon AFInfo e AFInfo2.
@@ -62,6 +64,14 @@ class AFInfoIndex extends Index
                     ),
                     parent: $this,
                 );
+                $this->graftBlock($item);
+            } elseif (is_a($item_class, RawData::class, true)) {
+                $item = new $item_class(
+                    collection: $item_definition->collection,
+                    parent: $this,
+                );
+                assert($item instanceof RawData, get_class($item));
+                $item->fromDataElement(new DataWindow($data, $offset, $item_definition->valuesCount));
                 $this->graftBlock($item);
             } else {
                 $item = new $item_class($item_definition, $this);
