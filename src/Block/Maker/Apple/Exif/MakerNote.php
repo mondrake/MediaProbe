@@ -29,7 +29,7 @@ class MakerNote extends MakerNoteBase
             collection: $headerCollection,
             parent: $this,
         );
-        assert($headerBlock instanceof SegmentBase, get_class($headerBlock));
+        assert($headerBlock instanceof RawData, get_class($headerBlock));
         $headerBlock->fromDataElement(new DataWindow($dataElement, $offset, 14));
         $this->graftBlock($headerBlock);
 
