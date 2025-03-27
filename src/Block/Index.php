@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Block;
 
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -45,7 +46,7 @@ class Index extends ListBase
         }
     }
 
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $data): Index
     {
         $this->validate($data);
 
@@ -68,20 +69,38 @@ class Index extends ListBase
             $this->components -= ($item_definition->valuesCount - 1);
 
             // Adds the 'tag'.
-            $tag = $this->addBlock($item_definition);
-            assert($tag instanceof Tag || $tag instanceof RawData, get_class($tag));
-            if (is_a($tag, Tag::class, true)) {
+            $tagHandler = $item_definition->collection->handler();
+            if (is_a($tagHandler, Tag::class, true)) {
+                $tag = new $tagHandler(
+                    ifdEntry: new IfdEntryValueObject(
+                        collection: $item_definition->collection,
+                        dataFormat: $item_definition->format,
+                        countOfComponents: $item_definition->valuesCount,
+                        data: $item_definition->dataOffset,
+                    ),
+                    parent: $this,
+                );
                 $item_data_window_offset = $tag->ifdEntry->isOffset ? $tag->ifdEntry->dataOffset() : $tag->ifdEntry->dataValue();
                 $item_data_window_size = $tag->ifdEntry->countOfComponents > 0 ? $tag->ifdEntry->size : 4;
                 $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
                 $tag->fromDataElement($tagDataWindow);
                 $this->graftBlock($tag);
             } else {
-                $tag->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
+                $tag = new $tagHandler(
+                    collection: $item_definition->collection,
+                    dataFormat: $item_definition->format,
+                    countOfComponents: $item_definition->valuesCount,
+                    parent: $this,
+                );
+                $tagDataWindow = new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize());
+                $tag->fromDataElement($tagDataWindow);
+                $this->graftBlock($tag);
             }
 
             $offset += $item_definition->getSize();
         }
+
+        return $this;
     }
 
     /**

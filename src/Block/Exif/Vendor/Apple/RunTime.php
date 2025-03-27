@@ -14,7 +14,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class RunTime extends ListBase
 {
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $data): RunTime
     {
         assert($this->debugInfo(['dataElement' => $data]));
 
@@ -31,6 +31,8 @@ class RunTime extends ListBase
             new $entry_class($tag, new DataString((string) $value));
             $this->graftBlock($tag);
         }
+
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string

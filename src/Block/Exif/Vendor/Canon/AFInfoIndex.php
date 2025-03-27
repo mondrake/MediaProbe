@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 
 /**
@@ -60,6 +61,14 @@ class AFInfoIndex extends Index
                         data: $item_definition->dataOffset,
                         sequence: $item_definition->sequence,
                     ),
+                    parent: $this,
+                );
+                $this->graftBlock($item);
+            } elseif (is_a($item_class, RawData::class, true)) {
+                $item = new $item_class(
+                    collection: $item_definition->collection,
+                    dataFormat: $item_definition->format,
+                    countOfComponents: $item_definition->valuesCount,
                     parent: $this,
                 );
                 $this->graftBlock($item);
