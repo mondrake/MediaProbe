@@ -102,6 +102,8 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      *
      * @param DataElement $dataElement
      *   The data element that will provide the data.
+     *
+     * @deprecated
      */
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {

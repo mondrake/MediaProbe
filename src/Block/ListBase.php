@@ -20,17 +20,11 @@ abstract class ListBase extends BlockBase
      */
     protected int $components;
 
-    /**
-     * {@inheritdoc}
-     */
     public function getComponents(): int
     {
         return count($this->getMultipleElements('*[not(self::rawData)]'));
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function getContextPathSegmentPattern(): string
     {
         return '/{DOMNode}:{name}:{id}';
