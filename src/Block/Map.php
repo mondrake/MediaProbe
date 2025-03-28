@@ -3,7 +3,6 @@
 namespace FileEye\MediaProbe\Block;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -45,15 +44,10 @@ class Map extends Index
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Preserve the entire map as a raw data block.
-        $mapdataCollection = CollectionFactory::get('RawData', ['name' => 'mapdata']);
-        $mapdataHandler = $mapdataCollection->handler();
-        $mapdataBlock = new $mapdataHandler(
-            collection: $mapdataCollection,
-            parent: $this,
-        );
-        assert($mapdataBlock instanceof RawData, get_class($mapdataBlock));
-        $mapdataBlock->fromDataElement($data);
-        $this->graftBlock($mapdataBlock);
+        $mapdata = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'mapdata']));
+        $mapdataBlock = $this->addBlock($mapdata);
+        assert($mapdataBlock instanceof RawData);
+        $mapdataBlock->parseData($data);
 
         // Build the map items.
         $i = 0;
@@ -93,14 +87,6 @@ class Map extends Index
                     $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
-                } elseif (is_a($item, RawData::class, true)) {
-                    $rawData = new RawData(
-                        collection: $item_definition->collection,
-                        parent: $this,
-                    );
-                    assert($rawData instanceof RawData, get_class($rawData));
-                    $rawData->fromDataElement(new DataWindow($data, $item_definition->dataOffset, $item_definition->getSize()));
-                    $this->graftBlock($rawData);
                 } else {
                     $item->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
                 }
