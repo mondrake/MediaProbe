@@ -60,14 +60,20 @@ class Jpeg extends MediaTypeBlockBase
                         'offset' => $dataElement->getAbsoluteOffset($offset),
                         'size' => $newOffset - $offset,
                     ]);
-                    $trail = new ItemDefinition(
-                        CollectionFactory::get('RawData', ['name' => 'trail']),
-                        DataFormat::BYTE,
-                        $offset
+                    $trailCollection = CollectionFactory::get('RawData', ['name' => 'trail']);
+                    $trailHandler = $trailCollection->handler();
+                    $trail = new $trailHandler(
+                        definition: new ItemDefinition(
+                            collection:  $trailCollection,
+                            format:      DataFormat::BYTE,
+                            dataOffset:  $offset,
+                        ),
+                        parent: $this,
+                        graft: false,
                     );
-                    $trailData = $this->addBlock($trail);
-                    assert($trailData instanceof RawData);
-                    $trailData->parseData($dataElement, $offset, $newOffset - $offset);
+                    $trail->fromDataElement(new DataWindow($dataElement, $offset, $newOffset - $offset));
+                    assert($trail instanceof RawData);
+                    $this->graftBlock($trail);
                 }
                 $offset = $newOffset;
             } catch (DataException $e) {
