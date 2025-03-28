@@ -102,7 +102,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
-        trigger_error('deprecated', E_USER_DEPRECATED);
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
         // @phpstan-ignore method.notFound
@@ -139,7 +139,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
-        trigger_error('deprecated', E_USER_DEPRECATED);
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $handler = $item_definition->collection->handler();
         if (is_a($handler, Tag::class, true)) {
             $tag = new Tag(
