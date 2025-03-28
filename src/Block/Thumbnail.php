@@ -12,7 +12,7 @@ use FileEye\MediaProbe\Model\BlockBase;
 class Thumbnail extends BlockBase
 {
     /**
-     * {@inheritdoc}
+     * @deprecated
      */
     protected function doParseData(DataElement $data): void
     {

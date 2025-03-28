@@ -45,6 +45,9 @@ class Index extends ListBase
         }
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);

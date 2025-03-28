@@ -98,10 +98,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * Parse data into a MediaProbe block.
-     *
-     * @param DataElement $dataElement
-     *   The data element that will provide the data.
+     * @deprecated
      */
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
@@ -137,7 +134,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * @todo xxx
+     * @deprecated
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
@@ -185,9 +182,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return $this->size;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
     {
         $bytes = '';

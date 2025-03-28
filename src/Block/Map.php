@@ -25,9 +25,6 @@ class Map extends Index
      */
     protected int $format;
 
-    /**
-     * {@inheritdoc}
-     */
     public function __construct(
         ItemDefinition $definition,
         ?BlockBase $parent = null,
@@ -38,6 +35,9 @@ class Map extends Index
         $this->format = $definition->format;
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
         $this->validate($data);

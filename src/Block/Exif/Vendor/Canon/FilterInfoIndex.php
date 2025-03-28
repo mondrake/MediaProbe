@@ -31,7 +31,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 class FilterInfoIndex extends Index
 {
     /**
-     * {@inheritdoc}
+     * @deprecated
      */
     protected function doParseData(DataElement $data): void
     {

@@ -36,6 +36,9 @@ class Filter extends ListBase
         $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $definition->sequence);
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
         $offset = 0;

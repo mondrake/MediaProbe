@@ -16,6 +16,9 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class CustomFunctions2Header extends ListBase
 {
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
         assert($this->debugInfo(['dataElement' => $data]));

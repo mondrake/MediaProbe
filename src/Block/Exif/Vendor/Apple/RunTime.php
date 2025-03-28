@@ -14,6 +14,9 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class RunTime extends ListBase
 {
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
         assert($this->debugInfo(['dataElement' => $data]));

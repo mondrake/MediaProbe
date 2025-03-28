@@ -13,7 +13,7 @@ use FileEye\MediaProbe\Data\DataElement;
 class AFInfoIndex extends Index
 {
     /**
-     * {@inheritdoc}
+     * @deprecated
      */
     protected function doParseData(DataElement $data): void
     {
