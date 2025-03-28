@@ -6,7 +6,7 @@ use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFormat;
 
 /**
- * @deprecated
+ * #deprecated
  */
 class ItemDefinition
 {
