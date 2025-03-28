@@ -6,7 +6,7 @@ use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFormat;
 
 /**
- * A value object defining a ListBase item.
+ * deprecated
  */
 class ItemDefinition
 {

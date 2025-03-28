@@ -11,13 +11,11 @@ use FileEye\MediaProbe\Model\BlockBase;
  */
 class Thumbnail extends BlockBase
 {
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): Thumbnail
     {
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
         // Adds the segment data as an Undefined entry.
-        new Undefined($this, $data);
+        new Undefined($this, $dataElement);
+        return $this;
     }
 }
