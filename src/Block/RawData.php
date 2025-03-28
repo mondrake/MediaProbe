@@ -42,10 +42,21 @@ class RawData extends BlockBase
         return $this->components; // xxx ???
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
+        @trigger_error('deprecated', E_USER_DEPRECATED);
         assert($this->debugInfo(['dataElement' => $data]));
         new Undefined($this, $data);
+    }
+
+    public function fromDataElement(DataElement $dataElement): static
+    {
+        assert($this->debugInfo(['dataElement' => $dataElement]));
+        new Undefined($this, $dataElement);
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
