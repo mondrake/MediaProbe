@@ -47,7 +47,7 @@ class RawData extends BlockBase
      */
     protected function doParseData(DataElement $data): void
     {
-        @trigger_error('deprecated', E_USER_DEPRECATED);
+        trigger_error('deprecated', E_USER_DEPRECATED);
         assert($this->debugInfo(['dataElement' => $data]));
         new Undefined($this, $data);
     }
