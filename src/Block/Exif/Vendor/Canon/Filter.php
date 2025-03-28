@@ -27,23 +27,6 @@ class Filter extends ListBase
      */
     protected int $paramsCount;
 
-/*    public function __construct(
-        public readonly IfdEntryValueObject $ifdEntry,
-        Tiff|Ifd|RootBlockBase $parent,
-    ) {
-        parent::__construct(
-            definition: new ItemDefinition(
-                collection: $ifdEntry->collection,
-                format: $ifdEntry->dataFormat,
-                valuesCount: $ifdEntry->countOfComponents,
-                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                sequence: $ifdEntry->sequence,
-            ),
-            parent: $parent,
-            graft: false,
-        );
-    }
-*/
     public function __construct(
         ItemDefinition $definition,
         FilterInfoIndex $parent,
