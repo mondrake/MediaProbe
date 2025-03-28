@@ -137,7 +137,7 @@ class Jpeg extends MediaTypeBlockBase
                 collection: $trailCollection,
                 parent: $this,
             );
-            assert($trailBlock instanceof RawData, get_class($trailBlock));
+            assert($trailBlock instanceof SegmentBase, get_class($trailBlock));
             $trailBlock->fromDataElement(new DataWindow($dataElement, $offset, $raw_size));
             $this->graftBlock($trailBlock);
         }
