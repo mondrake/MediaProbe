@@ -96,7 +96,7 @@ class Map extends Index
 
             // Adds the item to the DOM.
             $item_class = $ifdEntry->collection->handler();
-            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true) );
+            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
             try {
                 if (is_a($item_class, Tag::class, true)) {
                     $item = new $item_class(

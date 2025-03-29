@@ -9,7 +9,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -83,7 +82,7 @@ class Index extends ListBase
 
             // Adds the 'tag'.
             $item_class = $ifdEntry->collection->handler();
-            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true) );
+            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
             if (is_a($item_class, Tag::class, true)) {
                 $item = new $item_class(
                     ifdEntry: $ifdEntry,
