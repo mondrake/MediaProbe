@@ -51,6 +51,7 @@ class Index extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $this->validate($data);
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'

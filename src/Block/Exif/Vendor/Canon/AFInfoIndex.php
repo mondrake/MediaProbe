@@ -18,6 +18,7 @@ class AFInfoIndex extends Index
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $this->validate($data);
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
@@ -78,8 +79,10 @@ class AFInfoIndex extends Index
                 $this->graftBlock($item);
             }
 
-            $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
-            new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
+            if (isset($item)) {
+                $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
+                new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
+            }
         }
     }
 }

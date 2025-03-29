@@ -19,6 +19,7 @@ class RunTime extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         assert($this->debugInfo(['dataElement' => $data]));
 
         $plist = new CFPropertyList();

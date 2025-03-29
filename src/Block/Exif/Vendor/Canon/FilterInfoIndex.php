@@ -35,6 +35,7 @@ class FilterInfoIndex extends Index
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $offset = 0;
 
         // The count of filters is at offset 4.

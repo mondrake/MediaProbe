@@ -40,6 +40,7 @@ class Map extends Index
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $this->validate($data);
         assert($this->debugInfo(['dataElement' => $data]));
 

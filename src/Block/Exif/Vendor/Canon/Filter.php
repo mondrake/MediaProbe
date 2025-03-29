@@ -41,6 +41,7 @@ class Filter extends ListBase
      */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $offset = 0;
 
         // The id of the filter is at offset 0.
