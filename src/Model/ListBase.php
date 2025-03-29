@@ -1,11 +1,9 @@
 <?php
 
-namespace FileEye\MediaProbe\Block;
-
-use FileEye\MediaProbe\Model\BlockBase;
+namespace FileEye\MediaProbe\Model;
 
 /**
- * Abstract class representing a generic table of data.
+ * Abstract class representing a generic list of data.
  *
  * Its extensions could be IFDs (Image File Directory), indexes, maps, etc.
  *

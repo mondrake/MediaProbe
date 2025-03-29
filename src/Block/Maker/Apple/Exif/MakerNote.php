@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block\Maker\Apple\Exif;
 
-use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
@@ -14,6 +13,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class MakerNote extends MakerNoteBase

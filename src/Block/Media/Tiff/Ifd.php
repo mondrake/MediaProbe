@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block\Media\Tiff;
 
-use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
@@ -16,6 +15,7 @@ use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
