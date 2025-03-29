@@ -115,7 +115,7 @@ class Map extends Index
                         parent: $this,
                     );
                     assert($item instanceof RawData);
-                    $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->size));
+                    $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->countOfComponents * $ifdEntry->size));
                     $this->graftBlock($item);
                 }
             } catch (DataException $e) {

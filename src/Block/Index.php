@@ -89,9 +89,7 @@ class Index extends ListBase
                     ifdEntry: $ifdEntry,
                     parent: $this,
                 );
-                $item_data_window_offset = $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue();
-                $item_data_window_size = $ifdEntry->countOfComponents > 0 ? $ifdEntry->size : 4;
-                $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
+                $tagDataWindow = new DataWindow($data, $offset, $ifdEntry->countOfComponents * $ifdEntry->size);
                 $item->fromDataElement($tagDataWindow);
                 $this->graftBlock($item);
             } elseif (is_a($item_class, RawData::class, true)) {
@@ -102,7 +100,7 @@ class Index extends ListBase
                     parent: $this,
                 );
                 assert($item instanceof RawData);
-                $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->size));
+                $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->countOfComponents * $ifdEntry->size));
                 $this->graftBlock($item);
             }
 
