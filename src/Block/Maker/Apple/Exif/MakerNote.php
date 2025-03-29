@@ -14,6 +14,7 @@ use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class MakerNote extends MakerNoteBase
@@ -26,9 +27,7 @@ class MakerNote extends MakerNoteBase
         $headerCollection = CollectionFactory::get('RawData', ['name' => 'appleHeader']);
         $headerHandler = $headerCollection->handler();
         $header = new $headerHandler(
-            collection: $headerCollection,
-            dataFormat: DataFormat::BYTE,
-            countOfComponents: 14,
+            listItem: new ListItemValue($headerCollection, DataFormat::BYTE, 14),
             parent: $this,
         );
         $header->fromDataElement(new DataWindow($dataElement, $offset, 14));

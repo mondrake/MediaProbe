@@ -10,6 +10,7 @@ use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -95,9 +96,7 @@ class Index extends ListBase
                 $this->graftBlock($item);
             } elseif (is_a($item_class, RawData::class, true)) {
                 $item = new $item_class(
-                    collection: $ifdEntry->collection,
-                    dataFormat: $ifdEntry->dataFormat,
-                    countOfComponents:  $ifdEntry->countOfComponents,
+                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                     parent: $this,
                 );
                 assert($item instanceof RawData);
@@ -129,7 +128,6 @@ class Index extends ListBase
         int $dataDisplacement = 0,
         ?string $fallbackCollectionId = null,
     ): IfdItemValue|false {
-
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
         $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [

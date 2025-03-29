@@ -157,9 +157,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         }
         if (is_a($handler, RawData::class, true)) {
             $tag = new RawData(
-                collection: $item_definition->collection,
-                dataFormat: $item_definition->format,
-                countOfComponents: $item_definition->valuesCount,
+                listItem: new ListItemValue($item_definition->collection, $item_definition->format, $item_definition->valuesCount),
                 parent: $parent ?? $this,
             );
             return $tag;
