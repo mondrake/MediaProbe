@@ -9,6 +9,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -47,9 +48,7 @@ class FilterInfoIndex extends Index
         $trailCollection = CollectionFactory::get('RawData', ['name' => 'filterHeader']);
         $trailHandler = $trailCollection->handler();
         $trail = new $trailHandler(
-            collection: $trailCollection,
-            dataFormat: DataFormat::BYTE,
-            countOfComponents: 4,
+            listItem: new ListItemValue($trailCollection, DataFormat::BYTE, 4),
             parent: $this,
         );
         $trail->fromDataElement(new DataWindow($data, $offset, 4));

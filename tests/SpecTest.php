@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Test;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionException;
 use FileEye\MediaProbe\Collection\CollectionFactory;
@@ -30,7 +30,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $tiffStub = new StubRootBlock(CollectionFactory::get('Media\Tiff'), $this->createMock(Logger::class));
         $ifd_0 = new Ifd(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -40,7 +40,7 @@ class SpecTest extends MediaProbeTestCaseBase
         );
         $tiffStub->graftBlock($ifd_0);
         $ifd_exif = new Ifd(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: $ifd_0->ifdEntry->collection->getItemCollection(0x8769),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -108,7 +108,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $stubRoot = $this->getStubRoot();
         $ifd = new Ifd(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: CollectionFactory::get($parent_collection_id),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -121,7 +121,7 @@ class SpecTest extends MediaProbeTestCaseBase
         $parent_collection = CollectionFactory::get($parent_collection_id);
         $item_collection = $parent_collection->getItemCollectionByName($tag_name);
         $item_format = $item_collection->getPropertyValue('format')[0];
-        $ifdEntry = new IfdEntryValueObject(
+        $ifdEntry = new IfdItemValue(
             collection: $item_collection,
             dataFormat: $item_format
         );

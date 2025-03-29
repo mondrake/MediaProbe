@@ -2,13 +2,13 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
-use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**

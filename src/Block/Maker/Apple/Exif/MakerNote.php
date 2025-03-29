@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block\Maker\Apple\Exif;
 
-use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
@@ -12,8 +11,9 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 class MakerNote extends MakerNoteBase
@@ -26,9 +26,7 @@ class MakerNote extends MakerNoteBase
         $headerCollection = CollectionFactory::get('RawData', ['name' => 'appleHeader']);
         $headerHandler = $headerCollection->handler();
         $header = new $headerHandler(
-            collection: $headerCollection,
-            dataFormat: DataFormat::BYTE,
-            countOfComponents: 14,
+            listItem: new ListItemValue($headerCollection, DataFormat::BYTE, 14),
             parent: $this,
         );
         $header->fromDataElement(new DataWindow($dataElement, $offset, 14));
@@ -67,17 +65,12 @@ class MakerNote extends MakerNoteBase
                     $this->graftBlock($item);
                 } else {
                     $item = new $item_class(
-                        new ItemDefinition(
-                            collection: $ifdEntry->collection,
-                            format: $ifdEntry->dataFormat,
-                            valuesCount: $ifdEntry->countOfComponents,
-                            dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                            sequence: $ifdEntry->sequence,
-                        ),
-                        $this,
+                        listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents, $ifdEntry->sequence),
+                        parent: $this,
                     );
                     $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);
+                    $item->fromDataElement($item_data_window);
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {

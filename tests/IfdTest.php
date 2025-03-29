@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -17,7 +17,7 @@ class IfdTest extends MediaProbeTestCaseBase
     {
         $tiff_mock = $this->getStubRoot('tiff');
         $ifd = new Ifd(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -30,7 +30,7 @@ class IfdTest extends MediaProbeTestCaseBase
         $this->assertCount(0, $ifd->getMultipleElements('tag'));
 
         $tag1 = new Tag(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: $ifd->getCollection()->getItemCollection(0x010E),
                 dataFormat: DataFormat::ASCII,
             ),
@@ -40,7 +40,7 @@ class IfdTest extends MediaProbeTestCaseBase
         $desc = new Ascii($tag1, new DataString('Hello?' . chr(0)));
 
         $tag2 = new Tag(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: $ifd->getCollection()->getItemCollection(0x0132),
                 dataFormat: DataFormat::ASCII,
                 countOfComponents: 20,

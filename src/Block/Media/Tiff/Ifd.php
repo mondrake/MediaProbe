@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block\Media\Tiff;
 
-use FileEye\MediaProbe\Block\ListBase;
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
@@ -16,6 +15,7 @@ use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use FileEye\MediaProbe\Utility\HexDump;
@@ -29,7 +29,7 @@ use FileEye\MediaProbe\Utility\HexDump;
 class Ifd extends ListBase
 {
     public function __construct(
-        public readonly IfdEntryValueObject $ifdEntry,
+        public readonly IfdItemValue $ifdEntry,
         Tiff|Ifd|RootBlockBase $parent,
     ) {
         parent::__construct(
@@ -141,7 +141,7 @@ class Ifd extends ListBase
     }
 
     /**
-     * Gets the IfdEntryValueObject object of an IFD entry, from the data.
+     * Gets the IfdItemValue object of an IFD entry, from the data.
      *
      * @param int $seq
      *   The sequence (0-index) of the item in the IFD.
@@ -158,7 +158,7 @@ class Ifd extends ListBase
         int $offset,
         int $dataDisplacement = 0,
         ?string $fallbackCollectionId = null,
-    ): IfdEntryValueObject|false {
+    ): IfdItemValue|false {
         $id = $dataElement->getShort($offset);
         $format = $dataElement->getShort($offset + 2);
         $realFormat = $format;
@@ -235,7 +235,7 @@ class Ifd extends ListBase
             return false;
         }
 
-        return new IfdEntryValueObject(
+        return new IfdItemValue(
             sequence: $seq,
             collection: $item_collection,
             dataFormat: $format,

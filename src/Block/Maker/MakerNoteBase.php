@@ -4,7 +4,7 @@ namespace FileEye\MediaProbe\Block\Maker;
 
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Model\RootBlockBase;
 
 /**
@@ -13,7 +13,7 @@ use FileEye\MediaProbe\Model\RootBlockBase;
 class MakerNoteBase extends Ifd
 {
     public function __construct(
-        IfdEntryValueObject $ifdEntry,
+        IfdItemValue $ifdEntry,
         Tiff|Ifd|RootBlockBase $parent,
         protected readonly int $dataDisplacement = 0,
     ) {

@@ -2,13 +2,13 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
-use FileEye\MediaProbe\Block\ListBase;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -47,7 +47,7 @@ class CustomFunctions2 extends ListBase
                     $num,
                     $this->getRootElement()
                 );
-                $ifdEntry = new IfdEntryValueObject(
+                $ifdEntry = new IfdItemValue(
                     collection: $item_collection,
                     dataFormat: DataFormat::SIGNED_LONG,
                     countOfComponents: $num,

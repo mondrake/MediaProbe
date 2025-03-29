@@ -2,8 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Media\Tiff;
 
-use FileEye\MediaProbe\Block\ListBase;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -11,6 +10,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\LeafBlockBase;
+use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\HexDump;
 
@@ -20,7 +20,7 @@ use FileEye\MediaProbe\Utility\HexDump;
 class Tag extends LeafBlockBase
 {
     public function __construct(
-        public readonly IfdEntryValueObject $ifdEntry,
+        public readonly IfdItemValue $ifdEntry,
         ListBase|RootBlockBase $parent,
     ) {
         parent::__construct(

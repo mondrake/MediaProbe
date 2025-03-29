@@ -11,6 +11,7 @@ use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ListItemValue;
 
 class MakerNote extends MakerNoteBase
 {
@@ -51,9 +52,7 @@ class MakerNote extends MakerNoteBase
                     $this->graftBlock($item);
                 } elseif (is_a($item_class, RawData::class, true)) {
                     $item = new $item_class(
-                        collection: $ifdEntry->collection,
-                        dataFormat: $ifdEntry->dataFormat,
-                        countOfComponents:  $ifdEntry->countOfComponents,
+                        listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                         parent: $this,
                     );
                     assert($item instanceof RawData);

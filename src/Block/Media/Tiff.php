@@ -3,13 +3,14 @@
 namespace FileEye\MediaProbe\Block\Media;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Model\MediaTypeBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -100,9 +101,7 @@ class Tiff extends MediaTypeBlockBase
             $scanCollection = CollectionFactory::get('RawData', ['name' => 'scan']);
             $scanHandler = $scanCollection->handler();
             $scan = new $scanHandler(
-                collection: $scanCollection,
-                dataFormat: DataFormat::BYTE,
-                countOfComponents: $ifdOffset - 8,
+                listItem: new ListItemValue($scanCollection, DataFormat::BYTE, $ifdOffset - 8),
                 parent: $this,
             );
             $scan->fromDataElement(new DataWindow($dataElement, 8, $ifdOffset - 8));
@@ -135,7 +134,7 @@ class Tiff extends MediaTypeBlockBase
             // since any pointer will refer to the entire segment space.
             $ifdCollection = $this->collection->getItemCollection($i);
             $ifdClass = $ifdCollection->handler();
-            $ifdEntry = new IfdEntryValueObject(
+            $ifdEntry = new IfdItemValue(
                 sequence: $i,
                 collection: $ifdCollection,
                 dataFormat: DataFormat::LONG,

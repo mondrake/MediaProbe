@@ -9,6 +9,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Model\MediaTypeBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -62,9 +63,7 @@ class Jpeg extends MediaTypeBlockBase
                     $trailCollection = CollectionFactory::get('RawData', ['name' => 'trail']);
                     $trailHandler = $trailCollection->handler();
                     $trail = new $trailHandler(
-                        collection: $trailCollection,
-                        dataFormat: DataFormat::BYTE,
-                        countOfComponents: $newOffset - $offset,
+                        listItem: new ListItemValue($trailCollection, DataFormat::BYTE, $newOffset - $offset),
                         parent: $this,
                     );
                     $trail->fromDataElement(new DataWindow($dataElement, $offset, $newOffset - $offset));
@@ -136,9 +135,7 @@ class Jpeg extends MediaTypeBlockBase
             $trailCollection = CollectionFactory::get('RawData');
             $trailHandler = $trailCollection->handler();
             $trail = new $trailHandler(
-                collection: $trailCollection,
-                dataFormat: DataFormat::BYTE,
-                countOfComponents: $raw_size,
+                listItem: new ListItemValue($trailCollection, DataFormat::BYTE, $raw_size),
                 parent: $this,
             );
             $trail->fromDataElement(new DataWindow($dataElement, $offset, $raw_size));

@@ -7,6 +7,7 @@ use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Model\ListItemValue;
 
 /**
  * Class representing an index of values, for Canon AFInfo e AFInfo2.
@@ -70,9 +71,7 @@ class AFInfoIndex extends Index
                 $this->graftBlock($item);
             } elseif (is_a($item_class, RawData::class, true)) {
                 $item = new $item_class(
-                    collection: $ifdEntry->collection,
-                    dataFormat: $ifdEntry->dataFormat,
-                    countOfComponents: $ifdEntry->countOfComponents,
+                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                     parent: $this,
                 );
                 assert($item instanceof RawData);

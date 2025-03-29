@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block;
 
-use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Entry\Core\Undefined;
@@ -10,6 +9,7 @@ use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\EntryBase;
 use FileEye\MediaProbe\Model\LeafBlockBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -23,16 +23,14 @@ class RawData extends LeafBlockBase
     protected int $components;
 
     public function __construct(
-        public readonly CollectionInterface $collection,
-        public readonly int $countOfComponents,
+        public readonly ListItemValue $listItem,
         BlockBase $parent,
-        public readonly int $dataFormat = DataFormat::BYTE,
     ) {
         parent::__construct(
             definition: new ItemDefinition(
-                collection: $this->collection,
-                format: $this->dataFormat,
-                valuesCount: $this->countOfComponents,
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
             ),
             parent: $parent,
             graft: false,

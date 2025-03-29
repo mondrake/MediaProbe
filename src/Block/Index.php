@@ -2,13 +2,15 @@
 
 namespace FileEye\MediaProbe\Block;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -94,9 +96,7 @@ class Index extends ListBase
                 $this->graftBlock($item);
             } elseif (is_a($item_class, RawData::class, true)) {
                 $item = new $item_class(
-                    collection: $ifdEntry->collection,
-                    dataFormat: $ifdEntry->dataFormat,
-                    countOfComponents:  $ifdEntry->countOfComponents,
+                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                     parent: $this,
                 );
                 assert($item instanceof RawData);
@@ -109,7 +109,7 @@ class Index extends ListBase
     }
 
     /**
-     * Gets the IfdEntryValueObject object of an IFD entry, from the data.
+     * Gets the IfdItemValue object of an IFD entry, from the data.
      *
      * @param int $seq
      *   The sequence (0-index) of the item in the index.
@@ -127,8 +127,7 @@ class Index extends ListBase
         int $offset,
         int $dataDisplacement = 0,
         ?string $fallbackCollectionId = null,
-    ): IfdEntryValueObject|false {
-
+    ): IfdItemValue|false {
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
         $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
@@ -138,7 +137,7 @@ class Index extends ListBase
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
 
-        return new IfdEntryValueObject(
+        return new IfdItemValue(
             sequence: $seq,
             collection: $item_collection,
             dataFormat: $item_format,
