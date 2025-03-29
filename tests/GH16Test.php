@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
@@ -43,7 +43,7 @@ class GH16Test extends MediaProbeTestCaseBase
         $ifd0->removeElement("tag[@name='XPSubject']");
         $new_entry_value = "Превед, медвед!";
         $tag = new Tag(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: $ifd0->getCollection()->getItemCollection(0x9C9F),
                 dataFormat: DataFormat::BYTE,
             ),

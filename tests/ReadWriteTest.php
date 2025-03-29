@@ -7,7 +7,7 @@ use FileEye\MediaProbe\Block\Media\Jpeg\ExifApp;
 use FileEye\MediaProbe\Block\Media\Jpeg\SegmentApp1;
 use FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
@@ -60,7 +60,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $this->assertNull($tiff->getElement("ifd[@name='IFD0']"));
 
         $ifd = new Ifd(
-            ifdEntry: new IfdEntryValueObject(
+            ifdEntry: new IfdItemValue(
                 collection: $tiff->getCollection()->getItemCollection('0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -75,7 +75,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
                 'DOMNode' => 'tag',
             ]);
             $tag = new Tag(
-                ifdEntry: new IfdEntryValueObject(
+                ifdEntry: new IfdItemValue(
                     collection: $item_collection,
                     dataFormat: $entry[2],
                 ),

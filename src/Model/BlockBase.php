@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionInterface;
@@ -144,7 +144,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         $handler = $item_definition->collection->handler();
         if (is_a($handler, Tag::class, true)) {
             $tag = new Tag(
-                ifdEntry: new IfdEntryValueObject(
+                ifdEntry: new IfdItemValue(
                     collection: $item_definition->collection,
                     dataFormat: $item_definition->format,
                     countOfComponents: $item_definition->valuesCount,

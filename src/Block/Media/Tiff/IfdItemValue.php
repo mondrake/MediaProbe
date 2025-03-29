@@ -5,25 +5,13 @@ namespace FileEye\MediaProbe\Block\Media\Tiff;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\MediaProbeException;
+use FileEye\MediaProbe\Model\ListItemValue;
 
 /**
- * A value object representing an IFD entry.
+ * A value object representing an IFD item.
  */
-final class IfdEntryValueObject
+final class IfdItemValue extends ListItemValue
 {
-    /**
-     * The expected size of the data part, calculated as the count of components multiplied per
-     * the size of each component.
-     *
-     * @var positive-int
-     */
-    public readonly int $size;
-
-    /**
-     * The data format of the IFD entry as identified from the data.
-     */
-    public readonly int $dataFormatFromData;
-
     /**
      * True if the data of the entry is an offset to the actual entry data; False if the data is
      * the value entry itself.
@@ -45,16 +33,21 @@ final class IfdEntryValueObject
      *   The sequence of the IFD entry on the IFD.
      */
     public function __construct(
-        public readonly CollectionInterface $collection,
-        public readonly int $dataFormat = DataFormat::LONG,
+        CollectionInterface $collection,
+        int $dataFormat = DataFormat::LONG,
         ?int $dataFormatFromData = null,
-        public readonly int $countOfComponents = 1,
+        int $countOfComponents = 1,
         private readonly int $data = 0,
-        public readonly int $sequence = 0,
+        int $sequence = 0,
     ) {
-        $this->size = DataFormat::getSize($this->dataFormat) * $this->countOfComponents;
+        parent::__construct(
+            collection: $collection,
+            dataFormat: $dataFormat,
+            countOfComponents: $countOfComponents,
+            sequence: $sequence,
+            dataFormatFromData: $dataFormatFromData,
+        );
         $this->isOffset = $this->size > 4;
-        $this->dataFormatFromData = $dataFormatFromData ?? $this->dataFormat;
     }
 
     /**

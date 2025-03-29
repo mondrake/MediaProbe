@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
@@ -60,7 +60,7 @@ class Filter extends ListBase
             $offset += 8;
 
             // The items are defined in the collection of the parent element.
-            $ifdEntry = new IfdEntryValueObject(
+            $ifdEntry = new IfdItemValue(
                 sequence: $p,
                 collection: $this->getParentElement()->getCollection()->getItemCollection($id),
                 dataFormat: DataFormat::SIGNED_LONG,

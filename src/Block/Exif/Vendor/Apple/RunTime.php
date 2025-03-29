@@ -5,7 +5,7 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Apple;
 use CFPropertyList\CFDictionary;
 use CFPropertyList\CFNumber;
 use CFPropertyList\CFPropertyList;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataString;
@@ -29,7 +29,7 @@ class RunTime extends ListBase
         foreach ($plist->toArray() as $tag_name => $value) {
             $item_collection = $this->getCollection()->getItemCollection($tag_name);
             $item_format = $item_collection->getPropertyValue('format')[0];
-            $item_definition = new IfdEntryValueObject($item_collection, $item_format);
+            $item_definition = new IfdItemValue($item_collection, $item_format);
             $tag = new Tag($item_definition, $this);
             $entry_class = $tag->getEntryClass();
             new $entry_class($tag, new DataString((string) $value));

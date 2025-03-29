@@ -2,7 +2,7 @@
 
 namespace FileEye\MediaProbe\Block;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
@@ -110,7 +110,7 @@ class Index extends ListBase
     }
 
     /**
-     * Gets the IfdEntryValueObject object of an IFD entry, from the data.
+     * Gets the IfdItemValue object of an IFD entry, from the data.
      *
      * @param int $seq
      *   The sequence (0-index) of the item in the index.
@@ -128,7 +128,7 @@ class Index extends ListBase
         int $offset,
         int $dataDisplacement = 0,
         ?string $fallbackCollectionId = null,
-    ): IfdEntryValueObject|false {
+    ): IfdItemValue|false {
 
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
@@ -139,7 +139,7 @@ class Index extends ListBase
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
 
-        return new IfdEntryValueObject(
+        return new IfdItemValue(
             sequence: $seq,
             collection: $item_collection,
             dataFormat: $item_format,

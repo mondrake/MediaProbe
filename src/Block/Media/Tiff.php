@@ -3,7 +3,7 @@
 namespace FileEye\MediaProbe\Block\Media;
 
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
-use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
+use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
@@ -135,7 +135,7 @@ class Tiff extends MediaTypeBlockBase
             // since any pointer will refer to the entire segment space.
             $ifdCollection = $this->collection->getItemCollection($i);
             $ifdClass = $ifdCollection->handler();
-            $ifdEntry = new IfdEntryValueObject(
+            $ifdEntry = new IfdItemValue(
                 sequence: $i,
                 collection: $ifdCollection,
                 dataFormat: DataFormat::LONG,
