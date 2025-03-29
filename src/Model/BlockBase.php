@@ -6,6 +6,7 @@ namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -98,13 +99,11 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * Parse data into a MediaProbe block.
-     *
-     * @param DataElement $dataElement
-     *   The data element that will provide the data.
+     * @deprecated
      */
     public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $data = new DataWindow($dataElement, $start, $size);
         $this->size = $data->getSize();
         // @phpstan-ignore method.notFound
@@ -137,10 +136,11 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     }
 
     /**
-     * @todo xxx
+     * @deprecated
      */
     public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $handler = $item_definition->collection->handler();
         if (is_a($handler, Tag::class, true)) {
             $tag = new Tag(
@@ -151,6 +151,15 @@ abstract class BlockBase extends ElementBase implements BlockInterface
                     data: $item_definition->dataOffset,
                     sequence: $item_definition->sequence,
                 ),
+                parent: $parent ?? $this,
+            );
+            return $tag;
+        }
+        if (is_a($handler, RawData::class, true)) {
+            $tag = new RawData(
+                collection: $item_definition->collection,
+                dataFormat: $item_definition->format,
+                countOfComponents: $item_definition->valuesCount,
                 parent: $parent ?? $this,
             );
             return $tag;
@@ -185,9 +194,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return $this->size;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
     {
         $bytes = '';

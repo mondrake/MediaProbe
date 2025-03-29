@@ -2,12 +2,13 @@
 
 namespace FileEye\MediaProbe\Block;
 
+use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -45,8 +46,12 @@ class Index extends ListBase
         }
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $this->validate($data);
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
@@ -57,51 +62,73 @@ class Index extends ListBase
         assert($this->debugInfo(['dataElement' => $data]));
 
         for ($i = 0; $i < $this->components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data, $offset);
+            $ifdEntry = $this->ifdEntryFromDataElement(
+                seq: $i,
+                id: $i,
+                dataElement: $data,
+                offset: $offset,
+            );
+
+            if ($ifdEntry === false) {
+                continue;
+            }
 
             // Check if this tag should be skipped.
-            if ($item_definition->collection->getPropertyValue('skip')) {
+            if ($ifdEntry->collection->getPropertyValue('skip')) {
                 $this->debug("Skipped");
                 continue;
             };
 
-            $this->components -= ($item_definition->valuesCount - 1);
+            $this->components -= ($ifdEntry->countOfComponents - 1);
 
             // Adds the 'tag'.
-            $tag = $this->addBlock($item_definition);
-            assert($tag instanceof Tag || $tag instanceof RawData, get_class($tag));
-            if (is_a($tag, Tag::class, true)) {
-                $item_data_window_offset = $tag->ifdEntry->isOffset ? $tag->ifdEntry->dataOffset() : $tag->ifdEntry->dataValue();
-                $item_data_window_size = $tag->ifdEntry->countOfComponents > 0 ? $tag->ifdEntry->size : 4;
-                $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
-                $tag->fromDataElement($tagDataWindow);
-                $this->graftBlock($tag);
-            } else {
-                $tag->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
+            $item_class = $ifdEntry->collection->handler();
+            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
+            if (is_a($item_class, Tag::class, true)) {
+                $item = new $item_class(
+                    ifdEntry: $ifdEntry,
+                    parent: $this,
+                );
+                $tagDataWindow = new DataWindow($data, $offset, $ifdEntry->size);
+                $item->fromDataElement($tagDataWindow);
+                $this->graftBlock($item);
+            } elseif (is_a($item_class, RawData::class, true)) {
+                $item = new $item_class(
+                    collection: $ifdEntry->collection,
+                    dataFormat: $ifdEntry->dataFormat,
+                    countOfComponents:  $ifdEntry->countOfComponents,
+                    parent: $this,
+                );
+                assert($item instanceof RawData);
+                $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->size));
+                $this->graftBlock($item);
             }
 
-            $offset += $item_definition->getSize();
+            $offset += $ifdEntry->size;
         }
     }
 
     /**
-     * Gets the ItemDefinition object of an index item, from the data.
+     * Gets the IfdEntryValueObject object of an IFD entry, from the data.
      *
      * @param int $seq
-     *            The sequence (0-index) of the item in the index.
+     *   The sequence (0-index) of the item in the index.
      * @param mixed $id
-     *            The id of the item in the index.
+     *   The id of the item in the index.
      * @param DataElement $dataElement
-     *            the data element that will provide the data.
+     *   The data element that will provide the data.
      * @param int $offset
-     *            the offset within the data element where the count can be
-     *            found.
-     *
-     * @return \FileEye\MediaProbe\ItemDefinition
-     *            the ItemDefinition object of the IFD item.
+     *   The offset within the data element where the count can be found.
      */
-    protected function getItemDefinitionFromData(int $seq, $id, DataElement $dataElement, int $offset): ItemDefinition
-    {
+    protected function ifdEntryFromDataElement(
+        int $seq,
+        mixed $id,
+        DataElement $dataElement,
+        int $offset,
+        int $dataDisplacement = 0,
+        ?string $fallbackCollectionId = null,
+    ): IfdEntryValueObject|false {
+
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
         $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
@@ -110,7 +137,14 @@ class Index extends ListBase
         ]);
         $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
-        return new ItemDefinition($item_collection, $item_format, $item_components, $offset, 0, $seq);
+
+        return new IfdEntryValueObject(
+            sequence: $seq,
+            collection: $item_collection,
+            dataFormat: $item_format,
+            dataFormatFromData: $item_format,
+            countOfComponents: $item_components,
+        );
     }
 
     /**

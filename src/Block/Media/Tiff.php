@@ -9,7 +9,7 @@ use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Model\MediaTypeBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -97,14 +97,17 @@ class Tiff extends MediaTypeBlockBase
         // If the offset to first IFD is higher than 8, then there may be an
         // image scan (TIFF) in between. Store that in a RawData block.
         if ($ifdOffset > 8) {
-            $scan = new ItemDefinition(
-                collection:  CollectionFactory::get('RawData', ['name' => 'scan']),
-                format:      DataFormat::BYTE,
-                valuesCount: $ifdOffset - 8,
+            $scanCollection = CollectionFactory::get('RawData', ['name' => 'scan']);
+            $scanHandler = $scanCollection->handler();
+            $scan = new $scanHandler(
+                collection: $scanCollection,
+                dataFormat: DataFormat::BYTE,
+                countOfComponents: $ifdOffset - 8,
+                parent: $this,
             );
-            $ifd = $this->addBlock($scan);
-            assert($ifd instanceof RawData);
-            $ifd->parseData($dataElement, 8, $ifdOffset - 8);
+            $scan->fromDataElement(new DataWindow($dataElement, 8, $ifdOffset - 8));
+            assert($scan instanceof RawData);
+            $this->graftBlock($scan);
         }
 
         // Loops through IFDs. In fact we should only have IFD0 and IFD1.

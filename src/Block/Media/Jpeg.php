@@ -9,7 +9,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\MediaTypeBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -60,14 +59,17 @@ class Jpeg extends MediaTypeBlockBase
                         'offset' => $dataElement->getAbsoluteOffset($offset),
                         'size' => $newOffset - $offset,
                     ]);
-                    $trail = new ItemDefinition(
-                        CollectionFactory::get('RawData', ['name' => 'trail']),
-                        DataFormat::BYTE,
-                        $offset
+                    $trailCollection = CollectionFactory::get('RawData', ['name' => 'trail']);
+                    $trailHandler = $trailCollection->handler();
+                    $trail = new $trailHandler(
+                        collection: $trailCollection,
+                        dataFormat: DataFormat::BYTE,
+                        countOfComponents: $newOffset - $offset,
+                        parent: $this,
                     );
-                    $trailData = $this->addBlock($trail);
-                    assert($trailData instanceof RawData);
-                    $trailData->parseData($dataElement, $offset, $newOffset - $offset);
+                    $trail->fromDataElement(new DataWindow($dataElement, $offset, $newOffset - $offset));
+                    assert($trail instanceof RawData);
+                    $this->graftBlock($trail);
                 }
                 $offset = $newOffset;
             } catch (DataException $e) {
@@ -131,10 +133,16 @@ class Jpeg extends MediaTypeBlockBase
             $this->notice('Found trailing content after EOI: {size} bytes', ['size' => $raw_size]);
             // There is no JPEG marker for trailing garbage, so we just collect
             // the data in a RawData object.
-            $trail_definition = new ItemDefinition(CollectionFactory::get('RawData'), DataFormat::BYTE, $raw_size);
-            $trail_data_window = new DataWindow($dataElement, $offset, $raw_size);
-            $trail = new RawData($trail_definition, $this->getParentElement());
-            $trail->parseData($trail_data_window);
+            $trailCollection = CollectionFactory::get('RawData');
+            $trailHandler = $trailCollection->handler();
+            $trail = new $trailHandler(
+                collection: $trailCollection,
+                dataFormat: DataFormat::BYTE,
+                countOfComponents: $raw_size,
+                parent: $this,
+            );
+            $trail->fromDataElement(new DataWindow($dataElement, $offset, $raw_size));
+            assert($trail instanceof RawData);
             $this->graftBlock($trail);
         }
 

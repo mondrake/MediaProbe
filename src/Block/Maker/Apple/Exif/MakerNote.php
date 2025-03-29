@@ -23,10 +23,16 @@ class MakerNote extends MakerNoteBase
         $offset = 0;
 
         // Load Apple's header as a raw data block.
-        $header_data_definition = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'appleHeader']), DataFormat::BYTE, 14);
-        $header_data_window = new DataWindow($dataElement, $offset, 14);
-        $header = new RawData($header_data_definition, $this);
-        $header->parseData($header_data_window);
+        $headerCollection = CollectionFactory::get('RawData', ['name' => 'appleHeader']);
+        $headerHandler = $headerCollection->handler();
+        $header = new $headerHandler(
+            collection: $headerCollection,
+            dataFormat: DataFormat::BYTE,
+            countOfComponents: 14,
+            parent: $this,
+        );
+        $header->fromDataElement(new DataWindow($dataElement, $offset, 14));
+        $this->graftBlock($header);
 
         $offset += 14;
 

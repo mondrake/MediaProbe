@@ -36,8 +36,12 @@ class Filter extends ListBase
         $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $definition->sequence);
     }
 
+    /**
+     * @deprecated
+     */
     protected function doParseData(DataElement $data): void
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $offset = 0;
 
         // The id of the filter is at offset 0.
