@@ -118,11 +118,6 @@ class Tag extends LeafBlockBase
         return $entry_class;
     }
 
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
-    {
-        throw new \LogicException('removing');
-    }
-
     public function collectInfo(array $context = []): array
     {
         $info = [];

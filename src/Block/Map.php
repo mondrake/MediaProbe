@@ -104,7 +104,7 @@ class Map extends Index
                         ifdEntry: $ifdEntry,
                         parent: $this,
                     );
-                    $tagDataWindow = new DataWindow($data, $n, $ifdEntry->countOfComponents * $ifdEntry->size);
+                    $tagDataWindow = new DataWindow($data, $n, $ifdEntry->size);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
                 } elseif (is_a($item_class, RawData::class, true)) {
@@ -115,7 +115,7 @@ class Map extends Index
                         parent: $this,
                     );
                     assert($item instanceof RawData);
-                    $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->countOfComponents * $ifdEntry->size));
+                    $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->size));
                     $this->graftBlock($item);
                 }
             } catch (DataException $e) {
