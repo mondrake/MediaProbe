@@ -26,9 +26,10 @@ class MakerNote extends MakerNoteBase
         $headerCollection = CollectionFactory::get('RawData', ['name' => 'appleHeader']);
         $headerHandler = $headerCollection->handler();
         $header = new $headerHandler(
-            definition: new ItemDefinition($headerCollection, DataFormat::BYTE, 14),
+            collection: $headerCollection,
+            dataFormat: DataFormat::BYTE,
+            countOfComponents: 14,
             parent: $this,
-            graft: false,
         );
         $header->fromDataElement(new DataWindow($dataElement, $offset, 14));
         $this->graftBlock($header);

@@ -46,25 +46,25 @@ class ItemDefinition
      * Returns the class to manage the entry value.
      * @todo
      */
-    public function getEntryClass(): string
+    public static function getEntryClass($collection, $format): string
     {
         // Return the specific entry class if defined, or fall back to
         // default class for the format.
-        if (!$entry_class = $this->collection->getPropertyValue('entryClass')) {
-            if (empty($this->format)) {
+        if (!$entry_class = $collection->getPropertyValue('entryClass')) {
+            if (empty($format)) {
                 throw new MediaProbeException(
                     'No format can be derived for item: %s (%s)',
-                    $this->collection->getPropertyValue('item') ?? 'n/a',
-                    $this->collection->getPropertyValue('name') ?? 'n/a'
+                    $collection->getPropertyValue('item') ?? 'n/a',
+                    $collection->getPropertyValue('name') ?? 'n/a'
                 );
             }
 
-            if (!$entry_class = DataFormat::getClass($this->format)) {
+            if (!$entry_class = DataFormat::getClass($format)) {
                 throw new MediaProbeException(
                     'Unsupported format %d for item: %s (%s)',
-                    $this->format,
-                    $this->collection->getPropertyValue('item') ?? 'n/a',
-                    $this->collection->getPropertyValue('name') ?? 'n/a'
+                    $format,
+                    $collection->getPropertyValue('item') ?? 'n/a',
+                    $collection->getPropertyValue('name') ?? 'n/a'
                 );
             }
         }

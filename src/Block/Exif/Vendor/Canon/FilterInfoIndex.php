@@ -43,9 +43,17 @@ class FilterInfoIndex extends Index
         assert($this->debugInfo(['dataElement' => $data]));
 
         // The first 4 bytes is a marker (?), store as RawData.
-        $rawData = $this->addBlock(new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'filterHeader']), DataFormat::BYTE, 4));
-        assert($rawData instanceof RawData);
-        $rawData->parseData(new DataWindow($data, $offset, 4));
+        $trailCollection = CollectionFactory::get('RawData', ['name' => 'filterHeader']);
+        $trailHandler = $trailCollection->handler();
+        $trail = new $trailHandler(
+            collection: $trailCollection,
+            dataFormat: DataFormat::BYTE,
+            countOfComponents: 4,
+            parent: $this,
+        );
+        $trail->fromDataElement(new DataWindow($data, $offset, 4));
+        assert($trail instanceof RawData);
+        $this->graftBlock($trail);
         $offset += 8;
 
         // Loop and parse through the filters.

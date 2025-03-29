@@ -101,13 +101,10 @@ class Tiff extends MediaTypeBlockBase
             $scanCollection = CollectionFactory::get('RawData', ['name' => 'scan']);
             $scanHandler = $scanCollection->handler();
             $scan = new $scanHandler(
-                definition: new ItemDefinition(
-                    collection:  $scanCollection,
-                    format:      DataFormat::BYTE,
-                    valuesCount: $ifdOffset - 8,
-                ),
+                collection: $scanCollection,
+                dataFormat: DataFormat::BYTE,
+                countOfComponents: $ifdOffset - 8,
                 parent: $this,
-                graft: false,
             );
             $scan->fromDataElement(new DataWindow($dataElement, 8, $ifdOffset - 8));
             assert($scan instanceof RawData);

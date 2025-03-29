@@ -63,13 +63,10 @@ class Jpeg extends MediaTypeBlockBase
                     $trailCollection = CollectionFactory::get('RawData', ['name' => 'trail']);
                     $trailHandler = $trailCollection->handler();
                     $trail = new $trailHandler(
-                        definition: new ItemDefinition(
-                            collection:  $trailCollection,
-                            format:      DataFormat::BYTE,
-                            dataOffset:  $offset,
-                        ),
+                        collection: $trailCollection,
+                        dataFormat: DataFormat::BYTE,
+                        countOfComponents: $newOffset - $offset,
                         parent: $this,
-                        graft: false,
                     );
                     $trail->fromDataElement(new DataWindow($dataElement, $offset, $newOffset - $offset));
                     assert($trail instanceof RawData);
@@ -140,13 +137,10 @@ class Jpeg extends MediaTypeBlockBase
             $trailCollection = CollectionFactory::get('RawData');
             $trailHandler = $trailCollection->handler();
             $trail = new $trailHandler(
-                definition: new ItemDefinition(
-                    collection:  $trailCollection,
-                    format:      DataFormat::BYTE,
-                    valuesCount: $raw_size,
-                ),
+                collection: $trailCollection,
+                dataFormat: DataFormat::BYTE,
+                countOfComponents: $raw_size,
                 parent: $this,
-                graft: false,
             );
             $trail->fromDataElement(new DataWindow($dataElement, $offset, $raw_size));
             assert($trail instanceof RawData);

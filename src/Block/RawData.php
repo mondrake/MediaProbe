@@ -2,22 +2,42 @@
 
 namespace FileEye\MediaProbe\Block;
 
+use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Entry\Core\Undefined;
+use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\EntryBase;
+use FileEye\MediaProbe\Model\LeafBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
  * Class for storing raw data as a block.
  */
-class RawData extends BlockBase
+class RawData extends LeafBlockBase
 {
     /**
      * The data length.
      */
     protected int $components;
+
+    public function __construct(
+        public readonly CollectionInterface $collection,
+        public readonly int $countOfComponents,
+        BlockBase $parent,
+        public readonly int $dataFormat = DataFormat::BYTE,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->collection,
+                format: $this->dataFormat,
+                valuesCount: $this->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+    }
 
     /**
      * xxx
@@ -40,16 +60,6 @@ class RawData extends BlockBase
     public function getComponents(): int
     {
         return $this->components; // xxx ???
-    }
-
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        assert($this->debugInfo(['dataElement' => $data]));
-        new Undefined($this, $data);
     }
 
     public function fromDataElement(DataElement $dataElement): static

@@ -5,7 +5,9 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Media\Tiff\IfdEntryValueObject;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\ItemDefinition;
 
 /**
  * Class representing an index of values, for Canon AFInfo e AFInfo2.
@@ -27,20 +29,29 @@ class AFInfoIndex extends Index
         assert($this->debugInfo(['dataElement' => $data]));
 
         for ($i = 0; $i < $this->components; $i++) {
-            $item_definition = $this->getItemDefinitionFromData($i, $i, $data, $offset);
+            $ifdEntry = $this->ifdEntryFromDataElement(
+                seq: $i,
+                id: $i,
+                dataElement: $data,
+                offset: $offset,
+            );
+
+            if ($ifdEntry === false) {
+                continue;
+            }
 
             // Check if this tag should be skipped.
-            if ($item_definition->collection->getPropertyValue('skip')) {
+            if ($ifdEntry->collection->getPropertyValue('skip')) {
                 $this->debug("Skipped");
                 continue;
             };
 
-            if (in_array($item_definition->collection->getPropertyValue('name'), ['AFAreaWidths', 'AFAreaHeights', 'AFAreaXPositions', 'AFAreaYPositions'])) {
+            if (in_array($ifdEntry->collection->getPropertyValue('name'), ['AFAreaWidths', 'AFAreaHeights', 'AFAreaXPositions', 'AFAreaYPositions'])) {
                 $valueComponentsTag = $this->getElement("tag[@name='NumAFPoints']");
                 assert($valueComponentsTag instanceof Tag);
                 $valueComponents = $valueComponentsTag->getValue();
                 $this->components -= ($valueComponents - 1);
-            } elseif (in_array($item_definition->collection->getPropertyValue('name'), ['AFPointsInFocus', 'AFPointsSelected'])) {
+            } elseif (in_array($ifdEntry->collection->getPropertyValue('name'), ['AFPointsInFocus', 'AFPointsSelected'])) {
                 $valueComponentsTag = $this->getElement("tag[@name='NumAFPoints']");
                 assert($valueComponentsTag instanceof Tag);
                 $valueComponents = (int) (($valueComponentsTag->getValue() + 15) / 16);
@@ -50,25 +61,26 @@ class AFInfoIndex extends Index
             }
 
             // Adds the 'tag'.
-            $item_class = $item_definition->collection->handler();
+            $item_class = $ifdEntry->collection->handler();
             if (is_a($item_class, Tag::class, true)) {
                 $item = new $item_class(
-                    ifdEntry: new IfdEntryValueObject(
-                        collection: $item_definition->collection,
-                        dataFormat: $item_definition->format,
-                        countOfComponents: $item_definition->valuesCount,
-                        data: $item_definition->dataOffset,
-                        sequence: $item_definition->sequence,
-                    ),
+                    ifdEntry: $ifdEntry,
                     parent: $this,
                 );
                 $this->graftBlock($item);
-            } else {
-                $item = new $item_class($item_definition, $this);
+            } elseif (is_a($item_class, RawData::class, true)) {
+                $item = new $item_class(
+                    collection: $ifdEntry->collection,
+                    dataFormat: $ifdEntry->dataFormat,
+                    countOfComponents: $ifdEntry->countOfComponents,
+                    parent: $this,
+                );
+                assert($item instanceof RawData);
+                $this->graftBlock($item);
             }
 
-            $entry_class = $item_definition->getEntryClass();
-            new $entry_class($item, $this->getDataWindowFromData($data, $offset, $item_definition->format, $valueComponents));
+            $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
+            new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
         }
     }
 }

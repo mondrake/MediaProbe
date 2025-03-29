@@ -44,33 +44,50 @@ class Map extends Index
         assert($this->debugInfo(['dataElement' => $data]));
 
         // Preserve the entire map as a raw data block.
-        $mapdata = new ItemDefinition(CollectionFactory::get('RawData', ['name' => 'mapdata']));
-        $mapdataBlock = $this->addBlock($mapdata);
-        assert($mapdataBlock instanceof RawData);
-        $mapdataBlock->parseData($data);
+        $mapdataCollection = CollectionFactory::get('RawData', ['name' => 'mapdata']);
+        $mapdataHandler = $mapdataCollection->handler();
+        $mapdata = new $mapdataHandler(
+            collection: $mapdataCollection,
+            dataFormat: DataFormat::BYTE,
+            countOfComponents: $data->getSize(),
+            parent: $this,
+        );
+        $mapdata->fromDataElement(new DataWindow($data));
+        assert($mapdata instanceof RawData);
+        $this->graftBlock($mapdata);
 
         // Build the map items.
         $i = 0;
         foreach ($this->getCollection()->listItemIds() as $item) {
             $n = $item * DataFormat::getSize($this->getFormat());
-            $item_definition = $this->getItemDefinitionFromData($i, $item, $data, $n);
+
+            $ifdEntry = $this->ifdEntryFromDataElement(
+                seq: $i,
+                id: $item,
+                dataElement: $data,
+                offset: $n,
+            );
+
+            if ($ifdEntry === false) {
+                continue;
+            }
 
             // Check data is accessible, notice otherwise.
-            if ($item_definition->dataOffset >= $data->getSize()) {
+            if ($n >= $data->getSize()) {
                 $this->debug(
                     '\'{item}\' in map \'{map}\' is beyond end of data available, skipped',
                     [
-                        'item' => $item_definition->collection->getPropertyValue('name'),
+                        'item' => $ifdEntry->collection->getPropertyValue('name'),
                         'map' => $this->getAttribute('name'),
                     ]
                 );
                 continue;
             }
-            if ($item_definition->dataOffset +  $item_definition->getSize() > $data->getSize()) {
+            if ($n +  $ifdEntry->size > $data->getSize()) {
                 $this->warning(
                     'Failed to get value for \'{item}\' in map \'{map}\', not enough data left',
                     [
-                        'item' => $item_definition->collection->getPropertyValue('name'),
+                        'item' => $ifdEntry->collection->getPropertyValue('name'),
                         'map' => $this->getAttribute('name'),
                     ]
                 );
@@ -78,17 +95,27 @@ class Map extends Index
             }
 
             // Adds the item to the DOM.
-            $item = $this->addBlock($item_definition);
-            assert($item instanceof Tag || $item instanceof RawData, get_class($item));
+            $item_class = $ifdEntry->collection->handler();
+            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true) );
             try {
-                if (is_a($item, Tag::class, true)) {
-                    $item_data_window_offset = $item->ifdEntry->isOffset ? $item->ifdEntry->dataOffset() : $item->ifdEntry->dataValue();
-                    $item_data_window_size = $item->ifdEntry->countOfComponents > 0 ? $item->ifdEntry->size : 4;
-                    $tagDataWindow = new DataWindow($data, $item_data_window_offset, $item_data_window_size);
+                if (is_a($item_class, Tag::class, true)) {
+                    $item = new $item_class(
+                        ifdEntry: $ifdEntry,
+                        parent: $this,
+                    );
+                    $tagDataWindow = new DataWindow($data, $n, $ifdEntry->countOfComponents * $ifdEntry->size);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
-                } else {
-                    $item->parseData($data, $item_definition->dataOffset, $item_definition->getSize());
+                } elseif (is_a($item_class, RawData::class, true)) {
+                    $item = new $item_class(
+                        collection: $ifdEntry->collection,
+                        dataFormat: $ifdEntry->dataFormat,
+                        countOfComponents:  $ifdEntry->countOfComponents,
+                        parent: $this,
+                    );
+                    assert($item instanceof RawData);
+                    $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->size));
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 $item->error($e->getMessage());

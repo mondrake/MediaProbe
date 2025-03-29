@@ -5,6 +5,7 @@ namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
+use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
@@ -47,6 +48,16 @@ class MakerNote extends MakerNoteBase
                     $tagDataWindow = new DataWindow($dataElement, $item_data_window_offset, $item_data_window_size);
                     $item = new $item_class($ifdEntry, $this);
                     $item->fromDataElement($tagDataWindow);
+                    $this->graftBlock($item);
+                } elseif (is_a($item_class, RawData::class, true)) {
+                    $item = new $item_class(
+                        collection: $ifdEntry->collection,
+                        dataFormat: $ifdEntry->dataFormat,
+                        countOfComponents:  $ifdEntry->countOfComponents,
+                        parent: $this,
+                    );
+                    assert($item instanceof RawData);
+                    $item->fromDataElement(new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size));
                     $this->graftBlock($item);
                 } else {
                     $item = new $item_class(

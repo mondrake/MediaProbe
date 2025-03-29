@@ -28,7 +28,7 @@ abstract class LeafBlockBase extends BlockBase
         return $this->getElement("entry") ? $this->getElement("entry")->toString($options) : '';
     }
 
-    public function toBytes($order = ConvertBytes::LITTLE_ENDIAN, $offset = 0): string
+    public function toBytes(int $order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0): string
     {
         return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : '';
     }
