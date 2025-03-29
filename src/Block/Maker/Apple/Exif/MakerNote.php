@@ -66,17 +66,12 @@ class MakerNote extends MakerNoteBase
                     $this->graftBlock($item);
                 } else {
                     $item = new $item_class(
-                        new ItemDefinition(
-                            collection: $ifdEntry->collection,
-                            format: $ifdEntry->dataFormat,
-                            valuesCount: $ifdEntry->countOfComponents,
-                            dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                            sequence: $ifdEntry->sequence,
-                        ),
-                        $this,
+                        listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents, $ifdEntry->sequence),
+                        parent: $this,
                     );
                     $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);
+                    $item->fromDataElement($item_data_window);
+                    $this->graftBlock($item);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {
