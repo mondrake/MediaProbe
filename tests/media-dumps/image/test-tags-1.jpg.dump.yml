@@ -81,7 +81,7 @@ elements:
                                                     validationLevel: OK
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282/entry'
@@ -97,7 +97,7 @@ elements:
                                                     validationLevel: OK
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283/entry'
@@ -113,7 +113,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296/entry'
@@ -129,7 +129,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
@@ -145,7 +145,7 @@ elements:
                                                     validationLevel: OK
                                                     name: RatingPercent
                                                     id: '18249'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:RatingPercent:18249/entry'
@@ -169,7 +169,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864/entry'
@@ -185,7 +185,7 @@ elements:
                                                             validationLevel: OK
                                                             name: DateTimeOriginal
                                                             id: '36867'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867/entry'
@@ -201,7 +201,7 @@ elements:
                                                             validationLevel: OK
                                                             name: CreateDate
                                                             id: '36868'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868/entry'
@@ -217,7 +217,7 @@ elements:
                                                             validationLevel: OK
                                                             name: OffsetTime
                                                             id: '36880'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880/entry'
@@ -233,7 +233,7 @@ elements:
                                                             validationLevel: OK
                                                             name: OffsetTimeOriginal
                                                             id: '36881'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTimeOriginal:36881/entry'
@@ -249,7 +249,7 @@ elements:
                                                             validationLevel: OK
                                                             name: OffsetTimeDigitized
                                                             id: '36882'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTimeDigitized:36882/entry'
@@ -265,7 +265,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FlashpixVersion
                                                             id: '40960'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FlashpixVersion:40960/entry'
@@ -281,7 +281,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ColorSpace
                                                             id: '40961'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ColorSpace:40961/entry'
@@ -305,7 +305,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Compression
                                                     id: '259'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:Compression:259/entry'
@@ -321,7 +321,7 @@ elements:
                                                     validationLevel: OK
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:XResolution:282/entry'
@@ -337,7 +337,7 @@ elements:
                                                     validationLevel: OK
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:YResolution:283/entry'
@@ -353,7 +353,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:ResolutionUnit:296/entry'

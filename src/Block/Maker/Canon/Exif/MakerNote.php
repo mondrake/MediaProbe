@@ -2,16 +2,12 @@
 
 namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 
-use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
-use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListItemValue;
 
@@ -52,27 +48,13 @@ class MakerNote extends MakerNoteBase
                     $item = new $item_class($ifdEntry, $this);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
-                } elseif (is_a($item_class, RawData::class, true) || is_a($item_class, Map::class, true) || is_a($item_class, Index::class, true)) {
+                } else {
                     $item = new $item_class(
                         listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                         parent: $this,
                     );
-                    assert($item instanceof RawData || $item instanceof Map || $item instanceof Index);
                     $item->fromDataElement(new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size));
                     $this->graftBlock($item);
-                } else {
-                    $item = new $item_class(
-                        new ItemDefinition(
-                            collection: $ifdEntry->collection,
-                            format: $ifdEntry->dataFormat,
-                            valuesCount: $ifdEntry->countOfComponents,
-                            dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                            sequence: $ifdEntry->sequence,
-                        ),
-                        $this,
-                    );
-                    $item_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
-                    $item->parseData($item_data_window);
                 }
             } catch (DataException $e) {
                 if (isset($item)) {

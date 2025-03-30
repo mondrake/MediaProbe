@@ -81,7 +81,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Software
                                                     id: '305'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Software:305/entry'
@@ -166,7 +166,7 @@ gdInfo:
     mime: image/jpeg
 exifReadData:
     FileName: bug3017880.jpg
-    FileDateTime: 1739903883
+    FileDateTime: 1743352144
     FileSize: 4900
     FileType: 2
     MimeType: image/jpeg

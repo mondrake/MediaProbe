@@ -8,8 +8,8 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -28,35 +28,38 @@ class Filter extends ListBase
     protected int $paramsCount;
 
     public function __construct(
-        ItemDefinition $definition,
+        public readonly ListItemValue $listItem,
         FilterInfoIndex $parent,
-        ?BlockInterface $reference = null,
     ) {
-        parent::__construct($definition, $parent, $reference);
-        $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $definition->sequence);
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+        $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $listItem->sequence);
     }
 
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): Filter
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $offset = 0;
 
         // The id of the filter is at offset 0.
-        $this->setAttribute('id', (string) $data->getLong($offset));
+        $this->setAttribute('id', (string) $dataElement->getLong($offset));
 
         // The count of filter parameters is at offset 8.
-        $this->paramsCount = $data->getLong($offset + 8);
+        $this->paramsCount = $dataElement->getLong($offset + 8);
         $offset += 12;
 
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // Loop and parse through the parameters.
         for ($p = 0; $p < $this->paramsCount; $p++) {
-            $id = (string) $data->getLong($offset);
-            $val_count = $data->getLong($offset + 4);
+            $id = (string) $dataElement->getLong($offset);
+            $val_count = $dataElement->getLong($offset + 4);
             $offset += 8;
 
             // The items are defined in the collection of the parent element.
@@ -72,7 +75,7 @@ class Filter extends ListBase
             $tag = new $tagHandler($ifdEntry, $this);
             assert($tag instanceof Tag, get_class($tag));
             $tag->fromDataElement(new DataWindow(
-                $data,
+                $dataElement,
                 $offset,
                 $val_count * DataFormat::getSize(DataFormat::SIGNED_LONG),
             ));
@@ -80,6 +83,8 @@ class Filter extends ListBase
 
             $offset += 4 * $val_count;
         }
+
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string

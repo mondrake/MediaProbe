@@ -2,13 +2,16 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
+use FileEye\MediaProbe\Block\Maker\Canon\Exif\MakerNote;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -16,59 +19,76 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class CustomFunctions2Header extends ListBase
 {
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function __construct(
+        public readonly ListItemValue $listItem,
+        MakerNote $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
+    public function fromDataElement(DataElement $dataElement): CustomFunctions2Header
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $offset = 0;
         $size = $this->getDefinition()->getSize();
 
         // Validate incoming size.
-        if ($size !== $data->getLong($offset)) {
+        if ($size !== $dataElement->getLong($offset)) {
             throw new DataException("index:%s mismatching data size", $this->getAttribute('name')); // @todo ingest in logging
         } elseif ($size < 8) {
             throw new DataException("index:%s invalid data size", $this->getAttribute('name')); // @todo ingest in logging
         }
 
         // Get groups count.
-        $groups_count = $data->getLong($offset + 4);
+        $groups_count = $dataElement->getLong($offset + 4);
         $this->debug("index:{name} @{offset} with {tags} groups, size {size}", [
             'name' => $this->getAttribute('name'),
             'tags' => $groups_count,
-            'offset' => $data->getStart() + $offset,
+            'offset' => $dataElement->getStart() + $offset,
             'size' => $size,
         ]);
 
         // Parse groups.
         $pos = $offset + 8;
         for ($i = 0; $i < $groups_count; $i++) {
-            $rec_num = $data->getLong($pos);
-            $rec_len = $data->getLong($pos + 4);
-            $rec_count = $data->getLong($pos + 8);
+            $rec_num = $dataElement->getLong($pos);
+            $rec_len = $dataElement->getLong($pos + 4);
+            $rec_count = $dataElement->getLong($pos + 8);
             $this->debug("index:{name} group {num} with {tags} tags, size {size} @{offset}", [
                 'name' => $this->getAttribute('name'),
                 'num' => $rec_num,
                 'tags' => $rec_count,
                 'size' => $rec_len,
-                'offset' => $data->getStart() + $pos,
+                'offset' => $dataElement->getStart() + $pos,
             ]);
 
             $pos += 12;
             try {
-                $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($rec_num), DataFormat::SIGNED_LONG, $rec_count);
-                $class = $item_definition->collection->handler();
-                $group = new $class($item_definition, $this);
-                $group->parseData($data, $pos, min($rec_len, $data->getSize() - $pos));
+                $groupCollection = $this->getCollection()->getItemCollection($rec_num);
+                $groupHandler = $groupCollection->handler();
+                $group = new $groupHandler(
+                    listItem: new ListItemValue($groupCollection, DataFormat::SIGNED_LONG, $rec_count),
+                    parent: $this,
+                );
+                $group->fromDataElement(new DataWindow($dataElement, $pos, min($rec_len, $dataElement->getSize() - $pos)));
+                $this->graftBlock($group);
             } catch (\Exception $e) {
                 $this->error($e->getMessage());
                 throw new MediaProbeException($e->getMessage()); // @todo ingest in logging
             }
             $pos += ($rec_len - 8);
         }
+
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string

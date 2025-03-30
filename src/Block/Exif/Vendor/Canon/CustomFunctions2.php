@@ -8,7 +8,9 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\ListBase;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -16,25 +18,36 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class CustomFunctions2 extends ListBase
 {
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function __construct(
+        public readonly ListItemValue $listItem,
+        CustomFunctions2Header $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
+    public function fromDataElement(DataElement $dataElement): CustomFunctions2
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $rec_pos = 0;
         for ($n = 0; $n < $this->getDefinition()->valuesCount; $n++) {
-            $id = $data->getLong($rec_pos);
-            $num = $data->getLong($rec_pos + 4);
+            $id = $dataElement->getLong($rec_pos);
+            $num = $dataElement->getLong($rec_pos + 4);
             $this->debug("#{seq}, tag {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
                 'seq' => $n + 1,
                 'id' => $id,
                 'hexid' => '0x' . strtoupper(dechex($id)),
                 'format' => DataFormat::getName(DataFormat::SIGNED_LONG),
                 'components' => $num,
-                'offset' => $data->getStart() + $rec_pos + 8,
+                'offset' => $dataElement->getStart() + $rec_pos + 8,
                 'size' => $num * 4,
             ]);
             $rec_pos += 8;
@@ -55,7 +68,7 @@ class CustomFunctions2 extends ListBase
                 );
                 $class = $item_collection->handler();
                 $tag = new $class($ifdEntry, $this);
-                $tag_data_window = new DataWindow($data, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
+                $tag_data_window = new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size);
                 $tag->fromDataElement($tag_data_window);
                 $this->graftBlock($tag);
             } catch (DataException $e) {
@@ -67,6 +80,8 @@ class CustomFunctions2 extends ListBase
             }
             $rec_pos += ($num * 4);
         }
+
+        return $this;
     }
 
     public function toBytes(int $byte_order = ConvertBytes::LITTLE_ENDIAN, int $offset = 0, $has_next_ifd = false): string
