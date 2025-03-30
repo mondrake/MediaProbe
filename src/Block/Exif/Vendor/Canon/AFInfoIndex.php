@@ -63,20 +63,11 @@ class AFInfoIndex extends Index
 
             // Adds the 'tag'.
             $item_class = $ifdEntry->collection->handler();
-            if (is_a($item_class, Tag::class, true)) {
-                $item = new $item_class(
-                    listItem: $ifdEntry,
-                    parent: $this,
-                );
-                $this->graftBlock($item);
-            } elseif (is_a($item_class, RawData::class, true)) {
-                $item = new $item_class(
-                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
-                    parent: $this,
-                );
-                assert($item instanceof RawData);
-                $this->graftBlock($item);
-            }
+            $item = new $item_class(
+                listItem: $ifdEntry,
+                parent: $this,
+            );
+            $this->graftBlock($item);
 
             if (isset($item)) {
                 $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);

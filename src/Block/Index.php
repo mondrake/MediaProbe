@@ -86,23 +86,12 @@ class Index extends ListBase
             // Adds the 'tag'.
             $item_class = $ifdEntry->collection->handler();
             assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
-            if (is_a($item_class, Tag::class, true)) {
-                $item = new $item_class(
-                    listItem: $ifdEntry,
-                    parent: $this,
-                );
-                $tagDataWindow = new DataWindow($data, $offset, $ifdEntry->size);
-                $item->fromDataElement($tagDataWindow);
-                $this->graftBlock($item);
-            } elseif (is_a($item_class, RawData::class, true)) {
-                $item = new $item_class(
-                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
-                    parent: $this,
-                );
-                assert($item instanceof RawData);
-                $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->size));
-                $this->graftBlock($item);
-            }
+            $item = new $item_class(
+                listItem: $ifdEntry,
+                parent: $this,
+            );
+            $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->size));
+            $this->graftBlock($item);
 
             $offset += $ifdEntry->size;
         }
