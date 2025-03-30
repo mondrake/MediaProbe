@@ -2,6 +2,7 @@
 
 namespace FileEye\MediaProbe\Block\Maker\Canon\Exif;
 
+use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Maker\MakerNoteBase;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Media\Tiff\Ifd;
@@ -51,12 +52,12 @@ class MakerNote extends MakerNoteBase
                     $item = new $item_class($ifdEntry, $this);
                     $item->fromDataElement($tagDataWindow);
                     $this->graftBlock($item);
-                } elseif (is_a($item_class, RawData::class, true) || is_a($item_class, Map::class, true)) {
+                } elseif (is_a($item_class, RawData::class, true) || is_a($item_class, Map::class, true) || is_a($item_class, Index::class, true)) {
                     $item = new $item_class(
                         listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
                         parent: $this,
                     );
-                    assert($item instanceof RawData || $item instanceof Map);
+                    assert($item instanceof RawData || $item instanceof Map || $item instanceof Index);
                     $item->fromDataElement(new DataWindow($dataElement, $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(), $ifdEntry->size));
                     $this->graftBlock($item);
                 } else {

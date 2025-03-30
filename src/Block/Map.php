@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -27,23 +26,15 @@ class Map extends Index
     protected int $format;
 
     public function __construct(
-        public readonly ListItemValue $listItem,
+        ListItemValue $listItem,
         BlockBase $parent,
     ) {
-        parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
-            parent: $parent,
-            graft: false,
-        );
+        parent::__construct($listItem, $parent);
         $this->components = $this->listItem->countOfComponents;
         $this->format = $this->listItem->dataFormat;
     }
 
-    public function fromDataElement(DataElement $dataElement): Map
+    public function fromDataElement(DataElement $dataElement): static
     {
         $this->validate($dataElement);
         assert($this->debugInfo(['dataElement' => $dataElement]));

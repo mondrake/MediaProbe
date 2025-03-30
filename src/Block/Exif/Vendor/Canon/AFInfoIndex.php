@@ -12,26 +12,22 @@ use FileEye\MediaProbe\ItemDefinition;
  */
 class AFInfoIndex extends Index
 {
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): static
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        $this->validate($data);
+        $this->validate($dataElement);
 
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
         $this->components = $this->getDefinition()->valuesCount;
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
             $ifdEntry = $this->ifdEntryFromDataElement(
                 seq: $i,
                 id: $i,
-                dataElement: $data,
+                dataElement: $dataElement,
                 offset: $offset,
             );
 
@@ -68,7 +64,9 @@ class AFInfoIndex extends Index
             $this->graftBlock($item);
 
             $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
-            new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
+            new $entry_class($item, $this->getDataWindowFromData($dataElement, $offset, $ifdEntry->dataFormat, $valueComponents));
         }
+
+        return $this;
     }
 }

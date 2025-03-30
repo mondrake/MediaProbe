@@ -13,7 +13,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\ExifUserComment;
 use FileEye\MediaProbe\Entry\Time;
-use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -49,7 +49,14 @@ class SpecTest extends MediaProbeTestCaseBase
             parent: $ifd_0,
         );
         $ifd_0->graftBlock($ifd_exif);
-        $ifd_canon_camera_settings = new Index(new ItemDefinition(CollectionFactory::get('Maker\\Canon\\Exif\\MakerNote')->getItemCollection(1), DataFormat::LONG), $tiffStub);
+        $ifd_canon_camera_settings = new Index(
+            listItem: new ListItemValue(
+                collection: CollectionFactory::get('Maker\\Canon\\Exif\\MakerNote')->getItemCollection(1),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+            ),
+            parent: $tiffStub,
+        );
 
         // Test retrieving IFD id by name.
         $this->assertEquals(CollectionFactory::getByName('IFD0'), CollectionFactory::getByName('0'));
