@@ -75,7 +75,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Make
                                                     id: '271'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Make:271/entry'
@@ -91,7 +91,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Model
                                                     id: '272'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Model:272/entry'
@@ -107,7 +107,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Orientation
                                                     id: '274'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:Orientation:274/entry'
@@ -123,7 +123,7 @@ elements:
                                                     validationLevel: OK
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XResolution:282/entry'
@@ -139,7 +139,7 @@ elements:
                                                     validationLevel: OK
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YResolution:283/entry'
@@ -155,7 +155,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ResolutionUnit:296/entry'
@@ -171,7 +171,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
@@ -187,7 +187,7 @@ elements:
                                                     validationLevel: OK
                                                     name: YCbCrPositioning
                                                     id: '531'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:YCbCrPositioning:531/entry'
@@ -211,7 +211,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExposureTime
                                                             id: '33434'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureTime:33434/entry'
@@ -227,7 +227,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FNumber
                                                             id: '33437'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FNumber:33437/entry'
@@ -243,7 +243,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864/entry'
@@ -259,7 +259,7 @@ elements:
                                                             validationLevel: OK
                                                             name: DateTimeOriginal
                                                             id: '36867'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DateTimeOriginal:36867/entry'
@@ -275,7 +275,7 @@ elements:
                                                             validationLevel: OK
                                                             name: CreateDate
                                                             id: '36868'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CreateDate:36868/entry'
@@ -291,7 +291,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ComponentsConfiguration
                                                             id: '37121'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ComponentsConfiguration:37121/entry'
@@ -307,7 +307,7 @@ elements:
                                                             validationLevel: OK
                                                             name: CompressedBitsPerPixel
                                                             id: '37122'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CompressedBitsPerPixel:37122/entry'
@@ -323,7 +323,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ShutterSpeedValue
                                                             id: '37377'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ShutterSpeedValue:37377/entry'
@@ -339,7 +339,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ApertureValue
                                                             id: '37378'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ApertureValue:37378/entry'
@@ -355,7 +355,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExposureCompensation
                                                             id: '37380'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureCompensation:37380/entry'
@@ -371,7 +371,7 @@ elements:
                                                             validationLevel: OK
                                                             name: MaxApertureValue
                                                             id: '37381'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MaxApertureValue:37381/entry'
@@ -387,7 +387,7 @@ elements:
                                                             validationLevel: OK
                                                             name: MeteringMode
                                                             id: '37383'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:MeteringMode:37383/entry'
@@ -403,7 +403,7 @@ elements:
                                                             validationLevel: OK
                                                             name: Flash
                                                             id: '37385'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:Flash:37385/entry'
@@ -419,7 +419,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FocalLength
                                                             id: '37386'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalLength:37386/entry'
@@ -466,7 +466,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MacroMode
                                                                             id: '1'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MacroMode:1/entry'
@@ -482,7 +482,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: SelfTimer
                                                                             id: '2'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SelfTimer:2/entry'
@@ -498,7 +498,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: Quality
                                                                             id: '3'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Quality:3/entry'
@@ -514,7 +514,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CanonFlashMode
                                                                             id: '4'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonFlashMode:4/entry'
@@ -530,7 +530,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ContinuousDrive
                                                                             id: '5'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ContinuousDrive:5/entry'
@@ -546,7 +546,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocusMode
                                                                             id: '7'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusMode:7/entry'
@@ -562,7 +562,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: RecordMode
                                                                             id: '9'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:RecordMode:9/entry'
@@ -578,7 +578,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CanonImageSize
                                                                             id: '10'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonImageSize:10/entry'
@@ -594,7 +594,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: EasyMode
                                                                             id: '11'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:EasyMode:11/entry'
@@ -610,7 +610,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: DigitalZoom
                                                                             id: '12'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:DigitalZoom:12/entry'
@@ -626,7 +626,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: Contrast
                                                                             id: '13'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Contrast:13/entry'
@@ -642,7 +642,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: Saturation
                                                                             id: '14'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Saturation:14/entry'
@@ -658,7 +658,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: Sharpness
                                                                             id: '15'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:Sharpness:15/entry'
@@ -674,7 +674,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CameraISO
                                                                             id: '16'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CameraISO:16/entry'
@@ -690,7 +690,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MeteringMode
                                                                             id: '17'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MeteringMode:17/entry'
@@ -706,7 +706,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocusRange
                                                                             id: '18'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusRange:18/entry'
@@ -722,7 +722,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFPoint
                                                                             id: '19'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:AFPoint:19/entry'
@@ -738,7 +738,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CanonExposureMode
                                                                             id: '20'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:CanonExposureMode:20/entry'
@@ -754,7 +754,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: LensType
                                                                             id: '22'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:LensType:22/entry'
@@ -770,7 +770,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MaxFocalLength
                                                                             id: '23'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MaxFocalLength:23/entry'
@@ -786,7 +786,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MinFocalLength
                                                                             id: '24'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MinFocalLength:24/entry'
@@ -802,7 +802,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocalUnits
                                                                             id: '25'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocalUnits:25/entry'
@@ -818,7 +818,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MaxAperture
                                                                             id: '26'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MaxAperture:26/entry'
@@ -834,7 +834,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MinAperture
                                                                             id: '27'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:MinAperture:27/entry'
@@ -850,7 +850,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FlashActivity
                                                                             id: '28'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashActivity:28/entry'
@@ -866,7 +866,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FlashBits
                                                                             id: '29'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FlashBits:29/entry'
@@ -882,7 +882,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocusContinuous
                                                                             id: '32'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:FocusContinuous:32/entry'
@@ -898,7 +898,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AESetting
                                                                             id: '33'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:AESetting:33/entry'
@@ -914,7 +914,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ImageStabilization
                                                                             id: '34'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ImageStabilization:34/entry'
@@ -930,7 +930,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: DisplayAperture
                                                                             id: '35'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:DisplayAperture:35/entry'
@@ -946,7 +946,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ZoomSourceWidth
                                                                             id: '36'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ZoomSourceWidth:36/entry'
@@ -962,7 +962,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ZoomTargetWidth
                                                                             id: '37'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ZoomTargetWidth:37/entry'
@@ -978,7 +978,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: SpotMeteringMode
                                                                             id: '39'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:SpotMeteringMode:39/entry'
@@ -994,7 +994,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: PhotoEffect
                                                                             id: '40'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:PhotoEffect:40/entry'
@@ -1010,7 +1010,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ManualFlashOutput
                                                                             id: '41'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ManualFlashOutput:41/entry'
@@ -1026,7 +1026,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ColorTone
                                                                             id: '42'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonCameraSettings:1/tag:ColorTone:42/entry'
@@ -1050,7 +1050,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocalType
                                                                             id: '0'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalType:0/entry'
@@ -1066,7 +1066,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocalLength
                                                                             id: '1'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalLength:1/entry'
@@ -1082,7 +1082,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocalPlaneXSize
                                                                             id: '2'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalPlaneXSize:2/entry'
@@ -1098,7 +1098,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocalPlaneYSize
                                                                             id: '3'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonFocalLength:2/tag:FocalPlaneYSize:3/entry'
@@ -1114,7 +1114,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: CanonFlashInfo
                                                                     id: '3'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFlashInfo:3/entry'
@@ -1153,7 +1153,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AutoISO
                                                                             id: '1'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoISO:1/entry'
@@ -1169,7 +1169,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: BaseISO
                                                                             id: '2'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:BaseISO:2/entry'
@@ -1185,7 +1185,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MeasuredEV
                                                                             id: '3'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV:3/entry'
@@ -1201,7 +1201,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: TargetAperture
                                                                             id: '4'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:TargetAperture:4/entry'
@@ -1217,7 +1217,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: TargetExposureTime
                                                                             id: '5'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:TargetExposureTime:5/entry'
@@ -1233,7 +1233,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ExposureCompensation
                                                                             id: '6'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ExposureCompensation:6/entry'
@@ -1249,7 +1249,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: WhiteBalance
                                                                             id: '7'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:WhiteBalance:7/entry'
@@ -1265,7 +1265,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: SlowShutter
                                                                             id: '8'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SlowShutter:8/entry'
@@ -1281,7 +1281,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: SequenceNumber
                                                                             id: '9'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SequenceNumber:9/entry'
@@ -1297,7 +1297,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: OpticalZoomCode
                                                                             id: '10'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:OpticalZoomCode:10/entry'
@@ -1313,7 +1313,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CameraTemperature
                                                                             id: '12'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:CameraTemperature:12/entry'
@@ -1329,7 +1329,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FlashGuideNumber
                                                                             id: '13'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashGuideNumber:13/entry'
@@ -1345,7 +1345,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFPointsInFocus
                                                                             id: '14'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AFPointsInFocus:14/entry'
@@ -1361,7 +1361,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FlashExposureComp
                                                                             id: '15'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashExposureComp:15/entry'
@@ -1377,7 +1377,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AutoExposureBracketing
                                                                             id: '16'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoExposureBracketing:16/entry'
@@ -1393,7 +1393,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AEBBracketValue
                                                                             id: '17'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AEBBracketValue:17/entry'
@@ -1409,7 +1409,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ControlMode
                                                                             id: '18'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ControlMode:18/entry'
@@ -1425,7 +1425,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocusDistanceUpper
                                                                             id: '19'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FocusDistanceUpper:19/entry'
@@ -1441,7 +1441,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FocusDistanceLower
                                                                             id: '20'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FocusDistanceLower:20/entry'
@@ -1457,7 +1457,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FNumber
                                                                             id: '21'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FNumber:21/entry'
@@ -1473,7 +1473,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ExposureTime
                                                                             id: '22'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:ExposureTime:22/entry'
@@ -1489,7 +1489,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: MeasuredEV2
                                                                             id: '23'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:MeasuredEV2:23/entry'
@@ -1505,7 +1505,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: BulbDuration
                                                                             id: '24'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:BulbDuration:24/entry'
@@ -1521,7 +1521,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CameraType
                                                                             id: '26'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:CameraType:26/entry'
@@ -1537,7 +1537,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AutoRotate
                                                                             id: '27'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:AutoRotate:27/entry'
@@ -1553,7 +1553,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: NDFilter
                                                                             id: '28'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:NDFilter:28/entry'
@@ -1569,7 +1569,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: SelfTimer2
                                                                             id: '29'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:SelfTimer2:29/entry'
@@ -1585,7 +1585,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: FlashOutput
                                                                             id: '33'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/map:CanonShotInfo:4/tag:FlashOutput:33/entry'
@@ -1600,7 +1600,7 @@ elements:
                                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Tag
                                                                     validationLevel: Info
                                                                     id: '0'
-                                                                    collection: Tiff\UnknownTag
+                                                                    collection: Media\Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0/entry'
@@ -1615,7 +1615,7 @@ elements:
                                                                     handlerClass: FileEye\MediaProbe\Block\Media\Tiff\Tag
                                                                     validationLevel: Info
                                                                     id: '0'
-                                                                    collection: Tiff\UnknownTag
+                                                                    collection: Media\Tiff\UnknownTag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:0/entry'
@@ -1639,7 +1639,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: NumAFPoints
                                                                             id: '0'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:NumAFPoints:0/entry'
@@ -1655,7 +1655,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: ValidAFPoints
                                                                             id: '1'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:ValidAFPoints:1/entry'
@@ -1671,7 +1671,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CanonImageWidth
                                                                             id: '2'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:CanonImageWidth:2/entry'
@@ -1687,7 +1687,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: CanonImageHeight
                                                                             id: '3'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:CanonImageHeight:3/entry'
@@ -1703,7 +1703,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFImageWidth
                                                                             id: '4'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFImageWidth:4/entry'
@@ -1719,7 +1719,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFImageHeight
                                                                             id: '5'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFImageHeight:5/entry'
@@ -1735,7 +1735,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFAreaWidth
                                                                             id: '6'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaWidth:6/entry'
@@ -1751,7 +1751,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFAreaHeight
                                                                             id: '7'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaHeight:7/entry'
@@ -1767,7 +1767,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFAreaXPositions
                                                                             id: '8'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaXPositions:8/entry'
@@ -1783,7 +1783,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFAreaYPositions
                                                                             id: '9'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFAreaYPositions:9/entry'
@@ -1799,7 +1799,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: AFPointsInFocus
                                                                             id: '10'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:AFPointsInFocus:10/entry'
@@ -1815,7 +1815,7 @@ elements:
                                                                             validationLevel: OK
                                                                             name: PrimaryAFPoint
                                                                             id: '11'
-                                                                            collection: Tiff\Tag
+                                                                            collection: Media\Tiff\Tag
                                                                             elements:
                                                                                 -
                                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/index:CanonAFInfo:18/tag:PrimaryAFPoint:11/entry'
@@ -1831,7 +1831,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: ThumbnailImageValidArea
                                                                     id: '19'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:ThumbnailImageValidArea:19/entry'
@@ -1847,7 +1847,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: CanonImageType
                                                                     id: '6'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonImageType:6/entry'
@@ -1863,7 +1863,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: CanonFirmwareVersion
                                                                     id: '7'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonFirmwareVersion:7/entry'
@@ -1879,7 +1879,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: FileNumber
                                                                     id: '8'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:FileNumber:8/entry'
@@ -1895,7 +1895,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: OwnerName
                                                                     id: '9'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:OwnerName:9/entry'
@@ -1911,7 +1911,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: CanonModelID
                                                                     id: '16'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/makerNote:Canon:37500/tag:CanonModelID:16/entry'
@@ -1950,7 +1950,7 @@ elements:
                                                             validationLevel: OK
                                                             name: UserComment
                                                             id: '37510'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:UserComment:37510/entry'
@@ -1966,7 +1966,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FlashpixVersion
                                                             id: '40960'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FlashpixVersion:40960/entry'
@@ -1982,7 +1982,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ColorSpace
                                                             id: '40961'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ColorSpace:40961/entry'
@@ -1998,7 +1998,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExifImageWidth
                                                             id: '40962'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifImageWidth:40962/entry'
@@ -2014,7 +2014,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExifImageHeight
                                                             id: '40963'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifImageHeight:40963/entry'
@@ -2038,7 +2038,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: InteropIndex
                                                                     id: '1'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:InteropIndex:1/entry'
@@ -2054,7 +2054,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: InteropVersion
                                                                     id: '2'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:InteropVersion:2/entry'
@@ -2070,7 +2070,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: RelatedImageWidth
                                                                     id: '4097'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:RelatedImageWidth:4097/entry'
@@ -2086,7 +2086,7 @@ elements:
                                                                     validationLevel: OK
                                                                     name: RelatedImageHeight
                                                                     id: '4098'
-                                                                    collection: Tiff\Tag
+                                                                    collection: Media\Tiff\Tag
                                                                     elements:
                                                                         -
                                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/ifd:InteropIFD:40965/tag:RelatedImageHeight:4098/entry'
@@ -2102,7 +2102,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FocalPlaneXResolution
                                                             id: '41486'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneXResolution:41486/entry'
@@ -2118,7 +2118,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FocalPlaneYResolution
                                                             id: '41487'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneYResolution:41487/entry'
@@ -2134,7 +2134,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FocalPlaneResolutionUnit
                                                             id: '41488'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FocalPlaneResolutionUnit:41488/entry'
@@ -2150,7 +2150,7 @@ elements:
                                                             validationLevel: OK
                                                             name: SensingMethod
                                                             id: '41495'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SensingMethod:41495/entry'
@@ -2166,7 +2166,7 @@ elements:
                                                             validationLevel: OK
                                                             name: FileSource
                                                             id: '41728'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:FileSource:41728/entry'
@@ -2182,7 +2182,7 @@ elements:
                                                             validationLevel: OK
                                                             name: CustomRendered
                                                             id: '41985'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:CustomRendered:41985/entry'
@@ -2198,7 +2198,7 @@ elements:
                                                             validationLevel: OK
                                                             name: ExposureMode
                                                             id: '41986'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExposureMode:41986/entry'
@@ -2214,7 +2214,7 @@ elements:
                                                             validationLevel: OK
                                                             name: WhiteBalance
                                                             id: '41987'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:WhiteBalance:41987/entry'
@@ -2230,7 +2230,7 @@ elements:
                                                             validationLevel: OK
                                                             name: DigitalZoomRatio
                                                             id: '41988'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:DigitalZoomRatio:41988/entry'
@@ -2246,7 +2246,7 @@ elements:
                                                             validationLevel: OK
                                                             name: SceneCaptureType
                                                             id: '41990'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SceneCaptureType:41990/entry'
@@ -2270,7 +2270,7 @@ elements:
                                                     validationLevel: OK
                                                     name: Compression
                                                     id: '259'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:Compression:259/entry'
@@ -2286,7 +2286,7 @@ elements:
                                                     validationLevel: OK
                                                     name: XResolution
                                                     id: '282'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:XResolution:282/entry'
@@ -2302,7 +2302,7 @@ elements:
                                                     validationLevel: OK
                                                     name: YResolution
                                                     id: '283'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:YResolution:283/entry'
@@ -2318,7 +2318,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ResolutionUnit
                                                     id: '296'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD1:1/tag:ResolutionUnit:296/entry'

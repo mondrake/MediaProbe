@@ -50,7 +50,7 @@ elements:
                             validationLevel: OK
                             name: ImageWidth
                             id: '256'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:ImageWidth:256/entry'
@@ -66,7 +66,7 @@ elements:
                             validationLevel: OK
                             name: ImageHeight
                             id: '257'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:ImageHeight:257/entry'
@@ -82,7 +82,7 @@ elements:
                             validationLevel: OK
                             name: BitsPerSample
                             id: '258'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:BitsPerSample:258/entry'
@@ -98,7 +98,7 @@ elements:
                             validationLevel: OK
                             name: Compression
                             id: '259'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:Compression:259/entry'
@@ -114,7 +114,7 @@ elements:
                             validationLevel: OK
                             name: PhotometricInterpretation
                             id: '262'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:PhotometricInterpretation:262/entry'
@@ -130,7 +130,7 @@ elements:
                             validationLevel: OK
                             name: PreviewImageStart
                             id: '273'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageStart:273/entry'
@@ -146,7 +146,7 @@ elements:
                             validationLevel: OK
                             name: Orientation
                             id: '274'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:Orientation:274/entry'
@@ -162,7 +162,7 @@ elements:
                             validationLevel: OK
                             name: SamplesPerPixel
                             id: '277'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:SamplesPerPixel:277/entry'
@@ -178,7 +178,7 @@ elements:
                             validationLevel: OK
                             name: RowsPerStrip
                             id: '278'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:RowsPerStrip:278/entry'
@@ -194,7 +194,7 @@ elements:
                             validationLevel: OK
                             name: PreviewImageLength
                             id: '279'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:PreviewImageLength:279/entry'
@@ -210,7 +210,7 @@ elements:
                             validationLevel: OK
                             name: PlanarConfiguration
                             id: '284'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:PlanarConfiguration:284/entry'
@@ -226,7 +226,7 @@ elements:
                             validationLevel: OK
                             name: Predictor
                             id: '317'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:Predictor:317/entry'
@@ -242,7 +242,7 @@ elements:
                             validationLevel: Notice
                             name: ExtraSamples
                             id: '338'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:ExtraSamples:338/entry'
@@ -258,7 +258,7 @@ elements:
                             validationLevel: Notice
                             name: SampleFormat
                             id: '339'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:SampleFormat:339/entry'
@@ -274,7 +274,7 @@ elements:
                             validationLevel: OK
                             name: ApplicationNotes
                             id: '700'
-                            collection: Tiff\Tag
+                            collection: Media\Tiff\Tag
                             elements:
                                 -
                                     path: '/media/tiff/ifd:IFD0:0/tag:ApplicationNotes:700/entry'

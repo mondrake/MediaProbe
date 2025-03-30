@@ -103,7 +103,7 @@ elements:
                                                     validationLevel: OK
                                                     name: XPTitle
                                                     id: '40091'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:XPTitle:40091/entry'
@@ -119,7 +119,7 @@ elements:
                                                     validationLevel: OK
                                                     name: ImageDescription
                                                     id: '270'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ImageDescription:270/entry'
@@ -135,7 +135,7 @@ elements:
                                                     validationLevel: Notice
                                                     name: ModifyDate
                                                     id: '306'
-                                                    collection: Tiff\Tag
+                                                    collection: Media\Tiff\Tag
                                                     elements:
                                                         -
                                                             path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/tag:ModifyDate:306/entry'
@@ -159,7 +159,7 @@ elements:
                                                             validationLevel: OK
                                                             name: GPSVersionID
                                                             id: '0'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:GPS:34853/tag:GPSVersionID:0/entry'
@@ -183,7 +183,7 @@ elements:
                                                             validationLevel: Notice
                                                             name: ExifVersion
                                                             id: '36864'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:ExifVersion:36864/entry'
@@ -199,7 +199,7 @@ elements:
                                                             validationLevel: OK
                                                             name: SubSecTime
                                                             id: '37520'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:SubSecTime:37520/entry'
@@ -215,7 +215,7 @@ elements:
                                                             validationLevel: OK
                                                             name: OffsetTime
                                                             id: '36880'
-                                                            collection: Tiff\Tag
+                                                            collection: Media\Tiff\Tag
                                                             elements:
                                                                 -
                                                                     path: '/media/jpeg/jpegSegment:APP1:225/exif/tiff/ifd:IFD0:0/ifd:ExifIFD:34665/tag:OffsetTime:36880/entry'
