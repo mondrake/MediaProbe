@@ -60,7 +60,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $this->assertNull($tiff->getElement("ifd[@name='IFD0']"));
 
         $ifd = new Ifd(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: $tiff->getCollection()->getItemCollection('0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -75,7 +75,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
                 'DOMNode' => 'tag',
             ]);
             $tag = new Tag(
-                ifdEntry: new IfdItemValue(
+                listItem: new IfdItemValue(
                     collection: $item_collection,
                     dataFormat: $entry[2],
                 ),

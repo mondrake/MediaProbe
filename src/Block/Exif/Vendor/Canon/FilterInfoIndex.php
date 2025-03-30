@@ -31,18 +31,14 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class FilterInfoIndex extends Index
 {
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): static
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         $offset = 0;
 
         // The count of filters is at offset 4.
-        $this->components = $data->getLong($offset + 4);
+        $this->components = $dataElement->getLong($offset + 4);
 
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // The first 4 bytes is a marker (?), store as RawData.
         $trailCollection = CollectionFactory::get('RawData', ['name' => 'filterHeader']);
@@ -51,14 +47,14 @@ class FilterInfoIndex extends Index
             listItem: new ListItemValue($trailCollection, DataFormat::BYTE, 4),
             parent: $this,
         );
-        $trail->fromDataElement(new DataWindow($data, $offset, 4));
+        $trail->fromDataElement(new DataWindow($dataElement, $offset, 4));
         assert($trail instanceof RawData);
         $this->graftBlock($trail);
         $offset += 8;
 
         // Loop and parse through the filters.
         for ($i = 0; $i < $this->components; $i++) {
-            $filter_size = $data->getLong($offset + 4);
+            $filter_size = $dataElement->getLong($offset + 4);
             $filter = $this->addBlock(
                 new ItemDefinition(
                     CollectionFactory::get('ExifMakerNotes\Canon\Filter'),
@@ -70,9 +66,11 @@ class FilterInfoIndex extends Index
                 )
             );
             assert($filter instanceof Filter);
-            $filter->parseData(new DataWindow($data, $offset, $filter_size + 4));
+            $filter->parseData(new DataWindow($dataElement, $offset, $filter_size + 4));
             $offset += 4 + $filter_size;
         }
+
+        return $this;
     }
 
     /**

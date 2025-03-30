@@ -176,7 +176,7 @@ class Media extends RootBlockBase
             data: 0,
         );
         $ifd = new $ifd_class(
-            ifdEntry: $ifdEntry,
+            listItem: $ifdEntry,
             dataDisplacement: $maker_note_tag->getDefinition()->dataOffset,
             parent: $exif_ifd,
         );

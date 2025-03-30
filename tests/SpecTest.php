@@ -13,7 +13,7 @@ use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Entry\ExifUserComment;
 use FileEye\MediaProbe\Entry\Time;
-use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 use Monolog\Logger;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -30,7 +30,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $tiffStub = new StubRootBlock(CollectionFactory::get('Media\Tiff'), $this->createMock(Logger::class));
         $ifd_0 = new Ifd(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -40,8 +40,8 @@ class SpecTest extends MediaProbeTestCaseBase
         );
         $tiffStub->graftBlock($ifd_0);
         $ifd_exif = new Ifd(
-            ifdEntry: new IfdItemValue(
-                collection: $ifd_0->ifdEntry->collection->getItemCollection(0x8769),
+            listItem: new IfdItemValue(
+                collection: $ifd_0->listItem->collection->getItemCollection(0x8769),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
                 data: 0,
@@ -49,7 +49,14 @@ class SpecTest extends MediaProbeTestCaseBase
             parent: $ifd_0,
         );
         $ifd_0->graftBlock($ifd_exif);
-        $ifd_canon_camera_settings = new Index(new ItemDefinition(CollectionFactory::get('Maker\\Canon\\Exif\\MakerNote')->getItemCollection(1), DataFormat::LONG), $tiffStub);
+        $ifd_canon_camera_settings = new Index(
+            listItem: new ListItemValue(
+                collection: CollectionFactory::get('Maker\\Canon\\Exif\\MakerNote')->getItemCollection(1),
+                dataFormat: DataFormat::LONG,
+                countOfComponents: 1,
+            ),
+            parent: $tiffStub,
+        );
 
         // Test retrieving IFD id by name.
         $this->assertEquals(CollectionFactory::getByName('IFD0'), CollectionFactory::getByName('0'));
@@ -108,7 +115,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $stubRoot = $this->getStubRoot();
         $ifd = new Ifd(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: CollectionFactory::get($parent_collection_id),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -126,7 +133,7 @@ class SpecTest extends MediaProbeTestCaseBase
             dataFormat: $item_format
         );
         $tag = new Tag(
-            ifdEntry: $ifdEntry,
+            listItem: $ifdEntry,
             parent: $ifd
         );
         $entry_class_name = $tag->getEntryClass();

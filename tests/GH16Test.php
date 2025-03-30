@@ -43,7 +43,7 @@ class GH16Test extends MediaProbeTestCaseBase
         $ifd0->removeElement("tag[@name='XPSubject']");
         $new_entry_value = "Превед, медвед!";
         $tag = new Tag(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: $ifd0->getCollection()->getItemCollection(0x9C9F),
                 dataFormat: DataFormat::BYTE,
             ),

@@ -9,6 +9,8 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
+use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -18,6 +20,21 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
  */
 class Index extends ListBase
 {
+    public function __construct(
+        public readonly ListItemValue $listItem,
+        BlockBase $parent,
+    ) {
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+    }
+
     /**
      * Validates the list against the specification.
      */
@@ -48,26 +65,22 @@ class Index extends ListBase
         }
     }
 
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): static
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        $this->validate($data);
+        $this->validate($dataElement);
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
         $this->components = $this->getDefinition()->valuesCount;
-        assert($this->debugInfo(['dataElement' => $data]));
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
             $ifdEntry = $this->ifdEntryFromDataElement(
                 seq: $i,
                 id: $i,
-                dataElement: $data,
+                dataElement: $dataElement,
                 offset: $offset,
             );
 
@@ -86,26 +99,17 @@ class Index extends ListBase
             // Adds the 'tag'.
             $item_class = $ifdEntry->collection->handler();
             assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
-            if (is_a($item_class, Tag::class, true)) {
-                $item = new $item_class(
-                    ifdEntry: $ifdEntry,
-                    parent: $this,
-                );
-                $tagDataWindow = new DataWindow($data, $offset, $ifdEntry->size);
-                $item->fromDataElement($tagDataWindow);
-                $this->graftBlock($item);
-            } elseif (is_a($item_class, RawData::class, true)) {
-                $item = new $item_class(
-                    listItem: new ListItemValue($ifdEntry->collection, $ifdEntry->dataFormat, $ifdEntry->countOfComponents),
-                    parent: $this,
-                );
-                assert($item instanceof RawData);
-                $item->fromDataElement(new DataWindow($data, $offset, $ifdEntry->size));
-                $this->graftBlock($item);
-            }
+            $item = new $item_class(
+                listItem: $ifdEntry,
+                parent: $this,
+            );
+            $item->fromDataElement(new DataWindow($dataElement, $offset, $ifdEntry->size));
+            $this->graftBlock($item);
 
             $offset += $ifdEntry->size;
         }
+
+        return $this;
     }
 
     /**
