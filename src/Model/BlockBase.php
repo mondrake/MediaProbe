@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace FileEye\MediaProbe\Model;
 
-use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
-use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
@@ -133,36 +130,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
             }
         }
         return $this;
-    }
-
-    /**
-     * @deprecated
-     */
-    public function addBlock(ItemDefinition $item_definition, ?BlockInterface $parent = null, ?BlockInterface $reference = null): BlockInterface
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        $handler = $item_definition->collection->handler();
-        if (is_a($handler, Tag::class, true)) {
-            $tag = new Tag(
-                listItem: new IfdItemValue(
-                    collection: $item_definition->collection,
-                    dataFormat: $item_definition->format,
-                    countOfComponents: $item_definition->valuesCount,
-                    data: $item_definition->dataOffset,
-                    sequence: $item_definition->sequence,
-                ),
-                parent: $parent ?? $this,
-            );
-            return $tag;
-        }
-        if (is_a($handler, RawData::class, true)) {
-            $tag = new RawData(
-                listItem: new ListItemValue($item_definition->collection, $item_definition->format, $item_definition->valuesCount),
-                parent: $parent ?? $this,
-            );
-            return $tag;
-        }
-        return new $handler($item_definition, $parent ?? $this, $reference);
     }
 
     public function graftBlock(

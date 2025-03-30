@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
@@ -55,18 +54,20 @@ class FilterInfoIndex extends Index
         // Loop and parse through the filters.
         for ($i = 0; $i < $this->components; $i++) {
             $filter_size = $dataElement->getLong($offset + 4);
-            $filter = $this->addBlock(
-                new ItemDefinition(
-                    CollectionFactory::get('ExifMakerNotes\Canon\Filter'),
-                    DataFormat::BYTE,
-                    $filter_size,
-                    $offset,
-                    0,
-                    $i
-                )
+            $filterCollection = CollectionFactory::get('ExifMakerNotes\Canon\Filter');
+            $filterHandler = $filterCollection->handler();
+            $filter = new $filterHandler(
+                listItem: new ListItemValue(
+                    sequence: $i,
+                    collection: $filterCollection,
+                    dataFormat: DataFormat::BYTE,
+                    countOfComponents: $filter_size,
+                ),
+                parent: $this,
             );
             assert($filter instanceof Filter);
-            $filter->parseData(new DataWindow($dataElement, $offset, $filter_size + 4));
+            $filter->fromDataElement(new DataWindow($dataElement, $offset, $filter_size + 4));
+            $this->graftBlock($filter);
             $offset += 4 + $filter_size;
         }
 
