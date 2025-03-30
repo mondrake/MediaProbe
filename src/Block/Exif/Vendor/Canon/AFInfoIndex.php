@@ -4,10 +4,8 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
-use FileEye\MediaProbe\Block\RawData;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\ListItemValue;
 
 /**
  * Class representing an index of values, for Canon AFInfo e AFInfo2.
@@ -69,10 +67,8 @@ class AFInfoIndex extends Index
             );
             $this->graftBlock($item);
 
-            if (isset($item)) {
-                $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
-                new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
-            }
+            $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
+            new $entry_class($item, $this->getDataWindowFromData($data, $offset, $ifdEntry->dataFormat, $valueComponents));
         }
     }
 }
