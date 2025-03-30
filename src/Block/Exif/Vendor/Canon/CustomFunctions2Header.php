@@ -12,6 +12,7 @@ use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
+use FileEye\MediaProbe\Data\DataWindow;
 
 /**
  * Manages parsing and writing of Canon CustomFunctions2 tags.
@@ -72,10 +73,14 @@ class CustomFunctions2Header extends ListBase
 
             $pos += 12;
             try {
-                $item_definition = new ItemDefinition($this->getCollection()->getItemCollection($rec_num), DataFormat::SIGNED_LONG, $rec_count);
-                $class = $item_definition->collection->handler();
-                $group = new $class($item_definition, $this);
-                $group->parseData($dataElement, $pos, min($rec_len, $dataElement->getSize() - $pos));
+                $groupCollection = $this->getCollection()->getItemCollection($rec_num);
+                $groupHandler = $groupCollection->handler();
+                $group = new $groupHandler(
+                    listItem: new ListItemValue($groupCollection, DataFormat::SIGNED_LONG, $rec_count),
+                    parent: $this,
+                );
+                $group->fromDataElement(new DataWindow($dataElement, $pos, min($rec_len, $dataElement->getSize() - $pos)));
+                $this->graftBlock($group);
             } catch (\Exception $e) {
                 $this->error($e->getMessage());
                 throw new MediaProbeException($e->getMessage()); // @todo ingest in logging

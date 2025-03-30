@@ -95,21 +95,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return $this->getDefinition()->format;
     }
 
-    /**
-     * @deprecated
-     */
-    public function parseData(DataElement $dataElement, int $start = 0, ?int $size = null): void
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        $data = new DataWindow($dataElement, $start, $size);
-        $this->size = $data->getSize();
-        // @phpstan-ignore method.notFound
-        $this->doParseData($data);
-
-        // Invoke post-parse callbacks.
-        $this->executePostParseCallbacks($data);
-    }
-
     public function fromDataElement(DataElement $dataElement): BlockInterface
     {
         throw new \LogicException(sprintf('%s does not implement %s()', get_class($this), 'fromDataElement'));
