@@ -27,32 +27,35 @@ class Map extends Index
     protected int $format;
 
     public function __construct(
-        ItemDefinition $definition,
-        ?BlockBase $parent = null,
-        ?BlockBase $reference = null,
+        public readonly ListItemValue $listItem,
+        BlockBase $parent,
     ) {
-        parent::__construct($definition, $parent, $reference);
-        $this->components = $definition->valuesCount;
-        $this->format = $definition->format;
+        parent::__construct(
+            definition: new ItemDefinition(
+                collection: $this->listItem->collection,
+                format: $this->listItem->dataFormat,
+                valuesCount: $this->listItem->countOfComponents,
+            ),
+            parent: $parent,
+            graft: false,
+        );
+        $this->components = $this->listItem->countOfComponents;
+        $this->format = $this->listItem->dataFormat;
     }
 
-    /**
-     * @deprecated
-     */
-    protected function doParseData(DataElement $data): void
+    public function fromDataElement(DataElement $dataElement): Map
     {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        $this->validate($data);
-        assert($this->debugInfo(['dataElement' => $data]));
+        $this->validate($dataElement);
+        assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // Preserve the entire map as a raw data block.
         $mapdataCollection = CollectionFactory::get('RawData', ['name' => 'mapdata']);
         $mapdataHandler = $mapdataCollection->handler();
         $mapdata = new $mapdataHandler(
-            listItem: new ListItemValue($mapdataCollection, DataFormat::BYTE, $data->getSize()),
+            listItem: new ListItemValue($mapdataCollection, DataFormat::BYTE, $dataElement->getSize()),
             parent: $this,
         );
-        $mapdata->fromDataElement(new DataWindow($data));
+        $mapdata->fromDataElement(new DataWindow($dataElement));
         assert($mapdata instanceof RawData);
         $this->graftBlock($mapdata);
 
@@ -64,7 +67,7 @@ class Map extends Index
             $ifdEntry = $this->ifdEntryFromDataElement(
                 seq: $i,
                 id: $item,
-                dataElement: $data,
+                dataElement: $dataElement,
                 offset: $n,
             );
 
@@ -73,7 +76,7 @@ class Map extends Index
             }
 
             // Check data is accessible, notice otherwise.
-            if ($n >= $data->getSize()) {
+            if ($n >= $dataElement->getSize()) {
                 $this->debug(
                     '\'{item}\' in map \'{map}\' is beyond end of data available, skipped',
                     [
@@ -83,7 +86,7 @@ class Map extends Index
                 );
                 continue;
             }
-            if ($n +  $ifdEntry->size > $data->getSize()) {
+            if ($n +  $ifdEntry->size > $dataElement->getSize()) {
                 $this->warning(
                     'Failed to get value for \'{item}\' in map \'{map}\', not enough data left',
                     [
@@ -102,7 +105,7 @@ class Map extends Index
                     listItem: $ifdEntry,
                     parent: $this,
                 );
-                $item->fromDataElement(new DataWindow($data, $n, $ifdEntry->size));
+                $item->fromDataElement(new DataWindow($dataElement, $n, $ifdEntry->size));
                 $this->graftBlock($item);
             } catch (DataException $e) {
                 $item->error($e->getMessage());
@@ -110,6 +113,8 @@ class Map extends Index
 
             $i++;
         }
+
+        return $this;
     }
 
     public function getFormat(): int
