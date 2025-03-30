@@ -20,16 +20,16 @@ use FileEye\MediaProbe\Utility\HexDump;
 class Tag extends LeafBlockBase
 {
     public function __construct(
-        public readonly IfdItemValue $ifdEntry,
+        public readonly IfdItemValue $listItem,
         ListBase|RootBlockBase $parent,
     ) {
         parent::__construct(
             definition: new ItemDefinition(
-                collection: $ifdEntry->collection,
-                format: $ifdEntry->dataFormat,
-                valuesCount: $ifdEntry->countOfComponents,
-                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                sequence: $ifdEntry->sequence,
+                collection: $listItem->collection,
+                format: $listItem->dataFormat,
+                valuesCount: $listItem->countOfComponents,
+                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
+                sequence: $listItem->sequence,
             ),
             parent: $parent,
             graft: false,
@@ -97,21 +97,21 @@ class Tag extends LeafBlockBase
     {
         // Return the specific entry class if defined, or fall back to
         // default class for the format.
-        if (!$entry_class = $this->ifdEntry->collection->getPropertyValue('entryClass')) {
-            if (empty($this->ifdEntry->dataFormat)) {
+        if (!$entry_class = $this->listItem->collection->getPropertyValue('entryClass')) {
+            if (empty($this->listItem->dataFormat)) {
                 throw new MediaProbeException(
                     'No format can be derived for TAG: %s (%s)',
-                    $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
-                    $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
+                    $this->listItem->collection->getPropertyValue('item') ?? 'n/a',
+                    $this->listItem->collection->getPropertyValue('name') ?? 'n/a'
                 );
             }
 
-            if (!$entry_class = DataFormat::getClass($this->ifdEntry->dataFormat)) {
+            if (!$entry_class = DataFormat::getClass($this->listItem->dataFormat)) {
                 throw new MediaProbeException(
                     'Unsupported format %d for TAG: %s (%s)',
-                    $this->ifdEntry->dataFormat,
-                    $this->ifdEntry->collection->getPropertyValue('item') ?? 'n/a',
-                    $this->ifdEntry->collection->getPropertyValue('name') ?? 'n/a'
+                    $this->listItem->dataFormat,
+                    $this->listItem->collection->getPropertyValue('item') ?? 'n/a',
+                    $this->listItem->collection->getPropertyValue('name') ?? 'n/a'
                 );
             }
         }

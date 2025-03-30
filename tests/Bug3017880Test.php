@@ -43,7 +43,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
         $ifd0 = $exif->getElement("tiff/ifd[@name='IFD0']");
         if ($ifd0 === null) {
             $ifd0 = new Ifd(
-                ifdEntry: new IfdItemValue(
+                listItem: new IfdItemValue(
                     collection: CollectionFactory::get('Media\Tiff\\Ifd0'),
                     dataFormat: DataFormat::LONG,
                 ),
@@ -58,7 +58,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
 
         if ($software_tag === null) {
             $tag = new Tag(
-                ifdEntry: new IfdItemValue(
+                listItem: new IfdItemValue(
                     collection: $ifd0->getCollection()->getItemCollection(0x0131),
                     dataFormat: DataFormat::ASCII,
                 ),

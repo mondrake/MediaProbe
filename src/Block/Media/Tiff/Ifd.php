@@ -29,16 +29,16 @@ use FileEye\MediaProbe\Utility\HexDump;
 class Ifd extends ListBase
 {
     public function __construct(
-        public readonly IfdItemValue $ifdEntry,
+        public readonly IfdItemValue $listItem,
         Tiff|Ifd|RootBlockBase $parent,
     ) {
         parent::__construct(
             definition: new ItemDefinition(
-                collection: $ifdEntry->collection,
-                format: $ifdEntry->dataFormat,
-                valuesCount: $ifdEntry->countOfComponents,
-                dataOffset: $ifdEntry->isOffset ? $ifdEntry->dataOffset() : $ifdEntry->dataValue(),
-                sequence: $ifdEntry->sequence,
+                collection: $listItem->collection,
+                format: $listItem->dataFormat,
+                valuesCount: $listItem->countOfComponents,
+                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
+                sequence: $listItem->sequence,
             ),
             parent: $parent,
             graft: false,
@@ -48,7 +48,7 @@ class Ifd extends ListBase
     public function fromDataElement(DataElement $dataElement): Ifd
     {
         # @todo xxx should always be an offset?
-        $offset = $this->ifdEntry->isOffset ? $this->ifdEntry->dataOffset() : $this->ifdEntry->dataValue();
+        $offset = $this->listItem->isOffset ? $this->listItem->dataOffset() : $this->listItem->dataValue();
 
         // Get the number of IFD entries.
         $n = $this->ifdEntriesCountFromDataElement($dataElement, $offset);
@@ -72,7 +72,7 @@ class Ifd extends ListBase
             // Adds the IFD entry to the DOM.
             $item_class = $ifdEntry->collection->handler();
             $item = new $item_class(
-                ifdEntry: $ifdEntry,
+                listItem: $ifdEntry,
                 parent: $this,
             );
             try {

@@ -142,7 +142,7 @@ class Tiff extends MediaTypeBlockBase
                 data: $ifdOffset,
             );
             $ifd = new $ifdClass(
-                ifdEntry: $ifdEntry,
+                listItem: $ifdEntry,
                 parent: $this,
             );
             try {

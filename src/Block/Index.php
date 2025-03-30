@@ -88,7 +88,7 @@ class Index extends ListBase
             assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
             if (is_a($item_class, Tag::class, true)) {
                 $item = new $item_class(
-                    ifdEntry: $ifdEntry,
+                    listItem: $ifdEntry,
                     parent: $this,
                 );
                 $tagDataWindow = new DataWindow($data, $offset, $ifdEntry->size);

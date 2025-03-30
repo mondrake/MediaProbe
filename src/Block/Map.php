@@ -100,7 +100,7 @@ class Map extends Index
             try {
                 if (is_a($item_class, Tag::class, true)) {
                     $item = new $item_class(
-                        ifdEntry: $ifdEntry,
+                        listItem: $ifdEntry,
                         parent: $this,
                     );
                     $tagDataWindow = new DataWindow($data, $n, $ifdEntry->size);

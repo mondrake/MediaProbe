@@ -65,7 +65,7 @@ class AFInfoIndex extends Index
             $item_class = $ifdEntry->collection->handler();
             if (is_a($item_class, Tag::class, true)) {
                 $item = new $item_class(
-                    ifdEntry: $ifdEntry,
+                    listItem: $ifdEntry,
                     parent: $this,
                 );
                 $this->graftBlock($item);

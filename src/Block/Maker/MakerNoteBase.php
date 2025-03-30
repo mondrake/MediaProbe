@@ -13,12 +13,12 @@ use FileEye\MediaProbe\Model\RootBlockBase;
 class MakerNoteBase extends Ifd
 {
     public function __construct(
-        IfdItemValue $ifdEntry,
+        IfdItemValue $listItem,
         Tiff|Ifd|RootBlockBase $parent,
         protected readonly int $dataDisplacement = 0,
     ) {
         parent::__construct(
-            ifdEntry: $ifdEntry,
+            listItem: $listItem,
             parent: $parent,
         );
     }

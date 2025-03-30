@@ -144,7 +144,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         $handler = $item_definition->collection->handler();
         if (is_a($handler, Tag::class, true)) {
             $tag = new Tag(
-                ifdEntry: new IfdItemValue(
+                listItem: new IfdItemValue(
                     collection: $item_definition->collection,
                     dataFormat: $item_definition->format,
                     countOfComponents: $item_definition->valuesCount,

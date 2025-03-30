@@ -30,7 +30,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $tiffStub = new StubRootBlock(CollectionFactory::get('Media\Tiff'), $this->createMock(Logger::class));
         $ifd_0 = new Ifd(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: CollectionFactory::get('Media\\Tiff\\Ifd0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -40,8 +40,8 @@ class SpecTest extends MediaProbeTestCaseBase
         );
         $tiffStub->graftBlock($ifd_0);
         $ifd_exif = new Ifd(
-            ifdEntry: new IfdItemValue(
-                collection: $ifd_0->ifdEntry->collection->getItemCollection(0x8769),
+            listItem: new IfdItemValue(
+                collection: $ifd_0->listItem->collection->getItemCollection(0x8769),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
                 data: 0,
@@ -108,7 +108,7 @@ class SpecTest extends MediaProbeTestCaseBase
     {
         $stubRoot = $this->getStubRoot();
         $ifd = new Ifd(
-            ifdEntry: new IfdItemValue(
+            listItem: new IfdItemValue(
                 collection: CollectionFactory::get($parent_collection_id),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
@@ -126,7 +126,7 @@ class SpecTest extends MediaProbeTestCaseBase
             dataFormat: $item_format
         );
         $tag = new Tag(
-            ifdEntry: $ifdEntry,
+            listItem: $ifdEntry,
             parent: $ifd
         );
         $entry_class_name = $tag->getEntryClass();
