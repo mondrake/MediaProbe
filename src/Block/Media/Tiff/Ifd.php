@@ -12,7 +12,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\ListBase;
@@ -33,15 +32,8 @@ class Ifd extends ListBase
         Tiff|Ifd|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $listItem->collection,
-                format: $listItem->dataFormat,
-                valuesCount: $listItem->countOfComponents,
-                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
-                sequence: $listItem->sequence,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -400,9 +392,8 @@ class Ifd extends ListBase
             $thumbnailCollection = CollectionFactory::get('Thumbnail');
             $thumbnailHandler = $thumbnailCollection->handler();
             $thumbnail = new $thumbnailHandler(
-                definition: new ItemDefinition($thumbnailCollection),
+                collection: $thumbnailCollection,
                 parent: $ifd,
-                graft: false,
             );
             $thumbnail->fromDataElement(new DataWindow($dataxx, 0, $size));
             $ifd->graftBlock($thumbnail);
@@ -415,11 +406,13 @@ class Ifd extends ListBase
     {
         $info = [];
 
+        $dataOffset = $this->listItem->isOffset ? $this->listItem->dataOffset() : $this->listItem->dataValue();
+
         $parentInfo = parent::collectInfo($context);
 
         $msg = '#{seq} {node}:{name}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -430,7 +423,7 @@ class Ifd extends ListBase
         }
 
         if (isset($context['dataElement']) && $context['dataElement'] instanceof DataWindow) {
-            $info['offset'] = $context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset)));
+            $info['offset'] = $context['dataElement']->getAbsoluteOffset($dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($dataOffset)));
         }
 
         $info['tags'] = $context['itemsCount'] ?? 'n/a';

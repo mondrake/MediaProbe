@@ -9,8 +9,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -22,16 +21,11 @@ class Index extends ListBase
 {
     public function __construct(
         public readonly ListItemValue $listItem,
-        BlockBase $parent,
+        BlockInterface $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -231,7 +225,7 @@ class Index extends ListBase
 
         $msg = '#{seq} {node}:{name}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -246,7 +240,7 @@ class Index extends ListBase
         }
 
         $info['tags'] = $context['itemsCount'] ?? 'n/a';
-        $info['format'] = DataFormat::getName($this->getDefinition()->format);
+        $info['format'] = DataFormat::getName($this->listItem->dataFormat);
         $info['_msg'] = $msg;
 
         return array_merge($parentInfo, $info);

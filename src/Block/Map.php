@@ -36,7 +36,6 @@ class Map extends Index
 
     public function fromDataElement(DataElement $dataElement): static
     {
-        $this->validate($dataElement);
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // Preserve the entire map as a raw data block.
@@ -105,6 +104,7 @@ class Map extends Index
             $i++;
         }
 
+        $this->validate($dataElement);
         return $this;
     }
 

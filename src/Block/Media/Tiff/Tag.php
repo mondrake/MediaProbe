@@ -6,7 +6,6 @@ use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\LeafBlockBase;
@@ -24,15 +23,8 @@ class Tag extends LeafBlockBase
         ListBase|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $listItem->collection,
-                format: $listItem->dataFormat,
-                valuesCount: $listItem->countOfComponents,
-                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
-                sequence: $listItem->sequence,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -55,7 +47,7 @@ class Tag extends LeafBlockBase
 
         // Notice if format is not as expected.
         $expected_format = $this->collection->getPropertyValue('format');
-        if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
+        if ($expected_format !== null && $this->getElement("entry")->getFormat() !== null && !in_array($this->getElement("entry")->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
@@ -82,7 +74,6 @@ class Tag extends LeafBlockBase
 
     public function fromDataElement(DataElement $dataElement): Tag
     {
-        $this->validate();
         $this->debugInfo(['dataElement' => $dataElement]);
         try {
             $class = $this->getEntryClass();
@@ -90,6 +81,7 @@ class Tag extends LeafBlockBase
         } catch (DataException $e) {
             $this->error($e->getMessage());
         }
+        $this->validate();
         return $this;
     }
 
@@ -122,16 +114,20 @@ class Tag extends LeafBlockBase
     {
         $info = [];
 
+        $dataOffset = $this->listItem->isOffset ? $this->listItem->dataOffset() : $this->listItem->dataValue();
+
         $parentInfo = parent::collectInfo($context);
 
         $msg = '#{seq} rel@{relativeOffset} {node}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
 
-        $info['relativeOffset'] = HexDump::dumpIntHex($this->getDefinition()->itemDefinitionOffset);
+        // @todo reinstate this
+        # $info['relativeOffset'] = HexDump::dumpIntHex($this->getDefinition()->itemDefinitionOffset);
+        $info['relativeOffset'] = 0;
 
         $msg .= isset($parentInfo['name']) ? ':{name}' : '';
 
@@ -144,8 +140,8 @@ class Tag extends LeafBlockBase
             $msg .= isset($parentInfo['offset']) ? ' @{offset} size {size}' : ' size {size} byte(s)';
         }
 
-        $info['format'] = DataFormat::getName($this->getDefinition()->format);
-        $info['components'] = $this->getDefinition()->valuesCount;
+        $info['format'] = DataFormat::getName($this->listItem->dataFormat);
+        $info['components'] = $this->listItem->countOfComponents;
         $msg .= ' format {format} count {components}';
 
         $info['_msg'] = $msg;

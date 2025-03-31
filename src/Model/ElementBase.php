@@ -184,6 +184,9 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
         return $parent_path . str_replace(array_keys($attributes), array_values($attributes), $this->getContextPathSegmentPattern());
     }
 
+    /**
+     * #deprecated
+     */
     public function isValid(): bool
     {
         return is_null($this->level) || ($this->level->value < Level::Warning->value);

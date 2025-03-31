@@ -22,6 +22,8 @@ abstract class BlockBase extends ElementBase implements BlockInterface
 {
     /**
      * The size of this Block in bytes.
+     *
+     * @deprecated
      */
     protected int $size;
 
@@ -137,7 +139,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     /**
      * Gets the size of this Block in bytes.
      *
-     * @return int
+     * @return positive-int
      */
     public function getSize(): int
     {

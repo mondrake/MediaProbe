@@ -13,7 +13,7 @@ abstract class MediaTypeBlockBase extends BlockBase implements MediaTypeBlockInt
 {
     public function __construct(
         CollectionInterface $collection,
-        RootBlockBase $parent,
+        BlockInterface $parent,
     ) {
         parent::__construct(
             collection: $collection,

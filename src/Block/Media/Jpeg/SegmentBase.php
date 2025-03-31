@@ -4,7 +4,6 @@ namespace FileEye\MediaProbe\Block\Media\Jpeg;
 
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 
 /**

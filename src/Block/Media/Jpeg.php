@@ -112,7 +112,8 @@ class Jpeg extends MediaTypeBlockBase
                 parent: $this,
             );
             assert($segmentBlock instanceof SegmentBase, get_class($segmentBlock));
-            $segmentBlock->fromDataElement(new DataWindow($dataElement, $offset, $segmentSize));
+            $segmentDataElement = new DataWindow($dataElement, $offset, $segmentSize);
+            $segmentBlock->fromDataElement($segmentDataElement);
             $this->graftBlock($segmentBlock);
 
             // Position to end of the segment.
