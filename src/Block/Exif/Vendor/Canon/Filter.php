@@ -65,7 +65,7 @@ class Filter extends ListBase
             // The items are defined in the collection of the parent element.
             $ifdEntry = new IfdItemValue(
                 sequence: $p,
-                collection: $this->getParentElement()->getCollection()->getItemCollection($id),
+                collection: $this->getParentElement()->collection->getItemCollection($id),
                 dataFormat: DataFormat::SIGNED_LONG,
                 countOfComponents: $val_count,
                 data: 0,

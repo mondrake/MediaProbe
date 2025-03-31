@@ -73,7 +73,7 @@ class CustomFunctions2Header extends ListBase
 
             $pos += 12;
             try {
-                $groupCollection = $this->getCollection()->getItemCollection($rec_num);
+                $groupCollection = $this->collection->getItemCollection($rec_num);
                 $groupHandler = $groupCollection->handler();
                 $group = new $groupHandler(
                     listItem: new ListItemValue($groupCollection, DataFormat::SIGNED_LONG, $rec_count),

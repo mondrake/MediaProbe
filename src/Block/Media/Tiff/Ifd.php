@@ -176,7 +176,7 @@ class Ifd extends ListBase
         // Fall back to the generic IFD collection if the item is missing from the appropriate
         // one.
         try {
-            $item_collection = $this->getCollection()->getItemCollection($id);
+            $item_collection = $this->collection->getItemCollection($id);
         } catch (MediaProbeException $e) {
             if ($fallbackCollectionId !== null) {
                 $item_collection = CollectionFactory::get($fallbackCollectionId)->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
@@ -184,7 +184,7 @@ class Ifd extends ListBase
                     'DOMNode' => 'tag',
                 ]);
             } else {
-                $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
+                $item_collection = $this->collection->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
                     'item' => $id,
                     'DOMNode' => 'tag',
                 ]);
@@ -298,12 +298,12 @@ class Ifd extends ListBase
             $thumbnail_entry = $thumbnail->getElement('entry');
             assert($thumbnail_entry instanceof EntryInterface);
             // Add offset.
-            $bytes .= ConvertBytes::fromShort($this->getCollection()->getItemCollectionByName('ThumbnailOffset')->getPropertyValue('item'), $byte_order);
+            $bytes .= ConvertBytes::fromShort($this->collection->getItemCollectionByName('ThumbnailOffset')->getPropertyValue('item'), $byte_order);
             $bytes .= ConvertBytes::fromShort(DataFormat::LONG, $byte_order);
             $bytes .= ConvertBytes::fromLong(1, $byte_order);
             $bytes .= ConvertBytes::fromLong($data_area_offset, $byte_order);
             // Add length.
-            $bytes .= ConvertBytes::fromShort($this->getCollection()->getItemCollectionByName('ThumbnailLength')->getPropertyValue('item'), $byte_order);
+            $bytes .= ConvertBytes::fromShort($this->collection->getItemCollectionByName('ThumbnailLength')->getPropertyValue('item'), $byte_order);
             $bytes .= ConvertBytes::fromShort(DataFormat::LONG, $byte_order);
             $bytes .= ConvertBytes::fromLong(1, $byte_order);
             $bytes .= ConvertBytes::fromLong($thumbnail_entry->getComponents(), $byte_order);

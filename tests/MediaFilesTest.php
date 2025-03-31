@@ -201,7 +201,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             // Check PHP Exif tag equivalence.
             $parentElement = $element->getParentElement();
             $this->assertInstanceOf(BlockInterface::class, $parentElement);
-            if ($php_exif_tag = $parentElement->getCollection()->getPropertyValue('phpExifTag')) {
+            if ($php_exif_tag = $parentElement->collection->getPropertyValue('phpExifTag')) {
                 $php_exif_skip = $this->testDump['skip']['phpExif'] ?? [];
                 if (!in_array($php_exif_tag, $php_exif_skip)) {
                     $tag = explode('::', $php_exif_tag);
@@ -215,7 +215,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             }
 
             // Check Exiftool RAW tag equivalence.
-            if ($exiftool_node = $parentElement->getCollection()->getPropertyValue('exiftoolDOMNode')) {
+            if ($exiftool_node = $parentElement->collection->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {
                     [$g1, $tag] = explode(':', $exiftool_node);
@@ -262,7 +262,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             // Check Exiftool TEXT tag equivalence.
             $parentElement = $element->getParentElement();
             $this->assertInstanceOf(BlockInterface::class, $parentElement);
-            if ($exiftool_node = $parentElement->getCollection()->getPropertyValue('exiftoolDOMNode')) {
+            if ($exiftool_node = $parentElement->collection->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {
                     [$g1, $tag] = explode(':', $exiftool_node);

@@ -27,7 +27,7 @@ function dump_element(ElementInterface $element)
     if ($element instanceof EntryInterface) {
         $ifd_name = $element->getParentElement()->getParentElement()->getAttribute('name') ?: $element->getParentElement()->getAttribute('name');
         //$tag_title = $element->getParentElement()->getAttribute('name') ?: '*na*';
-        $tag_title = $element->getParentElement()->getCollection()->getPropertyValue('title') ?? '*na*';
+        $tag_title = $element->getParentElement()->collection->getPropertyValue('title') ?? '*na*';
         print substr(str_pad($ifd_name . '/' . $tag_title, 50, ' '), 0, 50) . ' = ' . $element->toString(['format' => 'exiftool']) . "\n";
     }
 

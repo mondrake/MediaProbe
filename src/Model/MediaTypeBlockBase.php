@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace FileEye\MediaProbe\Model;
 
 use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\ItemDefinition;
 
 /**
  * Base class for Block objects that identify MIME types.
@@ -13,13 +12,12 @@ use FileEye\MediaProbe\ItemDefinition;
 abstract class MediaTypeBlockBase extends BlockBase implements MediaTypeBlockInterface
 {
     public function __construct(
-        public readonly CollectionInterface $collection,
-        BlockBase $parent,
+        CollectionInterface $collection,
+        RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            collection: $collection,
             parent: $parent,
-            graft: false,
         );
     }
 }

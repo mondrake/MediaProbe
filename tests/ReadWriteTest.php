@@ -53,7 +53,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         $this->assertNotNull($jpeg->getElement("jpegSegment/exif"));
         $this->assertNull($exif->getElement("tiff"));
 
-        $tiff = new Tiff($exif->getCollection()->getItemCollection('Tiff'), $exif);
+        $tiff = new Tiff($exif->collection->getItemCollection('Tiff'), $exif);
         $exif->graftBlock($tiff);
         $tiff->setByteOrder(ConvertBytes::BIG_ENDIAN);
         $this->assertNotNull($exif->getElement("tiff"));
@@ -61,7 +61,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
 
         $ifd = new Ifd(
             listItem: new IfdItemValue(
-                collection: $tiff->getCollection()->getItemCollection('0'),
+                collection: $tiff->collection->getItemCollection('0'),
                 dataFormat: DataFormat::LONG,
                 countOfComponents: 1,
                 data: 0,
@@ -70,7 +70,7 @@ class ReadWriteTest extends MediaProbeTestCaseBase
         );
         $tiff->graftBlock($ifd);
         foreach ($entries as $entry) {
-            $item_collection = $ifd->getCollection()->getItemCollection($entry[0], 0, 'Media\\Tiff\\UnknownTag', [
+            $item_collection = $ifd->collection->getItemCollection($entry[0], 0, 'Media\\Tiff\\UnknownTag', [
                 'item' => $entry[0],
                 'DOMNode' => 'tag',
             ]);

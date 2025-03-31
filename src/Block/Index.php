@@ -41,7 +41,7 @@ class Index extends ListBase
     protected function validate(DataElement $dataElement): void
     {
         // Warn if format is not as expected.
-        $expected_format = $this->getCollection()->getPropertyValue('format');
+        $expected_format = $this->collection->getPropertyValue('format');
         if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
@@ -56,9 +56,9 @@ class Index extends ListBase
         // If the 'hasIndexSize' property is true, the index begins with an
         // entry representing the entire size of the index (included the entry
         // itself). This should match the size determined in the parent IFD.
-        if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
+        if ($this->collection->getPropertyValue('hasIndexSize')) {
             $offset = 0;
-            $index_size = $this->getValueFromData($dataElement, $offset, $this->getCollection()->getPropertyValue('format')[0]);
+            $index_size = $this->getValueFromData($dataElement, $offset, $this->collection->getPropertyValue('format')[0]);
             if ($index_size !== $this->getDefinition()->getSize()) {
                 $this->error("Size mismatch between IFD and index header");
             }
@@ -134,7 +134,7 @@ class Index extends ListBase
     ): IfdItemValue|false {
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
-        $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
+        $item_collection = $this->collection->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
             'item' => $id,
             'DOMNode' => 'tag',
         ]);
@@ -199,7 +199,7 @@ class Index extends ListBase
 
         $actual_size = strlen($data_bytes);
 
-        if ($expected_size = $this->getCollection()->getPropertyValue('hasIndexSize')) {
+        if ($expected_size = $this->collection->getPropertyValue('hasIndexSize')) {
             // When writing back, the index size itself is a short, part of the
             // actual size, so we add 2 to the written value.
             return ConvertBytes::fromShort($actual_size + 2, $byte_order) . $data_bytes;
@@ -217,7 +217,7 @@ class Index extends ListBase
             // Components are in Shorts, $tag_size is in Bytes, so normalize.
             $components += $tag_size / 2;
         }
-        if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
+        if ($this->collection->getPropertyValue('hasIndexSize')) {
             $components++;
         }
         return $components;

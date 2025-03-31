@@ -45,16 +45,16 @@ class Tag extends LeafBlockBase
         assert($parentElement instanceof BlockInterface);
 
         // Check if MediaProbe has a definition for this tag.
-        if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
+        if (in_array($this->collection->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
             $this->info("Unknown tag {item} in '{parent}'", [
                 'item' => HexDump::dumpIntHex($this->getAttribute('id')),
-                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',
             ]);
             return;
         }
 
         // Notice if format is not as expected.
-        $expected_format = $this->getCollection()->getPropertyValue('format');
+        $expected_format = $this->collection->getPropertyValue('format');
         if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
@@ -64,18 +64,18 @@ class Tag extends LeafBlockBase
                 'format_name' => DataFormat::getName($this->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',
             ]);
         }
 
         // Notice if components are not as expected.
-        $expected_components = $this->getCollection()->getPropertyValue('components');
+        $expected_components = $this->collection->getPropertyValue('components');
         if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
             $this->notice("Found {components} data components, expected {expected_components} for tag '{item}' in '{parent}'", [
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $parentElement ? $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a' : 'n/a',
+                'parent' => $parentElement ? $parentElement->collection->getPropertyValue('name') ?? 'n/a' : 'n/a',
             ]);
         }
     }

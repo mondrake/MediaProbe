@@ -9,7 +9,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Dumper\DumperInterface;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Utility\ConvertBytes;
 
 /**
@@ -22,11 +21,6 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class BlockBase extends ElementBase implements BlockInterface
 {
     /**
-     * The Definition of this Block.
-     */
-    protected ItemDefinition $definition;
-
-    /**
      * The size of this Block in bytes.
      */
     protected int $size;
@@ -34,32 +28,27 @@ abstract class BlockBase extends ElementBase implements BlockInterface
     /**
      * Constructs a Block object.
      *
-     * @param ItemDefinition $definition
-     *   The Item Definition of this Block.
      * @param BlockInterface|null $parent
      *   (Optional) the parent Block of this Block.
      * @param BlockInterface|null $reference
      *   (Optional) if specified, the new Block will be inserted before the reference Block.
      */
     public function __construct(
-        ItemDefinition $definition,
+        public readonly CollectionInterface $collection,
         ?BlockInterface $parent = null,
         ?BlockInterface $reference = null,
-        bool $graft = true,
     ) {
-        $this->definition = $definition;
-
-        parent::__construct($this->getCollection()->getPropertyValue('DOMNode'), $parent, $reference, $graft);
+        parent::__construct($this->collection->getPropertyValue('DOMNode'), $parent, $reference, false);
 
         if (!isset($this->DOMNode)) {
             return;
         }
 
-        if ($this->getCollection()->hasProperty('item')) {
-            $this->setAttribute('id', (string) $this->getCollection()->getPropertyValue('item'));
+        if ($this->collection->hasProperty('item')) {
+            $this->setAttribute('id', (string) $this->collection->getPropertyValue('item'));
         }
-        if ($this->getCollection()->hasProperty('name')) {
-            $this->setAttribute('name', (string) $this->getCollection()->getPropertyValue('name'));
+        if ($this->collection->hasProperty('name')) {
+            $this->setAttribute('name', (string) $this->collection->getPropertyValue('name'));
         }
     }
 
@@ -79,19 +68,30 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return 0;
     }
 
+    /**
+     * @deprecated
+     */
     public function getDefinition(): ItemDefinition
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         return $this->definition;
     }
 
+    /**
+     * @deprecated
+     */
     public function getCollection(): CollectionInterface
     {
-        return $this->getDefinition()->collection;
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
+        return $this->collection;
     }
 
-    // xx
+    /**
+     * @deprecated
+     */
     public function getFormat(): int
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         return $this->getDefinition()->format;
     }
 
@@ -108,7 +108,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
      */
     protected function executePostParseCallbacks(DataElement $dataElement): static
     {
-        $post_load_callbacks = $this->getCollection()->getPropertyValue('postParse');
+        $post_load_callbacks = $this->collection->getPropertyValue('postParse');
         if (!empty($post_load_callbacks)) {
             foreach ($post_load_callbacks as $callback) {
                 call_user_func($callback, $dataElement, $this);
@@ -169,7 +169,7 @@ abstract class BlockBase extends ElementBase implements BlockInterface
             $msg .= ':{name}';
         }
 
-        if (($title = $this->getCollection()->getPropertyValue('title')) ==! null) {
+        if (($title = $this->collection->getPropertyValue('title')) ==! null) {
             $info['title'] = $title;
             $msg .= ' ({title})';
         }

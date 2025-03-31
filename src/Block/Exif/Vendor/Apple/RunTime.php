@@ -41,7 +41,7 @@ class RunTime extends ListBase
 
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {
-            $item_collection = $this->getCollection()->getItemCollection($tag_name);
+            $item_collection = $this->collection->getItemCollection($tag_name);
             $item_format = $item_collection->getPropertyValue('format')[0];
             $item_definition = new IfdItemValue($item_collection, $item_format);
             $tag = new Tag($item_definition, $this);
@@ -64,7 +64,7 @@ class RunTime extends ListBase
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
             assert($sub_block instanceof Tag);
-            $dict->add($sub_block->getCollection()->getPropertyValue('item'), new CFNumber($sub_block->getValue()));
+            $dict->add($sub_block->collection->getPropertyValue('item'), new CFNumber($sub_block->getValue()));
         }
 
         return $plist->toBinary();

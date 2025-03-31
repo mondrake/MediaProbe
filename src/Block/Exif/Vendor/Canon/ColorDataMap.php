@@ -21,8 +21,8 @@ class ColorDataMap extends Map
         parent::validate($dataElement);
 
         // Find the appropriate map collection.
-        foreach ($this->getCollection()->listItemIds() as $color_data_map) {
-            $map_t = $this->getCollection()->getItemCollection($color_data_map);
+        foreach ($this->collection->listItemIds() as $color_data_map) {
+            $map_t = $this->collection->getItemCollection($color_data_map);
             if (in_array($this->getDefinition()->valuesCount, $map_t->getPropertyValue('condition') ?? [])) {
                 $this->definition = new ItemDefinition($map_t, $map_t->getPropertyValue('format')[0]);
                 break;
@@ -31,8 +31,8 @@ class ColorDataMap extends Map
         // todo xx unknown
 
         $this->debug("Resolved map to {domnode}:{name}", [
-            'domnode' => $this->getCollection()->getPropertyValue('DOMNode'),
-            'name' => $this->getCollection()->getPropertyValue('name'),
+            'domnode' => $this->collection->getPropertyValue('DOMNode'),
+            'name' => $this->collection->getPropertyValue('name'),
         ]);
     }
 }

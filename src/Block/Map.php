@@ -52,7 +52,7 @@ class Map extends Index
 
         // Build the map items.
         $i = 0;
-        foreach ($this->getCollection()->listItemIds() as $item) {
+        foreach ($this->collection->listItemIds() as $item) {
             $n = $item * DataFormat::getSize($this->getFormat());
 
             $ifdEntry = $this->ifdEntryFromDataElement(

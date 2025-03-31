@@ -52,7 +52,7 @@ class CustomFunctions2 extends ListBase
             ]);
             $rec_pos += 8;
             try {
-                $item_collection = $this->getCollection()->getItemCollection(
+                $item_collection = $this->collection->getItemCollection(
                     $id,
                     null,
                     'Media\\Tiff\\UnknownTag',

@@ -13,13 +13,12 @@ use FileEye\MediaProbe\Model\BlockBase;
 abstract class SegmentBase extends BlockBase
 {
     public function __construct(
-        public readonly CollectionInterface $collection,
+        CollectionInterface $collection,
         Jpeg $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            collection: $collection,
             parent: $parent,
-            graft: false,
         );
     }
 

@@ -29,13 +29,12 @@ class ExifApp extends BlockBase
     const EXIF_HEADER = "Exif\0\0";
 
     public function __construct(
-        public readonly CollectionInterface $collection,
+        CollectionInterface $collection,
         SegmentApp1|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            collection: $collection,
             parent: $parent,
-            graft: false,
         );
     }
 
