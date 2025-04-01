@@ -3,7 +3,6 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\EntryInterface;

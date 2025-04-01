@@ -51,7 +51,7 @@ abstract class LeafBlockBase extends BlockBase
     {
         $entry = $this->getElement("entry");
         if (!$entry) {
-            return $this->getDefinition()->valuesCount;
+            throw new \Exception('Missing entry');
         }
         assert($entry instanceof EntryInterface, get_class($entry));
         return $entry->getComponents();
