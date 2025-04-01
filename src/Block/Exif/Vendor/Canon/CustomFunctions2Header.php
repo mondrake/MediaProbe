@@ -24,13 +24,8 @@ class CustomFunctions2Header extends ListBase
         MakerNote $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -39,7 +34,7 @@ class CustomFunctions2Header extends ListBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $offset = 0;
-        $size = $this->getDefinition()->getSize();
+        $size = $this->listItem->size;
 
         // Validate incoming size.
         if ($size !== $dataElement->getLong($offset)) {

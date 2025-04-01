@@ -269,7 +269,7 @@ class Ifd extends ListBase
                 $bytes .= ConvertBytes::fromShort(DataFormat::UNDEFINED, $byte_order);
                 $bytes .= ConvertBytes::fromLong(strlen($data), $byte_order);
             } else {
-                $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
+                $bytes .= ConvertBytes::fromShort($sub_block->listItem->dataFormat, $byte_order);
                 $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
             }
 

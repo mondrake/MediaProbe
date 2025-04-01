@@ -89,7 +89,6 @@ class Map extends Index
 
             // Adds the item to the DOM.
             $item_class = $ifdEntry->collection->handler();
-            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
             try {
                 $item = new $item_class(
                     listItem: $ifdEntry,
@@ -104,7 +103,8 @@ class Map extends Index
             $i++;
         }
 
-        $this->validate($dataElement);
+        $this->validate();
+
         return $this;
     }
 

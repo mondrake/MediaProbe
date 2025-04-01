@@ -5,7 +5,6 @@ namespace FileEye\MediaProbe\Block;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Entry\Core\Undefined;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\EntryBase;
 use FileEye\MediaProbe\Model\LeafBlockBase;
@@ -27,13 +26,8 @@ class RawData extends LeafBlockBase
         BlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 

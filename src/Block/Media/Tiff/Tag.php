@@ -28,10 +28,7 @@ class Tag extends LeafBlockBase
         );
     }
 
-    /**
-     * Validates against the specification, if defined.
-     */
-    public function validate(): void
+    protected function validate(): void
     {
         $parentElement = $this->getParentElement();
         assert($parentElement instanceof BlockInterface);
@@ -53,7 +50,7 @@ class Tag extends LeafBlockBase
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
             $this->notice("Found {format_name} data format, expected {expected_format_names} for tag '{item}' in '{parent}'", [
-                'format_name' => DataFormat::getName($this->getFormat()),
+                'format_name' => DataFormat::getName($this->listItem->dataFormat),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
                 'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',

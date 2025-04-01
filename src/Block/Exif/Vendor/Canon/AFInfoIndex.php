@@ -14,13 +14,11 @@ class AFInfoIndex extends Index
 {
     public function fromDataElement(DataElement $dataElement): static
     {
-        $this->validate($dataElement);
-
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
-        $this->components = $this->getDefinition()->valuesCount;
+        $this->components = $this->listItem->countOfComponents;
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
@@ -66,6 +64,8 @@ class AFInfoIndex extends Index
             $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
             new $entry_class($item, $this->getDataWindowFromData($dataElement, $offset, $ifdEntry->dataFormat, $valueComponents));
         }
+
+        $this->validate();
 
         return $this;
     }

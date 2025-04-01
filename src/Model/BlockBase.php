@@ -21,9 +21,7 @@ use FileEye\MediaProbe\Utility\ConvertBytes;
 abstract class BlockBase extends ElementBase implements BlockInterface
 {
     /**
-     * The size of this Block in bytes.
-     *
-     * @deprecated
+     * The size of this block in bytes.
      */
     protected int $size;
 

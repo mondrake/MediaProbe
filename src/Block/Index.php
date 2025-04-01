@@ -29,14 +29,11 @@ class Index extends ListBase
         );
     }
 
-    /**
-     * Validates the list against the specification.
-     */
-    protected function validate(DataElement $dataElement): void
+    protected function validate(): void
     {
         // Warn if format is not as expected.
         $expected_format = $this->collection->getPropertyValue('format');
-        if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
+        if ($expected_format !== null && $this->listItem->dataFormat !== null && !in_array($this->listItem->dataFormat, $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
@@ -46,28 +43,26 @@ class Index extends ListBase
                 'expected_format_names' => implode(', ', $expected_format_names),
             ]);
         }
+    }
+
+    public function fromDataElement(DataElement $dataElement): static
+    {
+        $offset = 0;
 
         // If the 'hasIndexSize' property is true, the index begins with an
         // entry representing the entire size of the index (included the entry
         // itself). This should match the size determined in the parent IFD.
         if ($this->collection->getPropertyValue('hasIndexSize')) {
-            $offset = 0;
             $index_size = $this->getValueFromData($dataElement, $offset, $this->collection->getPropertyValue('format')[0]);
-            if ($index_size !== $this->getDefinition()->getSize()) {
+            if ($index_size !== $this->listItem->size) {
                 $this->error("Size mismatch between IFD and index header");
             }
         }
-    }
-
-    public function fromDataElement(DataElement $dataElement): static
-    {
-        $this->validate($dataElement);
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
-        $offset = 0;
-        $this->components = $this->getDefinition()->valuesCount;
+        $this->components = $this->listItem->countOfComponents;
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
@@ -103,6 +98,8 @@ class Index extends ListBase
             $offset += $ifdEntry->size;
         }
 
+        $this->validate();
+
         return $this;
     }
 
@@ -132,7 +129,7 @@ class Index extends ListBase
             'item' => $id,
             'DOMNode' => 'tag',
         ]);
-        $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
+        $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->listItem->dataFormat;
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
 
         return new IfdItemValue(
