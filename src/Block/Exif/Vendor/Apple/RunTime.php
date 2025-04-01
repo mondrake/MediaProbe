@@ -31,7 +31,7 @@ class RunTime extends ListBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $plist = new CFPropertyList();
-        $plist->parse($dataElement->getBytes(0, $this->getDefinition()->valuesCount));
+        $plist->parse($dataElement->getBytes(0, $this->listItem->countOfComponents));
 
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {

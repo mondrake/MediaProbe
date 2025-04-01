@@ -7,7 +7,8 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\LeafBlockBase;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
@@ -31,7 +32,7 @@ class Tag extends LeafBlockBase
     protected function validate(): void
     {
         $parentElement = $this->getParentElement();
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
 
         // Check if MediaProbe has a definition for this tag.
         if (in_array($this->collection->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
@@ -44,7 +45,9 @@ class Tag extends LeafBlockBase
 
         // Notice if format is not as expected.
         $expected_format = $this->collection->getPropertyValue('format');
-        if ($expected_format !== null && $this->getElement("entry")->getFormat() !== null && !in_array($this->getElement("entry")->getFormat(), $expected_format)) {
+        /** @var EntryInterface $entry */
+        $entry = $this->getElement("entry");
+        if ($expected_format !== null && $entry->getFormat() !== null && !in_array($entry->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);

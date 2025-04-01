@@ -4,6 +4,7 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Data\DataElement;
+use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListItemValue;
 
 /**
@@ -27,7 +28,10 @@ class ColorDataMapResolver extends Map
                 break;
             }
         }
-        // todo xx unknown
+
+        if (!isset($resolvedItem)) {
+            throw new MediaProbeException('Could not resolve a valid CameraInfo map');
+        }
 
         $this->debug("Resolved map to {name}", [
             'name' => $resolvedItem->collection->getPropertyValue('name'),

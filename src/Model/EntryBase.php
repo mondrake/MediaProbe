@@ -107,7 +107,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$parentElement) {
             return $this->format;
         }
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
         if ($output_format = $parentElement->collection->getPropertyValue('outputFormat')) {
             return $output_format;
         }
@@ -131,7 +131,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$parentElement) {
             return false;
         }
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
         if (!$text_config = $parentElement->collection->getPropertyValue('text')) {
             return false;
         }
@@ -144,7 +144,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
     protected function getMappedText(mixed $value): ?string
     {
         $parentElement = $this->getParentElement();
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
         $text_config = $parentElement->collection->getPropertyValue('text');
         $id = is_int($value) ? $value : (string) $value;
         return $text_config['mapping'][$id] ?? null;
@@ -159,7 +159,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$parentElement) {
             return false;
         }
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
         if (!$text_config = $parentElement->collection->getPropertyValue('text')) {
             return false;
         }
@@ -185,7 +185,7 @@ abstract class EntryBase extends ElementBase implements EntryInterface
         if (!$parentElement) {
             return is_array($value) ? implode(' ', $value) : $value;
         }
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
 
         if (is_array($value)) {
             $tmp = [];

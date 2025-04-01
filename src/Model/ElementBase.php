@@ -185,10 +185,11 @@ abstract class ElementBase implements ElementInterface, LoggerInterface
     }
 
     /**
-     * #deprecated
+     * @deprecated
      */
     public function isValid(): bool
     {
+        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
         return is_null($this->level) || ($this->level->value < Level::Warning->value);
     }
 

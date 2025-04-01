@@ -174,7 +174,7 @@ class Media extends RootBlockBase
 
         $ifdEntry = new IfdItemValue(
             collection: $maker_note_collection,
-            dataFormat: $maker_note_tag->getElement("entry")->getFormat(),
+            dataFormat: $entry->getFormat(),
             countOfComponents: $maker_note_tag->getComponents(),
             data: 0,
         );

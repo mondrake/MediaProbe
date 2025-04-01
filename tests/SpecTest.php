@@ -64,37 +64,37 @@ class SpecTest extends MediaProbeTestCaseBase
         $this->assertNotNull(CollectionFactory::getByName('Canon'));
 
         // Test retrieving IFD class.
-        $this->assertEquals(Ifd::class, $ifd_0->getCollection()->handler());
-        $this->assertEquals(Map::class, $ifd_canon_camera_settings->getCollection()->handler());
+        $this->assertEquals(Ifd::class, $ifd_0->collection->handler());
+        $this->assertEquals(Map::class, $ifd_canon_camera_settings->collection->handler());
 
         // Test retrieving IFD post-load callbacks.
         $this->assertEquals([
             'FileEye\MediaProbe\Block\Media\Tiff\Ifd::thumbnailToBlock',
-        ], $ifd_0->getCollection()->getPropertyValue('postParse'));
-        $this->assertNull($ifd_canon_camera_settings->getCollection()->getPropertyValue('postParse'));
+        ], $ifd_0->collection->getPropertyValue('postParse'));
+        $this->assertNull($ifd_canon_camera_settings->collection->getPropertyValue('postParse'));
 
         // Test retrieving TAG name.
-        $this->assertEquals('ExifIFD', $ifd_0->getCollection()->getItemCollection(0x8769)->getPropertyValue('name'));
-        $this->assertEquals('ExposureTime', $ifd_exif->getCollection()->getItemCollection(0x829A)->getPropertyValue('name'));
-        $this->assertEquals('Compression', $ifd_0->getCollection()->getItemCollection(0x0103)->getPropertyValue('name'));
+        $this->assertEquals('ExifIFD', $ifd_0->collection->getItemCollection(0x8769)->getPropertyValue('name'));
+        $this->assertEquals('ExposureTime', $ifd_exif->collection->getItemCollection(0x829A)->getPropertyValue('name'));
+        $this->assertEquals('Compression', $ifd_0->collection->getItemCollection(0x0103)->getPropertyValue('name'));
 
         // Test retrieving TAG id by name.
-        $this->assertEquals(0x8769, $ifd_0->getCollection()->getItemCollectionByName('ExifIFD')->getPropertyValue('item'));
-        $this->assertEquals(0x829A, $ifd_exif->getCollection()->getItemCollectionByName('ExposureTime')->getPropertyValue('item'));
-        $this->assertEquals(0x0103, $ifd_0->getCollection()->getItemCollectionByName('Compression')->getPropertyValue('item'));
+        $this->assertEquals(0x8769, $ifd_0->collection->getItemCollectionByName('ExifIFD')->getPropertyValue('item'));
+        $this->assertEquals(0x829A, $ifd_exif->collection->getItemCollectionByName('ExposureTime')->getPropertyValue('item'));
+        $this->assertEquals(0x0103, $ifd_0->collection->getItemCollectionByName('Compression')->getPropertyValue('item'));
 
         // Check methods identifying an IFD pointer TAG.
-        $this->assertSame('Media\\Tiff\\IfdExif', $ifd_0->getCollection()->getItemCollection(0x8769)->getPropertyValue('id'));
-        $this->assertSame('ExifIFD', $ifd_0->getCollection()->getItemCollection(0x8769)->getPropertyValue('name'));
+        $this->assertSame('Media\\Tiff\\IfdExif', $ifd_0->collection->getItemCollection(0x8769)->getPropertyValue('id'));
+        $this->assertSame('ExifIFD', $ifd_0->collection->getItemCollection(0x8769)->getPropertyValue('name'));
 
         // Check getTagFormat.
-        $this->assertEquals([DataFormat::UNDEFINED], $ifd_exif->getCollection()->getItemCollection(0x9286)->getPropertyValue('format'));
-        $this->assertEquals([DataFormat::SHORT, DataFormat::LONG], $ifd_exif->getCollection()->getItemCollection(0xA002)->getPropertyValue('format'));
+        $this->assertEquals([DataFormat::UNDEFINED], $ifd_exif->collection->getItemCollection(0x9286)->getPropertyValue('format'));
+        $this->assertEquals([DataFormat::SHORT, DataFormat::LONG], $ifd_exif->collection->getItemCollection(0xA002)->getPropertyValue('format'));
 
         // Check getTagTitle.
-        $this->assertEquals('Exif IFD', $ifd_0->getCollection()->getItemCollection(0x8769)->getPropertyValue('title'));
-        $this->assertEquals('Exposure Time', $ifd_exif->getCollection()->getItemCollection(0x829A)->getPropertyValue('title'));
-        $this->assertEquals('Compression', $ifd_0->getCollection()->getItemCollection(0x0103)->getPropertyValue('title'));
+        $this->assertEquals('Exif IFD', $ifd_0->collection->getItemCollection(0x8769)->getPropertyValue('title'));
+        $this->assertEquals('Exposure Time', $ifd_exif->collection->getItemCollection(0x829A)->getPropertyValue('title'));
+        $this->assertEquals('Compression', $ifd_0->collection->getItemCollection(0x0103)->getPropertyValue('title'));
     }
 
     /**

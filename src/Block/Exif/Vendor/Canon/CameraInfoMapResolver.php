@@ -2,10 +2,12 @@
 
 namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 
+use FileEye\MediaProbe\Block\Maker\Canon\Exif\MakerNote;
 use FileEye\MediaProbe\Block\Map;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListItemValue;
 
 /**
@@ -61,6 +63,10 @@ class CameraInfoMapResolver extends Map
             );
         }
 
+        if (!isset($resolvedItem)) {
+            throw new MediaProbeException('Could not resolve a valid CameraInfo map');
+        }
+
         $this->debug("Resolved map to {name}", [
             'name' => $resolvedItem->collection->getPropertyValue('name'),
         ]);
@@ -70,7 +76,9 @@ class CameraInfoMapResolver extends Map
             listItem: $resolvedItem,
             parent: $this->parent,
         );
+        assert($item instanceof CameraInfoMap);
         $item->fromDataElement($dataElement);
+        assert($this->parent instanceof MakerNote);
         $this->parent->graftBlock($item);
 
         return $this;

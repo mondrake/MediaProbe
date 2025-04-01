@@ -39,7 +39,7 @@ class Index extends ListBase
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
             $this->notice("Found {format_name} data format, expected {expected_format_names}", [
-                'format_name' => DataFormat::getName($this->getFormat()),
+                'format_name' => DataFormat::getName($this->listItem->dataFormat),
                 'expected_format_names' => implode(', ', $expected_format_names),
             ]);
         }
@@ -204,7 +204,7 @@ class Index extends ListBase
         $components = 0;
         foreach ($this->getMultipleElements('tag') as $tag) {
             assert($tag instanceof Tag);
-            $tag_size = DataFormat::getSize($tag->getFormat()) * $tag->getComponents();
+            $tag_size = DataFormat::getSize($tag->listItem->dataFormat) * $tag->getComponents();
             // Components are in Shorts, $tag_size is in Bytes, so normalize.
             $components += $tag_size / 2;
         }

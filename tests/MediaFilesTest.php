@@ -4,7 +4,7 @@ namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Media;
-use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\EntryInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Finder\Finder;
@@ -199,7 +199,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 
             // Check PHP Exif tag equivalence.
             $parentElement = $element->getParentElement();
-            $this->assertInstanceOf(BlockInterface::class, $parentElement);
+            $this->assertInstanceOf(BlockBase::class, $parentElement);
             if ($php_exif_tag = $parentElement->collection->getPropertyValue('phpExifTag')) {
                 $php_exif_skip = $this->testDump['skip']['phpExif'] ?? [];
                 if (!in_array($php_exif_tag, $php_exif_skip)) {
@@ -260,7 +260,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
 
             // Check Exiftool TEXT tag equivalence.
             $parentElement = $element->getParentElement();
-            $this->assertInstanceOf(BlockInterface::class, $parentElement);
+            $this->assertInstanceOf(BlockBase::class, $parentElement);
             if ($exiftool_node = $parentElement->collection->getPropertyValue('exiftoolDOMNode')) {
                 $exiftool_node_skip = $this->testDump['skip']['exiftool'] ?? [];
                 if (!in_array($exiftool_node, $exiftool_node_skip)) {

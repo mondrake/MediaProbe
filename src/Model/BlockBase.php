@@ -68,33 +68,6 @@ abstract class BlockBase extends ElementBase implements BlockInterface
         return 0;
     }
 
-    /**
-     * @deprecated
-     */
-    public function getDefinition(): ItemDefinition
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        return $this->definition;
-    }
-
-    /**
-     * @deprecated
-     */
-    public function getCollection(): CollectionInterface
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        return $this->collection;
-    }
-
-    /**
-     * @deprecated
-     */
-    public function getFormat(): int
-    {
-        trigger_error(__METHOD__ . '() deprecated', E_USER_DEPRECATED);
-        return $this->getDefinition()->format;
-    }
-
     public function fromDataElement(DataElement $dataElement): BlockInterface
     {
         throw new \LogicException(sprintf('%s does not implement %s()', get_class($this), 'fromDataElement'));

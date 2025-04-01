@@ -104,7 +104,7 @@ class MakerNote extends MakerNoteBase
             assert($sub_block instanceof Tag || $sub_block instanceof ListBase, get_class($sub_block));
 
             $bytes .= ConvertBytes::fromShort($sub_block->getAttribute('id'), $byte_order);
-            $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
+            $bytes .= ConvertBytes::fromShort($sub_block->listItem->dataFormat, $byte_order);
             $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
 
             $data = $sub_block->toBytes($byte_order, $data_area_offset);
