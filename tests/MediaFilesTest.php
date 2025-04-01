@@ -3,6 +3,7 @@
 namespace FileEye\MediaProbe\Test;
 
 use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\Data\DataString;
 use FileEye\MediaProbe\Media;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\EntryInterface;
@@ -69,7 +70,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
         }
     }
 
-/*    #[DataProvider('mediaFileProvider')]
+    #[DataProvider('mediaFileProvider')]
     public function testParse($mediaDumpFile): void
     {
         $this->testDump = Yaml::parse($mediaDumpFile->getContents());
@@ -170,7 +171,7 @@ class MediaFilesTest extends MediaProbeTestCaseBase
             $this->assertElement($this->testDump['elements'], $media, true);
         }
     }
-*/
+
     protected function assertElement($expected, $element, $rewritten = false): void
     {
         if (in_array($element->getContextPath(), $this->testDump['skip']['mediaprobe'] ?? [])) {

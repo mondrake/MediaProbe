@@ -53,7 +53,7 @@ class Tag extends LeafBlockBase
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
             $this->notice("Found {format_name} data format, expected {expected_format_names} for tag '{item}' in '{parent}'", [
-                'format_name' => DataFormat::getName($this->listItem->dataFormat),
+                'format_name' => DataFormat::getName($entry->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
                 'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',
