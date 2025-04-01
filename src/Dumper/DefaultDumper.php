@@ -43,7 +43,7 @@ class DefaultDumper implements DumperInterface
         if ($block->getAttribute('id') !== '') {
             $attributes['id'] = $block->getAttribute('id');
         }
-        $dump = array_merge($this->dumpElement($block, $context), $attributes, ['collection' => $block->getCollection()->getPropertyValue('id')]);
+        $dump = array_merge($this->dumpElement($block, $context), $attributes, ['collection' => $block->collection->getPropertyValue('id')]);
         foreach ($block->getMultipleElements("*") as $sub_element) {
             $dump['elements'][] = $sub_element->asArray($this, $context);
         }

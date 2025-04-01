@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
@@ -24,13 +23,8 @@ class CustomFunctions2Header extends ListBase
         MakerNote $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -39,7 +33,7 @@ class CustomFunctions2Header extends ListBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $offset = 0;
-        $size = $this->getDefinition()->getSize();
+        $size = $this->listItem->size;
 
         // Validate incoming size.
         if ($size !== $dataElement->getLong($offset)) {
@@ -73,7 +67,7 @@ class CustomFunctions2Header extends ListBase
 
             $pos += 12;
             try {
-                $groupCollection = $this->getCollection()->getItemCollection($rec_num);
+                $groupCollection = $this->collection->getItemCollection($rec_num);
                 $groupHandler = $groupCollection->handler();
                 $group = new $groupHandler(
                     listItem: new ListItemValue($groupCollection, DataFormat::SIGNED_LONG, $rec_count),

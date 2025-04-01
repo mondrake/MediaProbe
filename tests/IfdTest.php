@@ -31,7 +31,7 @@ class IfdTest extends MediaProbeTestCaseBase
 
         $tag1 = new Tag(
             listItem: new IfdItemValue(
-                collection: $ifd->getCollection()->getItemCollection(0x010E),
+                collection: $ifd->collection->getItemCollection(0x010E),
                 dataFormat: DataFormat::ASCII,
             ),
             parent: $ifd,
@@ -41,7 +41,7 @@ class IfdTest extends MediaProbeTestCaseBase
 
         $tag2 = new Tag(
             listItem: new IfdItemValue(
-                collection: $ifd->getCollection()->getItemCollection(0x0132),
+                collection: $ifd->collection->getItemCollection(0x0132),
                 dataFormat: DataFormat::ASCII,
                 countOfComponents: 20,
             ),

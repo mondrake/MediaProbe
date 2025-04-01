@@ -4,7 +4,6 @@ namespace FileEye\MediaProbe\Block\Media\Jpeg;
 
 use FileEye\MediaProbe\Block\Media\Jpeg;
 use FileEye\MediaProbe\Collection\CollectionInterface;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 
 /**
@@ -13,13 +12,12 @@ use FileEye\MediaProbe\Model\BlockBase;
 abstract class SegmentBase extends BlockBase
 {
     public function __construct(
-        public readonly CollectionInterface $collection,
+        CollectionInterface $collection,
         Jpeg $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            collection: $collection,
             parent: $parent,
-            graft: false,
         );
     }
 

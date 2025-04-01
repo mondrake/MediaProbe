@@ -61,6 +61,11 @@ abstract class CollectionBase implements CollectionInterface
         return array_keys($this->getPropertyValue('items') ?? []);
     }
 
+    public function countItemIds(): int
+    {
+        return count($this->getPropertyValue('items') ?? []);
+    }
+
     /**
      * Returns the collection index of an item, resolved in relation to the context.
      *

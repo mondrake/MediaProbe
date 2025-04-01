@@ -7,7 +7,6 @@ use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -32,13 +31,8 @@ class Filter extends ListBase
         FilterInfoIndex $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
         $this->setAttribute('name', $this->getParentElement()->getAttribute('name') . '.' . $listItem->sequence);
     }
@@ -65,7 +59,7 @@ class Filter extends ListBase
             // The items are defined in the collection of the parent element.
             $ifdEntry = new IfdItemValue(
                 sequence: $p,
-                collection: $this->getParentElement()->getCollection()->getItemCollection($id),
+                collection: $this->getParentElement()->collection->getItemCollection($id),
                 dataFormat: DataFormat::SIGNED_LONG,
                 countOfComponents: $val_count,
                 data: 0,
@@ -120,7 +114,7 @@ class Filter extends ListBase
     {
         return array_merge(parent::collectInfo($context), [
             '_msg' =>'#{seq}.{name} @{offset}, {parmetersCount} parameter(s), size {size} bytes',
-            'seq' => $this->getDefinition()->sequence + 1,
+            'seq' => $this->listItem->sequence + 1,
             'parmetersCount' => $this->paramsCount,
         ]);
     }

@@ -33,10 +33,13 @@ interface CollectionInterface
 
     /**
      * Returns the collection items' ids.
-     *
-     * @return array
      */
     public function listItemIds(): array;
+
+    /**
+     * Returns the count of collection items.
+     */
+    public function countItemIds(): int;
 
     /**
      * Returns the Collection object of an item.

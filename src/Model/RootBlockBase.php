@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataFile;
 use FileEye\MediaProbe\Dumper\DebugDumper;
 use FileEye\MediaProbe\Dumper\DumperInterface;
-use FileEye\MediaProbe\ItemDefinition;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger;
@@ -67,7 +66,7 @@ abstract class RootBlockBase extends BlockBase
         $doc->appendChild($this->DOMNode);
         $this->DOMNode->setMediaProbeElement($this);
         $this->XPath = new \DOMXPath($this->DOMNode->ownerDocument);
-        parent::__construct(new ItemDefinition($collection));
+        parent::__construct($collection);
 
         $this->debugDumper = new DebugDumper();
     }

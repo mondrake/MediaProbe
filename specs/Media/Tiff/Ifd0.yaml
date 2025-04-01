@@ -747,6 +747,7 @@ items:
                 desc: 'Reference Black White'
     700:
         __todo: 'add ifd for XMP tags'
+        format: [Byte, Char]
         entryClass: FileEye\MediaProbe\Entry\IfdApplicationNotes
         exifReadData:
             key: ExtensibleMetadataPlatform

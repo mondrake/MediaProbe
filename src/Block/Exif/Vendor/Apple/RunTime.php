@@ -10,7 +10,6 @@ use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataString;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -22,13 +21,8 @@ class RunTime extends ListBase
         MakerNote $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -37,11 +31,11 @@ class RunTime extends ListBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $plist = new CFPropertyList();
-        $plist->parse($dataElement->getBytes(0, $this->getDefinition()->valuesCount));
+        $plist->parse($dataElement->getBytes(0, $this->listItem->countOfComponents));
 
         // Build a TAG object for each PList item.
         foreach ($plist->toArray() as $tag_name => $value) {
-            $item_collection = $this->getCollection()->getItemCollection($tag_name);
+            $item_collection = $this->collection->getItemCollection($tag_name);
             $item_format = $item_collection->getPropertyValue('format')[0];
             $item_definition = new IfdItemValue($item_collection, $item_format);
             $tag = new Tag($item_definition, $this);
@@ -64,7 +58,7 @@ class RunTime extends ListBase
         // Fill in the TAG entries in the IFD.
         foreach ($this->getMultipleElements('*') as $tag => $sub_block) {
             assert($sub_block instanceof Tag);
-            $dict->add($sub_block->getCollection()->getPropertyValue('item'), new CFNumber($sub_block->getValue()));
+            $dict->add($sub_block->collection->getPropertyValue('item'), new CFNumber($sub_block->getValue()));
         }
 
         return $plist->toBinary();

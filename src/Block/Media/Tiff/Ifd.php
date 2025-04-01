@@ -12,7 +12,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
 use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\ListBase;
@@ -33,15 +32,8 @@ class Ifd extends ListBase
         Tiff|Ifd|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $listItem->collection,
-                format: $listItem->dataFormat,
-                valuesCount: $listItem->countOfComponents,
-                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
-                sequence: $listItem->sequence,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -176,7 +168,7 @@ class Ifd extends ListBase
         // Fall back to the generic IFD collection if the item is missing from the appropriate
         // one.
         try {
-            $item_collection = $this->getCollection()->getItemCollection($id);
+            $item_collection = $this->collection->getItemCollection($id);
         } catch (MediaProbeException $e) {
             if ($fallbackCollectionId !== null) {
                 $item_collection = CollectionFactory::get($fallbackCollectionId)->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
@@ -184,7 +176,7 @@ class Ifd extends ListBase
                     'DOMNode' => 'tag',
                 ]);
             } else {
-                $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
+                $item_collection = $this->collection->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
                     'item' => $id,
                     'DOMNode' => 'tag',
                 ]);
@@ -277,7 +269,7 @@ class Ifd extends ListBase
                 $bytes .= ConvertBytes::fromShort(DataFormat::UNDEFINED, $byte_order);
                 $bytes .= ConvertBytes::fromLong(strlen($data), $byte_order);
             } else {
-                $bytes .= ConvertBytes::fromShort($sub_block->getFormat(), $byte_order);
+                $bytes .= ConvertBytes::fromShort($sub_block->listItem->dataFormat, $byte_order);
                 $bytes .= ConvertBytes::fromLong($sub_block->getComponents(), $byte_order);
             }
 
@@ -298,12 +290,12 @@ class Ifd extends ListBase
             $thumbnail_entry = $thumbnail->getElement('entry');
             assert($thumbnail_entry instanceof EntryInterface);
             // Add offset.
-            $bytes .= ConvertBytes::fromShort($this->getCollection()->getItemCollectionByName('ThumbnailOffset')->getPropertyValue('item'), $byte_order);
+            $bytes .= ConvertBytes::fromShort($this->collection->getItemCollectionByName('ThumbnailOffset')->getPropertyValue('item'), $byte_order);
             $bytes .= ConvertBytes::fromShort(DataFormat::LONG, $byte_order);
             $bytes .= ConvertBytes::fromLong(1, $byte_order);
             $bytes .= ConvertBytes::fromLong($data_area_offset, $byte_order);
             // Add length.
-            $bytes .= ConvertBytes::fromShort($this->getCollection()->getItemCollectionByName('ThumbnailLength')->getPropertyValue('item'), $byte_order);
+            $bytes .= ConvertBytes::fromShort($this->collection->getItemCollectionByName('ThumbnailLength')->getPropertyValue('item'), $byte_order);
             $bytes .= ConvertBytes::fromShort(DataFormat::LONG, $byte_order);
             $bytes .= ConvertBytes::fromLong(1, $byte_order);
             $bytes .= ConvertBytes::fromLong($thumbnail_entry->getComponents(), $byte_order);
@@ -400,9 +392,8 @@ class Ifd extends ListBase
             $thumbnailCollection = CollectionFactory::get('Thumbnail');
             $thumbnailHandler = $thumbnailCollection->handler();
             $thumbnail = new $thumbnailHandler(
-                definition: new ItemDefinition($thumbnailCollection),
+                collection: $thumbnailCollection,
                 parent: $ifd,
-                graft: false,
             );
             $thumbnail->fromDataElement(new DataWindow($dataxx, 0, $size));
             $ifd->graftBlock($thumbnail);
@@ -415,11 +406,13 @@ class Ifd extends ListBase
     {
         $info = [];
 
+        $dataOffset = $this->listItem->isOffset ? $this->listItem->dataOffset() : $this->listItem->dataValue();
+
         $parentInfo = parent::collectInfo($context);
 
         $msg = '#{seq} {node}:{name}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -430,7 +423,7 @@ class Ifd extends ListBase
         }
 
         if (isset($context['dataElement']) && $context['dataElement'] instanceof DataWindow) {
-            $info['offset'] = $context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($this->getDefinition()->dataOffset)));
+            $info['offset'] = $context['dataElement']->getAbsoluteOffset($dataOffset) . '/0x' . strtoupper(dechex($context['dataElement']->getAbsoluteOffset($dataOffset)));
         }
 
         $info['tags'] = $context['itemsCount'] ?? 'n/a';

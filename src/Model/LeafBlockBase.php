@@ -33,21 +33,11 @@ abstract class LeafBlockBase extends BlockBase
         return $this->getElement("entry") ? $this->getElement("entry")->toBytes($order, $offset) : '';
     }
 
-    public function getFormat(): int
-    {
-        $entry = $this->getElement("entry");
-        if (!$entry) {
-            return $this->getDefinition()->format;
-        }
-        assert($entry instanceof EntryInterface, get_class($entry));
-        return $entry->getFormat();
-    }
-
     public function getComponents(): int
     {
         $entry = $this->getElement("entry");
         if (!$entry) {
-            return $this->getDefinition()->valuesCount;
+            throw new \Exception('Missing entry');
         }
         assert($entry instanceof EntryInterface, get_class($entry));
         return $entry->getComponents();

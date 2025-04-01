@@ -7,7 +7,6 @@ use FileEye\MediaProbe\Collection\CollectionInterface;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataWindow;
 use FileEye\MediaProbe\Entry\Core\Undefined;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\BlockBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -29,13 +28,12 @@ class ExifApp extends BlockBase
     const EXIF_HEADER = "Exif\0\0";
 
     public function __construct(
-        public readonly CollectionInterface $collection,
+        CollectionInterface $collection,
         SegmentApp1|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition($this->collection),
+            collection: $collection,
             parent: $parent,
-            graft: false,
         );
     }
 

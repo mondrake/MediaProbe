@@ -5,7 +5,8 @@ namespace FileEye\MediaProbe\Block\Exif\Vendor\Canon;
 use FileEye\MediaProbe\Block\Index;
 use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Data\DataElement;
-use FileEye\MediaProbe\ItemDefinition;
+use FileEye\MediaProbe\Data\DataFormat;
+use FileEye\MediaProbe\MediaProbeException;
 
 /**
  * Class representing an index of values, for Canon AFInfo e AFInfo2.
@@ -14,13 +15,11 @@ class AFInfoIndex extends Index
 {
     public function fromDataElement(DataElement $dataElement): static
     {
-        $this->validate($dataElement);
-
         // Loops through the index and loads the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
         $offset = 0;
-        $this->components = $this->getDefinition()->valuesCount;
+        $this->components = $this->listItem->countOfComponents;
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
@@ -63,10 +62,42 @@ class AFInfoIndex extends Index
             );
             $this->graftBlock($item);
 
-            $entry_class = ItemDefinition::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
+            $entry_class = static::getEntryClass($ifdEntry->collection, $ifdEntry->dataFormat);
             new $entry_class($item, $this->getDataWindowFromData($dataElement, $offset, $ifdEntry->dataFormat, $valueComponents));
         }
 
+        $this->validate();
+
         return $this;
+    }
+
+    /**
+     * Returns the class to manage the entry value.
+     * @todo
+     */
+    public static function getEntryClass($collection, $format): string
+    {
+        // Return the specific entry class if defined, or fall back to
+        // default class for the format.
+        if (!$entry_class = $collection->getPropertyValue('entryClass')) {
+            if (empty($format)) {
+                throw new MediaProbeException(
+                    'No format can be derived for item: %s (%s)',
+                    $collection->getPropertyValue('item') ?? 'n/a',
+                    $collection->getPropertyValue('name') ?? 'n/a'
+                );
+            }
+
+            if (!$entry_class = DataFormat::getClass($format)) {
+                throw new MediaProbeException(
+                    'Unsupported format %d for item: %s (%s)',
+                    $format,
+                    $collection->getPropertyValue('item') ?? 'n/a',
+                    $collection->getPropertyValue('name') ?? 'n/a'
+                );
+            }
+        }
+
+        return $entry_class;
     }
 }

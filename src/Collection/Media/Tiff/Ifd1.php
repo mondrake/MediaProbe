@@ -2754,14 +2754,15 @@ class Ifd1 extends CollectionBase {
       0 =>
       array (
         '__todo' => 'add ifd for XMP tags',
+        'format' =>
+        array (
+          0 => 1,
+          1 => 2000,
+        ),
         'entryClass' => 'FileEye\\MediaProbe\\Entry\\IfdApplicationNotes',
         'collection' => 'Media\\Tiff\\Tag',
         'name' => 'ApplicationNotes',
         'title' => 'Application Notes',
-        'format' =>
-        array (
-          0 => 1,
-        ),
         'phpExifTag' => 'THUMBNAIL::ExtensibleMetadataPlatform',
         'exiftoolDOMNode' => 'IFD1:ApplicationNotes',
       ),

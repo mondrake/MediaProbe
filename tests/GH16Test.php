@@ -44,7 +44,7 @@ class GH16Test extends MediaProbeTestCaseBase
         $new_entry_value = "Превед, медвед!";
         $tag = new Tag(
             listItem: new IfdItemValue(
-                collection: $ifd0->getCollection()->getItemCollection(0x9C9F),
+                collection: $ifd0->collection->getItemCollection(0x9C9F),
                 dataFormat: DataFormat::BYTE,
             ),
             parent: $ifd0,

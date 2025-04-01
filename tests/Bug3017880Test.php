@@ -59,7 +59,7 @@ class Bug3017880Test extends MediaProbeTestCaseBase
         if ($software_tag === null) {
             $tag = new Tag(
                 listItem: new IfdItemValue(
-                    collection: $ifd0->getCollection()->getItemCollection(0x0131),
+                    collection: $ifd0->collection->getItemCollection(0x0131),
                     dataFormat: DataFormat::ASCII,
                 ),
                 parent: $ifd0,

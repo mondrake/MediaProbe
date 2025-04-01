@@ -123,19 +123,22 @@ class Media extends RootBlockBase
     public static function makerNoteToBlock(Media $media): void
     {
         // Get the Exif subIfd if existing.
-        if (!$exif_ifd = $media->getElement("//ifd[@name='ExifIFD']")) {
+        $exif_ifd = $media->getElement("//ifd[@name='ExifIFD']");
+        if (!$exif_ifd) {
             return;
         }
-        assert($exif_ifd instanceof Ifd, get_class($exif_ifd));
+        assert($exif_ifd instanceof Ifd);
 
         // Get MakerNote tag from Exif IFD.
-        if (!$maker_note_tag = $exif_ifd->getElement("tag[@name='MakerNote']")) {
+        $maker_note_tag = $exif_ifd->getElement("tag[@name='MakerNote']");
+        if (!$maker_note_tag) {
             return;
         }
         assert($maker_note_tag instanceof Tag);
 
         // Get Make tag from IFD0.
-        if (!$make_tag = $media->getElement("//ifd[@name='IFD0']/tag[@name='Make']")) {
+        $make_tag = $media->getElement("//ifd[@name='IFD0']/tag[@name='Make']");
+        if (!$make_tag) {
             return;
         }
         assert($make_tag instanceof Tag);
@@ -171,13 +174,14 @@ class Media extends RootBlockBase
 
         $ifdEntry = new IfdItemValue(
             collection: $maker_note_collection,
-            dataFormat: $maker_note_tag->getFormat(),
+            dataFormat: $entry->getFormat(),
             countOfComponents: $maker_note_tag->getComponents(),
             data: 0,
         );
+        $dataDisplacement = $maker_note_tag->listItem->isOffset ? $maker_note_tag->listItem->dataOffset() : $maker_note_tag->listItem->dataValue();
         $ifd = new $ifd_class(
             listItem: $ifdEntry,
-            dataDisplacement: $maker_note_tag->getDefinition()->dataOffset,
+            dataDisplacement: $dataDisplacement,
             parent: $exif_ifd,
         );
         $ifd->setAttribute('id', '37500');

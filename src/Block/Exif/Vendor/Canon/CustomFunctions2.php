@@ -8,7 +8,6 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -23,13 +22,8 @@ class CustomFunctions2 extends ListBase
         CustomFunctions2Header $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $this->listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
@@ -38,7 +32,7 @@ class CustomFunctions2 extends ListBase
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         $rec_pos = 0;
-        for ($n = 0; $n < $this->getDefinition()->valuesCount; $n++) {
+        for ($n = 0; $n < $this->listItem->countOfComponents; $n++) {
             $id = $dataElement->getLong($rec_pos);
             $num = $dataElement->getLong($rec_pos + 4);
             $this->debug("#{seq}, tag {id}/{hexid}, f {format}, c {components}, data @{offset}, size {size}", [
@@ -52,7 +46,7 @@ class CustomFunctions2 extends ListBase
             ]);
             $rec_pos += 8;
             try {
-                $item_collection = $this->getCollection()->getItemCollection(
+                $item_collection = $this->collection->getItemCollection(
                     $id,
                     null,
                     'Media\\Tiff\\UnknownTag',

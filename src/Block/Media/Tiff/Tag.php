@@ -6,9 +6,9 @@ use FileEye\MediaProbe\Block\Media\Tiff\IfdItemValue;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
-use FileEye\MediaProbe\ItemDefinition;
 use FileEye\MediaProbe\MediaProbeException;
-use FileEye\MediaProbe\Model\BlockInterface;
+use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\EntryInterface;
 use FileEye\MediaProbe\Model\LeafBlockBase;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\RootBlockBase;
@@ -24,65 +24,56 @@ class Tag extends LeafBlockBase
         ListBase|RootBlockBase $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $listItem->collection,
-                format: $listItem->dataFormat,
-                valuesCount: $listItem->countOfComponents,
-                dataOffset: $listItem->isOffset ? $listItem->dataOffset() : $listItem->dataValue(),
-                sequence: $listItem->sequence,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
-    /**
-     * Validates against the specification, if defined.
-     */
-    public function validate(): void
+    protected function validate(): void
     {
         $parentElement = $this->getParentElement();
-        assert($parentElement instanceof BlockInterface);
+        assert($parentElement instanceof BlockBase);
 
         // Check if MediaProbe has a definition for this tag.
-        if (in_array($this->getCollection()->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
+        if (in_array($this->collection->getPropertyValue('id'), ['VoidCollection', 'Media\\Tiff\\UnknownTag'])) {
             $this->info("Unknown tag {item} in '{parent}'", [
                 'item' => HexDump::dumpIntHex($this->getAttribute('id')),
-                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',
             ]);
             return;
         }
 
         // Notice if format is not as expected.
-        $expected_format = $this->getCollection()->getPropertyValue('format');
-        if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
+        $expected_format = $this->collection->getPropertyValue('format');
+        /** @var EntryInterface $entry */
+        $entry = $this->getElement("entry");
+        if ($expected_format !== null && $entry->getFormat() !== null && !in_array($entry->getFormat(), $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
             $this->notice("Found {format_name} data format, expected {expected_format_names} for tag '{item}' in '{parent}'", [
-                'format_name' => DataFormat::getName($this->getFormat()),
+                'format_name' => DataFormat::getName($entry->getFormat()),
                 'expected_format_names' => implode(', ', $expected_format_names),
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a',
+                'parent' => $parentElement->collection->getPropertyValue('name') ?? 'n/a',
             ]);
         }
 
         // Notice if components are not as expected.
-        $expected_components = $this->getCollection()->getPropertyValue('components');
+        $expected_components = $this->collection->getPropertyValue('components');
         if ($expected_components !== null && $this->getComponents() !== null && $this->getComponents() !== $expected_components) {
             $this->notice("Found {components} data components, expected {expected_components} for tag '{item}' in '{parent}'", [
                 'components' => $this->getComponents(),
                 'expected_components' => $expected_components,
                 'item' => $this->getAttribute('name') ?? 'n/a',
-                'parent' => $parentElement ? $parentElement->getCollection()->getPropertyValue('name') ?? 'n/a' : 'n/a',
+                'parent' => $parentElement ? $parentElement->collection->getPropertyValue('name') ?? 'n/a' : 'n/a',
             ]);
         }
     }
 
     public function fromDataElement(DataElement $dataElement): Tag
     {
-        $this->validate();
         $this->debugInfo(['dataElement' => $dataElement]);
         try {
             $class = $this->getEntryClass();
@@ -90,6 +81,7 @@ class Tag extends LeafBlockBase
         } catch (DataException $e) {
             $this->error($e->getMessage());
         }
+        $this->validate();
         return $this;
     }
 
@@ -122,16 +114,20 @@ class Tag extends LeafBlockBase
     {
         $info = [];
 
+        $dataOffset = $this->listItem->isOffset ? $this->listItem->dataOffset() : $this->listItem->dataValue();
+
         $parentInfo = parent::collectInfo($context);
 
         $msg = '#{seq} rel@{relativeOffset} {node}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
 
-        $info['relativeOffset'] = HexDump::dumpIntHex($this->getDefinition()->itemDefinitionOffset);
+        // @todo reinstate this
+        # $info['relativeOffset'] = HexDump::dumpIntHex($this->getDefinition()->itemDefinitionOffset);
+        $info['relativeOffset'] = 0;
 
         $msg .= isset($parentInfo['name']) ? ':{name}' : '';
 
@@ -144,8 +140,8 @@ class Tag extends LeafBlockBase
             $msg .= isset($parentInfo['offset']) ? ' @{offset} size {size}' : ' size {size} byte(s)';
         }
 
-        $info['format'] = DataFormat::getName($this->getDefinition()->format);
-        $info['components'] = $this->getDefinition()->valuesCount;
+        $info['format'] = DataFormat::getName($this->listItem->dataFormat);
+        $info['components'] = $this->listItem->countOfComponents;
         $msg .= ' format {format} count {components}';
 
         $info['_msg'] = $msg;

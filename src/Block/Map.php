@@ -2,7 +2,6 @@
 
 namespace FileEye\MediaProbe\Block;
 
-use FileEye\MediaProbe\Block\Media\Tiff\Tag;
 use FileEye\MediaProbe\Collection\CollectionFactory;
 use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
@@ -36,7 +35,6 @@ class Map extends Index
 
     public function fromDataElement(DataElement $dataElement): static
     {
-        $this->validate($dataElement);
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         // Preserve the entire map as a raw data block.
@@ -52,8 +50,8 @@ class Map extends Index
 
         // Build the map items.
         $i = 0;
-        foreach ($this->getCollection()->listItemIds() as $item) {
-            $n = $item * DataFormat::getSize($this->getFormat());
+        foreach ($this->collection->listItemIds() as $item) {
+            $n = $item * DataFormat::getSize($this->listItem->dataFormat);
 
             $ifdEntry = $this->ifdEntryFromDataElement(
                 seq: $i,
@@ -90,7 +88,6 @@ class Map extends Index
 
             // Adds the item to the DOM.
             $item_class = $ifdEntry->collection->handler();
-            assert(is_a($item_class, Tag::class, true) || is_a($item_class, RawData::class, true));
             try {
                 $item = new $item_class(
                     listItem: $ifdEntry,
@@ -104,6 +101,8 @@ class Map extends Index
 
             $i++;
         }
+
+        $this->validate();
 
         return $this;
     }
@@ -128,7 +127,7 @@ class Map extends Index
 
         // Dump each tag at the position in the map specified by the item id.
         foreach ($this->getMultipleElements('*[not(self::rawData)]') as $sub_id => $sub) {
-            $bytes_offset = ((int) $sub->getAttribute('id')) * DataFormat::getSize($this->getFormat());
+            $bytes_offset = ((int) $sub->getAttribute('id')) * DataFormat::getSize($this->listItem->dataFormat);
             $bytes = $sub->toBytes($byte_order);
             $bytes_length = strlen($bytes);
 

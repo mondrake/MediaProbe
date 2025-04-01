@@ -98,11 +98,6 @@ interface ElementInterface
     public function getContextPath(): string;
 
     /**
-     * Determines if the element has been parsed successfully from data.
-     */
-    public function isValid(): bool;
-
-    /**
      * Returns the validation level of this element.
      */
     public function level(): ?Level;

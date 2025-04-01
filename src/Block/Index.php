@@ -9,8 +9,7 @@ use FileEye\MediaProbe\Data\DataElement;
 use FileEye\MediaProbe\Data\DataException;
 use FileEye\MediaProbe\Data\DataFormat;
 use FileEye\MediaProbe\Data\DataWindow;
-use FileEye\MediaProbe\ItemDefinition;
-use FileEye\MediaProbe\Model\BlockBase;
+use FileEye\MediaProbe\Model\BlockInterface;
 use FileEye\MediaProbe\Model\ListBase;
 use FileEye\MediaProbe\Model\ListItemValue;
 use FileEye\MediaProbe\Utility\ConvertBytes;
@@ -22,58 +21,48 @@ class Index extends ListBase
 {
     public function __construct(
         public readonly ListItemValue $listItem,
-        BlockBase $parent,
+        BlockInterface $parent,
     ) {
         parent::__construct(
-            definition: new ItemDefinition(
-                collection: $this->listItem->collection,
-                format: $this->listItem->dataFormat,
-                valuesCount: $this->listItem->countOfComponents,
-            ),
+            collection: $listItem->collection,
             parent: $parent,
-            graft: false,
         );
     }
 
-    /**
-     * Validates the list against the specification.
-     */
-    protected function validate(DataElement $dataElement): void
+    protected function validate(): void
     {
         // Warn if format is not as expected.
-        $expected_format = $this->getCollection()->getPropertyValue('format');
-        if ($expected_format !== null && $this->getFormat() !== null && !in_array($this->getFormat(), $expected_format)) {
+        $expected_format = $this->collection->getPropertyValue('format');
+        if ($expected_format !== null && $this->listItem->dataFormat !== null && !in_array($this->listItem->dataFormat, $expected_format)) {
             $expected_format_names = [];
             foreach ($expected_format as $expected_format_id) {
                 $expected_format_names[] = DataFormat::getName($expected_format_id);
             }
             $this->notice("Found {format_name} data format, expected {expected_format_names}", [
-                'format_name' => DataFormat::getName($this->getFormat()),
+                'format_name' => DataFormat::getName($this->listItem->dataFormat),
                 'expected_format_names' => implode(', ', $expected_format_names),
             ]);
-        }
-
-        // If the 'hasIndexSize' property is true, the index begins with an
-        // entry representing the entire size of the index (included the entry
-        // itself). This should match the size determined in the parent IFD.
-        if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
-            $offset = 0;
-            $index_size = $this->getValueFromData($dataElement, $offset, $this->getCollection()->getPropertyValue('format')[0]);
-            if ($index_size !== $this->getDefinition()->getSize()) {
-                $this->error("Size mismatch between IFD and index header");
-            }
         }
     }
 
     public function fromDataElement(DataElement $dataElement): static
     {
-        $this->validate($dataElement);
+        $offset = 0;
+
+        // If the 'hasIndexSize' property is true, the index begins with an
+        // entry representing the entire size of the index (included the entry
+        // itself). This should match the size determined in the parent IFD.
+        if ($this->collection->getPropertyValue('hasIndexSize')) {
+            $index_size = $this->getValueFromData($dataElement, $offset, $this->collection->getPropertyValue('format')[0]);
+            if ($index_size !== $this->listItem->size) {
+                $this->error("Size mismatch between IFD and index header");
+            }
+        }
 
         // Loop through the index and parse the tags. If the 'hasIndexSize'
         // property is true, the first entry is a special case that is handled
         // by opening a 'rawData' node instead of a 'tag'.
-        $offset = 0;
-        $this->components = $this->getDefinition()->valuesCount;
+        $this->components = $this->listItem->countOfComponents;
         assert($this->debugInfo(['dataElement' => $dataElement]));
 
         for ($i = 0; $i < $this->components; $i++) {
@@ -109,6 +98,8 @@ class Index extends ListBase
             $offset += $ifdEntry->size;
         }
 
+        $this->validate();
+
         return $this;
     }
 
@@ -134,11 +125,11 @@ class Index extends ListBase
     ): IfdItemValue|false {
         // In case the item is not found in the collection for the index,
         // we still load it as a 'tag'.
-        $item_collection = $this->getCollection()->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
+        $item_collection = $this->collection->getItemCollection($id, 0, 'Media\\Tiff\\UnknownTag', [
             'item' => $id,
             'DOMNode' => 'tag',
         ]);
-        $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->getFormat();
+        $item_format = $item_collection->getPropertyValue('format')[0] ?? $this->listItem->dataFormat;
         $item_components = $item_collection->getPropertyValue('components') ?? 1;
 
         return new IfdItemValue(
@@ -199,7 +190,7 @@ class Index extends ListBase
 
         $actual_size = strlen($data_bytes);
 
-        if ($expected_size = $this->getCollection()->getPropertyValue('hasIndexSize')) {
+        if ($expected_size = $this->collection->getPropertyValue('hasIndexSize')) {
             // When writing back, the index size itself is a short, part of the
             // actual size, so we add 2 to the written value.
             return ConvertBytes::fromShort($actual_size + 2, $byte_order) . $data_bytes;
@@ -213,11 +204,11 @@ class Index extends ListBase
         $components = 0;
         foreach ($this->getMultipleElements('tag') as $tag) {
             assert($tag instanceof Tag);
-            $tag_size = DataFormat::getSize($tag->getFormat()) * $tag->getComponents();
+            $tag_size = DataFormat::getSize($tag->listItem->dataFormat) * $tag->getComponents();
             // Components are in Shorts, $tag_size is in Bytes, so normalize.
             $components += $tag_size / 2;
         }
-        if ($this->getCollection()->getPropertyValue('hasIndexSize')) {
+        if ($this->collection->getPropertyValue('hasIndexSize')) {
             $components++;
         }
         return $components;
@@ -231,7 +222,7 @@ class Index extends ListBase
 
         $msg = '#{seq} {node}:{name}';
 
-        $info['seq'] = $this->getDefinition()->sequence + 1;
+        $info['seq'] = $this->listItem->sequence + 1;
         if ($this->getParentElement() && ($parent_name = $this->getParentElement()->getAttribute('name'))) {
             $info['seq'] = $parent_name . '.' . $info['seq'];
         }
@@ -246,7 +237,7 @@ class Index extends ListBase
         }
 
         $info['tags'] = $context['itemsCount'] ?? 'n/a';
-        $info['format'] = DataFormat::getName($this->getDefinition()->format);
+        $info['format'] = DataFormat::getName($this->listItem->dataFormat);
         $info['_msg'] = $msg;
 
         return array_merge($parentInfo, $info);
